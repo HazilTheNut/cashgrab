@@ -1,0 +1,17 @@
+# classes/pe_inv_perclass.mcfunction
+#
+# Context:
+#	as: an entity
+#
+# Summary: Reapplies entity's equipped class's inventory
+#
+# Arguments: (none)
+
+execute if entity @s[scores={class=-1}] run function coinwars:classes/test_a/pe_inv
+execute if entity @s[scores={class=-2}] run function coinwars:classes/test_b/pe_inv
+execute if entity @s[scores={class=-3}] run function coinwars:classes/test_c/pe_inv
+execute if entity @s[scores={class=-4}] run function coinwars:classes/test_d/pe_inv
+execute if entity @s[scores={class=-10}] run function coinwars:classes/mapmaker/pe_inv
+
+execute if entity @s[scores={class=1}] run function coinwars:classes/griefer/pe_inv
+execute if entity @s[scores={class=2}] run function coinwars:classes/skirmisher/pe_inv

@@ -1,0 +1,20 @@
+# classes/pe_use_ability_perclass.mcfunction
+#
+# Context:
+#	as: an entity
+#	at: the entity
+#
+# Summary: Uses command executor's equipped class ability
+#
+# Arguments: (none)
+#
+# Returns: Ability cooldown, in ticks
+
+execute if entity @s[scores={class=-1}] run return run function coinwars:classes/test_a/pe_use_ability
+execute if entity @s[scores={class=-2}] run return run function coinwars:classes/test_b/pe_use_ability
+execute if entity @s[scores={class=-3}] run return run function coinwars:classes/test_c/pe_use_ability
+execute if entity @s[scores={class=-4}] run return run function coinwars:classes/test_d/pe_use_ability
+execute if entity @s[scores={class=-10}] run return run function coinwars:classes/mapmaker/pe_use_ability
+
+execute if entity @s[scores={class=1}] run return run function coinwars:classes/griefer/pe_use_ability
+execute if entity @s[scores={class=2}] run return run function coinwars:classes/skirmisher/pe_use_ability

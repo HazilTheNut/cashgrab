@@ -1,0 +1,28 @@
+{
+	"values": [
+		{
+			"id": "#coinwars:nonsolid",
+			"required": "true"
+		},
+		{
+			"id": "#minecraft:anvil",
+			"required": "true"
+		},
+		{
+			"id": "#minecraft:doors",
+			"required": "true"
+		},
+		{
+			"id": "#minecraft:fence_gates",
+			"required": "true"
+		},
+		{
+			"id": "#minecraft:fences",
+			"required": "true"
+		},
+		{
+			"id": "#minecraft:trapdoors",
+			"required": "true"
+		}
+	]
+}
