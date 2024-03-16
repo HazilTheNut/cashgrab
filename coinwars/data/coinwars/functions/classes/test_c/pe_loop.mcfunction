@@ -14,7 +14,7 @@ i_range_m:10,\
 i_origin_loc:2,\
 col_terrain_allowed:"#coinwars:nonsolid",\
 b_fit_player:1,\
-func_entity_filter:"coinwars:util/pe_col_filter_entity_hostile",\
+func_entity_filter:"coinwars:util/pe_col_entity_filter_hostile",\
 func_step:"coinwars:classes/test_c/raycast_step",\
 func_end:"coinwars:classes/test_c/raycast_end"\
 }

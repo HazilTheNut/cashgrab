@@ -61,7 +61,6 @@ $execute if entity @s[scores={has_collided=0}] run tp @s ~$(vel_x) ~$(vel_y) ~$(
 # Case A
 $execute if entity @s[scores={has_collided=1,mis_gravity_const_mmpt2=..0,col_terrain=1..}] run function $(func_end) {end_reason:1}
 $execute if entity @s[scores={has_collided=1,mis_gravity_const_mmpt2=..0,col_terrain=0,col_entity=1..}] run function $(func_end) {end_reason:2}
-execute if entity @s[scores={has_collided=1,mis_gravity_const_mmpt2=..0}] run tag @e remove t_collision_found
 execute if entity @s[scores={has_collided=1,mis_gravity_const_mmpt2=..0}] run tag @s add t_kill
 execute if entity @s[tag=t_kill] run scoreboard players reset @s
 kill @s[tag=t_kill]
@@ -69,7 +68,6 @@ kill @s[tag=t_kill]
 # Case B
 $execute if entity @s[scores={has_collided=1,mis_gravity_const_mmpt2=1..,col_terrain=1..},tag=t_missile_fall] run function $(func_end) {end_reason:1}
 $execute if entity @s[scores={has_collided=1,mis_gravity_const_mmpt2=1..,col_terrain=0,col_entity=1..},tag=t_missile_fall] run function $(func_end) {end_reason:2}
-execute if entity @s[scores={has_collided=1,mis_gravity_const_mmpt2=1..},tag=t_missile_fall] run tag @e remove t_collision_found
 execute if entity @s[scores={has_collided=1,mis_gravity_const_mmpt2=1..},tag=t_missile_fall] run tag @s add t_kill
 execute if entity @s[tag=t_kill] run scoreboard players reset @s
 kill @s[tag=t_kill]

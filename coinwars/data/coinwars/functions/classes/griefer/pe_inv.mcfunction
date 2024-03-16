@@ -22,7 +22,9 @@
 item replace entity @s armor.head with minecraft:golden_helmet{Unbreakable:1b}
 item replace entity @s armor.chest with minecraft:leather_chestplate{Unbreakable:1b,display:{color:16490297}}
 item replace entity @s armor.legs with minecraft:leather_leggings{Unbreakable:1b,display:{color:16490297}}
-item replace entity @s armor.feet with minecraft:golden_boots{Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.movement_speed",Name:"speed_bonus",Slot:"feet",Operation:1,Amount:0.2,UUID:[I; 1,10,1,0]}]}
+item replace entity @s armor.feet with minecraft:golden_boots{Unbreakable:1b,AttributeModifiers:[\
+{AttributeName:"generic.movement_speed",Name:"speed_bonus",Slot:"feet",Operation:1,Amount:0.2,UUID:[I; 1,14,1,0]},\
+{AttributeName:"generic.armor",Name:"boots_armor",Slot:"feet",Operation:0,Amount:1,UUID:[I; 1,14,2,0]}]}
 
 # =============================
 # Hotbar

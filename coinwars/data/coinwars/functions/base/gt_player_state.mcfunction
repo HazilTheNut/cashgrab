@@ -194,5 +194,7 @@ scoreboard players set @a[scores={__sneaking_cur=0,__sneaking_prev=1}] ps_sneaki
 scoreboard players set @a[scores={__sneaking_cur=1,__sneaking_prev=0}] ps_sneaking 2
 scoreboard players set @a[scores={__sneaking_cur=1,__sneaking_prev=1}] ps_sneaking 1
 
+execute as @a run scoreboard players operation @s __sneaking_prev = @s __sneaking_cur
+
 # Player state: selected hotbar slot
 execute as @a store result score @s ps_selected_hotbar_slot run data get entity @s SelectedItemSlot

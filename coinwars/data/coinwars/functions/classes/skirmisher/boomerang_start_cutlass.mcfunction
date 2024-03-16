@@ -1,4 +1,4 @@
-# classes/skirmisher/boomerang_start.mcfunction
+# classes/skirmisher/boomerang_start_cutlass.mcfunction
 #
 # Context:
 #	as: a missile
@@ -10,17 +10,18 @@
 # Arguments: (none)
 
 # Class variable usage:
-#	cv_A	:	1 if holding the Dancing Rapier, and 0 otherwise. 
-#				Used to track which weapon is equipped to not reset their current positions when inventory refreshes.
-#	cv_B	:	
+#	cv_A	:	Held item: 0 = neither sword, 1 = Cleaving Cutlass, 2 = Dancing Rapier
+#	cv_B	:	Item config: 0 = has both, 1 = only Cleaving Cutlass, 2 = only Dancing Rapier
 #	cv_C	:	
 #	cv_D	:	
-#	cv_E	:	
+#	cv_E	:	Boomerang type: 1 = Cleaving Cutlass, 2 = Dancing Rapier
 #	cv_F	:	Boomerang missile particle display timer
 #	cv_G	:	Boomerang item display rotation
 #	cv_H	:	Boomerang life timer (counts upwards instead of downwards for more readable code)
 
-summon minecraft:item_display ~ ~ ~ {item:{id:"minecraft:feather",Count:1b},Tags:["t_boomerang_itemdisp_init"],Rotation:[0.0f,90.0f]}
+scoreboard players set @s cv_E 1
+
+summon minecraft:item_display ~ ~ ~ {item:{id:"minecraft:iron_sword",Count:1b},Tags:["t_boomerang_itemdisp_init"],Rotation:[0.0f,90.0f]}
 execute as @e[type=minecraft:item_display,tag=t_boomerang_itemdisp_init] run function coinwars:util/pe_eid_acquire
 scoreboard players operation @e[type=minecraft:item_display,tag=t_boomerang_itemdisp_init] eid_owner = @s eid_self
 

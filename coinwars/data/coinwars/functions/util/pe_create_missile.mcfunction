@@ -9,7 +9,7 @@
 #
 # Arguments:
 #	f_speed_mpt				: Missile travel speed, in meters/tick. Velocities faster than 1 will have less accurate hit detection.
-#							: 	If you change f_speed_mpt stored on the missile after creating, you must tag it as t_calc_base_vel to update its speed
+#							: 	If you change f_speed_mpt stored on the missile after creation, you must tag it as t_missile_calc_base_vel to update its speed
 #	i_lifetime_ticks		: Missile i_lifetime_ticks, in ticks
 #	i_range_m				: How far the missile is expected to travel, in meters. 
 #							: 	Determines compensation angle to account for missile's origin being dislocated from the camera/perspective.
@@ -17,6 +17,8 @@
 #	i_gravity_vy_mmpt		: Initial vertical gravitational velocity, in mm/tick
 #	i_gravity_const_mmpt2	: Vertical velocity gained per tick, in mm/tick^2
 #	f_tracking_scalar		: Scalar of strength of tracking towards potential targets
+#							: 	If you change f_tracking_scalar stored on the missile after creation, you must tag it as 
+#								t_missile_calc_tracking to recalculate some internal tracking parameters
 #	t_missile_name			: Tag to issue to the missile on creation
 #	col_terrain_allowed		: Block tag or block type that describes what counts as not solid collision
 #	func_entity_filter		: Filtering function for which entities to collide with. Function applies the tag "t_collision_candidate" to all possible entities to collide with
@@ -55,6 +57,9 @@ execute as @e[tag=t_missile_init,limit=1,sort=nearest] at @s run function coinwa
 scoreboard players operation @e[tag=t_missile_init,limit=1,sort=nearest] eid_owner = @s eid_self
 
 $execute as @e[tag=t_missile_init,limit=1,sort=nearest] at @s run function $(func_start)
+
+#tellraw @a[tag=t_debug] [{"text":"util/pe_create_missile data = "},{"entity":"@e[tag=t_missile_init,limit=1,sort=nearest]","nbt":"data"}]
+#tellraw @a[tag=t_debug] [{"text":"util/pe_create_missile tags = "},{"entity":"@e[tag=t_missile_init,limit=1,sort=nearest]","nbt":"Tags"}]
 
 # Initialization complete
 tag @e[tag=t_missile_init,limit=1,sort=nearest] add t_missile

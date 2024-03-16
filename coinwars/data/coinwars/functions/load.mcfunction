@@ -171,6 +171,7 @@ scoreboard objectives add ev_maps minecraft.used:minecraft.map
 scoreboard objectives add ev_xpbottles minecraft.used:minecraft.experience_bottle
 scoreboard objectives add ev_snowballs minecraft.used:minecraft.snowball
 scoreboard objectives add ev_eggs minecraft.used:minecraft.egg
+scoreboard objectives add ev_crossbows minecraft.used:minecraft.crossbow
 
 # =============================
 # Class readable statistics (prefix: "stat_").
@@ -190,6 +191,7 @@ scoreboard players set NUM_ONE_HUNDRED num 100
 scoreboard players set NUM_360_DEG num 360
 
 scoreboard players set NUM_TICKS_PER_SEC num 20
+scoreboard players set NUM_MISSILE_TRACKING_DIVISOR num 2
 scoreboard players set NUM_RAYCAST_STEPS_PER_M num 2
 
 scoreboard players set NUM_COINSHOWER_EXCHANGE_DIVISOR num 2

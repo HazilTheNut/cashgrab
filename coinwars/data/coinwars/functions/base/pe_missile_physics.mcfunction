@@ -17,7 +17,7 @@
 #tellraw @a[tag=t_debug] [{"type":"text","text":"pe_missile_physics: Yaw: "},{"type":"nbt","source":"entity","nbt":"Rotation[0]","entity":"@s"},{"type":"text","text":" Pitch: "},{"type":"nbt","source":"entity","nbt":"Rotation[1]","entity":"@s"}]
 
 $execute if entity @s[tag=t_missile_has_tracking] run function $(func_tracking_filter)
-execute if entity @s[tag=t_missile_has_tracking] if entity @e[tag=t_collision_candidate] run function coinwars:base/pe_missile_physics_tracking with entity @s data
+execute if entity @s[tag=t_missile_has_tracking] if entity @e[tag=t_collision_candidate,tag=!t_do_not_track] run function coinwars:base/pe_missile_physics_tracking with entity @s data
 
 # Apply tracking scalar to dyaw and dpitch from missile tracking
 $execute if entity @s[tag=t_missile_has_tracking] store result entity @s data.tracking_dyaw float $(f_tracking_scalar) run scoreboard players get @s mis_tracking_dyaw_mdeg
@@ -37,9 +37,9 @@ execute store result entity @s data.tracking_dpitch float 0.001 run scoreboard p
 #tellraw @a[tag=t_debug] [{"type":"text","text":"pe_missile_physics: dYaw: "},{"type":"nbt","source":"entity","nbt":"data.tracking_dyaw","entity":"@s"},{"type":"text","text":" dPitch: "},{"type":"nbt","source":"entity","nbt":"data.tracking_dpitch","entity":"@s"}]
 
 # Recalculate base velocity if missile facing angle needs to change
-execute unless entity @s[scores={mis_func_step_dyaw_mdeg=0,mis_func_step_dpitch_mdeg=0}] run tag @s add t_calc_base_vel
-execute if entity @s[tag=t_calc_base_vel] run function coinwars:base/pe_missile_calc_base_vel with entity @s data
-tag @s remove t_calc_base_vel
+execute unless entity @s[scores={mis_func_step_dyaw_mdeg=0,mis_func_step_dpitch_mdeg=0}] run tag @s add t_missile_calc_base_vel
+execute if entity @s[tag=t_missile_calc_base_vel] run function coinwars:base/pe_missile_calc_base_vel with entity @s data
+tag @s remove t_missile_calc_base_vel
 
 scoreboard players operation @s mis_sum_vel_x_mmpt = @s mis_base_vel_x_mmpt
 scoreboard players operation @s mis_sum_vel_y_mmpt = @s mis_base_vel_y_mmpt

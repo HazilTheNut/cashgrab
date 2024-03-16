@@ -16,3 +16,5 @@ execute if entity @s[scores={class=-10}] run function coinwars:classes/mapmaker/
 
 execute if entity @s[scores={class=1}] run function coinwars:classes/griefer/pe_ability_icon with storage coinwars:abi_args
 execute if entity @s[scores={class=2}] run function coinwars:classes/skirmisher/pe_ability_icon with storage coinwars:abi_args
+execute if entity @s[scores={class=3}] run function coinwars:classes/spectre/pe_ability_icon with storage coinwars:abi_args
+execute if entity @s[scores={class=4}] run function coinwars:classes/ranger/pe_ability_icon with storage coinwars:abi_args

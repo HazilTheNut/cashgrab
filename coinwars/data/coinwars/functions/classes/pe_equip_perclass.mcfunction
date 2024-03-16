@@ -33,6 +33,9 @@ scoreboard players set @s ev_maps 0
 scoreboard players set @s ev_xpbottles 0
 scoreboard players set @s ev_snowballs 0
 scoreboard players set @s ev_eggs 0
+scoreboard players set @s ev_crossbows 0
+
+effect clear @s
 
 # Run respective class equipment function
 execute if entity @s[scores={class=-1}] run function coinwars:classes/test_a/pe_equip
@@ -43,5 +46,7 @@ execute if entity @s[scores={class=-10}] run function coinwars:classes/mapmaker/
 
 execute if entity @s[scores={class=1}] run function coinwars:classes/griefer/pe_equip
 execute if entity @s[scores={class=2}] run function coinwars:classes/skirmisher/pe_equip
+execute if entity @s[scores={class=3}] run function coinwars:classes/spectre/pe_equip
+execute if entity @s[scores={class=4}] run function coinwars:classes/ranger/pe_equip
 
 function coinwars:base/pe_refresh_inv

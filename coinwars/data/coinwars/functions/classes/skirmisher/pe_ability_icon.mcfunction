@@ -8,11 +8,11 @@
 # Arguments:
 #	charges		: Number of charges of ability
 
-$item replace entity @s hotbar.4 with minecraft:feather{display:{\
-Name:"[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Boomerang\"}]",\
+$item replace entity @s hotbar.4 with minecraft:string{display:{\
+Name:"[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Sword Boomerang\"}]",\
 Lore:[\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"Throws out a boomerang attack\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\" that returns to you.\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\"Throws out your held sword\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\" as a boomerang.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Catching the boomerang grants\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" bonus speed and refunds part\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" of the cooldown.\"}",\

@@ -47,7 +47,6 @@ scoreboard players set @s col_entity 0
 $execute if score @s col_terrain matches 0 store result score @s col_entity positioned ~$(delta_x) ~$(delta_y) ~$(delta_z) run function coinwars:util/pe_col_detect_entity {func_entity_filter:"coinwars:util/dummy"}
 
 $execute if entity @s[scores={col_entity=1..}] run function $(func_end) {end_reason:2}
-tag @e remove t_collision_found
 execute if entity @s[scores={col_entity=1..}] run return 0
 
 # Proceed to next step of loop

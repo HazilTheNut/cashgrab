@@ -12,14 +12,14 @@
 
 # If t_missile_calc_tracking is set, calculate minimum and maximum displacement angles to apply tracking to
 scoreboard players set @s[tag=t_missile_calc_tracking] mis_tracking_max_angle_mdeg 0
-execute if entity @s[tag=t_missile_calc_tracking] store result score @s mis_tracking_max_angle_mdeg run data get entity @s data.f_tracking_scalar 120000
+execute if entity @s[tag=t_missile_calc_tracking] store result score @s mis_tracking_max_angle_mdeg run data get entity @s data.f_tracking_scalar 80000
 scoreboard players add @s[tag=t_missile_calc_tracking] mis_tracking_max_angle_mdeg 20000
 scoreboard players operation @s[tag=t_missile_calc_tracking] mis_tracking_min_angle_mdeg = @s[tag=t_missile_calc_tracking] mis_tracking_max_angle_mdeg
 scoreboard players operation @s[tag=t_missile_calc_tracking] mis_tracking_min_angle_mdeg *= NUM_NEG_ONE num
 tag @s remove t_missile_calc_tracking
 
 # Calculate yaw and pitch of direction facing towards tracking target
-execute facing entity @e[tag=t_collision_candidate,limit=1,sort=nearest] eyes run function coinwars:util/pe_calc_facing_vector {magnitude:1.0f}
+execute facing entity @e[tag=t_collision_candidate,tag=!t_do_not_track,limit=1,sort=nearest] eyes run function coinwars:util/pe_calc_facing_vector {magnitude:1.0f}
 scoreboard players operation @s mis_tracking_dyaw_mdeg = @s facing_vector_yaw_mdeg
 scoreboard players operation @s mis_tracking_dpitch_mdeg = @s facing_vector_pitch_mdeg
 
@@ -64,11 +64,9 @@ scoreboard players set @s[tag=t_give_up] mis_tracking_dyaw_mdeg 0
 scoreboard players set @s[tag=t_give_up] mis_tracking_dpitch_mdeg 0
 tag @s remove t_give_up
 
-# Angle displacement per tick capped at 5 deg/tick
-scoreboard players set @s[scores={mis_tracking_dyaw_mdeg=..-5000}] mis_tracking_dyaw_mdeg -5000
-scoreboard players set @s[scores={mis_tracking_dyaw_mdeg=5000..}] mis_tracking_dyaw_mdeg 5000
-scoreboard players set @s[scores={mis_tracking_dpitch_mdeg=..-5000}] mis_tracking_dpitch_mdeg -5000
-scoreboard players set @s[scores={mis_tracking_dpitch_mdeg=5000..}] mis_tracking_dpitch_mdeg 5000
+# Angle displacement is divded by a constant for more zeno-ian tracking versus just snapping onto the target
+scoreboard players operation @s mis_tracking_dyaw_mdeg /= NUM_MISSILE_TRACKING_DIVISOR num
+scoreboard players operation @s mis_tracking_dpitch_mdeg /= NUM_MISSILE_TRACKING_DIVISOR num
 
 # =============================
 # Apply tracking correction angles to data.tracking_dyaw and data.tracking_dpitch
