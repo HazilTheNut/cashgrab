@@ -37,6 +37,7 @@ execute if entity @s[tag=t_explode] run function coinwars:util/pe_eid_find_owner
 execute if entity @s[tag=t_explode] run tag @e[scores={eid_compare=0}] add t_dmg_src
 execute if entity @s[tag=t_explode] run tag @e[scores={eid_compare=0}] add t_collision_candidate
 execute if entity @s[tag=t_explode] as @e[tag=t_collision_candidate,distance=..4.5] run damage @s 8.0 minecraft:fireball by @e[tag=t_dmg_src,limit=1,sort=nearest] from @e[tag=t_explode,limit=1,sort=nearest]
+execute if entity @s[tag=t_explode] run tag @e[scores={eid_compare=0}] remove t_dmg_src
 
 execute if entity @s[tag=t_explode] run scoreboard players reset @s
 execute if entity @s[tag=t_explode] run kill @s

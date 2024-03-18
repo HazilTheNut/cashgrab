@@ -17,3 +17,4 @@ execute if entity @s[scores={class=1}] run function coinwars:classes/griefer/pe_
 execute if entity @s[scores={class=2}] run function coinwars:classes/skirmisher/pe_inv
 execute if entity @s[scores={class=3}] run function coinwars:classes/spectre/pe_inv
 execute if entity @s[scores={class=4}] run function coinwars:classes/ranger/pe_inv
+execute if entity @s[scores={class=5}] run function coinwars:classes/artillery/pe_inv

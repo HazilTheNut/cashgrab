@@ -20,3 +20,4 @@ execute if entity @s[scores={class=1}] run return run function coinwars:classes/
 execute if entity @s[scores={class=2}] run return run function coinwars:classes/skirmisher/pe_use_ability
 execute if entity @s[scores={class=3}] run return run function coinwars:classes/spectre/pe_use_ability
 execute if entity @s[scores={class=4}] run return run function coinwars:classes/ranger/pe_use_ability
+execute if entity @s[scores={class=5}] run return run function coinwars:classes/artillery/pe_use_ability
