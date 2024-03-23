@@ -12,7 +12,7 @@ execute as @a at @s if block ~ ~ ~ minecraft:light_weighted_pressure_plate align
 execute as @a at @s if block ~ ~ ~ minecraft:light_weighted_pressure_plate align xyz run setblock ~ ~ ~ minecraft:heavy_weighted_pressure_plate
 
 # Coin plate initialization
-scoreboard players set @e[tag=t_coinplate_cooldown_init] __coinplate_timer_ticks 200
+scoreboard players set @e[tag=t_coinplate_cooldown_init] __coinplate_timer_ticks 260
 tag @e[tag=t_coinplate_cooldown_init] add t_coinplate_cooldown
 tag @e[tag=t_coinplate_cooldown_init] remove t_coinplate_cooldown_init
 
@@ -30,6 +30,6 @@ execute as @e[tag=t_coin_particles,nbt={OnGround:0b}] at @s run particle minecra
 
 # When a player picks up a coin, award some health and refresh coin display
 execute as @a[scores={__iev_coin_pickup=1..}] run function coinwars:base/pe_display_coins_argloader
-effect give @a[scores={__iev_coin_pickup=1..}] minecraft:regeneration 7 1 false
+effect give @a[scores={__iev_coin_pickup=1..}] minecraft:regeneration 4 2 false
 effect give @a[scores={__iev_coin_pickup=1..}] minecraft:saturation 7 1 false
 scoreboard players set @a[scores={__iev_coin_pickup=1..}] __iev_coin_pickup 0

@@ -19,6 +19,7 @@ $summon minecraft:marker ~ ~ ~ {data:{func_step:"$(func_step)",func_end:"$(func_
 
 execute as @e[type=minecraft:marker,limit=1,tag=t_timer_init] run function coinwars:util/pe_eid_acquire
 
+scoreboard players operation @e[type=minecraft:marker,limit=1,tag=t_timer_init] team_id = @s team_id
 scoreboard players operation @e[type=minecraft:marker,limit=1,tag=t_timer_init] eid_owner = @s eid_self
 $scoreboard players set @e[type=minecraft:marker,limit=1,tag=t_timer_init] tmr_lifetime_ticks $(lifetime_ticks)
 $scoreboard players set @e[type=minecraft:marker,limit=1,tag=t_timer_init] tmr_anchor_pos $(b_anchor_at_pos)

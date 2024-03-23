@@ -16,7 +16,8 @@ scoreboard players operation @e[tag=t_coinshower_init,limit=1,sort=nearest] __co
 scoreboard players operation @s coins -= @e[tag=t_coinshower_init,limit=1,sort=nearest] __coinshower_coins
 
 # Set droprate of coin shower based on number of coins (tries to max out at 10 seconds)
-scoreboard players set @e[tag=t_coinshower_init,limit=1,sort=nearest,scores={__coinshower_coins=..50}] __coinshower_period_ticks 4
+scoreboard players set @e[tag=t_coinshower_init,limit=1,sort=nearest,scores={__coinshower_coins=..40}] __coinshower_period_ticks 5
+scoreboard players set @e[tag=t_coinshower_init,limit=1,sort=nearest,scores={__coinshower_coins=41..50}] __coinshower_period_ticks 4
 scoreboard players set @e[tag=t_coinshower_init,limit=1,sort=nearest,scores={__coinshower_coins=51..66}] __coinshower_period_ticks 3
 scoreboard players set @e[tag=t_coinshower_init,limit=1,sort=nearest,scores={__coinshower_coins=67..100}] __coinshower_period_ticks 2
 scoreboard players set @e[tag=t_coinshower_init,limit=1,sort=nearest,scores={__coinshower_coins=101..}] __coinshower_period_ticks 1

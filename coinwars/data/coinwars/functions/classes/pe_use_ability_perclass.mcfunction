@@ -21,3 +21,4 @@ execute if entity @s[scores={class=2}] run return run function coinwars:classes/
 execute if entity @s[scores={class=3}] run return run function coinwars:classes/spectre/pe_use_ability
 execute if entity @s[scores={class=4}] run return run function coinwars:classes/ranger/pe_use_ability
 execute if entity @s[scores={class=5}] run return run function coinwars:classes/artillery/pe_use_ability
+execute if entity @s[scores={class=6}] run return run function coinwars:classes/champion/pe_use_ability

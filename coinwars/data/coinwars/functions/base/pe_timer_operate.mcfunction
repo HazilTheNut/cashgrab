@@ -27,6 +27,8 @@ scoreboard players reset @s[tag=t_kill]
 kill @s[tag=t_kill]
 execute if entity @s[tag=t_kill] run return 0
 
+execute if score @s tmr_anchor_pos matches 0 run return 0
+
 # If anchored at creation position
 $execute if entity @s[scores={tmr_lifetime_ticks=1..}] run function $(func_step)
 $execute if entity @s[scores={tmr_lifetime_ticks=..0},tag=t_cleanup] run function $(func_end) {end_reason:0}

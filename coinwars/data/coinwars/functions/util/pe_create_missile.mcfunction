@@ -55,6 +55,7 @@ $tag @e[tag=t_missile_init,limit=1,sort=nearest] add $(t_missile_name)
 
 execute as @e[tag=t_missile_init,limit=1,sort=nearest] at @s run function coinwars:util/pe_eid_acquire
 scoreboard players operation @e[tag=t_missile_init,limit=1,sort=nearest] eid_owner = @s eid_self
+scoreboard players operation @e[tag=t_missile_init,limit=1,sort=nearest] team_id = @s team_id
 
 $execute as @e[tag=t_missile_init,limit=1,sort=nearest] at @s run function $(func_start)
 
