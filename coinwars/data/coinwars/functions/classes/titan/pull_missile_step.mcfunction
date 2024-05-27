@@ -22,4 +22,11 @@
 particle minecraft:cloud ~ ~ ~ 0 0 0 0 1
 
 function coinwars:util/pe_eid_find_owner
-execute as @e[scores={eid_compare=0}] at @s run particle minecraft:crit ~ ~ ~ 1 1 1 0 10
+
+execute if entity @e[scores={eid_compare=0,ev_dmg_taken=1..}] run tag @s add t_cleanup
+execute if entity @e[scores={eid_compare=0,ev_dmg_taken=1..}] run return 0
+
+#execute as @e[scores={eid_compare=0}] at @s run particle minecraft:crit ~ ~ ~ 1 1 1 0 10
+#effect give @e[scores={eid_compare=0}] minecraft:levitation 1 255
+attribute @e[scores={eid_compare=0},limit=1] minecraft:generic.gravity base set 0
+execute rotated as @e[scores={eid_compare=0}] run tp @e[scores={eid_compare=0}] ~ ~-0.75 ~ ~ ~

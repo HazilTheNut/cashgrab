@@ -19,3 +19,7 @@
 #	cv_F	:	
 #	cv_G	:	
 #	cv_H	:	
+
+function coinwars:util/pe_eid_find_owner
+attribute @e[scores={eid_compare=0},limit=1] minecraft:generic.gravity base set 0.08
+

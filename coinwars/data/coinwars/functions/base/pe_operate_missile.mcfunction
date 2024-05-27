@@ -21,8 +21,9 @@
 scoreboard players remove @s mis_lifetime_ticks 1
 
 $execute if entity @s[scores={mis_lifetime_ticks=0}] run function $(func_end) {end_reason:3}
+execute if entity @s[scores={mis_lifetime_ticks=0}] run tag @s add t_kill
 execute if entity @s[scores={mis_lifetime_ticks=0}] run scoreboard players reset @s
-execute if entity @s[scores={mis_lifetime_ticks=0}] run kill @s
+kill @s[tag=t_kill]
 
 # func_step can run commands like tp to alter its location and facing angle and should therefore influence where it goes
 # Thus func_step is ran first before generic missile movement
