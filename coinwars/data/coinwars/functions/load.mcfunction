@@ -174,6 +174,7 @@ scoreboard objectives add ev_xpbottles minecraft.used:minecraft.experience_bottl
 scoreboard objectives add ev_snowballs minecraft.used:minecraft.snowball
 scoreboard objectives add ev_eggs minecraft.used:minecraft.egg
 scoreboard objectives add ev_crossbows minecraft.used:minecraft.crossbow
+scoreboard objectives add ev_gold_axe_break minecraft.broken:minecraft.golden_axe
 
 # =============================
 # Class readable statistics (prefix: "stat_").

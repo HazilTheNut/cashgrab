@@ -10,7 +10,7 @@
 # Arguments: (none)
 
 # Class variable usage:
-#	cv_A	:	Rocket Barrage missiles sequence timer
+#	cv_A	:	Power Strike cooldown timer
 #	cv_B	:	
 #	cv_C	:	
 #	cv_D	:	

@@ -11,8 +11,8 @@
 $item replace entity @s hotbar.4 with minecraft:popped_chorus_fruit[\
 minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Pull\"}]",\
 minecraft:lore=[\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"Fires a homing beam that\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\" pulls its target back to you.\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\"Fires a beam that pulls\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\" its target back to you.\"}",\
 "{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"=====\"}",\
-"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"15\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown for \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"1\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" charge\"}]"\
+"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"13\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown for \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"1\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" charge\"}]"\
 ]] $(charges)

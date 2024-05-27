@@ -1,4 +1,4 @@
-# classes/titan/pull_missile_end.mcfunction
+# classes/titan/pull_raycast_end.mcfunction
 #
 # Context:
 #	as: a missile
@@ -11,7 +11,7 @@
 #	end_reason	: The reason for why the end function was called (1 = hit block terrain, 2 = hit entity, 3 = expired)
 
 # Class variable usage:
-#	cv_A	:	
+#	cv_A	:	Power Strike cooldown timer
 #	cv_B	:	
 #	cv_C	:	
 #	cv_D	:	
@@ -22,10 +22,10 @@
 
 $scoreboard players set @s temp_A $(end_reason)
 
-execute unless score @s temp_A matches 2 run scoreboard players set @s ability_cfg_cooldown_ticks 40
+execute unless score @s temp_A matches 2 run scoreboard players set @s ability_cfg_cooldown_ticks 60
 execute unless score @s temp_A matches 2 run return 0
 
-#scoreboard players set @s ability_cfg_cooldown_ticks 200
+scoreboard players set @s ability_cfg_cooldown_ticks 260
 
 execute positioned ~ ~-1.5 ~ facing ^ ^ ^-1 run function coinwars:util/pe_create_missile {\
 f_speed_mpt:0.5f,\

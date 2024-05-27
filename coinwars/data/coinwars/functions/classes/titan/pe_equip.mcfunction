@@ -17,6 +17,6 @@
 #	cv_G	:	
 #	cv_H	:	
 
-scoreboard players set @s ability_cfg_cooldown_ticks 30
+scoreboard players set @s ability_cfg_cooldown_ticks 260
 scoreboard players set @s ability_cfg_charges 1
 scoreboard players set @s ability_charges 1

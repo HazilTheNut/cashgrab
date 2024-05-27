@@ -8,7 +8,7 @@
 # Arguments: (none)
 
 # Class variable usage:
-#	cv_A	:	
+#	cv_A	:	Power Strike cooldown timer
 #	cv_B	:	
 #	cv_C	:	
 #	cv_D	:	
@@ -34,6 +34,10 @@ minecraft:attribute_modifiers=[\
 # Giant Hammer
 item replace entity @s hotbar.0 with minecraft:iron_axe[minecraft:unbreakable={show_in_tooltip:false},\
 minecraft:item_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Giant Hammer\"}",\
+minecraft:enchantments={levels:{knockback:1},show_in_tooltip:true},\
 minecraft:attribute_modifiers=[\
-{type:"generic.attack_damage",slot:"mainhand",uuid:[I; 8,1,1,0],name:"giant_hammer_atkdmg",amount:9,operation:"add_value"},\
+{type:"generic.attack_damage",slot:"mainhand",uuid:[I; 8,1,1,0],name:"giant_hammer_atkdmg",amount:8,operation:"add_value"},\
 {type:"generic.attack_speed",slot:"mainhand",uuid:[I; 8,1,2,0],name:"giant_hammer_atkspd",amount:-3,operation:"add_value"}]]
+
+# Power Strike
+function coinwars:classes/titan/power_strike_icon

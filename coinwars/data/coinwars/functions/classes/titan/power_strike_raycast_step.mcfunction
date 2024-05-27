@@ -1,4 +1,4 @@
-# classes/titan/pull_raycast_step.mcfunction
+# classes/titan/power_strike_raycast_step.mcfunction
 #
 # Context:
 #	as: a missile
@@ -19,5 +19,5 @@
 #	cv_G	:	
 #	cv_H	:	
 
-particle minecraft:dragon_breath ~ ~ ~ 0 0 0 0 1
+
 

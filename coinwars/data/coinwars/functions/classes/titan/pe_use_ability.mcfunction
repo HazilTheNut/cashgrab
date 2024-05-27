@@ -9,7 +9,7 @@
 # Arguments: (none)
 
 # Class variable usage:
-#	cv_A	:	
+#	cv_A	:	Power Strike cooldown timer
 #	cv_B	:	
 #	cv_C	:	
 #	cv_D	:	
@@ -18,7 +18,7 @@
 #	cv_G	:	
 #	cv_H	:	
 
-playsound minecraft:entity.breeze.shoot player @a ~ ~ ~ 1.0 1.5
+playsound minecraft:block.portal.travel player @a ~ ~ ~ 0.15 2.0
 
 function coinwars:util/pe_raycast {\
 i_range_m:25,\

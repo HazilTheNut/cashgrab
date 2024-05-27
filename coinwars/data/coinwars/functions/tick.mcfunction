@@ -37,3 +37,4 @@ scoreboard players set @a ev_xpbottles 0
 scoreboard players set @a ev_snowballs 0
 scoreboard players set @a ev_eggs 0
 scoreboard players set @a ev_crossbows 0
+scoreboard players set @a ev_gold_axe_break 0
