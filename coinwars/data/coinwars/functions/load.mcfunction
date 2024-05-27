@@ -49,13 +49,15 @@ scoreboard objectives add team_id dummy
 
 # =============================
 # General purpose temporary variables typically used to perform conditionals on function arguments
+#	Generally-speaking, if you call another function, assume that temp_A and temp_B are no longer valid
+#	for the caller afterwards
 scoreboard objectives add temp_A dummy
 scoreboard objectives add temp_B dummy
 
 # =============================
 # Entity ID variables
 
-# EID of itself and its owner. Entities that own themselves (e.g. players) have owner EID = self EID
+# EID of itself and its owner. Entities with no owner have eid_owner = 0
 scoreboard objectives add eid_self dummy
 scoreboard objectives add eid_owner dummy
 
@@ -162,7 +164,7 @@ scoreboard objectives add __iev_logout minecraft.custom:minecraft.leave_game
 scoreboard objectives add __iev_coin_pickup minecraft.picked_up:minecraft.gold_nugget
 
 # =============================
-# Class consumable events (prefix: "ev_"). These values are set to zero whenever you run #coinwars:classes/pe_equip_perclass
+# Class consumable events (prefix: "ev_"). These values are set to zero at the end of every tick
 scoreboard objectives add ev_jump minecraft.custom:minecraft.jump
 scoreboard objectives add ev_dmg_absorbed minecraft.custom:minecraft.damage_absorbed
 scoreboard objectives add ev_dmg_dealt minecraft.custom:minecraft.damage_dealt
@@ -191,7 +193,7 @@ scoreboard players set NUM_ONE_HUNDRED num 100
 scoreboard players set NUM_360_DEG num 360
 
 scoreboard players set NUM_TICKS_PER_SEC num 20
-scoreboard players set NUM_MISSILE_TRACKING_DIVISOR num 2
+scoreboard players set NUM_MISSILE_TRACKING_DIVISOR num 1
 scoreboard players set NUM_RAYCAST_STEPS_PER_M num 2
 
 scoreboard players set NUM_COINSHOWER_EXCHANGE_DIVISOR num 2
@@ -216,6 +218,8 @@ scoreboard players set TEAM_RED coins 0
 scoreboard players set TEAM_BLUE coins 0
 
 scoreboard players set NUM_END_GAME num 0
+
+scoreboard players set DEVELOPER_MODE num 0
 
 # =============================
 # Entity position calculated via util/pe_record_position, in mm

@@ -7,4 +7,4 @@
 #
 # Arguments: (none)
 
-item replace entity @s hotbar.4 with minecraft:ender_eye{display:{Name:"{\"text\":\"Raycast Test\"}"}}
+item replace entity @s hotbar.4 with minecraft:ender_eye[minecraft:item_name="{\"text\":\"Raycast Test\"}"]

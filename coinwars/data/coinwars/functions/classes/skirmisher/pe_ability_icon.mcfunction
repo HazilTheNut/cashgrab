@@ -8,9 +8,9 @@
 # Arguments:
 #	charges		: Number of charges of ability
 
-$item replace entity @s hotbar.4 with minecraft:string{display:{\
-Name:"[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Sword Boomerang\"}]",\
-Lore:[\
+$item replace entity @s hotbar.4 with minecraft:string[\
+minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Sword Boomerang\"}]",\
+minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Throws out your held sword\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" as a boomerang.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Catching the boomerang grants\"}",\
@@ -21,4 +21,4 @@ Lore:[\
 "{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"=====\"}",\
 "[{\"color\":\"yellow\",\"italic\":false,\"text\":\"15\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown for \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"1\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" charge\"}]"\
 ]\
-}} $(charges)
+] $(charges)

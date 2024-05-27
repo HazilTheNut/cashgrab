@@ -8,4 +8,5 @@
 # Arguments:
 #	cd_secs		: Cooldown remaining, in seconds
 
-$execute if entity @s[scores={ability_cd_secs=1..}] run item replace entity @s hotbar.4 with minecraft:black_stained_glass_pane{display:{Name:"{\"italic\":false,\"color\":\"gray\",\"text\":\"Ability on Cooldown\"}"}} $(cd_secs)
+$execute if entity @s[scores={ability_cd_secs=1..}] run item replace entity @s hotbar.4 with minecraft:black_stained_glass_pane[\
+minecraft:item_name="{\"italic\":false,\"color\":\"gray\",\"text\":\"Ability on Cooldown\"}"] $(cd_secs)

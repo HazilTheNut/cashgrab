@@ -24,7 +24,7 @@ scoreboard players set @s cv_F 0
 scoreboard players set @s cv_G 0
 scoreboard players set @s cv_H 0
 
-# Reset consumable events
+# Reset listenable events
 scoreboard players set @s ev_jump 0
 scoreboard players set @s ev_dmg_absorbed 0
 scoreboard players set @s ev_dmg_dealt 0
@@ -50,5 +50,7 @@ execute if entity @s[scores={class=3}] run function coinwars:classes/spectre/pe_
 execute if entity @s[scores={class=4}] run function coinwars:classes/ranger/pe_equip
 execute if entity @s[scores={class=5}] run function coinwars:classes/artillery/pe_equip
 execute if entity @s[scores={class=6}] run function coinwars:classes/champion/pe_equip
+execute if entity @s[scores={class=7}] run function coinwars:classes/frostknight/pe_equip
+execute if entity @s[scores={class=8}] run function coinwars:classes/titan/pe_equip
 
 function coinwars:base/pe_refresh_inv

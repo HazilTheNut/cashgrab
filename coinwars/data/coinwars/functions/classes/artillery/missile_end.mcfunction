@@ -5,7 +5,7 @@
 #	at: the missile
 #	facing: the missile's facing direction
 #
-# Summary: test class b's missile end function
+# Summary: Artillery's missile end function
 #
 # Arguments:
 #	end_reason	: The reason for why the end function was called (0 = cleaned up, 1 = hit block terrain, 2 = hit entity, 3 = expired)
@@ -30,7 +30,7 @@ particle minecraft:lava ~ ~ ~ 2 0.2 2 0 10 force
 particle minecraft:flame ~ ~ ~ 2 0.2 2 0 10 force
 playsound minecraft:entity.generic.explode player @a ~ ~ ~ 3.0 0.9
 
-function coinwars:util/pe_col_filter_entity_hostile
+function coinwars:util/pe_col_entity_filter_hostile
 function coinwars:util/pe_eid_find_owner
 tag @e[scores={eid_compare=0}] add t_dmg_src
 tag @s add t_dmg_loc

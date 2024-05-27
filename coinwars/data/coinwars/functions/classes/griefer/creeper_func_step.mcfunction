@@ -32,7 +32,7 @@ execute if entity @s[tag=t_explode] run particle minecraft:lava ~ ~0.65 ~ 2.5 0.
 execute if entity @s[tag=t_explode] run particle minecraft:flame ~ ~0.65 ~ 2.5 0.2 2.5 0 15 force
 execute if entity @s[tag=t_explode] run playsound minecraft:entity.generic.explode player @a ~ ~ ~ 3.0 0.75
 
-execute if entity @s[tag=t_explode] run function coinwars:util/pe_col_filter_entity_hostile
+execute if entity @s[tag=t_explode] run function coinwars:util/pe_col_entity_filter_hostile
 execute if entity @s[tag=t_explode] run function coinwars:util/pe_eid_find_owner
 execute if entity @s[tag=t_explode] run tag @e[scores={eid_compare=0}] add t_dmg_src
 execute if entity @s[tag=t_explode] run tag @e[scores={eid_compare=0}] add t_collision_candidate

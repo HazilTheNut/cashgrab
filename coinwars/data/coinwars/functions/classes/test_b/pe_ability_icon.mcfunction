@@ -8,4 +8,4 @@
 # Arguments:
 #	charges		: Number of charges of ability
 
-$item replace entity @s hotbar.4 with minecraft:fire_charge{display:{Name:"{\"text\":\"Missile Test\"}"}} $(charges)
+$item replace entity @s hotbar.4 with minecraft:fire_charge[minecraft:item_name="{\"text\":\"Missile Test\"}"] $(charges)

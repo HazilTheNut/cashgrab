@@ -18,12 +18,11 @@
 #	cv_G	:	
 #	cv_H	:	
 
-$item replace entity @s hotbar.5 with minecraft:kelp{display:{\
-Name:"[{\"color\":\"green\",\"italic\":false,\"text\":\"[Crouch]\"},{\"color\":\"white\",\"text\":\" Climbing Energy\"}]",\
-Lore:[\
+$item replace entity @s hotbar.5 with minecraft:kelp[\
+minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Crouch]\"},{\"color\":\"white\",\"text\":\" Climbing Energy\"}]",\
+minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"While facing a wall, uses\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" energy to climb it.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Landing on the ground\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" recharges this ability.\"}",\
-]\
-}} $(count)
+]] $(count)

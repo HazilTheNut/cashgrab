@@ -21,6 +21,6 @@
 scoreboard players set @s cv_E 3
 scoreboard players set @s cv_F 1
 
-playsound minecraft:item.crossbow.loading_end player @s ~ ~ ~ 1.0 1.5
+playsound minecraft:item.flintandsteel.use player @s ~ ~ ~ 1.0 0.5
 
 function coinwars:base/pe_refresh_inv

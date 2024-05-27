@@ -19,21 +19,25 @@
 
 # =============================
 # Armor
-item replace entity @s armor.head with minecraft:golden_helmet{Unbreakable:1b}
-item replace entity @s armor.chest with minecraft:golden_chestplate{Unbreakable:1b}
-item replace entity @s armor.legs with minecraft:golden_leggings{Unbreakable:1b}
-item replace entity @s armor.feet with minecraft:golden_boots{Unbreakable:1b,AttributeModifiers:[\
-{AttributeName:"generic.movement_speed",Name:"speed_bonus",Slot:"feet",Operation:1,Amount:0.2,UUID:[I; 4,14,1,0]},\
-{AttributeName:"generic.armor",Name:"boots_armor",Slot:"feet",Operation:0,Amount:1,UUID:[I; 4,14,2,0]}]}
+item replace entity @s armor.head with minecraft:golden_helmet[minecraft:unbreakable={show_in_tooltop:false}]
+item replace entity @s armor.chest with minecraft:golden_chestplate[minecraft:unbreakable={show_in_tooltop:false}]
+item replace entity @s armor.legs with minecraft:golden_leggings[minecraft:unbreakable={show_in_tooltop:false}]
+item replace entity @s armor.feet with minecraft:golden_boots[minecraft:unbreakable={show_in_tooltip:false},\
+minecraft:attribute_modifiers=[\
+{type:"generic.movement_speed",slot:"feet",uuid:[I; 6,14,1,0],name:"speed_bonus",amount:0.2,operation:"add_multiplied_base"},\
+{type:"generic.armor",slot:"feet",uuid:[I; 6,14,2,0],name:"boots_armor",amount:1,operation:"add_value"}\
+]]
 
 # =============================
 # Hotbar
 
 # Duskpiercer
-item replace entity @s hotbar.0 with minecraft:golden_sword{Unbreakable:1b,display:{Name:"{\"italic\":false,\"color\":\"red\",\"text\":\"Duskpiercer\"}"},\
-AttributeModifiers:[\
-{AttributeName:"generic.attack_damage",Name:"machete_atkdmg",Slot:"mainhand",Operation:0,Amount:4,UUID:[I; 6,1,1,0]},\
-{AttributeName:"generic.attack_speed",Name:"machete_atkspd",Slot:"mainhand",Operation:0,Amount:-2,UUID:[I; 6,1,2,0]}]}
+item replace entity @s hotbar.0 with minecraft:golden_sword[minecraft:unbreakable={show_in_tooltip:false},\
+minecraft:item_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Duskpiercer\"}",\
+minecraft:attribute_modifiers=[\
+{type:"generic.attack_damage",slot:"mainhand",uuid:[I; 6,1,1,0],name:"duskpiercer_atkdmg",amount:4,operation:"add_value"},\
+{type:"generic.attack_speed",slot:"mainhand",uuid:[I; 6,1,2,0],name:"duskpiercer_atkspd",amount:-2,operation:"add_value"}]]
 
 # Bastion
-item replace entity @s weapon.offhand with minecraft:shield{Unbreakable:1b,display:{Name:"{\"italic\":false,\"color\":\"red\",\"text\":\"Bastion\"}"}}
+item replace entity @s weapon.offhand with minecraft:shield[minecraft:unbreakable={show_in_tooltip:false},\
+minecraft:item_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Bastion\"}"]

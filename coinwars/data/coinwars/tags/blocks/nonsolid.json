@@ -1,80 +1,81 @@
 {
+	"replace": false,
 	"values": [
 		{
 			"id": "minecraft:air",
-			"required": "true"
+			"required": true
 		},
 		{
 			"id": "minecraft:light",
-			"required": "true"
+			"required": true
 		},
 		{
 			"id": "#minecraft:all_signs",
-			"required": "false"
+			"required": false
 		},
 		{
 			"id": "#minecraft:banners",
-			"required": "false"
+			"required": false
 		},
 		{
 			"id": "#minecraft:buttons",
-			"required": "false"
+			"required": false
 		},
 		{
 			"id": "#minecraft:candles",
-			"required": "false"
+			"required": false
 		},
 		{
 			"id": "#minecraft:cave_vines",
-			"required": "false"
+			"required": false
 		},
 		{
 			"id": "#minecraft:climbable",
-			"required": "false"
+			"required": false
 		},
 		{
 			"id": "#minecraft:corals",
-			"required": "false"
+			"required": false
 		},
 		{
 			"id": "#minecraft:crops",
-			"required": "false"
+			"required": false
 		},
 		{
 			"id": "#minecraft:flower_pots",
-			"required": "false"
+			"required": false
 		},
 		{
 			"id": "#minecraft:portals",
-			"required": "false"
+			"required": false
 		},
 		{
 			"id": "#minecraft:pressure_plates",
-			"required": "false"
+			"required": false
 		},
 		{
 			"id": "#minecraft:rails",
-			"required": "false"
+			"required": false
 		},
 		{
 			"id": "#minecraft:replaceable",
-			"required": "false"
+			"required": false
 		},
 		{
 			"id": "#minecraft:saplings",
-			"required": "false"
+			"required": false
 		},
 		{
 			"id": "#minecraft:small_flowers",
-			"required": "false"
+			"required": false
 		},
 		{
 			"id": "#minecraft:tall_flowers",
-			"required": "false"
+			"required": false
 		},
 		{
 			"id": "#minecraft:wool_carpets",
-			"required": "false"
+			"required": false
 		}
 	]
 }

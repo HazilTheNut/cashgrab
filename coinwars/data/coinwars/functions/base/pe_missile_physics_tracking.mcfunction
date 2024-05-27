@@ -12,8 +12,8 @@
 
 # If t_missile_calc_tracking is set, calculate minimum and maximum displacement angles to apply tracking to
 scoreboard players set @s[tag=t_missile_calc_tracking] mis_tracking_max_angle_mdeg 0
-execute if entity @s[tag=t_missile_calc_tracking] store result score @s mis_tracking_max_angle_mdeg run data get entity @s data.f_tracking_scalar 80000
-scoreboard players add @s[tag=t_missile_calc_tracking] mis_tracking_max_angle_mdeg 20000
+execute if entity @s[tag=t_missile_calc_tracking] store result score @s mis_tracking_max_angle_mdeg run data get entity @s data.f_tracking_scalar 10000
+scoreboard players add @s[tag=t_missile_calc_tracking] mis_tracking_max_angle_mdeg 10000
 scoreboard players operation @s[tag=t_missile_calc_tracking] mis_tracking_min_angle_mdeg = @s[tag=t_missile_calc_tracking] mis_tracking_max_angle_mdeg
 scoreboard players operation @s[tag=t_missile_calc_tracking] mis_tracking_min_angle_mdeg *= NUM_NEG_ONE num
 tag @s remove t_missile_calc_tracking

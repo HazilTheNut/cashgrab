@@ -31,9 +31,9 @@ execute if entity @s[tag=t_crash_landing_explode] run particle minecraft:lava ~ 
 execute if entity @s[tag=t_crash_landing_explode] run particle minecraft:flame ~ ~0.65 ~ 2.5 0.2 2.5 0 15 force
 execute if entity @s[tag=t_crash_landing_explode] run playsound minecraft:entity.generic.explode player @a ~ ~ ~ 3.0 0.75
 
-execute if entity @s[tag=t_crash_landing_explode] run function coinwars:util/pe_col_filter_entity_hostile
+execute if entity @s[tag=t_crash_landing_explode] run function coinwars:util/pe_col_entity_filter_hostile
 execute if entity @s[tag=t_crash_landing_explode] run tag @s add t_dmg_src
-execute if entity @s[tag=t_crash_landing_explode] as @e[tag=t_collision_candidate,distance=..4.5] run damage @s 6.0 minecraft:explosion by @e[tag=t_dmg_src,limit=1,sort=nearest] from @e[tag=t_dmg_src,limit=1,sort=nearest]
+execute if entity @s[tag=t_crash_landing_explode] as @e[tag=t_collision_candidate,distance=..4.5] run damage @s 6.0 minecraft:fireball by @e[tag=t_dmg_src,limit=1,sort=nearest] from @e[tag=t_dmg_src,limit=1,sort=nearest]
 
 scoreboard players set @s[tag=t_crash_landing_explode] cv_A 0
 tag @s remove t_dmg_src
@@ -51,7 +51,6 @@ func_end:"coinwars:classes/griefer/summon_creeper",\
 }
 execute if score @s ev_xpbottles matches 1.. run scoreboard players set @s cv_C 160
 execute if score @s ev_xpbottles matches 1.. run function coinwars:classes/griefer/creeper_ability_icon
-scoreboard players set @s ev_xpbottles 0
 
 # Creeper in a Bottle cooldown
 scoreboard players remove @s[scores={cv_C=0..}] cv_C 1

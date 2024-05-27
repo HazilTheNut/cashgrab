@@ -20,13 +20,14 @@
 
 # Track state of crossbow
 scoreboard players set @s cv_F 0
-scoreboard players set @s[nbt={Inventory:[{id:"minecraft:crossbow",Count:1b,tag:{ChargedProjectiles:[{id:"minecraft:arrow",Count:1b}]}}]}] cv_F 1
+execute if items entity @s hotbar.* minecraft:crossbow[minecraft:count=1,minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1}]] run scoreboard players set @s cv_F 1
+execute if items entity @s weapon.* minecraft:crossbow[minecraft:count=1,minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1}]] run scoreboard players set @s cv_F 1
 
 # Track arrow count
 scoreboard players set @s cv_E 0
-scoreboard players set @s[nbt={Inventory:[{id:"minecraft:arrow",Count:1b}]}] cv_E 1
-scoreboard players set @s[nbt={Inventory:[{id:"minecraft:arrow",Count:2b}]}] cv_E 2
-scoreboard players set @s[nbt={Inventory:[{id:"minecraft:arrow",Count:3b}]}] cv_E 3
+execute if items entity @s hotbar.* minecraft:arrow[minecraft:count=1] run scoreboard players set @s cv_E 1
+execute if items entity @s hotbar.* minecraft:arrow[minecraft:count=2] run scoreboard players set @s cv_E 2
+execute if items entity @s hotbar.* minecraft:arrow[minecraft:count=3] run scoreboard players set @s cv_E 3
 
 # Wall Climb enter state
 scoreboard players set @s[scores={ps_sneaking=1..2,cv_A=0,cv_B=1..}] cv_A 2

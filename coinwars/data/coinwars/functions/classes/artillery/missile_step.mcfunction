@@ -5,7 +5,7 @@
 #	at: the missile
 #	facing: the missile's facing direction
 #
-# Summary: class b's missile step function
+# Summary: Artillery's missile step function
 #
 # Arguments: (none)
 
@@ -19,5 +19,4 @@
 #	cv_G	:	
 #	cv_H	:	
 
-particle minecraft:dust_color_transition 1.0 0.5 0.25 0.75 0.5 0.5 0.5 ~ ~ ~ 0.05 0.05 0.05 0 4
-#particle minecraft:end_rod ~ ~ ~ 0 0 0 0 1
+particle minecraft:dust_color_transition{from_color:[1.0f,0.5f,0.15f],to_color:[0.4f,0.4f,0.4f],scale:1.0f}

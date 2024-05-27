@@ -8,9 +8,9 @@
 # Arguments:
 #	charges		: Number of charges of ability
 
-$item replace entity @s hotbar.4 with minecraft:yellow_dye{display:{\
-Name:"[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Commander Charge\"}]",\
-Lore:[\
+$item replace entity @s hotbar.4 with minecraft:yellow_dye[\
+minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Commander Charge\"}]",\
+minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Grants you and nearby allies\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" a speed boost.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Afterwards, grants you and\"}",\
@@ -19,5 +19,4 @@ Lore:[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" when at low health.\"}",\
 "{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"=====\"}",\
 "[{\"color\":\"yellow\",\"italic\":false,\"text\":\"13\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown for \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"1\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" charge\"}]"\
-]\
-}} $(charges)
+]] $(charges)

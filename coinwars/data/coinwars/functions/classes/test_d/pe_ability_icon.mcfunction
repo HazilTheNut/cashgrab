@@ -7,4 +7,4 @@
 #
 # Arguments: (none)
 
-item replace entity @s hotbar.4 with minecraft:clock{display:{Name:"{\"text\":\"Timer Test\"}"}}
+item replace entity @s hotbar.4 with minecraft:clock[minecraft:item_name="{\"text\":\"Timer Test\"}"]

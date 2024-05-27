@@ -19,12 +19,13 @@
 
 # =============================
 # Armor
-item replace entity @s[scores={cv_A=..0}] armor.head with minecraft:leather_helmet{Unbreakable:1b,display:{color:7727312},AttributeModifiers:[\
-{AttributeName:"generic.movement_speed",Name:"speed_bonus",Slot:"head",Operation:1,Amount:0.3,UUID:[I; 1,14,1,0]},\
-{AttributeName:"generic.armor",Name:"head_armor",Slot:"head",Operation:0,Amount:1,UUID:[I; 1,14,2,0]}],\
-Enchantments:[{id:"minecraft:feather_falling",lvl:1}],HideFlags:1}
-item replace entity @s[scores={cv_A=..0}] armor.chest with minecraft:leather_chestplate{Unbreakable:1b,display:{color:7727312},\
-Enchantments:[{id:"minecraft:feather_falling",lvl:1}],HideFlags:1}
+item replace entity @s[scores={cv_A=..0}] armor.head with minecraft:leather_helmet[minecraft:unbreakable={show_in_tooltip:false},minecraft:dyed_color=7727312,\
+minecraft:attribute_modifiers=[\
+{type:"generic.movement_speed",slot:"head",uuid:[I; 3,14,1,0],name:"speed_bonus",amount:0.3,operation:"add_multiplied_base"},\
+{type:"generic.armor",slot:"head",uuid:[I; 3,14,2,0],name:"helmet_armor",amount:1,operation:"add_value"}],\
+minecraft:enchantment_glint_override=true]
+item replace entity @s[scores={cv_A=..0}] armor.chest with minecraft:leather_chestplate[minecraft:unbreakable={show_in_tooltip:false},minecraft:dyed_color=7727312,\
+minecraft:enchantment_glint_override=true]
 item replace entity @s[scores={cv_A=1..}] armor.head with minecraft:air
 item replace entity @s[scores={cv_A=1..}] armor.chest with minecraft:air
 item replace entity @s armor.legs with minecraft:air
@@ -34,11 +35,13 @@ item replace entity @s armor.feet with minecraft:air
 # Hotbar
 
 # Spectral Blade
-item replace entity @s[scores={cv_A=..0}] hotbar.0 with minecraft:diamond_sword{Unbreakable:1b,display:{Name:"{\"italic\":false,\"color\":\"red\",\"text\":\"Spectral Blade\"}"},\
-AttributeModifiers:[\
-{AttributeName:"generic.attack_damage",Name:"spectral_blade_atkdmg",Slot:"mainhand",Operation:0,Amount:7,UUID:[I; 3,1,1,0]},\
-{AttributeName:"generic.attack_speed",Name:"spectral_blade_atkspd",Slot:"mainhand",Operation:0,Amount:-2,UUID:[I; 3,1,2,0]}],\
-Enchantments:[{id:"minecraft:feather_falling",lvl:1}],HideFlags:1}
+item replace entity @s[scores={cv_A=..0}] hotbar.0 with minecraft:diamond_sword[minecraft:unbreakable={show_in_tooltip:false},\
+minecraft:item_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Spectral Blade\"}",\
+minecraft:attribute_modifiers=[\
+{type:"generic.attack_damage",slot:"mainhand",uuid:[I; 3,1,1,0],name:"spectral_blade_atkdmg",amount:7,operation:"add_value"},\
+{type:"generic.attack_speed",slot:"mainhand",uuid:[I; 3,1,2,0],name:"spectral_blade_atkspd",amount:-2,operation:"add_value"}],\
+minecraft:enchantment_glint_override=true]
+
 item replace entity @s[scores={cv_A=1..}] hotbar.0 with minecraft:air
 
 # Shadow Walk

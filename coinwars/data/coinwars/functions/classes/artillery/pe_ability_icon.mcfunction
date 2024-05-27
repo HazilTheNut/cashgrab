@@ -8,11 +8,10 @@
 # Arguments:
 #	charges		: Number of charges of ability
 
-$item replace entity @s hotbar.4 with minecraft:firework_rocket{display:{\
-Name:"[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Rocket Barrage\"}]",\
-Lore:[\
+$item replace entity @s hotbar.4 with minecraft:firework_rocket[\
+minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Rocket Barrage\"}]",\
+minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Fires a barrage of missiles.\"}",\
 "{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"=====\"}",\
 "[{\"color\":\"yellow\",\"italic\":false,\"text\":\"12\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown for \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"3\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" charges\"}]"\
-]\
-}} $(charges)
+]] $(charges)

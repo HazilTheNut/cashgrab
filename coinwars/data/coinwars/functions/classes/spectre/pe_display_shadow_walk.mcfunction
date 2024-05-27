@@ -18,12 +18,12 @@
 #	cv_G	:	
 #	cv_H	:	
 
-$item replace entity @s hotbar.5 with minecraft:gunpowder{display:{\
-Name:"[{\"color\":\"green\",\"italic\":false,\"text\":\"[Crouch]\"},{\"color\":\"white\",\"text\":\" Shadow Walk\"}]",\
-Lore:[\
+$item replace entity @s hotbar.5 with minecraft:gunpowder[\
+minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Crouch]\"},{\"color\":\"white\",\"text\":\" Shadow Walk\"}]",\
+minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Turns you invisible while\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" energy remains.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"This ability recharges itself\"}",\
 "[{\"color\":\"yellow\",\"italic\":false,\"text\":\" 5\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" seconds after use.\"}]"\
 ]\
-}} $(count)
+] $(count)

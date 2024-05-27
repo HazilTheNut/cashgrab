@@ -62,7 +62,7 @@ tag @s[tag=t_boomerang_begin_return] add t_missile_calc_tracking
 tag @s remove t_boomerang_begin_return
 
 # Damage enemies nearby
-execute store result score @s temp_A run function coinwars:util/pe_col_detect_entity {func_entity_filter:"coinwars:util/pe_col_filter_entity_hostile"}
+execute store result score @s temp_A run function coinwars:util/pe_col_detect_entity {func_entity_filter:"coinwars:util/pe_col_entity_filter_hostile"}
 execute if score @s temp_A matches 1 run tag @s add t_dmg_src
 execute if score @s temp_A matches 1 if score @s cv_E matches 1 as @e[tag=t_collision_found] run damage @s 6.0 minecraft:player_attack by @e[scores={eid_compare=0},limit=1] from @e[tag=t_dmg_src,limit=1]
 execute if score @s temp_A matches 1 if score @s cv_E matches 2 as @e[tag=t_collision_found] run damage @s 4.0 minecraft:player_attack by @e[scores={eid_compare=0},limit=1] from @e[tag=t_dmg_src,limit=1]

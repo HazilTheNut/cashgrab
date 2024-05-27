@@ -8,11 +8,10 @@
 # Arguments:
 #	charges		: Number of charges of ability
 
-$item replace entity @s hotbar.4 with minecraft:slime_ball{display:{\
-Name:"[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Blink\"}]",\
-Lore:[\
+$item replace entity @s hotbar.4 with minecraft:slime_ball[\
+minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Blink\"}]",\
+minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Teleports forwards.\"}",\
 "{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"=====\"}",\
-"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"7\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown for \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"1\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" charge\"}]"\
-]\
-}} $(charges)
+"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"7\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown for \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"1\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" charge\"}]"],\
+] $(charges)

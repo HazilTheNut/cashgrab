@@ -18,17 +18,23 @@
 
 # =============================
 # Armor
-item replace entity @s armor.head with minecraft:leather_helmet{Unbreakable:1b,display:{color:11842740}}
-item replace entity @s armor.chest with minecraft:chainmail_chestplate{Unbreakable:1b,display:{color:2665010}}
-item replace entity @s armor.legs with minecraft:chainmail_leggings{Unbreakable:1b,display:{color:2665010}}
-item replace entity @s armor.feet with minecraft:leather_boots{Unbreakable:1b,display:{color:11842740},AttributeModifiers:[\
-{AttributeName:"generic.movement_speed",Name:"speed_bonus",Slot:"feet",Operation:1,Amount:0.2,UUID:[I; 4,14,1,0]},\
-{AttributeName:"generic.armor",Name:"boots_armor",Slot:"feet",Operation:0,Amount:1,UUID:[I; 4,14,2,0]}]}
+item replace entity @s armor.head with minecraft:leather_helmet[minecraft:unbreakable={show_in_tooltop:false},\
+minecraft:dyed_color=11842740]
+item replace entity @s armor.chest with minecraft:chainmail_chestplate[minecraft:unbreakable={show_in_tooltop:false}]
+item replace entity @s armor.legs with minecraft:chainmail_leggings[minecraft:unbreakable={show_in_tooltop:false}]
+item replace entity @s armor.feet with minecraft:leather_boots[minecraft:unbreakable={show_in_tooltip:false},\
+minecraft:dyed_color=11842740,\
+minecraft:attribute_modifiers=[\
+{type:"generic.movement_speed",slot:"feet",uuid:[I; 5,14,1,0],name:"speed_bonus",amount:0.2,operation:"add_multiplied_base"},\
+{type:"generic.armor",slot:"feet",uuid:[I; 5,14,2,0],name:"boots_armor",amount:1,operation:"add_value"}\
+]]
 
 # =============================
 # Hotbar
 
 # Infinibow
-item replace entity @s hotbar.0 with minecraft:bow{Unbreakable:1b,display:{Name:"{\"italic\":false,\"color\":\"red\",\"text\":\"Infinibow\"}"},\
-Enchantments:[{id:"minecraft:infinity",lvl:1}]}
+item replace entity @s hotbar.0 with minecraft:bow[minecraft:unbreakable={show_in_tooltop:false},\
+minecraft:item_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Infinibow\"}",\
+minecraft:enchantments={levels:{infinity:1}}]
+
 item replace entity @s hotbar.1 with minecraft:arrow

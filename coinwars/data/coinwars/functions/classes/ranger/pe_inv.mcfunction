@@ -19,27 +19,30 @@
 
 # =============================
 # Armor
-item replace entity @s armor.head with minecraft:leather_helmet{Unbreakable:1b,display:{color:2665010}}
-item replace entity @s armor.chest with minecraft:leather_chestplate{Unbreakable:1b,display:{color:2665010}}
-item replace entity @s armor.legs with minecraft:leather_leggings{Unbreakable:1b,display:{color:2665010}}
-item replace entity @s armor.feet with minecraft:leather_boots{Unbreakable:1b,display:{color:2665010},AttributeModifiers:[\
-{AttributeName:"generic.movement_speed",Name:"speed_bonus",Slot:"feet",Operation:1,Amount:0.3,UUID:[I; 4,14,1,0]},\
-{AttributeName:"generic.armor",Name:"boots_armor",Slot:"feet",Operation:0,Amount:1,UUID:[I; 4,14,2,0]}]}
+item replace entity @s armor.head with minecraft:leather_helmet[minecraft:unbreakable={show_in_tooltip:false},minecraft:dyed_color=2665010]
+item replace entity @s armor.chest with minecraft:leather_chestplate[minecraft:unbreakable={show_in_tooltip:false},minecraft:dyed_color=2665010]
+item replace entity @s armor.legs with minecraft:leather_leggings[minecraft:unbreakable={show_in_tooltip:false},minecraft:dyed_color=2665010]
+item replace entity @s armor.feet with minecraft:leather_boots[minecraft:unbreakable={show_in_tooltip:false},minecraft:dyed_color=2665010,minecraft:attribute_modifiers=[\
+{type:"generic.movement_speed",slot:"feet",uuid:[I; 4,14,1,0],name:"speed_bonus",amount:0.3,operation:"add_multiplied_base"},\
+{type:"generic.armor",slot:"feet",uuid:[I; 4,14,2,0],name:"boots_armor",amount:1,operation:"add_value"}\
+]]
 
 # =============================
 # Hotbar
 
 # Machete
-item replace entity @s hotbar.0 with minecraft:stone_sword{Unbreakable:1b,display:{Name:"{\"italic\":false,\"color\":\"red\",\"text\":\"Machete\"}"},\
-AttributeModifiers:[\
-{AttributeName:"generic.attack_damage",Name:"machete_atkdmg",Slot:"mainhand",Operation:0,Amount:5,UUID:[I; 4,1,1,0]},\
-{AttributeName:"generic.attack_speed",Name:"machete_atkspd",Slot:"mainhand",Operation:0,Amount:-2,UUID:[I; 4,1,2,0]}]}
+item replace entity @s hotbar.0 with minecraft:stone_sword[minecraft:unbreakable={show_in_tooltip:false},\
+minecraft:item_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Machete\"}",\
+minecraft:attribute_modifiers=[\
+{type:"generic.attack_damage",slot:"mainhand",uuid:[I; 3,1,1,0],name:"spectral_blade_atkdmg",amount:7,operation:"add_value"},\
+{type:"generic.attack_speed",slot:"mainhand",uuid:[I; 3,1,2,0],name:"spectral_blade_atkspd",amount:-2,operation:"add_value"}]]
 
 # Crossbow
-item replace entity @s[scores={cv_F=0}] weapon.offhand with minecraft:crossbow{\
-Unbreakable:1b,display:{Name:"{\"italic\":false,\"color\":\"red\",\"text\":\"Hunting Bow\"}"}}
-item replace entity @s[scores={cv_F=1..}] weapon.offhand with minecraft:crossbow{\
-Unbreakable:1b,display:{Name:"{\"italic\":false,\"color\":\"red\",\"text\":\"Hunting Bow\"}"},ChargedProjectiles:[{id:"minecraft:arrow",Count:1b}],Charged:1b}
+item replace entity @s[scores={cv_F=0}] weapon.offhand with minecraft:crossbow[minecraft:unbreakable={show_in_tooltip:false},\
+minecraft:item_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Hunting Bow\"}"]
+item replace entity @s[scores={cv_F=1..}] weapon.offhand with minecraft:crossbow[minecraft:unbreakable={show_in_tooltip:false},\
+minecraft:item_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Hunting Bow\"}",\
+minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1}]]
 
 # Arrows
 clear @s minecraft:arrow
