@@ -44,4 +44,7 @@ minecraft:attribute_modifiers=[\
 {type:"generic.attack_speed",slot:"mainhand",uuid:[I; 9,1,2,0],name:"magiciteshiv_atkspd",amount:-2,operation:"add_value"}]]
 
 # Potions
+function coinwars:classes/alchemist/grant_potions
 
+# Potion brewing icon
+function coinwars:classes/alchemist/potion_brewing_icon
