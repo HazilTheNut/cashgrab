@@ -35,7 +35,7 @@ i_gravity_const_mmpt2:0,\
 f_tracking_scalar:0f,\
 t_missile_name:"t_boomerang",\
 col_terrain_allowed:"#coinwars:partialsolid",\
-func_entity_filter:"coinwars:util/dummy",\
+func_entity_filter:"coinwars:util/pe_col_entity_filter_none",\
 func_tracking_filter:"coinwars:util/dummy",\
 func_start:"coinwars:classes/skirmisher/boomerang_start_cutlass",\
 func_step:"coinwars:classes/skirmisher/boomerang_step",\
@@ -52,7 +52,7 @@ i_gravity_const_mmpt2:0,\
 f_tracking_scalar:0f,\
 t_missile_name:"t_boomerang",\
 col_terrain_allowed:"#coinwars:partialsolid",\
-func_entity_filter:"coinwars:util/dummy",\
+func_entity_filter:"coinwars:util/pe_col_entity_filter_none",\
 func_tracking_filter:"coinwars:util/dummy",\
 func_start:"coinwars:classes/skirmisher/boomerang_start_rapier",\
 func_step:"coinwars:classes/skirmisher/boomerang_step",\

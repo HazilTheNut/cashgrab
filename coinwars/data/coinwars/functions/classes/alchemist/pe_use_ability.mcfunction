@@ -30,7 +30,7 @@ i_gravity_const_mmpt2:20,\
 f_tracking_scalar:0,\
 t_missile_name:"t_alchemist_flametrap_missile",\
 col_terrain_allowed:"#coinwars:nonsolid",\
-func_entity_filter:"coinwars:util/dummy",\
+func_entity_filter:"coinwars:util/pe_col_entity_filter_none",\
 func_tracking_filter:"coinwars:util/dummy",\
 func_start:"coinwars:util/dummy",\
 func_step:"coinwars:classes/alchemist/flametrap_missile_step",\

@@ -37,7 +37,7 @@ i_gravity_const_mmpt2:0,\
 t_missile_name:"t_titan_missile_init",\
 f_tracking_scalar:0f,\
 col_terrain_allowed:"#coinwars:nonsolid",\
-func_entity_filter:"coinwars:util/dummy",\
+func_entity_filter:"coinwars:util/pe_col_entity_filter_none",\
 func_tracking_filter:"coinwars:util/dummy",\
 func_start:"coinwars:util/dummy",\
 func_step:"coinwars:classes/titan/pull_missile_step",\

@@ -21,6 +21,6 @@
 scoreboard players set @s cv_A 1
 scoreboard players set @s cv_B 1
 
-scoreboard players set @s ability_cfg_cooldown_ticks 400
+scoreboard players set @s ability_cfg_cooldown_ticks 500
 scoreboard players set @s ability_cfg_charges 2
 scoreboard players set @s ability_charges 2

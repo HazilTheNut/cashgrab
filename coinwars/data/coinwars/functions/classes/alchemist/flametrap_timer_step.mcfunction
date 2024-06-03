@@ -68,8 +68,7 @@ execute if score @s tmr_lifetime_ticks matches 1 as @e[scores={eid_compare=0},li
 execute if score @s tmr_lifetime_ticks matches 1 run tag @e[scores={eid_compare=0},limit=1] add t_dmg_src
 execute if score @s tmr_lifetime_ticks matches 1 run tag @s add t_dmg_loc
 execute if score @s tmr_lifetime_ticks matches 1 run function coinwars:util/pe_col_entity_filter_hostile
-#execute if score @s tmr_lifetime_ticks matches 1 as @e[tag=t_collision_candidate,distance=..4.5] run damage @s 7.0 minecraft:fireball by @e[tag=t_dmg_src,limit=1,sort=nearest] from @e[tag=t_dmg_loc,limit=1,sort=nearest]
-execute if score @s tmr_lifetime_ticks matches 1 as @e[tag=t_collision_candidate,distance=..4.5] run damage @s 7.0 minecraft:fireball at ~ ~ ~
-execute if score @s tmr_lifetime_ticks matches 1 run effect give @e[tag=t_collision_candidate,distance=..4.5] minecraft:glowing 10 0
+execute if score @s tmr_lifetime_ticks matches 1 as @e[tag=t_collision_candidate,distance=..4.5] run damage @s 7.0 minecraft:fireball by @e[tag=t_dmg_src,limit=1,sort=nearest] from @e[tag=t_dmg_loc,limit=1,sort=nearest]
+execute if score @s tmr_lifetime_ticks matches 1 run effect give @e[tag=t_collision_candidate,distance=..4] minecraft:glowing 10 0
 execute if score @s tmr_lifetime_ticks matches 1 run tag @e[tag=t_dmg_src] remove t_dmg_src
 execute if score @s tmr_lifetime_ticks matches 1 run tag @e[tag=t_dmg_loc] remove t_dmg_loc

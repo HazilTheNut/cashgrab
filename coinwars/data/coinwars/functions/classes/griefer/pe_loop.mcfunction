@@ -45,7 +45,7 @@ i_range_m:3,\
 i_origin_loc:0,\
 col_terrain_allowed:"#coinwars:nonsolid",\
 b_fit_player:1,\
-func_entity_filter:"coinwars:util/dummy",\
+func_entity_filter:"coinwars:util/pe_col_entity_filter_none",\
 func_step:"coinwars:util/dummy",\
 func_end:"coinwars:classes/griefer/summon_creeper",\
 }

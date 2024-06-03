@@ -30,7 +30,7 @@ i_gravity_const_mmpt2:50,\
 f_tracking_scalar:0,\
 t_missile_name:"t_frostknight_glacier_missile",\
 col_terrain_allowed:"minecraft:air",\
-func_entity_filter:"coinwars:util/dummy",\
+func_entity_filter:"coinwars:util/pe_col_entity_filter_none",\
 func_tracking_filter:"coinwars:util/dummy",\
 func_start:"coinwars:util/dummy",\
 func_step:"coinwars:classes/frostknight/glacier_missile_step",\
