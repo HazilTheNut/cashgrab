@@ -13,6 +13,7 @@ function coinwars:base/gt_player_count
 execute if score DEVELOPER_MODE num matches 0 run function coinwars:base/gt_lobby
 function coinwars:base/gt_player_state
 function coinwars:base/gt_ability
+function coinwars:base/gt_stasis
 function coinwars:base/gt_missile
 function coinwars:base/gt_coins
 function coinwars:base/gt_scoring

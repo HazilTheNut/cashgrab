@@ -23,9 +23,9 @@ execute if score @s cv_A matches 1.. run item replace entity @s hotbar.1 with mi
 minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Use]\"},{\"color\":\"white\",\"text\":\" Caustic Brew\"}]",\
 minecraft:enchantment_glint_override=true,\
 minecraft:potion_contents={custom_color:7206301,custom_effects:[\
-{id:"minecraft:poison",amplifier:0,duration:100},\
-{id:"minecraft:slowness",amplifier:0,duration:100},\
-{id:"minecraft:mining_fatigue",amplifier:1,duration:100},\
+{id:"minecraft:poison",amplifier:0,duration:140},\
+{id:"minecraft:slowness",amplifier:0,duration:140},\
+{id:"minecraft:mining_fatigue",amplifier:4,duration:140},\
 ]}]
 
 # Booster Brew

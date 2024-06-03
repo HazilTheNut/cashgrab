@@ -51,5 +51,6 @@ scoreboard players operation @e[tag=t_titan_missile_init,limit=1,sort=nearest] e
 
 scoreboard players operation @e[tag=t_titan_missile_init,limit=1,sort=nearest] mis_lifetime_ticks -= @s rc_steps_remaining
 scoreboard players remove @e[tag=t_titan_missile_init,limit=1,sort=nearest] mis_lifetime_ticks 3
+tag @e[tag=t_titan_missile_init,limit=1,sort=nearest] add t_stasis_immune
 tag @e[tag=t_titan_missile_init,limit=1,sort=nearest] add t_titan_missile
 tag @e[tag=t_titan_missile_init,limit=1,sort=nearest] remove t_titan_missile_init

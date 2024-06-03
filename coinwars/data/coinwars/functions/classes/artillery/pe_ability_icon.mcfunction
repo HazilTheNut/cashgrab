@@ -10,6 +10,7 @@
 
 $item replace entity @s hotbar.4 with minecraft:firework_rocket[\
 minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Rocket Barrage\"}]",\
+minecraft:hide_additional_tooltip={},\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Fires a barrage of missiles.\"}",\
 "{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"=====\"}",\

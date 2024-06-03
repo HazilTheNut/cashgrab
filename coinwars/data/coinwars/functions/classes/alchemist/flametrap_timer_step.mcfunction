@@ -60,6 +60,8 @@ execute if score @s tmr_lifetime_ticks matches 14 run playsound minecraft:block.
 execute if score @s tmr_lifetime_ticks matches 14 as @e[scores={eid_compare=0},limit=1] at @s run playsound minecraft:block.lever.click player @s ~ ~ ~ 0.5 1.5
 execute if score @s tmr_lifetime_ticks matches 14 run tellraw @a[scores={eid_compare=0},limit=1] {"color":"green","type":"text","text":"Someone has triggered one of your Flame Traps!"}
 
+execute if score @s tmr_lifetime_ticks matches 2..13 run particle minecraft:flame ~ ~ ~ 0.25 0.25 0.25 0 1
+
 execute if score @s tmr_lifetime_ticks matches 1 run function coinwars:util/pe_eid_find_owner
 execute if score @s tmr_lifetime_ticks matches 1 run particle minecraft:lava ~ ~ ~ 2.5 0.5 2.5 0 50
 execute if score @s tmr_lifetime_ticks matches 1 run particle minecraft:flame ~ ~ ~ 2.5 0.5 2.5 0 50

@@ -310,6 +310,33 @@ scoreboard objectives add __coinshower_timer_ticks dummy
 scoreboard objectives add __coinshower_period_ticks dummy
 
 # =============================
+# Values used for stasis
+
+# 	-1 = Transition from TRUE to FALSE
+# 	0 = FALSE
+# 	1 = TRUE
+# 	2 = Transition from FALSE to TRUE
+# Note: stasis_state is driven by the application of the t_stasis tag.
+# 	stasis_state = -1..0 when t_stasis is not applied
+# 	stasis_state = 1..2 when t_stasis is applied
+#	stasis_state values of -1 and 2 can be used to know when to save/restore variables
+#	the t_stasis_immune tag prevents the updating of stasis_state
+#		and thus is unafected by the t_stasis tag.
+#	the t_stasis tag is removed on every server tick and 
+#		thus must be constantly applied to hold something in stasis
+scoreboard objectives add stasis_state dummy
+
+scoreboard objectives add stasis_stored_x_pos_mm dummy
+scoreboard objectives add stasis_stored_y_pos_mm dummy
+scoreboard objectives add stasis_stored_z_pos_mm dummy
+
+scoreboard objectives add stasis_stored_x_vel_mmpt dummy
+scoreboard objectives add stasis_stored_y_vel_mmpt dummy
+scoreboard objectives add stasis_stored_z_vel_mmpt dummy
+
+scoreboard objectives add stasis_stored_arrow_crit dummy
+
+# =============================
 # Teams
 
 # FFA Team

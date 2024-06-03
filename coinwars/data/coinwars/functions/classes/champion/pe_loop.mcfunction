@@ -34,8 +34,11 @@ execute if score @s cv_A matches 0 as @e[tag=t_collision_candidate,distance=..5]
 execute if score @s cv_A matches 0 as @e[tag=t_collision_candidate,distance=..5] at @s run function coinwars:util/pe_set_timer {\
 lifetime_ticks:80,\
 b_anchor_at_pos:0,\
-t_timer_name:"t_champion_absorption_timer",\
+t_timer_name:"t_champion_absorption_timer_init",\
 func_step:"coinwars:classes/champion/pe_absorption_particle_timer_step",\
 func_end:"coinwars:util/dummy",\
 }
 
+tag @e[tag=t_champion_absorption_timer_init] add t_stasis_immune
+tag @e[tag=t_champion_absorption_timer_init] add t_champion_absorption_timer
+tag @e[tag=t_champion_absorption_timer_init] remove t_champion_absorption_timer_init

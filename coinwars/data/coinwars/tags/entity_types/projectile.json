@@ -1,0 +1,21 @@
+{
+	"replace": false,
+	"values": [
+		{
+			"id": "#minecraft:arrows",
+			"required": true
+		},
+		{
+			"id": "minecraft:potion",
+			"required": true
+		},
+		{
+			"id": "minecraft:item",
+			"required": true
+		},
+		{
+			"id": "#minecraft:impact_projectiles",
+			"required": false
+		}
+	]
+}

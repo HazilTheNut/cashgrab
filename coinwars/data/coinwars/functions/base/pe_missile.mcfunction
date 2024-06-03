@@ -29,6 +29,9 @@ scoreboard players set @s mis_func_step_dpitch_mdeg 0
 
 $execute if entity @s[scores={mis_lifetime_ticks=1..}] run function $(func_step)
 
+# If in stasis, do not apply physics, motion, or hit detection
+execute if score @s stasis_state matches 1..2 run return 0
+
 #tellraw @a[tag=t_debug] [{"type":"text","text":"Tracking magnitude: "},{"type":"nbt","nbt":"data.f_tracking_scalar","entity":"@s"}]
 
 # Run physics effects on missiles to calculate vel_x, vel_y, and vel_z

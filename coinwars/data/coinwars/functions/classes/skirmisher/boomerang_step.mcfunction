@@ -19,6 +19,9 @@
 #	cv_G	:	Boomerang item display rotation
 #	cv_H	:	Boomerang life timer (counts upwards instead of downwards for more readable code)
 
+# If in stasis, do not animate, play sfx, or do hit detection
+execute if score @s stasis_state matches 1..2 run return 0
+
 scoreboard players add @s cv_H 1
 tag @s[scores={cv_E=1,cv_H=70}] add t_boomerang_returning
 tag @s[scores={cv_E=1,cv_H=70}] add t_boomerang_begin_return
