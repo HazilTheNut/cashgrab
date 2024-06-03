@@ -34,8 +34,8 @@ item replace entity @s armor.feet with minecraft:golden_boots[minecraft:unbreaka
 item replace entity @s hotbar.0 with minecraft:blaze_rod[minecraft:unbreakable={show_in_tooltip:false},\
 minecraft:item_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Flame Staff\"}",\
 minecraft:attribute_modifiers=[\
-{type:"generic.attack_damage",slot:"mainhand",uuid:[I; 1,1,1,0],name:"flame_staff_atkdmg",amount:0.2,operation:"add_multiplied_base"},\
-{type:"generic.attack_speed",slot:"mainhand",uuid:[I; 1,1,2,0],name:"flame_staff_atkspd",amount:1,operation:"add_value"}],\
+{type:"generic.attack_damage",slot:"mainhand",uuid:[I; 1,1,1,0],name:"flame_staff_atkdmg",amount:3,operation:"add_value"},\
+{type:"generic.attack_speed",slot:"mainhand",uuid:[I; 1,1,2,0],name:"flame_staff_atkspd",amount:-1.5,operation:"add_value"}],\
 minecraft:enchantments={levels:{fire_aspect:1}}]
 
 # Creeper in a Bottle

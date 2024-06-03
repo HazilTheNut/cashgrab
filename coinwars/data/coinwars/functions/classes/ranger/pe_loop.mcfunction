@@ -11,7 +11,7 @@
 # Class variable usage:
 #	cv_A	:	Wall Climb state (-1 = exit, 0 = inactive, 1 = active, 2 = enter)
 #	cv_B	:	Wall Climb energy
-#	cv_C	:	
+#	cv_C	:	Wall Climb sound effect timer
 #	cv_D	:	
 #	cv_E	:	Arrow count
 #	cv_F	:	Crossbow state (0 = no arrow loaded, 1 = arrow loaded)
@@ -50,6 +50,11 @@ scoreboard players remove @s[tag=t_ranger_climb,scores={cv_A=1,cv_B=0..}] cv_B 1
 execute if score @s cv_A matches 1 if score @s cv_B matches 1.. store result storage coinwwars:ranger_args data.count int 1 run scoreboard players get @s cv_B
 execute if score @s cv_A matches 1 if score @s cv_B matches 1.. run function coinwars:classes/ranger/pe_display_climbing_energy with storage coinwwars:ranger_args data
 execute if score @s cv_A matches 1 if score @s cv_B matches ..0 run item replace entity @s hotbar.5 with minecraft:air
+
+# Wall Climb sound effects
+scoreboard players remove @s[tag=t_ranger_climb,scores={cv_C=1..}] cv_C 1
+execute if entity @s[tag=t_ranger_climb,scores={cv_C=0}] run playsound minecraft:block.stone.step player @s ~ ~ ~ 0.5 1.0
+scoreboard players set @s[tag=t_ranger_climb,scores={cv_C=..0}] cv_C 2
 
 # Wall Climb levitation effect
 effect clear @s[tag=!t_ranger_climb] minecraft:levitation

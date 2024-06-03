@@ -36,5 +36,5 @@ minecraft:attribute_modifiers=[\
 item replace entity @s hotbar.0 with minecraft:iron_sword[minecraft:unbreakable={show_in_tooltip:false},\
 minecraft:item_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Glacial Shard\"}",\
 minecraft:attribute_modifiers=[\
-{type:"generic.attack_damage",slot:"mainhand",uuid:[I; 7,1,1,0],name:"duskpiercer_atkdmg",amount:6,operation:"add_value"},\
-{type:"generic.attack_speed",slot:"mainhand",uuid:[I; 7,1,2,0],name:"duskpiercer_atkspd",amount:-2,operation:"add_value"}]]
+{type:"generic.attack_damage",slot:"mainhand",uuid:[I; 7,1,1,0],name:"glacialshard_atkdmg",amount:6,operation:"add_value"},\
+{type:"generic.attack_speed",slot:"mainhand",uuid:[I; 7,1,2,0],name:"glacialshard_atkspd",amount:-2,operation:"add_value"}]]
