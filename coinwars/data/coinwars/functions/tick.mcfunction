@@ -25,9 +25,6 @@ execute as @a at @s run function coinwars:classes/pe_loop_perclass
 kill @e[type=minecraft:experience_bottle]
 kill @e[type=minecraft:arrow,nbt={inGround:1b}]
 
-execute as @e[tag=t_generic_has_func_step,type=!minecraft:marker] at @s run function coinwars:base/pe_run_func_step with entity @s Passengers[0].data
-execute as @e[tag=t_generic_has_func_step,type=minecraft:marker] at @s run function coinwars:base/pe_run_func_step with entity @s data
-
 # Clear all events
 scoreboard players set @a ev_jump 0
 scoreboard players set @a ev_dmg_absorbed 0

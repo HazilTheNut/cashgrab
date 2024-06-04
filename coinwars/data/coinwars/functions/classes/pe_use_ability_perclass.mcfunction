@@ -25,3 +25,4 @@ execute if entity @s[scores={class=6}] run return run function coinwars:classes/
 execute if entity @s[scores={class=7}] run return run function coinwars:classes/frostknight/pe_use_ability
 execute if entity @s[scores={class=8}] run return run function coinwars:classes/titan/pe_use_ability
 execute if entity @s[scores={class=9}] run return run function coinwars:classes/alchemist/pe_use_ability
+execute if entity @s[scores={class=10}] run return run function coinwars:classes/chronomancer/pe_use_ability

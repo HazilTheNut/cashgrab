@@ -53,5 +53,6 @@ execute if entity @s[scores={class=6}] run function coinwars:classes/champion/pe
 execute if entity @s[scores={class=7}] run function coinwars:classes/frostknight/pe_equip
 execute if entity @s[scores={class=8}] run function coinwars:classes/titan/pe_equip
 execute if entity @s[scores={class=9}] run function coinwars:classes/alchemist/pe_equip
+execute if entity @s[scores={class=10}] run function coinwars:classes/chronomancer/pe_equip
 
 function coinwars:base/pe_refresh_inv

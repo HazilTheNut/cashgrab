@@ -56,3 +56,7 @@ execute if score @s ev_xpbottles matches 1.. run function coinwars:classes/grief
 scoreboard players remove @s[scores={cv_C=0..}] cv_C 1
 execute if score @s cv_C matches 0 run function coinwars:classes/griefer/creeper_ability_icon
 
+# Run func_step for creepers generated
+function coinwars:util/pe_eid_find_subs
+execute as @e[type=minecraft:creeper,tag=t_griefer_creeper,scores={eid_compare=0}] at @s run function coinwars:classes/griefer/creeper_func_step
+execute as @e[type=minecraft:creeper,tag=t_griefer_creeper_stasis,scores={eid_compare=0}] at @s run function coinwars:classes/griefer/creeper_stasis_func_step

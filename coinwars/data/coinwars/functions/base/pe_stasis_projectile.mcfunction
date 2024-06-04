@@ -34,9 +34,9 @@ execute if score @s stasis_state matches 1..2 store result entity @s Pos[0] doub
 execute if score @s stasis_state matches 1..2 store result entity @s Pos[1] double 0.001 run scoreboard players get @s stasis_stored_y_pos_mm
 execute if score @s stasis_state matches 1..2 store result entity @s Pos[2] double 0.001 run scoreboard players get @s stasis_stored_z_pos_mm
 
-execute if score @s stasis_state matches 1..2 store result entity @s Motion[0] double 0.000005 run scoreboard players get @s stasis_stored_x_vel_mmpt
-execute if score @s stasis_state matches 1..2 store result entity @s Motion[1] double 0.000005 run scoreboard players get @s stasis_stored_y_vel_mmpt
-execute if score @s stasis_state matches 1..2 store result entity @s Motion[2] double 0.000005 run scoreboard players get @s stasis_stored_z_vel_mmpt
+execute if score @s stasis_state matches 1..2 store result entity @s Motion[0] double 0.00001 run scoreboard players get @s stasis_stored_x_vel_mmpt
+execute if score @s stasis_state matches 1..2 store result entity @s Motion[1] double 0.00001 run scoreboard players get @s stasis_stored_y_vel_mmpt
+execute if score @s stasis_state matches 1..2 store result entity @s Motion[2] double 0.00001 run scoreboard players get @s stasis_stored_z_vel_mmpt
 
 # =============================
 # Exit stasis state

@@ -18,7 +18,21 @@
 #	cv_G	:	
 #	cv_H	:	
 
-execute if entity @s[tag=t_cleanup] run tp @s ~ ~-100 ~
+# If stasis is applied to this creeper, due to inner Minecraft game logic, this creeper
+#	needs to be destroyed and replaced with a dummy copy since I cannot reset the fuse
+#	once lit
+execute if score @s stasis_state matches 2 run tag @s add t_cleanup
+execute if score @s stasis_state matches 2 run summon minecraft:creeper ~ ~ ~ {NoAI:1b,NoGravity:1b,Tags:["t_griefer_creeper_stasis_init"]}
+execute if score @s stasis_state matches 2 run scoreboard players set @e[tag=t_griefer_creeper_stasis_init,limit=1,sort=nearest] eid_state 2
+execute if score @s stasis_state matches 2 run scoreboard players operation @e[tag=t_griefer_creeper_stasis_init,limit=1,sort=nearest] cv_H = @s cv_H
+execute if score @s stasis_state matches 2 run scoreboard players operation @e[tag=t_griefer_creeper_stasis_init,limit=1,sort=nearest] eid_self = @s eid_self
+execute if score @s stasis_state matches 2 run scoreboard players operation @e[tag=t_griefer_creeper_stasis_init,limit=1,sort=nearest] eid_owner = @s eid_owner
+execute if score @s stasis_state matches 2 run scoreboard players set @s eid_self 0
+execute if score @s stasis_state matches 2 run scoreboard players set @s eid_state 0
+execute if score @s stasis_state matches 2 run tag @e[tag=t_griefer_creeper_stasis_init,limit=1,sort=nearest] add t_griefer_creeper_stasis
+execute if score @s stasis_state matches 2 run tag @e[tag=t_griefer_creeper_stasis_init,limit=1,sort=nearest] remove t_griefer_creeper_stasis_init
+
+execute if entity @s[tag=t_cleanup] run tp @s ~ ~-10000 ~
 execute if entity @s[tag=t_cleanup] run scoreboard players reset @s
 execute if entity @s[tag=t_cleanup] run kill @s
 execute if entity @s[tag=t_cleanup] run return 0

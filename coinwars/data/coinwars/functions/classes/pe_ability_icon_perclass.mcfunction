@@ -24,3 +24,4 @@ execute if entity @s[scores={class=6}] run function coinwars:classes/champion/pe
 execute if entity @s[scores={class=7}] run function coinwars:classes/frostknight/pe_ability_icon with storage coinwars:abi_args
 execute if entity @s[scores={class=8}] run function coinwars:classes/titan/pe_ability_icon with storage coinwars:abi_args
 execute if entity @s[scores={class=9}] run function coinwars:classes/alchemist/pe_ability_icon with storage coinwars:abi_args
+execute if entity @s[scores={class=10}] run function coinwars:classes/chronomancer/pe_ability_icon with storage coinwars:abi_args
