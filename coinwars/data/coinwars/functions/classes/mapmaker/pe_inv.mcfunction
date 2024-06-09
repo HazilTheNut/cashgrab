@@ -14,8 +14,13 @@ item replace entity @s armor.legs with minecraft:air
 item replace entity @s armor.feet with minecraft:air
 
 # Hotbar
-item replace entity @s hotbar.0 with minecraft:brush{display:{Name:"{\"text\":\"Smoothing Tool\"}"}}
-item replace entity @s hotbar.1 with minecraft:grass_block{display:{Name:"{\"text\":\"Topsoil Tool\"}"}}
-item replace entity @s hotbar.2 with minecraft:map{display:{Name:"{\"text\":\"Shoot Fireball (strong)\"}"}}
-item replace entity @s hotbar.3 with minecraft:map{display:{Name:"{\"text\":\"Shoot Fireball (weak)\"}"}}
-item replace entity @s hotbar.5 with minecraft:map{display:{Name:"{\"text\":\"Update Lighting\"}"}}
+item replace entity @s hotbar.0 with minecraft:brush[\
+minecraft:item_name="{\"text\":\"Smoothing Tool\"}"]
+item replace entity @s hotbar.1 with minecraft:grass_block[\
+minecraft:item_name="{\"text\":\"Topsoil Tool\"}"]
+item replace entity @s hotbar.2 with minecraft:map[\
+minecraft:item_name="{\"text\":\"Shoot Fireball (strong)\"}"]
+item replace entity @s hotbar.3 with minecraft:map[\
+minecraft:item_name="{\"text\":\"Shoot Fireball (weak)\"}"]
+item replace entity @s hotbar.5 with minecraft:map[\
+minecraft:item_name="{\"text\":\"Update Lighting\"}"]

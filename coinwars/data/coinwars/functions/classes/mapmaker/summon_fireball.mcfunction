@@ -1,6 +1,6 @@
 
 execute if entity @s[scores={ps_selected_hotbar_slot=2}] anchored eyes run summon minecraft:fireball ^ ^ ^1 {Motion:[0.0,0.0,0.0],ExplosionPower:6,Tags:["t_mapmaker_fireball_init"]}
-execute if entity @s[scores={ps_selected_hotbar_slot=3}] anchored eyes run summon minecraft:fireball ^ ^ ^1 {Motion:[0.0,0.0,0.0],ExplosionPower:4,Tags:["t_mapmaker_fireball_init"]}
+execute if entity @s[scores={ps_selected_hotbar_slot=3}] anchored eyes run summon minecraft:fireball ^ ^ ^1 {Motion:[0.0,0.0,0.0],ExplosionPower:3,Tags:["t_mapmaker_fireball_init"]}
 
 function coinwars:util/pe_calc_facing_vector {magnitude:3.0f}
 

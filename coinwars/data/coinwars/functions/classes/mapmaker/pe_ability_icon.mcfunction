@@ -7,5 +7,7 @@
 #
 # Arguments: (none)
 
-item replace entity @s[scores={cv_A=0}] hotbar.4 with minecraft:ink_sac{display:{Name:"{\"text\":\"Toggle Tools\"}"}}
-item replace entity @s[scores={cv_A=1}] hotbar.4 with minecraft:glow_ink_sac{display:{Name:"{\"text\":\"Toggle Tools\"}"}}
+item replace entity @s[scores={cv_A=0}] hotbar.4 with minecraft:ink_sac[\
+minecraft:item_name="{\"text\":\"Toggle Tools\"}"]
+item replace entity @s[scores={cv_A=1}] hotbar.4 with minecraft:glow_ink_sac[\
+minecraft:item_name="{\"text\":\"Toggle Tools\"}"]

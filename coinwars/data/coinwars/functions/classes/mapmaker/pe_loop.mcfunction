@@ -8,17 +8,20 @@
 #
 # Arguments: (none)
 
-execute if entity @s[scores={cv_A=1},nbt={SelectedItem:{tag:{display:{Name:"{\"text\":\"Smoothing Tool\"}"}}}}] run function coinwars:classes/mapmaker/run_over_volume {func:"coinwars:classes/mapmaker/smooth_block"}
-execute if entity @s[scores={cv_A=1},nbt={SelectedItem:{tag:{display:{Name:"{\"text\":\"Topsoil Tool\"}"}}}}] run function coinwars:classes/mapmaker/run_over_volume {func:"coinwars:classes/mapmaker/topsoil_block"}
+execute if entity @s[scores={cv_A=1,ps_selected_hotbar_slot=0},nbt={SelectedItem:{components:{"minecraft:item_name":'"Smoothing Tool"'}}}] run function coinwars:classes/mapmaker/run_over_volume {func:"coinwars:classes/mapmaker/smooth_block"}
+execute if entity @s[scores={cv_A=1,ps_selected_hotbar_slot=1},nbt={SelectedItem:{components:{"minecraft:item_name":'"Topsoil Tool"'}}}] run function coinwars:classes/mapmaker/run_over_volume {func:"coinwars:classes/mapmaker/topsoil_block"}
 
-execute if entity @s[scores={cv_A=1},nbt={SelectedItem:{tag:{display:{Name:"{\"text\":\"Shoot Fireball (strong)\"}"}}}}] run fill ~-10 ~-10 ~-10 ~10 ~10 ~10 minecraft:air replace minecraft:fire
-execute if entity @s[scores={cv_A=1},nbt={SelectedItem:{tag:{display:{Name:"{\"text\":\"Shoot Fireball (weak)\"}"}}}}] run fill ~-10 ~-10 ~-10 ~10 ~10 ~10 minecraft:air replace minecraft:fire
+execute if entity @s[scores={cv_A=1,ps_selected_hotbar_slot=2..3},nbt={SelectedItem:{components:{"minecraft:item_name":'"Shoot Fireball (strong)"'}}}] run fill ~-10 ~-10 ~-10 ~10 ~10 ~10 minecraft:air replace minecraft:fire
+execute if entity @s[scores={cv_A=1,ps_selected_hotbar_slot=2..3},nbt={SelectedItem:{components:{"minecraft:item_name":'"Shoot Fireball (weak)"'}}}] run fill ~-10 ~-10 ~-10 ~10 ~10 ~10 minecraft:air replace minecraft:fire
 
 execute if entity @s[scores={ev_maps=1..,ps_selected_hotbar_slot=2..3}] run function coinwars:classes/mapmaker/summon_fireball
 execute if entity @s[scores={ev_maps=1..,ps_selected_hotbar_slot=5}] run scoreboard players set @s cv_C 2
-item replace entity @s[scores={ev_maps=1..}] hotbar.2 with minecraft:map{display:{Name:"{\"text\":\"Shoot Fireball (strong)\"}"}}
-item replace entity @s[scores={ev_maps=1..}] hotbar.3 with minecraft:map{display:{Name:"{\"text\":\"Shoot Fireball (weak)\"}"}}
-item replace entity @s[scores={ev_maps=1..}] hotbar.5 with minecraft:map{display:{Name:"{\"text\":\"Update Lighting\"}"}}
+item replace entity @s[scores={ev_maps=1..}] hotbar.2 with minecraft:map[\
+minecraft:item_name="{\"text\":\"Shoot Fireball (strong)\"}"]
+item replace entity @s[scores={ev_maps=1..}] hotbar.3 with minecraft:map[\
+minecraft:item_name="{\"text\":\"Shoot Fireball (weak)\"}"]
+item replace entity @s[scores={ev_maps=1..}] hotbar.5 with minecraft:map[\
+minecraft:item_name="{\"text\":\"Update Lighting\"}"]
 clear @s[scores={ev_maps=1..}] minecraft:filled_map
 scoreboard players set @s ev_maps 0
 
