@@ -14,12 +14,13 @@
 #	cv_C	:	
 #	cv_D	:	
 #	cv_E	:	Arrow count
-#	cv_F	:	Crossbow state (0 = no arrow loaded, 1 = arrow loaded)
+#	cv_F	:	Crossbow state (b'XY, where X is if in hotbar and Y is if arrow loaded)
 #	cv_G	:	
 #	cv_H	:	
 
 scoreboard players set @s cv_E 3
-scoreboard players set @s cv_F 1
+execute if score @s cv_F matches 0 run scoreboard players set @s cv_F 1
+execute if score @s cv_F matches 2 run scoreboard players set @s cv_F 3
 
 playsound minecraft:item.flintandsteel.use player @s ~ ~ ~ 1.0 0.5
 

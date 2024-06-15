@@ -14,14 +14,16 @@
 #	cv_C	:	Wall Climb sound effect timer
 #	cv_D	:	
 #	cv_E	:	Arrow count
-#	cv_F	:	Crossbow state (0 = no arrow loaded, 1 = arrow loaded)
+#	cv_F	:	Crossbow state (b'XY, where X is if in hotbar and Y is if arrow loaded)
 #	cv_G	:	
 #	cv_H	:	
 
 # Track state of crossbow
 scoreboard players set @s cv_F 0
-execute if items entity @s hotbar.* minecraft:crossbow[minecraft:count=1,minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1}]] run scoreboard players set @s cv_F 1
-execute if items entity @s weapon.* minecraft:crossbow[minecraft:count=1,minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1}]] run scoreboard players set @s cv_F 1
+#execute if items entity @s weapon.offhand minecraft:crossbow run scoreboard players set @s cv_F 0
+execute if items entity @s hotbar.* minecraft:crossbow run scoreboard players set @s cv_F 2
+execute if items entity @s weapon.offhand minecraft:crossbow[minecraft:count=1,minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1}]] run scoreboard players set @s cv_F 1
+execute if items entity @s hotbar.* minecraft:crossbow[minecraft:count=1,minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1}]] run scoreboard players set @s cv_F 3
 
 # Track arrow count
 scoreboard players set @s cv_E 0

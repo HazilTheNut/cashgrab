@@ -13,7 +13,7 @@
 #	cv_C	:	
 #	cv_D	:	
 #	cv_E	:	Arrow count
-#	cv_F	:	Crossbow state (0 = no arrow loaded, 1 = arrow loaded)
+#	cv_F	:	Crossbow state (b'XY, where X is if in hotbar and Y is if arrow loaded)
 #	cv_G	:	
 #	cv_H	:	
 
@@ -40,7 +40,12 @@ minecraft:attribute_modifiers=[\
 # Crossbow
 item replace entity @s[scores={cv_F=0}] weapon.offhand with minecraft:crossbow[minecraft:unbreakable={show_in_tooltip:false},\
 minecraft:item_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Hunting Bow\"}"]
-item replace entity @s[scores={cv_F=1..}] weapon.offhand with minecraft:crossbow[minecraft:unbreakable={show_in_tooltip:false},\
+item replace entity @s[scores={cv_F=1}] weapon.offhand with minecraft:crossbow[minecraft:unbreakable={show_in_tooltip:false},\
+minecraft:item_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Hunting Bow\"}",\
+minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1}]]
+item replace entity @s[scores={cv_F=2}] hotbar.1 with minecraft:crossbow[minecraft:unbreakable={show_in_tooltip:false},\
+minecraft:item_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Hunting Bow\"}"]
+item replace entity @s[scores={cv_F=3}] hotbar.1 with minecraft:crossbow[minecraft:unbreakable={show_in_tooltip:false},\
 minecraft:item_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Hunting Bow\"}",\
 minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1}]]
 

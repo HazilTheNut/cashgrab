@@ -14,7 +14,7 @@
 #	cv_C	:	
 #	cv_D	:	
 #	cv_E	:	Arrow count
-#	cv_F	:	Crossbow state (0 = no arrow loaded, 1 = arrow loaded)
+#	cv_F	:	Crossbow state (b'XY, where X is if in hotbar and Y is if arrow loaded)
 #	cv_G	:	
 #	cv_H	:	
 
