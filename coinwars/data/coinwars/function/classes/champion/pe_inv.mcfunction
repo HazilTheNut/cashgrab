@@ -24,8 +24,8 @@ item replace entity @s armor.chest with minecraft:golden_chestplate[minecraft:un
 item replace entity @s armor.legs with minecraft:golden_leggings[minecraft:unbreakable={show_in_tooltop:false}]
 item replace entity @s armor.feet with minecraft:golden_boots[minecraft:unbreakable={show_in_tooltip:false},\
 minecraft:attribute_modifiers=[\
-{type:"generic.movement_speed",slot:"feet",uuid:[I; 6,14,1,0],name:"speed_bonus",amount:0.2,operation:"add_multiplied_base"},\
-{type:"generic.armor",slot:"feet",uuid:[I; 6,14,2,0],name:"boots_armor",amount:1,operation:"add_value"}\
+{type:"generic.movement_speed",slot:"feet",id:"coinwars:speed_bonus",amount:0.2,operation:"add_multiplied_base"},\
+{type:"generic.armor",slot:"feet",id:"coinwars:boots_armor",amount:1,operation:"add_value"}\
 ]]
 
 # =============================
@@ -35,8 +35,8 @@ minecraft:attribute_modifiers=[\
 item replace entity @s hotbar.0 with minecraft:golden_sword[minecraft:unbreakable={show_in_tooltip:false},\
 minecraft:item_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Duskpiercer\"}",\
 minecraft:attribute_modifiers=[\
-{type:"generic.attack_damage",slot:"mainhand",uuid:[I; 6,1,1,0],name:"duskpiercer_atkdmg",amount:4,operation:"add_value"},\
-{type:"generic.attack_speed",slot:"mainhand",uuid:[I; 6,1,2,0],name:"duskpiercer_atkspd",amount:-2,operation:"add_value"}]]
+{type:"generic.attack_damage",slot:"mainhand",id:"coinwars:duskpiercer_atkdmg",amount:4,operation:"add_value"},\
+{type:"generic.attack_speed",slot:"mainhand",id:"coinwars:duskpiercer_atkspd",amount:-2,operation:"add_value"}]]
 
 # Bastion
 item replace entity @s weapon.offhand with minecraft:shield[minecraft:unbreakable={show_in_tooltip:false},\

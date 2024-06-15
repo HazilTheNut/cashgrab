@@ -7,7 +7,7 @@
 # Arguments: (none)
 
 # Detect when a player runs over a coin plate
-execute as @a at @s if block ~ ~ ~ minecraft:light_weighted_pressure_plate align xyz run summon minecraft:item ~0.5 ~0.25 ~0.5 {Item:{id:"minecraft:gold_nugget",Count:1b,components:{"minecraft:item_name":"Coin"}},Tags:["t_cleanup"]}
+execute as @a at @s if block ~ ~ ~ minecraft:light_weighted_pressure_plate align xyz run summon minecraft:item ~0.5 ~0.25 ~0.5 {Item:{id:"minecraft:gold_nugget",Count:1b,components:{"minecraft:item_name":"Coin"}},Tags:["t_pickup"]}
 execute as @a at @s if block ~ ~ ~ minecraft:light_weighted_pressure_plate align xyz run summon minecraft:marker ~0.5 ~0.25 ~0.5 {Tags:["t_coinplate_cooldown_init"]}
 execute as @a at @s if block ~ ~ ~ minecraft:light_weighted_pressure_plate align xyz run setblock ~ ~ ~ minecraft:heavy_weighted_pressure_plate
 

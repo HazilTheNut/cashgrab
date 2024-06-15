@@ -23,6 +23,7 @@ execute as @e[tag=t_coinshower] at @s run function coinwars:base/pe_coinshower
 execute as @a at @s run function coinwars:classes/pe_loop_perclass
 
 kill @e[type=minecraft:experience_bottle]
+execute as @e[type=minecraft:arrow,nbt={inGround:1b}] at @s run particle minecraft:block{block_state:"minecraft:birch_planks"} ^ ^ ^-0.2 0.1 0.1 0.1 1 5
 kill @e[type=minecraft:arrow,nbt={inGround:1b}]
 
 # Clear all events

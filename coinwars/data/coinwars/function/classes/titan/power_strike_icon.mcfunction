@@ -25,8 +25,8 @@ item replace entity @s[scores={cv_A=..0}] hotbar.1 with minecraft:golden_axe[\
 minecraft:damage=31,\
 minecraft:enchantments={levels:{knockback:5},show_in_tooltip:false},\
 minecraft:attribute_modifiers=[\
-{type:"generic.attack_damage",slot:"mainhand",uuid:[I; 8,2,1,0],name:"power_strike_atkdmg",amount:8,operation:"add_value"},\
-{type:"generic.attack_speed",slot:"mainhand",uuid:[I; 8,2,2,0],name:"power_strike_atkspd",amount:-1,operation:"add_value"}],\
+{type:"generic.attack_damage",slot:"mainhand",id:"coinwars:power_strike_atkdmg",amount:8,operation:"add_value"},\
+{type:"generic.attack_speed",slot:"mainhand",id:"coinwars:power_strike_atkspd",amount:-1,operation:"add_value"}],\
 minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Attack]\"},{\"color\":\"white\",\"text\":\" Power Strike\"}]",\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Strong knockback attack\"}",\

@@ -24,8 +24,8 @@ item replace entity @s armor.chest with minecraft:iron_chestplate[minecraft:unbr
 item replace entity @s armor.legs with minecraft:iron_leggings[minecraft:unbreakable={show_in_tooltop:false}]
 item replace entity @s armor.feet with minecraft:iron_boots[minecraft:unbreakable={show_in_tooltip:false},\
 minecraft:attribute_modifiers=[\
-{type:"generic.movement_speed",slot:"feet",uuid:[I; 8,14,1,0],name:"speed_bonus",amount:0.15,operation:"add_multiplied_base"},\
-{type:"generic.armor",slot:"feet",uuid:[I; 8,14,2,0],name:"boots_armor",amount:1,operation:"add_value"}\
+{type:"generic.movement_speed",slot:"feet",id:"coinwars:speed_bonus",amount:0.15,operation:"add_multiplied_base"},\
+{type:"generic.armor",slot:"feet",id:"coinwars:boots_armor",amount:1,operation:"add_value"}\
 ]]
 
 # =============================
@@ -36,8 +36,8 @@ item replace entity @s hotbar.0 with minecraft:iron_axe[minecraft:unbreakable={s
 minecraft:item_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Giant Hammer\"}",\
 minecraft:enchantments={levels:{knockback:1},show_in_tooltip:true},\
 minecraft:attribute_modifiers=[\
-{type:"generic.attack_damage",slot:"mainhand",uuid:[I; 8,1,1,0],name:"giant_hammer_atkdmg",amount:8,operation:"add_value"},\
-{type:"generic.attack_speed",slot:"mainhand",uuid:[I; 8,1,2,0],name:"giant_hammer_atkspd",amount:-3,operation:"add_value"}]]
+{type:"generic.attack_damage",slot:"mainhand",id:"coinwars:giant_hammer_atkdmg",amount:8,operation:"add_value"},\
+{type:"generic.attack_speed",slot:"mainhand",id:"coinwars:giant_hammer_atkspd",amount:-3,operation:"add_value"}]]
 
 # Power Strike
 function coinwars:classes/titan/power_strike_icon

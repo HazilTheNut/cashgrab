@@ -26,8 +26,8 @@ minecraft:dyed_color=10840833]
 item replace entity @s armor.feet with minecraft:leather_boots[minecraft:unbreakable={show_in_tooltip:false},\
 minecraft:dyed_color=10840833,\
 minecraft:attribute_modifiers=[\
-{type:"generic.movement_speed",slot:"feet",uuid:[I; 10,14,1,0],name:"speed_bonus",amount:0.2,operation:"add_multiplied_base"},\
-{type:"generic.armor",slot:"feet",uuid:[I; 10,14,2,0],name:"boots_armor",amount:1,operation:"add_value"}\
+{type:"generic.movement_speed",slot:"feet",id:"coinwars:speed_bonus",amount:0.2,operation:"add_multiplied_base"},\
+{type:"generic.armor",slot:"feet",id:"coinwars:boots_armor",amount:1,operation:"add_value"}\
 ]]
 
 # =============================
@@ -37,8 +37,8 @@ minecraft:attribute_modifiers=[\
 item replace entity @s hotbar.0 with minecraft:stone_sword[minecraft:unbreakable={show_in_tooltip:false},\
 minecraft:item_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Time-Worn Splinter\"}",\
 minecraft:attribute_modifiers=[\
-{type:"generic.attack_damage",slot:"mainhand",uuid:[I; 10,1,1,0],name:"timeworn_atkdmg",amount:5,operation:"add_value"},\
-{type:"generic.attack_speed",slot:"mainhand",uuid:[I; 10,1,2,0],name:"timeworn_atkspd",amount:-2,operation:"add_value"}]]
+{type:"generic.attack_damage",slot:"mainhand",id:"coinwars:timeworn_atkdmg",amount:5,operation:"add_value"},\
+{type:"generic.attack_speed",slot:"mainhand",id:"coinwars:timeworn_atkspd",amount:-2,operation:"add_value"}]]
 
 # Automechanical Crossbow
 function coinwars:classes/chronomancer/update_crossbow

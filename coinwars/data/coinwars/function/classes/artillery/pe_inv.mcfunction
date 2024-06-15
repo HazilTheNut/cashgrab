@@ -25,8 +25,8 @@ item replace entity @s armor.legs with minecraft:chainmail_leggings[minecraft:un
 item replace entity @s armor.feet with minecraft:leather_boots[minecraft:unbreakable={show_in_tooltip:false},\
 minecraft:dyed_color=11842740,\
 minecraft:attribute_modifiers=[\
-{type:"generic.movement_speed",slot:"feet",uuid:[I; 5,14,1,0],name:"speed_bonus",amount:0.2,operation:"add_multiplied_base"},\
-{type:"generic.armor",slot:"feet",uuid:[I; 5,14,2,0],name:"boots_armor",amount:1,operation:"add_value"}\
+{type:"generic.movement_speed",slot:"feet",id:"coinwars:speed_bonus",amount:0.2,operation:"add_multiplied_base"},\
+{type:"generic.armor",slot:"feet",id:"coinwars:boots_armor",amount:1,operation:"add_value"}\
 ]]
 
 # =============================

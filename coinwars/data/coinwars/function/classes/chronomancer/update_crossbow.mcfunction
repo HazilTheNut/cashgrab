@@ -79,6 +79,7 @@ minecraft:lore=[\
 "{\"color\":\"gold\",\"italic\":false,\"text\":\"+ it fires more arrows\"}"\
 ],\
 minecraft:enchantment_glint_override=true,\
+minecraft:enchantments={levels:{multishot:1},show_in_tooltip:false},\
 minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1b},{id:"minecraft:arrow",count:1b},{id:"minecraft:arrow",count:1b}]]
 
 # Crossbow is in stasis, loaded, and in offhand
@@ -92,6 +93,7 @@ minecraft:lore=[\
 "{\"color\":\"gold\",\"italic\":false,\"text\":\"+ it fires more arrows\"}"\
 ],\
 minecraft:enchantment_glint_override=true,\
+minecraft:enchantments={levels:{multishot:1},show_in_tooltip:false},\
 minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1b},{id:"minecraft:arrow",count:1b},{id:"minecraft:arrow",count:1b}]]
 
 # Crossbow is in stasis, unloaded, and in hotbar
@@ -105,6 +107,7 @@ minecraft:lore=[\
 "{\"color\":\"gold\",\"italic\":false,\"text\":\"+ it fires more arrows\"}"\
 ],\
 minecraft:enchantment_glint_override=true,\
+minecraft:enchantments={levels:{multishot:1},show_in_tooltip:false},\
 minecraft:charged_projectiles=[]]
 
 # Crossbow is in stasis, unloaded, and in offhand
@@ -118,5 +121,6 @@ minecraft:lore=[\
 "{\"color\":\"gold\",\"italic\":false,\"text\":\"+ it fires more arrows\"}"\
 ],\
 minecraft:enchantment_glint_override=true,\
+minecraft:enchantments={levels:{multishot:1},show_in_tooltip:false},\
 minecraft:charged_projectiles=[]]
 
