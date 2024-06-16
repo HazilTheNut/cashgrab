@@ -13,9 +13,9 @@
 #	cv_C	:	Creeper in a Bottle cooldown
 #	cv_D	:	
 #	cv_E	:	
-#	cv_F	:	
-#	cv_G	:	
-#	cv_H	:	
+#	cv_F	:	Player Y position, in mm
+#	cv_G	:	Crash Landing cutoff height, in mm
+#	cv_H	:	Creeper fuse timer
 
 # =============================
 # Armor

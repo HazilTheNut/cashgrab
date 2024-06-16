@@ -14,9 +14,9 @@
 #	cv_C	:	Creeper in a Bottle cooldown
 #	cv_D	:	
 #	cv_E	:	
-#	cv_F	:	
-#	cv_G	:	
-#	cv_H	:	
+#	cv_F	:	Player Y position, in mm
+#	cv_G	:	Crash Landing cutoff height, in mm
+#	cv_H	:	Creeper fuse timer
 
 execute if score @s stasis_state matches -1 run tag @s add t_cleanup
 execute if score @s stasis_state matches -1 run summon minecraft:creeper ~ ~ ~ {Tags:["t_griefer_creeper_init"],Fuse:1000,ignited:1b}
