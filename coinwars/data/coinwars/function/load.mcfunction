@@ -57,6 +57,14 @@ scoreboard objectives add temp_B dummy
 # =============================
 # Entity ID variables
 
+# EIDs are reserved as follows:
+# 	1	  - 9999  : Players
+#	10001 - 19999 : Player Monitor ("pm") markers used to execute commands on player's behalf
+#	20001+		  : Non-player and non-pm entities
+
+# Players can set this to nonzero to emulate relogging onto the server
+scoreboard objectives add reinitialize trigger
+
 # EID of itself and its owner. Entities with no owner have eid_owner = 0
 scoreboard objectives add eid_self dummy
 scoreboard objectives add eid_owner dummy
