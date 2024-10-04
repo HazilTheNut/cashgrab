@@ -15,15 +15,8 @@ execute unless entity @a[tag=t_player_initialize] run tag @r[scores={reinitializ
 # Invalidate eid_state as it is being overwritten
 scoreboard players set @a[tag=t_player_initialize] eid_state 0
 
-# Assign a random EID
-execute store result score @a[tag=t_player_initialize] eid_self run random value 1..9999
-
-# Search existing entities to see if someone already has that EID
-execute store result storage coinwars:find_eid_args eid int 1 run scoreboard players get @a[tag=t_player_initialize,limit=1] eid_self
-function coinwars:util/gt_find_eid
-
-# If an entity with eid_state >= 1 has t_eid_matches, then we cannot use the above randomly generated EID and must loop this function
-execute if entity @e[tag=t_eid_matches] run function coinwars:base/gt_playerinit_assign_eids
+# Assign initializing player their EID
+function coinwars:base/gt_playerinit_loop_assign_eid
 
 # ---- Past this point, the initializing player has received a valid EID
 
@@ -35,18 +28,19 @@ scoreboard players operation @e[tag=t_pm_init,limit=1] eid_self = @e[tag=t_pm_in
 scoreboard players add @e[tag=t_pm_init,limit=1] eid_self 10000
 scoreboard players set @e[tag=t_pm_init,limit=1] eid_state 1
 
+# Finish initialization of pm
 tag @e[tag=t_pm_init] add t_pm
 tag @e[tag=t_pm_init] remove t_pm_init
 
 # Initialize player scoreboard values
-scoreboard players set @a[tag=t_player_initialize] eid_state 2
-scoreboard players set @a[tag=t_player_initialize] team_id 0
-scoreboard players set @a[tag=t_player_initialize] coins 0
-scoreboard players set @a[tag=t_player_initialize] __iev_logout 0
-scoreboard players set @a[tag=t_player_initialize] reinitialize 0
+scoreboard players set @a[tag=t_player_initialize,limit=1] eid_state 2
+scoreboard players set @a[tag=t_player_initialize,limit=1] team_id 0
+scoreboard players set @a[tag=t_player_initialize,limit=1] coins 0
+scoreboard players set @a[tag=t_player_initialize,limit=1] __iev_logout 0
+scoreboard players set @a[tag=t_player_initialize,limit=1] reinitialize 0
 
 # Remove tag as operation has completed
 tag @a remove t_player_initialize
 
 # Loop while reinitializing players exist
-execute if entity @a[scores={reinitialize=1..}] run function coinwars:base/gt_playerinit_assign_eids
+execute if entity @a[scores={reinitialize=1..}] run function coinwars:base/gt_playerinit_loop_recursion

@@ -9,7 +9,24 @@ scoreboard players set DEVELOPER_MODE num 1
 scoreboard players set @a[scores={eid_state=1},gamemode=!spectator] eid_state 2
 scoreboard players set @a[scores={eid_state=2},gamemode=spectator] eid_state 1
 
+# ==============================
+# Player eid and pm management
+
+# pms query if their owner still exists and clean up if not
+execute as @e[tag=t_pm] run function coinwars:base/pm_cleanup_if_ownerless
+
+# If a pm has been cleaned up, a player likely left the server and their subordinates (who are now ownerless) should be cleaned up
+#execute if entity @e[tag=t_pm,tag=t_pm_no_owner] run tellraw @a[tag=t_debug] "pm cleanup"
+execute if entity @e[tag=t_pm,tag=t_pm_no_owner] as @e[type=!minecraft:player,scores={eid_state=1..}] run function coinwars:base/npe_cleanup_if_ownerless
+
+# Cleaned up pms should now be killed
+tag @e[tag=t_pm_no_owner] remove t_pm
+kill @e[tag=t_pm_no_owner]
+
+# At this point, it is guaranteed that no pm exists without an owner.
+# Initialize players so that all players own a pm
 function coinwars:base/gt_playerinit
+
 #function coinwars:base/gt_player_count
 #execute if score DEVELOPER_MODE num matches 0 run function coinwars:base/gt_lobby
 #function coinwars:base/gt_player_state
