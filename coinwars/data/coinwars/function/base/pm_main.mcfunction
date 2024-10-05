@@ -23,6 +23,7 @@ scoreboard players add @a[tag=t_pm_owner] pm_count 1
 # This case is not expected to occur but this is a failsafe in case it somehow happens.
 # Destroying this pm will resolve the issue as the player entity holds all of their data,
 #	so pms can be freely be destroyed without worry of corrupting player data
+execute if entity @a[tag=t_pm_owner,scores={pm_count=2..}] run tellraw @a "An error has occurred with your session - reinitializing"
 execute if entity @a[tag=t_pm_owner,scores={pm_count=2..}] run scoreboard players set @s eid_owner 0
 execute if entity @a[tag=t_pm_owner,scores={pm_count=2..}] run function coinwars:base/pm_cleanup_if_ownerless
 execute if entity @a[tag=t_pm_owner,scores={pm_count=2..}] run return 0

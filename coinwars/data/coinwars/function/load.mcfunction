@@ -116,62 +116,11 @@ scoreboard objectives add cv_H dummy
 #
 #	Values -1 and 0 (e.g. "scores={ps_SCORE=..0}") are more false-y while 1 and 2 (e.g. "scores={ps_SCORE=1..}") are more truth-y
 
-# Player state: walking
-scoreboard objectives add __walkDist minecraft.custom:minecraft.walk_one_cm
-scoreboard objectives add __walking_cur dummy
-scoreboard objectives add __walking_prev dummy
-scoreboard objectives add ps_walking dummy
-
-# Player state: sprinting (on the ground)
-scoreboard objectives add __sprintDist minecraft.custom:minecraft.sprint_one_cm
-scoreboard objectives add __sprinting_cur dummy
-scoreboard objectives add __sprinting_prev dummy
-scoreboard objectives add ps_sprinting dummy
-
-# Player state: crouching (moving while sneaking)
-scoreboard objectives add __crouchDist minecraft.custom:minecraft.crouch_one_cm
-scoreboard objectives add __crouching_cur dummy
-scoreboard objectives add __crouching_prev dummy
-scoreboard objectives add ps_crouching dummy
-
 # Player state: falling (any time spent in the air)
 scoreboard objectives add __fallDist minecraft.custom:minecraft.fall_one_cm
 scoreboard objectives add __falling_cur dummy
 scoreboard objectives add __falling_prev dummy
 scoreboard objectives add ps_falling dummy
-
-# Player state: swimming ("sprinting" underwater)
-scoreboard objectives add __swimDist minecraft.custom:minecraft.swim_one_cm
-scoreboard objectives add __swimming_cur dummy
-scoreboard objectives add __swimming_prev dummy
-scoreboard objectives add ps_swimming dummy
-
-# Player state: onwater_walk
-scoreboard objectives add __onwater_walkDist minecraft.custom:minecraft.walk_on_water_one_cm
-scoreboard objectives add __onwater_walking_cur dummy
-scoreboard objectives add __onwater_walking_prev dummy
-scoreboard objectives add ps_onwater_walking dummy
-
-# Player state: underwater_walk
-scoreboard objectives add __underwater_walkDist minecraft.custom:minecraft.walk_under_water_one_cm
-scoreboard objectives add __underwater_walking_cur dummy
-scoreboard objectives add __underwater_walking_prev dummy
-scoreboard objectives add ps_underwater_walking dummy
-
-# Player state: climbing
-scoreboard objectives add __climbDist minecraft.custom:minecraft.climb_one_cm
-scoreboard objectives add __climbing_cur dummy
-scoreboard objectives add __climbing_prev dummy
-scoreboard objectives add ps_climbing dummy
-
-# Player state: climbing
-scoreboard objectives add __aviateDist minecraft.custom:minecraft.aviate_one_cm
-scoreboard objectives add __aviating_cur dummy
-scoreboard objectives add __aviating_prev dummy
-scoreboard objectives add ps_aviating dummy
-
-# Player state: moving (either walking or sprinting on the ground)
-scoreboard objectives add ps_moving dummy
 
 # Player state: sneaking (holding down button)
 scoreboard objectives add __sneakTime minecraft.custom:minecraft.sneak_time
