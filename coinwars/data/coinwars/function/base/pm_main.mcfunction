@@ -50,7 +50,7 @@ tag @a[tag=t_pm_owner,tag=t_died,scores={stat_alive_ticks=1..}] remove t_died
 # =============================
 # Collect player data
 
-#function coinwars:base/gt_player_state
+function coinwars:base/pmt_player_state
 
 # =============================
 # Player activity_state handling
