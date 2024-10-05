@@ -7,7 +7,7 @@
 #
 # Arguments: (none)
 
-tellraw @s[tag=t_debug] [{"type":"text","text":"npe_cleanup eid_self: "},{"type":"score","score":{"name":"@s","objective":"eid_self"}}]
+tellraw @a[tag=t_debug] [{"type":"text","text":"npe_cleanup eid_self: "},{"type":"score","score":{"name":"@s","objective":"eid_self"}}]
 
 function coinwars:util/npe_eid_find_subs
 

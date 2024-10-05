@@ -9,7 +9,7 @@ scoreboard players set DEVELOPER_MODE num 1
 scoreboard players set @a[scores={eid_state=1},gamemode=!spectator] eid_state 2
 scoreboard players set @a[scores={eid_state=2},gamemode=spectator] eid_state 1
 
-# ==============================
+# =============================
 # Player eid and pm management
 
 # pms query if their owner still exists and clean up if not
@@ -27,18 +27,29 @@ kill @e[tag=t_pm_no_owner]
 # Initialize players so that all players own a pm
 function coinwars:base/gt_playerinit
 
-#function coinwars:base/gt_player_count
-#execute if score DEVELOPER_MODE num matches 0 run function coinwars:base/gt_lobby
-#function coinwars:base/gt_player_state
-#function coinwars:base/gt_ability
+# =============================
+# Run pm-specific code
+
+# Reset pm_count of all players
+scoreboard players set @a pm_count 0
+
+# Run pm_main for all pms
+execute as @e[type=minecraft:marker,tag=t_pm,tag=!t_pm_no_owner,scores={eid_state=1}] run function coinwars:base/pm_main
+
+# If a player still has a pm_count of 0, no pm ran for that player. Reinitialize them
+scoreboard players set @a[scores={pm_count=0}] reinitialize 1
+
+# =============================
+# Operate non-pm non-player entities such as timers, missiles, etc.
+
 #function coinwars:base/gt_stasis
 #function coinwars:base/gt_missile
-#function coinwars:base/gt_coins
-#function coinwars:base/gt_scoring
 execute as @e[tag=t_timer] at @s run function coinwars:base/pe_timer_operate with entity @s data
 execute as @e[tag=t_coinshower] at @s run function coinwars:base/pe_coinshower
 
-#execute as @a at @s run function coinwars:classes/pe_loop_perclass
+#function coinwars:base/gt_player_count
+#execute if score DEVELOPER_MODE num matches 0 run function coinwars:base/gt_lobby
+#function coinwars:base/gt_player_state
 
 kill @e[type=minecraft:experience_bottle]
 execute as @e[type=minecraft:arrow,nbt={inGround:1b}] at @s run particle minecraft:block{block_state:"minecraft:birch_planks"} ^ ^ ^-0.2 0.1 0.1 0.1 1 5

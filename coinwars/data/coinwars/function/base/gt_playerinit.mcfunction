@@ -2,7 +2,7 @@
 #
 # Context: Global tick
 #
-# Summary: Handles initialization of players upon login or death
+# Summary: Handles initialization of players upon login
 #
 # Arguments: (none)
 

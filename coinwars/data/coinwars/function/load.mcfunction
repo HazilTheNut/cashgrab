@@ -21,11 +21,25 @@ gamerule projectilesCanBreakBlocks false
 
 difficulty normal
 
+setworldspawn 0 100 0
+
 # =============================
 # General player info
 
-# ID number of class assigned to a player. 0 = no class
+# Count of number of pms that operated on the player. This value should always be 1.
+scoreboard objectives add pm_count dummy
+
+# ID numbers of class assigned to a player. 0 = no class
 scoreboard objectives add class dummy
+
+# Enumerated value of player's current state:
+#	0	=	In Pregame Lobby
+#	1	=	Transition to In Pregame Lobby
+#	10	=	Class Select (in spawn selection room)
+#	11	=	Transition to Class Select
+#	20	=	Gameplay
+#	21	=	Transition to Gameplay
+scoreboard objectives add activity_state dummy
 
 # Number of coins held
 scoreboard objectives add coins minecraft.picked_up:minecraft.gold_nugget

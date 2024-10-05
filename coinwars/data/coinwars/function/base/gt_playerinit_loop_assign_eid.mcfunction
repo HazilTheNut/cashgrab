@@ -11,7 +11,7 @@ execute store result score @a[tag=t_player_initialize,limit=1] eid_self run rand
 
 # Search existing entities to see if someone already has that EID
 execute store result storage coinwars:find_eid_args eid int 1 run scoreboard players get @a[tag=t_player_initialize,limit=1] eid_self
-function coinwars:util/gt_find_eid with storage coinwars:find_eid_args
+function coinwars:util/find_eid_self with storage coinwars:find_eid_args
 
 tellraw @a[tag=t_debug] [{"type":"text","text":"gt_playerinit_loop_assign_eid attempted eid_self: "},{"type":"score","score":{"name":"@a[tag=t_player_initialize,limit=1]","objective":"eid_self"}}]
 
