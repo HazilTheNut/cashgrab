@@ -57,6 +57,10 @@ scoreboard objectives add ability_cfg_charges dummy
 
 scoreboard objectives add ability_charges dummy
 
+# Trinket variables
+#	note: only one trinket (Vigor Flask) is currently supported/implemented
+scoreboard objectives add trinket_charges dummy
+
 # Game objective-related
 # team_id: 0 = ffa, 1 = red, 2 = blue
 scoreboard objectives add team_id dummy

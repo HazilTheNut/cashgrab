@@ -42,6 +42,9 @@ scoreboard players set @a[scores={pm_count=0}] reinitialize 1
 # =============================
 # Operate non-pm non-player entities such as timers, missiles, etc.
 
+# All dropped item entities are destroyed except for those that are tagged as "t_pickup"
+kill @e[type=minecraft:item,tag=!t_pickup]
+
 #function coinwars:base/gt_stasis
 #function coinwars:base/gt_missile
 execute as @e[tag=t_timer] at @s run function coinwars:base/pe_timer_operate with entity @s data

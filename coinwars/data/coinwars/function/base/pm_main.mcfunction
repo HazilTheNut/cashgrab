@@ -32,14 +32,15 @@ execute if entity @a[tag=t_pm_owner,scores={pm_count=2..}] run return 0
 
 # === Detect if player has died
 execute if score @a[tag=t_pm_owner,limit=1] __iev_death matches 1.. run function coinwars:base/pm_cleanup_player_subs
-#execute if entity @a[tag=t_pm_owner,scores={__iev_death=1..,activity_state=20}] run function coinwars:base/pm_create_coinshower
+#execute if entity @a[tag=t_pm_owner,scores={__iev_death=1..,activity_state=20}] at @a[tag=t_pm_owner] run function coinwars:base/pmtl_create_coinshower
 # Set dead player activity_state to Transition to Class Select
 execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches 0 run scoreboard players set @a[tag=t_pm_owner,scores={__iev_death=1..}] activity_state 1
 execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches 1.. run scoreboard players set @a[tag=t_pm_owner,scores={__iev_death=1..}] activity_state 11
+execute if score DEVELOPER_MODE num matches 1 run scoreboard players set @a[tag=t_pm_owner,scores={__iev_death=1..}] activity_state 21
 # Tag dead player to handle when they respawn
 tag @a[tag=t_pm_owner,scores={__iev_death=1..}] add t_died
-# Miscellaneous operations on dead player
-execute if score DEVELOPER_MODE num matches 0 run spawnpoint @a[tag=t_pm_owner,scores={__iev_death=1..}] 0 100 0
+# Consume __iev_death event
+scoreboard players set @a[tag=t_pm_owner,scores={__iev_death=1..}] __iev_death 0
 
 # === Detect if player has respawned
 execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches 0 run tag @a[tag=t_pm_owner,tag=t_died,scores={stat_alive_ticks=1..}] add dtm_send_to_lobby
@@ -55,30 +56,34 @@ tag @a[tag=t_pm_owner,tag=t_died,scores={stat_alive_ticks=1..}] remove t_died
 # Player activity_state handling
 
 #	activity_state 1	=	Transition to In Pregame Lobby
-#clear @a
+clear @a[tag=t_pm_owner,scores={activity_state=1}]
+execute if entity @a[tag=t_pm_owner,scores={activity_state=1}] run function coinwars:classes/pmt_inv_refresh
 scoreboard players set @a[tag=t_pm_owner,scores={activity_state=1}] activity_state 0
 
 #	activity_state 0	=	In Pregame Lobby
 
 #	activity_state 11	=	Transition to Class Select
-#clear @a
+clear @a[tag=t_pm_owner,scores={activity_state=1}]
+execute if entity @a[tag=t_pm_owner,scores={activity_state=1}] run function coinwars:classes/pmt_inv_refresh
 scoreboard players set @a[tag=t_pm_owner,scores={activity_state=11}] activity_state 10
 
 #	activity_state 10	=	Class Select (in spawn selection room)
 
 #	activity_state 21	=	Transition to Gameplay
-#execute as @a at @s run function coinwars:classes/pe_equip_perclass
+scoreboard players set @a[tag=t_pm_owner,scores={activity_state=21}] trinket_charges 1
+#execute as @a run function coinwars:classes/pmt_equip_perclass
 scoreboard players set @a[tag=t_pm_owner,scores={activity_state=21}] activity_state 20
 
 #	activity_state 20	=	Gameplay
-#execute as @a at @s run function coinwars:classes/pe_loop_perclass
+#execute as @a at @s run function coinwars:classes/pmtl_loop_perclass
+#execute as @a at @s run function coinwars:base/pmtl_trinket
 
 # =============================
 # activity_state irrespective operations
 
-#function coinwars:base/gt_ability
-#function coinwars:base/gt_coins
-#function coinwars:base/gt_scoring
+execute at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function coinwars:base/pmtl_ability
+#function coinwars:base/pmtl_coins
+#function coinwars:base/pml_scoring
 
 # =============================
 # End of pm_main
