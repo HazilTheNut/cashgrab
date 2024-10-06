@@ -51,8 +51,9 @@ item replace entity @a[tag=t_pm_owner] inventory.26 with minecraft:air
 
 #function coinwars:classes/pe_inv_perclass
 
+# During gameplay, display ability icon and trinket
 execute if entity @a[tag=t_pm_owner,scores={activity_state=20..29}] run function coinwars:base/pmt_inv_ability_icon_argloader
 execute if entity @a[tag=t_pm_owner,scores={activity_state=20..29,class=0..}] run function coinwars:base/pmt_inv_trinket_argloader
 
-
-#function coinwars:base/pe_display_coins_argloader
+# Display coins on hotbar
+function coinwars:base/pmt_inv_coins_argloader

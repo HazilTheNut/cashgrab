@@ -1,8 +1,10 @@
-# base/pe_create_coinshower.mcfunction
+# base/pmtl_create_coinshower.mcfunction
 #
-# Context: 
-#	as: a player
-#	at: the entity
+# Context:
+#	as: a Player Monitor (pm) marker
+#	+ the owner of the pm is tagged with t_pm_owner
+#	at: the owner's position, which must also be a coin plate
+#	rotated: as the owner
 #
 # Summary: Creates a coin shower
 #
@@ -11,9 +13,9 @@
 summon minecraft:marker ~ ~0.25 ~ {Tags:["t_coinshower_init"],data:{vx:0.0d,vz:0.0d}}
 
 # Divide coins amongst player and the coin shower
-scoreboard players operation @e[tag=t_coinshower_init,limit=1,sort=nearest] __coinshower_coins = @s coins
+scoreboard players operation @e[tag=t_coinshower_init,limit=1,sort=nearest] __coinshower_coins = @a[tag=t_pm_owner] coins
 scoreboard players operation @e[tag=t_coinshower_init,limit=1,sort=nearest] __coinshower_coins /= NUM_COINSHOWER_EXCHANGE_DIVISOR num
-scoreboard players operation @s coins -= @e[tag=t_coinshower_init,limit=1,sort=nearest] __coinshower_coins
+scoreboard players operation @a[tag=t_pm_owner] coins -= @e[tag=t_coinshower_init,limit=1,sort=nearest] __coinshower_coins
 
 # Set droprate of coin shower based on number of coins (tries to max out at 10 seconds)
 scoreboard players set @e[tag=t_coinshower_init,limit=1,sort=nearest,scores={__coinshower_coins=..40}] __coinshower_period_ticks 5

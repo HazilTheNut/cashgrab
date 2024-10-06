@@ -1,4 +1,4 @@
-# base/pe_coinshower.mcfunction
+# base/npe_coinshower.mcfunction
 #
 # Context: 
 #	as: a coin shower marker
@@ -11,7 +11,7 @@
 # Dispense a coin when the shower's timer reaches 0 and it has a coin to drop
 execute if entity @s[scores={__coinshower_timer_ticks=0,__coinshower_coins=1..}] store result entity @s data.vx double 0.001 run random value -25..25
 execute if entity @s[scores={__coinshower_timer_ticks=0,__coinshower_coins=1..}] store result entity @s data.vz double 0.001 run random value -25..25
-execute if entity @s[scores={__coinshower_timer_ticks=0,__coinshower_coins=1..}] run function coinwars:base/pe_coinshower_dispense_coin with entity @s data
+execute if entity @s[scores={__coinshower_timer_ticks=0,__coinshower_coins=1..}] run function coinwars:base/npe_coinshower_dispense_coin with entity @s data
 
 # Destroy coin shower when it has no more coins to drop
 scoreboard players reset @s[scores={__coinshower_coins=..0}]

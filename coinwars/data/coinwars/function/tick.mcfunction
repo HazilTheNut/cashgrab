@@ -47,8 +47,9 @@ kill @e[type=minecraft:item,tag=!t_pickup]
 
 #function coinwars:base/gt_stasis
 #function coinwars:base/gt_missile
+function coinwars:base/gt_coins
 execute as @e[tag=t_timer] at @s run function coinwars:base/pe_timer_operate with entity @s data
-execute as @e[tag=t_coinshower] at @s run function coinwars:base/pe_coinshower
+execute as @e[tag=t_coinshower] at @s run function coinwars:base/npe_coinshower
 
 #function coinwars:base/gt_player_count
 #execute if score DEVELOPER_MODE num matches 0 run function coinwars:base/gt_lobby

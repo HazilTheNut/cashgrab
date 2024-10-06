@@ -33,7 +33,7 @@ execute if entity @a[tag=t_pm_owner,scores={pm_count=2..}] run return 0
 
 # === Detect if player has died
 execute if score @a[tag=t_pm_owner,limit=1] __iev_death matches 1.. run function coinwars:base/pm_cleanup_player_subs
-#execute if entity @a[tag=t_pm_owner,scores={__iev_death=1..,activity_state=20}] at @a[tag=t_pm_owner] run function coinwars:base/pmtl_create_coinshower
+execute if entity @a[tag=t_pm_owner,scores={__iev_death=1..,activity_state=20}] at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function coinwars:base/pmtl_create_coinshower
 # Set dead player activity_state to Transition to Class Select
 execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches 0 run scoreboard players set @a[tag=t_pm_owner,scores={__iev_death=1..}] activity_state 1
 execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches 1.. run scoreboard players set @a[tag=t_pm_owner,scores={__iev_death=1..}] activity_state 11
@@ -83,7 +83,7 @@ scoreboard players set @a[tag=t_pm_owner,scores={activity_state=21}] activity_st
 # activity_state irrespective operations
 
 execute at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function coinwars:base/pmtl_ability
-#function coinwars:base/pmtl_coins
+execute at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function coinwars:base/pmtl_coins
 #function coinwars:base/pml_scoring
 
 # =============================
