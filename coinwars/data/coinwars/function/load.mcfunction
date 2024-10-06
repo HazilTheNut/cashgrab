@@ -187,8 +187,9 @@ scoreboard players set NUM_PLAYERCOUNT_CHANGED num 0
 # Set to 1 to rebuild the coin scoreboard
 scoreboard players set NUM_REBUILD_COINSCORE num 0
 
-scoreboard players set GOAL coins 100
-scoreboard players set GOAL __coin_score 100
+scoreboard players add GOAL coins 0
+execute if score GOAL coins matches 0 run scoreboard players set GOAL coins 100
+execute if score DEVELOPER_MODE num matches 0 run function coinwars:base/gt_display_coin_score
 
 scoreboard players set TEAM_RED coins 0
 scoreboard players set TEAM_BLUE coins 0

@@ -11,7 +11,7 @@
 # Arguments: (none)
 
 # Consume coin plate when a player runs over a coin plate
-execute if block ~ ~ ~ minecraft:light_weighted_pressure_plate align xyz run function coinwars:base/pmtl_consume_coinplate
+execute if score NUM_GAMESTATE num matches 1.. if block ~ ~ ~ minecraft:light_weighted_pressure_plate align xyz run function coinwars:base/pmtl_consume_coinplate
 
 # When a player picks up a coin, award some health and refresh coin display
 execute if entity @a[tag=t_pm_owner,scores={__iev_coin_pickup=1..}] run function coinwars:base/pmt_inv_coins_argloader

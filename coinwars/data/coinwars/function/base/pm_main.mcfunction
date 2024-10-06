@@ -84,7 +84,7 @@ scoreboard players set @a[tag=t_pm_owner,scores={activity_state=21}] activity_st
 
 execute at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function coinwars:base/pmtl_ability
 execute at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function coinwars:base/pmtl_coins
-#function coinwars:base/pml_scoring
+function coinwars:base/pmt_scoring
 
 # =============================
 # End of pm_main
