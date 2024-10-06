@@ -1,8 +1,7 @@
-# util/pe_col_filter_entity_owner.mcfunction
+# util/npe_col_filter_entity_owner.mcfunction
 #
 # Context:
-#	as: an entity
-#	at: the entity
+#	as: a nonplayer entity
 #
 # Summary: Tags this entity's owner with t_collision_candidate
 #

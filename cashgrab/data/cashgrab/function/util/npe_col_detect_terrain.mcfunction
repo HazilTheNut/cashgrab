@@ -1,8 +1,8 @@
-# util/pe_col_detect_terrain.mcfunction
+# util/npe_col_detect_terrain.mcfunction
 #
 # Context:
-#	as: an entity
-#	at: the entity
+#	as: a nonplayer entity
+#	at: the location being checked for collision
 #
 # Summary: Runs collision detection algorithm for terrain at the next position given by delta_x, delta_y, and delta_z
 #

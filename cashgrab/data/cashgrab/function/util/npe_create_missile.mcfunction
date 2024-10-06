@@ -1,9 +1,7 @@
-# util/pe_create_missile.mcfunction
+# util/npe_create_missile.mcfunction
 #
 # Context:
-#	as: an entity
-#	at: the entity
-#	facing: entity's facing angle
+#	as: a nonplayer entity
 #
 # Summary: Generates a missile
 #
@@ -40,7 +38,7 @@ execute store result score @s temp_B run data get entity @e[tag=t_missile_init,l
 execute if entity @s[scores={temp_B=1..}] run tag @e[tag=t_missile_init,limit=1,sort=nearest] add t_missile_has_tracking
 execute if entity @s[scores={temp_B=1..}] run tag @e[tag=t_missile_init,limit=1,sort=nearest] add t_missile_calc_tracking
 
-$execute as @e[tag=t_missile_init,limit=1,sort=nearest] at @s run function coinwars:base/pe_missile_calc_base_vel {f_speed_mpt:$(f_speed_mpt)f,tracking_dyaw:0,tracking_dpitch:0}
+$execute as @e[tag=t_missile_init,limit=1,sort=nearest] at @s run function cashgrab:base/npe_missile_calc_base_vel {f_speed_mpt:$(f_speed_mpt)f,tracking_dyaw:0,tracking_dpitch:0}
 $scoreboard players set @e[tag=t_missile_init,limit=1,sort=nearest] mis_lifetime_ticks $(i_lifetime_ticks)
 $scoreboard players set @e[tag=t_missile_init,limit=1,sort=nearest] mis_gravity_vel_y_mmpt $(i_gravity_vy_mmpt)
 $scoreboard players set @e[tag=t_missile_init,limit=1,sort=nearest] mis_gravity_const_mmpt2 $(i_gravity_const_mmpt2)
@@ -53,7 +51,7 @@ tag @e[tag=t_missile_init,limit=1,sort=nearest,scores={mis_gravity_const_mmpt2=.
 
 $tag @e[tag=t_missile_init,limit=1,sort=nearest] add $(t_missile_name)
 
-execute as @e[tag=t_missile_init,limit=1,sort=nearest] at @s run function coinwars:util/pe_eid_acquire
+execute as @e[tag=t_missile_init,limit=1,sort=nearest] at @s run function cashgrab:util/npe_eid_acquire
 scoreboard players operation @e[tag=t_missile_init,limit=1,sort=nearest] eid_owner = @s eid_self
 scoreboard players operation @e[tag=t_missile_init,limit=1,sort=nearest] team_id = @s team_id
 

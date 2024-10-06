@@ -1,8 +1,7 @@
-# util/pe_col_filter_entity_hostile.mcfunction
+# util/npe_col_filter_entity_hostile.mcfunction
 #
 # Context:
-#	as: an entity
-#	at: the entity
+#	as: a nonplayer entity
 #
 # Summary: Tags all entities considered hostile (other ffa entities or enemy team) to the owner with t_collision_candidate
 #
@@ -10,7 +9,7 @@
 
 tag @e[scores={eid_state=1..}] remove t_collision_candidate
 
-function coinwars:util/pe_eid_find_owner
+function cashgrab:util/npe_eid_find_owner
 
 tag @e[scores={eid_state=2,eid_compare=1..}] add t_collision_candidate
 tag @s remove t_collision_candidate

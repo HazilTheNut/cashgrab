@@ -1,4 +1,4 @@
-# base/pe_missile_physics_tracking.mcfunction
+# base/missile_physics_tracking.mcfunction
 #
 # Context:
 #	as: a missile

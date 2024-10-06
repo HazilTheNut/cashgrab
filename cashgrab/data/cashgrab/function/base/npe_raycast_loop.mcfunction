@@ -1,11 +1,9 @@
-# base/pe_raycast.mcfunction
+# base/npe_raycast_loop.mcfunction
 #
 # Context:
-#	as: a missile
-#	at: the missile
-#	facing: the missile's facing direction
+#	as: a nonplayer entity
 #
-# Summary: Performs behavior of missiles
+# Summary: Performs loop of raycasting
 #
 # Arguments:
 #	delta_x				: Change in x position per step of raycast
@@ -50,4 +48,4 @@ $execute if entity @s[scores={col_entity=1..}] run function $(func_end) {end_rea
 execute if entity @s[scores={col_entity=1..}] run return 0
 
 # Proceed to next step of loop
-$execute positioned ~$(delta_x) ~$(delta_y) ~$(delta_z) if entity @s[scores={rc_steps_remaining=1..}] run function cashgrab:base/pe_raycast_recursion with storage cashgrab:rc_args data
+$execute positioned ~$(delta_x) ~$(delta_y) ~$(delta_z) if entity @s[scores={rc_steps_remaining=1..}] run function cashgrab:base/npe_raycast_loop_recursion with storage cashgrab:rc_args data

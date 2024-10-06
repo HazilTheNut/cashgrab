@@ -1,4 +1,4 @@
-# base/pe_timer_operation.mcfunction
+# base/timer_operate.mcfunction
 #
 # Context:
 #	as: a timer marker
@@ -17,7 +17,7 @@ scoreboard players remove @s[scores={stasis_state=-1..0}] tmr_lifetime_ticks 1
 execute if entity @s[tag=t_cleanup] run scoreboard players set @s tmr_lifetime_ticks 0
 
 # If not anchored at creation position
-execute if entity @s[scores={tmr_anchor_pos=0}] run function cashgrab:util/pe_eid_find_owner
+execute if entity @s[scores={tmr_anchor_pos=0}] run function cashgrab:util/npe_eid_find_owner
 $execute if entity @s[scores={tmr_anchor_pos=0,tmr_lifetime_ticks=1..}] at @e[scores={eid_compare=0}] run function $(func_step)
 $execute if entity @s[scores={tmr_anchor_pos=0,tmr_lifetime_ticks=..0},tag=t_cleanup] at @e[scores={eid_compare=0}] run function $(func_end) {end_reason:0}
 $execute if entity @s[scores={tmr_anchor_pos=0,tmr_lifetime_ticks=..0},tag=!t_cleanup] at @e[scores={eid_compare=0}] run function $(func_end) {end_reason:1}

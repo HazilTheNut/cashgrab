@@ -62,7 +62,7 @@ kill @e[type=minecraft:item,tag=!t_pickup]
 function cashgrab:base/gt_stasis
 #function cashgrab:base/gt_missile
 function cashgrab:base/gt_coins
-execute as @e[tag=t_timer] at @s run function cashgrab:base/pe_timer_operate with entity @s data
+execute as @e[tag=t_timer] at @s run function cashgrab:base/timer_operate with entity @s data
 execute as @e[tag=t_coinshower] at @s run function cashgrab:base/npe_coinshower
 
 kill @e[type=minecraft:experience_bottle]

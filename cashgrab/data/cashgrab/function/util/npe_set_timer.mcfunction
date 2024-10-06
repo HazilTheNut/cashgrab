@@ -1,4 +1,4 @@
-# util/pe_set_timer.mcfunction
+# util/npe_set_timer.mcfunction
 #
 # Context:
 #	as: an entity with a valid EID

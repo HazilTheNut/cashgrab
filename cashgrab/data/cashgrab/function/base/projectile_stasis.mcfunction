@@ -1,4 +1,4 @@
-# base/pe_stasis_projectile.mcfunction
+# base/projectile_stasis.mcfunction
 #
 # Context:
 #	as: a #cashgrab:projectile entity

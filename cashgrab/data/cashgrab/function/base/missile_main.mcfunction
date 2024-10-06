@@ -1,4 +1,4 @@
-# base/pe_missile.mcfunction
+# base/missile_main.mcfunction
 #
 # Context:
 #	as: a missile
@@ -35,12 +35,12 @@ execute if score @s stasis_state matches 1..2 run return 0
 #tellraw @a[tag=t_debug] [{"type":"text","text":"Tracking magnitude: "},{"type":"nbt","nbt":"data.f_tracking_scalar","entity":"@s"}]
 
 # Run physics effects on missiles to calculate vel_x, vel_y, and vel_z
-function cashgrab:base/pe_missile_physics with entity @s data
+function cashgrab:base/missile_physics with entity @s data
 
 tag @e remove t_collision_candidate
 
 # Run missile collision detection and traveling forwards
-function cashgrab:base/pe_operate_missile with entity @s data
+function cashgrab:base/missile_travel with entity @s data
 
 # Remove t_collision_candidate tags to not interfere with other missiles
 tag @e remove t_collision_candidate

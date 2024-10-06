@@ -16,8 +16,8 @@ scoreboard players set @e[tag=!t_stasis,tag=!t_stasis_immune,scores={stasis_stat
 scoreboard players set @e[tag=!t_stasis,tag=!t_stasis_immune,scores={stasis_state=1..2}] stasis_state -1
 
 # Apply stasis effects to projectiles
-execute as @e[type=#cashgrab:projectile,scores={stasis_state=1..2}] at @s run function cashgrab:base/pe_stasis_projectile
-execute as @e[type=#cashgrab:projectile,scores={stasis_state=-1}] at @s run function cashgrab:base/pe_stasis_projectile
+execute as @e[type=#cashgrab:projectile,scores={stasis_state=1..2}] at @s run function cashgrab:base/projectile_stasis
+execute as @e[type=#cashgrab:projectile,scores={stasis_state=-1}] at @s run function cashgrab:base/projectile_stasis
 
 # Remove t_stasis tag. To continue applying stasis, the tag must be issued repeatedly on each server tick
 tag @e[tag=t_stasis] remove t_stasis

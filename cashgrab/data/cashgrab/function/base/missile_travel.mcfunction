@@ -1,11 +1,11 @@
-# base/pe_operate_missile.mcfunction
+# base/missile_travel.mcfunction
 #
 # Context:
 #	as: a missile
 #	at: the missile
 #	facing: the missile's facing direction
 #
-# Summary: Performs behavior of missiles
+# Summary: Performs movement and collision detection for missile
 #
 # Arguments:
 #	vel_x				: Missile x velocity, in meters/tick
@@ -34,14 +34,14 @@ scoreboard players set @s has_collided 0
 
 # =============================
 # Terrain collision
-$execute store result score @s col_terrain run function cashgrab:util/pe_col_detect_terrain {delta_x:$(vel_x),delta_y:$(vel_y),delta_z:$(vel_z),col_terrain_allowed:"$(col_terrain_allowed)"}
+$execute store result score @s col_terrain run function cashgrab:util/npe_col_detect_terrain {delta_x:$(vel_x),delta_y:$(vel_y),delta_z:$(vel_z),col_terrain_allowed:"$(col_terrain_allowed)"}
 
 # =============================
 # Entity hit detection
 scoreboard players set @s col_entity 0
 
 # Dummy function is ran as func_entity_filter was ran at the very beginning of raycast
-$execute if score @s col_terrain matches 0 store result score @s col_entity positioned ~$(vel_x) ~$(vel_y) ~$(vel_z) run function cashgrab:util/pe_col_detect_entity {func_entity_filter:"$(func_entity_filter)"}
+$execute if score @s col_terrain matches 0 store result score @s col_entity positioned ~$(vel_x) ~$(vel_y) ~$(vel_z) run function cashgrab:util/npe_col_detect_entity {func_entity_filter:"$(func_entity_filter)"}
 
 #tellraw @a[tag=t_debug] [{"type":"text","text":"Missile tags: "},{"type":"nbt","nbt":"Tags","entity":"@s"}]
 #tellraw @a[tag=t_debug] [{"type":"text","text":"  Candidates: "},{"type":"selector","selector":"@e[tag=t_collision_candidate]"}]

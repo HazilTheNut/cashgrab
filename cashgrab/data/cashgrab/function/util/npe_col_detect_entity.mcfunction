@@ -1,8 +1,8 @@
-# util/pe_col_detect_entity.mcfunction
+# util/npe_col_detect_entity.mcfunction
 #
 # Context:
-#	as: an entity
-#	at: the entity
+#	as: a nonplayer entity
+#	at: the location being checked for collision
 #
 # Summary: Runs collision detection algorithm for entities at the execution position.
 #

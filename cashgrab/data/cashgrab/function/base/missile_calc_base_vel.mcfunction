@@ -1,4 +1,4 @@
-# base/pe_missile_calc_base_vel.mcfunction
+# base/missile_calc_base_vel.mcfunction
 #
 # Context:
 #	as: a missile
@@ -14,7 +14,7 @@
 
 #$tellraw @a[tag=t_debug] "f_speed_mpt = $(f_speed_mpt), tracking_dyaw = $(tracking_dyaw), tracking_dpitch = $(tracking_dpitch)"
 
-$execute rotated ~$(tracking_dyaw) ~$(tracking_dpitch) run function cashgrab:util/pe_calc_facing_vector {magnitude:$(f_speed_mpt)f}
+$execute rotated ~$(tracking_dyaw) ~$(tracking_dpitch) run function cashgrab:util/npe_calc_facing_vector {magnitude:$(f_speed_mpt)f}
 #function cashgrab:util/pe_calc_facing_vector with entity @s data
 scoreboard players operation @s mis_base_vel_x_mmpt = @s facing_vector_x_mm
 scoreboard players operation @s mis_base_vel_y_mmpt = @s facing_vector_y_mm

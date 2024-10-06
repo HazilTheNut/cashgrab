@@ -1,4 +1,4 @@
-# base/pe_raycast_fit_player.mcfunction
+# base/npe_raycast_fit_player.mcfunction
 #
 # Context:
 #	as: an entity

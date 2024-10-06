@@ -1,7 +1,7 @@
-# util/pe_record_position.mcfunction
+# util/npe_record_position.mcfunction
 #
 # Context:
-#	as: an entity
+#	as: a nonplayer entity
 #	at: the entity
 #
 # Summary: Copies its x, y, z position to pos_x_mm, pos_y_mm, and pos_z_mm

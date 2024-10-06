@@ -1,9 +1,11 @@
 # util/pe_eid_find_owner.mcfunction
 #
 # Context:
-#	as: an entity
+#	as: a nonplayer entity
 #
-# Summary: Sets eid_compare for entities with eid_state == 1..2 accoridingly:
+# Note: this function will fail to work with players. find_eid_self and find_eid_owned_by should be used when working with players
+#
+# Summary: Sets eid_compare for entities with eid_state == 1..2 accordingly:
 #	eid_compare == 0 iff my eid_owner == their eid_self
 #	eid_compare > 0 otherwise
 
