@@ -60,10 +60,10 @@ scoreboard players set @a[scores={pm_count=0}] reinitialize 1
 kill @e[type=minecraft:item,tag=!t_pickup]
 
 function cashgrab:base/gt_stasis
-#function cashgrab:base/gt_missile
 function cashgrab:base/gt_coins
-execute as @e[tag=t_timer] at @s run function cashgrab:base/timer_operate with entity @s data
-execute as @e[tag=t_coinshower] at @s run function cashgrab:base/npe_coinshower
+execute as @e[type=minecraft:marker,tag=t_missile] at @s facing ^ ^ ^1 run function cashgrab:base/missile_main with entity @s data
+execute as @e[type=minecraft:marker,tag=t_timer] at @s run function cashgrab:base/timer_main with entity @s data
+execute as @e[type=minecraft:marker,tag=t_coinshower] at @s run function cashgrab:base/npe_coinshower
 
 kill @e[type=minecraft:experience_bottle]
 execute as @e[type=minecraft:arrow,nbt={inGround:1b}] at @s run particle minecraft:block{block_state:"minecraft:birch_planks"} ^ ^ ^-0.2 0.1 0.1 0.1 1 5
