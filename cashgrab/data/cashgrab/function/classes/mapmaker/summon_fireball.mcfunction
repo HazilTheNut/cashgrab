@@ -1,8 +1,8 @@
 
-execute if entity @s[scores={ps_selected_hotbar_slot=2}] anchored eyes run summon minecraft:fireball ^ ^ ^1 {Motion:[0.0,0.0,0.0],ExplosionPower:6,Tags:["t_mapmaker_fireball_init"]}
-execute if entity @s[scores={ps_selected_hotbar_slot=3}] anchored eyes run summon minecraft:fireball ^ ^ ^1 {Motion:[0.0,0.0,0.0],ExplosionPower:3,Tags:["t_mapmaker_fireball_init"]}
+execute if entity @a[tag=t_pm_owner,scores={ps_selected_hotbar_slot=2}] anchored eyes run summon minecraft:fireball ^ ^ ^1 {Motion:[0.0,0.0,0.0],ExplosionPower:6,Tags:["t_mapmaker_fireball_init"]}
+execute if entity @a[tag=t_pm_owner,scores={ps_selected_hotbar_slot=3}] anchored eyes run summon minecraft:fireball ^ ^ ^1 {Motion:[0.0,0.0,0.0],ExplosionPower:3,Tags:["t_mapmaker_fireball_init"]}
 
-function coinwars:util/pe_calc_facing_vector {magnitude:3.0f}
+function cashgrab:util/npe_calc_facing_vector {magnitude:3.0f}
 
 execute store result entity @e[tag=t_mapmaker_fireball_init,limit=1] Motion[0] double 0.001 run scoreboard players get @s facing_vector_x_mm
 execute store result entity @e[tag=t_mapmaker_fireball_init,limit=1] Motion[1] double 0.001 run scoreboard players get @s facing_vector_y_mm

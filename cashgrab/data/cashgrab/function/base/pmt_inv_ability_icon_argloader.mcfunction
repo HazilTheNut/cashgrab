@@ -10,7 +10,7 @@
 
 # If player has an ability charge, display class's ability icon
 execute store result storage cashgrab:abi_args charges int 1 run scoreboard players get @a[tag=t_pm_owner,limit=1] ability_charges
-#execute if entity @a[tag=t_pm_owner,scores={ability_charges=1..}] run function cashgrab:classes/pmt_inv_ability_icon_perclass
+execute if entity @a[tag=t_pm_owner,scores={ability_charges=1..}] run function cashgrab:classes/pmt_class_inv_ability_icon
 execute if entity @a[tag=t_pm_owner,scores={ability_charges=1..}] run return 0
 
 # If not, display that it is on cooldown

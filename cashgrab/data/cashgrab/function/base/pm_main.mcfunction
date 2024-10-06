@@ -76,13 +76,13 @@ scoreboard players set @a[tag=t_pm_owner,scores={activity_state=21}] trinket_cha
 scoreboard players set @a[tag=t_pm_owner,scores={activity_state=21}] activity_state 20
 
 #	activity_state 20	=	Gameplay
-#execute as @a at @s run function cashgrab:classes/pmtl_loop_perclass
+execute at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] anchored eyes run function cashgrab:classes/pmtl_class_loop
 #execute as @a at @s run function cashgrab:base/pmtl_trinket
 
 # =============================
 # activity_state irrespective operations
 
-execute at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function cashgrab:base/pmtl_ability
+execute at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] anchored eyes run function cashgrab:base/pmtl_ability
 execute at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function cashgrab:base/pmtl_coins
 function cashgrab:base/pmt_scoring
 

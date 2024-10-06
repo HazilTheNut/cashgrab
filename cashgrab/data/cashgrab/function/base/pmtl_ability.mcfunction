@@ -14,7 +14,7 @@
 # Consume toss item event
 
 # If the player is in Gameplay activity state and has an ability charge, use ability and then expend charge
-#execute if entity @a[tag=t_pm_owner,scores={__iev_drop=1..,ability_charges=1..}] run function cashgrab:classes/pmtl_use_ability_perclass
+execute if entity @a[tag=t_pm_owner,scores={__iev_drop=1..,ability_charges=1..}] run function cashgrab:classes/pmtl_class_use_ability
 scoreboard players remove @a[tag=t_pm_owner,scores={__iev_drop=1..,ability_charges=1..,activity_state=20..29}] ability_charges 1
 # Regardless of player state, refresh inventory whenever they toss an item
 execute if entity @a[tag=t_pm_owner,scores={__iev_drop=1..}] run function cashgrab:base/pmt_inv_refresh
