@@ -90,6 +90,9 @@ scoreboard objectives add eid_owner dummy
 # Used for comparisons. eid_compare == 0 means you found a match for some query about EIDs
 scoreboard objectives add eid_compare dummy
 
+# Used for issuing EIDs to players
+scoreboard objectives add __eid_prev dummy
+
 # Entity state regarding its EID:
 #	eid_state == 0	:	Entity does not have a valid EID
 #	eid_state == 1	:	Entity has a valid self EID
@@ -161,6 +164,8 @@ scoreboard objectives add stat_alive_ticks minecraft.custom:minecraft.time_since
 
 scoreboard objectives add num dummy
 
+# === Math constants
+
 scoreboard players set NUM_ZERO num 0
 scoreboard players set NUM_NEG_ONE num -1
 scoreboard players set NUM_TEN num 10
@@ -169,32 +174,48 @@ scoreboard players set NUM_ONE_HUNDRED num 100
 scoreboard players set NUM_360_DEG num 360
 
 scoreboard players set NUM_TICKS_PER_SEC num 20
+
+# === Missile constants
+
 scoreboard players set NUM_MISSILE_TRACKING_DIVISOR num 1
+
+# === Raycast constants
+
 scoreboard players set NUM_RAYCAST_STEPS_PER_M num 2
 
-scoreboard players set NUM_COINSHOWER_EXCHANGE_DIVISOR num 2
+# === Coin mechanics configurable parameters
 
-# Tracks the state of the game: 0 = no game active, 1 = ffa game, 2 = teams game
-scoreboard players add NUM_GAMESTATE num 0
-
-# Tracks player count to detect when players leave the game
-scoreboard players set NUM_PLAYERCOUNT num 0
-scoreboard players set NUM_PLAYERCOUNT_PREV num 0
-
-# 1 if the player count has changed this tick, and 0 otherwise
-scoreboard players set NUM_PLAYERCOUNT_CHANGED num 0
-
-# Set to 1 to rebuild the coin scoreboard
-scoreboard players set NUM_REBUILD_COINSCORE num 0
-
+# Goal number of coins to reach to win the game
 scoreboard players add GOAL coins 0
 execute if score GOAL coins matches 0 run scoreboard players set GOAL coins 100
 execute if score DEVELOPER_MODE num matches 0 run function cashgrab:base/gt_display_coin_score
 
+# When player dies, their coin count is divded by this number and the other portion is given to coin shower
+scoreboard players add NUM_COINSHOWER_EXCHANGE_DIVISOR num 0
+execute if score NUM_COINSHOWER_EXCHANGE_DIVISOR num matches 0 run scoreboard players set NUM_COINSHOWER_EXCHANGE_DIVISOR num 2
+
+# Target time for coin showers to dispense coins, in ticks
+scoreboard players add NUM_COINSHOWER_TARGET_TIME_TICKS num 0
+execute if score NUM_COINSHOWER_TARGET_TIME_TICKS num matches 0 run scoreboard players set NUM_COINSHOWER_TARGET_TIME_TICKS num 100
+
+# Maximum period for coin drops by coin showers, in ticks
+scoreboard players add NUM_COINSHOWER_MAX_PERIOD_TICKS num 0
+execute if score NUM_COINSHOWER_MAX_PERIOD_TICKS num matches 0 run scoreboard players set NUM_COINSHOWER_MAX_PERIOD_TICKS num 7
+
+# Number of coins awarded by stepping on a coin plate
+scoreboard players add NUM_COINS_PER_COINPLATE num 0
+execute if score NUM_COINS_PER_COINPLATE num matches 0 run scoreboard players set NUM_COINS_PER_COINPLATE num 1
+
+# === Misc. global variables
+
+# Tracks the state of the game: 0 = no game active, 1 = ffa game, 2 = teams game
+scoreboard players add NUM_GAMESTATE num 0
+
+# 1 if the player count has changed this tick, and 0 otherwise
+scoreboard players set NUM_PLAYERCOUNT_CHANGED num 0
+
 scoreboard players set TEAM_RED coins 0
 scoreboard players set TEAM_BLUE coins 0
-
-scoreboard players set NUM_END_GAME num 0
 
 scoreboard players set DEVELOPER_MODE num 0
 

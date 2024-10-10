@@ -23,7 +23,7 @@ scoreboard players add @a[tag=t_pm_owner] pm_count 1
 # This case is not expected to occur but this is a failsafe in case it somehow happens.
 # Destroying this pm will resolve the issue as the player entity holds all of their data,
 #	so pms can be freely be destroyed without worry of corrupting player data
-execute if entity @a[tag=t_pm_owner,scores={pm_count=2..}] run tellraw @a "An error has occurred with your session - reinitializing"
+execute if entity @a[tag=t_pm_owner,scores={pm_count=2..}] run tellraw @a[tag=t_pm_owner] "An error has occurred with your session - reinitializing"
 execute if entity @a[tag=t_pm_owner,scores={pm_count=2..}] run scoreboard players set @s eid_owner 0
 execute if entity @a[tag=t_pm_owner,scores={pm_count=2..}] run function cashgrab:base/pm_cleanup_if_ownerless
 execute if entity @a[tag=t_pm_owner,scores={pm_count=2..}] run return 0
@@ -37,7 +37,6 @@ execute if entity @a[tag=t_pm_owner,scores={__iev_death=1..,activity_state=20}] 
 # Set dead player activity_state to Transition to Class Select
 execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches 0 run scoreboard players set @a[tag=t_pm_owner,scores={__iev_death=1..}] activity_state 1
 execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches 1.. run scoreboard players set @a[tag=t_pm_owner,scores={__iev_death=1..}] activity_state 11
-execute if score DEVELOPER_MODE num matches 1 run scoreboard players set @a[tag=t_pm_owner,scores={__iev_death=1..}] activity_state 21
 # Tag dead player to handle when they respawn
 tag @a[tag=t_pm_owner,scores={__iev_death=1..}] add t_died
 # Consume __iev_death event
