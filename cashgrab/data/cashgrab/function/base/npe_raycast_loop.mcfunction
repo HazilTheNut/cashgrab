@@ -24,11 +24,11 @@ execute if entity @s[scores={rc_steps_remaining=..0}] run return 0
 
 # =============================
 # Terrain hit detection
-$execute store result score @s col_terrain run function cashgrab:util/pe_col_detect_terrain {delta_x:$(delta_x),delta_y:$(delta_y),delta_z:$(delta_z),col_terrain_allowed:"$(col_terrain_allowed)"}
+$execute store result score @s col_terrain run function cashgrab:util/npe_col_detect_terrain {delta_x:$(delta_x),delta_y:$(delta_y),delta_z:$(delta_z),col_terrain_allowed:"$(col_terrain_allowed)"}
 
 # After colliding with terrain, attempt to fit a player if enabled
 scoreboard players set @s temp_A 0
-execute if entity @s[scores={col_terrain=1..,rc_fit_player=1..}] store result score @s temp_A run function cashgrab:base/pe_raycast_fit_player with storage cashgrab:rc_args data
+execute if entity @s[scores={col_terrain=1..,rc_fit_player=1..}] store result score @s temp_A run function cashgrab:base/npe_raycast_fit_player with storage cashgrab:rc_args data
 
 #tellraw @s[tag=t_debug,scores={col_terrain=1..}] [{"type":"text","text":"pe_raycast_loop temp_A: "},{"type":"score","score":{"name":"@s","objective":"temp_A"}}]
 #tellraw @s[tag=t_debug,scores={col_terrain=1..}] [{"type":"text","text":"pe_raycast_loop rc_steps_remaining: "},{"type":"score","score":{"name":"@s","objective":"rc_steps_remaining"}}]

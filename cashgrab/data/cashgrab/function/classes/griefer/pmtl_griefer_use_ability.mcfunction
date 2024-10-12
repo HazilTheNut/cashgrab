@@ -1,8 +1,10 @@
-# classes/griefer/pe_use_ability.mcfunction
+# classes/griefer/pmtl_griefer_use_ability.mcfunction
 #
 # Context:
-#	as: an entity with class = 1
-#	at: the entity
+#	as: a Player Monitor (pm) marker
+#	+ the owner of the pm is tagged with t_pm_owner
+#	at: the owner's position
+#	rotated: as the owner
 #
 # Summary: Uses Crash Landing ability
 #
@@ -19,9 +21,9 @@
 #	cv_H	:	Creeper fuse timer
 
 
-scoreboard players set @s cv_A 1
-scoreboard players set @s cv_B 7
+scoreboard players set @a[tag=t_pm_owner,limit=1] cv_A 1
+scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 7
 
-effect give @s minecraft:levitation 1 35 true
+effect give @a[tag=t_pm_owner,limit=1] minecraft:levitation 1 35 true
 
 playsound minecraft:entity.firework_rocket.launch player @a ~ ~ ~ 3.0 1.0

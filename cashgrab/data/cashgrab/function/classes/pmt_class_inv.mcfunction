@@ -10,7 +10,7 @@
 
 execute if score DEVELOPER_MODE num matches 1 if entity @a[tag=t_pm_owner,scores={class=-10}] run function cashgrab:classes/mapmaker/pmt_mapmaker_inv
 
-#execute if entity @a[tag=t_pm_owner,scores={class=1}] run function cashgrab:classes/griefer/pmt_griefer_inv
+execute if entity @a[tag=t_pm_owner,scores={class=1}] run function cashgrab:classes/griefer/pmt_griefer_inv
 #execute if entity @a[tag=t_pm_owner,scores={class=2}] run function cashgrab:classes/skirmisher/pmt_skirmisher_inv
 #execute if entity @a[tag=t_pm_owner,scores={class=3}] run function cashgrab:classes/spectre/pmt_spectre_inv
 #execute if entity @a[tag=t_pm_owner,scores={class=4}] run function cashgrab:classes/ranger/pmt_ranger_inv

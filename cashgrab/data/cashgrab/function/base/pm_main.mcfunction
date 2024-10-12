@@ -48,9 +48,10 @@ execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches
 tag @a[tag=t_pm_owner,tag=t_died,scores={stat_alive_ticks=1..}] remove t_died
 
 # =============================
-# Collect player data
+# General functions ran prior to processing activity state
 
 function cashgrab:base/pmt_player_state
+execute at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function cashgrab:base/pmtl_ability
 
 # =============================
 # Player activity_state handling
@@ -75,13 +76,12 @@ scoreboard players set @a[tag=t_pm_owner,scores={activity_state=21}] trinket_cha
 scoreboard players set @a[tag=t_pm_owner,scores={activity_state=21}] activity_state 20
 
 #	activity_state 20	=	Gameplay
-execute at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] anchored eyes run function cashgrab:classes/pmtl_class_loop
+execute at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function cashgrab:classes/pmtl_class_loop
 #execute as @a at @s run function cashgrab:base/pmtl_trinket
 
 # =============================
 # activity_state irrespective operations
 
-execute at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] anchored eyes run function cashgrab:base/pmtl_ability
 execute at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function cashgrab:base/pmtl_coins
 function cashgrab:base/pmt_scoring
 

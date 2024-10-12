@@ -10,5 +10,5 @@
 #	eid	: EID to search for
 
 # Remove tag in case 
-tag @a remove t_eid_matches
-$tag @a[scores={eid_self=$(eid),eid_state=1..}] add t_eid_matches
+tag @e remove t_eid_matches
+$tag @e[scores={eid_self=$(eid),eid_state=1..}] add t_eid_matches
