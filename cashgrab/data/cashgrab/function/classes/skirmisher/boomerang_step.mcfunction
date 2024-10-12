@@ -28,7 +28,10 @@ tag @s[scores={cv_E=1,cv_H=70}] add t_boomerang_begin_return
 tag @s[scores={cv_E=2,cv_H=40}] add t_boomerang_returning
 tag @s[scores={cv_E=2,cv_H=40}] add t_boomerang_begin_return
 
-function coinwars:util/pe_eid_find_owner
+# Find owner and tag them with t_boomerang_owner
+execute store result storage cashgrab:find_eid_args eid int 1 run scoreboard players get @s eid_owner
+function cashgrab:util/find_eid_self with storage cashgrab:find_eid_args
+tag @a[tag=t_eid_matches,limit=1] add t_boomerang_owner
 
 scoreboard players add @s cv_F 1
 scoreboard players set @s[scores={cv_F=4..}] cv_F 0
@@ -48,8 +51,8 @@ execute if entity @s[scores={cv_H=12..},tag=!t_boomerang_returning] run tag @s a
 
 # Reorient boomerang and track onto owner
 execute if entity @s[tag=t_boomerang_begin_return] run data merge entity @s \
-{data:{f_speed_mpt:0.75f,func_entity_filter:"coinwars:util/pe_col_entity_filter_owner",f_tracking_scalar:0.95f,func_tracking_filter:"coinwars:util/pe_col_entity_filter_owner"}}
-execute if entity @s[tag=t_boomerang_begin_return] facing entity @e[scores={eid_compare=0}] eyes run function coinwars:util/pe_calc_facing_vector {magnitude:1.0f}
+{data:{f_speed_mpt:0.75f,func_entity_filter:"cashgrab:util/npe_col_entity_filter_owner",f_tracking_scalar:0.95f,func_tracking_filter:"cashgrab:util/npe_col_entity_filter_owner"}}
+execute if entity @s[tag=t_boomerang_begin_return] facing entity @a[tag=t_eid_matches,limit=1] eyes run function cashgrab:util/npe_calc_facing_vector {magnitude:1.0f}
 # Direction towards owner now stored on facing_vector_yaw_mdeg and facing_vector_pitch_mdeg
 execute if entity @s[tag=t_boomerang_begin_return] run scoreboard players operation @s mis_func_step_dyaw_mdeg = @s facing_vector_yaw_mdeg
 execute if entity @s[tag=t_boomerang_begin_return] run scoreboard players operation @s mis_func_step_dpitch_mdeg = @s facing_vector_pitch_mdeg
@@ -60,22 +63,32 @@ execute if entity @s[tag=t_boomerang_begin_return] store result score @s facing_
 execute if entity @s[tag=t_boomerang_begin_return] run scoreboard players operation @s mis_func_step_dyaw_mdeg -= @s facing_vector_yaw_mdeg
 execute if entity @s[tag=t_boomerang_begin_return] run scoreboard players operation @s mis_func_step_dpitch_mdeg -= @s facing_vector_pitch_mdeg
 
+# On starting return, enable tracking and recalculate
 tag @s[tag=t_boomerang_begin_return] add t_missile_has_tracking
 tag @s[tag=t_boomerang_begin_return] add t_missile_calc_tracking
 tag @s remove t_boomerang_begin_return
 
-# Damage enemies nearby
-execute store result score @s temp_A run function coinwars:util/pe_col_detect_entity {func_entity_filter:"coinwars:util/pe_col_entity_filter_hostile"}
-execute if score @s temp_A matches 1 run tag @s add t_dmg_src
-execute if score @s temp_A matches 1 if score @s cv_E matches 1 as @e[tag=t_collision_found] run damage @s 6.0 minecraft:player_attack by @e[scores={eid_compare=0},limit=1] from @e[tag=t_dmg_src,limit=1]
-execute if score @s temp_A matches 1 if score @s cv_E matches 2 as @e[tag=t_collision_found] run damage @s 4.0 minecraft:player_attack by @e[scores={eid_compare=0},limit=1] from @e[tag=t_dmg_src,limit=1]
-execute if score @s temp_A matches 1 run tag @s remove t_dmg_src
-tag @e remove t_collision_found
+# --- Damage enemies that collide with boomerang
+execute store result score @s temp_A run function cashgrab:util/npe_col_detect_entity {func_entity_filter:"cashgrab:util/npe_col_entity_filter_hostile"}
 
-# Make the item display spin
-function coinwars:util/pe_eid_find_subs
+# Load args based on weapon type
+execute if score @s temp_A matches 1 if score @s cv_E matches 1 run data merge storage cashgrab:boomerang_dmg_args \
+{d_dmg_amount:6.0,s_dmg_type:"minecraft:player_attack",t_dmg_target:"t_collision_found",t_dmg_by:"t_dmg_by",t_dmg_from:"t_dmg_from",b_remove_tags:1}
+execute if score @s temp_A matches 1 if score @s cv_E matches 2 run data merge storage cashgrab:boomerang_dmg_args \
+{d_dmg_amount:6.0,s_dmg_type:"minecraft:player_attack",t_dmg_target:"t_collision_found",t_dmg_by:"t_dmg_by",t_dmg_from:"t_dmg_from",b_remove_tags:1}
+
+execute if score @s temp_A matches 1 run tag @s add t_dmg_by
+execute if score @s temp_A matches 1 run tag @a[tag=t_boomerang_owner] add t_dmg_from
+
+execute if score @s temp_A matches 1 run function cashgrab:util/npe_dmg with storage cashgrab:boomerang_dmg_args
+
+# t_boomerang_owner no longer in use
+tag @a[tag=t_boomerang_owner] remove t_boomerang_owner
+
+# --- Make the item display spin
+function cashgrab:util/npe_eid_find_subs
 scoreboard players add @e[scores={eid_compare=0}] cv_G 57
 scoreboard players remove @e[scores={eid_compare=0,cv_G=360..}] cv_G 360
 execute as @e[scores={eid_compare=0}] store result entity @s Rotation[0] float 1 run scoreboard players get @s cv_G
-execute if block ~ ~-0.3 ~ #coinwars:partialsolid run tp @e[scores={eid_compare=0}] ~ ~-0.3 ~
-execute unless block ~ ~-0.3 ~ #coinwars:partialsolid run tp @e[scores={eid_compare=0}] ~ ~ ~
+execute if block ~ ~-0.3 ~ #cashgrab:partialsolid run tp @e[scores={eid_compare=0}] ~ ~-0.3 ~
+execute unless block ~ ~-0.3 ~ #cashgrab:partialsolid run tp @e[scores={eid_compare=0}] ~ ~ ~

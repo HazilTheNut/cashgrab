@@ -39,7 +39,7 @@ effect clear @a[tag=t_pm_owner]
 execute if score DEVELOPER_MODE num matches 1 if entity @a[tag=t_pm_owner,scores={class=-10}] run function cashgrab:classes/mapmaker/pmt_mapmaker_init
 
 execute if entity @a[tag=t_pm_owner,scores={class=1}] run function cashgrab:classes/griefer/pmt_griefer_init
-#execute if entity @a[tag=t_pm_owner,scores={class=2}] run function cashgrab:classes/skirmisher/pmt_skirmisher_init
+execute if entity @a[tag=t_pm_owner,scores={class=2}] run function cashgrab:classes/skirmisher/pmt_skirmisher_init
 #execute if entity @a[tag=t_pm_owner,scores={class=3}] run function cashgrab:classes/spectre/pmt_spectre_init
 #execute if entity @a[tag=t_pm_owner,scores={class=4}] run function cashgrab:classes/ranger/pmt_ranger_init
 #execute if entity @a[tag=t_pm_owner,scores={class=5}] run function cashgrab:classes/artillery/pmt_artillery_init
@@ -49,4 +49,4 @@ execute if entity @a[tag=t_pm_owner,scores={class=1}] run function cashgrab:clas
 #execute if entity @a[tag=t_pm_owner,scores={class=9}] run function cashgrab:classes/alchemist/pmt_alchemist_init
 #execute if entity @a[tag=t_pm_owner,scores={class=10}] run function cashgrab:classes/chronomancer/pmt_chronomancer_init
 
-function cashgrab:base/pmt_refresh_inv
+function cashgrab:base/pmt_inv_refresh

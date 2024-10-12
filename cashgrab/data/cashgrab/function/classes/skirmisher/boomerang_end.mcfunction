@@ -13,7 +13,7 @@
 # Class variable usage:
 #	cv_A	:	Held item: 0 = neither sword, 1 = Cleaving Cutlass, 2 = Dancing Rapier
 #	cv_B	:	Item config: 0 = has both, 1 = only Cleaving Cutlass, 2 = only Dancing Rapier
-#	cv_C	:	
+#	cv_C	:	If 1, refresh inventory
 #	cv_D	:	
 #	cv_E	:	Boomerang type: 1 = Cleaving Cutlass, 2 = Dancing Rapier
 #	cv_F	:	Boomerang missile particle display timer
@@ -21,7 +21,7 @@
 #	cv_H	:	Boomerang life timer (counts upwards instead of downwards for more readable code)
 
 # Desstroy item display
-function coinwars:util/pe_eid_find_subs
+function cashgrab:util/npe_eid_find_subs
 tag @e[scores={eid_compare=0}] add t_kill
 scoreboard players reset @e[tag=t_kill]
 kill @e[tag=t_kill]
@@ -45,5 +45,7 @@ scoreboard players set @e[tag=t_collision_found,limit=1,sort=nearest,scores={abi
 scoreboard players remove @e[tag=t_collision_found,limit=1,sort=nearest,scores={ability_cd_ticks=101..}] ability_cd_ticks 100
 scoreboard players set @e[tag=t_collision_found,limit=1,sort=nearest] cv_B 0
 
-execute as @e[tag=t_collision_found,limit=1,sort=nearest] run function coinwars:base/pe_refresh_inv
+# Refresh inventory
+scoreboard players set @e[tag=t_collision_found,limit=1,sort=nearest] cv_C 1
+
 effect give @e[tag=t_collision_found,limit=1,sort=nearest] minecraft:speed 3 1

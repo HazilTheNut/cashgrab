@@ -16,8 +16,8 @@ item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_C=..0}] hotbar.1 with m
 minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Use]\"},{\"color\":\"white\",\"text\":\" Creeper in a Bottle\"}]",\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Releases an ignited creeper.\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"WARNING: You are not immune to\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\" its explosive damage.\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\"You take reduced damage from\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\" your creeper explosions.\"}",\
 "{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"=====\"}",\
 "[{\"color\":\"yellow\",\"italic\":false,\"text\":\"8\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown\"}]"\
 ]\

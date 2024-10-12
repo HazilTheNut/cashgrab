@@ -1,14 +1,15 @@
-# classes/skirmisher/pe_ability_icon.mcfunction
+# classes/skirmisher/pmt_skirmisher_inv_ability_icon.mcfunction
 #
 # Context:
-#	as: an entity with class = 2
+#	as: a Player Monitor (pm) marker
+#	+ the owner of the pm is tagged with t_pm_owner
 #
 # Summary: Inserts equipped class ability icon into hotbar slot 4
 #
 # Arguments:
 #	charges		: Number of charges of ability
 
-$item replace entity @s hotbar.4 with minecraft:string[\
+$item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:string[\
 minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Sword Boomerang\"}]",\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Throws out your held sword\"}",\

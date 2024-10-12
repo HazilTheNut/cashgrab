@@ -21,8 +21,13 @@
 
 scoreboard players set @s cv_E 1
 
+# Generate item display entity
 summon minecraft:item_display ~ ~ ~ {item:{id:"minecraft:iron_sword",Count:1b},Tags:["t_boomerang_itemdisp_init"],Rotation:[0.0f,90.0f]}
-execute as @e[type=minecraft:item_display,tag=t_boomerang_itemdisp_init] run function coinwars:util/pe_eid_acquire
+execute as @e[type=minecraft:item_display,tag=t_boomerang_itemdisp_init] run function cashgrab:util/npe_eid_acquire
+
+# Set my owner to player who created missile
+scoreboard players operation @s eid_owner = @a[tag=t_pm_owner,limit=1] eid_self
+# Set item display's owner to be this missile
 scoreboard players operation @e[type=minecraft:item_display,tag=t_boomerang_itemdisp_init] eid_owner = @s eid_self
 
 #tellraw @a[tag=t_debug] [{"text":"my eid_self "},{"score":{"name":"@s","objective":"eid_self"}},{"text":" disp eid_owner "},{"score":{"name":"@e[type=minecraft:item_display,tag=t_boomerang_itemdisp_init]","objective":"eid_owner"}}]
