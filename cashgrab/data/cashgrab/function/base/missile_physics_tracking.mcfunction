@@ -19,7 +19,7 @@ scoreboard players operation @s[tag=t_missile_calc_tracking] mis_tracking_min_an
 tag @s remove t_missile_calc_tracking
 
 # Calculate yaw and pitch of direction facing towards tracking target
-execute facing entity @e[tag=t_collision_candidate,tag=!t_do_not_track,limit=1,sort=nearest] eyes run function cashgrab:util/npe_calc_facing_vector {magnitude:1.0f}
+execute facing entity @e[tag=t_collision_candidate,tag=!t_tracking_ignore,limit=1,sort=nearest] eyes run function cashgrab:util/npe_calc_facing_vector {magnitude:1.0f}
 scoreboard players operation @s mis_tracking_dyaw_mdeg = @s facing_vector_yaw_mdeg
 scoreboard players operation @s mis_tracking_dpitch_mdeg = @s facing_vector_pitch_mdeg
 
