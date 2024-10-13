@@ -14,7 +14,7 @@ execute if score DEVELOPER_MODE num matches 1 if entity @a[tag=t_pm_owner,scores
 
 execute if entity @a[tag=t_pm_owner,scores={class=1}] run return run function cashgrab:classes/griefer/pmtl_griefer_loop
 execute if entity @a[tag=t_pm_owner,scores={class=2}] run return run function cashgrab:classes/skirmisher/pmtl_skirmisher_loop
-#execute if entity @a[tag=t_pm_owner,scores={class=3}] run return run function cashgrab:classes/spectre/pmtl_spectre_loop
+execute if entity @a[tag=t_pm_owner,scores={class=3}] run return run function cashgrab:classes/spectre/pmtl_spectre_loop
 #execute if entity @a[tag=t_pm_owner,scores={class=4}] run return run function cashgrab:classes/ranger/pmtl_ranger_loop
 #execute if entity @a[tag=t_pm_owner,scores={class=5}] run return run function cashgrab:classes/artillery/pmtl_artillery_loop
 #execute if entity @a[tag=t_pm_owner,scores={class=6}] run return run function cashgrab:classes/champion/pmtl_champion_loop

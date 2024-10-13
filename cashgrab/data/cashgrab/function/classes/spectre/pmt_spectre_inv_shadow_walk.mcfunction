@@ -1,7 +1,8 @@
-# classes/spectre/pe_display_shadow_walk.mcfunction
+# classes/spectre/pmt_spectre_inv_shadow_walk.mcfunction
 #
 # Context:
-#	as: an entity with class = 3
+#	as: a Player Monitor (pm) marker
+#	+ the owner of the pm is tagged with t_pm_owner
 #
 # Summary: Populates inventory for the Spectre class based on their current state
 #
@@ -18,7 +19,7 @@
 #	cv_G	:	
 #	cv_H	:	
 
-$item replace entity @s hotbar.5 with minecraft:gunpowder[\
+$item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:gunpowder[\
 minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Crouch]\"},{\"color\":\"white\",\"text\":\" Shadow Walk\"}]",\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Turns you invisible while\"}",\
