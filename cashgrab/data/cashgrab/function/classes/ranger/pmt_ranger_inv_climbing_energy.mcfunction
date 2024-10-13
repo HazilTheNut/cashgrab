@@ -1,7 +1,8 @@
-# classes/ranger/pe_display_climbing_energy.mcfunction
+# classes/ranger/pmt_ranger_inv_climbing_energy.mcfunction
 #
 # Context:
-#	as: an entity with class = 4
+#	as: a Player Monitor (pm) marker
+#	+ the owner of the pm is tagged with t_pm_owner
 #
 # Summary: Populates inventory for the Ranger class based on their current state
 #
@@ -18,7 +19,7 @@
 #	cv_G	:	
 #	cv_H	:	
 
-$item replace entity @s hotbar.5 with minecraft:kelp[\
+$item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:kelp[\
 minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Crouch]\"},{\"color\":\"white\",\"text\":\" Climbing Energy\"}]",\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"While facing a wall, uses\"}",\
