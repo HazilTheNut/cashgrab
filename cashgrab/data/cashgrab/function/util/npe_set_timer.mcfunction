@@ -17,7 +17,7 @@
 
 $summon minecraft:marker ~ ~ ~ {data:{func_step:"$(func_step)",func_end:"$(func_end)"},Tags:["t_timer_init"]}
 
-execute as @e[type=minecraft:marker,limit=1,tag=t_timer_init] run function coinwars:util/pe_eid_acquire
+execute as @e[type=minecraft:marker,limit=1,tag=t_timer_init] run function cashgrab:util/npe_eid_acquire
 
 scoreboard players operation @e[type=minecraft:marker,limit=1,tag=t_timer_init] team_id = @s team_id
 scoreboard players operation @e[type=minecraft:marker,limit=1,tag=t_timer_init] eid_owner = @s eid_self
