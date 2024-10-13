@@ -30,10 +30,21 @@ particle minecraft:lava ~ ~ ~ 2 0.2 2 0 10 force
 particle minecraft:flame ~ ~ ~ 2 0.2 2 0 10 force
 playsound minecraft:entity.generic.explode player @a ~ ~ ~ 3.0 0.9
 
-function coinwars:util/pe_col_entity_filter_hostile
-function coinwars:util/pe_eid_find_owner
-tag @e[scores={eid_compare=0}] add t_dmg_src
-tag @s add t_dmg_loc
-execute as @e[tag=t_collision_candidate,distance=..4] run damage @s 6.0 minecraft:fireball by @e[tag=t_dmg_src,limit=1,sort=nearest] from @e[tag=t_dmg_loc,limit=1,sort=nearest]
-tag @e[scores={eid_compare=0}] remove t_dmg_src
-tag @s remove t_dmg_loc
+# Tag owner with t_eid_matches
+execute store result storage cashgrab:find_eid_args eid int 1 run scoreboard players get @s eid_owner
+function cashgrab:util/find_eid_self with storage cashgrab:find_eid_args
+
+# Tag relevant entities
+tag @s add t_dmg_by
+tag @a[tag=t_eid_matches,limit=1] add t_dmg_from
+function cashgrab:util/npe_col_entity_filter_hostile
+tag @e[tag=t_collision_candidate,distance=..4] add t_dmg_trgt
+
+# Apply damage
+function cashgrab:util/npe_dmg {\
+d_dmg_amount:6.0,\
+s_dmg_type:"minecraft:fireball",\
+t_dmg_target:"t_dmg_trgt",\
+t_dmg_by:"t_dmg_by",\
+t_dmg_from:"t_dmg_from",\
+b_remove_tags:1}

@@ -9,8 +9,8 @@
 #	d_dmg_amount		: Amount of damage dealt
 #	s_dmg_type			: Resource locator to type of damage dealt
 #	t_dmg_target		: Entities tagged with this will take damage
-#	t_dmg_by			: Entity tagged with this is responsible for dealing the damage
-#	t_dmg_from			: Entity tagged with this is from where the damage was dealt
+#	t_dmg_by			: Entity tagged with this is who/what dealt the damage
+#	t_dmg_from			: Entity tagged with this is responsible for dealing the damage
 
 # Find owner
 execute store result storage cashgrab:find_eid_args eid int 1 run scoreboard players get @s eid_owner

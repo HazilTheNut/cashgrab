@@ -11,8 +11,8 @@
 #	d_dmg_amount		: Amount of damage dealt
 #	s_dmg_type			: Resource locator to type of damage dealt
 #	t_dmg_target		: Entities tagged with this will take damage
-#	t_dmg_by			: Entity tagged with this is responsible for dealing the damage
-#	t_dmg_from			: Entity tagged with this is from where the damage was dealt
+#	t_dmg_by			: Entity tagged with this is who/what dealt the damage
+#	t_dmg_from			: Entity tagged with this is responsible for dealing the damage
 #	b_remove_tags		: If nonzero, remove t_dmg_target, t_dmg_by, and t_dmg_from tags afterwards
 
 # Damage nonplayers tagged with t_dmg_target
