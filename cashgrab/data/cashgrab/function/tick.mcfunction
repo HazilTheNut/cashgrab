@@ -71,6 +71,11 @@ execute as @e[type=minecraft:arrow,nbt={inGround:1b}] at @s run particle minecra
 kill @e[type=minecraft:arrow,nbt={inGround:1b}]
 
 # =============================
+# Grab mechanics
+
+execute as @e[type=!minecraft:player,scores={eid_state=1..}] run function cashgrab:base/npe_grab
+
+# =============================
 # Team game completion detection
 execute if score NUM_GAMESTATE num matches 2 run scoreboard players operation RED_TEAM __coins_score = RED_TEAM coins
 execute if score NUM_GAMESTATE num matches 2 run scoreboard players operation BLUE_TEAM __coins_score = BLUE_TEAM coins

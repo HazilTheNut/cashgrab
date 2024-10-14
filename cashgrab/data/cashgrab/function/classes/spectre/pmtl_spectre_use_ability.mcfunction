@@ -31,3 +31,6 @@ func_entity_filter:"cashgrab:util/npe_col_entity_filter_none",\
 func_step:"cashgrab:util/dummy",\
 func_end:"cashgrab:classes/spectre/pmtl_blink_end",\
 }
+
+# Release player if they were grabbed
+tag @a[tag=t_pm_owner,limit=1] add t_grab_release

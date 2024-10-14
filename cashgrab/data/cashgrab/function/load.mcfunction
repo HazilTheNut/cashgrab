@@ -93,6 +93,8 @@ scoreboard objectives add eid_compare dummy
 # Used for issuing EIDs to players
 scoreboard objectives add __eid_prev dummy
 
+
+
 # Entity state regarding its EID:
 #	eid_state == 0	:	Entity does not have a valid EID
 #	eid_state == 1	:	Entity has a valid self EID
@@ -305,6 +307,21 @@ scoreboard objectives add __coinplate_timer_ticks dummy
 scoreboard objectives add __coinshower_coins dummy
 scoreboard objectives add __coinshower_timer_ticks dummy
 scoreboard objectives add __coinshower_period_ticks dummy
+
+# =============================
+# Values used for grab mechanics
+
+# EID of entity grabbing this entity
+#	Grabbed entities will be constantly teleported to the grabber and have no gravity
+#	If the grabbed entity has the tag t_grab_release, grab ends
+#		and this value is set back to zero.
+scoreboard objectives add eid_grabbed_by dummy
+
+# 	-1 = Transition from TRUE to FALSE
+# 	0 = FALSE
+# 	1 = TRUE
+# 	2 = Transition from FALSE to TRUE
+scoreboard objectives add grab_state dummy
 
 # =============================
 # Values used for stasis

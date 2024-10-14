@@ -27,3 +27,6 @@ scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 7
 effect give @a[tag=t_pm_owner,limit=1] minecraft:levitation 1 35 true
 
 playsound minecraft:entity.firework_rocket.launch player @a ~ ~ ~ 3.0 1.0
+
+# Release player if they were grabbed
+tag @a[tag=t_pm_owner,limit=1] add t_grab_release

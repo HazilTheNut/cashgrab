@@ -2,6 +2,7 @@
 #
 # Context:
 #	as: a nonplayer entity
+#	at: the entity
 #
 # Summary: Generates a missile
 #

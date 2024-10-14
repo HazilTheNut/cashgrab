@@ -51,6 +51,7 @@ b_assign_as_peer:0,\
 # This allows for the missile to destruct itself if the entity it is pulling either dies or exits the game
 # 	handled by the underlying framework entity ownership system
 scoreboard players operation @e[tag=t_titan_missile_init,limit=1,sort=nearest] eid_owner = @e[tag=t_collision_found,limit=1] eid_self
+scoreboard players operation @e[tag=t_collision_found,limit=1] eid_grabbed_by = @e[tag=t_titan_missile_init,limit=1,sort=nearest] eid_self
 
 scoreboard players operation @e[tag=t_titan_missile_init,limit=1,sort=nearest] mis_lifetime_ticks -= @s rc_steps_remaining
 scoreboard players remove @e[tag=t_titan_missile_init,limit=1,sort=nearest] mis_lifetime_ticks 3

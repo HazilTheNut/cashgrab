@@ -37,6 +37,7 @@ execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches
 execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches 1.. run scoreboard players set @a[tag=t_player_initialize] activity_state 11
 
 # Initialize player scoreboard values
+scoreboard players set @a[tag=t_player_initialize,limit=1] eid_grabbed_by 0
 scoreboard players set @a[tag=t_player_initialize,limit=1] eid_state 2
 scoreboard players set @a[tag=t_player_initialize,limit=1] team_id 0
 scoreboard players set @a[tag=t_player_initialize,limit=1] coins 0

@@ -85,6 +85,8 @@ execute at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function cashgra
 execute at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function cashgrab:base/pmtl_coins
 function cashgrab:base/pmt_scoring
 
+function cashgrab:base/pm_grab
+
 # =============================
 # End of pm_main
 tag @a[tag=t_pm_owner] remove t_pm_owner

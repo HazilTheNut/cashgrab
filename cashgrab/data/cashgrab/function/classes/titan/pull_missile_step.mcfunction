@@ -25,10 +25,7 @@ particle minecraft:cloud ~ ~ ~ 0 0 0 0 1
 execute store result storage cashgrab:find_eid_args eid int 1 run scoreboard players get @s eid_owner
 function cashgrab:util/find_eid_self with storage cashgrab:find_eid_args
 
+# If owner is missing or takes damage, clean up and release grab
+execute unless entity @e[tag=t_eid_matches] run tag @s add t_cleanup
 execute if entity @e[scores={ev_dmg_taken=1..},tag=t_eid_matches] run tag @s add t_cleanup
-execute if entity @s[tag=t_cleanup] run return 0
-
-#execute as @e[scores={eid_compare=0}] at @s run particle minecraft:crit ~ ~ ~ 1 1 1 0 10
-#effect give @e[scores={eid_compare=0}] minecraft:levitation 1 255
-attribute @n[tag=t_eid_matches] minecraft:generic.gravity base set 0
-execute rotated as @n[tag=t_eid_matches] run tp @n[tag=t_eid_matches] ~ ~-0.75 ~ ~ ~
+execute if entity @e[scores={ev_dmg_taken=1..},tag=t_eid_matches] run tag @e[tag=t_eid_matches] add t_grab_release

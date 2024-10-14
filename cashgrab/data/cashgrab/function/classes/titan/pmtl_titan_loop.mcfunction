@@ -26,7 +26,7 @@ i_range_m:8,\
 i_origin_loc:0,\
 col_terrain_allowed:"#cashgrab:partialsolid",\
 b_fit_player:0,\
-func_entity_filter:"cashgrab:util/npe_col_entity_filter_hostile",\
+func_entity_filter:"cashgrab:classes/titan/npe_col_entity_filter_hostile_hurt",\
 func_step:"cashgrab:util/dummy",\
 func_end:"cashgrab:classes/titan/power_strike_raycast_end",\
 }
