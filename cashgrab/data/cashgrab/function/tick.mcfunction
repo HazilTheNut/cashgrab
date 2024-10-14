@@ -73,7 +73,7 @@ kill @e[type=minecraft:arrow,nbt={inGround:1b}]
 # =============================
 # Grab mechanics
 
-execute as @e[type=!minecraft:player,scores={eid_state=1..}] run function cashgrab:base/npe_grab
+execute as @e[type=!minecraft:player,scores={eid_state=2}] run function cashgrab:base/npe_grab
 
 # =============================
 # Team game completion detection

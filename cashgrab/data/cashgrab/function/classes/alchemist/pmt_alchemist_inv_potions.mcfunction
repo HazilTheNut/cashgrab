@@ -1,8 +1,10 @@
 # classes/alchemist/grant_potions.mcfunction
 #
 # Context:
-#	as: an entity with class = 9
-#	at: the entity
+#	as: a Player Monitor (pm) marker
+#	+ the owner of the pm is tagged with t_pm_owner
+#	at: the owner's position
+#	rotated: as the owner
 #
 # Summary: Grants potions to command executor based on what they should have
 #
@@ -19,7 +21,7 @@
 #	cv_H	:	
 
 # Caustic Brew
-execute if score @s cv_A matches 1.. run item replace entity @s hotbar.1 with minecraft:splash_potion[\
+execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 1.. run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.1 with minecraft:splash_potion[\
 minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Use]\"},{\"color\":\"white\",\"text\":\" Caustic Brew\"}]",\
 minecraft:enchantment_glint_override=true,\
 minecraft:potion_contents={custom_color:7206301,custom_effects:[\
@@ -29,7 +31,7 @@ minecraft:potion_contents={custom_color:7206301,custom_effects:[\
 ]}]
 
 # Booster Brew
-execute if score @s cv_B matches 1.. run item replace entity @s hotbar.2 with minecraft:potion[\
+execute if score @a[tag=t_pm_owner,limit=1] cv_B matches 1.. run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.2 with minecraft:potion[\
 minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Use]\"},{\"color\":\"white\",\"text\":\" Booster Brew\"}]",\
 minecraft:enchantment_glint_override=true,\
 minecraft:potion_contents={custom_color:15758261,custom_effects:[\

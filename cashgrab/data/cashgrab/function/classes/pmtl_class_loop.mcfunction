@@ -20,5 +20,5 @@ execute if entity @a[tag=t_pm_owner,scores={class=5}] run return run function ca
 execute if entity @a[tag=t_pm_owner,scores={class=6}] run return run function cashgrab:classes/champion/pmtl_champion_loop
 execute if entity @a[tag=t_pm_owner,scores={class=7}] run return run function cashgrab:classes/frostknight/pmtl_frostknight_loop
 execute if entity @a[tag=t_pm_owner,scores={class=8}] run return run function cashgrab:classes/titan/pmtl_titan_loop
-#execute if entity @a[tag=t_pm_owner,scores={class=9}] run return run function cashgrab:classes/alchemist/pmtl_alchemist_loop
+execute if entity @a[tag=t_pm_owner,scores={class=9}] run return run function cashgrab:classes/alchemist/pmtl_alchemist_loop
 #execute if entity @a[tag=t_pm_owner,scores={class=10}] run return run function cashgrab:classes/chronomancer/pmtl_chronomancer_loop

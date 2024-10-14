@@ -1,8 +1,10 @@
 # classes/alchemist/pe_use_ability.mcfunction
 #
 # Context:
-#	as: an entity with class = 9
-#	at: the entity
+#	as: a Player Monitor (pm) marker
+#	+ the owner of the pm is tagged with t_pm_owner
+#	at: the owner's position
+#	rotated: as the owner
 #
 # Summary: Uses command executor's equipped class ability
 #
@@ -20,7 +22,7 @@
 
 playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 0.5 1.5
 
-function coinwars:util/pe_create_missile {\
+function cashgrab:util/npe_create_missile {\
 f_speed_mpt:0.7f,\
 i_lifetime_ticks:200,\
 i_range_m:10,\
@@ -29,10 +31,11 @@ i_gravity_vy_mmpt:75,\
 i_gravity_const_mmpt2:20,\
 f_tracking_scalar:0,\
 t_missile_name:"t_alchemist_flametrap_missile",\
-col_terrain_allowed:"#coinwars:nonsolid",\
-func_entity_filter:"coinwars:util/pe_col_entity_filter_none",\
-func_tracking_filter:"coinwars:util/dummy",\
-func_start:"coinwars:util/dummy",\
-func_step:"coinwars:classes/alchemist/flametrap_missile_step",\
-func_end:"coinwars:classes/alchemist/flametrap_missile_end",\
+col_terrain_allowed:"#cashgrab:nonsolid",\
+func_entity_filter:"cashgrab:util/npe_col_entity_filter_none",\
+func_tracking_filter:"cashgrab:util/dummy",\
+func_start:"cashgrab:util/dummy",\
+func_step:"cashgrab:classes/alchemist/flametrap_missile_step",\
+func_end:"cashgrab:classes/alchemist/flametrap_missile_end",\
+b_assign_as_peer:1,\
 }

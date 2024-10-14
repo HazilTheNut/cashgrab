@@ -5,7 +5,7 @@
 #	at: the missile
 #	facing: the missile's facing direction
 #
-# Summary: Alchemist's flame trap end function
+# Summary: Alchemist's flame trap missile end function
 #
 # Arguments:
 #	end_reason	: The reason for why the end function was called (0 = cleaned up, 1 = hit block terrain, 2 = hit entity, 3 = expired)
@@ -29,15 +29,15 @@
 #	61-120	= trap is arming
 
 execute align xyz positioned ~0.5 ~0.5 ~0.5 run particle minecraft:smoke ~ ~ ~ 0.2 0.2 0.2 0 15
-execute align xyz positioned ~0.5 ~0.5 ~0.5 run function coinwars:util/pe_set_timer {\
+execute align xyz positioned ~0.5 ~0.5 ~0.5 run function cashgrab:util/npe_set_timer {\
 lifetime_ticks:120,\
 b_anchor_at_pos:1,\
 t_timer_name:"t_alchemist_flametrap_timer_init",\
-func_step:"coinwars:classes/alchemist/flametrap_timer_step",\
-func_end:"coinwars:classes/alchemist/flametrap_timer_end",\
+func_step:"cashgrab:classes/alchemist/flametrap_timer_step",\
+func_end:"cashgrab:classes/alchemist/flametrap_timer_end",\
+b_assign_as_peer:1,\
 }
 
-scoreboard players operation @e[tag=t_alchemist_flametrap_timer_init,limit=1,sort=nearest] eid_owner = @s eid_owner
 scoreboard players set @e[tag=t_alchemist_flametrap_timer_init,limit=1,sort=nearest] cv_D 2400
 tag @e[tag=t_alchemist_flametrap_timer_init,limit=1,sort=nearest] add t_alchemist_flametrap_timer
 tag @e[tag=t_alchemist_flametrap_timer_init,limit=1,sort=nearest] remove t_alchemist_flametrap_timer_init

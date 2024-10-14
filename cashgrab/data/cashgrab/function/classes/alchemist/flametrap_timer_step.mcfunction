@@ -4,7 +4,7 @@
 #	as: a timer
 #	at: the timer
 #
-# Summary: Frost Knight's glacier step function
+# Summary: Alchemist's Flame Trap timer step function
 #
 # Arguments: (none)
 
@@ -39,13 +39,13 @@ execute if score @s tmr_lifetime_ticks matches 61..120 run particle minecraft:du
 #	20-60	= trap is armed
 #		21	= trap creates a puff of smoke
 
-execute if score @s tmr_lifetime_ticks matches 21 run function coinwars:util/pe_col_entity_filter_allies
+execute if score @s tmr_lifetime_ticks matches 21 run function cashgrab:util/npe_col_entity_filter_allies
 execute if score @s tmr_lifetime_ticks matches 21 run particle minecraft:dust{color:[0.8f,0.2f,0.4f],scale:1.0} ~ ~-0.1 ~ 0.45 0.10 0.45 0 10 force @a[tag=!t_collision_candidate]
 execute if score @s tmr_lifetime_ticks matches 21 run particle minecraft:smoke ~ ~-0.1 ~ 0.45 0.10 0.45 0 10 normal @a[tag=t_collision_candidate]
 execute if score @s tmr_lifetime_ticks matches 21 run scoreboard players set @s tmr_lifetime_ticks 60
 
 # Detect nearby enemies
-execute if score @s tmr_lifetime_ticks matches 21..60 run function coinwars:util/pe_col_entity_filter_hostile
+execute if score @s tmr_lifetime_ticks matches 21..60 run function cashgrab:util/npe_col_entity_filter_hostile
 execute if score @s tmr_lifetime_ticks matches 21..60 if entity @e[distance=..2.5,tag=t_collision_candidate] run scoreboard players set @s tmr_lifetime_ticks 15
 
 # =================================
@@ -53,24 +53,8 @@ execute if score @s tmr_lifetime_ticks matches 21..60 if entity @e[distance=..2.
 #		1	= create explosion
 #		14	= trap trigger sfx and vfx
 
-execute if score @s tmr_lifetime_ticks matches 14 run function coinwars:util/pe_eid_find_owner
-execute if score @s tmr_lifetime_ticks matches 14 run particle minecraft:smoke ~ ~ ~ 0.5 0.5 0.5 0 20
-execute if score @s tmr_lifetime_ticks matches 14 run particle minecraft:flame ~ ~ ~ 0.5 0.5 0.5 0 20
-execute if score @s tmr_lifetime_ticks matches 14 run playsound minecraft:block.lever.click player @a ~ ~ ~ 0.5 1.5
-execute if score @s tmr_lifetime_ticks matches 14 as @e[scores={eid_compare=0},limit=1] at @s run playsound minecraft:block.lever.click player @s ~ ~ ~ 0.5 1.5
-execute if score @s tmr_lifetime_ticks matches 14 run tellraw @a[scores={eid_compare=0},limit=1] {"color":"green","type":"text","text":"Someone has triggered one of your Flame Traps!"}
+execute if score @s tmr_lifetime_ticks matches 14 run function cashgrab:classes/alchemist/flametrap_timer_trip
 
 execute if score @s tmr_lifetime_ticks matches 2..13 run particle minecraft:flame ~ ~ ~ 0.25 0.25 0.25 0 1
 
-execute if score @s tmr_lifetime_ticks matches 1 run function coinwars:util/pe_eid_find_owner
-execute if score @s tmr_lifetime_ticks matches 1 run particle minecraft:lava ~ ~ ~ 2.5 0.5 2.5 0 50
-execute if score @s tmr_lifetime_ticks matches 1 run particle minecraft:flame ~ ~ ~ 2.5 0.5 2.5 0 50
-execute if score @s tmr_lifetime_ticks matches 1 run playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 0.5 2.0
-execute if score @s tmr_lifetime_ticks matches 1 as @e[scores={eid_compare=0},limit=1] at @s run playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 0.5 2.0
-execute if score @s tmr_lifetime_ticks matches 1 run tag @e[scores={eid_compare=0},limit=1] add t_dmg_src
-execute if score @s tmr_lifetime_ticks matches 1 run tag @s add t_dmg_loc
-execute if score @s tmr_lifetime_ticks matches 1 run function coinwars:util/pe_col_entity_filter_hostile
-execute if score @s tmr_lifetime_ticks matches 1 as @e[tag=t_collision_candidate,distance=..4.5] run damage @s 7.0 minecraft:fireball by @e[tag=t_dmg_src,limit=1,sort=nearest] from @e[tag=t_dmg_loc,limit=1,sort=nearest]
-execute if score @s tmr_lifetime_ticks matches 1 run effect give @e[tag=t_collision_candidate,distance=..4] minecraft:glowing 10 0
-execute if score @s tmr_lifetime_ticks matches 1 run tag @e[tag=t_dmg_src] remove t_dmg_src
-execute if score @s tmr_lifetime_ticks matches 1 run tag @e[tag=t_dmg_loc] remove t_dmg_loc
+execute if score @s tmr_lifetime_ticks matches 1 run function cashgrab:classes/alchemist/flametrap_timer_explode

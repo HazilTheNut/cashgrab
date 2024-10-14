@@ -1,14 +1,15 @@
 # classes/alchemist/pe_ability_icon.mcfunction
 #
 # Context:
-#	as: an entity with class = 9
+#	as: a Player Monitor (pm) marker
+#	+ the owner of the pm is tagged with t_pm_owner
 #
 # Summary: Inserts equipped class ability icon into hotbar slot 4
 #
 # Arguments:
 #	charges		: Number of charges of ability
 
-$item replace entity @s hotbar.4 with minecraft:redstone_torch[\
+$item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:redstone_torch[\
 minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Flame Trap\"}]",\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Deploys a proximity trap that\"}",\
