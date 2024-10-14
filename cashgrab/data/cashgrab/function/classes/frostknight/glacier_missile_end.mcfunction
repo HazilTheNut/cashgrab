@@ -37,16 +37,17 @@ execute align xyz positioned ~0.5 ~0.5 ~0.5 if score @s cv_H matches 1 run fill 
 execute align xyz positioned ~0.5 ~0.5 ~0.5 if score @s cv_H matches 2 run fill ~ ~ ~ ~ ~1 ~ minecraft:packed_ice
 
 # Set glacier timer
-execute align xyz positioned ~0.5 ~0.5 ~0.5 run function coinwars:util/pe_set_timer {\
-lifetime_ticks:122,\
+execute align xyz positioned ~0.5 ~0.5 ~0.5 run function cashgrab:util/npe_set_timer {\
+lifetime_ticks:162,\
 b_anchor_at_pos:1,\
 t_timer_name:"t_frostknight_glacier_timer_init",\
-func_step:"coinwars:classes/frostknight/glacier_timer_step",\
-func_end:"coinwars:classes/frostknight/glacier_timer_end"\
+func_step:"cashgrab:classes/frostknight/glacier_timer_step",\
+func_end:"cashgrab:classes/frostknight/glacier_timer_end",\
+b_assign_as_peer:1,\
 }
 
 # Configure glacier timer
-scoreboard players operation @e[tag=t_frostknight_glacier_timer_init,limit=1,sort=nearest] eid_owner = @s eid_owner
+#scoreboard players operation @e[tag=t_frostknight_glacier_timer_init,limit=1,sort=nearest] eid_owner = @s eid_owner
 scoreboard players operation @e[tag=t_frostknight_glacier_timer_init,limit=1,sort=nearest] cv_H = @s cv_H
 tag @e[tag=t_frostknight_glacier_timer_init,limit=1,sort=nearest] add t_frostknight_glacier_timer
 tag @e[tag=t_frostknight_glacier_timer_init,limit=1,sort=nearest] remove t_frostknight_glacier_timer_init

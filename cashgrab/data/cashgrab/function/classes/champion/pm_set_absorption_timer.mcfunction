@@ -21,9 +21,9 @@ b_anchor_at_pos:0,\
 t_timer_name:"t_champion_absorption_timer_init",\
 func_step:"cashgrab:classes/champion/npe_absorption_particle_timer_step",\
 func_end:"cashgrab:util/dummy",\
+b_assign_as_peer:1,\
 }
 
 tag @e[tag=t_champion_absorption_timer_init] add t_stasis_immune
 tag @e[tag=t_champion_absorption_timer_init] add t_champion_absorption_timer
-scoreboard players operation @e[tag=t_champion_absorption_timer_init] eid_owner = @s eid_owner
 tag @e[tag=t_champion_absorption_timer_init] remove t_champion_absorption_timer_init

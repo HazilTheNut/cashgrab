@@ -25,6 +25,8 @@
 #	func_step				: Function to run as the missile every tick
 #	func_end				: Function to run as the missile when either the missile collides or expires
 #								func_end is supplied with an end_reason argument based on why func_end was called: 0 = cleaned up, 1 = hit block terrain, 2 = hit entity, 3 = expired
+#	b_assign_as_peer		: Set to nonzero to assign eid_owner to missile to be a peer to the executor rather than owned by them. 
+#								Useful for pms that call this function.
 
 summon minecraft:marker ~ ~ ~ {Tags:["t_missile_init"]}
 $scoreboard players set @s temp_A $(i_origin_loc)
@@ -52,7 +54,8 @@ tag @e[tag=t_missile_init,limit=1,sort=nearest,scores={mis_gravity_const_mmpt2=.
 $tag @e[tag=t_missile_init,limit=1,sort=nearest] add $(t_missile_name)
 
 execute as @e[tag=t_missile_init,limit=1,sort=nearest] at @s run function cashgrab:util/npe_eid_acquire
-scoreboard players operation @e[tag=t_missile_init,limit=1,sort=nearest] eid_owner = @s eid_self
+$execute if score NUM_ZERO num matches $(b_assign_as_peer) run scoreboard players operation @n[type=minecraft:marker,tag=t_missile_init] eid_owner = @s eid_self
+$execute unless score NUM_ZERO num matches $(b_assign_as_peer) run scoreboard players operation @n[type=minecraft:marker,tag=t_missile_init] eid_owner = @s eid_owner
 scoreboard players operation @e[tag=t_missile_init,limit=1,sort=nearest] team_id = @s team_id
 
 $execute as @e[tag=t_missile_init,limit=1,sort=nearest] at @s run function $(func_start)

@@ -1,14 +1,14 @@
-# classes/frostknight/pe_ability_icon.mcfunction
+# classes/frostknight/pmt_frostknight_inv_ability_icon.mcfunction
 #
 # Context:
-#	as: an entity with class = 7
-#
+#	as: a Player Monitor (pm) marker
+#	+ the owner of the pm is tagged with t_pm_owner#
 # Summary: Inserts equipped class ability icon into hotbar slot 4
 #
 # Arguments:
 #	charges		: Number of charges of ability
 
-$item replace entity @s hotbar.4 with minecraft:diamond[\
+$item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:diamond[\
 minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Glacier\"}]",\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Deploys a glacier construct\"}",\

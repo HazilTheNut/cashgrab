@@ -25,8 +25,6 @@ scoreboard players set @s cv_E 2
 summon minecraft:item_display ~ ~ ~ {item:{id:"minecraft:golden_sword",Count:1b},Tags:["t_boomerang_itemdisp_init"],Rotation:[0.0f,90.0f],Enchantments:[{id:"minecraft:knockback",lvl:1}]}
 execute as @e[type=minecraft:item_display,tag=t_boomerang_itemdisp_init] run function cashgrab:util/npe_eid_acquire
 
-# Set my owner to player who created missile
-scoreboard players operation @s eid_owner = @a[tag=t_pm_owner,limit=1] eid_self
 # Set item display's owner to be this missile
 scoreboard players operation @e[type=minecraft:item_display,tag=t_boomerang_itemdisp_init] eid_owner = @s eid_self
 

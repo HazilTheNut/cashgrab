@@ -1,4 +1,4 @@
-# classes/frostknight/glacier_missile_end.mcfunction
+# classes/frostknight/glacier_timer_end.mcfunction
 #
 # Context:
 #	as: a timer
@@ -7,7 +7,7 @@
 # Summary: Frost Knight's glacier end function
 #
 # Arguments:
-#	end_reason	: The reason for why the end function was called (0 = cleaned up, 1 = hit block terrain, 2 = hit entity, 3 = expired)
+#	end_reason	: The reason for why the end function was called (0 = cleaned up, 1 = timer expired)
 
 # Class variable usage:
 #	cv_A	:	

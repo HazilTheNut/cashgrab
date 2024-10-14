@@ -44,7 +44,8 @@ func_entity_filter:"cashgrab:util/npe_col_entity_filter_hostile",\
 func_tracking_filter:"cashgrab:util/dummy",\
 func_start:"cashgrab:util/dummy",\
 func_step:"cashgrab:classes/artillery/missile_step",\
-func_end:"cashgrab:classes/artillery/missile_end"\
+func_end:"cashgrab:classes/artillery/missile_end",\
+b_assign_as_peer:1,\
 }
 execute if entity @a[tag=t_pm_owner,limit=1,tag=t_artillery_missile_rh] run playsound minecraft:entity.firework_rocket.launch player @a ~ ~ ~ 1.0 1.25
 
@@ -63,12 +64,12 @@ func_entity_filter:"cashgrab:util/npe_col_entity_filter_hostile",\
 func_tracking_filter:"cashgrab:util/dummy",\
 func_start:"cashgrab:util/dummy",\
 func_step:"cashgrab:classes/artillery/missile_step",\
-func_end:"cashgrab:classes/artillery/missile_end"\
+func_end:"cashgrab:classes/artillery/missile_end",\
+b_assign_as_peer:1,\
 }
 execute if entity @a[tag=t_pm_owner,limit=1,tag=t_artillery_missile_lh] run playsound minecraft:entity.firework_rocket.launch player @a ~ ~ ~ 1.0 1.25
 
-# Set ownership of newly created missile
-scoreboard players operation @n[tag=t_artillery_missile_init] eid_owner = @a[tag=t_pm_owner,limit=1] eid_self
+# End missile initialization
 tag @n[tag=t_artillery_missile_init] add t_artillery_missile
 tag @n[tag=t_artillery_missile_init] remove t_artillery_missile_init
 

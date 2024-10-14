@@ -46,6 +46,7 @@ func_tracking_filter:"cashgrab:util/dummy",\
 func_start:"cashgrab:classes/skirmisher/boomerang_start_cutlass",\
 func_step:"cashgrab:classes/skirmisher/boomerang_step",\
 func_end:"cashgrab:classes/skirmisher/boomerang_end",\
+b_assign_as_peer:1,\
 }
 
 # Throw Dancing Rapier
@@ -64,5 +65,6 @@ func_tracking_filter:"cashgrab:util/dummy",\
 func_start:"cashgrab:classes/skirmisher/boomerang_start_rapier",\
 func_step:"cashgrab:classes/skirmisher/boomerang_step",\
 func_end:"cashgrab:classes/skirmisher/boomerang_end",\
+b_assign_as_peer:1,\
 }
 

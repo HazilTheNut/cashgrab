@@ -1,8 +1,10 @@
-# classes/frostknight/pe_loop.mcfunction
+# classes/frostknight/pmtl_frostknight_loop.mcfunction
 #
 # Context:
-#	as: an entity with class = 7
-#	at: the entity
+#	as: a Player Monitor (pm) marker
+#	+ the owner of the pm is tagged with t_pm_owner
+#	at: the owner's position
+#	rotated: as the owner
 #
 # Summary: Loop function for Frost Knight class
 #
