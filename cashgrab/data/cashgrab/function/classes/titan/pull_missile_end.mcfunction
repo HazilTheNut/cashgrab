@@ -20,6 +20,9 @@
 #	cv_G	:	
 #	cv_H	:	
 
-function coinwars:util/pe_eid_find_owner
-attribute @e[scores={eid_compare=0},limit=1] minecraft:generic.gravity base set 0.08
+# Find owner and tag them with t_eid_matches
+execute store result storage cashgrab:find_eid_args eid int 1 run scoreboard players get @s eid_owner
+function cashgrab:util/find_eid_self with storage cashgrab:find_eid_args
 
+# Return gravity to owner
+attribute @n[tag=t_eid_matches] minecraft:generic.gravity base set 0.08

@@ -31,7 +31,7 @@ effect give @e[tag=t_collision_candidate,distance=..5,type=!minecraft:player] mi
 execute unless score NUM_GAMESTATE num matches 2 run particle minecraft:block{block_state:"minecraft:gold_block"} ~ ~0.4 ~ 0.75 1.0 0.75 0 25
 execute if score NUM_GAMESTATE num matches 2 run particle minecraft:block{block_state:"minecraft:gold_block"} ~ ~0.4 ~ 2.5 0.1 2.5 0 50
 
-# Apply absorptoin to players
+# Apply absorption to players
 tag @a[tag=t_collision_candidate,distance=..5] add t_champion_set_absorption_timer
 execute as @e[tag=t_pm] run function cashgrab:classes/champion/pm_set_absorption_timer
 tag @a remove t_champion_set_absorption_timer

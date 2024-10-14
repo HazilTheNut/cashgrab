@@ -42,7 +42,7 @@ execute if entity @s[scores={col_terrain=1..}] run return 0
 scoreboard players set @s col_entity 0
 
 # Dummy function is ran as func_entity_filter was ran at the very beginning of raycast
-$execute if score @s col_terrain matches 0 store result score @s col_entity positioned ~$(delta_x) ~$(delta_y) ~$(delta_z) run function cashgrab:util/pe_col_detect_entity {func_entity_filter:"cashgrab:util/dummy"}
+$execute if score @s col_terrain matches 0 store result score @s col_entity positioned ~$(delta_x) ~$(delta_y) ~$(delta_z) run function cashgrab:util/npe_col_detect_entity {func_entity_filter:"cashgrab:util/dummy"}
 
 $execute if entity @s[scores={col_entity=1..}] run function $(func_end) {end_reason:2}
 execute if entity @s[scores={col_entity=1..}] run return 0

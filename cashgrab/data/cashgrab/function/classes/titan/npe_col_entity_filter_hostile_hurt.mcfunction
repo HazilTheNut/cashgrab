@@ -19,5 +19,5 @@
 #	cv_G	:	
 #	cv_H	:	
 
-function coinwars:util/pe_col_entity_filter_hostile_hurt
+function cashgrab:util/npe_col_entity_filter_hostile
 tag @e[scores={ev_dmg_taken=..0}] remove t_collision_candidate

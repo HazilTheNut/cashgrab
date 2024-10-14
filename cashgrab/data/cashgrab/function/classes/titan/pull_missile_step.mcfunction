@@ -21,12 +21,14 @@
 
 particle minecraft:cloud ~ ~ ~ 0 0 0 0 1
 
-function coinwars:util/pe_eid_find_owner
+# Find owner and tag them with t_eid_matches
+execute store result storage cashgrab:find_eid_args eid int 1 run scoreboard players get @s eid_owner
+function cashgrab:util/find_eid_self with storage cashgrab:find_eid_args
 
-execute if entity @e[scores={eid_compare=0,ev_dmg_taken=1..}] run tag @s add t_cleanup
-execute if entity @e[scores={eid_compare=0,ev_dmg_taken=1..}] run return 0
+execute if entity @e[scores={ev_dmg_taken=1..},tag=t_eid_matches] run tag @s add t_cleanup
+execute if entity @s[tag=t_cleanup] run return 0
 
 #execute as @e[scores={eid_compare=0}] at @s run particle minecraft:crit ~ ~ ~ 1 1 1 0 10
 #effect give @e[scores={eid_compare=0}] minecraft:levitation 1 255
-attribute @e[scores={eid_compare=0},limit=1] minecraft:generic.gravity base set 0
-execute rotated as @e[scores={eid_compare=0}] run tp @e[scores={eid_compare=0}] ~ ~-0.75 ~ ~ ~
+attribute @n[tag=t_eid_matches] minecraft:generic.gravity base set 0
+execute rotated as @n[tag=t_eid_matches] run tp @n[tag=t_eid_matches] ~ ~-0.75 ~ ~ ~

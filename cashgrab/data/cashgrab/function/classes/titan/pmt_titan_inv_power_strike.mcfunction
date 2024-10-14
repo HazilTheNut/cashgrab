@@ -1,4 +1,4 @@
-# classes/titan/power_strike_icon.mcfunction
+# classes/titan/pmt_titan_inv_power_strike.mcfunction
 #
 # Context:
 #	as: an entity with class = 8
@@ -17,16 +17,16 @@
 #	cv_G	:	
 #	cv_H	:	
 
-item replace entity @s[scores={cv_A=1..}] hotbar.1 with minecraft:gray_stained_glass_pane[\
+item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1..}] hotbar.1 with minecraft:gray_stained_glass_pane[\
 minecraft:item_name="{\"italic\":false,\"color\":\"gray\",\"text\":\"Ability on Cooldown\"}"\
 ]
 
-item replace entity @s[scores={cv_A=..0}] hotbar.1 with minecraft:golden_axe[\
+item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=..0}] hotbar.1 with minecraft:golden_axe[\
 minecraft:damage=31,\
 minecraft:enchantments={levels:{knockback:5},show_in_tooltip:false},\
 minecraft:attribute_modifiers=[\
-{type:"generic.attack_damage",slot:"mainhand",id:"coinwars:power_strike_atkdmg",amount:8,operation:"add_value"},\
-{type:"generic.attack_speed",slot:"mainhand",id:"coinwars:power_strike_atkspd",amount:-1,operation:"add_value"}],\
+{type:"generic.attack_damage",slot:"mainhand",id:"cashgrab:power_strike_atkdmg",amount:8,operation:"add_value"},\
+{type:"generic.attack_speed",slot:"mainhand",id:"cashgrab:power_strike_atkspd",amount:-1,operation:"add_value"}],\
 minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Attack]\"},{\"color\":\"white\",\"text\":\" Power Strike\"}]",\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Strong knockback attack\"}",\

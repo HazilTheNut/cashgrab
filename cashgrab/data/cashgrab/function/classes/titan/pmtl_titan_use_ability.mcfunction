@@ -20,12 +20,12 @@
 
 playsound minecraft:block.portal.travel player @a ~ ~ ~ 0.15 2.0
 
-function coinwars:util/pe_raycast {\
+execute positioned ~ ~1.625 ~ run function cashgrab:util/npe_raycast {\
 i_range_m:25,\
 i_origin_loc:1,\
-col_terrain_allowed:"#coinwars:nonsolid",\
+col_terrain_allowed:"#cashgrab:nonsolid",\
 b_fit_player:0,\
-func_entity_filter:"coinwars:util/pe_col_entity_filter_hostile",\
-func_step:"coinwars:classes/titan/pull_raycast_step",\
-func_end:"coinwars:classes/titan/pull_raycast_end",\
+func_entity_filter:"cashgrab:util/npe_col_entity_filter_hostile",\
+func_step:"cashgrab:classes/titan/pull_raycast_step",\
+func_end:"cashgrab:classes/titan/pull_raycast_end",\
 }

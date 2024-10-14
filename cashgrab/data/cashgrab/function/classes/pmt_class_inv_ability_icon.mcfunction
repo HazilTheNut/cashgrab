@@ -18,6 +18,6 @@ execute if entity @a[tag=t_pm_owner,scores={class=4}] run return run function ca
 execute if entity @a[tag=t_pm_owner,scores={class=5}] run return run function cashgrab:classes/artillery/pmt_artillery_inv_ability_icon with storage cashgrab:abi_args
 execute if entity @a[tag=t_pm_owner,scores={class=6}] run return run function cashgrab:classes/champion/pmt_champion_inv_ability_icon with storage cashgrab:abi_args
 execute if entity @a[tag=t_pm_owner,scores={class=7}] run return run function cashgrab:classes/frostknight/pmt_frostknight_inv_ability_icon with storage cashgrab:abi_args
-#execute if entity @a[tag=t_pm_owner,scores={class=8}] run return run function cashgrab:classes/titan/pmt_titan_inv_ability_icon with storage cashgrab:abi_args
+execute if entity @a[tag=t_pm_owner,scores={class=8}] run return run function cashgrab:classes/titan/pmt_titan_inv_ability_icon with storage cashgrab:abi_args
 #execute if entity @a[tag=t_pm_owner,scores={class=9}] run return run function cashgrab:classes/alchemist/pmt_alchemist_inv_ability_icon with storage cashgrab:abi_args
 #execute if entity @a[tag=t_pm_owner,scores={class=10}] run return run function cashgrab:classes/chronomancer/pmt_chronomancer_inv_ability_icon with storage cashgrab:abi_args

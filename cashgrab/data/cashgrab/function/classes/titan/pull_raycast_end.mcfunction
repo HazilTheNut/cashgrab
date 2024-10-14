@@ -22,12 +22,14 @@
 
 $scoreboard players set @s temp_A $(end_reason)
 
-execute unless score @s temp_A matches 2 run scoreboard players set @s ability_cfg_cooldown_ticks 60
+#$tellraw @a[tag=t_debug] "classes/titan/pull_raycast_end: end_reason: $(end_reason)"
+
+execute unless score @s temp_A matches 2 run scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cooldown_ticks 60
 execute unless score @s temp_A matches 2 run return 0
 
-scoreboard players set @s ability_cfg_cooldown_ticks 260
+scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cooldown_ticks 260
 
-execute positioned ~ ~-1.5 ~ facing ^ ^ ^-1 run function coinwars:util/pe_create_missile {\
+execute positioned ~ ~-1.5 ~ facing ^ ^ ^-1 run function cashgrab:util/npe_create_missile {\
 f_speed_mpt:0.5f,\
 i_lifetime_ticks:50,\
 i_range_m:25,\
@@ -36,12 +38,13 @@ i_gravity_vy_mmpt:0,\
 i_gravity_const_mmpt2:0,\
 t_missile_name:"t_titan_missile_init",\
 f_tracking_scalar:0f,\
-col_terrain_allowed:"#coinwars:nonsolid",\
-func_entity_filter:"coinwars:util/pe_col_entity_filter_none",\
-func_tracking_filter:"coinwars:util/dummy",\
-func_start:"coinwars:util/dummy",\
-func_step:"coinwars:classes/titan/pull_missile_step",\
-func_end:"coinwars:classes/titan/pull_missile_end"\
+col_terrain_allowed:"#cashgrab:nonsolid",\
+func_entity_filter:"cashgrab:util/npe_col_entity_filter_none",\
+func_tracking_filter:"cashgrab:util/dummy",\
+func_start:"cashgrab:util/dummy",\
+func_step:"cashgrab:classes/titan/pull_missile_step",\
+func_end:"cashgrab:classes/titan/pull_missile_end",\
+b_assign_as_peer:0,\
 }
 
 # Reassign the missile's owner to the entity struck by the Pull ability
