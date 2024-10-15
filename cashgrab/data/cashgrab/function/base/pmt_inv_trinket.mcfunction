@@ -8,11 +8,8 @@
 #
 # Arguments:
 #	charges		: Number of charges remaining
+#	slot		: Slot to insert item
 
-$item replace entity @a[tag=t_pm_owner] hotbar.3 with minecraft:potion[\
-minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Use]\"},{\"color\":\"white\",\"text\":\" Vigor Flask\"}]",\
-minecraft:enchantment_glint_override=false,\
-minecraft:potion_contents={custom_color:16598149,custom_effects:[\
-{id:"minecraft:regeneration",amplifier:4,duration:40},\
-{id:"minecraft:speed",amplifier:0,duration:100},\
-]}] $(charges)
+$execute if score @a[tag=t_pm_owner,limit=1] trinket_id matches -1 run function cashgrab:trinkets/test_item/pmt_test_item_inv {charges:$(charges),slot:"$(slot)"}
+
+$execute if score @a[tag=t_pm_owner,limit=1] trinket_id matches 1 run function cashgrab:trinkets/vigor_flask/pmt_vigor_flask_inv {charges:$(charges),slot:"$(slot)"}

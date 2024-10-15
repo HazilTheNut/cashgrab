@@ -66,6 +66,7 @@ execute as @e[type=minecraft:marker,tag=t_missile] at @s facing ^ ^ ^1 run funct
 execute as @e[type=minecraft:marker,tag=t_timer] at @s run function cashgrab:base/timer_main with entity @s data
 execute as @e[type=minecraft:marker,tag=t_coinshower] at @s run function cashgrab:base/npe_coinshower
 
+kill @e[type=minecraft:egg]
 kill @e[type=minecraft:experience_bottle]
 execute as @e[type=minecraft:arrow,nbt={inGround:1b}] at @s run particle minecraft:block{block_state:"minecraft:birch_planks"} ^ ^ ^-0.2 0.1 0.1 0.1 1 5
 kill @e[type=minecraft:arrow,nbt={inGround:1b}]
@@ -98,3 +99,4 @@ scoreboard players set @a ev_snowballs 0
 scoreboard players set @a ev_eggs 0
 scoreboard players set @a ev_crossbows 0
 scoreboard players set @a ev_gold_axe_break 0
+scoreboard players set @a ev_potion 0

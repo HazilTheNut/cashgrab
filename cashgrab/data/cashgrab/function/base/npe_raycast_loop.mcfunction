@@ -19,6 +19,7 @@ $function $(func_step)
 # =============================
 # Subtract steps remaining and expire if at 0
 scoreboard players remove @s[scores={rc_steps_remaining=1..}] rc_steps_remaining 1
+execute if entity @s[scores={rc_steps_remaining=..0}] run tellraw @a[tag=t_debug] "Raycast expired"
 $execute if entity @s[scores={rc_steps_remaining=..0}] run function $(func_end) {end_reason:3}
 execute if entity @s[scores={rc_steps_remaining=..0}] run return 0
 
@@ -30,7 +31,7 @@ $execute store result score @s col_terrain run function cashgrab:util/npe_col_de
 scoreboard players set @s temp_A 0
 execute if entity @s[scores={col_terrain=1..,rc_fit_player=1..}] store result score @s temp_A run function cashgrab:base/npe_raycast_fit_player with storage cashgrab:rc_args data
 
-#tellraw @s[tag=t_debug,scores={col_terrain=1..}] [{"type":"text","text":"pe_raycast_loop temp_A: "},{"type":"score","score":{"name":"@s","objective":"temp_A"}}]
+execute if score @s col_terrain matches 1.. run tellraw @a[tag=t_debug] [{"type":"text","text":"pe_raycast_loop temp_A: "},{"type":"score","score":{"name":"@s","objective":"temp_A"}}]
 #tellraw @s[tag=t_debug,scores={col_terrain=1..}] [{"type":"text","text":"pe_raycast_loop rc_steps_remaining: "},{"type":"score","score":{"name":"@s","objective":"rc_steps_remaining"}}]
 
 # Default collision func_end
@@ -45,6 +46,7 @@ scoreboard players set @s col_entity 0
 $execute if score @s col_terrain matches 0 store result score @s col_entity positioned ~$(delta_x) ~$(delta_y) ~$(delta_z) run function cashgrab:util/npe_col_detect_entity {func_entity_filter:"cashgrab:util/dummy"}
 
 $execute if entity @s[scores={col_entity=1..}] run function $(func_end) {end_reason:2}
+execute if entity @s[scores={col_entity=1..}] run tellraw @a[tag=t_debug] "Raycast entity collision"
 execute if entity @s[scores={col_entity=1..}] run return 0
 
 # Proceed to next step of loop

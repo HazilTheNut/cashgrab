@@ -40,7 +40,7 @@ minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" listed time required:\"}",\
 "[{\"color\":\"yellow\",\"italic\":false,\"text\":\"Caustic Brew\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" (2.5 sec)\"}]",\
 "[{\"color\":\"yellow\",\"italic\":false,\"text\":\"Booster Brew\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" (2.5 sec)\"}]",\
-"[{\"color\":\"green\",\"italic\":false,\"text\":\"Vigor Flask\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" (4 sec)\"}]"\
+"[{\"color\":\"green\",\"italic\":false,\"text\":\"Vigor Flask\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" (5 sec)\"}]"\
 ]] 1
 
 #	1-50	= brewing Caustic Brew

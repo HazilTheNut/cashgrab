@@ -31,7 +31,7 @@
 
 summon minecraft:marker ~ ~ ~ {Tags:["t_missile_init"]}
 $scoreboard players set @s temp_A $(i_origin_loc)
-execute if entity @s[scores={temp_A=0}] positioned ~ ~1.5 ~ run tp @e[tag=t_missile_init,limit=1,sort=nearest] ~ ~ ~ facing ^ ^ ^1
+execute if entity @s[scores={temp_A=0}] positioned ~ ~ ~ run tp @e[tag=t_missile_init,limit=1,sort=nearest] ~ ~ ~ facing ^ ^ ^1
 $execute if entity @s[scores={temp_A=1}] positioned ~ ~1.5 ~ run tp @e[tag=t_missile_init,limit=1,sort=nearest] ^-0.20 ^-0.05 ^0.25 facing ^ ^ ^$(i_range_m)
 $execute if entity @s[scores={temp_A=2}] positioned ~ ~1.5 ~ run tp @e[tag=t_missile_init,limit=1,sort=nearest] ^0.20 ^-0.05 ^0.25 facing ^ ^ ^$(i_range_m)
 

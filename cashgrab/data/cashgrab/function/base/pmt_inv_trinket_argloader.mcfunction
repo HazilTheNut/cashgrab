@@ -8,8 +8,13 @@
 #
 # Arguments: (none)
 
+# Erase existing trinket items if they are somehow lingering around
+clear @a[tag=t_pm_owner,limit=1] *[custom_data={is_trinket:1}]
+
 # If player has a trinket charge, display trinket item
 execute store result storage cashgrab:trinket_args charges int 1 run scoreboard players get @a[tag=t_pm_owner,limit=1] trinket_charges
+execute if entity @a[tag=t_pm_owner,scores={trinket_charges=1..,trinket_in_offhand=0}] run data merge storage cashgrab:trinket_args {slot:"hotbar.3"}
+execute if entity @a[tag=t_pm_owner,scores={trinket_charges=1..,trinket_in_offhand=1}] run data merge storage cashgrab:trinket_args {slot:"weapon.offhand"}
 execute if entity @a[tag=t_pm_owner,scores={trinket_charges=1..}] run function cashgrab:base/pmt_inv_trinket with storage cashgrab:trinket_args
 execute if entity @a[tag=t_pm_owner,scores={trinket_charges=1..}] run return 0
 

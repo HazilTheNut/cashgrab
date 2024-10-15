@@ -71,13 +71,14 @@ scoreboard players set @a[tag=t_pm_owner,scores={activity_state=11}] activity_st
 #	activity_state 10	=	Class Select (in spawn selection room)
 
 #	activity_state 21	=	Transition to Gameplay
-scoreboard players set @a[tag=t_pm_owner,scores={activity_state=21}] trinket_charges 1
-#execute as @a run function cashgrab:classes/pmt_equip_perclass
+execute if score DEVELOPER_MODE num matches 0 run scoreboard players set @a[tag=t_pm_owner,scores={activity_state=21}] trinket_id 1
+execute if entity @a[tag=t_pm_owner,scores={activity_state=21}] run function cashgrab:base/pmt_trinket_init
+execute if entity @a[tag=t_pm_owner,scores={activity_state=21}] run function cashgrab:classes/pmt_class_init
 scoreboard players set @a[tag=t_pm_owner,scores={activity_state=21}] activity_state 20
 
 #	activity_state 20	=	Gameplay
-execute at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function cashgrab:classes/pmtl_class_loop
-#execute as @a at @s run function cashgrab:base/pmtl_trinket
+execute if entity @a[tag=t_pm_owner,scores={activity_state=20}] at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function cashgrab:classes/pmtl_class_loop
+execute if entity @a[tag=t_pm_owner,scores={activity_state=20}] at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function cashgrab:base/pmtl_trinket
 
 # =============================
 # activity_state irrespective operations

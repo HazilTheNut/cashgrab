@@ -47,6 +47,8 @@ scoreboard objectives add __coins_disp_ones dummy
 scoreboard objectives add __coins_disp_tens dummy
 scoreboard objectives add __coins_score dummy {"text":"Coins","color":"yellow"}
 
+# --- Toss ability
+
 # Ability cooldown remaining 
 # note: ability_cd_secs = floor(ability_cd_ticks / 20) + (ability_cd_ticks >= 1)
 scoreboard objectives add ability_cd_ticks dummy
@@ -57,11 +59,24 @@ scoreboard objectives add ability_cfg_charges dummy
 
 scoreboard objectives add ability_charges dummy
 
-# Trinket variables
+# --- Trinket
 #	note: only one trinket (Vigor Flask) is currently supported/implemented
+
+# Number of usages remaining
 scoreboard objectives add trinket_charges dummy
 
-# Game objective-related
+# ID of trinket equipped
+#	1	=	Vigor Flask
+scoreboard objectives add trinket_id dummy
+
+# 1 if holding trinket and 0 otherwise
+scoreboard objectives add trinket_held dummy
+
+# 1 if trinket is in offhand and 0 otherwise
+scoreboard objectives add trinket_in_offhand dummy
+
+# --- Game objective-related
+
 # team_id: 0 = ffa, 1 = red, 2 = blue
 scoreboard objectives add team_id dummy
 
@@ -153,6 +168,7 @@ scoreboard objectives add ev_snowballs minecraft.used:minecraft.snowball
 scoreboard objectives add ev_eggs minecraft.used:minecraft.egg
 scoreboard objectives add ev_crossbows minecraft.used:minecraft.crossbow
 scoreboard objectives add ev_gold_axe_break minecraft.broken:minecraft.golden_axe
+scoreboard objectives add ev_potion minecraft.used:minecraft.potion
 
 # =============================
 # Class readable statistics (prefix: "stat_").
