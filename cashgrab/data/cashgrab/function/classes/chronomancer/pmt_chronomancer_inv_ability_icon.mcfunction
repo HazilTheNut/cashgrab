@@ -1,7 +1,8 @@
-# classes/chronomancer/pe_ability_icon.mcfunction
+# classes/chronomancer/pmt_chronomancer_inv_ability_icon.mcfunction
 #
 # Context:
-#	as: an entity with class = 10
+#	as: a Player Monitor (pm) marker
+#	+ the owner of the pm is tagged with t_pm_owner
 #
 # Summary: Inserts equipped class ability icon into hotbar slot 4
 #
@@ -17,7 +18,7 @@
 #	cv_G	:	
 #	cv_H	:	
 
-$execute if score @s cv_E matches 0 run item replace entity @s hotbar.4 with minecraft:cyan_stained_glass[\
+$execute if score @a[tag=t_pm_owner,limit=1] cv_E matches 0 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:cyan_stained_glass[\
 minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Stasis Field\"}]",\
 minecraft:enchantment_glint_override=true,\
 minecraft:lore=[\
@@ -30,7 +31,7 @@ minecraft:lore=[\
 "[{\"color\":\"yellow\",\"italic\":false,\"text\":\"10\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown for \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"1\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" charges\"}]"\
 ]] $(charges)
 
-$execute if score @s cv_E matches 1 run item replace entity @s hotbar.4 with minecraft:barrier[\
+$execute if score @a[tag=t_pm_owner,limit=1] cv_E matches 1 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:barrier[\
 minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Cancel Stasis Field\"}]",\
 minecraft:enchantment_glint_override=true,\
 minecraft:lore=[\

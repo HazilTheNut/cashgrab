@@ -1,9 +1,10 @@
 # classes/titan/pull_raycast_end.mcfunction
 #
 # Context:
-#	as: a missile
-#	at: the missile
-#	facing: the missile's facing direction
+#	as: a Player Monitor (pm) marker
+#	+ the owner of the pm is tagged with t_pm_owner
+#	at: the owner's position
+#	rotated: as the owner
 #
 # Summary: Titan's missile end function
 #
@@ -22,14 +23,16 @@
 
 $scoreboard players set @s temp_A $(end_reason)
 
-#$tellraw @a[tag=t_debug] "classes/titan/pull_raycast_end: end_reason: $(end_reason)"
+$tellraw @a[tag=t_debug] "classes/titan/pull_raycast_end: end_reason: $(end_reason)"
+execute if score @s col_terrain matches 1.. run tellraw @a[tag=t_debug] [{"type":"text","text":"classes/titan/pull_raycast_end: temp_A: "},{"type":"score","score":{"name":"@s","objective":"temp_A"}}]
+
 
 execute unless score @s temp_A matches 2 run scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cooldown_ticks 60
 execute unless score @s temp_A matches 2 run return 0
 
 scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cooldown_ticks 260
 
-execute positioned ~ ~-1.5 ~ facing ^ ^ ^-1 run function cashgrab:util/npe_create_missile {\
+execute positioned ~ ~ ~ facing ^ ^ ^-1 run function cashgrab:util/npe_create_missile {\
 f_speed_mpt:0.5f,\
 i_lifetime_ticks:50,\
 i_range_m:25,\
@@ -55,6 +58,9 @@ scoreboard players operation @e[tag=t_collision_found,limit=1] eid_grabbed_by = 
 
 scoreboard players operation @e[tag=t_titan_missile_init,limit=1,sort=nearest] mis_lifetime_ticks -= @s rc_steps_remaining
 scoreboard players remove @e[tag=t_titan_missile_init,limit=1,sort=nearest] mis_lifetime_ticks 3
+
+#tellraw @a[tag=t_debug] [{"type":"text","text":"classes/titan/pull_raycast_end: mis_lifetime_ticks: "},{"type":"score","score":{"name":"@e[tag=t_titan_missile_init,limit=1,sort=nearest]","objective":"mis_lifetime_ticks"}}]
+
 tag @e[tag=t_titan_missile_init,limit=1,sort=nearest] add t_stasis_immune
 tag @e[tag=t_titan_missile_init,limit=1,sort=nearest] add t_titan_missile
 tag @e[tag=t_titan_missile_init,limit=1,sort=nearest] remove t_titan_missile_init

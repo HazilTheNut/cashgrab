@@ -1,9 +1,10 @@
 # classes/titan/pull_raycast_step.mcfunction
 #
 # Context:
-#	as: a missile
-#	at: the missile
-#	facing: the missile's facing direction
+#	as: a Player Monitor (pm) marker
+#	+ the owner of the pm is tagged with t_pm_owner
+#	at: the owner's position
+#	rotated: as the owner
 #
 # Summary: Titan's missile step function
 #

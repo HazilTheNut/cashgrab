@@ -21,9 +21,12 @@
 
 playsound minecraft:block.beacon.activate player @a ~ ~ ~ 1 2
 
+# Find owner and tag them with t_eid_matches
+execute store result storage cashgrab:find_eid_args eid int 1 run scoreboard players get @s eid_owner
+function cashgrab:util/find_eid_self with storage cashgrab:find_eid_args
+
 # Re-enable Stasis Field ability for owner and initiate cooldown
-function coinwars:util/pe_eid_find_owner
-scoreboard players set @a[scores={eid_compare=0}] ability_cfg_cooldown_ticks 200
-scoreboard players set @a[scores={eid_compare=0}] ability_cd_ticks 200
-scoreboard players set @a[scores={eid_compare=0}] ability_charges 0
-scoreboard players set @a[scores={eid_compare=0}] cv_E 0
+scoreboard players set @a[tag=t_eid_matches] ability_cfg_cooldown_ticks 200
+scoreboard players set @a[tag=t_eid_matches] ability_cd_ticks 200
+scoreboard players set @a[tag=t_eid_matches] ability_charges 0
+scoreboard players set @a[tag=t_eid_matches] cv_E 0
