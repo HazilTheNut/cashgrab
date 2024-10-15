@@ -1,0 +1,33 @@
+{
+	"replace": false,
+	"values": [
+		{
+			"id": "minecraft:experience_bottle",
+			"required": true
+		},
+		{
+			"id": "minecraft:bow",
+			"required": true
+		},
+		{
+			"id": "minecraft:crossbow",
+			"required": true
+		},
+		{
+			"id": "minecraft:shield",
+			"required": true
+		},
+		{
+			"id": "minecraft:potion",
+			"required": true
+		},
+		{
+			"id": "minecraft:splash_potion",
+			"required": true
+		},
+		{
+			"id": "minecraft:egg",
+			"required": true
+		}
+	]
+}
