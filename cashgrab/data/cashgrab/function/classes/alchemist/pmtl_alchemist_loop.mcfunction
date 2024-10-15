@@ -46,30 +46,22 @@ clear @a[tag=t_pm_owner,limit=1] minecraft:glass_bottle
 #		82	= (step 3 icon)
 #		100	= award potion
 
-# Begin potion brewing when entering crouch based on what potions you have:
-#									| If no Caustic Brew (cv_A=0)	| If has Caustic Brew (cv_A=1)
-#	--------------------------------+-------------------------------+--------------------
-#	If no Booster Brew (cv_B=0)		| I: Begin Caustic Brew			| II: Begin Booster Brew
-#	--------------------------------+-------------------------------+--------------------
-#	If has Booster Brew	(cv_B=1)	| I: Begin Caustic Brew			| III: Do nothing
-
 # ===========================================================
 # Initiate potion brewing sequence when entering crouch
 
-# Case I: Begin Caustic Brew
+# Case I: Begin Caustic Fume
 execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=2,cv_A=0}] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 1
 
 # Case II: Begin Booster Brew
 execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=2,cv_A=1,cv_B=0}] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 51
 
 # Case III: Do nothing
-execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=2,cv_A=1,cv_B=1}] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C -1
+execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=2,cv_A=1,cv_B=1,trinket_charges=0}] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 101
+
+execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=2,cv_A=1,cv_B=1,trinket_charges=1}] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C -1
 
 # ===========================================================
 # Potion brewing sequence
-
-# Progress potion brewing while crouching
-execute if score @a[tag=t_pm_owner,limit=1] ps_sneaking matches 1 if score @a[tag=t_pm_owner,limit=1] cv_C matches 1.. run scoreboard players add @a[tag=t_pm_owner,limit=1] cv_C 1
 
 # Update potion brewing icon as you gain progress
 execute if score @a[tag=t_pm_owner,limit=1] ps_sneaking matches 1 if score @a[tag=t_pm_owner,limit=1] cv_C matches 1 run function cashgrab:classes/alchemist/pmt_alchemist_inv_potion_brewing_icon
@@ -78,18 +70,35 @@ execute if score @a[tag=t_pm_owner,limit=1] ps_sneaking matches 1 if score @a[ta
 execute if score @a[tag=t_pm_owner,limit=1] ps_sneaking matches 1 if score @a[tag=t_pm_owner,limit=1] cv_C matches 51 run function cashgrab:classes/alchemist/pmt_alchemist_inv_potion_brewing_icon
 execute if score @a[tag=t_pm_owner,limit=1] ps_sneaking matches 1 if score @a[tag=t_pm_owner,limit=1] cv_C matches 66 run function cashgrab:classes/alchemist/pmt_alchemist_inv_potion_brewing_icon
 execute if score @a[tag=t_pm_owner,limit=1] ps_sneaking matches 1 if score @a[tag=t_pm_owner,limit=1] cv_C matches 82 run function cashgrab:classes/alchemist/pmt_alchemist_inv_potion_brewing_icon
+execute if score @a[tag=t_pm_owner,limit=1] ps_sneaking matches 1 if score @a[tag=t_pm_owner,limit=1] cv_C matches 101 run function cashgrab:classes/alchemist/pmt_alchemist_inv_potion_brewing_icon
+execute if score @a[tag=t_pm_owner,limit=1] ps_sneaking matches 1 if score @a[tag=t_pm_owner,limit=1] cv_C matches 121 run function cashgrab:classes/alchemist/pmt_alchemist_inv_potion_brewing_icon
+execute if score @a[tag=t_pm_owner,limit=1] ps_sneaking matches 1 if score @a[tag=t_pm_owner,limit=1] cv_C matches 141 run function cashgrab:classes/alchemist/pmt_alchemist_inv_potion_brewing_icon
+execute if score @a[tag=t_pm_owner,limit=1] ps_sneaking matches 1 if score @a[tag=t_pm_owner,limit=1] cv_C matches 161 run function cashgrab:classes/alchemist/pmt_alchemist_inv_potion_brewing_icon
+execute if score @a[tag=t_pm_owner,limit=1] ps_sneaking matches 1 if score @a[tag=t_pm_owner,limit=1] cv_C matches 181 run function cashgrab:classes/alchemist/pmt_alchemist_inv_potion_brewing_icon
 
-# Award potions upon completing a sequence
-execute if score @a[tag=t_pm_owner,limit=1] ps_sneaking matches 1 if score @a[tag=t_pm_owner,limit=1] cv_C matches 50 run tag @a[tag=t_pm_owner,limit=1] add t_award_potions
-execute if score @a[tag=t_pm_owner,limit=1] ps_sneaking matches 1 if score @a[tag=t_pm_owner,limit=1] cv_C matches 50 run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_A 1
-execute if score @a[tag=t_pm_owner,limit=1] ps_sneaking matches 1 if score @a[tag=t_pm_owner,limit=1] cv_C matches 50 if score @a[tag=t_pm_owner,limit=1] cv_B matches 1 run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C -1
-execute if score @a[tag=t_pm_owner,limit=1] ps_sneaking matches 1 if score @a[tag=t_pm_owner,limit=1] cv_C matches 100 run tag @a[tag=t_pm_owner,limit=1] add t_award_potions
-execute if score @a[tag=t_pm_owner,limit=1] ps_sneaking matches 1 if score @a[tag=t_pm_owner,limit=1] cv_C matches 100 run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 1
-execute if score @a[tag=t_pm_owner,limit=1] ps_sneaking matches 1 if score @a[tag=t_pm_owner,limit=1] cv_C matches 100 run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C -1
+# Progress potion brewing while crouching
+execute if score @a[tag=t_pm_owner,limit=1] ps_sneaking matches 1 if score @a[tag=t_pm_owner,limit=1] cv_C matches 1.. run scoreboard players add @a[tag=t_pm_owner,limit=1] cv_C 1
 
+# --- Award potions upon completing a sequence
+# Caustic Fume done
+execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=50}] run tag @a[tag=t_pm_owner,limit=1] add t_award_potions
+execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=50}] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_A 1
+execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=50,cv_B=1,trinket_charges=0}] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 101
+execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=50,cv_B=1,trinket_charges=1}] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C -1
+# Booster Brew done
+execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=100}] run tag @a[tag=t_pm_owner,limit=1] add t_award_potions
+execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=100}] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 1
+execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=100,trinket_charges=1}] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C -1
+# Vigor Flask done
+execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=200}] run tag @a[tag=t_pm_owner,limit=1] add t_award_potions
+execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=200}] run function cashgrab:base/pmt_trinket_init
+execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=200}] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C -1
+
+# Award potions
 execute if entity @a[tag=t_pm_owner,limit=1,tag=t_award_potions] run clear @a[tag=t_pm_owner,limit=1] minecraft:potion
 execute if entity @a[tag=t_pm_owner,limit=1,tag=t_award_potions] run clear @a[tag=t_pm_owner,limit=1] minecraft:splash_potion
 execute if entity @a[tag=t_pm_owner,limit=1,tag=t_award_potions] run function cashgrab:classes/alchemist/pmt_alchemist_inv_potions
+execute if entity @a[tag=t_pm_owner,limit=1,tag=t_award_potions] run function cashgrab:base/pmt_inv_trinket_argloader
 
 tag @a[tag=t_pm_owner,limit=1] remove t_award_potions
 

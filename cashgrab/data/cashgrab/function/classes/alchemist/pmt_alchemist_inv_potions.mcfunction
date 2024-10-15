@@ -22,7 +22,7 @@
 
 # Caustic Brew
 execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 1.. run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.1 with minecraft:splash_potion[\
-minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Use]\"},{\"color\":\"white\",\"text\":\" Caustic Brew\"}]",\
+minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Use]\"},{\"color\":\"white\",\"text\":\" Caustic Fume\"}]",\
 minecraft:enchantment_glint_override=true,\
 minecraft:potion_contents={custom_color:7206301,custom_effects:[\
 {id:"minecraft:poison",amplifier:0,duration:140},\
@@ -34,8 +34,7 @@ minecraft:potion_contents={custom_color:7206301,custom_effects:[\
 execute if score @a[tag=t_pm_owner,limit=1] cv_B matches 1.. run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.2 with minecraft:potion[\
 minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Use]\"},{\"color\":\"white\",\"text\":\" Booster Brew\"}]",\
 minecraft:enchantment_glint_override=true,\
-minecraft:potion_contents={custom_color:15758261,custom_effects:[\
-{id:"minecraft:regeneration",amplifier:2,duration:120},\
-{id:"minecraft:resistance",amplifier:0,duration:120},\
-{id:"minecraft:speed",amplifier:1,duration:120},\
+minecraft:potion_contents={custom_color:15108608,custom_effects:[\
+{id:"minecraft:resistance",amplifier:0,duration:180},\
+{id:"minecraft:strength",amplifier:0,duration:180},\
 ]}]

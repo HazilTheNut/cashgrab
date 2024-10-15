@@ -30,6 +30,13 @@
 #		66	= (step 2 icon)
 #		82	= (step 3 icon)
 #		100	= award potion
+#	101-200	= brewing Booster Brew
+#		101	= (step 1 icon)
+#		121	= (step 2 icon)
+#		141	= (step 3 icon)
+#		161	= (step 4 icon)
+#		181	= (step 5 icon)
+#		200	= award potion
 
 #	0		= idle
 execute if score @a[tag=t_pm_owner,limit=1] cv_C matches ..0 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:cauldron[\
@@ -38,7 +45,7 @@ minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Brews potions while crouching\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" in the following order with the\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" listed time required:\"}",\
-"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"Caustic Brew\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" (2.5 sec)\"}]",\
+"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"Caustic Fume\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" (2.5 sec)\"}]",\
 "[{\"color\":\"yellow\",\"italic\":false,\"text\":\"Booster Brew\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" (2.5 sec)\"}]",\
 "[{\"color\":\"green\",\"italic\":false,\"text\":\"Vigor Flask\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" (5 sec)\"}]"\
 ]] 1
@@ -61,17 +68,42 @@ minecraft:item_name="{\"color\":\"green\",\"italic\":false,\"text\":\"Brewing Ca
 
 #	51-100	= brewing Booster Brew
 #		51	= (step 1 icon)
-execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 51..65 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:nether_wart[\
+execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 51..65 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:honeycomb[\
 minecraft:item_name="{\"color\":\"green\",\"italic\":false,\"text\":\"Brewing Booster Brew...\"}",\
 ] 1
 
 #		66	= (step 2 icon)
-execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 66..81 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:red_dye[\
+execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 66..81 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:glowstone_dust[\
 minecraft:item_name="{\"color\":\"green\",\"italic\":false,\"text\":\"Brewing Booster Brew...\"}",\
 ] 2
 
 #		82	= (step 3 icon)
-execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 82..99 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:pink_dye[\
+execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 82..99 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:orange_dye[\
 minecraft:item_name="{\"color\":\"green\",\"italic\":false,\"text\":\"Brewing Booster Brew...\"}",\
 ] 3
 
+#	101-200	= brewing Booster Brew
+#		101	= (step 1 icon)
+execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 101..120 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:peony[\
+minecraft:item_name="{\"color\":\"green\",\"italic\":false,\"text\":\"Brewing Vigor Flask...\"}",\
+] 1
+
+#		121	= (step 2 icon)
+execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 121..140 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:pink_dye[\
+minecraft:item_name="{\"color\":\"green\",\"italic\":false,\"text\":\"Brewing Vigor Flask...\"}",\
+] 2
+
+#		141	= (step 3 icon)
+execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 141..160 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:magenta_dye[\
+minecraft:item_name="{\"color\":\"green\",\"italic\":false,\"text\":\"Brewing Vigor Flask...\"}",\
+] 3
+
+#		161	= (step 4 icon)
+execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 161..180 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:purple_dye[\
+minecraft:item_name="{\"color\":\"green\",\"italic\":false,\"text\":\"Brewing Vigor Flask...\"}",\
+] 4
+
+#		181	= (step 5 icon)
+execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 181..200 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:red_dye[\
+minecraft:item_name="{\"color\":\"green\",\"italic\":false,\"text\":\"Brewing Vigor Flask...\"}",\
+] 5
