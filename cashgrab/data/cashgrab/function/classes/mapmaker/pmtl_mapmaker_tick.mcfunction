@@ -1,4 +1,4 @@
-# classes/mapmaker/pmtl_mapmaker_loop.mcfunction
+# classes/mapmaker/pmtl_mapmaker_tick.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
@@ -6,7 +6,7 @@
 #	at: the owner's position
 #	rotated: as the owner
 #
-# Summary: Loop function for Mapmaker class
+# Summary: Tick function for Mapmaker class
 #
 # Arguments: (none)
 

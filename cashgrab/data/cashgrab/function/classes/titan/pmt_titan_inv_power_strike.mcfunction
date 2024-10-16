@@ -1,7 +1,8 @@
 # classes/titan/pmt_titan_inv_power_strike.mcfunction
 #
 # Context:
-#	as: an entity with class = 8
+#	as: a Player Monitor (pm) marker
+#	+ the owner of the pm is tagged with t_pm_owner
 #
 # Summary: Inserts Power Strike icon
 #

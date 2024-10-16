@@ -1,4 +1,4 @@
-# classes/alchemist/pe_loop.mcfunction
+# classes/alchemist/pmtl_alchemist_tick.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
@@ -6,7 +6,7 @@
 #	at: the owner's position
 #	rotated: as the owner
 #
-# Summary: Loop function for Alchemist class
+# Summary: Tick function for Alchemist class
 #
 # Arguments: (none)
 

@@ -1,4 +1,4 @@
-# classes/ranger/pmtl_ranger_loop.mcfunction
+# classes/ranger/pmtl_ranger_tick.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
@@ -6,7 +6,7 @@
 #	at: the owner's position
 #	rotated: as the owner
 #
-# Summary: Loop function for Ranger class
+# Summary: Tick function for Ranger class
 #
 # Arguments: (none)
 

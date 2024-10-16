@@ -1,7 +1,8 @@
-# classes/titan/pe_inv.mcfunction
+# classes/titan/pmt_titan_inv.mcfunction
 #
 # Context:
-#	as: an entity with class = 8
+#	as: a Player Monitor (pm) marker
+#	+ the owner of the pm is tagged with t_pm_owner
 #
 # Summary: Populates inventory for the Titan class for the command executor
 #

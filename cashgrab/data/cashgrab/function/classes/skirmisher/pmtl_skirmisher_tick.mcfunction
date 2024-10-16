@@ -1,4 +1,4 @@
-# classes/skirmisher/pmtl_skirmisher_loop.mcfunction
+# classes/skirmisher/pmtl_skirmisher_tick.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
@@ -6,7 +6,7 @@
 #	at: the owner's position
 #	rotated: as the owner
 #
-# Summary: Loop function for Skirmisher class
+# Summary: Tick function for Skirmisher class
 #
 # Arguments: (none)
 

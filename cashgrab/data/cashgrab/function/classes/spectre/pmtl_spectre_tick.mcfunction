@@ -1,4 +1,4 @@
-# classes/spectre/pmtl_spectre_loop.mcfunction
+# classes/spectre/pmtl_spectre_tick.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
@@ -6,7 +6,7 @@
 #	at: the owner's position
 #	rotated: as the owner
 #
-# Summary: Loop function for Spectre class
+# Summary: Tick function for Spectre class
 #
 # Arguments: (none)
 

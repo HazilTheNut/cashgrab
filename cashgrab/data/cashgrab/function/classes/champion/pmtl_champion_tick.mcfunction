@@ -1,4 +1,4 @@
-# classes/champion/pmtl_champion_loop.mcfunction
+# classes/champion/pmtl_champion_tick.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
@@ -6,7 +6,7 @@
 #	at: the owner's position
 #	rotated: as the owner
 #
-# Summary: Loop function for Champion class
+# Summary: Tick function for Champion class
 #
 # Arguments: (none)
 

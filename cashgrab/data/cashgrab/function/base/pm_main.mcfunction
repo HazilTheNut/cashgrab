@@ -48,13 +48,13 @@ execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches
 tag @a[tag=t_pm_owner,tag=t_died,scores={stat_alive_ticks=1..}] remove t_died
 
 # =============================
-# General functions ran prior to processing activity state
+# Prior-tick functions
 
 function cashgrab:base/pmt_player_state
 execute at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function cashgrab:base/pmtl_ability
 
 # =============================
-# Player activity_state handling
+# Main tick - Player activity_state handling
 
 #	activity_state 1	=	Transition to In Pregame Lobby
 clear @a[tag=t_pm_owner,scores={activity_state=1}]
@@ -77,15 +77,14 @@ execute if entity @a[tag=t_pm_owner,scores={activity_state=21}] run function cas
 scoreboard players set @a[tag=t_pm_owner,scores={activity_state=21}] activity_state 20
 
 #	activity_state 20	=	Gameplay
-execute if entity @a[tag=t_pm_owner,scores={activity_state=20}] at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function cashgrab:classes/pmtl_class_loop
-execute if entity @a[tag=t_pm_owner,scores={activity_state=20}] at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function cashgrab:base/pmtl_trinket
+execute if entity @a[tag=t_pm_owner,scores={activity_state=20}] at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function cashgrab:classes/pmtl_class_tick
+execute if entity @a[tag=t_pm_owner,scores={activity_state=20}] at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function cashgrab:base/pmtl_trinket_tick
 
 # =============================
-# activity_state irrespective operations
+# Post-tick actions
 
 execute at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function cashgrab:base/pmtl_coins
 function cashgrab:base/pmt_scoring
-
 function cashgrab:base/pm_grab
 
 # =============================

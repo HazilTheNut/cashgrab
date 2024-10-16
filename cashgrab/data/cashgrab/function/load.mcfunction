@@ -405,3 +405,20 @@ team join team_blue_total BLUE_TEAM
 team add team_coin_goal {"type":"text","text":"COIN_GOAL"}
 team modify team_coin_goal color yellow
 team join team_coin_goal GOAL
+
+# =============================
+# Class info
+
+scoreboard players set NUM_CTS_CLASS_PAGE_SIZE num 15
+scoreboard players set NUM_CTS_TRINKET_PAGE_SIZE num 4
+
+# Initialize cashgrab:game_info.classes roster list
+data remove storage cashgrab:game_info classes
+data modify storage cashgrab:game_info classes set value []
+
+# Initialize cashgrab:game_info.trinkets roster list
+data remove storage cashgrab:game_info trinkets
+data modify storage cashgrab:game_info trinkets set value []
+
+# Load cashgrab core classes
+function cashgrab:load_post

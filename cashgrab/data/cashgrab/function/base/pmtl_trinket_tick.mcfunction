@@ -1,4 +1,4 @@
-# base/pmtl_trinket.mcfunction
+# base/pmtl_trinket_tick.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
@@ -6,7 +6,7 @@
 #	at: the owner's position
 #	rotated: as the owner
 #
-# Summary: Inventory tracking and handling of trinkets
+# Summary: Branching tick function for equipped trinket
 #
 # Arguments: (none)
 

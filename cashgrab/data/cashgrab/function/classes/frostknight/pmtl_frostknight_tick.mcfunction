@@ -1,4 +1,4 @@
-# classes/frostknight/pmtl_frostknight_loop.mcfunction
+# classes/frostknight/pmtl_frostknight_tick.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
@@ -6,7 +6,7 @@
 #	at: the owner's position
 #	rotated: as the owner
 #
-# Summary: Loop function for Frost Knight class
+# Summary: Tick function for Frost Knight class
 #
 # Arguments: (none)
 

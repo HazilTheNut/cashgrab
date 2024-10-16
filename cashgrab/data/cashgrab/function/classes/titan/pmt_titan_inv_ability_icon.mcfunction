@@ -1,7 +1,8 @@
-# classes/titan/pe_ability_icon.mcfunction
+# classes/titan/pmt_titan_inv_ability_icon.mcfunction
 #
 # Context:
-#	as: an entity with class = 8
+#	as: a Player Monitor (pm) marker
+#	+ the owner of the pm is tagged with t_pm_owner
 #
 # Summary: Inserts equipped class ability icon into hotbar slot 4
 #

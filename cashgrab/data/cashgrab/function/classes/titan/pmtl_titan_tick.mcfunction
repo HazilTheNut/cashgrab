@@ -1,10 +1,10 @@
-# classes/titan/pe_loop.mcfunction
+# classes/titan/pmtl_titan_tick.mcfunction
 #
 # Context:
 #	as: an entity with class = 8
 #	at: the entity
 #
-# Summary: Loop function for Titan class
+# Summary: Tick function for Titan class
 #
 # Arguments: (none)
 

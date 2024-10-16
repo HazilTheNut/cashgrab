@@ -1,4 +1,4 @@
-# classes/chronomancer/pmtl_chronomancer_loop.mcfunction
+# classes/chronomancer/pmtl_chronomancer_tick.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
@@ -6,7 +6,7 @@
 #	at: the owner's position
 #	rotated: as the owner
 #
-# Summary: Loop function for Chronomancer class
+# Summary: Tick function for Chronomancer class
 #
 # Arguments: (none)
 

@@ -1,4 +1,4 @@
-# classes/griefer/pmtl_loop.mcfunction
+# classes/griefer/pmtl_griefer_tick.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
@@ -6,7 +6,7 @@
 #	at: the owner's position
 #	rotated: as the owner
 #
-# Summary: Loop function for Griefer class
+# Summary: Tick function for Griefer class
 #
 # Arguments: (none)
 

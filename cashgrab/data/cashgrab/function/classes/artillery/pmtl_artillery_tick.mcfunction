@@ -1,4 +1,4 @@
-# classes/artillery/pmtl_artillery_loop.mcfunction
+# classes/artillery/pmtl_artillery_tick.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
@@ -6,7 +6,7 @@
 #	at: the owner's position
 #	rotated: as the owner
 #
-# Summary: Loop function for Artillery class
+# Summary: Tick function for Artillery class
 #
 # Arguments: (none)
 

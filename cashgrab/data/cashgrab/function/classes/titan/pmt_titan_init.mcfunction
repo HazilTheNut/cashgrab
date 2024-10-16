@@ -1,7 +1,8 @@
 # classes/titan/pmt_titan_init.mcfunction
 #
 # Context:
-#	as: an entity with class = 8
+#	as: a Player Monitor (pm) marker
+#	+ the owner of the pm is tagged with t_pm_owner
 #
 # Summary: Equips the Titan class onto the command executor
 #
