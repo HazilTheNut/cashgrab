@@ -1,4 +1,4 @@
-# base/pmt_inv_trinket.mcfunction
+# trinkets/pmt_trinket_inv.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker

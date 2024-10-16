@@ -32,11 +32,8 @@ $scoreboard players set @s temp_A $(end_reason)
 execute if score @s temp_A matches 1 if score @s cv_E matches 1 run particle minecraft:item{item:"minecraft:iron_sword"} ~ ~ ~ 0.5 0.25 0.5 0.1 30
 execute if score @s temp_A matches 1 if score @s cv_E matches 2 run particle minecraft:item{item:"minecraft:golden_sword"} ~ ~ ~ 0.5 0.25 0.5 0.1 30
 execute if score @s temp_A matches 1 run playsound minecraft:entity.item.break player @a ~ ~ ~ 1.0 1.0
-execute if score @s temp_A matches 1 run return 0
 
-execute if score @s temp_A matches 0 run return 0
-execute if score @s temp_A matches 3 run return 0
-
+execute unless score @s temp_A matches 2 run return 0
 # Below executes when end_reason = 2, when we hit an entity (the player who threw the boomerang)
 
 playsound minecraft:entity.breeze.jump player @a ~ ~ ~ 1.0 0.25

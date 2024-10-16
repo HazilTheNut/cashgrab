@@ -1,10 +1,10 @@
-# base/pmt_inv_coins_argloader.mcfunction
+# util/pmt_inv_coins_argloader.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
 #	+ the owner of the pm is tagged with t_pm_owner
 #
-# Summary: Loads args for and runs cashgrab:base/pmt_inv_trinket
+# Summary: Loads args for and runs cashgrab:base/pmt_inv_coins
 #
 # Arguments: (none)
 

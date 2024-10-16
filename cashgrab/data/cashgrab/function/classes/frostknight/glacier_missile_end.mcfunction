@@ -22,9 +22,7 @@
 
 $scoreboard players set @s temp_A $(end_reason)
 
-execute if score @s temp_A matches 0 run return 0
-execute if score @s temp_A matches 2 run return 0
-execute if score @s temp_A matches 3 run return 0
+execute unless score @s temp_A matches 1 run return 0
 
 # Measure height on glacier
 scoreboard players set @s cv_H 0

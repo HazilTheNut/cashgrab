@@ -23,4 +23,4 @@ func_end:"cashgrab:trinkets/test_item/pmtl_raycast_end",\
 }
 
 execute if entity @a[tag=t_pm_owner,limit=1,scores={ev_eggs=1..,trinket_held=1}] run scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={trinket_charges=1..}] trinket_charges 1
-execute if entity @a[tag=t_pm_owner,limit=1,scores={ev_eggs=1..,trinket_held=1}] run function cashgrab:base/pmt_inv_trinket_argloader
+execute if entity @a[tag=t_pm_owner,limit=1,scores={ev_eggs=1..,trinket_held=1}] run function cashgrab:util/pmt_inv_trinket_argloader

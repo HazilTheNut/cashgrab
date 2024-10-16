@@ -30,4 +30,4 @@ tag @e[tag=t_coinshower_init,limit=1,sort=nearest] add t_coinshower
 tag @e[tag=t_coinshower_init,limit=1,sort=nearest] remove t_coinshower_init
 
 # Update owner coin display
-function cashgrab:base/pmt_inv_coins_argloader
+function cashgrab:util/pmt_inv_coins_argloader

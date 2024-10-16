@@ -1,4 +1,4 @@
-# base/pmt_inv_ability_icon_argloader.mcfunction
+# util/pmt_inv_ability_icon_argloader.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker

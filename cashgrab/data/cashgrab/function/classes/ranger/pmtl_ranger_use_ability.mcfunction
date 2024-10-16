@@ -26,4 +26,4 @@ execute if score @a[tag=t_pm_owner,limit=1] cv_F matches 2 run scoreboard player
 
 playsound minecraft:item.flintandsteel.use player @a[tag=t_pm_owner,limit=1] ~ ~ ~ 1.0 0.5
 
-function cashgrab:base/pmt_inv_refresh
+function cashgrab:util/pmt_inv_refresh

@@ -72,7 +72,7 @@ scoreboard players set @a[tag=t_pm_owner,scores={activity_state=11}] activity_st
 
 #	activity_state 21	=	Transition to Gameplay
 execute if score DEVELOPER_MODE num matches 0 run scoreboard players set @a[tag=t_pm_owner,scores={activity_state=21}] trinket_id 1
-execute if entity @a[tag=t_pm_owner,scores={activity_state=21}] run function cashgrab:base/pmt_trinket_init
+execute if entity @a[tag=t_pm_owner,scores={activity_state=21}] run function cashgrab:trinkets/pmt_trinket_init
 execute if entity @a[tag=t_pm_owner,scores={activity_state=21}] run function cashgrab:classes/pmt_class_init
 scoreboard players set @a[tag=t_pm_owner,scores={activity_state=21}] activity_state 20
 

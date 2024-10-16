@@ -28,10 +28,9 @@
 #execute store result score @s temp_A run data get storage cashgrab:rc_args data.delta_y 1000
 #tellraw @s[tag=t_debug,scores={col_terrain=1..}] [{"type":"text","text":"pe_raycast_fit_player temp_A: "},{"type":"score","score":{"name":"@s","objective":"temp_A"}}]
 
-# temp_B used to indicate if a case was encountered
 tag @s remove t_raycast_player_fit_case_met
 
-tellraw @a[tag=t_debug] "Running player fitting"
+#tellraw @a[tag=t_debug] "Running player fitting"
 
 # Case: descend top slab ceilings
 #
@@ -44,7 +43,7 @@ tellraw @a[tag=t_debug] "Running player fitting"
 #	_
 $execute if block ~ ~1 ~ #minecraft:slabs[type=top] if block ~ ~-1 ~ $(col_terrain_allowed) run tag @s add t_raycast_player_fit_case_met
 execute if block ~ ~1 ~ #minecraft:slabs[type=top] if block ~ ~-1 ~ #minecraft:slabs[type=bottom] run tag @s add t_raycast_player_fit_case_met
-execute if entity @s[tag=t_raycast_player_fit_case_met] run tellraw @a[tag=t_debug] "slab ceiling"
+#execute if entity @s[tag=t_raycast_player_fit_case_met] run tellraw @a[tag=t_debug] "slab ceiling"
 $execute if entity @s[tag=t_raycast_player_fit_case_met] align y positioned ~ ~-0.5 ~ run function $(func_end) {end_reason:1}
 execute if entity @s[tag=t_raycast_player_fit_case_met] run return 1
 
@@ -54,7 +53,7 @@ execute if entity @s[tag=t_raycast_player_fit_case_met] run return 1
 #	+
 #	.
 $execute unless block ~ ~1 ~ $(col_terrain_allowed) if block ~ ~-1 ~ $(col_terrain_allowed) run tag @s add t_raycast_player_fit_case_met
-execute if entity @s[tag=t_raycast_player_fit_case_met] run tellraw @a[tag=t_debug] "simple ceiling"
+#execute if entity @s[tag=t_raycast_player_fit_case_met] run tellraw @a[tag=t_debug] "simple ceiling"
 $execute if entity @s[tag=t_raycast_player_fit_case_met] positioned ~ ~-1 ~ align y run function $(func_end) {end_reason:1}
 execute if entity @s[tag=t_raycast_player_fit_case_met] run return 1
 
@@ -64,7 +63,7 @@ execute if entity @s[tag=t_raycast_player_fit_case_met] run return 1
 #	.
 #	+
 $execute if block ~ ~1 ~ $(col_terrain_allowed) if block ~ ~2 ~ #minecraft:slabs[type=top] run tag @s add t_raycast_player_fit_case_met
-execute if entity @s[tag=t_raycast_player_fit_case_met] run tellraw @a[tag=t_debug] "observe slab ceiling"
+#execute if entity @s[tag=t_raycast_player_fit_case_met] run tellraw @a[tag=t_debug] "observe slab ceiling"
 $execute if entity @s[tag=t_raycast_player_fit_case_met] align y positioned ~ ~0.5 ~ run function $(func_end) {end_reason:1}
 execute if entity @s[tag=t_raycast_player_fit_case_met] run return 1
 
@@ -74,7 +73,7 @@ execute if entity @s[tag=t_raycast_player_fit_case_met] run return 1
 #	.
 #	+
 $execute if block ~ ~1 ~ $(col_terrain_allowed) unless block ~ ~2 ~ $(col_terrain_allowed) run tag @s add t_raycast_player_fit_case_met
-execute if entity @s[tag=t_raycast_player_fit_case_met] run tellraw @a[tag=t_debug] "observe ceiling"
+#execute if entity @s[tag=t_raycast_player_fit_case_met] run tellraw @a[tag=t_debug] "observe ceiling"
 $execute if entity @s[tag=t_raycast_player_fit_case_met] positioned ~ ~ ~ align y run function $(func_end) {end_reason:1}
 execute if entity @s[tag=t_raycast_player_fit_case_met] run return 1
 
@@ -89,7 +88,7 @@ execute if entity @s[tag=t_raycast_player_fit_case_met] run return 1
 #	->_
 $execute positioned ~$(delta_x) ~$(delta_y) ~$(delta_z) if block ~ ~ ~ #minecraft:slabs[type=bottom] if block ~ ~1 ~ $(col_terrain_allowed) if block ~ ~2 ~ $(col_terrain_allowed) run tag @s add t_raycast_player_fit_case_met
 $execute positioned ~$(delta_x) ~$(delta_y) ~$(delta_z) if block ~ ~ ~ #minecraft:slabs[type=bottom] if block ~ ~1 ~ $(col_terrain_allowed) if block ~ ~2 ~ #minecraft:slabs[type=top] run tag @s add t_raycast_player_fit_case_met
-execute if entity @s[tag=t_raycast_player_fit_case_met] run tellraw @a[tag=t_debug] "slab ledge"
+#execute if entity @s[tag=t_raycast_player_fit_case_met] run tellraw @a[tag=t_debug] "slab ledge"
 $execute if entity @s[tag=t_raycast_player_fit_case_met] positioned ~$(delta_x) ~$(delta_y) ~$(delta_z) align y positioned ~ ~0.55 ~ run function $(func_end) {end_reason:1}
 execute if entity @s[tag=t_raycast_player_fit_case_met] run return 1
 
@@ -99,7 +98,7 @@ execute if entity @s[tag=t_raycast_player_fit_case_met] run return 1
 #	  .
 #	->#
 $execute positioned ~$(delta_x) ~$(delta_y) ~$(delta_z) unless block ~ ~ ~ $(col_terrain_allowed) if block ~ ~1 ~ $(col_terrain_allowed) if block ~ ~2 ~ $(col_terrain_allowed) run tag @s add t_raycast_player_fit_case_met
-execute if entity @s[tag=t_raycast_player_fit_case_met] run tellraw @a[tag=t_debug] "simple ledge"
+#execute if entity @s[tag=t_raycast_player_fit_case_met] run tellraw @a[tag=t_debug] "simple ledge"
 $execute if entity @s[tag=t_raycast_player_fit_case_met] positioned ~$(delta_x) ~$(delta_y) ~$(delta_z) positioned ~ ~1 ~ align y positioned ~ ~0.05 ~ run function $(func_end) {end_reason:1}
 execute if entity @s[tag=t_raycast_player_fit_case_met] run return 1
 

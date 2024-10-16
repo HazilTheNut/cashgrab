@@ -17,7 +17,7 @@
 execute if entity @a[tag=t_pm_owner,scores={__iev_drop=1..,ability_charges=1..}] run function cashgrab:classes/pmtl_class_use_ability
 scoreboard players remove @a[tag=t_pm_owner,scores={__iev_drop=1..,ability_charges=1..,activity_state=20..29}] ability_charges 1
 # Regardless of player state, refresh inventory whenever they toss an item
-execute if entity @a[tag=t_pm_owner,scores={__iev_drop=1..}] run function cashgrab:base/pmt_inv_refresh
+execute if entity @a[tag=t_pm_owner,scores={__iev_drop=1..}] run function cashgrab:util/pmt_inv_refresh
 # Consume event
 scoreboard players set @a[tag=t_pm_owner] __iev_drop 0
 
@@ -48,4 +48,4 @@ scoreboard players operation @a[tag=t_pm_owner,limit=1] ability_cd_secs /= NUM_T
 scoreboard players add @a[tag=t_pm_owner,scores={ability_cd_ticks=1..}] ability_cd_secs 1
 
 # Display ability icon while cooldown is ticking down
-execute if entity @a[tag=t_pm_owner,scores={ability_cd_ticks=0..}] run function cashgrab:base/pmt_inv_ability_icon_argloader
+execute if entity @a[tag=t_pm_owner,scores={ability_cd_ticks=0..}] run function cashgrab:util/pmt_inv_ability_icon_argloader

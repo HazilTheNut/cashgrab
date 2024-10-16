@@ -49,4 +49,4 @@ execute if entity @a[tag=t_pm_owner,scores={class=8}] run function cashgrab:clas
 execute if entity @a[tag=t_pm_owner,scores={class=9}] run function cashgrab:classes/alchemist/pmt_alchemist_init
 execute if entity @a[tag=t_pm_owner,scores={class=10}] run function cashgrab:classes/chronomancer/pmt_chronomancer_init
 
-function cashgrab:base/pmt_inv_refresh
+function cashgrab:util/pmt_inv_refresh

@@ -24,7 +24,7 @@
 execute unless score @a[tag=t_pm_owner,limit=1] cv_A matches -1 run return 0
 
 # Exit state
-function cashgrab:base/pmt_inv_refresh
+function cashgrab:util/pmt_inv_refresh
 particle minecraft:smoke ~ ~1 ~ 0.5 0.75 0.5 0 40
 effect clear @a[tag=t_pm_owner,limit=1] minecraft:speed
 tag @a[tag=t_pm_owner,limit=1] remove t_tracking_ignore

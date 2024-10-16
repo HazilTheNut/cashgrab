@@ -91,14 +91,14 @@ execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=100}] run
 execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=100,trinket_charges=1}] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C -1
 # Vigor Flask done
 execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=200}] run tag @a[tag=t_pm_owner,limit=1] add t_award_potions
-execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=200}] run function cashgrab:base/pmt_trinket_init
+execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=200}] run function cashgrab:trinkets/pmt_trinket_init
 execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=200}] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C -1
 
 # Award potions
 execute if entity @a[tag=t_pm_owner,limit=1,tag=t_award_potions] run clear @a[tag=t_pm_owner,limit=1] minecraft:potion
 execute if entity @a[tag=t_pm_owner,limit=1,tag=t_award_potions] run clear @a[tag=t_pm_owner,limit=1] minecraft:splash_potion
 execute if entity @a[tag=t_pm_owner,limit=1,tag=t_award_potions] run function cashgrab:classes/alchemist/pmt_alchemist_inv_potions
-execute if entity @a[tag=t_pm_owner,limit=1,tag=t_award_potions] run function cashgrab:base/pmt_inv_trinket_argloader
+execute if entity @a[tag=t_pm_owner,limit=1,tag=t_award_potions] run function cashgrab:util/pmt_inv_trinket_argloader
 
 tag @a[tag=t_pm_owner,limit=1] remove t_award_potions
 
