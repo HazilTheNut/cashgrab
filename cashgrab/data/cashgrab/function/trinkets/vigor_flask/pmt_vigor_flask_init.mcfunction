@@ -1,4 +1,4 @@
-# trinkets/pmt_vigor_flask_init.mcfunction
+# trinkets/vigor_flask/pmt_vigor_flask_init.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker

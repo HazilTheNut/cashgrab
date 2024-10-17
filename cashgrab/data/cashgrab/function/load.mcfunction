@@ -365,6 +365,15 @@ scoreboard objectives add stasis_stored_z_vel_mmpt dummy
 scoreboard objectives add stasis_stored_arrow_crit dummy
 
 # =============================
+# Values used for class-and-trinket selection (CTS) menuing
+
+# page_idx is 0-based while page_num is 1-based
+scoreboard objectives add __cts_classes_page_idx dummy
+scoreboard objectives add __cts_classes_page_num dummy
+scoreboard objectives add __cts_trinkets_page_idx dummy
+scoreboard objectives add __cts_trinkets_page_num dummy
+
+# =============================
 # Teams
 
 # FFA Team
@@ -407,10 +416,10 @@ team modify team_coin_goal color yellow
 team join team_coin_goal GOAL
 
 # =============================
-# Class info
+# Class and Trinket info
 
-scoreboard players set NUM_CTS_CLASS_PAGE_SIZE num 15
-scoreboard players set NUM_CTS_TRINKET_PAGE_SIZE num 4
+scoreboard players set NUM_CTS_CLASSES_PAGE_SIZE num 15
+scoreboard players set NUM_CTS_TRINKETS_PAGE_SIZE num 6
 
 # Initialize cashgrab:game_info.classes roster list
 data remove storage cashgrab:game_info classes
@@ -422,3 +431,39 @@ data modify storage cashgrab:game_info trinkets set value []
 
 # Load cashgrab core classes
 function cashgrab:load_post
+
+# Add NULL entries
+data modify storage cashgrab:game_info classes prepend value {\
+class_name:"NULL",\
+func_init:"cashgrab:util/dummy",\
+func_inv:"cashgrab:util/dummy",\
+func_inv_ability_icon:"cashgrab:util/dummy",\
+func_tick:"cashgrab:util/dummy",\
+func_use_ability:"cashgrab:util/dummy",\
+func_cts_icon:"cashgrab:util/dummy",\
+func_cts_tick:"cashgrab:util/dummy",\
+}
+
+data modify storage cashgrab:game_info trinkets prepend value {\
+trinket_name:"NULL",\
+func_init:"cashgrab:util/dummy",\
+func_inv:"cashgrab:util/dummy",\
+func_tick:"cashgrab:util/dummy",\
+func_cts_icon:"cashgrab:util/dummy",\
+}
+
+# Calculate classes list quantites for later use
+scoreboard players set NUM_CTS_CLASSES_LIST_LEN num 0
+execute store result score NUM_CTS_CLASSES_LIST_LEN num run data get storage cashgrab:game_info classes
+
+scoreboard players set NUM_CTS_CLASSES_PAGE_IDX_MAX num 0
+scoreboard players operation NUM_CTS_CLASSES_PAGE_IDX_MAX num = NUM_CTS_CLASSES_LIST_LEN num
+scoreboard players operation NUM_CTS_CLASSES_PAGE_IDX_MAX num /= NUM_CTS_CLASSES_PAGE_SIZE num
+
+# Calculate trinkets list quantites for later use
+scoreboard players set NUM_CTS_TRINKETS_LIST_LEN num 0
+execute store result score NUM_CTS_TRINKETS_LIST_LEN num run data get storage cashgrab:game_info trinkets
+
+scoreboard players set NUM_CTS_TRINKETS_PAGE_IDX_MAX num 0
+scoreboard players operation NUM_CTS_TRINKETS_PAGE_IDX_MAX num = NUM_CTS_TRINKETS_LIST_LEN num
+scoreboard players operation NUM_CTS_TRINKETS_PAGE_IDX_MAX num /= NUM_CTS_TRINKETS_PAGE_SIZE num

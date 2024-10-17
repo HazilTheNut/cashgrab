@@ -58,17 +58,17 @@ execute at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function cashgra
 
 #	activity_state 1	=	Transition to In Pregame Lobby
 clear @a[tag=t_pm_owner,scores={activity_state=1}]
-execute if entity @a[tag=t_pm_owner,scores={activity_state=1}] run function cashgrab:classes/pmt_inv_refresh
+execute if entity @a[tag=t_pm_owner,scores={activity_state=1}] run function cashgrab:util/pmt_inv_refresh
 scoreboard players set @a[tag=t_pm_owner,scores={activity_state=1}] activity_state 0
 
 #	activity_state 0	=	In Pregame Lobby
 
-#	activity_state 11	=	Transition to Class Select
-clear @a[tag=t_pm_owner,scores={activity_state=1}]
-execute if entity @a[tag=t_pm_owner,scores={activity_state=1}] run function cashgrab:classes/pmt_inv_refresh
+#	activity_state 11	=	Transition to Class-and-Trinket Select
+clear @a[tag=t_pm_owner,scores={activity_state=11}]
+execute if entity @a[tag=t_pm_owner,scores={activity_state=11}] run function cashgrab:util/pmt_inv_refresh
 scoreboard players set @a[tag=t_pm_owner,scores={activity_state=11}] activity_state 10
 
-#	activity_state 10	=	Class Select (in spawn selection room)
+#	activity_state 10	=	Class-and-Trinket Select (in spawn selection room)
 
 #	activity_state 21	=	Transition to Gameplay
 execute if score DEVELOPER_MODE num matches 0 run scoreboard players set @a[tag=t_pm_owner,scores={activity_state=21}] trinket_id 1

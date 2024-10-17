@@ -28,7 +28,7 @@ item replace entity @a[tag=t_pm_owner] inventory.3 with minecraft:air
 item replace entity @a[tag=t_pm_owner] inventory.4 with minecraft:air
 item replace entity @a[tag=t_pm_owner] inventory.5 with minecraft:air
 item replace entity @a[tag=t_pm_owner] inventory.6 with minecraft:air
-item replace entity @a[tag=t_pm_owner] inventory.7 with minecraft:air
+#item replace entity @a[tag=t_pm_owner] inventory.7 with minecraft:air
 item replace entity @a[tag=t_pm_owner] inventory.8 with minecraft:air
 item replace entity @a[tag=t_pm_owner] inventory.9 with minecraft:air
 item replace entity @a[tag=t_pm_owner] inventory.10 with minecraft:air
@@ -49,13 +49,15 @@ item replace entity @a[tag=t_pm_owner] inventory.24 with minecraft:air
 item replace entity @a[tag=t_pm_owner] inventory.25 with minecraft:air
 item replace entity @a[tag=t_pm_owner] inventory.26 with minecraft:air
 
-#function cashgrab:classes/pe_inv_perclass
+tellraw @a[tag=t_pm_owner,tag=t_debug] "util/pmt_inv_refresh"
 
-# During gameplay, load class inventory, display ability icon and trinket
-execute if entity @a[tag=t_pm_owner,scores={activity_state=20..29}] run function cashgrab:classes/pmt_class_inv
-execute if entity @a[tag=t_pm_owner,scores={activity_state=20..29}] run function cashgrab:util/pmt_inv_ability_icon_argloader
-execute if entity @a[tag=t_pm_owner,scores={activity_state=20..29,class=0..}] run function cashgrab:util/pmt_inv_trinket_argloader
+# During class-and-trinket selection, display inventory UI
+execute if entity @a[tag=t_pm_owner,scores={activity_state=10..19}] run function cashgrab:cts/pmt_cts_inv_main
 
+# During either class-and-trinket selection or gameplay, load class inventory, ability icon, and trinket
+execute if entity @a[tag=t_pm_owner,scores={activity_state=10..29}] run function cashgrab:classes/pmt_class_inv
+execute if entity @a[tag=t_pm_owner,scores={activity_state=10..29}] run function cashgrab:util/pmt_inv_ability_icon_argloader
+execute if entity @a[tag=t_pm_owner,scores={activity_state=10..29,class=0..}] run function cashgrab:util/pmt_inv_trinket_argloader
 
 # Display coins on hotbar
 function cashgrab:util/pmt_inv_coins_argloader

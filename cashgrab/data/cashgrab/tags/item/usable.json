@@ -28,6 +28,10 @@
 		{
 			"id": "minecraft:egg",
 			"required": true
+		},
+		{
+			"id": "minecraft:map",
+			"required": true
 		}
 	]
 }

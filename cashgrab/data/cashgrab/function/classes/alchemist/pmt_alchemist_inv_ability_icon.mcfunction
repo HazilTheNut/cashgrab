@@ -1,10 +1,10 @@
-# classes/alchemist/pe_ability_icon.mcfunction
+# classes/alchemist/pmt_alchemist_inv_ability_icon.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
 #	+ the owner of the pm is tagged with t_pm_owner
 #
-# Summary: Inserts equipped class ability icon into hotbar slot 4
+# Summary: Inserts equipped class ability icon
 #
 # Arguments:
 #	charges		: Number of charges of ability

@@ -36,11 +36,25 @@ execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches
 execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches 1.. run tag @a[tag=t_player_initialize] add dtm_send_to_spawn_select
 execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches 1.. run scoreboard players set @a[tag=t_player_initialize] activity_state 11
 
-# Initialize player scoreboard values
+# --- Initialize player scoreboard values
+
+# EID values
 scoreboard players set @a[tag=t_player_initialize,limit=1] eid_grabbed_by 0
 scoreboard players set @a[tag=t_player_initialize,limit=1] eid_state 2
 scoreboard players set @a[tag=t_player_initialize,limit=1] team_id 0
+
+# Game objectives
 scoreboard players set @a[tag=t_player_initialize,limit=1] coins 0
+
+# CTS
+scoreboard players add @a[tag=t_player_initialize,limit=1] class 0
+scoreboard players set @a[tag=t_player_initialize,limit=1,scores={class=0}] class 1
+scoreboard players add @a[tag=t_player_initialize,limit=1] __cts_classes_page_idx 0
+scoreboard players add @a[tag=t_player_initialize,limit=1] trinket_id 0
+scoreboard players set @a[tag=t_player_initialize,limit=1,scores={trinket_id=0}] trinket_id 1
+scoreboard players add @a[tag=t_player_initialize,limit=1] __cts_trinkets_page_idx 0
+
+# Clear events
 scoreboard players set @a[tag=t_player_initialize,limit=1] __iev_logout 0
 scoreboard players set @a[tag=t_player_initialize,limit=1] reinitialize 0
 
