@@ -9,7 +9,7 @@
 # Arguments:
 #	slot	:	Inventory slot to insert into
 
-$execute if score @a[tag=t_pm_owner,limit=1] __cts_classes_page_idx < NUM_CTS_CLASSES_PAGE_IDX_MAX num run item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:iron_nugget[\
+$execute if score @a[tag=t_pm_owner,limit=1] __cts_classes_page_idx < NUM_CTS_CLASSES_PAGE_IDX_MAX num run item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:glass_pane[\
 minecraft:item_name="[{\"color\":\"gold\",\"italic\":false,\"text\":\"<Next Page>\"}]"\
 ] 1
 

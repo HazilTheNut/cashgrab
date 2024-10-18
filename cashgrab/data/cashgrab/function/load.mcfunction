@@ -434,21 +434,19 @@ function cashgrab:load_post
 
 # Add NULL entries
 data modify storage cashgrab:game_info classes prepend value {\
-class_name:"NULL",\
 func_init:"cashgrab:util/dummy",\
 func_inv:"cashgrab:util/dummy",\
 func_inv_ability_icon:"cashgrab:util/dummy",\
 func_tick:"cashgrab:util/dummy",\
 func_use_ability:"cashgrab:util/dummy",\
-func_cts_icon:"cashgrab:util/dummy",\
+func_cts_icon:"cashgrab:cts/pmt_null_cts_inv_icon",\
 func_cts_tick:"cashgrab:util/dummy",\
 }
 
 data modify storage cashgrab:game_info trinkets prepend value {\
-trinket_name:"NULL",\
 func_init:"cashgrab:util/dummy",\
 func_inv:"cashgrab:util/dummy",\
-func_tick:"cashgrab:util/dummy",\
+func_tick:"cashgrab:cts/pmt_null_cts_inv_icon",\
 func_cts_icon:"cashgrab:util/dummy",\
 }
 
@@ -458,7 +456,12 @@ execute store result score NUM_CTS_CLASSES_LIST_LEN num run data get storage cas
 
 scoreboard players set NUM_CTS_CLASSES_PAGE_IDX_MAX num 0
 scoreboard players operation NUM_CTS_CLASSES_PAGE_IDX_MAX num = NUM_CTS_CLASSES_LIST_LEN num
+scoreboard players remove NUM_CTS_CLASSES_PAGE_IDX_MAX num 2
 scoreboard players operation NUM_CTS_CLASSES_PAGE_IDX_MAX num /= NUM_CTS_CLASSES_PAGE_SIZE num
+
+# Store max page number in cashgrab:cts_inv_args
+execute store result storage cashgrab:cts_inv_args classes_page_num_max int 1 run scoreboard players add NUM_CTS_CLASSES_PAGE_IDX_MAX num 1
+scoreboard players remove NUM_CTS_CLASSES_PAGE_IDX_MAX num 1
 
 # Calculate trinkets list quantites for later use
 scoreboard players set NUM_CTS_TRINKETS_LIST_LEN num 0
@@ -466,4 +469,9 @@ execute store result score NUM_CTS_TRINKETS_LIST_LEN num run data get storage ca
 
 scoreboard players set NUM_CTS_TRINKETS_PAGE_IDX_MAX num 0
 scoreboard players operation NUM_CTS_TRINKETS_PAGE_IDX_MAX num = NUM_CTS_TRINKETS_LIST_LEN num
+scoreboard players remove NUM_CTS_TRINKETS_PAGE_IDX_MAX num 2
 scoreboard players operation NUM_CTS_TRINKETS_PAGE_IDX_MAX num /= NUM_CTS_TRINKETS_PAGE_SIZE num
+
+# Store max page number in cashgrab:cts_inv_args
+execute store result storage cashgrab:cts_inv_args trinkets_page_num_max int 1 run scoreboard players add NUM_CTS_TRINKETS_PAGE_IDX_MAX num 1
+scoreboard players remove NUM_CTS_TRINKETS_PAGE_IDX_MAX num 1

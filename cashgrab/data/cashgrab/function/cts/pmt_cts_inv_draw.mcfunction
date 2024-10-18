@@ -7,14 +7,16 @@
 # Summary: Inventory draw function for class-and-trinket selection
 #
 # Arguments: 
-#	classes_page_num	:	Classes Page number to display
-#	trinkets_page_num	:	Trinkets Page number to display
+#	classes_page_num		:	Classes Page number to display
+#	classes_page_num_max	:	Max Classes Page number to display
+#	trinkets_page_num		:	Trinkets Page number to display
+#	trinkets_page_num_max	:	Max Trinkets Page number to display
 
 #tellraw @a[tag=t_pm_owner,tag=t_debug] "cts/pmt_cts_inv_draw"
 
 # Column 0 : classes page selection
 function cashgrab:cts/pmt_cts_inv_classes_page_up {slot:"inventory.0"}
-$function cashgrab:cts/pmt_cts_inv_classes_page_num {slot:"inventory.9",classes_page_num:$(classes_page_num)}
+$function cashgrab:cts/pmt_cts_inv_classes_page_num {slot:"inventory.9",classes_page_num:$(classes_page_num),classes_page_num_max:$(classes_page_num_max)}
 function cashgrab:cts/pmt_cts_inv_classes_page_down {slot:"inventory.18"}
 
 # Columns 1-5 : classes selection
@@ -36,7 +38,7 @@ function cashgrab:cts/pmt_cts_inv_classes_icon_argloader {slot:"inventory.23",lo
 
 # Column 6 : trinkets page selection
 function cashgrab:cts/pmt_cts_inv_trinkets_page_up {slot:"inventory.6"}
-$function cashgrab:cts/pmt_cts_inv_trinkets_page_num {slot:"inventory.15",trinkets_page_num:$(trinkets_page_num)}
+$function cashgrab:cts/pmt_cts_inv_trinkets_page_num {slot:"inventory.15",trinkets_page_num:$(trinkets_page_num),trinkets_page_num_max:$(trinkets_page_num_max)}
 function cashgrab:cts/pmt_cts_inv_trinkets_page_down {slot:"inventory.24"}
 
 # Columns 7-8 : trinkets selection

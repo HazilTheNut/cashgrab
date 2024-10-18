@@ -119,7 +119,6 @@ func_cts_tick:"cashgrab:util/dummy",\
 # Append trinket roster data
 
 data modify storage cashgrab:game_info trinkets append value {\
-trinket_name:"Vigor Flask",\
 func_init:"cashgrab:trinkets/vigor_flask/pmt_vigor_flask_init",\
 func_inv:"cashgrab:trinkets/vigor_flask/pmt_vigor_flask_inv",\
 func_tick:"cashgrab:trinkets/vigor_flask/pmtl_vigor_flask_tick",\

@@ -69,6 +69,7 @@ execute if entity @a[tag=t_pm_owner,scores={activity_state=11}] run function cas
 scoreboard players set @a[tag=t_pm_owner,scores={activity_state=11}] activity_state 10
 
 #	activity_state 10	=	Class-and-Trinket Select (in spawn selection room)
+execute if entity @a[tag=t_pm_owner,scores={activity_state=10}] run function cashgrab:cts/pmt_cts_input_main
 
 #	activity_state 21	=	Transition to Gameplay
 execute if score DEVELOPER_MODE num matches 0 run scoreboard players set @a[tag=t_pm_owner,scores={activity_state=21}] trinket_id 1
@@ -77,8 +78,8 @@ execute if entity @a[tag=t_pm_owner,scores={activity_state=21}] run function cas
 scoreboard players set @a[tag=t_pm_owner,scores={activity_state=21}] activity_state 20
 
 #	activity_state 20	=	Gameplay
-execute if entity @a[tag=t_pm_owner,scores={activity_state=20}] at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function cashgrab:classes/pmtl_class_tick
 execute if entity @a[tag=t_pm_owner,scores={activity_state=20}] at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function cashgrab:base/pmtl_trinket_tick
+execute if entity @a[tag=t_pm_owner,scores={activity_state=20}] at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function cashgrab:classes/pmtl_class_tick
 
 # =============================
 # Post-tick actions
