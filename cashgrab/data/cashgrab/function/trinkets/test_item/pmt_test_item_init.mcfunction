@@ -9,3 +9,4 @@
 # Arguments: (none)
 
 scoreboard players set @a[tag=t_pm_owner,limit=1] trinket_charges 16
+scoreboard players set @a[tag=t_pm_owner,limit=1] trinket_charges_max 16

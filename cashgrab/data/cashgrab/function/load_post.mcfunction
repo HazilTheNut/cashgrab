@@ -121,7 +121,7 @@ func_pmtl_cts_tick:"cashgrab:util/dummy",\
 data modify storage cashgrab:game_info trinkets append value {\
 func_pmt_init:"cashgrab:trinkets/vigor_flask/pmt_vigor_flask_init",\
 func_pmt_inv:"cashgrab:trinkets/vigor_flask/pmt_vigor_flask_inv",\
-func_pmtl_tick:"cashgrab:trinkets/vigor_flask/pmtll_vigor_flask_tick",\
+func_pmtl_use_item:"cashgrab:trinkets/vigor_flask/pmtll_vigor_flask_use_item",\
 func_pmt_cts_icon:"cashgrab:trinkets/vigor_flask/pmt_vigor_flask_cts_inv_icon",\
 }
 
@@ -139,6 +139,6 @@ func_pmtl_cts_tick:"cashgrab:util/dummy",\
 execute if score DEVELOPER_MODE num matches 1 run data modify storage cashgrab:game_info trinkets append value {\
 func_pmt_init:"cashgrab:trinkets/test_item/pmt_test_item_init",\
 func_pmt_inv:"cashgrab:trinkets/test_item/pmt_test_item_inv",\
-func_pmtl_tick:"cashgrab:trinkets/test_item/pmtll_test_item_tick",\
+func_pmtl_use_item:"cashgrab:trinkets/test_item/pmtl_test_item_use_item",\
 func_pmt_cts_icon:"cashgrab:trinkets/test_item/pmt_test_item_cts_inv_icon",\
 }

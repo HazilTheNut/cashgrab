@@ -9,17 +9,20 @@
 # Summary: Branching tick function for equipped trinket
 #
 # Arguments:
-#	func_pmtl_tick	: function to run every tick
-
-# Track whether trinket is held. trinket_held can be used by trinket code to determine if the player's use item button will use a trinket
-scoreboard players set @a[tag=t_pm_owner,limit=1,scores={trinket_in_offhand=0}] trinket_held 0
-execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_selected_hotbar_slot=3}] unless items entity @a[tag=t_pm_owner,limit=1] hotbar.3 #cashgrab:usable[!custom_data={is_trinket:1}] run scoreboard players set @a[tag=t_pm_owner,limit=1] trinket_held 1
-execute if items entity @a[tag=t_pm_owner,limit=1] weapon.* *[custom_data={is_trinket:1}] run scoreboard players set @a[tag=t_pm_owner,limit=1] trinket_held 1
-execute if items entity @a[tag=t_pm_owner,limit=1] weapon.offhand *[custom_data={is_trinket:1}] if items entity @a[tag=t_pm_owner,limit=1] weapon.mainhand #cashgrab:usable run scoreboard players set @a[tag=t_pm_owner,limit=1] trinket_held 0
+#	func_pmtl_use_item	: function to run when the trinket item is used
 
 # Track whether trinket is in offhand
 scoreboard players set @a[tag=t_pm_owner,limit=1] trinket_in_offhand 0
 execute if items entity @a[tag=t_pm_owner,limit=1] weapon.offhand *[custom_data={is_trinket:1}] run scoreboard players set @a[tag=t_pm_owner,limit=1] trinket_in_offhand 1
 
-# Branch execution based on equipped trinket
-$function $(func_pmtl_tick)
+# Get trinket quantity in inventory
+function cashgrab:base/pmt_trinket_count
+
+# If current charge count is less than previous, trinket was used
+$execute if score @a[tag=t_pm_owner,limit=1] trinket_charges < @a[tag=t_pm_owner,limit=1] __trinket_charges_prev run function $(func_pmtl_use_item)
+
+# If trinket count changed, reload display for trinket
+execute unless score @a[tag=t_pm_owner,limit=1] trinket_charges = @a[tag=t_pm_owner,limit=1] __trinket_charges_prev run function cashgrab:util/pmt_inv_trinket_argloader
+
+# Store current into previous
+scoreboard players operation @a[tag=t_pm_owner,limit=1] __trinket_charges_prev = @a[tag=t_pm_owner,limit=1] trinket_charges

@@ -66,6 +66,7 @@ scoreboard objectives add ability_charges dummy
 
 # Number of usages remaining
 scoreboard objectives add trinket_charges dummy
+scoreboard objectives add trinket_charges_max dummy
 scoreboard objectives add __trinket_charges_prev dummy
 
 # ID of trinket equipped

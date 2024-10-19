@@ -10,7 +10,7 @@
 #	slot		:	Inventory slot to insert into
 #	local_idx	:	Index local to page; used to calculate class_id = (page_idx * page_size) + local_idx
 
-$tellraw @a[tag=t_debug] "cts/pmt_cts_inv_classes_icon_argloader: slot: $(slot); local_idx: $(local_idx)"
+#$tellraw @a[tag=t_debug] "cts/pmt_cts_inv_classes_icon_argloader: slot: $(slot); local_idx: $(local_idx)"
 
 # Calculate class id
 scoreboard players operation @a[tag=t_pm_owner,limit=1] temp_A = @a[tag=t_pm_owner,limit=1] __cts_classes_page_idx
