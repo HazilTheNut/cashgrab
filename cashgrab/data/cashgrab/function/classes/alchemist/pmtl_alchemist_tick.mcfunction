@@ -91,14 +91,12 @@ execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=100}] run
 execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=100}] if score @a[tag=t_pm_owner,limit=1] trinket_charges >= @a[tag=t_pm_owner,limit=1] trinket_charges_max run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C -1
 # Vigor Flask done
 execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=200}] run tag @a[tag=t_pm_owner,limit=1] add t_award_potions
-execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=200}] run scoreboard players operation @a[tag=t_pm_owner,limit=1] trinket_charges = @a[tag=t_pm_owner,limit=1] trinket_charges_max
+execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=200}] run function cashgrab:util/pmt_trinket_reset_charges
 execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=200}] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C -1
 
 # Award potions
-execute if entity @a[tag=t_pm_owner,limit=1,tag=t_award_potions] run clear @a[tag=t_pm_owner,limit=1] minecraft:potion
-execute if entity @a[tag=t_pm_owner,limit=1,tag=t_award_potions] run clear @a[tag=t_pm_owner,limit=1] minecraft:splash_potion
+execute if entity @a[tag=t_pm_owner,limit=1,tag=t_award_potions] run clear @a[tag=t_pm_owner,limit=1] *[minecraft:custom_data={is_alchemist_potion:1}]
 execute if entity @a[tag=t_pm_owner,limit=1,tag=t_award_potions] run function cashgrab:classes/alchemist/pmt_alchemist_inv_potions
-execute if entity @a[tag=t_pm_owner,limit=1,tag=t_award_potions] run function cashgrab:util/pmt_inv_trinket_argloader
 
 tag @a[tag=t_pm_owner,limit=1] remove t_award_potions
 

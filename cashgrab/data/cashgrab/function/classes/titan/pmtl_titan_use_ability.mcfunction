@@ -27,7 +27,7 @@ i_range_m:25,\
 i_origin_loc:1,\
 col_terrain_allowed:"#cashgrab:nonsolid",\
 b_fit_player:0,\
-func_entity_filter:"cashgrab:util/npe_col_entity_filter_hostile",\
-func_step:"cashgrab:classes/titan/pull_raycast_step",\
-func_end:"cashgrab:classes/titan/pull_raycast_end",\
+func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_hostile",\
+func_npe_step:"cashgrab:classes/titan/pull_raycast_step",\
+func_npe_end:"cashgrab:classes/titan/pull_raycast_end",\
 }

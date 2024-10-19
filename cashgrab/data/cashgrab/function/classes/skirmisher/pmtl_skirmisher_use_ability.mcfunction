@@ -41,11 +41,11 @@ i_gravity_const_mmpt2:0,\
 f_tracking_scalar:0f,\
 t_missile_name:"t_boomerang",\
 col_terrain_allowed:"#cashgrab:partialsolid",\
-func_entity_filter:"cashgrab:util/npe_col_entity_filter_none",\
-func_tracking_filter:"cashgrab:util/dummy",\
-func_start:"cashgrab:classes/skirmisher/boomerang_start_cutlass",\
-func_step:"cashgrab:classes/skirmisher/boomerang_step",\
-func_end:"cashgrab:classes/skirmisher/boomerang_end",\
+func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_none",\
+func_npe_tracking_filter:"cashgrab:util/dummy",\
+func_npe_start:"cashgrab:classes/skirmisher/boomerang_start_cutlass",\
+func_npe_step:"cashgrab:classes/skirmisher/boomerang_step",\
+func_npe_end:"cashgrab:classes/skirmisher/boomerang_end",\
 b_assign_as_peer:1,\
 }
 
@@ -60,11 +60,11 @@ i_gravity_const_mmpt2:0,\
 f_tracking_scalar:0f,\
 t_missile_name:"t_boomerang",\
 col_terrain_allowed:"#cashgrab:partialsolid",\
-func_entity_filter:"cashgrab:util/npe_col_entity_filter_none",\
-func_tracking_filter:"cashgrab:util/dummy",\
-func_start:"cashgrab:classes/skirmisher/boomerang_start_rapier",\
-func_step:"cashgrab:classes/skirmisher/boomerang_step",\
-func_end:"cashgrab:classes/skirmisher/boomerang_end",\
+func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_none",\
+func_npe_tracking_filter:"cashgrab:util/dummy",\
+func_npe_start:"cashgrab:classes/skirmisher/boomerang_start_rapier",\
+func_npe_step:"cashgrab:classes/skirmisher/boomerang_step",\
+func_npe_end:"cashgrab:classes/skirmisher/boomerang_end",\
 b_assign_as_peer:1,\
 }
 

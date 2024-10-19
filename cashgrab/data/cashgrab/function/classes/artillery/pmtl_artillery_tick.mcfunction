@@ -40,11 +40,11 @@ i_gravity_const_mmpt2:0,\
 t_missile_name:"t_artillery_missile_init",\
 f_tracking_scalar:0.0f,\
 col_terrain_allowed:"#cashgrab:partialsolid",\
-func_entity_filter:"cashgrab:util/npe_col_entity_filter_hostile",\
-func_tracking_filter:"cashgrab:util/dummy",\
-func_start:"cashgrab:util/dummy",\
-func_step:"cashgrab:classes/artillery/missile_step",\
-func_end:"cashgrab:classes/artillery/missile_end",\
+func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_hostile",\
+func_npe_tracking_filter:"cashgrab:util/dummy",\
+func_npe_start:"cashgrab:util/dummy",\
+func_npe_step:"cashgrab:classes/artillery/missile_step",\
+func_npe_end:"cashgrab:classes/artillery/missile_end",\
 b_assign_as_peer:1,\
 }
 execute if entity @a[tag=t_pm_owner,limit=1,tag=t_artillery_missile_rh] run playsound minecraft:entity.firework_rocket.launch player @a ~ ~ ~ 1.0 1.25
@@ -60,11 +60,11 @@ i_gravity_const_mmpt2:0,\
 t_missile_name:"t_artillery_missile_init",\
 f_tracking_scalar:0.0f,\
 col_terrain_allowed:"#cashgrab:partialsolid",\
-func_entity_filter:"cashgrab:util/npe_col_entity_filter_hostile",\
-func_tracking_filter:"cashgrab:util/dummy",\
-func_start:"cashgrab:util/dummy",\
-func_step:"cashgrab:classes/artillery/missile_step",\
-func_end:"cashgrab:classes/artillery/missile_end",\
+func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_hostile",\
+func_npe_tracking_filter:"cashgrab:util/dummy",\
+func_npe_start:"cashgrab:util/dummy",\
+func_npe_step:"cashgrab:classes/artillery/missile_step",\
+func_npe_end:"cashgrab:classes/artillery/missile_end",\
 b_assign_as_peer:1,\
 }
 execute if entity @a[tag=t_pm_owner,limit=1,tag=t_artillery_missile_lh] run playsound minecraft:entity.firework_rocket.launch player @a ~ ~ ~ 1.0 1.25

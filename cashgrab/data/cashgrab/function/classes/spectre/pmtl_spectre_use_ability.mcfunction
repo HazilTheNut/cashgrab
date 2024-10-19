@@ -27,9 +27,9 @@ i_range_m:11,\
 i_origin_loc:0,\
 col_terrain_allowed:"#cashgrab:partialsolid",\
 b_fit_player:1,\
-func_entity_filter:"cashgrab:util/npe_col_entity_filter_none",\
-func_step:"cashgrab:util/dummy",\
-func_end:"cashgrab:classes/spectre/pmtl_blink_end",\
+func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_none",\
+func_npe_step:"cashgrab:util/dummy",\
+func_npe_end:"cashgrab:classes/spectre/pmtl_blink_end",\
 }
 
 # Release player if they were grabbed

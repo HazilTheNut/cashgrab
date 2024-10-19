@@ -7,12 +7,12 @@
 # Summary: Runs collision detection algorithm for entities at the execution position.
 #
 # Arguments:
-#	func_entity_filter	: Filtering function for which entities to collide with. Function applies the tag "t_collision_candidate" to all possible entities that can collide with
+#	func_npe_entity_filter	: Filtering function for which entities to collide with. Function applies the tag "t_collision_candidate" to all possible entities that can collide with
 #
 # Returns: 1 if the collision detection found an entity and 0 otherwise. If the collision detection found an entity, they will be tagged with "t_collision_found".
 
 # Run filter function
-$function $(func_entity_filter)
+$function $(func_npe_entity_filter)
 
 tag @e remove t_collision_found
 

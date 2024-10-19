@@ -38,7 +38,8 @@ execute as @n[type=!minecraft:player,tag=t_collision_found,scores={eid_state=1..
 lifetime_ticks:200,\
 b_anchor_at_pos:0,\
 t_timer_name:"t_titan_power_strike_knockback_tmr",\
-func_step:"cashgrab:classes/titan/power_strike_timer_step",\
-func_end:"cashgrab:util/dummy",\
+func_npe_start:"cashgrab:util/dummy",\
+func_npe_step:"cashgrab:classes/titan/power_strike_timer_step",\
+func_npe_end:"cashgrab:util/dummy",\
 b_assign_as_peer:0,\
 }

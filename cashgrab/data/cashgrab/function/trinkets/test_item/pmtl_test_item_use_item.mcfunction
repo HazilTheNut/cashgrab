@@ -17,9 +17,9 @@ i_range_m:5,\
 i_origin_loc:1,\
 col_terrain_allowed:"#cashgrab:partialsolid",\
 b_fit_player:1,\
-func_entity_filter:"cashgrab:util/npe_col_filter_entity_owner",\
-func_step:"cashgrab:trinkets/test_item/pmtl_raycast_step",\
-func_end:"cashgrab:trinkets/test_item/pmtl_raycast_end",\
+func_npe_entity_filter:"cashgrab:util/npe_col_filter_entity_owner",\
+func_npe_step:"cashgrab:trinkets/test_item/pmtl_raycast_step",\
+func_npe_end:"cashgrab:trinkets/test_item/pmtl_raycast_end",\
 }
 
 # Consume events

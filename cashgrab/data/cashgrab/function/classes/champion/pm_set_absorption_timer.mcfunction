@@ -15,12 +15,14 @@ execute unless entity @a[tag=t_eid_matches,limit=1,tag=t_champion_set_absorption
 
 # If owner has tag, set timer
 execute at @a[tag=t_eid_matches,limit=1] run particle minecraft:crit ~ ~0.4 ~ 1.25 1.0 1.25 0 50
+execute at @a[tag=t_eid_matches,limit=1] run playsound minecraft:item.axe.wax_off player @a ~ ~ ~ 1.0 2.0
 execute at @a[tag=t_eid_matches,limit=1] run function cashgrab:util/npe_set_timer {\
 lifetime_ticks:80,\
 b_anchor_at_pos:0,\
 t_timer_name:"t_champion_absorption_timer_init",\
-func_step:"cashgrab:classes/champion/npe_absorption_particle_timer_step",\
-func_end:"cashgrab:util/dummy",\
+func_npe_start:"cashgrab:util/dummy",\
+func_npe_step:"cashgrab:classes/champion/npe_absorption_particle_timer_step",\
+func_npe_end:"cashgrab:util/dummy",\
 b_assign_as_peer:1,\
 }
 

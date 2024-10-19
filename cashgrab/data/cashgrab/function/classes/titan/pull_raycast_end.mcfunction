@@ -42,11 +42,11 @@ i_gravity_const_mmpt2:0,\
 t_missile_name:"t_titan_missile_init",\
 f_tracking_scalar:0f,\
 col_terrain_allowed:"#cashgrab:nonsolid",\
-func_entity_filter:"cashgrab:util/npe_col_entity_filter_none",\
-func_tracking_filter:"cashgrab:util/dummy",\
-func_start:"cashgrab:util/dummy",\
-func_step:"cashgrab:classes/titan/pull_missile_step",\
-func_end:"cashgrab:classes/titan/pull_missile_end",\
+func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_none",\
+func_npe_tracking_filter:"cashgrab:util/dummy",\
+func_npe_start:"cashgrab:util/dummy",\
+func_npe_step:"cashgrab:classes/titan/pull_missile_step",\
+func_npe_end:"cashgrab:classes/titan/pull_missile_end",\
 b_assign_as_peer:0,\
 }
 

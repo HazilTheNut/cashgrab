@@ -16,7 +16,7 @@
 # Apply projectile tracking
 #tellraw @a[tag=t_debug] [{"type":"text","text":"pe_missile_physics: Yaw: "},{"type":"nbt","source":"entity","nbt":"Rotation[0]","entity":"@s"},{"type":"text","text":" Pitch: "},{"type":"nbt","source":"entity","nbt":"Rotation[1]","entity":"@s"}]
 
-$execute if entity @s[tag=t_missile_has_tracking] run function $(func_tracking_filter)
+$execute if entity @s[tag=t_missile_has_tracking] run function $(func_npe_tracking_filter)
 execute if entity @s[tag=t_missile_has_tracking] if entity @e[tag=t_collision_candidate,tag=!t_do_not_track] run function cashgrab:base/missile_physics_tracking with entity @s data
 
 # Apply tracking scalar to dyaw and dpitch from missile tracking
@@ -26,7 +26,7 @@ execute if entity @s[tag=t_missile_has_tracking] store result score @s mis_track
 $execute if entity @s[tag=t_missile_has_tracking] store result entity @s data.tracking_dpitch float $(f_tracking_scalar) run scoreboard players get @s mis_tracking_dpitch_mdeg
 execute if entity @s[tag=t_missile_has_tracking] store result score @s mis_tracking_dpitch_mdeg run data get entity @s data.tracking_dpitch 1
 
-# Add pitch and yaw deflection of both func_step and projectile tracking
+# Add pitch and yaw deflection of both func_npe_step and projectile tracking
 scoreboard players operation @s mis_func_step_dyaw_mdeg += @s mis_tracking_dyaw_mdeg
 scoreboard players operation @s mis_func_step_dpitch_mdeg += @s mis_tracking_dpitch_mdeg
 

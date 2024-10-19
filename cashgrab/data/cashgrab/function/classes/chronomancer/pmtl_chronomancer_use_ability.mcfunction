@@ -32,8 +32,9 @@ execute align xyz positioned ~0.5 ~0.5 ~0.5 run function cashgrab:util/npe_set_t
 lifetime_ticks:200,\
 b_anchor_at_pos:1,\
 t_timer_name:"t_stasis_field_init",\
-func_step:"cashgrab:classes/chronomancer/stasis_field_step",\
-func_end:"cashgrab:classes/chronomancer/stasis_field_end",\
+func_npe_start:"cashgrab:util/dummy",\
+func_npe_step:"cashgrab:classes/chronomancer/stasis_field_step",\
+func_npe_end:"cashgrab:classes/chronomancer/stasis_field_end",\
 b_assign_as_peer:1,\
 }
 
