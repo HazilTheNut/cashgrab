@@ -20,4 +20,4 @@
 #	cv_H	:	
 
 function cashgrab:util/npe_col_entity_filter_hostile
-tag @e[scores={ev_dmg_taken=..0}] remove t_collision_candidate
+tag @e[scores={evl_dmg_taken=..0}] remove t_collision_candidate

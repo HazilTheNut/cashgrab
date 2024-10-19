@@ -32,26 +32,22 @@ function cashgrab:base/gt_playerinit
 # Misc. functions ran prior to pms
 
 # Set up coin score display
-execute if score DEVELOPER_MODE num matches 0 if score NUM_PLAYERCOUNT_CHANGED num matches 1.. if score NUM_GAMESTATE num matches 1..2 run function cashgrab:base/gt_display_coin_score
+execute if score DEVELOPER_MODE num matches 0 if score NUM_PLAYERCOUNT_CHANGED num matches 1.. if score NUM_GAMESTATE num matches 1.. run function cashgrab:base/gt_display_coin_score
 
 # Show goal coin amount
 scoreboard players operation GOAL __coins_score = GOAL coins
-
-# In a team game, reset team coin total; pms will add to team total
-execute if score NUM_GAMESTATE num matches 2 run scoreboard players set RED_TEAM coins 0
-execute if score NUM_GAMESTATE num matches 2 run scoreboard players set BLUE_TEAM coins 0
 
 # =============================
 # Run pm-specific code
 
 # Reset pm_count of all players
 scoreboard players set @a pm_count 0
-
 # If the previous server tick ran out of time, a player might still have the t_pm_owner tag
 tag @a remove t_pm_owner
 
 # Run pm_main for all pms
-execute as @e[type=minecraft:marker,tag=t_pm,tag=!t_pm_no_owner,scores={eid_state=1}] run function cashgrab:base/pm_main
+execute as @e[type=minecraft:marker,tag=t_pm,tag=!
+t_pm_no_owner,scores={eid_state=1}] run function cashgrab:base/pm_main
 
 # If a player still has a pm_count of 0, no pm ran for that player. Reinitialize them
 tellraw @a[scores={pm_count=0}] "An error has occurred with your session - reinitializing"
@@ -80,26 +76,12 @@ kill @e[type=minecraft:arrow,nbt={inGround:1b}]
 execute as @e[type=!minecraft:player,scores={eid_state=2}] run function cashgrab:base/npe_grab
 
 # =============================
-# Team game completion detection
-execute if score NUM_GAMESTATE num matches 2 run scoreboard players operation RED_TEAM __coins_score = RED_TEAM coins
-execute if score NUM_GAMESTATE num matches 2 run scoreboard players operation BLUE_TEAM __coins_score = BLUE_TEAM coins
-execute if score NUM_GAMESTATE num matches 2 if score RED_TEAM coins >= GOAL coins run tellraw @a [{"type":"text","color":"red","text":"Red Team"},{"type":"text","color":"white","text":" wins!"}]
-execute if score NUM_GAMESTATE num matches 2 if score BLUE_TEAM coins >= GOAL coins run tellraw @a [{"type":"text","color":"blue","text":"Blue Team"},{"type":"text","color":"white","text":" wins!"}]
-execute if score NUM_GAMESTATE num matches 2 if score RED_TEAM coins >= GOAL coins run function cashgrab:end_game
-execute if score NUM_GAMESTATE num matches 2 if score BLUE_TEAM coins >= GOAL coins run function cashgrab:end_game
-
-# =============================
-# Clear all events
+# Clear all listenable events
 scoreboard players set NUM_PLAYERCOUNT_CHANGED num 0
 
-scoreboard players set @a ev_jump 0
-scoreboard players set @a ev_dmg_absorbed 0
-scoreboard players set @a ev_dmg_dealt 0
-scoreboard players set @a ev_dmg_taken 0
-scoreboard players set @a ev_maps 0
-scoreboard players set @a ev_xpbottles 0
-scoreboard players set @a ev_snowballs 0
-scoreboard players set @a ev_eggs 0
-scoreboard players set @a ev_crossbows 0
-scoreboard players set @a ev_gold_axe_break 0
-scoreboard players set @a ev_potion 0
+scoreboard players set @a evl_jump 0
+scoreboard players set @a evl_dmg_absorbed 0
+scoreboard players set @a evl_dmg_dealt 0
+scoreboard players set @a evl_dmg_taken 0
+scoreboard players set @a evl_coin_pickup 0
+scoreboard players set @a evl_crossbows 0

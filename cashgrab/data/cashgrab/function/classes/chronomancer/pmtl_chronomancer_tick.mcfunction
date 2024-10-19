@@ -30,7 +30,7 @@ execute if items entity @a[tag=t_pm_owner,limit=1] hotbar.* minecraft:crossbow[m
 execute if items entity @a[tag=t_pm_owner,limit=1] weapon.* minecraft:crossbow[minecraft:count=1,minecraft:charged_projectiles=[]] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 0
 
 # Upon firing an arrow, initiate reload timer
-execute if score @a[tag=t_pm_owner,limit=1] ev_crossbows matches 1.. run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 50
+execute if score @a[tag=t_pm_owner,limit=1] evl_crossbows matches 1.. run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 50
 
 # Decrement reload timer and reload when complete
 scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={cv_B=0..}] cv_B 1
@@ -39,7 +39,7 @@ execute if score @a[tag=t_pm_owner,limit=1] cv_B matches 0 run scoreboard player
 execute if score @a[tag=t_pm_owner,limit=1] cv_B matches 0 run function cashgrab:classes/chronomancer/pmt_chronomancer_inv_crossbow
 
 # Update crossbow after firing an arrow
-execute if score @a[tag=t_pm_owner,limit=1] ev_crossbows matches 1.. run function cashgrab:classes/chronomancer/pmt_chronomancer_inv_crossbow
+execute if score @a[tag=t_pm_owner,limit=1] evl_crossbows matches 1.. run function cashgrab:classes/chronomancer/pmt_chronomancer_inv_crossbow
 
 # Update Crossbow when entering or exiting stasis
 execute if score @a[tag=t_pm_owner,limit=1] stasis_state matches -1 run function cashgrab:classes/chronomancer/pmt_chronomancer_inv_crossbow

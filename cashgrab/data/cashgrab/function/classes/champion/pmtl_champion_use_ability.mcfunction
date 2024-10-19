@@ -28,5 +28,5 @@ function cashgrab:util/npe_col_entity_filter_allies
 effect give @e[tag=t_collision_candidate,distance=..5] minecraft:speed 3 1 true
 
 # Display particles
-execute unless score NUM_GAMESTATE num matches 2 run particle minecraft:effect ~ ~0.4 ~ 1.0 0.1 1.0 0 25
-execute if score NUM_GAMESTATE num matches 2 run particle minecraft:effect ~ ~0.4 ~ 2.5 0.1 2.5 0 50
+execute if score @a[tag=t_pm_owner,limit=1] team_id matches 0 run particle minecraft:effect ~ ~0.4 ~ 1.0 0.1 1.0 0 25
+execute if score @a[tag=t_pm_owner,limit=1] team_id matches 1.. run particle minecraft:effect ~ ~0.4 ~ 2.5 0.1 2.5 0 50

@@ -9,7 +9,7 @@
 # Arguments:
 #	slot	: Inventory slot to insert into
 
-$tellraw @a[tag=t_debug] "trinkets/test_item/pmt_test_item_cts_inv_icon: slot:'$(slot)'"
+#$tellraw @a[tag=t_debug] "trinkets/test_item/pmt_test_item_cts_inv_icon: slot:'$(slot)'"
 
 $item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:egg[\
 minecraft:item_name="[{\"color\":\"red\",\"italic\":false,\"text\":\"<Trinket>\"},{\"color\":\"white\",\"text\":\" Test Item\"}]",\

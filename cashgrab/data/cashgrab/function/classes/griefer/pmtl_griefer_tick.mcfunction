@@ -47,7 +47,7 @@ execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_falling=-1,cv_A=1..,cv_B=
 # --- Creeper in a Bottle
 
 # Creeper in a Bottle
-execute if score @a[tag=t_pm_owner,limit=1] ev_xpbottles matches 1.. positioned ~ ~1.625 ~ run function cashgrab:util/npe_raycast {\
+execute if score @a[tag=t_pm_owner,limit=1] evc_xpbottles matches 1.. positioned ~ ~1.625 ~ run function cashgrab:util/npe_raycast {\
 i_range_m:3,\
 i_origin_loc:0,\
 col_terrain_allowed:"#cashgrab:nonsolid",\
@@ -56,8 +56,11 @@ func_entity_filter:"cashgrab:util/npe_col_entity_filter_none",\
 func_step:"cashgrab:util/dummy",\
 func_end:"cashgrab:classes/griefer/pmtl_summon_creeper",\
 }
-execute if score @a[tag=t_pm_owner,limit=1] ev_xpbottles matches 1.. run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 160
-execute if score @a[tag=t_pm_owner,limit=1] ev_xpbottles matches 1.. run function cashgrab:classes/griefer/pmt_inv_creeper_ability_icon
+execute if score @a[tag=t_pm_owner,limit=1] evc_xpbottles matches 1.. run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 160
+execute if score @a[tag=t_pm_owner,limit=1] evc_xpbottles matches 1.. run function cashgrab:classes/griefer/pmt_inv_creeper_ability_icon
+
+# Consume event
+scoreboard players set @a[tag=t_pm_owner,limit=1] evc_xpbottles 0
 
 # Creeper in a Bottle cooldown
 scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={cv_C=0..}] cv_C 1

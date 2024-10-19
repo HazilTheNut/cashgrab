@@ -23,17 +23,6 @@ scoreboard players set @a[tag=t_pm_owner] cv_F 0
 scoreboard players set @a[tag=t_pm_owner] cv_G 0
 scoreboard players set @a[tag=t_pm_owner] cv_H 0
 
-# Reset listenable events
-scoreboard players set @a[tag=t_pm_owner] ev_jump 0
-scoreboard players set @a[tag=t_pm_owner] ev_dmg_absorbed 0
-scoreboard players set @a[tag=t_pm_owner] ev_dmg_dealt 0
-scoreboard players set @a[tag=t_pm_owner] ev_dmg_taken 0
-scoreboard players set @a[tag=t_pm_owner] ev_maps 0
-scoreboard players set @a[tag=t_pm_owner] ev_xpbottles 0
-scoreboard players set @a[tag=t_pm_owner] ev_snowballs 0
-scoreboard players set @a[tag=t_pm_owner] ev_eggs 0
-scoreboard players set @a[tag=t_pm_owner] ev_crossbows 0
-
 effect clear @a[tag=t_pm_owner]
 
 # Run respective class equipment function

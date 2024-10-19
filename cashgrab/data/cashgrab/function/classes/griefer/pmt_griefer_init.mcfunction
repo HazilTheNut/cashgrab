@@ -24,3 +24,5 @@ scoreboard players set @a[tag=t_pm_owner,limit=1] ability_charges 1
 
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 0
 
+# Clear events
+scoreboard players set @a[tag=t_pm_owner,limit=1] evc_xpbottles 0

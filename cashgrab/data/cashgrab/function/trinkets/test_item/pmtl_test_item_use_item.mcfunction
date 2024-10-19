@@ -22,5 +22,5 @@ func_step:"cashgrab:trinkets/test_item/pmtl_raycast_step",\
 func_end:"cashgrab:trinkets/test_item/pmtl_raycast_end",\
 }
 
-# Trinket code is ran first and should consume events that would otherwise pass down to class code
-scoreboard players set @a[tag=t_pm_owner,limit=1] ev_eggs 0
+# Consume events
+scoreboard players set @a[tag=t_pm_owner,limit=1] evc_eggs 0

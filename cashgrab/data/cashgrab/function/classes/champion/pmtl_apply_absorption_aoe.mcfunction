@@ -28,8 +28,8 @@ effect give @e[tag=t_collision_candidate,distance=..5,scores={stat_hp=13..}] min
 effect give @e[tag=t_collision_candidate,distance=..5,type=!minecraft:player] minecraft:absorption 4 0
 
 # vfx
-execute unless score NUM_GAMESTATE num matches 2 run particle minecraft:block{block_state:"minecraft:gold_block"} ~ ~0.4 ~ 0.75 1.0 0.75 0 25
-execute if score NUM_GAMESTATE num matches 2 run particle minecraft:block{block_state:"minecraft:gold_block"} ~ ~0.4 ~ 2.5 0.1 2.5 0 50
+execute if score @a[tag=t_pm_owner,limit=1] team_id matches 0 run particle minecraft:block{block_state:"minecraft:gold_block"} ~ ~0.4 ~ 0.75 1.0 0.75 0 25
+execute if score @a[tag=t_pm_owner,limit=1] team_id matches 1.. run particle minecraft:block{block_state:"minecraft:gold_block"} ~ ~0.4 ~ 2.5 0.1 2.5 0 50
 
 # Apply absorption to players
 tag @a[tag=t_collision_candidate,distance=..5] add t_champion_set_absorption_timer

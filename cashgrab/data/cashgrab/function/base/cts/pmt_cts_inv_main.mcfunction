@@ -8,7 +8,7 @@
 #
 # Arguments: (none)
 
-tellraw @a[tag=t_pm_owner,tag=t_debug] "cts/pmt_cts_inv_main"
+#tellraw @a[tag=t_pm_owner,tag=t_debug] "cts/pmt_cts_inv_main"
 
 # Calculate page numbers from page indices
 scoreboard players operation @a[tag=t_pm_owner,limit=1] __cts_classes_page_num = @a[tag=t_pm_owner,limit=1] __cts_classes_page_idx

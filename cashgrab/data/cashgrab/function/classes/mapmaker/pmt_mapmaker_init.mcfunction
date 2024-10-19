@@ -11,3 +11,6 @@
 scoreboard players set @a[tag=t_pm_owner] ability_cfg_cooldown_ticks 10
 scoreboard players set @a[tag=t_pm_owner] ability_cfg_charges 1
 scoreboard players set @a[tag=t_pm_owner] ability_charges 1
+
+# Clear events
+scoreboard players set @a[tag=t_pm_owner] evc_maps 0

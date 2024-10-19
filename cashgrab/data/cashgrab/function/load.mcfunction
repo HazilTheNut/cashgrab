@@ -31,7 +31,7 @@ setworldspawn 0 100 0
 # Count of number of pms that operated on the player. This value should always be 1.
 scoreboard objectives add pm_count dummy
 
-# ID numbers of class assigned to a player. 0 = no class
+# Index of class assigned to a player. 0 = no class
 scoreboard objectives add class dummy
 
 # Enumerated value of player's current state:
@@ -69,8 +69,7 @@ scoreboard objectives add trinket_charges dummy
 scoreboard objectives add trinket_charges_max dummy
 scoreboard objectives add __trinket_charges_prev dummy
 
-# ID of trinket equipped
-#	1	=	Vigor Flask
+# Index of trinket equipped
 scoreboard objectives add trinket_id dummy
 
 # 1 if holding trinket and 0 otherwise
@@ -81,7 +80,9 @@ scoreboard objectives add trinket_in_offhand dummy
 
 # --- Game objective-related
 
-# team_id: 0 = ffa, 1 = red, 2 = blue
+# Multiple different teams are not supported on this version of cashgrab
+#	However, there is potential to add this feature in later versions
+# team_id = 0 is guaranteed to be free-for-all
 scoreboard objectives add team_id dummy
 
 # =============================
@@ -158,24 +159,31 @@ scoreboard objectives add ps_selected_hotbar_slot dummy
 scoreboard objectives add __iev_drop minecraft.custom:minecraft.drop
 scoreboard objectives add __iev_death minecraft.custom:minecraft.deaths
 scoreboard objectives add __iev_logout minecraft.custom:minecraft.leave_game
-scoreboard objectives add __iev_coin_pickup minecraft.picked_up:minecraft.gold_nugget
 
 # =============================
-# Class consumable events (prefix: "ev_"). These values are set to zero at the end of every tick
-scoreboard objectives add ev_jump minecraft.custom:minecraft.jump
-scoreboard objectives add ev_dmg_absorbed minecraft.custom:minecraft.damage_absorbed
-scoreboard objectives add ev_dmg_dealt minecraft.custom:minecraft.damage_dealt
-scoreboard objectives add ev_dmg_taken minecraft.custom:minecraft.damage_taken
-scoreboard objectives add ev_maps minecraft.used:minecraft.map
-scoreboard objectives add ev_xpbottles minecraft.used:minecraft.experience_bottle
-scoreboard objectives add ev_snowballs minecraft.used:minecraft.snowball
-scoreboard objectives add ev_eggs minecraft.used:minecraft.egg
-scoreboard objectives add ev_crossbows minecraft.used:minecraft.crossbow
-scoreboard objectives add ev_gold_axe_break minecraft.broken:minecraft.golden_axe
-scoreboard objectives add ev_potion minecraft.used:minecraft.potion
+# Listenable events (prefix: "evl_"). These values are set to zero at the end of every tick.
+#	These events are shared between classes and trinkets. Neither should set these to zero.
+scoreboard objectives add evl_jump minecraft.custom:minecraft.jump
+scoreboard objectives add evl_dmg_absorbed minecraft.custom:minecraft.damage_absorbed
+scoreboard objectives add evl_dmg_dealt minecraft.custom:minecraft.damage_dealt
+scoreboard objectives add evl_dmg_taken minecraft.custom:minecraft.damage_taken
+scoreboard objectives add evl_coin_pickup minecraft.picked_up:minecraft.gold_nugget
+scoreboard objectives add evl_crossbows minecraft.used:minecraft.crossbow
 
 # =============================
-# Class readable statistics (prefix: "stat_").
+# Conusmable events (prefix: "evc_"). 
+#	Classes and trinkets must set these to zero when they initialize and when they consume these events.
+#	Trinkets are ran before classes for consuming events. If a class observes these events occurring,
+#		the class can be sure that a trinket did not activate.
+scoreboard objectives add evc_maps minecraft.used:minecraft.map
+scoreboard objectives add evc_xpbottles minecraft.used:minecraft.experience_bottle
+scoreboard objectives add evc_snowballs minecraft.used:minecraft.snowball
+scoreboard objectives add evc_eggs minecraft.used:minecraft.egg
+scoreboard objectives add evc_gold_axe_break minecraft.broken:minecraft.golden_axe
+scoreboard objectives add evc_potions minecraft.used:minecraft.potion
+
+# =============================
+# Readable statistics (prefix: "stat_").
 scoreboard objectives add stat_hp health
 scoreboard objectives add stat_alive_ticks minecraft.custom:minecraft.time_since_death
 
@@ -228,7 +236,7 @@ execute if score NUM_COINS_PER_COINPLATE num matches 0 run scoreboard players se
 
 # === Misc. global variables
 
-# Tracks the state of the game: 0 = no game active, 1 = ffa game, 2 = teams game
+# Tracks the state of the game: 0 = no game active, 1 = game is running
 scoreboard players add NUM_GAMESTATE num 0
 
 # 1 if the player count has changed this tick, and 0 otherwise
@@ -380,39 +388,29 @@ scoreboard objectives add __cts_trinkets_page_num dummy
 # =============================
 # Teams
 
+# Team used while in lobby
+team add team_lobby {"type":"text","text":"Lobby"}
+team modify team_lobby color gold
+team modify team_lobby friendlyFire false
+team modify team_lobby seeFriendlyInvisibles true
+team modify team_lobby nametagVisibility always
+team modify team_lobby collisionRule always 
+
 # FFA Team
 team add team_ffa {"type":"text","text":"FFA"}
 team modify team_ffa color gold
 team modify team_ffa friendlyFire true
 team modify team_ffa seeFriendlyInvisibles false
-team modify team_ffa nametagVisibility hideForOwnTeam
+team modify team_ffa nametagVisibility never
 team modify team_ffa collisionRule always 
 
-# Red Team
-team add team_red {"type":"text","text":"RED"}
-team modify team_red color red
-team modify team_red friendlyFire false
-team modify team_red seeFriendlyInvisibles true
-team modify team_red nametagVisibility hideForOtherTeams
-team modify team_red collisionRule pushOtherTeams
-
-# Red Total Team (used for displaying red team total)
-team add team_red_total {"type":"text","text":"RED_TOTAL"}
-team modify team_red_total color light_purple
-team join team_red_total RED_TEAM
-
-# Blue Team
-team add team_blue {"type":"text","text":"BLUE"}
-team modify team_blue color blue
-team modify team_blue friendlyFire false
-team modify team_blue seeFriendlyInvisibles true
-team modify team_blue nametagVisibility hideForOtherTeams
-team modify team_blue collisionRule pushOtherTeams
-
-# Red Total Team (used for displaying red team total)
-team add team_blue_total {"type":"text","text":"BLUE_TOTAL"}
-team modify team_blue_total color aqua
-team join team_blue_total BLUE_TEAM
+# FFA Team (CTS mode)
+team add team_ffa_cts {"type":"text","text":"FFA"}
+team modify team_ffa_cts color gold
+team modify team_ffa_cts friendlyFire false
+team modify team_ffa_cts seeFriendlyInvisibles false
+team modify team_ffa_cts nametagVisibility never
+team modify team_ffa_cts collisionRule always 
 
 # Coin Goal Team (used for displaying red team total)
 team add team_coin_goal {"type":"text","text":"COIN_GOAL"}

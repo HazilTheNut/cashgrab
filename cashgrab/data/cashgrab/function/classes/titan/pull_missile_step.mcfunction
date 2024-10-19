@@ -27,5 +27,5 @@ function cashgrab:util/find_eid_self with storage cashgrab:find_eid_args
 
 # If owner is missing or takes damage, clean up and release grab
 execute unless entity @e[tag=t_eid_matches] run tag @s add t_cleanup
-execute if entity @e[scores={ev_dmg_taken=1..},tag=t_eid_matches] run tag @s add t_cleanup
-execute if entity @e[scores={ev_dmg_taken=1..},tag=t_eid_matches] run tag @e[tag=t_eid_matches] add t_grab_release
+execute if entity @e[scores={evl_dmg_taken=1..},tag=t_eid_matches] run tag @s add t_cleanup
+execute if entity @e[scores={evl_dmg_taken=1..},tag=t_eid_matches] run tag @e[tag=t_eid_matches] add t_grab_release
