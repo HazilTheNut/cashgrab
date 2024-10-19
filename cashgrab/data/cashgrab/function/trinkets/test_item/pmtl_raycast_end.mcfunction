@@ -8,8 +8,8 @@ tellraw @a[tag=t_debug] [{"type":"text","text":"test item raycast temp_A: "},{"t
 function cashgrab:util/npe_create_missile {\
 f_speed_mpt:0.075f,\
 i_lifetime_ticks:100,\
-i_range_m:100,\
 i_origin_loc:0,\
+f_focal_dist_m:100,\
 i_gravity_vy_mmpt:500,\
 i_gravity_const_mmpt2:40,\
 f_tracking_scalar:0,\
@@ -26,8 +26,8 @@ b_assign_as_peer:1,\
 execute rotated ~30 ~ run function cashgrab:util/npe_create_missile {\
 f_speed_mpt:0.075f,\
 i_lifetime_ticks:100,\
-i_range_m:100,\
 i_origin_loc:0,\
+f_focal_dist_m:100,\
 i_gravity_vy_mmpt:500,\
 i_gravity_const_mmpt2:40,\
 f_tracking_scalar:0,\
@@ -44,8 +44,8 @@ b_assign_as_peer:1,\
 execute rotated ~-30 ~ run function cashgrab:util/npe_create_missile {\
 f_speed_mpt:0.075f,\
 i_lifetime_ticks:100,\
-i_range_m:100,\
 i_origin_loc:0,\
+f_focal_dist_m:100,\
 i_gravity_vy_mmpt:500,\
 i_gravity_const_mmpt2:40,\
 f_tracking_scalar:0,\

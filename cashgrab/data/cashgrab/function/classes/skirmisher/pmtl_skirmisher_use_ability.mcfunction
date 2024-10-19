@@ -34,8 +34,8 @@ execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 2 run scoreboard player
 execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 1 run function cashgrab:util/npe_create_missile {\
 f_speed_mpt:0.7f,\
 i_lifetime_ticks:400,\
-i_range_m:15,\
 i_origin_loc:1,\
+f_focal_dist_m:15,\
 i_gravity_vy_mmpt:0,\
 i_gravity_const_mmpt2:0,\
 f_tracking_scalar:0f,\
@@ -53,8 +53,8 @@ b_assign_as_peer:1,\
 execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 2 run function cashgrab:util/npe_create_missile {\
 f_speed_mpt:1.0f,\
 i_lifetime_ticks:400,\
-i_range_m:15,\
 i_origin_loc:1,\
+f_focal_dist_m:15,\
 i_gravity_vy_mmpt:0,\
 i_gravity_const_mmpt2:0,\
 f_tracking_scalar:0f,\

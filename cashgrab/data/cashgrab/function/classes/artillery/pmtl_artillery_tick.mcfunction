@@ -33,8 +33,8 @@ execute if entity @a[tag=t_pm_owner,limit=1,tag=!t_artillery_missile_lh,tag=!t_a
 execute if entity @a[tag=t_pm_owner,limit=1,tag=t_artillery_missile_rh] run function cashgrab:util/npe_create_missile {\
 f_speed_mpt:0.7f,\
 i_lifetime_ticks:100,\
-i_range_m:50,\
 i_origin_loc:1,\
+f_focal_dist_m:70,\
 i_gravity_vy_mmpt:0,\
 i_gravity_const_mmpt2:0,\
 t_missile_name:"t_artillery_missile_init",\
@@ -53,8 +53,8 @@ execute if entity @a[tag=t_pm_owner,limit=1,tag=t_artillery_missile_rh] run play
 execute if entity @a[tag=t_pm_owner,limit=1,tag=t_artillery_missile_lh] run function cashgrab:util/npe_create_missile {\
 f_speed_mpt:0.7f,\
 i_lifetime_ticks:100,\
-i_range_m:50,\
 i_origin_loc:2,\
+f_focal_dist_m:70,\
 i_gravity_vy_mmpt:0,\
 i_gravity_const_mmpt2:0,\
 t_missile_name:"t_artillery_missile_init",\

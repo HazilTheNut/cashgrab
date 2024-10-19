@@ -25,8 +25,8 @@ playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 0.5 1.5
 function cashgrab:util/npe_create_missile {\
 f_speed_mpt:0.7f,\
 i_lifetime_ticks:200,\
-i_range_m:10,\
 i_origin_loc:1,\
+f_focal_dist_m:10,\
 i_gravity_vy_mmpt:75,\
 i_gravity_const_mmpt2:20,\
 f_tracking_scalar:0,\

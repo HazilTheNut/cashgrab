@@ -35,8 +35,8 @@ scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cooldown_ticks 260
 execute positioned ~ ~ ~ facing ^ ^ ^-1 run function cashgrab:util/npe_create_missile {\
 f_speed_mpt:0.5f,\
 i_lifetime_ticks:50,\
-i_range_m:25,\
 i_origin_loc:0,\
+f_focal_dist_m:25,\
 i_gravity_vy_mmpt:0,\
 i_gravity_const_mmpt2:0,\
 t_missile_name:"t_titan_missile_init",\

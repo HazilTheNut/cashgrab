@@ -10,9 +10,10 @@
 #	f_speed_mpt				: Missile travel speed, in meters/tick. Velocities faster than 1 will have less accurate hit detection.
 #							: 	If you change f_speed_mpt stored on the missile after creation, you must tag it as t_missile_calc_base_vel to update its speed
 #	i_lifetime_ticks		: Missile i_lifetime_ticks, in ticks
-#	i_range_m				: How far the missile is expected to travel, in meters. 
-#							: 	Determines compensation angle to account for missile's origin being dislocated from the camera/perspective.
 #	i_origin_loc			: Where the missile originates: 0 = aligned with camera, 1 = right-handed position, 2 = left-handed position
+#	f_focal_dist_m			: When i_origin_loc is nonzero, the missile doesn't originate aligned with the camera despite that being where
+#							: 	the player is aiming. To compensate for this, the missile is angled towards a position f_focal_dist_m meters
+#							:	along the camera's facing vector. f_focal_dist_m is unused when i_origin_loc is 0
 #	i_gravity_vy_mmpt		: Initial vertical gravitational velocity, in mm/tick
 #	i_gravity_const_mmpt2	: Vertical velocity gained per tick, in mm/tick^2
 #	f_tracking_scalar		: Scalar of strength of tracking towards potential targets
@@ -32,8 +33,8 @@
 summon minecraft:marker ~ ~ ~ {Tags:["t_missile_init"]}
 $scoreboard players set @s temp_A $(i_origin_loc)
 execute if entity @s[scores={temp_A=0}] positioned ~ ~ ~ run tp @e[tag=t_missile_init,limit=1,sort=nearest] ~ ~ ~ facing ^ ^ ^1
-$execute if entity @s[scores={temp_A=1}] positioned ~ ~1.5 ~ run tp @e[tag=t_missile_init,limit=1,sort=nearest] ^-0.20 ^-0.05 ^0.25 facing ^ ^ ^$(i_range_m)
-$execute if entity @s[scores={temp_A=2}] positioned ~ ~1.5 ~ run tp @e[tag=t_missile_init,limit=1,sort=nearest] ^0.20 ^-0.05 ^0.25 facing ^ ^ ^$(i_range_m)
+$execute if entity @s[scores={temp_A=1}] positioned ~ ~1.5 ~ run tp @e[tag=t_missile_init,limit=1,sort=nearest] ^-0.20 ^-0.05 ^0.25 facing ^ ^ ^$(f_focal_dist_m)
+$execute if entity @s[scores={temp_A=2}] positioned ~ ~1.5 ~ run tp @e[tag=t_missile_init,limit=1,sort=nearest] ^0.20 ^-0.05 ^0.25 facing ^ ^ ^$(f_focal_dist_m)
 
 $data merge entity @e[tag=t_missile_init,limit=1,sort=nearest] {data:{col_terrain_allowed:"$(col_terrain_allowed)",func_entity_filter:"$(func_entity_filter)",func_step:"$(func_step)",func_end:"$(func_end)",vel_x:0.0f,vel_y:0.0f,vel_z:0.0f,f_speed_mpt:$(f_speed_mpt)f,f_tracking_scalar:$(f_tracking_scalar),func_tracking_filter:"$(func_tracking_filter)",tracking_dyaw:0,tracking_dpitch:0}}
 
