@@ -18,6 +18,9 @@
 #	cv_G	:	
 #	cv_H	:	
 
+# Invisibility effect for visuals (still wears armor by default)
+effect give @a[tag=t_pm_owner,limit=1] minecraft:invisibility infinite 0 true
+
 scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cooldown_ticks 140
 scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_charges 1
 scoreboard players set @a[tag=t_pm_owner,limit=1] ability_charges 1

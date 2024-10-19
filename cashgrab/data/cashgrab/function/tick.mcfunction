@@ -4,7 +4,7 @@
 #
 # Arguments: (none)
 
-scoreboard players set DEVELOPER_MODE num 1
+function cashgrab:runtime_config
 
 scoreboard players set @a[scores={eid_state=1},gamemode=!spectator] eid_state 2
 scoreboard players set @a[scores={eid_state=2},gamemode=spectator] eid_state 1

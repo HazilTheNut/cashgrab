@@ -48,6 +48,10 @@ execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches
 tag @a[tag=t_pm_owner,tag=t_died,scores={stat_alive_ticks=1..}] remove t_died
 
 # =============================
+# Class and trinket selection data redundancy error mitigation
+
+
+# =============================
 # Prior-tick functions
 
 function cashgrab:base/pmt_player_state
@@ -65,7 +69,8 @@ scoreboard players set @a[tag=t_pm_owner,scores={activity_state=1}] activity_sta
 
 #	activity_state 11	=	Transition to Class-and-Trinket Select
 clear @a[tag=t_pm_owner,scores={activity_state=11}]
-execute if entity @a[tag=t_pm_owner,scores={activity_state=11}] run function cashgrab:util/pmt_inv_refresh
+execute if entity @a[tag=t_pm_owner,scores={activity_state=11}] run function cashgrab:trinkets/pmt_trinket_init with entity @s data.trinket_info
+execute if entity @a[tag=t_pm_owner,scores={activity_state=11}] run function cashgrab:classes/pmt_class_init with entity @s data.class_info
 scoreboard players set @a[tag=t_pm_owner,scores={activity_state=11}] activity_state 10
 
 #	activity_state 10	=	Class-and-Trinket Select (in spawn selection room)
@@ -73,13 +78,13 @@ execute if entity @a[tag=t_pm_owner,scores={activity_state=10}] run function cas
 
 #	activity_state 21	=	Transition to Gameplay
 execute if score DEVELOPER_MODE num matches 0 run scoreboard players set @a[tag=t_pm_owner,scores={activity_state=21}] trinket_id 1
-execute if entity @a[tag=t_pm_owner,scores={activity_state=21}] run function cashgrab:trinkets/pmt_trinket_init
-execute if entity @a[tag=t_pm_owner,scores={activity_state=21}] run function cashgrab:classes/pmt_class_init
+execute if entity @a[tag=t_pm_owner,scores={activity_state=21}] run function cashgrab:trinkets/pmt_trinket_init with entity @s data.trinket_info
+execute if entity @a[tag=t_pm_owner,scores={activity_state=21}] run function cashgrab:classes/pmt_class_init with entity @s data.class_info
 scoreboard players set @a[tag=t_pm_owner,scores={activity_state=21}] activity_state 20
 
 #	activity_state 20	=	Gameplay
-execute if entity @a[tag=t_pm_owner,scores={activity_state=20}] at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function cashgrab:base/pmtl_trinket_tick
-execute if entity @a[tag=t_pm_owner,scores={activity_state=20}] at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function cashgrab:classes/pmtl_class_tick
+execute if entity @a[tag=t_pm_owner,scores={activity_state=20}] at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function cashgrab:base/pmtl_trinket_tick with entity @s data.trinket_info
+execute if entity @a[tag=t_pm_owner,scores={activity_state=20}] at @a[tag=t_pm_owner] rotated as @a[tag=t_pm_owner] run function cashgrab:classes/pmtl_class_tick with entity @s data.class_info
 
 # =============================
 # Post-tick actions

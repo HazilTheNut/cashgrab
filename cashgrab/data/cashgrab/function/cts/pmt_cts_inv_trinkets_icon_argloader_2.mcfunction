@@ -11,7 +11,7 @@
 #	slot		:	Inventory slot to insert into
 
 # Retrieve data from cashgrab:game_info
-$data modify storage cashgrab:cts_inv_trinket_icon_args func_cts_icon set from storage cashgrab:game_info trinkets[$(trinket_id)].func_cts_icon
+$data modify storage cashgrab:cts_inv_trinket_icon_args func_cts_icon set from storage cashgrab:game_info trinkets[$(trinket_id)].func_pmt_cts_icon
 
 function cashgrab:cts/pmt_cts_inv_selection_icon with storage cashgrab:cts_inv_trinket_icon_args
 

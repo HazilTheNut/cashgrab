@@ -15,3 +15,6 @@ $data modify entity @s data.class_info set from storage cashgrab:game_info class
 # Set pm's class to owner's class
 $scoreboard players set @s class $(class_id)
 
+# Initialize class
+function cashgrab:classes/pmt_class_init with entity @s data.class_info
+

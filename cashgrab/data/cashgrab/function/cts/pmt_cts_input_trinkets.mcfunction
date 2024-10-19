@@ -15,3 +15,5 @@ $data modify entity @s data.trinket_info set from storage cashgrab:game_info tri
 # Set pm's trinket_id to owner's trinket_id
 $scoreboard players set @s trinket_id $(trinket_id)
 
+# Initialize trinket
+function cashgrab:trinkets/pmt_trinket_init with entity @s data.trinket_info

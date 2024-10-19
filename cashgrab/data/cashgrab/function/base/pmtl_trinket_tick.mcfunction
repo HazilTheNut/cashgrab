@@ -8,7 +8,8 @@
 #
 # Summary: Branching tick function for equipped trinket
 #
-# Arguments: (none)
+# Arguments:
+#	func_pmtl_tick	: function to run every tick
 
 # Track whether trinket is held. trinket_held can be used by trinket code to determine if the player's use item button will use a trinket
 scoreboard players set @a[tag=t_pm_owner,limit=1,scores={trinket_in_offhand=0}] trinket_held 0
@@ -20,7 +21,5 @@ execute if items entity @a[tag=t_pm_owner,limit=1] weapon.offhand *[custom_data=
 scoreboard players set @a[tag=t_pm_owner,limit=1] trinket_in_offhand 0
 execute if items entity @a[tag=t_pm_owner,limit=1] weapon.offhand *[custom_data={is_trinket:1}] run scoreboard players set @a[tag=t_pm_owner,limit=1] trinket_in_offhand 1
 
-# Branch execution based on trinket_id
-execute if score @a[tag=t_pm_owner,limit=1] trinket_id matches -1 run function cashgrab:trinkets/test_item/pmtl_test_item_tick
-
-execute if score @a[tag=t_pm_owner,limit=1] trinket_id matches 1 run function cashgrab:trinkets/vigor_flask/pmtl_vigor_flask_tick
+# Branch execution based on equipped trinket
+$function $(func_pmtl_tick)

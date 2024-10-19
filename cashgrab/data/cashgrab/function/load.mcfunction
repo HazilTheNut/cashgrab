@@ -2,6 +2,8 @@
 #
 # Arguments: (none)
 
+function cashgrab:runtime_config
+
 # gamerules
 gamerule mobGriefing false
 gamerule doMobLoot false
@@ -64,6 +66,7 @@ scoreboard objectives add ability_charges dummy
 
 # Number of usages remaining
 scoreboard objectives add trinket_charges dummy
+scoreboard objectives add __trinket_charges_prev dummy
 
 # ID of trinket equipped
 #	1	=	Vigor Flask
@@ -233,7 +236,7 @@ scoreboard players set NUM_PLAYERCOUNT_CHANGED num 0
 scoreboard players set TEAM_RED coins 0
 scoreboard players set TEAM_BLUE coins 0
 
-scoreboard players set DEVELOPER_MODE num 0
+scoreboard players add DEVELOPER_MODE num 0
 
 # =============================
 # Entity position calculated via util/pe_record_position, in mm

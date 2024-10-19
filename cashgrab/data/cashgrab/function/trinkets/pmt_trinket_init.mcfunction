@@ -6,9 +6,11 @@
 #
 # Summary: Initializes trinket and its starting charges based on owner's trinket_id
 #
-# Arguments: (none)
+# Arguments:
+#	func_pmt_init	: trinket init function
 
-# Branch execution based on trinket_id
-execute if score @a[tag=t_pm_owner,limit=1] trinket_id matches -1 run function cashgrab:trinkets/test_item/pmt_test_item_init
+# Branch execution based on equipped trinket
+$function $(func_pmt_init)
 
-execute if score @a[tag=t_pm_owner,limit=1] trinket_id matches 1 run function cashgrab:trinkets/vigor_flask/pmt_vigor_flask_init
+# Copy charge count to prev
+scoreboard players operation @a[tag=t_pm_owner,limit=1] __trinket_charges_prev = @a[tag=t_pm_owner,limit=1] trinket_charges

@@ -9,7 +9,7 @@
 # Arguments:
 #	slot	: Inventory slot to insert into
 
-$tellraw @a[tag=t_debug] "trinkets/vigor_flask/pmt_vigor_flask_cts_inv_icon: slot:'$(slot)'"
+#$tellraw @a[tag=t_debug] "trinkets/vigor_flask/pmt_vigor_flask_cts_inv_icon: slot:'$(slot)'"
 
 $item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:potion[\
 minecraft:item_name="[{\"color\":\"dark_green\",\"italic\":false,\"text\":\"<Trinket>\"},{\"color\":\"white\",\"text\":\" Vigor Flask\"}]",\

@@ -84,14 +84,14 @@ execute if score @a[tag=t_pm_owner,limit=1] ps_sneaking matches 1 if score @a[ta
 execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=50}] run tag @a[tag=t_pm_owner,limit=1] add t_award_potions
 execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=50}] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_A 1
 execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=50,cv_B=1,trinket_charges=0}] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 101
-execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=50,cv_B=1,trinket_charges=1}] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C -1
+execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=50,cv_B=1,trinket_charges=1..}] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C -1
 # Booster Brew done
 execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=100}] run tag @a[tag=t_pm_owner,limit=1] add t_award_potions
 execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=100}] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 1
-execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=100,trinket_charges=1}] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C -1
+execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=100,trinket_charges=1..}] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C -1
 # Vigor Flask done
 execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=200}] run tag @a[tag=t_pm_owner,limit=1] add t_award_potions
-execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=200}] run function cashgrab:trinkets/pmt_trinket_init
+execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=200}] run function cashgrab:trinkets/pmt_trinket_init with entity @s data.trinket_info
 execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,cv_C=200}] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C -1
 
 # Award potions
