@@ -46,8 +46,7 @@ scoreboard players set @a pm_count 0
 tag @a remove t_pm_owner
 
 # Run pm_main for all pms
-execute as @e[type=minecraft:marker,tag=t_pm,tag=!
-t_pm_no_owner,scores={eid_state=1}] run function cashgrab:base/pm_main
+execute as @e[type=minecraft:marker,tag=t_pm,tag=!t_pm_no_owner,scores={eid_state=1}] run function cashgrab:base/pm_main
 
 # If a player still has a pm_count of 0, no pm ran for that player. Reinitialize them
 tellraw @a[scores={pm_count=0}] "An error has occurred with your session - reinitializing"
