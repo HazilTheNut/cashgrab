@@ -14,4 +14,7 @@ $item replace entity @a[tag=t_pm_owner] $(slot) with minecraft:egg[\
 minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Use]\"},{\"color\":\"white\",\"text\":\" Test Trinket\"}]",\
 minecraft:custom_data={is_trinket:1},\
 minecraft:enchantment_glint_override=true,\
+minecraft:lore=[\
+"{\"color\":\"gray\",\"italic\":true,\"text\":\"Makes harmless\"}",\
+"{\"color\":\"gray\",\"italic\":true,\"text\":\" fireworks\"}"],\
 ] $(charges)

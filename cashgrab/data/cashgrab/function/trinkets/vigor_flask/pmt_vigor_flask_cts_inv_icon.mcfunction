@@ -15,6 +15,6 @@ $item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:potion[\
 minecraft:item_name="[{\"color\":\"dark_green\",\"italic\":false,\"text\":\"<Trinket>\"},{\"color\":\"white\",\"text\":\" Vigor Flask\"}]",\
 minecraft:enchantment_glint_override=false,\
 minecraft:potion_contents={custom_color:16598149,custom_effects:[\
-{id:"minecraft:regeneration",amplifier:4,duration:40},\
+{id:"minecraft:regeneration",amplifier:4,duration:37},\
 {id:"minecraft:speed",amplifier:0,duration:100},\
 ]}] 1

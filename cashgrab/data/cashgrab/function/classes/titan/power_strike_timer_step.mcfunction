@@ -37,6 +37,7 @@ function cashgrab:util/find_eid_self with storage cashgrab:find_eid_args
 
 # If hit wall, apply slow and clean up
 execute if entity @s[tag=t_hit_wall] run particle minecraft:cloud ~ ~0.5 ~ 0.75 0.75 0.75 0 30
+execute if entity @s[tag=t_hit_wall] run playsound minecraft:block.grass.break player @a ~ ~ ~ 1.0 0.5
 execute if entity @s[tag=t_hit_wall] run effect give @e[tag=t_eid_matches] minecraft:slowness 3 2
 tag @s[tag=t_hit_wall] add t_cleanup
 
