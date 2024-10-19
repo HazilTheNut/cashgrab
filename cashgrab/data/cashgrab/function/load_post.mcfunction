@@ -110,7 +110,7 @@ func_pmt_inv_ability_icon:"cashgrab:classes/alchemist/pmt_alchemist_inv_ability_
 func_pmtl_tick:"cashgrab:classes/alchemist/pmtl_alchemist_tick",\
 func_pmtl_use_ability:"cashgrab:classes/alchemist/pmtl_alchemist_use_ability",\
 func_pmt_cts_icon:"cashgrab:classes/alchemist/pmt_alchemist_cts_inv_icon",\
-func_pmtl_cts_tick:"cashgrab:util/dummy",\
+func_pmtl_cts_tick:"cashgrab:classes/alchemist/pmtl_alchemist_cts_tick",\
 is_dev_tool:0,\
 }
 

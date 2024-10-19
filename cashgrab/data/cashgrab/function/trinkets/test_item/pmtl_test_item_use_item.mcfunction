@@ -21,6 +21,3 @@ func_npe_entity_filter:"cashgrab:util/npe_col_filter_entity_owner",\
 func_npe_step:"cashgrab:trinkets/test_item/pmtl_raycast_step",\
 func_npe_end:"cashgrab:trinkets/test_item/pmtl_raycast_end",\
 }
-
-# Consume events
-scoreboard players set @a[tag=t_pm_owner,limit=1] evc_eggs 0

@@ -20,7 +20,7 @@
 #	cv_G	:	
 #	cv_H	:	
 
-# Inventory tracking: Caustic Brew
+# Inventory tracking: Caustic Fume
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_A 0
 execute if items entity @a[tag=t_pm_owner,limit=1] hotbar.* minecraft:splash_potion[minecraft:enchantment_glint_override=true] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_A 1
 execute if items entity @a[tag=t_pm_owner,limit=1] weapon.* minecraft:splash_potion[minecraft:enchantment_glint_override=true] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_A 1
@@ -35,7 +35,7 @@ clear @a[tag=t_pm_owner,limit=1] minecraft:glass_bottle
 
 # Each potion takes 3 seconds to brew which defines these ranges for cv_C:
 #	0		= idle
-#	1-50	= brewing Caustic Brew
+#	1-50	= brewing Caustic Fume
 #		1	= (step 1 icon)
 #		16	= (step 2 icon)
 #		32	= (step 3 icon)
@@ -99,6 +99,10 @@ execute if entity @a[tag=t_pm_owner,limit=1,tag=t_award_potions] run clear @a[ta
 execute if entity @a[tag=t_pm_owner,limit=1,tag=t_award_potions] run function cashgrab:classes/alchemist/pmt_alchemist_inv_potions
 
 tag @a[tag=t_pm_owner,limit=1] remove t_award_potions
+
+# Consume events
+scoreboard players set @a[tag=t_pm_owner,limit=1] evc_potions 0
+scoreboard players set @a[tag=t_pm_owner,limit=1] evc_splash_potions 0
 
 # ===========================================================
 # Exit potion brewing by uncrouching

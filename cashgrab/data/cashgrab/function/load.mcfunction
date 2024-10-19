@@ -181,6 +181,7 @@ scoreboard objectives add evc_snowballs minecraft.used:minecraft.snowball
 scoreboard objectives add evc_eggs minecraft.used:minecraft.egg
 scoreboard objectives add evc_gold_axe_break minecraft.broken:minecraft.golden_axe
 scoreboard objectives add evc_potions minecraft.used:minecraft.potion
+scoreboard objectives add evc_splash_potions minecraft.used:minecraft.splash_potion
 
 # =============================
 # Readable statistics (prefix: "stat_").

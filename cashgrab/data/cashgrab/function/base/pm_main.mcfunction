@@ -81,6 +81,7 @@ scoreboard players set @a[tag=t_pm_owner,limit=1,scores={activity_state=11}] act
 #	activity_state 10	=	Class-and-Trinket Select (in spawn selection room)
 execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=10}] run function cashgrab:base/cts/pmt_cts_input_main
 execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=10}] run function cashgrab:base/pmt_trinket_cts_tick
+execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=10}] at @a[tag=t_pm_owner,limit=1] rotated as @a[tag=t_pm_owner,limit=1] run function cashgrab:classes/pmtl_class_cts_tick with entity @s data.class_info
 
 #	activity_state 21	=	Transition to Gameplay
 execute if score DEVELOPER_MODE num matches 0 run scoreboard players set @a[tag=t_pm_owner,scores={activity_state=21}] trinket_id 1

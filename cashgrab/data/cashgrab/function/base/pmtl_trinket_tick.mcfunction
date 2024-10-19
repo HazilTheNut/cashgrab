@@ -31,8 +31,9 @@ $execute if score @a[tag=t_pm_owner,limit=1] $(evc_usage_score) matches 0 run re
 
 #$tellraw @a[tag=t_pm_owner,limit=1,tag=t_debug] "evc_usage_score passed; func_pmtl_use_item = $(func_pmtl_use_item)"
 
-# If current charge count is less than previous and evc_usage_score occurred, trinket was used
+# If current charge count is less than previous and evc_usage_score occurred, run trinket usage code and consume event
 $execute if score @a[tag=t_pm_owner,limit=1] trinket_charges < @a[tag=t_pm_owner,limit=1] __trinket_charges_prev run function $(func_pmtl_use_item)
+$execute if score @a[tag=t_pm_owner,limit=1] trinket_charges < @a[tag=t_pm_owner,limit=1] __trinket_charges_prev run scoreboard players set @a[tag=t_pm_owner,limit=1] $(evc_usage_score) 0
 
 # If current charge count changed, reload display for trinket
 execute unless score @a[tag=t_pm_owner,limit=1] trinket_charges = @a[tag=t_pm_owner,limit=1] __trinket_charges_prev run function cashgrab:util/pmt_inv_trinket_argloader

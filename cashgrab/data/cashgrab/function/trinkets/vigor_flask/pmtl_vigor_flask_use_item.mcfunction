@@ -14,6 +14,3 @@
 
 # Remove empty bottle
 clear @a[tag=t_pm_owner,limit=1] minecraft:glass_bottle
-
-# Consume events
-scoreboard players set @a[tag=t_pm_owner,limit=1] evc_potions 0
