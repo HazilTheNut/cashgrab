@@ -1,4 +1,4 @@
-# cts/pmt_cts_inv_main.mcfunction
+# base/cts/pmt_cts_inv_main.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
@@ -20,4 +20,4 @@ scoreboard players add @a[tag=t_pm_owner,limit=1] __cts_trinkets_page_num 1
 execute store result storage cashgrab:cts_inv_args trinkets_page_num int 1 run scoreboard players get @a[tag=t_pm_owner,limit=1] __cts_trinkets_page_num
 
 # Draw inventory
-function cashgrab:cts/pmt_cts_inv_draw with storage cashgrab:cts_inv_args
+function cashgrab:base/cts/pmt_cts_inv_draw with storage cashgrab:cts_inv_args

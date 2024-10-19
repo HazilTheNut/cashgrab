@@ -1,4 +1,4 @@
-# cts/pmt_cts_inv_trinkets_page_down.mcfunction
+# base/cts/pmt_cts_inv_trinkets_page_down.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
@@ -15,4 +15,4 @@ minecraft:item_name="[{\"color\":\"gold\",\"italic\":false,\"text\":\"<Next Page
 
 execute if score @a[tag=t_pm_owner,limit=1] __cts_trinkets_page_idx < NUM_CTS_TRINKETS_PAGE_IDX_MAX num run return 0
 
-$function cashgrab:cts/pmt_cts_inv_icon_blank {slot:"$(slot)"}
+$function cashgrab:base/cts/pmt_cts_inv_icon_blank {slot:"$(slot)"}

@@ -52,7 +52,7 @@ item replace entity @a[tag=t_pm_owner] inventory.26 with minecraft:air
 tellraw @a[tag=t_pm_owner,tag=t_debug] "util/pmt_inv_refresh"
 
 # During class-and-trinket selection, display inventory UI
-execute if entity @a[tag=t_pm_owner,scores={activity_state=10..19}] run function cashgrab:cts/pmt_cts_inv_main
+execute if entity @a[tag=t_pm_owner,scores={activity_state=10..19}] run function cashgrab:base/cts/pmt_cts_inv_main
 
 # During either class-and-trinket selection or gameplay, load class inventory, ability icon, and trinket
 execute if entity @a[tag=t_pm_owner,scores={activity_state=10..29}] run function cashgrab:classes/pmt_class_inv with entity @s data.class_info

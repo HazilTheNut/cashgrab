@@ -443,14 +443,14 @@ func_inv:"cashgrab:util/dummy",\
 func_inv_ability_icon:"cashgrab:util/dummy",\
 func_tick:"cashgrab:util/dummy",\
 func_use_ability:"cashgrab:util/dummy",\
-func_cts_icon:"cashgrab:cts/pmt_null_cts_inv_icon",\
+func_cts_icon:"cashgrab:base/cts/pmt_null_cts_inv_icon",\
 func_cts_tick:"cashgrab:util/dummy",\
 }
 
 data modify storage cashgrab:game_info trinkets prepend value {\
 func_init:"cashgrab:util/dummy",\
 func_inv:"cashgrab:util/dummy",\
-func_tick:"cashgrab:cts/pmt_null_cts_inv_icon",\
+func_tick:"cashgrab:base/cts/pmt_null_cts_inv_icon",\
 func_cts_icon:"cashgrab:util/dummy",\
 }
 

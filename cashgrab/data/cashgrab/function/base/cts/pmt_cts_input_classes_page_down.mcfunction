@@ -1,4 +1,4 @@
-# cts/pmt_cts_input_classes_page_down.mcfunction
+# base/cts/pmt_cts_input_classes_page_down.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker

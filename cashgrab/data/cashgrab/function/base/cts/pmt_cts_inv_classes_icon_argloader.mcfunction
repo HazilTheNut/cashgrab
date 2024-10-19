@@ -1,4 +1,4 @@
-# cts/pmt_cts_inv_classes_icon_argloader.mcfunction
+# base/cts/pmt_cts_inv_classes_icon_argloader.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
@@ -23,8 +23,8 @@ $execute store result storage cashgrab:cts_inv_class_icon_args class_id int 1 ru
 $data modify storage cashgrab:cts_inv_class_icon_args slot set value "$(slot)"
 
 # Show blank if out of bounds of array
-$execute if score @a[tag=t_pm_owner,limit=1] temp_A >= NUM_CTS_CLASSES_LIST_LEN num run function cashgrab:cts/pmt_cts_inv_icon_blank {slot:"$(slot)"}
+$execute if score @a[tag=t_pm_owner,limit=1] temp_A >= NUM_CTS_CLASSES_LIST_LEN num run function cashgrab:base/cts/pmt_cts_inv_icon_blank {slot:"$(slot)"}
 execute if score @a[tag=t_pm_owner,limit=1] temp_A >= NUM_CTS_CLASSES_LIST_LEN num run return 0
 
 # Display class icon
-function cashgrab:cts/pmt_cts_inv_classes_icon_argloader_2 with storage cashgrab:cts_inv_class_icon_args
+function cashgrab:base/cts/pmt_cts_inv_classes_icon_argloader_2 with storage cashgrab:cts_inv_class_icon_args

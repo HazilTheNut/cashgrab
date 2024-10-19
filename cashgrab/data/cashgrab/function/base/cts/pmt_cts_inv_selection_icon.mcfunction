@@ -1,4 +1,4 @@
-# cts/pmt_cts_inv_selection_icon.mcfunction
+# base/cts/pmt_cts_inv_selection_icon.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker

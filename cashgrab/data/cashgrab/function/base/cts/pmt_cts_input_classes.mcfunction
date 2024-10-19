@@ -1,4 +1,4 @@
-# cts/pmt_cts_inv_classes.mcfunction
+# base/cts/pmt_cts_inv_classes.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker

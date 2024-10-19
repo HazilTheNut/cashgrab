@@ -1,4 +1,4 @@
-# cts/pmt_cts_input_trinkets.mcfunction
+# base/cts/pmt_cts_input_trinkets.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker

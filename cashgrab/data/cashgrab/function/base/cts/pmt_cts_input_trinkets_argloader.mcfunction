@@ -1,4 +1,4 @@
-# cts/pmt_cts_input_noop.mcfunction
+# base/cts/pmt_cts_input_noop.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
@@ -19,4 +19,4 @@ scoreboard players operation @a[tag=t_pm_owner,limit=1] temp_A *= NUM_CTS_TRINKE
 $execute store result storage cashgrab:cts_trinket_select_args trinket_id int 1 run scoreboard players add @a[tag=t_pm_owner,limit=1] temp_A $(local_idx)
 
 # Import data from cashgrab:game_info if within bounds of array
-execute if score @a[tag=t_pm_owner,limit=1,scores={temp_A=1..}] temp_A < NUM_CTS_TRINKETS_LIST_LEN num run function cashgrab:cts/pmt_cts_input_trinkets with storage cashgrab:cts_trinket_select_args
+execute if score @a[tag=t_pm_owner,limit=1,scores={temp_A=1..}] temp_A < NUM_CTS_TRINKETS_LIST_LEN num run function cashgrab:base/cts/pmt_cts_input_trinkets with storage cashgrab:cts_trinket_select_args

@@ -1,4 +1,4 @@
-# cts/pmt_cts_input_noop.mcfunction
+# base/cts/pmt_cts_input_noop.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker

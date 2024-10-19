@@ -1,4 +1,4 @@
-# cts/pmt_cts_inv_trinkets_page_num.mcfunction
+# base/cts/pmt_cts_inv_trinkets_page_num.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
@@ -11,7 +11,7 @@
 #	trinkets_page_num		:	Trinkets Page number to display
 #	trinkets_page_num_max	:	Max Trinkets Page number to display
 
-$execute if score NUM_CTS_TRINKETS_PAGE_IDX_MAX num matches ..0 run function cashgrab:cts/pmt_cts_inv_icon_blank {slot:"$(slot)"}
+$execute if score NUM_CTS_TRINKETS_PAGE_IDX_MAX num matches ..0 run function cashgrab:base/cts/pmt_cts_inv_icon_blank {slot:"$(slot)"}
 
 execute if score NUM_CTS_TRINKETS_PAGE_IDX_MAX num matches ..0 run return 0
 

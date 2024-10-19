@@ -47,6 +47,9 @@ execute if score NUM_GAMESTATE num matches 2 run scoreboard players set BLUE_TEA
 # Reset pm_count of all players
 scoreboard players set @a pm_count 0
 
+# If the previous server tick ran out of time, a player might still have the t_pm_owner tag
+tag @a remove t_pm_owner
+
 # Run pm_main for all pms
 execute as @e[type=minecraft:marker,tag=t_pm,tag=!t_pm_no_owner,scores={eid_state=1}] run function cashgrab:base/pm_main
 
