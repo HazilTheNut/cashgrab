@@ -9,8 +9,9 @@
 # Arguments: (none)
 
 # Player state: falling (any time spent in the air)
-execute unless predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"nbt":"{OnGround:1b}"}} run scoreboard players set @a[tag=t_pm_owner,limit=1] __falling_cur 1
-execute if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"nbt":"{OnGround:1b}"}} run scoreboard players set @a[tag=t_pm_owner,limit=1] __falling_cur 0
+execute store result score @a[tag=t_pm_owner,limit=1] __falling_cur run data get entity @a[tag=t_pm_owner,limit=1] OnGround
+scoreboard players add @a[tag=t_pm_owner,limit=1] __falling_cur 1
+scoreboard players set @a[tag=t_pm_owner,limit=1,scores={__falling_cur=2..}] __falling_cur 0
 
 scoreboard players set @a[tag=t_pm_owner,limit=1,scores={__falling_cur=0,__falling_prev=0}] ps_falling 0
 scoreboard players set @a[tag=t_pm_owner,limit=1,scores={__falling_cur=0,__falling_prev=1}] ps_falling -1
