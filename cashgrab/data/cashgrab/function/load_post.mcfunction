@@ -15,6 +15,7 @@ func_pmtl_tick:"cashgrab:classes/champion/pmtl_champion_tick",\
 func_pmtl_use_ability:"cashgrab:classes/champion/pmtl_champion_use_ability",\
 func_pmt_cts_icon:"cashgrab:classes/champion/pmt_champion_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:util/dummy",\
+is_dev_tool:0,\
 }
 
 # Griefer
@@ -26,6 +27,7 @@ func_pmtl_tick:"cashgrab:classes/griefer/pmtl_griefer_tick",\
 func_pmtl_use_ability:"cashgrab:classes/griefer/pmtl_griefer_use_ability",\
 func_pmt_cts_icon:"cashgrab:classes/griefer/pmt_griefer_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:util/dummy",\
+is_dev_tool:0,\
 }
 
 # Skirmisher
@@ -37,6 +39,7 @@ func_pmtl_tick:"cashgrab:classes/skirmisher/pmtl_skirmisher_tick",\
 func_pmtl_use_ability:"cashgrab:classes/skirmisher/pmtl_skirmisher_use_ability",\
 func_pmt_cts_icon:"cashgrab:classes/skirmisher/pmt_skirmisher_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:util/dummy",\
+is_dev_tool:0,\
 }
 
 # Spectre
@@ -48,6 +51,7 @@ func_pmtl_tick:"cashgrab:classes/spectre/pmtl_spectre_tick",\
 func_pmtl_use_ability:"cashgrab:classes/spectre/pmtl_spectre_use_ability",\
 func_pmt_cts_icon:"cashgrab:classes/spectre/pmt_spectre_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:util/dummy",\
+is_dev_tool:0,\
 }
 
 # Ranger
@@ -59,6 +63,7 @@ func_pmtl_tick:"cashgrab:classes/ranger/pmtl_ranger_tick",\
 func_pmtl_use_ability:"cashgrab:classes/ranger/pmtl_ranger_use_ability",\
 func_pmt_cts_icon:"cashgrab:classes/ranger/pmt_ranger_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:util/dummy",\
+is_dev_tool:0,\
 }
 
 # Artillery
@@ -70,6 +75,7 @@ func_pmtl_tick:"cashgrab:classes/artillery/pmtl_artillery_tick",\
 func_pmtl_use_ability:"cashgrab:classes/artillery/pmtl_artillery_use_ability",\
 func_pmt_cts_icon:"cashgrab:classes/artillery/pmt_artillery_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:util/dummy",\
+is_dev_tool:0,\
 }
 
 # Frost Knight
@@ -81,6 +87,7 @@ func_pmtl_tick:"cashgrab:classes/frostknight/pmtl_frostknight_tick",\
 func_pmtl_use_ability:"cashgrab:classes/frostknight/pmtl_frostknight_use_ability",\
 func_pmt_cts_icon:"cashgrab:classes/frostknight/pmt_frostknight_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:util/dummy",\
+is_dev_tool:0,\
 }
 
 # Titan
@@ -92,6 +99,7 @@ func_pmtl_tick:"cashgrab:classes/titan/pmtl_titan_tick",\
 func_pmtl_use_ability:"cashgrab:classes/titan/pmtl_titan_use_ability",\
 func_pmt_cts_icon:"cashgrab:classes/titan/pmt_titan_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:util/dummy",\
+is_dev_tool:0,\
 }
 
 # Alchemist
@@ -103,6 +111,7 @@ func_pmtl_tick:"cashgrab:classes/alchemist/pmtl_alchemist_tick",\
 func_pmtl_use_ability:"cashgrab:classes/alchemist/pmtl_alchemist_use_ability",\
 func_pmt_cts_icon:"cashgrab:classes/alchemist/pmt_alchemist_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:util/dummy",\
+is_dev_tool:0,\
 }
 
 # Chronomancer
@@ -114,6 +123,7 @@ func_pmtl_tick:"cashgrab:classes/chronomancer/pmtl_chronomancer_tick",\
 func_pmtl_use_ability:"cashgrab:classes/chronomancer/pmtl_chronomancer_use_ability",\
 func_pmt_cts_icon:"cashgrab:classes/chronomancer/pmt_chronomancer_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:util/dummy",\
+is_dev_tool:0,\
 }
 
 # Append trinket roster data
@@ -123,6 +133,7 @@ func_pmt_init:"cashgrab:trinkets/vigor_flask/pmt_vigor_flask_init",\
 func_pmt_inv:"cashgrab:trinkets/vigor_flask/pmt_vigor_flask_inv",\
 func_pmtl_use_item:"cashgrab:trinkets/vigor_flask/pmtll_vigor_flask_use_item",\
 func_pmt_cts_icon:"cashgrab:trinkets/vigor_flask/pmt_vigor_flask_cts_inv_icon",\
+is_dev_tool:0,\
 }
 
 # DEVELOPER MODE data
@@ -134,6 +145,7 @@ func_pmtl_tick:"cashgrab:classes/mapmaker/pmtl_mapmaker_tick",\
 func_pmtl_use_ability:"cashgrab:classes/mapmaker/pmtl_mapmaker_use_ability",\
 func_pmt_cts_icon:"cashgrab:classes/mapmaker/pmt_mapmaker_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:util/dummy",\
+is_dev_tool:1,\
 }
 
 execute if score DEVELOPER_MODE num matches 1 run data modify storage cashgrab:game_info trinkets append value {\
@@ -141,4 +153,5 @@ func_pmt_init:"cashgrab:trinkets/test_item/pmt_test_item_init",\
 func_pmt_inv:"cashgrab:trinkets/test_item/pmt_test_item_inv",\
 func_pmtl_use_item:"cashgrab:trinkets/test_item/pmtl_test_item_use_item",\
 func_pmt_cts_icon:"cashgrab:trinkets/test_item/pmt_test_item_cts_inv_icon",\
+is_dev_tool:1,\
 }

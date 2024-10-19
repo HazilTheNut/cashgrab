@@ -9,6 +9,6 @@
 # Arguments:
 #	charges			: Number of charges remaining
 #	slot			: Slot to insert item
-#	func_pmt_inv	: 
+#	func_pmt_inv	: Inventory loader function for trinket
 
 $function $(func_pmt_inv) {charges:$(charges),slot:"$(slot)"}

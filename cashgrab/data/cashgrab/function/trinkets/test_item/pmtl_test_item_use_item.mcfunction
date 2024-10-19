@@ -10,7 +10,7 @@
 #
 # Arguments: (none)
 
-# If you use an egg while holding your trinket, deduct trinket_charges
+# Create effects
 tellraw @a[tag=t_debug] "--- Start of test raycast"
 execute positioned ~ ~1.625 ~ run function cashgrab:util/npe_raycast {\
 i_range_m:5,\
@@ -21,3 +21,6 @@ func_entity_filter:"cashgrab:util/npe_col_filter_entity_owner",\
 func_step:"cashgrab:trinkets/test_item/pmtl_raycast_step",\
 func_end:"cashgrab:trinkets/test_item/pmtl_raycast_end",\
 }
+
+# Trinket code is ran first and should consume events that would otherwise pass down to class code
+scoreboard players set @a[tag=t_pm_owner,limit=1] ev_eggs 0
