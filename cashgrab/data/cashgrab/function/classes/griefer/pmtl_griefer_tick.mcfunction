@@ -13,8 +13,8 @@
 # Class variable usage:
 #	cv_A	:	Crash Landing state (0 = inactive, 1 = active)
 #	cv_B	:	Crash Landing levitation timer
-#	cv_C	:	Creeper in a Bottle cooldown
-#	cv_D	:	
+#	cv_C	:	Creeper in a Bottle cooldown (in ms)
+#	cv_D	:	Creeper in a Bottle charge
 #	cv_E	:	
 #	cv_F	:	Player Y position, in mm
 #	cv_G	:	Crash Landing cutoff height, in mm
@@ -56,15 +56,19 @@ func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_none",\
 func_npe_step:"cashgrab:util/dummy",\
 func_npe_end:"cashgrab:classes/griefer/pmtl_summon_creeper",\
 }
-execute if score @a[tag=t_pm_owner,limit=1] evc_xpbottles matches 1.. run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 160
+execute if score @a[tag=t_pm_owner,limit=1] evc_xpbottles matches 1.. run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 8000
+execute if score @a[tag=t_pm_owner,limit=1] evc_xpbottles matches 1.. run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_D 0
 execute if score @a[tag=t_pm_owner,limit=1] evc_xpbottles matches 1.. run function cashgrab:classes/griefer/pmt_inv_creeper_ability_icon
 
 # Consume event
 scoreboard players set @a[tag=t_pm_owner,limit=1] evc_xpbottles 0
 
 # Creeper in a Bottle cooldown
-scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={cv_C=0..}] cv_C 1
-execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 0 run function cashgrab:classes/griefer/pmt_inv_creeper_ability_icon
+scoreboard players operation @a[tag=t_pm_owner,limit=1,scores={cv_C=1..}] cv_C -= @a[tag=t_pm_owner,limit=1] ability_cd_tickrate
+tag @a[tag=t_pm_owner,limit=1,scores={cv_C=..0,cv_D=0}] add t_award_creeper_bottle
+scoreboard players set @a[tag=t_pm_owner,limit=1,tag=t_award_creeper_bottle] cv_D 1
+execute if entity @a[tag=t_pm_owner,limit=1,tag=t_award_creeper_bottle] run function cashgrab:classes/griefer/pmt_inv_creeper_ability_icon
+tag @a[tag=t_pm_owner,limit=1] remove t_award_creeper_bottle
 
 # Run func_step for creepers generated
 

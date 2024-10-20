@@ -11,8 +11,8 @@
 #	end_reason	: The reason for why the end function was called (1 = hit block terrain, 2 = hit entity, 3 = expired)
 
 # Class variable usage:
-#	cv_A	:	Power Strike cooldown timer
-#	cv_B	:	
+#	cv_A	:	Power Strike cooldown timer (in ms)
+#	cv_B	:	Power Strike charge
 #	cv_C	:	
 #	cv_D	:	
 #	cv_E	:	

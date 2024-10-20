@@ -9,8 +9,8 @@
 # Arguments: (none)
 
 # Class variable usage:
-#	cv_A	:	Power Strike cooldown timer
-#	cv_B	:	
+#	cv_A	:	Power Strike cooldown timer (in ms)
+#	cv_B	:	Power Strike charge
 #	cv_C	:	
 #	cv_D	:	
 #	cv_E	:	
@@ -18,11 +18,11 @@
 #	cv_G	:	
 #	cv_H	:	
 
-item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1..}] hotbar.1 with minecraft:gray_stained_glass_pane[\
+item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_B=..0}] hotbar.1 with minecraft:gray_stained_glass_pane[\
 minecraft:item_name="{\"italic\":false,\"color\":\"gray\",\"text\":\"Ability on Cooldown\"}"\
 ]
 
-item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=..0}] hotbar.1 with minecraft:golden_axe[\
+item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_B=1..}] hotbar.1 with minecraft:golden_axe[\
 minecraft:damage=31,\
 minecraft:enchantments={levels:{knockback:5},show_in_tooltip:false},\
 minecraft:attribute_modifiers=[\

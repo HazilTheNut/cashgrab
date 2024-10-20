@@ -11,8 +11,8 @@
 # Arguments: (none)
 
 # Class variable usage:
-#	cv_A	:	Power Strike cooldown timer
-#	cv_B	:	
+#	cv_A	:	Power Strike cooldown timer (in ms)
+#	cv_B	:	Power Strike charge
 #	cv_C	:	
 #	cv_D	:	
 #	cv_E	:	
