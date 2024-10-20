@@ -11,6 +11,7 @@
 
 $item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:string[\
 minecraft:item_name="[{\"color\":\"dark_aqua\",\"italic\":false,\"text\":\"<Class>\"},{\"color\":\"white\",\"text\":\" Skirmisher\"}]",\
+minecraft:custom_data={is_cts_icon:1},\
 minecraft:lore=[\
 "{\"color\":\"dark_gray\",\"italic\":true,\"text\":\"Dual wield and throw\"}",\
 "{\"color\":\"dark_gray\",\"italic\":true,\"text\":\" sword boomerangs.\"}",\

@@ -11,6 +11,7 @@
 
 $item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:slime_ball[\
 minecraft:item_name="[{\"color\":\"dark_aqua\",\"italic\":false,\"text\":\"<Class>\"},{\"color\":\"white\",\"text\":\" Spectre\"}]",\
+minecraft:custom_data={is_cts_icon:1},\
 minecraft:lore=[\
 "{\"color\":\"dark_gray\",\"italic\":true,\"text\":\"Teleport and vanish\"}",\
 "{\"color\":\"dark_gray\",\"italic\":true,\"text\":\" into thin air.\"}",\
