@@ -62,7 +62,7 @@ func_pmt_inv_ability_icon:"cashgrab:classes/ranger/pmt_ranger_inv_ability_icon",
 func_pmtl_tick:"cashgrab:classes/ranger/pmtl_ranger_tick",\
 func_pmtl_use_ability:"cashgrab:classes/ranger/pmtl_ranger_use_ability",\
 func_pmt_cts_icon:"cashgrab:classes/ranger/pmt_ranger_cts_inv_icon",\
-func_pmtl_cts_tick:"cashgrab:util/dummy",\
+func_pmtl_cts_tick:"cashgrab:classes/ranger/pmtl_ranger_cts_tick",\
 is_dev_tool:0,\
 }
 
@@ -74,7 +74,7 @@ func_pmt_inv_ability_icon:"cashgrab:classes/artillery/pmt_artillery_inv_ability_
 func_pmtl_tick:"cashgrab:classes/artillery/pmtl_artillery_tick",\
 func_pmtl_use_ability:"cashgrab:classes/artillery/pmtl_artillery_use_ability",\
 func_pmt_cts_icon:"cashgrab:classes/artillery/pmt_artillery_cts_inv_icon",\
-func_pmtl_cts_tick:"cashgrab:util/dummy",\
+func_pmtl_cts_tick:"cashgrab:classes/artillery/pmtl_artillery_cts_tick",\
 is_dev_tool:0,\
 }
 
@@ -122,7 +122,7 @@ func_pmt_inv_ability_icon:"cashgrab:classes/chronomancer/pmt_chronomancer_inv_ab
 func_pmtl_tick:"cashgrab:classes/chronomancer/pmtl_chronomancer_tick",\
 func_pmtl_use_ability:"cashgrab:classes/chronomancer/pmtl_chronomancer_use_ability",\
 func_pmt_cts_icon:"cashgrab:classes/chronomancer/pmt_chronomancer_cts_inv_icon",\
-func_pmtl_cts_tick:"cashgrab:util/dummy",\
+func_pmtl_cts_tick:"cashgrab:classes/chronomancer/pmtl_chronomancer_cts_tick",\
 is_dev_tool:0,\
 }
 

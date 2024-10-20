@@ -9,7 +9,9 @@
 # Arguments:
 #	lifetime_ticks		: Duration of timer, in ticks
 #	b_anchor_at_pos		: If nonzero, causes the timer to run func_npe_step and func_npe_end at the location where the timer was created.
-#							Otherwise, func_npe_step and func_npe_end are ran at the timer creator's location
+#							Otherwise, func_npe_step and func_npe_end are ran at the timer creator's location.
+#							If b_anchor_at_pos is 0, the owner of the timer will be tagged with t_timer_owner
+#								when it runs func_npe_start, func_npe_step, and func_npe_end
 #	t_timer_name		: Tag to give to the timer to identify its type
 #	func_npe_start		: Function to run when timer begins
 #	func_npe_step		: Function to run every tick

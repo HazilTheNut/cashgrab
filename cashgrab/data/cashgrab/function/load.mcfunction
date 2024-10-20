@@ -180,6 +180,7 @@ scoreboard objectives add evl_dmg_dealt minecraft.custom:minecraft.damage_dealt
 scoreboard objectives add evl_dmg_taken minecraft.custom:minecraft.damage_taken
 scoreboard objectives add evl_coin_pickup minecraft.picked_up:minecraft.gold_nugget
 scoreboard objectives add evl_crossbows minecraft.used:minecraft.crossbow
+scoreboard objectives add evl_bows minecraft.used:minecraft.bow
 
 # =============================
 # Conusmable events (prefix: "evc_"). 

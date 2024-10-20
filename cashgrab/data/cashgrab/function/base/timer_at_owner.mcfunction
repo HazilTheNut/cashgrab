@@ -11,11 +11,14 @@
 #	func_npe_end		: Function to run when the timer expires
 #						func_npe_end is supplied with an end_reason argument based on why func_npe_end was called: 0 = cleaned up, 1 = timer expired
 
-# Get owner
+# Get owner and tag them with t_timer_owner
 execute store result storage cashgrab:find_eid_args eid int 1 run scoreboard players get @s eid_owner
 function cashgrab:util/find_eid_self with storage cashgrab:find_eid_args
+tag @a[tag=t_eid_matches,limit=1] add t_timer_owner
 
 # Run func_npe_step or func_npe_end
 $execute if entity @s[scores={tmr_lifetime_ticks=1..}] at @e[tag=t_eid_matches,limit=1] run function $(func_npe_step)
 $execute if entity @s[scores={tmr_lifetime_ticks=..0},tag=t_cleanup] at @e[tag=t_eid_matches,limit=1] run function $(func_npe_end) {end_reason:0}
 $execute if entity @s[scores={tmr_lifetime_ticks=..0},tag=!t_cleanup] at @e[tag=t_eid_matches,limit=1] run function $(func_npe_end) {end_reason:1}
+
+tag @a[tag=t_eid_matches,limit=1] remove t_timer_owner
