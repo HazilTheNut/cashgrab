@@ -23,6 +23,12 @@
 # Invisibility effect for visuals (still wears armor by default)
 effect give @a[tag=t_pm_owner,limit=1] minecraft:invisibility infinite 0 true
 
+# If armor is taken off when it shouldn't, refresh inv
+execute unless items entity @a[tag=t_pm_owner,limit=1,scores={cv_A=..0}] armor.head * run clear @a[tag=t_pm_owner,limit=1] minecraft:leather_helmet
+execute unless items entity @a[tag=t_pm_owner,limit=1,scores={cv_A=..0}] armor.head * run function cashgrab:util/pmt_inv_refresh
+execute unless items entity @a[tag=t_pm_owner,limit=1,scores={cv_A=..0}] armor.chest * run clear @a[tag=t_pm_owner,limit=1] minecraft:leather_chestplate
+execute unless items entity @a[tag=t_pm_owner,limit=1,scores={cv_A=..0}] armor.chest * run function cashgrab:util/pmt_inv_refresh
+
 # Shadow Walk enter state
 scoreboard players set @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=2,cv_A=0,cv_B=1..}] cv_A 2
 execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 2 run function cashgrab:classes/spectre/pmtl_spectre_shadow_walk_enter

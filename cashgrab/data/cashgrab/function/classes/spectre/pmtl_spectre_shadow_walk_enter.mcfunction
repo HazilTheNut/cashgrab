@@ -26,7 +26,7 @@ execute unless score @a[tag=t_pm_owner,limit=1] cv_A matches 2 run return 0
 # Enter state
 function cashgrab:util/pmt_inv_refresh
 particle minecraft:smoke ~ ~1 ~ 0.5 0.75 0.5 0 40
-effect give @a[tag=t_pm_owner,limit=1] minecraft:speed 3 10 true
+effect give @a[tag=t_pm_owner,limit=1] minecraft:speed 3 15 true
 tag @a[tag=t_pm_owner,limit=1] add t_tracking_ignore
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 100
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_A 1
