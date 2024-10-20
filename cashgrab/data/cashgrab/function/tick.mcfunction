@@ -37,6 +37,9 @@ execute if score DEVELOPER_MODE num matches 0 if score NUM_PLAYERCOUNT_CHANGED n
 # Show goal coin amount
 scoreboard players operation GOAL __coins_score = GOAL coins
 
+# Allow plugins to run code before pms do
+execute if score ENABLE_PLUGINS num matches 1.. run function #cashgrab:gt_tick_prior
+
 # =============================
 # Run pm-specific code
 
@@ -84,3 +87,6 @@ scoreboard players set @a evl_dmg_dealt 0
 scoreboard players set @a evl_dmg_taken 0
 scoreboard players set @a evl_coin_pickup 0
 scoreboard players set @a evl_crossbows 0
+
+# Allow plugins to run code at the end of server tick
+execute if score ENABLE_PLUGINS num matches 1.. run function #cashgrab:gt_tick_post

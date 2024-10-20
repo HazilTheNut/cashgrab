@@ -2,6 +2,9 @@
 #
 # Arguments: (none)
 
+# Version number
+scoreboard players set CASHGRAB_VERSION_NUMBER num 000000001
+
 function cashgrab:runtime_config
 
 # gamerules
@@ -434,6 +437,9 @@ data modify storage cashgrab:game_info trinkets set value []
 
 # Load cashgrab core classes
 function cashgrab:load_post
+
+# Allow plugins to add data to game_info and initialize themselves
+execute if score ENABLE_PLUGINS num matches 1.. run function #cashgrab:gt_load_post
 
 # Add NULL entries
 data modify storage cashgrab:game_info classes prepend value {\

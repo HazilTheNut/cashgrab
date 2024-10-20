@@ -15,6 +15,6 @@ $execute if score NUM_CTS_TRINKETS_PAGE_IDX_MAX num matches ..0 run function cas
 
 execute if score NUM_CTS_TRINKETS_PAGE_IDX_MAX num matches ..0 run return 0
 
-$item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:paper[\
+$item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:gray_stained_glass_pane[\
 minecraft:item_name="[{\"color\":\"gold\",\"italic\":false,\"text\":\"Page $(trinkets_page_num) / $(trinkets_page_num_max)\"}]"\
 ] $(trinkets_page_num)

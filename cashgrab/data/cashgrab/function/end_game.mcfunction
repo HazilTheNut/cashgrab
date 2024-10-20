@@ -23,4 +23,7 @@ execute if score DEVELOPER_MODE num matches 0 run scoreboard players set @a acti
 execute if score DEVELOPER_MODE num matches 0 run scoreboard players set @a team_id 0
 execute if score DEVELOPER_MODE num matches 0 run tag @a add dtm_send_to_lobby
 
+# Allow plugins to run code when game ends
+execute if score ENABLE_PLUGINS num matches 1.. run function #cashgrab:gt_game_end
+
 scoreboard players set NUM_GAMESTATE num 0

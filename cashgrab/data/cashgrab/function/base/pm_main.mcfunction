@@ -62,6 +62,9 @@ execute unless score @s trinket_id = @a[tag=trinket_id,limit=1] class run functi
 function cashgrab:base/pmt_player_state
 execute at @a[tag=t_pm_owner,limit=1] rotated as @a[tag=t_pm_owner,limit=1] run function cashgrab:base/pmtl_ability
 
+# Allow plugins to run code before main pm tick
+execute if score ENABLE_PLUGINS num matches 1.. run function #cashgrab:pm_tick_prior
+
 # =============================
 # Main tick - Player activity_state handling
 
@@ -99,6 +102,9 @@ execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=20}] at @a[ta
 execute at @a[tag=t_pm_owner,limit=1] rotated as @a[tag=t_pm_owner,limit=1] run function cashgrab:base/pmtl_coins
 function cashgrab:base/pmt_scoring
 function cashgrab:base/pm_grab
+
+# Allow plugins to run code after main pm tick
+execute if score ENABLE_PLUGINS num matches 1.. run function #cashgrab:pm_tick_post
 
 # =============================
 # End of pm_main
