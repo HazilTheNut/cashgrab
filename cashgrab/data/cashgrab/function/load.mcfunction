@@ -54,14 +54,22 @@ scoreboard objectives add __coins_score dummy {"text":"Coins","color":"yellow"}
 
 # --- Toss ability
 
-# Ability cooldown remaining 
-# note: ability_cd_secs = floor(ability_cd_ticks / 20) + (ability_cd_ticks >= 1)
-scoreboard objectives add ability_cd_ticks dummy
-scoreboard objectives add ability_cd_secs dummy
+# Class-configured length of ability cooldown, in ms
+scoreboard objectives add ability_cfg_cd_ms dummy
 
-scoreboard objectives add ability_cfg_cooldown_ticks dummy
-scoreboard objectives add ability_cfg_charges dummy
+# Current cooldown time remaining, in ms
+scoreboard objectives add ability_cd_ms dummy
 
+# Progress rate of ability recharge. Default is 50 ms / tick
+scoreboard objectives add ability_cd_tickrate dummy
+
+# Current cooldown time remaining, in secs, derived from ability_cd_ms
+scoreboard objectives add ability_cd_display_secs dummy
+
+# Class-configured ability max charge count
+scoreboard objectives add ability_cfg_charges_max dummy
+
+# Current number of ability charges
 scoreboard objectives add ability_charges dummy
 
 # --- Trinket
@@ -202,6 +210,7 @@ scoreboard players set NUM_ZERO num 0
 scoreboard players set NUM_NEG_ONE num -1
 scoreboard players set NUM_TEN num 10
 scoreboard players set NUM_ONE_HUNDRED num 100
+scoreboard players set NUM_ONE_THOUSAND num 1000
 
 scoreboard players set NUM_360_DEG num 360
 

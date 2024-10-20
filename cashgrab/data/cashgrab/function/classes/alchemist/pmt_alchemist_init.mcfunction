@@ -22,8 +22,8 @@
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_A 1
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 1
 
-scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cooldown_ticks 500
-scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_charges 2
+scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 25000
+scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_charges_max 2
 scoreboard players set @a[tag=t_pm_owner,limit=1] ability_charges 2
 
 # Clear events

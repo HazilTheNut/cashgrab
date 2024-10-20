@@ -21,10 +21,10 @@
 #	cv_H	:	Boomerang life timer (counts upwards instead of downwards for more readable code)
 
 # If no sword held, do nothing
-execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 0 run scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cooldown_ticks 10
+execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 0 run scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 500
 execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 0 run return 0
 
-scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cooldown_ticks 300
+scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 15000
 
 # Set item configuration to only having the other sword
 execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 1 run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 2
@@ -33,7 +33,7 @@ execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 2 run scoreboard player
 # Throw Cleaving Cutlass
 execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 1 run function cashgrab:util/npe_create_missile {\
 f_speed_mpt:0.7f,\
-i_lifetime_ticks:400,\
+i_lifetime_ticks:200,\
 i_origin_loc:1,\
 f_focal_dist_m:15,\
 i_gravity_vy_mmpt:0,\
@@ -52,7 +52,7 @@ b_assign_as_peer:1,\
 # Throw Dancing Rapier
 execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 2 run function cashgrab:util/npe_create_missile {\
 f_speed_mpt:1.0f,\
-i_lifetime_ticks:400,\
+i_lifetime_ticks:200,\
 i_origin_loc:1,\
 f_focal_dist_m:15,\
 i_gravity_vy_mmpt:0,\

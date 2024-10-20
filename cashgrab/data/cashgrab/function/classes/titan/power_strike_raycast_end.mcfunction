@@ -26,8 +26,6 @@ $tellraw @a[tag=t_debug] "classes/titan/power_strike_raycast_end: end_reason: $(
 
 execute unless score @s temp_A matches 2 run return 0
 
-#scoreboard players set @s ability_cfg_cooldown_ticks 200
-
 # Apply knockback timer for players
 tag @a[tag=t_collision_found] add t_titan_set_power_strike_timer
 execute as @e[tag=t_pm] at @s run function cashgrab:classes/titan/pm_set_power_strike_timer

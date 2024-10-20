@@ -8,8 +8,8 @@
 #
 # Arguments: (none)
 
-scoreboard players set @a[tag=t_pm_owner] ability_cfg_cooldown_ticks 10
-scoreboard players set @a[tag=t_pm_owner] ability_cfg_charges 1
+scoreboard players set @a[tag=t_pm_owner] ability_cfg_cd_ms 500
+scoreboard players set @a[tag=t_pm_owner] ability_cfg_charges_max 1
 scoreboard players set @a[tag=t_pm_owner] ability_charges 1
 
 # Clear events

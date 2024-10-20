@@ -26,8 +26,10 @@ scoreboard players set @a[tag=t_pm_owner,limit=1,nbt={SelectedItem:{id:"minecraf
 scoreboard players set @a[tag=t_pm_owner,limit=1,nbt={SelectedItem:{id:"minecraft:golden_sword"}}] cv_A 2
 
 # When ability exits cooldown, return sword to player
-execute if score @a[tag=t_pm_owner,limit=1] ability_cd_ticks matches 1 run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 0
-execute if score @a[tag=t_pm_owner,limit=1] ability_cd_ticks matches 1 run function cashgrab:classes/skirmisher/pmt_skirmisher_inv
+execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_B=1..,ability_charges=1..}] run tag @a[tag=t_pm_owner,limit=1] add t_return_sword
+scoreboard players set @a[tag=t_pm_owner,limit=1,tag=t_return_sword] cv_B 0
+execute if entity @a[tag=t_pm_owner,limit=1,tag=t_return_sword] run function cashgrab:classes/skirmisher/pmt_skirmisher_inv
+tag @a[tag=t_pm_owner,limit=1] remove t_return_sword
 
 # Refresh inventory when catching boomerang
 execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 1.. run function cashgrab:classes/skirmisher/pmt_skirmisher_inv

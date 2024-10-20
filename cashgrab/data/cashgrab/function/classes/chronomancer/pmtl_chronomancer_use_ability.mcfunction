@@ -42,8 +42,8 @@ tag @e[tag=t_stasis_field_init,limit=1,sort=nearest] add t_stasis_immune
 tag @e[tag=t_stasis_field_init,limit=1,sort=nearest] add t_stasis_field
 tag @e[tag=t_stasis_field_init,limit=1,sort=nearest] remove t_stasis_field_init
 
-# Switch ability to cancel
-scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cooldown_ticks 20
+# Switch ability to Cancel Stasis Field
+scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 1000
 
 # Store existence of Stasis Field for display purposes
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_E 1

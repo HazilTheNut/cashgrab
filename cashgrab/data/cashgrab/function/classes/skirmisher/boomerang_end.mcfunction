@@ -38,8 +38,8 @@ execute unless score @s temp_A matches 2 run return 0
 
 playsound minecraft:entity.breeze.jump player @a ~ ~ ~ 1.0 0.25
 
-scoreboard players set @e[tag=t_collision_found,limit=1,sort=nearest,scores={ability_cd_ticks=2..100}] ability_cd_ticks 1
-scoreboard players remove @e[tag=t_collision_found,limit=1,sort=nearest,scores={ability_cd_ticks=101..}] ability_cd_ticks 100
+scoreboard players set @e[tag=t_collision_found,limit=1,sort=nearest,scores={ability_cd_ms=2..5000}] ability_cd_ms 1
+scoreboard players remove @e[tag=t_collision_found,limit=1,sort=nearest,scores={ability_cd_ms=5001..}] ability_cd_ms 5000
 scoreboard players set @e[tag=t_collision_found,limit=1,sort=nearest] cv_B 0
 
 # Refresh inventory

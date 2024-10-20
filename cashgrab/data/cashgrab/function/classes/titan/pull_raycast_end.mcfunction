@@ -27,10 +27,10 @@ $tellraw @a[tag=t_debug] "classes/titan/pull_raycast_end: end_reason: $(end_reas
 execute if score @s col_terrain matches 1.. run tellraw @a[tag=t_debug] [{"type":"text","text":"classes/titan/pull_raycast_end: temp_A: "},{"type":"score","score":{"name":"@s","objective":"temp_A"}}]
 
 
-execute unless score @s temp_A matches 2 run scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cooldown_ticks 60
+execute unless score @s temp_A matches 2 run scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 3000
 execute unless score @s temp_A matches 2 run return 0
 
-scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cooldown_ticks 260
+scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 13000
 
 execute positioned ~ ~ ~ facing ^ ^ ^-1 run function cashgrab:util/npe_create_missile {\
 f_speed_mpt:0.5f,\

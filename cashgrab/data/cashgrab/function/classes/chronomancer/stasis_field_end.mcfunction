@@ -26,7 +26,7 @@ execute store result storage cashgrab:find_eid_args eid int 1 run scoreboard pla
 function cashgrab:util/find_eid_self with storage cashgrab:find_eid_args
 
 # Re-enable Stasis Field ability for owner and initiate cooldown
-scoreboard players set @a[tag=t_eid_matches] ability_cfg_cooldown_ticks 200
-scoreboard players set @a[tag=t_eid_matches] ability_cd_ticks 200
+scoreboard players set @a[tag=t_eid_matches] ability_cfg_cd_ms 10000
+scoreboard players set @a[tag=t_eid_matches] ability_cd_ms 10000
 scoreboard players set @a[tag=t_eid_matches] ability_charges 0
 scoreboard players set @a[tag=t_eid_matches] cv_E 0
