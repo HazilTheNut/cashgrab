@@ -54,10 +54,8 @@ item replace entity @a[tag=t_pm_owner] inventory.26 with minecraft:air
 # During class-and-trinket selection, display inventory UI
 execute if entity @a[tag=t_pm_owner,scores={activity_state=10..19}] run function cashgrab:base/cts/pmt_cts_inv_main
 
-# During either class-and-trinket selection or gameplay, load class inventory, ability icon, and trinket
+# During either class-and-trinket selection or gameplay, load class inventory, ability icon, trinket, and coin display
 execute if entity @a[tag=t_pm_owner,scores={activity_state=10..29}] run function cashgrab:classes/pmt_class_inv with entity @s data.class_info
 execute if entity @a[tag=t_pm_owner,scores={activity_state=10..29}] run function cashgrab:util/pmt_inv_ability_icon_argloader
 execute if entity @a[tag=t_pm_owner,scores={activity_state=10..29}] run function cashgrab:util/pmt_inv_trinket_argloader
-
-# Display coins on hotbar
-function cashgrab:util/pmt_inv_coins_argloader
+execute if entity @a[tag=t_pm_owner,scores={activity_state=10..29}] run function cashgrab:util/pmt_inv_coins_argloader

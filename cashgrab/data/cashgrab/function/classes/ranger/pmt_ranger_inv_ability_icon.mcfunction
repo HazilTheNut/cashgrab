@@ -12,8 +12,9 @@
 $item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:flint[\
 minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Craft Arrows\"}]",\
 minecraft:lore=[\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"Replenishes your arrows and\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\" instantly reloads your crossbow.\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\"Replenishes your arrows\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\" and instantly reloads\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\" your crossbow.\"}",\
 "{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"=====\"}",\
 "[{\"color\":\"yellow\",\"italic\":false,\"text\":\"15\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown for \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"1\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" charge\"}]"\
 ]] $(charges)

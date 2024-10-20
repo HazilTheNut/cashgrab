@@ -26,4 +26,5 @@ execute as @e[type=minecraft:creeper,tag=t_griefer_creeper_init,limit=1,sort=nea
 scoreboard players operation @e[type=minecraft:creeper,tag=t_griefer_creeper_init,limit=1,sort=nearest] eid_owner = @a[tag=t_pm_owner,limit=1] eid_self
 scoreboard players set @e[type=minecraft:creeper,tag=t_griefer_creeper_init,limit=1,sort=nearest] eid_state 2
 tag @e[type=minecraft:creeper,tag=t_griefer_creeper_init,limit=1,sort=nearest] add t_griefer_creeper
+tag @e[type=minecraft:creeper,tag=t_griefer_creeper_init,limit=1,sort=nearest] add t_no_self_cleanup
 tag @e[type=minecraft:creeper,tag=t_griefer_creeper_init,limit=1,sort=nearest] remove t_griefer_creeper_init

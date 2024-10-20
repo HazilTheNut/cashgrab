@@ -26,7 +26,7 @@ func_pmt_inv_ability_icon:"cashgrab:classes/griefer/pmt_griefer_inv_ability_icon
 func_pmtl_tick:"cashgrab:classes/griefer/pmtl_griefer_tick",\
 func_pmtl_use_ability:"cashgrab:classes/griefer/pmtl_griefer_use_ability",\
 func_pmt_cts_icon:"cashgrab:classes/griefer/pmt_griefer_cts_inv_icon",\
-func_pmtl_cts_tick:"cashgrab:util/dummy",\
+func_pmtl_cts_tick:"cashgrab:classes/griefer/pmtl_griefer_cts_tick",\
 is_dev_tool:0,\
 }
 

@@ -38,12 +38,12 @@ scoreboard objectives add pm_count dummy
 scoreboard objectives add class dummy
 
 # Enumerated value of player's current state:
-#	0	=	In Pregame Lobby
-#	1	=	Transition to In Pregame Lobby
-#	10	=	Class Select (in spawn selection room)
-#	11	=	Transition to Class Select
-#	20	=	Gameplay
-#	21	=	Transition to Gameplay
+#	0	=	Transition to In Pregame Lobby
+#	1	=	In Pregame Lobby
+#	10	=	Transition to Class-and-Trinket Select 
+#	11	=	Class-and-Trinket Select (in spawn selection room)
+#	20	=	Transition to Gameplay
+#	21	=	Gameplay
 scoreboard objectives add activity_state dummy
 
 # Number of coins held

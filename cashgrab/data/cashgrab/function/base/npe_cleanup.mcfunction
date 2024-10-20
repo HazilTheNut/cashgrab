@@ -13,3 +13,9 @@ function cashgrab:util/npe_eid_find_subs
 
 tag @e[scores={eid_state=1..,eid_compare=0}] add t_cleanup
 execute as @e[scores={eid_state=1..,eid_compare=0}] run function cashgrab:base/npe_cleanup_recursion
+
+# If I am tagged as t_no_self_cleanup, I am not an entity that has code elsewhere that completes the cleanup
+#	Thus, destroy myself
+execute unless entity @s[tag=t_no_self_cleanup] run return 0
+tp @s ~ ~-1000 ~
+kill @s

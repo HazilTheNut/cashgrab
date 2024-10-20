@@ -30,6 +30,7 @@ execute if score @s stasis_state matches 2 run scoreboard players operation @e[t
 execute if score @s stasis_state matches 2 run scoreboard players set @s eid_self 0
 execute if score @s stasis_state matches 2 run scoreboard players set @s eid_state 0
 execute if score @s stasis_state matches 2 run tag @e[tag=t_griefer_creeper_stasis_init,limit=1,sort=nearest] add t_griefer_creeper_stasis
+execute if score @s stasis_state matches 2 run tag @e[tag=t_griefer_creeper_stasis_init,limit=1,sort=nearest] add t_no_self_cleanup
 execute if score @s stasis_state matches 2 run tag @e[tag=t_griefer_creeper_stasis_init,limit=1,sort=nearest] remove t_griefer_creeper_stasis_init
 
 execute if entity @s[tag=t_cleanup] run tp @s ~ ~-10000 ~
