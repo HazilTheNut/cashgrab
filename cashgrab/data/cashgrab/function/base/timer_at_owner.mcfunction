@@ -1,4 +1,4 @@
-# base/timer_main.mcfunction
+# base/timer_at_owner.mcfunction
 #
 # Context:
 #	as: a timer marker
@@ -14,11 +14,15 @@
 # Get owner and tag them with t_timer_owner
 execute store result storage cashgrab:find_eid_args eid int 1 run scoreboard players get @s eid_owner
 function cashgrab:util/find_eid_self with storage cashgrab:find_eid_args
-tag @a[tag=t_eid_matches,limit=1] add t_timer_owner
+tag @e[tag=t_eid_matches,limit=1] add t_timer_owner
+
+# If there is no owner, self destruct
+execute unless entity @e[tag=t_timer_owner] run scoreboard players set @s tmr_lifetime_ticks 0
+execute unless entity @e[tag=t_timer_owner] run tag @s add t_cleanup
 
 # Run func_npe_step or func_npe_end
-$execute if entity @s[scores={tmr_lifetime_ticks=1..}] at @e[tag=t_eid_matches,limit=1] run function $(func_npe_step)
-$execute if entity @s[scores={tmr_lifetime_ticks=..0},tag=t_cleanup] at @e[tag=t_eid_matches,limit=1] run function $(func_npe_end) {end_reason:0}
-$execute if entity @s[scores={tmr_lifetime_ticks=..0},tag=!t_cleanup] at @e[tag=t_eid_matches,limit=1] run function $(func_npe_end) {end_reason:1}
+$execute if entity @s[scores={tmr_lifetime_ticks=1..}] at @e[tag=t_timer_owner,limit=1] run function $(func_npe_step)
+$execute if entity @s[scores={tmr_lifetime_ticks=..0},tag=t_cleanup] at @e[tag=t_timer_owner,limit=1] run function $(func_npe_end) {end_reason:0}
+$execute if entity @s[scores={tmr_lifetime_ticks=..0},tag=!t_cleanup] at @e[tag=t_timer_owner,limit=1] run function $(func_npe_end) {end_reason:1}
 
-tag @a[tag=t_eid_matches,limit=1] remove t_timer_owner
+tag @a[tag=t_timer_owner] remove t_timer_owner
