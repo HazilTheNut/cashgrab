@@ -81,6 +81,7 @@ execute as @e[type=!minecraft:player,scores={eid_state=2}] run function cashgrab
 # Clear all listenable events
 scoreboard players set NUM_PLAYERCOUNT_CHANGED num 0
 
+scoreboard players set @a evl_death 0
 scoreboard players set @a evl_jump 0
 scoreboard players set @a evl_dmg_absorbed 0
 scoreboard players set @a evl_dmg_dealt 0

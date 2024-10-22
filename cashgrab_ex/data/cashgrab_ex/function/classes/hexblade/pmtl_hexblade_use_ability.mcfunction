@@ -11,10 +11,10 @@
 # Arguments: (none)
 
 # Class variable usage:
-#	cv_A	:	
-#	cv_B	:	
+#	cv_A	:	Pointer to target of hex (from Hexblade to target)
+#	cv_B	:	Hex duration/sequence timer
 #	cv_C	:	
-#	cv_D	:	
+#	cv_D	:	Blight Step countdown
 #	cv_E	:	
 #	cv_F	:	
 #	cv_G	:	
@@ -23,7 +23,7 @@
 playsound minecraft:entity.ghast.shoot player @a ~ ~ ~ 1.0 1.5
 
 function cashgrab:util/npe_create_missile {\
-f_speed_mpt:0.8f,\
+f_speed_mpt:0.7f,\
 i_lifetime_ticks:50,\
 i_origin_loc:1,\
 f_focal_dist_m:50,\

@@ -12,10 +12,10 @@
 # Arguments: (none)
 
 # Class variable usage:
-#	cv_A	:	Hex timer damage sourcing pointer (to Hexblade that bestowed it)
-#	cv_B	:	
+#	cv_A	:	Pointer to target of hex (from Hexblade to target)
+#	cv_B	:	Hex duration/sequence timer
 #	cv_C	:	
-#	cv_D	:	
+#	cv_D	:	Blight Step countdown
 #	cv_E	:	
 #	cv_F	:	
 #	cv_G	:	

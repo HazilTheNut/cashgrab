@@ -25,4 +25,4 @@ $execute if entity @s[scores={tmr_lifetime_ticks=1..}] at @e[tag=t_timer_owner,l
 $execute if entity @s[scores={tmr_lifetime_ticks=..0},tag=t_cleanup] at @e[tag=t_timer_owner,limit=1] run function $(func_npe_end) {end_reason:0}
 $execute if entity @s[scores={tmr_lifetime_ticks=..0},tag=!t_cleanup] at @e[tag=t_timer_owner,limit=1] run function $(func_npe_end) {end_reason:1}
 
-tag @a[tag=t_timer_owner] remove t_timer_owner
+tag @e[tag=t_timer_owner] remove t_timer_owner

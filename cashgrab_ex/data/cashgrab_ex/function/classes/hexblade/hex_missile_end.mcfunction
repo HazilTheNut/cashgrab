@@ -54,7 +54,7 @@ scoreboard players set @e[tag=t_missile_owner,limit=1] cv_B 220
 # Apply damage
 tag @s add t_dmg_by
 function cashgrab:util/npe_dmg {\
-d_dmg_amount:3.0,\
+d_dmg_amount:4.0,\
 s_dmg_type:"minecraft:magic",\
 t_dmg_target:"t_collision_found",\
 t_dmg_by:"t_dmg_by",\

@@ -32,15 +32,13 @@ execute if entity @a[tag=t_pm_owner,limit=1,scores={pm_count=2..}] run return 0
 # Handle player deaths
 
 # === Detect if player has died
-execute if score @a[tag=t_pm_owner,limit=1] __iev_death matches 1.. run function cashgrab:base/pm_cleanup_player_subs
-execute if entity @a[tag=t_pm_owner,limit=1,scores={__iev_death=1..,activity_state=20}] at @a[tag=t_pm_owner,limit=1] rotated as @a[tag=t_pm_owner,limit=1] run function cashgrab:base/pmtl_create_coinshower
+execute if score @a[tag=t_pm_owner,limit=1] evl_death matches 1.. run function cashgrab:base/pm_cleanup_player_subs
+execute if entity @a[tag=t_pm_owner,limit=1,scores={evl_death=1..,activity_state=21}] at @a[tag=t_pm_owner,limit=1] rotated as @a[tag=t_pm_owner,limit=1] run function cashgrab:base/pmtl_create_coinshower
 # Set dead player activity_state
-execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches 0 run scoreboard players set @a[tag=t_pm_owner,limit=1,scores={__iev_death=1..}] activity_state 0
-execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches 1.. run scoreboard players set @a[tag=t_pm_owner,limit=1,scores={__iev_death=1..}] activity_state 10
+execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches 0 run scoreboard players set @a[tag=t_pm_owner,limit=1,scores={evl_death=1..}] activity_state 0
+execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches 1.. run scoreboard players set @a[tag=t_pm_owner,limit=1,scores={evl_death=1..}] activity_state 10
 # Tag dead player to handle when they respawn
-tag @a[tag=t_pm_owner,limit=1,scores={__iev_death=1..}] add t_died
-# Consume __iev_death event
-scoreboard players set @a[tag=t_pm_owner,limit=1,scores={__iev_death=1..}] __iev_death 0
+tag @a[tag=t_pm_owner,limit=1,scores={evl_death=1..}] add t_died
 
 # === Detect if player has respawned
 execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches 0 run tag @a[tag=t_pm_owner,limit=1,tag=t_died,scores={stat_alive_ticks=1..}] add dtm_send_to_lobby
@@ -87,7 +85,10 @@ execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=11}] run func
 execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=11}] at @a[tag=t_pm_owner,limit=1] rotated as @a[tag=t_pm_owner,limit=1] run function cashgrab:classes/pmtl_class_cts_tick with entity @s data.class_info
 
 #	activity_state 20	=	Transition to Gameplay
-execute if score DEVELOPER_MODE num matches 0 run scoreboard players set @a[tag=t_pm_owner,scores={activity_state=20}] trinket_id 1
+# If player selections are out of bounds, reset cts selection
+execute if score @a[tag=t_pm_owner,limit=1,scores={activity_state=20}] class >= NUM_CTS_CLASSES_LIST_LEN num run function cashgrab:base/pmt_reset_cts
+execute if score @a[tag=t_pm_owner,limit=1,scores={activity_state=20}] trinket_id >= NUM_CTS_TRINKETS_LIST_LEN num run function cashgrab:base/pmt_reset_cts
+# Initialize class and trinket
 execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=20}] run function cashgrab:trinkets/pmt_trinket_init with entity @s data.trinket_info
 execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=20}] run function cashgrab:classes/pmt_class_init with entity @s data.class_info
 scoreboard players set @a[tag=t_pm_owner,limit=1,scores={activity_state=20}] activity_state 21

@@ -168,12 +168,12 @@ scoreboard objectives add ps_selected_hotbar_slot dummy
 # =============================
 # Internally consumed events (prefix: "__iev_"). Classes may not consume these events
 scoreboard objectives add __iev_drop minecraft.custom:minecraft.drop
-scoreboard objectives add __iev_death minecraft.custom:minecraft.deaths
 scoreboard objectives add __iev_logout minecraft.custom:minecraft.leave_game
 
 # =============================
 # Listenable events (prefix: "evl_"). These values are set to zero at the end of every tick.
 #	These events are shared between classes and trinkets. Neither should set these to zero.
+scoreboard objectives add evl_death minecraft.custom:minecraft.deaths
 scoreboard objectives add evl_jump minecraft.custom:minecraft.jump
 scoreboard objectives add evl_dmg_absorbed minecraft.custom:minecraft.damage_absorbed
 scoreboard objectives add evl_dmg_dealt minecraft.custom:minecraft.damage_dealt

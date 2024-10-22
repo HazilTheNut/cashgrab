@@ -9,10 +9,10 @@
 # Arguments: (none)
 
 # Class variable usage:
-#	cv_A	:	
-#	cv_B	:	
+#	cv_A	:	Pointer to target of hex (from Hexblade to target)
+#	cv_B	:	Hex duration/sequence timer
 #	cv_C	:	
-#	cv_D	:	
+#	cv_D	:	Blight Step countdown
 #	cv_E	:	
 #	cv_F	:	
 #	cv_G	:	
@@ -29,7 +29,7 @@ item replace entity @a[tag=t_pm_owner,limit=1] armor.feet with minecraft:leather
 minecraft:dyed_color=9699666,\
 minecraft:attribute_modifiers=[\
 {type:"generic.movement_speed",slot:"feet",id:"cashgrab:speed_bonus",amount:0.2,operation:"add_multiplied_base"},\
-{type:"generic.armor",slot:"feet",id:"cashgrab:boots_armor",amount:1,operation:"add_value"}\
+{type:"generic.armor",slot:"feet",id:"cashgrab:boots_armor",amount:2,operation:"add_value"}\
 ]]
 
 # =============================

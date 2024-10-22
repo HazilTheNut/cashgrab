@@ -70,7 +70,8 @@ scoreboard players set @a[tag=t_pm_owner,limit=1,scores={cv_A=1..,cv_D=0,ps_snea
 scoreboard players set @a[tag=t_pm_owner,limit=1,scores={cv_A=0}] cv_D 0
 
 # Reset Blight Step countdown if you cease to be crouching
-scoreboard players set @a[tag=t_pm_owner,limit=1,scores={cv_A=1..,ps_sneaking=..0}] cv_D 0
+scoreboard players set @a[tag=t_pm_owner,limit=1,scores={cv_A=1..,ps_sneaking=..0,cv_D=1..}] cv_D 0
+execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1..,ps_sneaking=..0}] run function cashgrab_ex:classes/hexblade/pmt_hexblade_inv_blight_step
 
 # Blight Step countdown
 scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={cv_D=1..}] cv_D 1
