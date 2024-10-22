@@ -10,10 +10,10 @@
 # Arguments: (none)
 
 # Class variable usage:
-#	cv_A	:	Rocket Barrage missiles sequence timer
-#	cv_B	:	
-#	cv_C	:	
-#	cv_D	:	
+#	cv_A	:	Hex timer damage sourcing pointer (from timer to Hexblade that bestowed it)
+#	cv_B	:	Pointer to target of hex (from Hexblade to target)
+#	cv_C	:	Pointer to hex timer (from Hexblade to timer)
+#	cv_D	:	Blight Step countdown
 #	cv_E	:	
 #	cv_F	:	
 #	cv_G	:	

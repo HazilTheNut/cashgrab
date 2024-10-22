@@ -41,3 +41,6 @@ minecraft:item_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Absolute Edg
 minecraft:attribute_modifiers=[\
 {type:"generic.attack_damage",slot:"mainhand",id:"cashgrab:absoluteedge_atkdmg",amount:6,operation:"add_value"},\
 {type:"generic.attack_speed",slot:"mainhand",id:"cashgrab:absoluteedge_atkspd",amount:-2,operation:"add_value"}]]
+
+# Blight Step icon
+function cashgrab_ex:classes/hexblade/pmt_hexblade_inv_blight_step
