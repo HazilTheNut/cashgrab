@@ -16,12 +16,14 @@ item replace entity @a[tag=t_pm_owner] armor.feet with minecraft:air
 
 # Hotbar
 item replace entity @a[tag=t_pm_owner] hotbar.0 with minecraft:brush[\
-minecraft:item_name="{\"text\":\"Smoothing Tool\"}"]
+minecraft:custom_name="{\"italic\":false,\"text\":\"Smoothing Tool\"}"]
 item replace entity @a[tag=t_pm_owner] hotbar.1 with minecraft:grass_block[\
-minecraft:item_name="{\"text\":\"Topsoil Tool\"}"]
+minecraft:custom_name="{\"italic\":false,\"text\":\"Topsoil Tool\"}"]
 item replace entity @a[tag=t_pm_owner] hotbar.2 with minecraft:map[\
-minecraft:item_name="{\"text\":\"Shoot Fireball (strong)\"}"]
+minecraft:custom_name="{\"italic\":false,\"text\":\"Shoot Fireball (strong)\"}"]
 item replace entity @a[tag=t_pm_owner] hotbar.3 with minecraft:map[\
-minecraft:item_name="{\"text\":\"Shoot Fireball (weak)\"}"]
+minecraft:custom_name="{\"italic\":false,\"text\":\"Shoot Fireball (weak)\"}"]
 item replace entity @a[tag=t_pm_owner] hotbar.5 with minecraft:map[\
-minecraft:item_name="{\"text\":\"Update Lighting\"}"]
+minecraft:custom_name="{\"italic\":false,\"text\":\"Update Lighting\"}"]
+item replace entity @a[tag=t_pm_owner] hotbar.6 with minecraft:map[\
+minecraft:custom_name="{\"italic\":false,\"text\":\"Lock Blocks\"}"]

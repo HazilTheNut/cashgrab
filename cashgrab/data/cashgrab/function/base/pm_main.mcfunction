@@ -59,11 +59,11 @@ execute unless score @s trinket_id = @a[tag=t_pm_owner,limit=1] trinket_id run f
 # =============================
 # Prior-tick functions
 
-function cashgrab:base/pmt_player_state
-execute at @a[tag=t_pm_owner,limit=1] rotated as @a[tag=t_pm_owner,limit=1] run function cashgrab:base/pmtl_ability
-
 # Allow plugins to run code before main pm tick
 execute if score ENABLE_PLUGINS num matches 1.. run function #cashgrab:pm_tick_prior
+
+function cashgrab:base/pmt_player_state
+execute at @a[tag=t_pm_owner,limit=1] rotated as @a[tag=t_pm_owner,limit=1] run function cashgrab:base/pmtl_ability
 
 # =============================
 # Main tick - Player activity_state handling

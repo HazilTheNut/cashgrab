@@ -1,0 +1,57 @@
+{
+	"replace": false,
+	"values": [
+		{
+			"id": "minecraft:barrel",
+			"required": true
+		},
+		{
+			"id": "minecraft:beacon",
+			"required": true
+		},
+		{
+			"id": "minecraft:blast_furnace",
+			"required": true
+		},
+		{
+			"id": "minecraft:brewing_stand",
+			"required": true
+		},
+		{
+			"id": "minecraft:chest",
+			"required": true
+		},
+		{
+			"id": "minecraft:crafter",
+			"required": true
+		},
+		{
+			"id": "minecraft:dispenser",
+			"required": true
+		},
+		{
+			"id": "minecraft:dropper",
+			"required": true
+		},
+		{
+			"id": "minecraft:furnace",
+			"required": true
+		},
+		{
+			"id": "minecraft:hopper",
+			"required": true
+		},
+		{
+			"id": "minecraft:shulker_box",
+			"required": true
+		},
+		{
+			"id": "minecraft:smoker",
+			"required": true
+		},
+		{
+			"id": "minecraft:trapped_chest",
+			"required": true
+		}
+	]
+}
