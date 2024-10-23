@@ -10,7 +10,7 @@
 #	slot	: Inventory slot to insert into
 
 $item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:firework_rocket[\
-minecraft:item_name="[{\"color\":\"dark_aqua\",\"italic\":false,\"text\":\"<Class>\"},{\"color\":\"white\",\"text\":\" Artillery\"}]",\
+minecraft:custom_name="[{\"color\":\"dark_aqua\",\"italic\":false,\"text\":\"<Class>\"},{\"color\":\"white\",\"text\":\" Artillery\"}]",\
 minecraft:hide_additional_tooltip={},\
 minecraft:custom_data={is_cts_icon:1},\
 minecraft:lore=[\

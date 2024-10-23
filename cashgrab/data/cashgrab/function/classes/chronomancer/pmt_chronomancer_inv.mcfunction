@@ -27,8 +27,8 @@ minecraft:dyed_color=10840833]
 item replace entity @a[tag=t_pm_owner,limit=1] armor.feet with minecraft:leather_boots[minecraft:unbreakable={show_in_tooltip:false},\
 minecraft:dyed_color=10840833,\
 minecraft:attribute_modifiers=[\
-{type:"generic.movement_speed",slot:"feet",id:"cashgrab:speed_bonus",amount:0.2,operation:"add_multiplied_base"},\
-{type:"generic.armor",slot:"feet",id:"cashgrab:boots_armor",amount:1,operation:"add_value"}\
+{type:"movement_speed",slot:"feet",id:"cashgrab:speed_bonus",amount:0.2,operation:"add_multiplied_base"},\
+{type:"armor",slot:"feet",id:"cashgrab:boots_armor",amount:1,operation:"add_value"}\
 ]]
 
 # =============================
@@ -36,10 +36,10 @@ minecraft:attribute_modifiers=[\
 
 # Time-Worn Splinter
 item replace entity @a[tag=t_pm_owner,limit=1] hotbar.0 with minecraft:stone_sword[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:item_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Time-Worn Splinter\"}",\
+minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Time-Worn Splinter\"}",\
 minecraft:attribute_modifiers=[\
-{type:"generic.attack_damage",slot:"mainhand",id:"cashgrab:timeworn_atkdmg",amount:5,operation:"add_value"},\
-{type:"generic.attack_speed",slot:"mainhand",id:"cashgrab:timeworn_atkspd",amount:-2,operation:"add_value"}]]
+{type:"attack_damage",slot:"mainhand",id:"cashgrab:timeworn_atkdmg",amount:5,operation:"add_value"},\
+{type:"attack_speed",slot:"mainhand",id:"cashgrab:timeworn_atkspd",amount:-2,operation:"add_value"}]]
 
 # Clockwork Crossbow
 function cashgrab:classes/chronomancer/pmt_chronomancer_inv_crossbow

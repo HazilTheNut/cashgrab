@@ -24,8 +24,8 @@ item replace entity @a[tag=t_pm_owner,limit=1] armor.head with minecraft:leather
 item replace entity @a[tag=t_pm_owner,limit=1] armor.chest with minecraft:leather_chestplate[minecraft:unbreakable={show_in_tooltip:false},minecraft:dyed_color=15653548]
 item replace entity @a[tag=t_pm_owner,limit=1] armor.legs with minecraft:leather_leggings[minecraft:unbreakable={show_in_tooltip:false},minecraft:dyed_color=15653548]
 item replace entity @a[tag=t_pm_owner,limit=1] armor.feet with minecraft:leather_boots[minecraft:unbreakable={show_in_tooltip:false},minecraft:dyed_color=15653548,minecraft:attribute_modifiers=[\
-{type:"generic.movement_speed",slot:"feet",id:"cashgrab:speed_bonus",amount:0.2,operation:"add_multiplied_base"},\
-{type:"generic.armor",slot:"feet",id:"cashgrab:boots_armor",amount:1,operation:"add_value"}\
+{type:"movement_speed",slot:"feet",id:"cashgrab:speed_bonus",amount:0.2,operation:"add_multiplied_base"},\
+{type:"armor",slot:"feet",id:"cashgrab:boots_armor",amount:1,operation:"add_value"}\
 ]]
 
 # =============================

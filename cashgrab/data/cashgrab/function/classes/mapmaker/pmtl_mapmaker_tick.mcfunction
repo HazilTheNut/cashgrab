@@ -10,20 +10,20 @@
 #
 # Arguments: (none)
 
-execute if entity @a[tag=t_pm_owner,scores={cv_A=1,ps_selected_hotbar_slot=0},nbt={SelectedItem:{components:{"minecraft:item_name":'"Smoothing Tool"'}}}] run function cashgrab:classes/mapmaker/run_over_volume {func:"cashgrab:classes/mapmaker/smooth_block"}
-execute if entity @a[tag=t_pm_owner,scores={cv_A=1,ps_selected_hotbar_slot=1},nbt={SelectedItem:{components:{"minecraft:item_name":'"Topsoil Tool"'}}}] run function cashgrab:classes/mapmaker/run_over_volume {func:"cashgrab:classes/mapmaker/topsoil_block"}
+execute if entity @a[tag=t_pm_owner,scores={cv_A=1,ps_selected_hotbar_slot=0},nbt={SelectedItem:{components:{"minecraft:custom_name":'"Smoothing Tool"'}}}] run function cashgrab:classes/mapmaker/run_over_volume {func:"cashgrab:classes/mapmaker/smooth_block"}
+execute if entity @a[tag=t_pm_owner,scores={cv_A=1,ps_selected_hotbar_slot=1},nbt={SelectedItem:{components:{"minecraft:custom_name":'"Topsoil Tool"'}}}] run function cashgrab:classes/mapmaker/run_over_volume {func:"cashgrab:classes/mapmaker/topsoil_block"}
 
-execute if entity @a[tag=t_pm_owner,scores={cv_A=1,ps_selected_hotbar_slot=2..3},nbt={SelectedItem:{components:{"minecraft:item_name":'"Shoot] Fireball (strong)"'}}}] run fill ~-10 ~-10 ~-10 ~10 ~10 ~10 minecraft:air replace minecraft:fire
-execute if entity @a[tag=t_pm_owner,scores={cv_A=1,ps_selected_hotbar_slot=2..3},nbt={SelectedItem:{components:{"minecraft:item_name":'"Shoot] Fireball (weak)"'}}}] run fill ~-10 ~-10 ~-10 ~10 ~10 ~10 minecraft:air replace minecraft:fire
+execute if entity @a[tag=t_pm_owner,scores={cv_A=1,ps_selected_hotbar_slot=2..3},nbt={SelectedItem:{components:{"minecraft:custom_name":'"Shoot] Fireball (strong)"'}}}] run fill ~-10 ~-10 ~-10 ~10 ~10 ~10 minecraft:air replace minecraft:fire
+execute if entity @a[tag=t_pm_owner,scores={cv_A=1,ps_selected_hotbar_slot=2..3},nbt={SelectedItem:{components:{"minecraft:custom_name":'"Shoot] Fireball (weak)"'}}}] run fill ~-10 ~-10 ~-10 ~10 ~10 ~10 minecraft:air replace minecraft:fire
 
 execute if entity @a[tag=t_pm_owner,scores={evc_maps=1..,ps_selected_hotbar_slot=2..3}] run function cashgrab:classes/mapmaker/summon_fireball
 execute if entity @a[tag=t_pm_owner,scores={evc_maps=1..,ps_selected_hotbar_slot=5}] run scoreboard players set @a[tag=t_pm_owner] cv_C 2
 item replace entity @a[tag=t_pm_owner,scores={evc_maps=1..}] hotbar.2 with minecraft:map[\
-minecraft:item_name="{\"text\":\"Shoot Fireball (strong)\"}"]
+minecraft:custom_name="{\"text\":\"Shoot Fireball (strong)\"}"]
 item replace entity @a[tag=t_pm_owner,scores={evc_maps=1..}] hotbar.3 with minecraft:map[\
-minecraft:item_name="{\"text\":\"Shoot Fireball (weak)\"}"]
+minecraft:custom_name="{\"text\":\"Shoot Fireball (weak)\"}"]
 item replace entity @a[tag=t_pm_owner,scores={evc_maps=1..}] hotbar.5 with minecraft:map[\
-minecraft:item_name="{\"text\":\"Update Lighting\"}"]
+minecraft:custom_name="{\"text\":\"Update Lighting\"}"]
 clear @a[tag=t_pm_owner,scores={evc_maps=1..}] minecraft:filled_map
 
 # Consume event

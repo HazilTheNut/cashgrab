@@ -10,7 +10,7 @@
 #	charges		: Number of charges of ability
 
 $item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:string[\
-minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Sword Boomerang\"}]",\
+minecraft:custom_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Sword Boomerang\"}]",\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Throws out your held sword\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" as a boomerang.\"}",\

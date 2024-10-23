@@ -8,6 +8,8 @@
 # Arguments:
 #	class_id	: 	Index in classes list
 
+$tellraw @a[tag=t_debug] "Recovering class data for idx $(class_id)"
+
 # Set pm's class to owner's class
 $scoreboard players set @s class $(class_id)
 

@@ -29,8 +29,8 @@ minecraft:dyed_color=9516260]
 item replace entity @a[tag=t_pm_owner,limit=1] armor.feet with minecraft:leather_boots[minecraft:unbreakable={show_in_tooltip:false},\
 minecraft:dyed_color=9516260,\
 minecraft:attribute_modifiers=[\
-{type:"generic.movement_speed",slot:"feet",id:"cashgrab:speed_bonus",amount:0.2,operation:"add_multiplied_base"},\
-{type:"generic.armor",slot:"feet",id:"cashgrab:boots_armor",amount:1,operation:"add_value"}\
+{type:"movement_speed",slot:"feet",id:"cashgrab:speed_bonus",amount:0.2,operation:"add_multiplied_base"},\
+{type:"armor",slot:"feet",id:"cashgrab:boots_armor",amount:1,operation:"add_value"}\
 ]]
 
 # =============================
@@ -39,10 +39,10 @@ minecraft:attribute_modifiers=[\
 # Magicite Shiv
 item replace entity @a[tag=t_pm_owner,limit=1] hotbar.0 with minecraft:amethyst_shard[minecraft:unbreakable={show_in_tooltip:false},\
 minecraft:enchantment_glint_override=true,\
-minecraft:item_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Magicite Shiv\"}",\
+minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Magicite Shiv\"}",\
 minecraft:attribute_modifiers=[\
-{type:"generic.attack_damage",slot:"mainhand",id:"cashgrab:magiciteshiv_atkdmg",amount:4,operation:"add_value"},\
-{type:"generic.attack_speed",slot:"mainhand",id:"cashgrab:magiciteshiv_atkspd",amount:-2,operation:"add_value"}]]
+{type:"attack_damage",slot:"mainhand",id:"cashgrab:magiciteshiv_atkdmg",amount:4,operation:"add_value"},\
+{type:"attack_speed",slot:"mainhand",id:"cashgrab:magiciteshiv_atkspd",amount:-2,operation:"add_value"}]]
 
 # Potions
 function cashgrab:classes/alchemist/pmt_alchemist_inv_potions

@@ -22,8 +22,8 @@
 # Armor
 item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=..0}] armor.head with minecraft:leather_helmet[minecraft:unbreakable={show_in_tooltip:false},minecraft:dyed_color=7727312,\
 minecraft:attribute_modifiers=[\
-{type:"generic.movement_speed",slot:"head",id:"cashgrab:speed_bonus",amount:0.3,operation:"add_multiplied_base"},\
-{type:"generic.armor",slot:"head",id:"cashgrab:helmet_armor",amount:1,operation:"add_value"}],\
+{type:"movement_speed",slot:"head",id:"cashgrab:speed_bonus",amount:0.3,operation:"add_multiplied_base"},\
+{type:"armor",slot:"head",id:"cashgrab:helmet_armor",amount:1,operation:"add_value"}],\
 minecraft:enchantment_glint_override=true]
 item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=..0}] armor.chest with minecraft:leather_chestplate[minecraft:unbreakable={show_in_tooltip:false},minecraft:dyed_color=7727312,\
 minecraft:enchantment_glint_override=true]
@@ -37,10 +37,10 @@ item replace entity @a[tag=t_pm_owner,limit=1] armor.feet with minecraft:air
 
 # Spectral Blade
 item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=..0}] hotbar.0 with minecraft:diamond_sword[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:item_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Spectral Blade\"}",\
+minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Spectral Blade\"}",\
 minecraft:attribute_modifiers=[\
-{type:"generic.attack_damage",slot:"mainhand",id:"cashgrab:spectral_blade_atkdmg",amount:7,operation:"add_value"},\
-{type:"generic.attack_speed",slot:"mainhand",id:"cashgrab:spectral_blade_atkspd",amount:-2,operation:"add_value"}],\
+{type:"attack_damage",slot:"mainhand",id:"cashgrab:spectral_blade_atkdmg",amount:7,operation:"add_value"},\
+{type:"attack_speed",slot:"mainhand",id:"cashgrab:spectral_blade_atkspd",amount:-2,operation:"add_value"}],\
 minecraft:enchantment_glint_override=true]
 
 item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1..}] hotbar.0 with minecraft:air

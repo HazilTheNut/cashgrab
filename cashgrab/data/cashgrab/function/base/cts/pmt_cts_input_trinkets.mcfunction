@@ -4,13 +4,18 @@
 #	as: a Player Monitor (pm) marker
 #	+ the owner of the pm is tagged with t_pm_owner
 #
-# Summary: Retrieves indexed trinket_id from cashgrab:game_info and stores it on the pm
+# Summary: Retrieves indexed trinket_id from cashgrab:game_info and stores it on the pm and pm owner
 #
 # Arguments:
 #	trinket_id	: 	Index in trinkets list
 
+$tellraw @a[tag=t_debug] "base/cts/pmt_cts_input_trinkets Selecting trinket idx $(trinket_id)"
+
 # Retrieve data from cashgrab:game_info
 $data modify entity @s data.trinket_info set from storage cashgrab:game_info trinkets[$(trinket_id)]
+
+# Set owner's trinket_id
+$scoreboard players set @a[tag=t_pm_owner,limit=1] trinket_id $(trinket_id)
 
 # Set pm's trinket_id to owner's trinket_id
 $scoreboard players set @s trinket_id $(trinket_id)

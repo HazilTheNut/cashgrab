@@ -10,7 +10,7 @@
 #	charges		: Number of charges of ability
 
 $execute if score @a[tag=t_pm_owner,limit=1] team_id matches 0 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:yellow_dye[\
-minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Valiant Charge\"}]",\
+minecraft:custom_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Valiant Charge\"}]",\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Grants you a speed boost.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" Afterwards, you gain absorption.\"}",\
@@ -21,7 +21,7 @@ minecraft:lore=[\
 ]] $(charges)
 
 $execute if score @a[tag=t_pm_owner,limit=1] team_id matches 1.. run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:yellow_dye[\
-minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Valiant Charge\"}]",\
+minecraft:custom_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Valiant Charge\"}]",\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Grants you and nearby allies\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" a speed boost.\"}",\

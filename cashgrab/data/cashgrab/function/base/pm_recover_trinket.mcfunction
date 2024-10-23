@@ -8,6 +8,8 @@
 # Arguments:
 #	trinket_id	: 	Index in trinkets list
 
+$tellraw @a[tag=t_debug] "Recovering trinket data for idx $(trinket_id)"
+
 # Set pm's class to owner's class
 $scoreboard players set @s trinket_id $(trinket_id)
 

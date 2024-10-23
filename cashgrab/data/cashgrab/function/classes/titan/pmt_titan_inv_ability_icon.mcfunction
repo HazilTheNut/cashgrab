@@ -10,7 +10,7 @@
 #	charges		: Number of charges of ability
 
 $item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:popped_chorus_fruit[\
-minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Pull\"}]",\
+minecraft:custom_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Pull\"}]",\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Fires a beam that pulls\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" its target back to you.\"}",\

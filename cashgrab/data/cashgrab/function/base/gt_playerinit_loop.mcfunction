@@ -24,6 +24,8 @@ scoreboard players operation @e[tag=t_pm_init,limit=1] eid_owner = @a[tag=t_play
 scoreboard players operation @e[tag=t_pm_init,limit=1] eid_self = @e[tag=t_pm_init,limit=1] eid_owner
 scoreboard players add @e[tag=t_pm_init,limit=1] eid_self 10000
 scoreboard players set @e[tag=t_pm_init,limit=1] eid_state 1
+scoreboard players set @e[tag=t_pm_init,limit=1] class 0
+scoreboard players set @e[tag=t_pm_init,limit=1] trinket_id 0
 
 # Finish initialization of pm
 tag @e[tag=t_pm_init] add t_pm

@@ -28,7 +28,7 @@ tag @e[tag=t_grab_subject,limit=1] remove t_grab_release
 execute if score @e[tag=t_grab_subject,limit=1] grab_state matches 0 run return 0
 
 # Remove gravity for entities entering a grab
-execute if score @e[tag=t_grab_subject,limit=1] grab_state matches 2 run attribute @e[tag=t_grab_subject,limit=1] minecraft:generic.gravity base set 0
+execute if score @e[tag=t_grab_subject,limit=1] grab_state matches 2 run attribute @e[tag=t_grab_subject,limit=1] minecraft:gravity base set 0
 
 # While grabbed, teleport to grabber
 execute if score @e[tag=t_grab_subject,limit=1] grab_state matches 1..2 store result storage cashgrab:find_eid_args eid int 1 run scoreboard players get @e[tag=t_grab_subject,limit=1] eid_grabbed_by
@@ -38,4 +38,4 @@ execute if score @e[tag=t_grab_subject,limit=1] grab_state matches 1..2 unless e
 execute if score @e[tag=t_grab_subject,limit=1] grab_state matches 1..2 at @n[tag=t_eid_matches] run tp @e[tag=t_grab_subject,limit=1] ~ ~-0.75 ~
 
 # Restore gravity for entities exiting a grab
-execute if score @e[tag=t_grab_subject,limit=1] grab_state matches -1 run attribute @e[tag=t_grab_subject,limit=1] minecraft:generic.gravity base set 0.08
+execute if score @e[tag=t_grab_subject,limit=1] grab_state matches -1 run attribute @e[tag=t_grab_subject,limit=1] minecraft:gravity base set 0.08

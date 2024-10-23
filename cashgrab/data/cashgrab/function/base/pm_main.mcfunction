@@ -48,11 +48,13 @@ tag @a[tag=t_pm_owner,limit=1,tag=t_died,scores={stat_alive_ticks=1..}] remove t
 # =============================
 # Class and trinket selection data redundancy error mitigation
 
+execute unless score @s class = @a[tag=t_pm_owner,limit=1] class run tellraw @a[tag=t_debug] [{"type":"text","text":"base/pm_main recovering class data; pm class = "},{"type":"score","score":{"name":"@s","objective":"class"}},{"type":"text","text":" player class = "},{"type":"score","score":{"name":"@a[tag=t_pm_owner,limit=1]","objective":"class"}}]
 execute unless score @s class = @a[tag=t_pm_owner,limit=1] class store result storage cashgrab:pm_recovery_args class_id int 1 run scoreboard players get @a[tag=t_pm_owner,limit=1] class
 execute unless score @s class = @a[tag=t_pm_owner,limit=1] class run function cashgrab:base/pm_recover_class with storage cashgrab:pm_recovery_args
 
-execute unless score @s trinket_id = @a[tag=trinket_id,limit=1] class store result storage cashgrab:pm_recovery_args trinket_id int 1 run scoreboard players get @a[tag=t_pm_owner,limit=1] trinket_id
-execute unless score @s trinket_id = @a[tag=trinket_id,limit=1] class run function cashgrab:base/pm_recover_trinket with storage cashgrab:pm_recovery_args
+execute unless score @s trinket_id = @a[tag=t_pm_owner,limit=1] trinket_id run tellraw @a[tag=t_debug] [{"type":"text","text":"base/pm_main recovering trinket data; pm trinket = "},{"type":"score","score":{"name":"@s","objective":"trinket_id"}},{"type":"text","text":" player trinket = "},{"type":"score","score":{"name":"@a[tag=t_pm_owner,limit=1]","objective":"trinket_id"}}]
+execute unless score @s trinket_id = @a[tag=t_pm_owner,limit=1] trinket_id store result storage cashgrab:pm_recovery_args trinket_id int 1 run scoreboard players get @a[tag=t_pm_owner,limit=1] trinket_id
+execute unless score @s trinket_id = @a[tag=t_pm_owner,limit=1] trinket_id run function cashgrab:base/pm_recover_trinket with storage cashgrab:pm_recovery_args
 
 # =============================
 # Prior-tick functions

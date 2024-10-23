@@ -10,7 +10,7 @@
 #	charges		: Number of charges of ability
 
 $item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:flint[\
-minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Craft Arrows\"}]",\
+minecraft:custom_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Craft Arrows\"}]",\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Replenishes your arrows\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" and instantly reloads\"}",\

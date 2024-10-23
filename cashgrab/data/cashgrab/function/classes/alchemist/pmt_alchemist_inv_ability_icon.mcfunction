@@ -10,7 +10,7 @@
 #	charges		: Number of charges of ability
 
 $item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:redstone_torch[\
-minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Flame Trap\"}]",\
+minecraft:custom_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Flame Trap\"}]",\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Deploys a proximity trap that\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" explodes and reveals enemies.\"}",\

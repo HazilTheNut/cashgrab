@@ -22,7 +22,7 @@ clear @a[tag=t_pm_owner,limit=1] minecraft:crossbow
 
 # Crossbow is not in stasis, loaded, and in hotbar
 execute if entity @a[tag=t_pm_owner,limit=1,tag=!t_stasis,scores={cv_C=1,cv_A=0}] run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.1 with minecraft:crossbow[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:item_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Clockwork Crossbow\"}",\
+minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Clockwork Crossbow\"}",\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"This crossbow automatically\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" reloads itself.\"}",\
@@ -34,7 +34,7 @@ minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1b}]]
 
 # Crossbow is not in stasis, loaded, and in offhand
 execute if entity @a[tag=t_pm_owner,limit=1,tag=!t_stasis,scores={cv_C=1,cv_A=1}] run item replace entity @a[tag=t_pm_owner,limit=1] weapon.offhand with minecraft:crossbow[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:item_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Clockwork Crossbow\"}",\
+minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Clockwork Crossbow\"}",\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"This crossbow automatically\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" reloads itself.\"}",\
@@ -46,7 +46,7 @@ minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1b}]]
 
 # Crossbow is not in stasis, unloaded, and in hotbar
 execute if entity @a[tag=t_pm_owner,limit=1,tag=!t_stasis,scores={cv_C=0,cv_A=0}] run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.1 with minecraft:crossbow[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:item_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Clockwork Crossbow\"}",\
+minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Clockwork Crossbow\"}",\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"This crossbow automatically\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" reloads itself.\"}",\
@@ -58,7 +58,7 @@ minecraft:charged_projectiles=[]]
 
 # Crossbow is not in stasis, unloaded, and in offhand
 execute if entity @a[tag=t_pm_owner,limit=1,tag=!t_stasis,scores={cv_C=0,cv_A=1}] run item replace entity @a[tag=t_pm_owner,limit=1] weapon.offhand with minecraft:crossbow[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:item_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Clockwork Crossbow\"}",\
+minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Clockwork Crossbow\"}",\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"This crossbow automatically\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" reloads itself.\"}",\
@@ -70,7 +70,7 @@ minecraft:charged_projectiles=[]]
 
 # Crossbow is in stasis, loaded, and in hotbar
 execute if entity @a[tag=t_pm_owner,limit=1,tag=t_stasis,scores={cv_C=1,cv_A=0}] run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.1 with minecraft:crossbow[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:item_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Clockwork Crossbow\"}",\
+minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Clockwork Crossbow\"}",\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"This crossbow automatically\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" reloads itself.\"}",\
@@ -84,7 +84,7 @@ minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1b},{id:"minecraft:ar
 
 # Crossbow is in stasis, loaded, and in offhand
 execute if entity @a[tag=t_pm_owner,limit=1,tag=t_stasis,scores={cv_C=1,cv_A=1}] run item replace entity @a[tag=t_pm_owner,limit=1] weapon.offhand with minecraft:crossbow[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:item_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Clockwork Crossbow\"}",\
+minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Clockwork Crossbow\"}",\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"This crossbow automatically\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" reloads itself.\"}",\
@@ -98,7 +98,7 @@ minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1b},{id:"minecraft:ar
 
 # Crossbow is in stasis, unloaded, and in hotbar
 execute if entity @a[tag=t_pm_owner,limit=1,tag=t_stasis,scores={cv_C=0,cv_A=0}] run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.1 with minecraft:crossbow[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:item_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Clockwork Crossbow\"}",\
+minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Clockwork Crossbow\"}",\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"This crossbow automatically\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" reloads itself.\"}",\
@@ -112,7 +112,7 @@ minecraft:charged_projectiles=[]]
 
 # Crossbow is in stasis, unloaded, and in offhand
 execute if entity @a[tag=t_pm_owner,limit=1,tag=t_stasis,scores={cv_C=0,cv_A=1}] run item replace entity @a[tag=t_pm_owner,limit=1] weapon.offhand with minecraft:crossbow[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:item_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Clockwork Crossbow\"}",\
+minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Clockwork Crossbow\"}",\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"This crossbow automatically\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" reloads itself.\"}",\
