@@ -69,35 +69,22 @@ execute if score ENABLE_PLUGINS num matches 1.. run function #cashgrab:pm_tick_p
 # Main tick - Player activity_state handling
 
 #	activity_state 0	=	Transition to In Pregame Lobby
-clear @a[tag=t_pm_owner,limit=1,scores={activity_state=0}]
-execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=0}] run function cashgrab:util/pmt_inv_refresh
-scoreboard players set @a[tag=t_pm_owner,limit=1,scores={activity_state=0}] activity_state 1
+execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=0}] run function cashgrab:base/pmt_tick_transition_to_lobby
 
 #	activity_state 1	=	In Pregame Lobby
+execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=0}] run function cashgrab:base/pmt_tick_lobby
 
 #	activity_state 10	=	Transition to Class-and-Trinket Select
-clear @a[tag=t_pm_owner,limit=1,scores={activity_state=10}]
-execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=10}] run function cashgrab:trinkets/pmt_trinket_init with entity @s data.trinket_info
-execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=10}] run function cashgrab:classes/pmt_class_init with entity @s data.class_info
-scoreboard players set @a[tag=t_pm_owner,limit=1,scores={activity_state=10}] activity_state 11
+execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=10}] run function cashgrab:base/pmt_tick_transition_to_cts
 
 #	activity_state 11	=	Class-and-Trinket Select (in spawn selection room)
-execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=11}] run function cashgrab:base/cts/pmt_cts_input_main
-execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=11}] run function cashgrab:base/pmt_trinket_cts_tick
-execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=11}] at @a[tag=t_pm_owner,limit=1] rotated as @a[tag=t_pm_owner,limit=1] run function cashgrab:classes/pmtl_class_cts_tick with entity @s data.class_info
+execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=11}] run function cashgrab:base/pmt_tick_cts
 
 #	activity_state 20	=	Transition to Gameplay
-# If player selections are out of bounds, reset cts selection
-execute if score @a[tag=t_pm_owner,limit=1,scores={activity_state=20}] class >= NUM_CTS_CLASSES_LIST_LEN num run function cashgrab:base/pmt_reset_cts
-execute if score @a[tag=t_pm_owner,limit=1,scores={activity_state=20}] trinket_id >= NUM_CTS_TRINKETS_LIST_LEN num run function cashgrab:base/pmt_reset_cts
-# Initialize class and trinket
-execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=20}] run function cashgrab:trinkets/pmt_trinket_init with entity @s data.trinket_info
-execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=20}] run function cashgrab:classes/pmt_class_init with entity @s data.class_info
-scoreboard players set @a[tag=t_pm_owner,limit=1,scores={activity_state=20}] activity_state 21
+execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=20}] run function cashgrab:base/pmt_tick_transition_to_gameplay
 
 #	activity_state 21	=	Gameplay
-execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=21}] at @a[tag=t_pm_owner,limit=1] rotated as @a[tag=t_pm_owner,limit=1] run function cashgrab:base/pmtl_trinket_tick with entity @s data.trinket_info
-execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=21}] at @a[tag=t_pm_owner,limit=1] rotated as @a[tag=t_pm_owner,limit=1] run function cashgrab:classes/pmtl_class_tick with entity @s data.class_info
+execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=21}] run function cashgrab:base/pmt_tick_gameplay
 
 # =============================
 # Post-tick actions

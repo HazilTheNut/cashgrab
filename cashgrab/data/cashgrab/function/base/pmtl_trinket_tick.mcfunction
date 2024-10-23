@@ -12,6 +12,9 @@
 #	func_pmtl_use_item	: Function to run when the trinket item is used
 #	evc_usage_score		: Scoreboard objective that tracks if trinket is used
 
+# If max trinket count is 0, act as the trinket is disabled
+execute if score @a[tag=t_pm_owner,limit=1] trinket_charges_max matches ..0 run return 0
+
 # Track whether trinket is in offhand
 scoreboard players set @a[tag=t_pm_owner,limit=1] trinket_in_offhand 0
 execute if items entity @a[tag=t_pm_owner,limit=1] weapon.offhand *[custom_data={is_trinket:1}] run scoreboard players set @a[tag=t_pm_owner,limit=1] trinket_in_offhand 1
