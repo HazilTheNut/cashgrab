@@ -18,7 +18,7 @@
 #	i_gravity_const_mmpt2		: Vertical velocity gained per tick, in mm/tick^2
 #	f_tracking_scalar			: Scalar of strength of tracking towards potential targets
 #								: 	If you change f_tracking_scalar stored on the missile after creation, you must tag it as 
-#									t_missile_calc_tracking to recalculate some internal tracking parameters
+#									t_missile_init_tracking to recalculate some internal tracking parameters
 #	t_missile_name				: Tag to issue to the missile on creation
 #	col_terrain_allowed			: Block tag or block type that describes what counts as not solid collision
 #	func_npe_entity_filter		: Filtering function for which entities to collide with. Function applies the tag "t_collision_candidate" to all possible entities to collide with
@@ -30,19 +30,34 @@
 #	b_assign_as_peer			: Set to nonzero to assign eid_owner to missile to be a peer to the executor rather than owned by them. 
 #									Useful for pms that call this function.
 
+# Create missile marker
 summon minecraft:marker ~ ~ ~ {Tags:["t_missile_init"]}
 $scoreboard players set @s temp_A $(i_origin_loc)
 execute if entity @s[scores={temp_A=0}] positioned ~ ~ ~ run tp @e[tag=t_missile_init,limit=1,sort=nearest] ~ ~ ~ facing ^ ^ ^1
 $execute if entity @s[scores={temp_A=1}] positioned ~ ~1.5 ~ run tp @e[tag=t_missile_init,limit=1,sort=nearest] ^-0.20 ^-0.05 ^0.25 facing ^ ^ ^$(f_focal_dist_m)
 $execute if entity @s[scores={temp_A=2}] positioned ~ ~1.5 ~ run tp @e[tag=t_missile_init,limit=1,sort=nearest] ^0.20 ^-0.05 ^0.25 facing ^ ^ ^$(f_focal_dist_m)
 
-$data merge entity @e[tag=t_missile_init,limit=1,sort=nearest] {data:{col_terrain_allowed:"$(col_terrain_allowed)",func_npe_entity_filter:"$(func_npe_entity_filter)",func_npe_tick:"$(func_npe_tick)",func_npe_end:"$(func_npe_end)",vel_x:0.0f,vel_y:0.0f,vel_z:0.0f,f_speed_mpt:$(f_speed_mpt)f,f_tracking_scalar:$(f_tracking_scalar),func_npe_tracking_filter:"$(func_npe_tracking_filter)",tracking_dyaw:0,tracking_dpitch:0}}
+# Write data to missile from function parameters
+$data merge entity @e[tag=t_missile_init,limit=1,sort=nearest] {data:{\
+col_terrain_allowed:"$(col_terrain_allowed)",\
+func_npe_entity_filter:"$(func_npe_entity_filter)",\
+func_npe_tick:"$(func_npe_tick)",\
+func_npe_end:"$(func_npe_end)",\
+vel_x:0.0f,vel_y:0.0f,vel_z:0.0f,\
+f_speed_mpt:$(f_speed_mpt)f,\
+f_tracking_scalar:$(f_tracking_scalar),\
+func_npe_tracking_filter:"$(func_npe_tracking_filter)",\
+tracking_dyaw:0,tracking_dpitch:0}}
 
+# If the missile has tracking (if f_tracking_scalar > 0), tag missile to apply tracking and calculate its parameters
 execute store result score @s temp_B run data get entity @e[tag=t_missile_init,limit=1,sort=nearest] data.f_tracking_scalar 1000000
 execute if entity @s[scores={temp_B=1..}] run tag @e[tag=t_missile_init,limit=1,sort=nearest] add t_missile_has_tracking
-execute if entity @s[scores={temp_B=1..}] run tag @e[tag=t_missile_init,limit=1,sort=nearest] add t_missile_calc_tracking
+execute if entity @s[scores={temp_B=1..}] run tag @e[tag=t_missile_init,limit=1,sort=nearest] add t_missile_init_tracking
 
-$execute as @e[tag=t_missile_init,limit=1,sort=nearest] at @s run function cashgrab:base/missile_calc_base_vel {f_speed_mpt:$(f_speed_mpt)f,tracking_dyaw:0,tracking_dpitch:0}
+# Schedule missile to calcualte its base velocity
+tag @e[tag=t_missile_init,limit=1,sort=nearest] add t_missile_calc_base_vel
+
+# Write miscellaneous scoreboard data to missile
 $scoreboard players set @e[tag=t_missile_init,limit=1,sort=nearest] mis_lifetime_ticks $(i_lifetime_ticks)
 $scoreboard players set @e[tag=t_missile_init,limit=1,sort=nearest] mis_gravity_vel_y_mmpt $(i_gravity_vy_mmpt)
 $scoreboard players set @e[tag=t_missile_init,limit=1,sort=nearest] mis_gravity_const_mmpt2 $(i_gravity_const_mmpt2)
@@ -50,16 +65,18 @@ $scoreboard players set @e[tag=t_missile_init,limit=1,sort=nearest] mis_gravity_
 scoreboard players set @e[tag=t_missile_init,limit=1,sort=nearest] mis_func_step_dyaw_mdeg 0
 scoreboard players set @e[tag=t_missile_init,limit=1,sort=nearest] mis_func_step_dpitch_mdeg 0
 
-tag @e[tag=t_missile_init,limit=1,sort=nearest,scores={mis_gravity_const_mmpt2=1..}] add t_missile_has_gravity
-tag @e[tag=t_missile_init,limit=1,sort=nearest,scores={mis_gravity_const_mmpt2=..-1}] add t_missile_has_gravity
-
 $tag @e[tag=t_missile_init,limit=1,sort=nearest] add $(t_missile_name)
 
+# If the missile has gravity (if i_gravity_const_mmpt2 > 0), tag missile to apply tracking and calculate its parameters
+tag @e[tag=t_missile_init,limit=1,sort=nearest,scores={mis_gravity_const_mmpt2=1..}] add t_missile_has_gravity
+
+# Issue EID to missile
 execute as @e[tag=t_missile_init,limit=1,sort=nearest] at @s run function cashgrab:util/npe_eid_acquire
 $execute if score NUM_ZERO num matches $(b_assign_as_peer) run scoreboard players operation @n[type=minecraft:marker,tag=t_missile_init] eid_owner = @s eid_self
 $execute unless score NUM_ZERO num matches $(b_assign_as_peer) run scoreboard players operation @n[type=minecraft:marker,tag=t_missile_init] eid_owner = @s eid_owner
 scoreboard players operation @e[tag=t_missile_init,limit=1,sort=nearest] team_id = @s team_id
 
+# Run func_npe_start
 $execute as @e[tag=t_missile_init,limit=1,sort=nearest] at @s run function $(func_npe_start)
 
 #tellraw @a[tag=t_debug] [{"text":"util/pe_create_missile data = "},{"entity":"@e[tag=t_missile_init,limit=1,sort=nearest]","nbt":"data"}]

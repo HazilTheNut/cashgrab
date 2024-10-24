@@ -65,7 +65,7 @@ execute if entity @s[tag=t_boomerang_begin_return] run scoreboard players operat
 
 # On starting return, enable tracking and recalculate
 tag @s[tag=t_boomerang_begin_return] add t_missile_has_tracking
-tag @s[tag=t_boomerang_begin_return] add t_missile_calc_tracking
+tag @s[tag=t_boomerang_begin_return] add t_missile_init_tracking
 tag @s remove t_boomerang_begin_return
 
 # --- Damage enemies that collide with boomerang

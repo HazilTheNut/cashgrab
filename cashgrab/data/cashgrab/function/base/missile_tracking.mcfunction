@@ -9,17 +9,19 @@
 #
 # Arguments:
 #	f_tracking_scalar			: Scalar of strength of tracking towards potential targets
+#	func_npe_tracking_filter	: Used for determining targets to track towards
 
-# If t_missile_calc_tracking is set, calculate minimum and maximum displacement angles to apply tracking to
-scoreboard players set @s[tag=t_missile_calc_tracking] mis_tracking_max_angle_mdeg 0
-execute if entity @s[tag=t_missile_calc_tracking] store result score @s mis_tracking_max_angle_mdeg run data get entity @s data.f_tracking_scalar 10000
-scoreboard players add @s[tag=t_missile_calc_tracking] mis_tracking_max_angle_mdeg 10000
-scoreboard players operation @s[tag=t_missile_calc_tracking] mis_tracking_min_angle_mdeg = @s[tag=t_missile_calc_tracking] mis_tracking_max_angle_mdeg
-scoreboard players operation @s[tag=t_missile_calc_tracking] mis_tracking_min_angle_mdeg *= NUM_NEG_ONE num
-tag @s remove t_missile_calc_tracking
+# Run filter function
+$execute if entity @s[tag=t_missile_has_tracking] run function $(func_npe_tracking_filter)
+
+# If no entity found, do no track onto nothing
+execute unless entity @e[tag=t_collision_candidate,tag=!t_invisible] run return 0
+
+# If t_missile_init_tracking is set, calculate minimum and maximum displacement angles to apply tracking to
+execute if entity @s[tag=t_missile_init_tracking] run function cashgrab:base/missile_tracking_init
 
 # Calculate yaw and pitch of direction facing towards tracking target
-execute facing entity @e[tag=t_collision_candidate,tag=!t_tracking_ignore,limit=1,sort=nearest] eyes run function cashgrab:util/npe_calc_facing_vector {magnitude:1.0f}
+execute facing entity @e[tag=t_collision_candidate,tag=!t_invisible,limit=1,sort=nearest] eyes run function cashgrab:util/npe_calc_facing_vector {magnitude:1.0f}
 scoreboard players operation @s mis_tracking_dyaw_mdeg = @s facing_vector_yaw_mdeg
 scoreboard players operation @s mis_tracking_dpitch_mdeg = @s facing_vector_pitch_mdeg
 
@@ -30,8 +32,6 @@ execute store result score @s facing_vector_pitch_mdeg run data get entity @s Ro
 #tellraw @a[tag=t_debug] [{"type":"text","text":"pe_missile_physics_tracking:"}]
 #tellraw @a[tag=t_debug] [{"type":"text","text":"  facing_yaw_raw: "},{"type":"score","score":{"name":"@s","objective":"facing_vector_yaw_mdeg"}}]
 #tellraw @a[tag=t_debug] [{"type":"text","text":"  goal_yaw_raw: "},{"type":"score","score":{"name":"@s","objective":"mis_tracking_dyaw_mdeg"}}]
-
-# facing_vector rotation = my current rotation while mis_tracking rotation = rotation towards target
 
 # =============================
 # Yaw correction angle calculation
@@ -55,7 +55,7 @@ scoreboard players operation @s mis_tracking_dpitch_mdeg -= @s facing_vector_pit
 # =============================
 # Post-processing
 
-# Give up if target is further than 30 degrees away
+# Give up if target is further than give-up angle
 execute if score @s mis_tracking_dyaw_mdeg < @s mis_tracking_min_angle_mdeg run tag @s add t_give_up
 execute if score @s mis_tracking_dpitch_mdeg < @s mis_tracking_min_angle_mdeg run tag @s add t_give_up
 execute if score @s mis_tracking_dyaw_mdeg > @s mis_tracking_max_angle_mdeg run tag @s add t_give_up

@@ -19,3 +19,6 @@ $execute rotated ~$(tracking_dyaw) ~$(tracking_dpitch) run function cashgrab:uti
 scoreboard players operation @s mis_base_vel_x_mmpt = @s facing_vector_x_mm
 scoreboard players operation @s mis_base_vel_y_mmpt = @s facing_vector_y_mm
 scoreboard players operation @s mis_base_vel_z_mmpt = @s facing_vector_z_mm
+
+# Write velocity data at later portion of missile main
+tag @s add t_missile_write_vel_to_data

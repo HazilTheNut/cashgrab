@@ -32,15 +32,22 @@ $execute if entity @s[scores={mis_lifetime_ticks=1..}] run function $(func_npe_t
 # If in stasis, do not apply physics, motion, or hit detection
 execute if score @s stasis_state matches 1..2 run return 0
 
-#tellraw @a[tag=t_debug] [{"type":"text","text":"Tracking magnitude: "},{"type":"nbt","nbt":"data.f_tracking_scalar","entity":"@s"}]
+# If tracking is enabled, calculate tracking angle deflection
+execute if entity @s[tag=t_missile_has_tracking] run function cashgrab:base/missile_tracking with entity @s data
 
-# Run physics effects on missiles to calculate vel_x, vel_y, and vel_z
-function cashgrab:base/missile_physics with entity @s data
+# Sum angle deflections from missile func_tick and tracking system
+function cashgrab:base/missile_sum_angle_deflections
 
-tag @e remove t_collision_candidate
+# Recalculate base velocity if needed
+execute if entity @s[tag=t_missile_calc_base_vel] run function cashgrab:base/missile_calc_base_vel with entity @s data
+tag @s remove t_missile_calc_base_vel
+
+# If gravity is enabled, add gravitational velocity to missile
+execute if entity @s[tag=t_missile_has_gravity] run function cashgrab:base/missile_gravity with entity @s data
+
+# Sum missile velocity scoreboard values to and write marker data if needed
+execute if entity @s[tag=t_missile_write_vel_to_data] run function cashgrab:base/missile_write_vel_to_data with entity @s data
+tag @s remove t_missile_write_vel_to_data
 
 # Run missile collision detection and traveling forwards
 function cashgrab:base/missile_travel with entity @s data
-
-# Remove t_collision_candidate tags to not interfere with other missiles
-tag @e remove t_collision_candidate
