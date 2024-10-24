@@ -26,7 +26,7 @@ execute if entity @s[tag=t_missile_has_tracking] store result score @s mis_track
 $execute if entity @s[tag=t_missile_has_tracking] store result entity @s data.tracking_dpitch float $(f_tracking_scalar) run scoreboard players get @s mis_tracking_dpitch_mdeg
 execute if entity @s[tag=t_missile_has_tracking] store result score @s mis_tracking_dpitch_mdeg run data get entity @s data.tracking_dpitch 1
 
-# Add pitch and yaw deflection of both func_npe_step and projectile tracking
+# Add pitch and yaw deflection of both func_npe_tick and projectile tracking
 scoreboard players operation @s mis_func_step_dyaw_mdeg += @s mis_tracking_dyaw_mdeg
 scoreboard players operation @s mis_func_step_dpitch_mdeg += @s mis_tracking_dpitch_mdeg
 

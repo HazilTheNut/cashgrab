@@ -35,12 +35,12 @@ execute align xyz positioned ~0.5 ~0.5 ~0.5 if score @s cv_H matches 1 run fill 
 execute align xyz positioned ~0.5 ~0.5 ~0.5 if score @s cv_H matches 2 run fill ~ ~ ~ ~ ~1 ~ minecraft:packed_ice
 
 # Set glacier timer
-execute align xyz positioned ~0.5 ~0.5 ~0.5 run function cashgrab:util/npe_set_timer {\
+execute align xyz positioned ~0.5 ~0.5 ~0.5 run function cashgrab:util/npe_create_timer {\
 lifetime_ticks:162,\
 b_anchor_at_pos:1,\
 t_timer_name:"t_frostknight_glacier_timer_init",\
 func_npe_start:"cashgrab:util/dummy",\
-func_npe_step:"cashgrab:classes/frostknight/glacier_timer_step",\
+func_npe_tick:"cashgrab:classes/frostknight/glacier_timer_tick",\
 func_npe_end:"cashgrab:classes/frostknight/glacier_timer_end",\
 b_assign_as_peer:1,\
 }

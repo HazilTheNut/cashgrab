@@ -1,10 +1,10 @@
-# classes/frostknight/glacier_timer_step.mcfunction
+# classes/frostknight/glacier_timer_tick.mcfunction
 #
 # Context:
 #	as: a timer
 #	at: the timer
 #
-# Summary: Frost Knight's glacier step function
+# Summary: Frost Knight's glacier tick function
 #
 # Arguments: (none)
 

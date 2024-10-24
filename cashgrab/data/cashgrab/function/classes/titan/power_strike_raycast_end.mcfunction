@@ -32,12 +32,12 @@ execute as @e[tag=t_pm] at @s run function cashgrab:classes/titan/pm_set_power_s
 tag @a remove t_titan_set_power_strike_timer
 
 # Apply knockback timer for non-player entities
-execute as @n[type=!minecraft:player,tag=t_collision_found,scores={eid_state=1..}] at @s run function cashgrab:util/npe_set_timer {\
+execute as @n[type=!minecraft:player,tag=t_collision_found,scores={eid_state=1..}] at @s run function cashgrab:util/npe_create_timer {\
 lifetime_ticks:200,\
 b_anchor_at_pos:0,\
 t_timer_name:"t_titan_power_strike_knockback_tmr",\
 func_npe_start:"cashgrab:util/dummy",\
-func_npe_step:"cashgrab:classes/titan/power_strike_timer_step",\
+func_npe_tick:"cashgrab:classes/titan/power_strike_timer_tick",\
 func_npe_end:"cashgrab:util/dummy",\
 b_assign_as_peer:0,\
 }

@@ -1,11 +1,11 @@
-# classes/alchemist/flametrap_missile_step.mcfunction
+# classes/alchemist/flametrap_missile_tick.mcfunction
 #
 # Context:
 #	as: a missile
 #	at: the missile
 #	facing: the missile's facing direction
 #
-# Summary: Alchemist's flame trap missile step function
+# Summary: Alchemist's flame trap missile tick function
 #
 # Arguments: (none)
 

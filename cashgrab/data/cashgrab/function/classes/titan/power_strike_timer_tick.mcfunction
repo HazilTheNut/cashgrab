@@ -1,10 +1,10 @@
-# classes/titan/power_strike_timer_step.mcfunction
+# classes/titan/power_strike_timer_tick.mcfunction
 #
 # Context:
 #	as: a timer
 #	at: the timer's owner
 #
-# Summary: Titan's Power Strike knockback effect timer step function
+# Summary: Titan's Power Strike knockback effect timer tick function
 #
 # Arguments: (none)
 

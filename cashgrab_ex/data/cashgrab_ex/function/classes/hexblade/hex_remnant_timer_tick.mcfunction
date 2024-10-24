@@ -1,10 +1,10 @@
-# classes/hexblade/hex_timer_step.mcfunction
+# classes/hexblade/hex_remnant_timer_tick.mcfunction
 #
 # Context:
 #	as: a timer
 #	at: the timer
 #
-# Summary: Hexblade's Hex timer step function
+# Summary: Hexblade's Hex remnant timer tick function (what player can teleport to after target player death)
 #
 # Arguments: (none)
 

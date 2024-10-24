@@ -1,10 +1,10 @@
-# classes/alchemist/flametrap_timer_step.mcfunction
+# classes/alchemist/flametrap_timer_explode.mcfunction
 #
 # Context:
 #	as: a timer
 #	at: the timer
 #
-# Summary: Alchemist's Flame Trap timer step function
+# Summary: Alchemist's Flame Trap timer explosion
 #
 # Arguments: (none)
 

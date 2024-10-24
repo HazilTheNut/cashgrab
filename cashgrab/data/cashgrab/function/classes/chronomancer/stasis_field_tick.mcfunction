@@ -1,11 +1,11 @@
-# classes/chronomancer/stasis_field_step.mcfunction
+# classes/chronomancer/stasis_field_tick.mcfunction
 #
 # Context:
 #	as: a missile
 #	at: the missile
 #	facing: the missile's facing direction
 #
-# Summary: Chronomancer's missile step function
+# Summary: Chronomancer's Stasis Field tick function
 #
 # Arguments: (none)
 

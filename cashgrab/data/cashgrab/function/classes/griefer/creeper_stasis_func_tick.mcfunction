@@ -1,10 +1,10 @@
-# classes/griefer/creeper_stasis_func_step.mcfunction
+# classes/griefer/creeper_stasis_func_tick.mcfunction
 #
 # Context:
 #	as: an entity with class = 1
 #	at: the entity
 #
-# Summary: Loop function for stasis fake copy version Griefer creeper
+# Summary: Tick function for stasis fake copy version Griefer creeper
 #
 # Arguments: (none)
 

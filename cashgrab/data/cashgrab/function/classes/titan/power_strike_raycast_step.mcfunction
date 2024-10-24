@@ -5,7 +5,7 @@
 #	at: the missile
 #	facing: the missile's facing direction
 #
-# Summary: Titan's missile step function
+# Summary: Titan's Power Strike raycast step function
 #
 # Arguments: (none)
 

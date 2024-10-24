@@ -43,7 +43,7 @@ col_terrain_allowed:"#cashgrab:partialsolid",\
 func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_hostile",\
 func_npe_tracking_filter:"cashgrab:util/dummy",\
 func_npe_start:"cashgrab:util/dummy",\
-func_npe_step:"cashgrab:classes/artillery/missile_step",\
+func_npe_tick:"cashgrab:classes/artillery/missile_tick",\
 func_npe_end:"cashgrab:classes/artillery/missile_end",\
 b_assign_as_peer:1,\
 }
@@ -63,7 +63,7 @@ col_terrain_allowed:"#cashgrab:partialsolid",\
 func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_hostile",\
 func_npe_tracking_filter:"cashgrab:util/dummy",\
 func_npe_start:"cashgrab:util/dummy",\
-func_npe_step:"cashgrab:classes/artillery/missile_step",\
+func_npe_tick:"cashgrab:classes/artillery/missile_tick",\
 func_npe_end:"cashgrab:classes/artillery/missile_end",\
 b_assign_as_peer:1,\
 }

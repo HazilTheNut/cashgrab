@@ -15,7 +15,7 @@ lifetime_ticks:200,\
 b_anchor_at_pos:0,\
 t_timer_name:"t_accelerator_timer",\
 func_npe_start:"cashgrab_ex:trinkets/accelerator/accelerator_timer_start",\
-func_npe_step:"cashgrab_ex:trinkets/accelerator/accelerator_timer_step",\
+func_npe_tick:"cashgrab_ex:trinkets/accelerator/accelerator_timer_tick",\
 func_npe_end:"cashgrab_ex:trinkets/accelerator/accelerator_timer_end",\
 b_assign_as_peer:1,\
 }

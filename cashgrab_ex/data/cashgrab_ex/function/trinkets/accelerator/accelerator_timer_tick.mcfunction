@@ -1,11 +1,11 @@
-# trinkets/accelerator/accelerator_timer_step.mcfunction
+# trinkets/accelerator/accelerator_timer_tick.mcfunction
 #
 # Context:
 #	as: a timer entity
 #	at: the timer's owner
 #	+ the owner of the timer is tagged with t_timer_owner
 #
-# Summary: Step function of Accelerator effect
+# Summary: Tick function of Accelerator effect
 #
 # Arguments: (none)
 

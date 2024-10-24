@@ -1,11 +1,11 @@
-# classes/titan/pull_missile_step.mcfunction
+# classes/titan/pull_missile_tick.mcfunction
 #
 # Context:
 #	as: a missile
 #	at: the missile
 #	facing: the missile's facing direction
 #
-# Summary: Titan's missile step function
+# Summary: Titan's missile tick function
 #
 # Arguments: (none)
 

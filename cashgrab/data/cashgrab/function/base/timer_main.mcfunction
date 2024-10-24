@@ -6,10 +6,7 @@
 #
 # Summary: Top-level main function for timers
 #
-# Arguments:
-#	func_npe_step		: Function to run every tick
-#	func_npe_end		: Function to run when the timer expires
-#						func_npe_end is supplied with an end_reason argument based on why func_npe_end was called: 0 = cleaned up, 1 = timer expired
+# Arguments: (none)
 
 scoreboard players remove @s[scores={stasis_state=-1..0}] tmr_lifetime_ticks 1
 

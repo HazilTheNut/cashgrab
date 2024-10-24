@@ -6,7 +6,7 @@
 #	at: the owner's position
 #	rotated: as the owner
 #
-# Summary: Titan's missile step function
+# Summary: Titan's Pull raycast step function
 #
 # Arguments: (none)
 

@@ -1,4 +1,4 @@
-# classes/champion/npe_absorption_particle_timer_step.mcfunction
+# classes/champion/npe_absorption_particle_timer_tick.mcfunction
 #
 # Context:
 #	as: a Champion absorpion particle effect timer

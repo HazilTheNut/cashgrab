@@ -1,11 +1,11 @@
-# classes/hexblade/hex_missile_step.mcfunction
+# classes/hexblade/hex_missile_tick.mcfunction
 #
 # Context:
 #	as: a missile
 #	at: the missile
 #	facing: the missile's facing direction
 #
-# Summary: Hexblade's Hex missile step function
+# Summary: Hexblade's Hex missile tick function
 #
 # Arguments: (none)
 

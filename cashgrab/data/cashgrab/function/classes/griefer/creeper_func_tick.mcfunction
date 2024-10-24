@@ -1,10 +1,10 @@
-# classes/griefer/creeper_func_step.mcfunction
+# classes/griefer/creeper_func_tick.mcfunction
 #
 # Context:
 #	as: a Griefer creeper
 #	at: the entity
 #
-# Summary: Loop function for Griefer creeper
+# Summary: Tick function for Griefer creeper
 #
 # Arguments: (none)
 

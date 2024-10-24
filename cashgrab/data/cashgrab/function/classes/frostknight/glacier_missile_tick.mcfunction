@@ -1,11 +1,11 @@
-# classes/frostknight/glacier_missile_step.mcfunction
+# classes/frostknight/glacier_missile_tick.mcfunction
 #
 # Context:
 #	as: a missile
 #	at: the missile
 #	facing: the missile's facing direction
 #
-# Summary: Frost Knight's missile step function
+# Summary: Frost Knight's missile tick function
 #
 # Arguments: (none)
 

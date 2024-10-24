@@ -35,7 +35,7 @@ col_terrain_allowed:"#cashgrab:partialsolid",\
 func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_hostile",\
 func_npe_tracking_filter:"cashgrab:util/npe_col_entity_filter_hostile",\
 func_npe_start:"cashgrab:util/dummy",\
-func_npe_step:"cashgrab_ex:classes/hexblade/hex_missile_step",\
+func_npe_tick:"cashgrab_ex:classes/hexblade/hex_missile_tick",\
 func_npe_end:"cashgrab_ex:classes/hexblade/hex_missile_end",\
 b_assign_as_peer:1,\
 }

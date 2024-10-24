@@ -1,4 +1,4 @@
-# classes/alchemist/flametrap_timer_step.mcfunction
+# classes/alchemist/flametrap_timer_trip.mcfunction
 #
 # Context:
 #	as: a timer

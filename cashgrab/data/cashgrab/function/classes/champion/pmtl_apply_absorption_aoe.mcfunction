@@ -39,12 +39,12 @@ tag @a remove t_champion_set_absorption_timer
 # Apply absorption to non-entity allies
 execute as @e[type=!minecraft:player,tag=t_collision_candidate,distance=..5] at @s run particle minecraft:crit ~ ~0.4 ~ 1.25 1.0 1.25 0 50
 execute as @e[type=!minecraft:player,tag=t_collision_candidate,distance=..5] at @s run playsound minecraft:item.axe.wax_off player @a ~ ~ ~ 1.0 2.0
-execute as @e[type=!minecraft:player,tag=t_collision_candidate,distance=..5] at @s run function cashgrab:util/npe_set_timer {\
+execute as @e[type=!minecraft:player,tag=t_collision_candidate,distance=..5] at @s run function cashgrab:util/npe_create_timer {\
 lifetime_ticks:80,\
 b_anchor_at_pos:0,\
 t_timer_name:"t_champion_absorption_timer_init",\
 func_npe_start:"cashgrab:util/dummy",\
-func_npe_step:"cashgrab:classes/champion/npe_absorption_particle_timer_step",\
+func_npe_tick:"cashgrab:classes/champion/npe_absorption_particle_timer_tick",\
 func_npe_end:"cashgrab:util/dummy",\
 }
 

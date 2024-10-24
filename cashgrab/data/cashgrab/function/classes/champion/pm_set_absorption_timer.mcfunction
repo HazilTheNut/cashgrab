@@ -18,12 +18,12 @@ execute at @a[tag=t_eid_matches,limit=1] run particle minecraft:crit ~ ~0.4 ~ 1.
 execute at @a[tag=t_eid_matches,limit=1,scores={stat_hp=..6}] run playsound minecraft:item.axe.wax_off player @a ~ ~ ~ 1.0 1.0
 execute at @a[tag=t_eid_matches,limit=1,scores={stat_hp=7..12}] run playsound minecraft:item.axe.wax_off player @a ~ ~ ~ 1.0 1.3
 execute at @a[tag=t_eid_matches,limit=1,scores={stat_hp=13..}] run playsound minecraft:item.axe.wax_off player @a ~ ~ ~ 1.0 1.6
-execute at @a[tag=t_eid_matches,limit=1] run function cashgrab:util/npe_set_timer {\
+execute at @a[tag=t_eid_matches,limit=1] run function cashgrab:util/npe_create_timer {\
 lifetime_ticks:80,\
 b_anchor_at_pos:0,\
 t_timer_name:"t_champion_absorption_timer_init",\
 func_npe_start:"cashgrab:util/dummy",\
-func_npe_step:"cashgrab:classes/champion/npe_absorption_particle_timer_step",\
+func_npe_tick:"cashgrab:classes/champion/npe_absorption_particle_timer_tick",\
 func_npe_end:"cashgrab:util/dummy",\
 b_assign_as_peer:1,\
 }

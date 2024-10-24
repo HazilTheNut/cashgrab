@@ -14,10 +14,10 @@
 #	magnitude			: Scalar of strength of tracking towards potential targets
 #	col_terrain_allowed	: Block tag or block type that describes what counts as not solid collision
 #	func_npe_entity_filter	: Filtering function for which entities to collide with. Function applies the tag "t_collision_candidate" to all possible entities the missile can collide with
-#	func_npe_step			: String function name to run every tick
+#	func_npe_tick			: String function name to run every tick
 #	func_npe_end			: String function name to run when either the missile collides or expires
 
-# Decrement i_lifetime_ticks and run func_npe_step or func_npe_end
+# Decrement i_lifetime_ticks and run func_npe_tick or func_npe_end
 scoreboard players remove @s mis_lifetime_ticks 1
 
 $execute if entity @s[scores={mis_lifetime_ticks=0}] run function $(func_npe_end) {end_reason:3}
@@ -25,8 +25,8 @@ execute if entity @s[scores={mis_lifetime_ticks=0}] run tag @s add t_kill
 execute if entity @s[scores={mis_lifetime_ticks=0}] run scoreboard players reset @s
 kill @s[tag=t_kill]
 
-# func_npe_step can run commands like tp to alter its location and facing angle and should therefore influence where it goes
-# Thus func_npe_step is ran first before generic missile movement
+# func_npe_tick can run commands like tp to alter its location and facing angle and should therefore influence where it goes
+# Thus func_npe_tick is ran first before generic missile movement
 # Note: if you alter the facing angle of a missile, you must run util/pe_missile_calc_base_velocity to recalculate its trajectory
 
 # Run collision detection on the next position
