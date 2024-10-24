@@ -39,7 +39,7 @@ execute align xyz positioned ~0.5 ~0.5 ~0.5 run function cashgrab:util/npe_creat
 lifetime_ticks:162,\
 b_anchor_at_pos:1,\
 t_timer_name:"t_frostknight_glacier_timer_init",\
-func_npe_start:"cashgrab:util/dummy",\
+func_npe_start:"cashgrab:util/noop",\
 func_npe_tick:"cashgrab:classes/frostknight/glacier_timer_tick",\
 func_npe_end:"cashgrab:classes/frostknight/glacier_timer_end",\
 b_assign_as_peer:1,\

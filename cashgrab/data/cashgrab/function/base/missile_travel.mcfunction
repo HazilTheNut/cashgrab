@@ -8,11 +8,11 @@
 # Summary: Performs movement and collision detection for missile
 #
 # Arguments:
-#	vel_x				: Missile x velocity, in meters/tick
-#	vel_y				: Missile y velocity, in meters/tick
-#	vel_z				: Missile z velocity, in meters/tick
-#	magnitude			: Scalar of strength of tracking towards potential targets
-#	col_terrain_allowed	: Block tag or block type that describes what counts as not solid collision
+#	vel_x					: Missile x velocity, in meters/tick
+#	vel_y					: Missile y velocity, in meters/tick
+#	vel_z					: Missile z velocity, in meters/tick
+#	magnitude				: Scalar of strength of tracking towards potential targets
+#	col_terrain_allowed		: Block tag or block type that describes what counts as not solid collision
 #	func_npe_entity_filter	: Filtering function for which entities to collide with. Function applies the tag "t_collision_candidate" to all possible entities the missile can collide with
 #	func_npe_tick			: String function name to run every tick
 #	func_npe_end			: String function name to run when either the missile collides or expires
@@ -40,7 +40,7 @@ $execute store result score @s col_terrain run function cashgrab:util/npe_col_de
 # Entity hit detection
 scoreboard players set @s col_entity 0
 
-# Dummy function is ran as func_npe_entity_filter was ran at the very beginning of raycast
+# Run entity collision filter function
 $execute if score @s col_terrain matches 0 store result score @s col_entity positioned ~$(vel_x) ~$(vel_y) ~$(vel_z) run function cashgrab:util/npe_col_detect_entity {func_npe_entity_filter:"$(func_npe_entity_filter)"}
 
 #tellraw @a[tag=t_debug] [{"type":"text","text":"Missile tags: "},{"type":"nbt","nbt":"Tags","entity":"@s"}]

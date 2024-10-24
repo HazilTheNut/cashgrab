@@ -22,9 +22,9 @@ execute at @a[tag=t_eid_matches,limit=1] run function cashgrab:util/npe_create_t
 lifetime_ticks:80,\
 b_anchor_at_pos:0,\
 t_timer_name:"t_champion_absorption_timer_init",\
-func_npe_start:"cashgrab:util/dummy",\
+func_npe_start:"cashgrab:util/noop",\
 func_npe_tick:"cashgrab:classes/champion/npe_absorption_particle_timer_tick",\
-func_npe_end:"cashgrab:util/dummy",\
+func_npe_end:"cashgrab:util/noop",\
 b_assign_as_peer:1,\
 }
 

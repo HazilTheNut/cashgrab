@@ -15,7 +15,7 @@ func_pmt_inv_ability_icon:"cashgrab:classes/champion/pmt_champion_inv_ability_ic
 func_pmtl_tick:"cashgrab:classes/champion/pmtl_champion_tick",\
 func_pmtl_use_ability:"cashgrab:classes/champion/pmtl_champion_use_ability",\
 func_pmt_cts_icon:"cashgrab:classes/champion/pmt_champion_cts_inv_icon",\
-func_pmtl_cts_tick:"cashgrab:util/dummy",\
+func_pmtl_cts_tick:"cashgrab:util/noop",\
 }
 
 # Griefer
@@ -39,7 +39,7 @@ func_pmt_inv_ability_icon:"cashgrab:classes/skirmisher/pmt_skirmisher_inv_abilit
 func_pmtl_tick:"cashgrab:classes/skirmisher/pmtl_skirmisher_tick",\
 func_pmtl_use_ability:"cashgrab:classes/skirmisher/pmtl_skirmisher_use_ability",\
 func_pmt_cts_icon:"cashgrab:classes/skirmisher/pmt_skirmisher_cts_inv_icon",\
-func_pmtl_cts_tick:"cashgrab:util/dummy",\
+func_pmtl_cts_tick:"cashgrab:util/noop",\
 }
 
 # Spectre
@@ -51,7 +51,7 @@ func_pmt_inv_ability_icon:"cashgrab:classes/spectre/pmt_spectre_inv_ability_icon
 func_pmtl_tick:"cashgrab:classes/spectre/pmtl_spectre_tick",\
 func_pmtl_use_ability:"cashgrab:classes/spectre/pmtl_spectre_use_ability",\
 func_pmt_cts_icon:"cashgrab:classes/spectre/pmt_spectre_cts_inv_icon",\
-func_pmtl_cts_tick:"cashgrab:util/dummy",\
+func_pmtl_cts_tick:"cashgrab:util/noop",\
 }
 
 # Ranger
@@ -87,7 +87,7 @@ func_pmt_inv_ability_icon:"cashgrab:classes/frostknight/pmt_frostknight_inv_abil
 func_pmtl_tick:"cashgrab:classes/frostknight/pmtl_frostknight_tick",\
 func_pmtl_use_ability:"cashgrab:classes/frostknight/pmtl_frostknight_use_ability",\
 func_pmt_cts_icon:"cashgrab:classes/frostknight/pmt_frostknight_cts_inv_icon",\
-func_pmtl_cts_tick:"cashgrab:util/dummy",\
+func_pmtl_cts_tick:"cashgrab:util/noop",\
 }
 
 # Titan
@@ -99,7 +99,7 @@ func_pmt_inv_ability_icon:"cashgrab:classes/titan/pmt_titan_inv_ability_icon",\
 func_pmtl_tick:"cashgrab:classes/titan/pmtl_titan_tick",\
 func_pmtl_use_ability:"cashgrab:classes/titan/pmtl_titan_use_ability",\
 func_pmt_cts_icon:"cashgrab:classes/titan/pmt_titan_cts_inv_icon",\
-func_pmtl_cts_tick:"cashgrab:util/dummy",\
+func_pmtl_cts_tick:"cashgrab:util/noop",\
 }
 
 # Alchemist
@@ -147,7 +147,7 @@ func_pmt_inv_ability_icon:"cashgrab:classes/mapmaker/pmt_mapmaker_inv_ability_ic
 func_pmtl_tick:"cashgrab:classes/mapmaker/pmtl_mapmaker_tick",\
 func_pmtl_use_ability:"cashgrab:classes/mapmaker/pmtl_mapmaker_use_ability",\
 func_pmt_cts_icon:"cashgrab:classes/mapmaker/pmt_mapmaker_cts_inv_icon",\
-func_pmtl_cts_tick:"cashgrab:util/dummy",\
+func_pmtl_cts_tick:"cashgrab:util/noop",\
 }
 
 execute if score DEVELOPER_MODE num matches 1 run data modify storage cashgrab:game_info trinkets append value {\

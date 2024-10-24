@@ -26,9 +26,9 @@ execute at @e[tag=t_hex_target] rotated as @e[tag=t_hex_target] run function cas
 lifetime_ticks:100,\
 b_anchor_at_pos:1,\
 t_timer_name:"t_hexblade_remnant_timer_init",\
-func_npe_start:"cashgrab:util/dummy",\
+func_npe_start:"cashgrab:util/noop",\
 func_npe_tick:"cashgrab_ex:classes/hexblade/hex_remnant_timer_tick",\
-func_npe_end:"cashgrab:util/dummy",\
+func_npe_end:"cashgrab:util/noop",\
 b_assign_as_peer:1,\
 }
 

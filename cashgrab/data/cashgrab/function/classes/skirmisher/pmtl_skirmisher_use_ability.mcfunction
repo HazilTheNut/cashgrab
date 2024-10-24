@@ -42,7 +42,7 @@ f_tracking_scalar:0f,\
 t_missile_name:"t_boomerang",\
 col_terrain_allowed:"#cashgrab:partialsolid",\
 func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_none",\
-func_npe_tracking_filter:"cashgrab:util/dummy",\
+func_npe_tracking_filter:"cashgrab:util/noop",\
 func_npe_start:"cashgrab:classes/skirmisher/boomerang_start_cutlass",\
 func_npe_tick:"cashgrab:classes/skirmisher/boomerang_tick",\
 func_npe_end:"cashgrab:classes/skirmisher/boomerang_end",\
@@ -61,7 +61,7 @@ f_tracking_scalar:0f,\
 t_missile_name:"t_boomerang",\
 col_terrain_allowed:"#cashgrab:partialsolid",\
 func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_none",\
-func_npe_tracking_filter:"cashgrab:util/dummy",\
+func_npe_tracking_filter:"cashgrab:util/noop",\
 func_npe_start:"cashgrab:classes/skirmisher/boomerang_start_rapier",\
 func_npe_tick:"cashgrab:classes/skirmisher/boomerang_tick",\
 func_npe_end:"cashgrab:classes/skirmisher/boomerang_end",\

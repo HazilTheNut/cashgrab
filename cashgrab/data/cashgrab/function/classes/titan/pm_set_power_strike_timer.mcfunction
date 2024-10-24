@@ -19,9 +19,9 @@ execute at @a[tag=t_eid_matches,limit=1] run function cashgrab:util/npe_create_t
 lifetime_ticks:200,\
 b_anchor_at_pos:0,\
 t_timer_name:"t_titan_power_strike_knockback_tmr",\
-func_npe_start:"cashgrab:util/dummy",\
+func_npe_start:"cashgrab:util/noop",\
 func_npe_tick:"cashgrab:classes/titan/power_strike_timer_tick",\
-func_npe_end:"cashgrab:util/dummy",\
+func_npe_end:"cashgrab:util/noop",\
 b_assign_as_peer:1,\
 }
 

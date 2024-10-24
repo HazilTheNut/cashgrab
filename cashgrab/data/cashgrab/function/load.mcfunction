@@ -454,20 +454,20 @@ execute if score ENABLE_PLUGINS num matches 1.. run function #cashgrab:gt_load_p
 
 # Add NULL entries
 data modify storage cashgrab:game_info classes prepend value {\
-func_init:"cashgrab:util/dummy",\
-func_inv:"cashgrab:util/dummy",\
-func_inv_ability_icon:"cashgrab:util/dummy",\
-func_tick:"cashgrab:util/dummy",\
-func_use_ability:"cashgrab:util/dummy",\
+func_init:"cashgrab:util/noop",\
+func_inv:"cashgrab:util/noop",\
+func_inv_ability_icon:"cashgrab:util/noop",\
+func_tick:"cashgrab:util/noop",\
+func_use_ability:"cashgrab:util/noop",\
 func_cts_icon:"cashgrab:base/cts/pmt_null_cts_inv_icon",\
-func_cts_tick:"cashgrab:util/dummy",\
+func_cts_tick:"cashgrab:util/noop",\
 }
 
 data modify storage cashgrab:game_info trinkets prepend value {\
-func_init:"cashgrab:util/dummy",\
-func_inv:"cashgrab:util/dummy",\
+func_init:"cashgrab:util/noop",\
+func_inv:"cashgrab:util/noop",\
 func_tick:"cashgrab:base/cts/pmt_null_cts_inv_icon",\
-func_cts_icon:"cashgrab:util/dummy",\
+func_cts_icon:"cashgrab:util/noop",\
 }
 
 # Calculate classes list quantites for later use

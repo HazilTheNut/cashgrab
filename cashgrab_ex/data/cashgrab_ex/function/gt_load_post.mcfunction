@@ -10,7 +10,7 @@ func_pmt_inv_ability_icon:"cashgrab_ex:classes/hexblade/pmt_hexblade_inv_ability
 func_pmtl_tick:"cashgrab_ex:classes/hexblade/pmtl_hexblade_tick",\
 func_pmtl_use_ability:"cashgrab_ex:classes/hexblade/pmtl_hexblade_use_ability",\
 func_pmt_cts_icon:"cashgrab_ex:classes/hexblade/pmt_hexblade_cts_inv_icon",\
-func_pmtl_cts_tick:"cashgrab:util/dummy",\
+func_pmtl_cts_tick:"cashgrab:util/noop",\
 }
 
 # --- Add Trinket data

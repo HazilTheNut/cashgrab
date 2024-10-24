@@ -28,7 +28,7 @@ i_origin_loc:0,\
 col_terrain_allowed:"#cashgrab:nonsolid",\
 b_fit_player:1,\
 func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_none",\
-func_npe_step:"cashgrab:util/dummy",\
+func_npe_step:"cashgrab:util/noop",\
 func_npe_end:"cashgrab_ex:classes/hexblade/pmtl_hexblade_perform_tp"\
 }
 

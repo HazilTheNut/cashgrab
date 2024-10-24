@@ -43,8 +43,8 @@ t_missile_name:"t_titan_missile_init",\
 f_tracking_scalar:0f,\
 col_terrain_allowed:"#cashgrab:nonsolid",\
 func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_none",\
-func_npe_tracking_filter:"cashgrab:util/dummy",\
-func_npe_start:"cashgrab:util/dummy",\
+func_npe_tracking_filter:"cashgrab:util/noop",\
+func_npe_start:"cashgrab:util/noop",\
 func_npe_tick:"cashgrab:classes/titan/pull_missile_tick",\
 func_npe_end:"cashgrab:classes/titan/pull_missile_end",\
 b_assign_as_peer:0,\

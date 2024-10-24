@@ -41,8 +41,8 @@ t_missile_name:"t_artillery_missile_init",\
 f_tracking_scalar:0.0f,\
 col_terrain_allowed:"#cashgrab:partialsolid",\
 func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_hostile",\
-func_npe_tracking_filter:"cashgrab:util/dummy",\
-func_npe_start:"cashgrab:util/dummy",\
+func_npe_tracking_filter:"cashgrab:util/noop",\
+func_npe_start:"cashgrab:util/noop",\
 func_npe_tick:"cashgrab:classes/artillery/missile_tick",\
 func_npe_end:"cashgrab:classes/artillery/missile_end",\
 b_assign_as_peer:1,\
@@ -61,8 +61,8 @@ t_missile_name:"t_artillery_missile_init",\
 f_tracking_scalar:0.0f,\
 col_terrain_allowed:"#cashgrab:partialsolid",\
 func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_hostile",\
-func_npe_tracking_filter:"cashgrab:util/dummy",\
-func_npe_start:"cashgrab:util/dummy",\
+func_npe_tracking_filter:"cashgrab:util/noop",\
+func_npe_start:"cashgrab:util/noop",\
 func_npe_tick:"cashgrab:classes/artillery/missile_tick",\
 func_npe_end:"cashgrab:classes/artillery/missile_end",\
 b_assign_as_peer:1,\

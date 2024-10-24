@@ -43,9 +43,9 @@ execute as @e[type=!minecraft:player,tag=t_collision_candidate,distance=..5] at 
 lifetime_ticks:80,\
 b_anchor_at_pos:0,\
 t_timer_name:"t_champion_absorption_timer_init",\
-func_npe_start:"cashgrab:util/dummy",\
+func_npe_start:"cashgrab:util/noop",\
 func_npe_tick:"cashgrab:classes/champion/npe_absorption_particle_timer_tick",\
-func_npe_end:"cashgrab:util/dummy",\
+func_npe_end:"cashgrab:util/noop",\
 }
 
 tag @e[tag=t_champion_absorption_timer_init] add t_stasis_immune
