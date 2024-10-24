@@ -10,7 +10,7 @@
 #
 # Arguments: (none)
 
-function cashgrab:util/npe_set_timer {\
+function cashgrab:util/npe_create_timer {\
 lifetime_ticks:200,\
 b_anchor_at_pos:0,\
 t_timer_name:"t_accelerator_timer",\
