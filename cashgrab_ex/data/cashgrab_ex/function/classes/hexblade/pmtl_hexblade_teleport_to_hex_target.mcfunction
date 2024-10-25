@@ -22,7 +22,7 @@
 #	cv_H	:	
 
 # Raycast behind target to find a good place to teleport, then teleport there
-execute at @e[tag=t_hex_target,limit=1] positioned ~ ~1 ~ rotated as @e[tag=t_hex_target,limit=1] rotated ~180 -15 run function cashgrab:util/npe_raycast {\
+execute if entity @e[tag=t_hex_target,tag=!t_hexblade_remnant_timer] at @e[tag=t_hex_target,limit=1] positioned ~ ~1 ~ rotated as @e[tag=t_hex_target,limit=1] rotated ~180 -15 run function cashgrab:util/npe_raycast {\
 i_range_m:3,\
 i_origin_loc:0,\
 col_terrain_allowed:"#cashgrab:nonsolid",\
@@ -31,6 +31,9 @@ func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_none",\
 func_npe_step:"cashgrab:util/noop",\
 func_npe_end:"cashgrab_ex:classes/hexblade/pmtl_hexblade_perform_tp"\
 }
+
+# If Hex target is remnant, teleport directly to it
+execute if entity @e[tag=t_hex_target,tag=t_hexblade_remnant_timer] at @e[tag=t_hex_target,limit=1] positioned ~ ~1 ~ rotated as @e[tag=t_hex_target,limit=1] run function cashgrab_ex:classes/hexblade/pmtl_hexblade_perform_tp
 
 # Consume Hex
 effect clear @e[tag=t_hex_target,limit=1] minecraft:glowing

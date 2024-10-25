@@ -1,4 +1,4 @@
-# classes/pmtl_use_ability.mcfunction
+# classes/pmtl_class_use_ability.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker

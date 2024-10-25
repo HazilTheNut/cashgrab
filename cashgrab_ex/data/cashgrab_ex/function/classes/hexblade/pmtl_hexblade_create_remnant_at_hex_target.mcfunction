@@ -22,7 +22,7 @@
 #	cv_H	:	
 
 # Set timer
-execute at @e[tag=t_hex_target] rotated as @e[tag=t_hex_target] run function cashgrab:util/npe_create_timer {\
+execute at @e[tag=t_hex_target,limit=1] rotated as @e[tag=t_hex_target,limit=1] run function cashgrab:util/npe_create_timer {\
 lifetime_ticks:100,\
 b_anchor_at_pos:1,\
 t_timer_name:"t_hexblade_remnant_timer_init",\
