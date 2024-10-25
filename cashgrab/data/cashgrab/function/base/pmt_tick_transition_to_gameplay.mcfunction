@@ -18,5 +18,8 @@ execute if score @a[tag=t_pm_owner,limit=1] __cts_selected_trinket_idx matches .
 function cashgrab:trinkets/pmt_trinket_init with entity @s data.trinket_info
 function cashgrab:classes/pmt_class_init with entity @s data.class_info
 
+# If a player has a stray t_invisible tag, intitialize player to not having that tag
+tag @a[tag=t_pm_owner,limit=1] remove t_invisible
+
 # Move to Gameplay state
 scoreboard players set @a[tag=t_pm_owner,limit=1] activity_state 21
