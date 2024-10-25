@@ -15,7 +15,7 @@ tag @a[tag=t_pm_owner,limit=1] add t_cts_input_found
 scoreboard players operation @a[tag=t_pm_owner,limit=1] temp_A = @a[tag=t_pm_owner,limit=1] __cts_trinkets_page_idx
 scoreboard players operation @a[tag=t_pm_owner,limit=1] temp_A *= NUM_CTS_TRINKETS_PAGE_SIZE num
 
-# Store class id as argument
+# Store trinket id as argument
 $execute store result storage cashgrab:cts_trinket_select_args trinket_id int 1 run scoreboard players add @a[tag=t_pm_owner,limit=1] temp_A $(local_idx)
 
 # Import data from cashgrab:game_info if within bounds of array

@@ -1,8 +1,10 @@
 # classes/titan/pmtl_titan_tick.mcfunction
 #
 # Context:
-#	as: an entity with class = 8
-#	at: the entity
+#	as: a Player Monitor (pm) marker
+#	+ the owner of the pm is tagged with t_pm_owner
+#	at: the owner's position
+#	rotated: as the owner
 #
 # Summary: Tick function for Titan class
 #

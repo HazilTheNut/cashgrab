@@ -15,10 +15,10 @@ $tellraw @a[tag=t_debug] "base/cts/pmt_cts_input_classes Selecting class idx $(c
 $data modify entity @s data.class_info set from storage cashgrab:game_info classes[$(class_id)]
 
 # Set owner's class
-$scoreboard players set @a[tag=t_pm_owner,limit=1] class $(class_id)
+$scoreboard players set @a[tag=t_pm_owner,limit=1] __cts_selected_class_idx $(class_id)
 
 # Set pm's class to owner's class
-$scoreboard players set @s class $(class_id)
+$scoreboard players set @s __cts_selected_class_idx $(class_id)
 
 # Initialize class
 function cashgrab:classes/pmt_class_init with entity @s data.class_info

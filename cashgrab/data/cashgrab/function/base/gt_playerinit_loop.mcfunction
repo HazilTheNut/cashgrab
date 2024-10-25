@@ -24,8 +24,9 @@ scoreboard players operation @e[tag=t_pm_init,limit=1] eid_owner = @a[tag=t_play
 scoreboard players operation @e[tag=t_pm_init,limit=1] eid_self = @e[tag=t_pm_init,limit=1] eid_owner
 scoreboard players add @e[tag=t_pm_init,limit=1] eid_self 10000
 scoreboard players set @e[tag=t_pm_init,limit=1] eid_state 1
-scoreboard players set @e[tag=t_pm_init,limit=1] class 0
-scoreboard players set @e[tag=t_pm_init,limit=1] trinket_id 0
+# Set selected indices to bad values. pm will eventually pick on this and import owner player's selections as well as load data from cashgrab:game_info.classes
+scoreboard players set @e[tag=t_pm_init,limit=1] __cts_selected_class_idx 0
+scoreboard players set @e[tag=t_pm_init,limit=1] __cts_selected_trinket_idx 0
 
 # Finish initialization of pm
 tag @e[tag=t_pm_init] add t_pm
@@ -49,11 +50,11 @@ scoreboard players set @a[tag=t_player_initialize,limit=1] team_id 0
 scoreboard players set @a[tag=t_player_initialize,limit=1] coins 0
 
 # CTS
-scoreboard players add @a[tag=t_player_initialize,limit=1] class 0
-scoreboard players set @a[tag=t_player_initialize,limit=1,scores={class=0}] class 1
+scoreboard players add @a[tag=t_player_initialize,limit=1] __cts_selected_class_idx 0
+scoreboard players set @a[tag=t_player_initialize,limit=1,scores={__cts_selected_class_idx=0}] __cts_selected_class_idx 1
 scoreboard players add @a[tag=t_player_initialize,limit=1] __cts_classes_page_idx 0
-scoreboard players add @a[tag=t_player_initialize,limit=1] trinket_id 0
-scoreboard players set @a[tag=t_player_initialize,limit=1,scores={trinket_id=0}] trinket_id 1
+scoreboard players add @a[tag=t_player_initialize,limit=1] __cts_selected_trinket_idx 0
+scoreboard players set @a[tag=t_player_initialize,limit=1,scores={__cts_selected_trinket_idx=0}] __cts_selected_trinket_idx 1
 scoreboard players add @a[tag=t_player_initialize,limit=1] __cts_trinkets_page_idx 0
 
 # Clear events

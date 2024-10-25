@@ -34,9 +34,6 @@ setworldspawn 0 100 0
 # Count of number of pms that operated on the player. This value should always be 1.
 scoreboard objectives add pm_count dummy
 
-# Index of class assigned to a player. 0 = no class
-scoreboard objectives add class dummy
-
 # Enumerated value of player's current state:
 #	0	=	Transition to In Pregame Lobby
 #	1	=	In Pregame Lobby
@@ -73,15 +70,11 @@ scoreboard objectives add ability_cfg_charges_max dummy
 scoreboard objectives add ability_charges dummy
 
 # --- Trinket
-#	note: only one trinket (Vigor Flask) is currently supported/implemented
 
 # Number of usages remaining
 scoreboard objectives add trinket_charges dummy
 scoreboard objectives add trinket_charges_max dummy
 scoreboard objectives add __trinket_charges_prev dummy
-
-# Index of trinket equipped
-scoreboard objectives add trinket_id dummy
 
 # 1 if holding trinket and 0 otherwise
 scoreboard objectives add trinket_held dummy
@@ -392,7 +385,11 @@ scoreboard objectives add stasis_stored_z_vel_mmpt dummy
 scoreboard objectives add stasis_stored_arrow_crit dummy
 
 # =============================
-# Values used for class-and-trinket selection (CTS) menuing
+# Values used for class-and-trinket selection (CTS)
+
+# Player selected class and trinket index number in cashgrab:game_info arrays
+scoreboard objectives add __cts_selected_class_idx dummy
+scoreboard objectives add __cts_selected_trinket_idx dummy
 
 # page_idx is 0-based while page_num is 1-based
 scoreboard objectives add __cts_classes_page_idx dummy
