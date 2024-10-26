@@ -17,7 +17,7 @@ scoreboard players set @a[scores={eid_state=0}] reinitialize 1
 scoreboard players set @a[scores={__iev_logout=1..}] reinitialize 1
 
 # If a player is reinitializing, treat it as the player count has changed
-scoreboard players set NUM_PLAYERCOUNT_CHANGED num 1
+execute if entity @a[scores={reinitialize=1..}] run scoreboard players set NUM_PLAYERCOUNT_CHANGED num 1
 
 # Loop through all initializing players
 execute if entity @a[scores={reinitialize=1..}] run function cashgrab:base/gt_playerinit_loop

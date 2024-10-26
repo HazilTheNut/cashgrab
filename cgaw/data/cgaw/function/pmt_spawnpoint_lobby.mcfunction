@@ -5,4 +5,4 @@
 $tellraw @a[tag=t_debug,tag=t_pm_owner,limit=1] "Setting spawnpoint to $(loc_lobby) $(yaw_lobby)"
 
 # Set spawnpoint
-$spawnpoint @a[tag=t_pm_owner,limit=1] $(loc_cts) $(yaw_lobby)
+$spawnpoint @a[tag=t_pm_owner,limit=1] $(loc_lobby) $(yaw_lobby)

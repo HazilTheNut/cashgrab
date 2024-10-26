@@ -19,4 +19,8 @@ execute if entity @a[tag=dtm_send_to_lobby] run function cgaw:gt_consume_dtm_sen
 # Handle dtm_send_to_cts tag
 execute if entity @a[tag=dtm_send_to_cts] run function cgaw:gt_consume_dtm_send_to_cts with storage cgaw:runtime active_map
 
-
+# If during gameplay, decrement spawn plate cooldown timers
+execute if score NUM_GAMESTATE num matches 1.. if score CGAW_SPAWN_CD_A_TICKS num matches 1.. run scoreboard players remove CGAW_SPAWN_CD_A_TICKS num 1
+execute if score NUM_GAMESTATE num matches 1.. if score CGAW_SPAWN_CD_B_TICKS num matches 1.. run scoreboard players remove CGAW_SPAWN_CD_B_TICKS num 1
+execute if score NUM_GAMESTATE num matches 1.. if score CGAW_SPAWN_CD_C_TICKS num matches 1.. run scoreboard players remove CGAW_SPAWN_CD_C_TICKS num 1
+execute if score NUM_GAMESTATE num matches 1.. if score CGAW_SPAWN_CD_D_TICKS num matches 1.. run scoreboard players remove CGAW_SPAWN_CD_D_TICKS num 1
