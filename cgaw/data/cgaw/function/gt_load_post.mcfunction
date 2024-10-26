@@ -19,6 +19,8 @@ scoreboard objectives add cgaw_reset_match_time_input trigger
 scoreboard players set NUM_TICKS_PER_MIN num 1200
 scoreboard players add CGAW_CFG_MATCH_TIME_DISPLAY_MIN num 0
 
+scoreboard players add CGAW_MATCH_TIME_TICKS num 0
+
 # --- CTS Room
 
 # Spawn plate cooldowns
