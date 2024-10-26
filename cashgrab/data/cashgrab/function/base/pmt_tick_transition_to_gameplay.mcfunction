@@ -21,5 +21,11 @@ function cashgrab:classes/pmt_class_init with entity @s data.class_info
 # If a player has a stray t_invisible tag, intitialize player to not having that tag
 tag @a[tag=t_pm_owner,limit=1] remove t_invisible
 
+# Set player gamemode
+execute if score DEVELOPER_MODE num matches 0 run gamemode adventure @a[tag=t_pm_owner,limit=1]
+
+# Move player team
+team join team_ffa @a[tag=t_pm_owner,limit=1]
+
 # Move to Gameplay state
 scoreboard players set @a[tag=t_pm_owner,limit=1] activity_state 21

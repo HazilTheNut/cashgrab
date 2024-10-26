@@ -19,7 +19,7 @@ kill @e[tag=t_coinshower]
 
 # Reset player data and return them to the lobby
 scoreboard players set @a coins 0
-execute if score DEVELOPER_MODE num matches 0 run scoreboard players set @a activity_state 1
+execute if score DEVELOPER_MODE num matches 0 run scoreboard players set @a activity_state 0
 execute if score DEVELOPER_MODE num matches 0 run scoreboard players set @a team_id 0
 execute if score DEVELOPER_MODE num matches 0 run tag @a add dtm_send_to_lobby
 

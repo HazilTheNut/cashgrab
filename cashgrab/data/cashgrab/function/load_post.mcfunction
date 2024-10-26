@@ -55,7 +55,7 @@ func_pmtl_tick:"cashgrab:classes/spectre/pmtl_spectre_tick",\
 func_pmtl_use_ability:"cashgrab:classes/spectre/pmtl_spectre_use_ability",\
 func_pmtl_end:"cashgrab:util/noop",\
 func_pmt_cts_icon:"cashgrab:classes/spectre/pmt_spectre_cts_inv_icon",\
-func_pmtl_cts_tick:"cashgrab:util/noop",\
+func_pmtl_cts_tick:"cashgrab:classes/spectre/pmtl_spectre_cts_tick",\
 }
 
 # Ranger

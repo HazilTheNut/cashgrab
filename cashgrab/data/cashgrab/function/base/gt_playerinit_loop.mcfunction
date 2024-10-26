@@ -36,7 +36,7 @@ tag @e[tag=t_pm_init] remove t_pm_init
 execute if score DEVELOPER_MODE num matches 0 run spawnpoint @a[tag=t_player_initialize] 0 100 0
 execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches 0 run tag @a[tag=t_player_initialize] add dtm_send_to_lobby
 execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches 0 run scoreboard players set @a[tag=t_player_initialize] activity_state 0
-execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches 1.. run tag @a[tag=t_player_initialize] add dtm_send_to_spawn_select
+execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches 1.. run tag @a[tag=t_player_initialize] add dtm_send_to_cts
 execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches 1.. run scoreboard players set @a[tag=t_player_initialize] activity_state 10
 
 # --- Initialize player scoreboard values

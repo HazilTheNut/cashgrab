@@ -15,5 +15,11 @@ clear @a[tag=t_pm_owner,limit=1]
 function cashgrab:trinkets/pmt_trinket_init with entity @s data.trinket_info
 function cashgrab:classes/pmt_class_init with entity @s data.class_info
 
+# Set player gamemode
+execute if score DEVELOPER_MODE num matches 0 run gamemode adventure @a[tag=t_pm_owner,limit=1]
+
+# Move player team
+team join team_ffa_cts @a[tag=t_pm_owner,limit=1]
+
 # Move to Class-and-Trinket Select activity_state
 scoreboard players set @a[tag=t_pm_owner,limit=1] activity_state 11

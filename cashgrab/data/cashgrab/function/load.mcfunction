@@ -406,7 +406,7 @@ team modify team_lobby color gold
 team modify team_lobby friendlyFire false
 team modify team_lobby seeFriendlyInvisibles true
 team modify team_lobby nametagVisibility always
-team modify team_lobby collisionRule always 
+team modify team_lobby collisionRule never 
 
 # FFA Team
 team add team_ffa {"type":"text","text":"FFA"}
@@ -421,8 +421,8 @@ team add team_ffa_cts {"type":"text","text":"FFA"}
 team modify team_ffa_cts color gold
 team modify team_ffa_cts friendlyFire false
 team modify team_ffa_cts seeFriendlyInvisibles false
-team modify team_ffa_cts nametagVisibility never
-team modify team_ffa_cts collisionRule always 
+team modify team_ffa_cts nametagVisibility hideForOtherTeams
+team modify team_ffa_cts collisionRule never
 
 # Coin Goal Team (used for displaying red team total)
 team add team_coin_goal {"type":"text","text":"COIN_GOAL"}
