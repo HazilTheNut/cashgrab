@@ -17,4 +17,3 @@ execute if score NUM_GAMESTATE num matches 1.. if block ~ ~ ~ minecraft:light_we
 execute if entity @a[tag=t_pm_owner,scores={evl_coin_pickup=1..}] run function cashgrab:util/pmt_inv_coins_argloader
 effect give @a[tag=t_pm_owner,scores={evl_coin_pickup=1..},nbt=!{active_effects:[{id:"minecraft:regeneration"}]}] minecraft:regeneration 7 1 false
 effect give @a[tag=t_pm_owner,scores={evl_coin_pickup=1..}] minecraft:saturation 7 1 false
-scoreboard players set @a[tag=t_pm_owner,scores={evl_coin_pickup=1..}] evl_coin_pickup 0
