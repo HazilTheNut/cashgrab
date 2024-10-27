@@ -78,6 +78,7 @@ kill @e[type=minecraft:arrow,nbt={inGround:1b}]
 
 execute as @e[type=!minecraft:player,scores={eid_state=2}] run function cashgrab:base/npe_grab
 
+# =============================
 # Allow plugins to run code at the end of server tick but before events are cleared
 execute if score ENABLE_PLUGINS num matches 1.. run function #cashgrab:gt_tick_post
 

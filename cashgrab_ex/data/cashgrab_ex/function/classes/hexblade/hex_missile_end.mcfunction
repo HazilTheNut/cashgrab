@@ -30,6 +30,11 @@ execute store result storage cashgrab:eid_args eid int 1 run scoreboard players 
 function cashgrab:util/find_eid_self with storage cashgrab:eid_args
 tag @e[tag=t_eid_matches,limit=1] add t_missile_owner
 
+# Get previous target of Hex (if they exist) and remove glowing effect
+execute store result storage cashgrab:eid_args eid int 1 run scoreboard players get @e[tag=t_missile_owner,limit=1] cv_A
+function cashgrab:util/find_eid_self with storage cashgrab:eid_args
+effect clear @e[tag=t_eid_matches] minecraft:glowing
+
 # Entity hit should already be tagged with t_collision_found which we'll reuse that tag
 
 # Apply glowing to target of Hex
@@ -39,11 +44,6 @@ effect give @n[tag=t_collision_found] minecraft:glowing 11 0
 execute at @n[tag=t_collision_found] run playsound minecraft:entity.wither.hurt player @a ~ ~ ~ 0.35 0.6
 execute at @n[tag=t_collision_found] run playsound minecraft:entity.wither.hurt player @a[tag=t_missile_owner,limit=1] ~ ~ ~ 0.35 0.6 0.35
 execute at @n[tag=t_collision_found] run particle minecraft:dust{color:[0.8f,0.2f,0.6f],scale:1.0} ~ ~1.25 ~ 0.35 1.0 0.35 0 40
-
-# Get previous target of Hex (if they exist) and remove glowing effect
-execute store result storage cashgrab:eid_args eid int 1 run scoreboard players get @e[tag=t_missile_owner,limit=1] cv_A
-function cashgrab:util/find_eid_self with storage cashgrab:eid_args
-effect clear @e[tag=t_eid_matches] minecraft:glowing
 
 # Point Hexblade Hex target to entity hit by missile
 scoreboard players operation @e[tag=t_missile_owner,limit=1] cv_A = @n[tag=t_collision_found] eid_self

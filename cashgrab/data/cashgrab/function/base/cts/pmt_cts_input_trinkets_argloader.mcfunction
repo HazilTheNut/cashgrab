@@ -1,10 +1,10 @@
-# base/cts/pmt_cts_input_noop.mcfunction
+# base/cts/pmt_cts_input_trinkets_argloader.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
 #	+ the owner of the pm is tagged with t_pm_owner
 #
-# Summary: Class-and-trinket selection "no op" input collector function
+# Summary: Loads arguments for and runs cashgrab:base/cts/pmt_cts_input_trinkets
 #
 # Arguments: (none)
 

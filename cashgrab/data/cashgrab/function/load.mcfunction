@@ -302,8 +302,12 @@ scoreboard objectives add mis_func_step_dpitch_mdeg dummy
 # Pitch and yaw of direction heading towards potential tracking target, in millidegrees
 scoreboard objectives add mis_tracking_dyaw_mdeg dummy
 scoreboard objectives add mis_tracking_dpitch_mdeg dummy
-scoreboard objectives add mis_tracking_min_angle_mdeg dummy
-scoreboard objectives add mis_tracking_max_angle_mdeg dummy
+
+# Tracking angle cutoff values calculated when you apply t_tracking_init to a missile
+scoreboard objectives add __mis_tracking_giveup_min_mdeg dummy
+scoreboard objectives add __mis_tracking_giveup_max_mdeg dummy
+scoreboard objectives add __mis_tracking_adjust_min_mdeg dummy
+scoreboard objectives add __mis_tracking_adjust_max_mdeg dummy
 
 # Summation of all physics effects on a missile
 scoreboard objectives add mis_sum_vel_x_mmpt dummy
@@ -320,7 +324,6 @@ scoreboard objectives add __mis_has_collided dummy
 scoreboard objectives add __col_terrain_count dummy
 scoreboard objectives add col_terrain dummy
 scoreboard objectives add col_entity dummy
-
 
 # =============================
 # Values used for raycasting

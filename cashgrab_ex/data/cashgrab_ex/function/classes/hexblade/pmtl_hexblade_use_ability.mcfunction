@@ -23,13 +23,13 @@
 playsound minecraft:entity.ghast.shoot player @a ~ ~ ~ 1.0 1.5
 
 function cashgrab:util/npe_create_missile {\
-f_speed_mpt:0.7f,\
+f_speed_mpt:0.5f,\
 i_lifetime_ticks:50,\
 i_origin_loc:1,\
 f_focal_dist_m:50,\
 i_gravity_vy_mmpt:0,\
 i_gravity_const_mmpt2:0,\
-f_tracking_scalar:0.5f,\
+f_tracking_scalar:0.4f,\
 t_missile_name:"t_hexblade_hex_missile",\
 col_terrain_allowed:"#cashgrab:partialsolid",\
 func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_hostile",\

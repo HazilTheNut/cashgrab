@@ -1,4 +1,4 @@
-# base/missile_physics.mcfunction
+# base/missile_gravity.mcfunction
 #
 # Context:
 #	as: a missile
@@ -14,4 +14,3 @@ scoreboard players operation @s mis_gravity_vel_y_mmpt -= @s mis_gravity_const_m
 
 # Write velocity data at later portion of missile main
 tag @s add t_missile_write_vel_to_data
-

@@ -1,8 +1,8 @@
-# end_game.mcfunction
+# start_game.mcfunction
 #
 # Context: None
 #
-# Summary: Ends an active game
+# Summary: Starts a game
 #
 # Arguments: (none)
 

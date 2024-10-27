@@ -3,7 +3,7 @@
 # Context:
 #	as:	a nonplayer entity
 #
-# Summary: 
+# Summary: Queries to see if the entity has an owner and performs cleanup if it does not find one
 #
 # Arguments: (none)
 

@@ -5,7 +5,7 @@
 #	at: the missile
 #	facing: the missile's facing direction
 #
-# Summary: Applies forces and rotation corrections of gravity and tracking respectively
+# Summary: Sums together func_npe_tick and tracking system angle deflections
 #
 # Arguments:
 #	f_tracking_scalar		: Scalar of strength of tracking towards potential targets

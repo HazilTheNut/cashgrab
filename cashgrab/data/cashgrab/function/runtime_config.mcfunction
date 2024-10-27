@@ -2,7 +2,9 @@
 #
 # Context: None
 #
-# Summary: Ends an active game
+# Summary: Sets runtime configuration of cashgrab to be ran every tick. 
+#			This is done so even if players have command permissions, they
+#			could not reconfigure the below parameters
 #
 # Arguments: (none)
 
@@ -11,7 +13,7 @@
 #	-	Prevents player activity_state values from being written to by the datapack
 #	-	Tags used to teleport players to lobby/respawn room are not issued
 #	-	Scoreboard display is not updated
-scoreboard players set DEVELOPER_MODE num 0
+scoreboard players set DEVELOPER_MODE num 1
 
 # Setting ENABLE_PLUGINS to 0 causes #cashgrab:gt_load_post, #cashgrab:gt_tick_post, 
 #	#cashgrab:gt_tick_prior, #cashgrab:pm_tick_post, #cashgrab:pm_tick_prior,

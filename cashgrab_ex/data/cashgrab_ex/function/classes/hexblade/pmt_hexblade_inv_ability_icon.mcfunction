@@ -13,7 +13,7 @@ $item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:silence_
 minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Hex\"}]",\
 minecraft:hide_additional_tooltip={},\
 minecraft:lore=[\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"Fires a homing hex that\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\"Fires a homing spell that\"}",\
 "[{\"color\":\"gray\",\"italic\":false,\"text\":\" damages and \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Hexes\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" the target.\"}]",\
 "[{\"color\":\"yellow\",\"italic\":false,\"text\":\"Hexed\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" enemies are revealed\"}]",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" and periodically take damage.\"}",\

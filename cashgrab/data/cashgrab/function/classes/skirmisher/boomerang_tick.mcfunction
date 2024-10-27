@@ -51,7 +51,7 @@ execute if entity @s[scores={cv_H=12..},tag=!t_boomerang_returning] run tag @s a
 
 # Reorient boomerang and track onto owner
 execute if entity @s[tag=t_boomerang_begin_return] run data merge entity @s \
-{data:{f_speed_mpt:0.75f,func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_owner",f_tracking_scalar:0.95f,func_npe_tracking_filter:"cashgrab:util/npe_col_entity_filter_owner"}}
+{data:{f_speed_mpt:0.75f,func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_owner",f_tracking_scalar:1.0f,func_npe_tracking_filter:"cashgrab:util/npe_col_entity_filter_owner"}}
 execute if entity @s[tag=t_boomerang_begin_return] facing entity @a[tag=t_eid_matches,limit=1] eyes run function cashgrab:util/npe_calc_facing_vector {magnitude:1.0f}
 # Direction towards owner now stored on facing_vector_yaw_mdeg and facing_vector_pitch_mdeg
 execute if entity @s[tag=t_boomerang_begin_return] run scoreboard players operation @s mis_func_step_dyaw_mdeg = @s facing_vector_yaw_mdeg

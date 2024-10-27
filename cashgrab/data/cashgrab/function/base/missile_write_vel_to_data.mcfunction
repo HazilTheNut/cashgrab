@@ -1,14 +1,13 @@
-# base/missile_physics.mcfunction
+# base/missile_write_vel_to_data.mcfunction
 #
 # Context:
 #	as: a missile
 #	at: the missile
 #	facing: the missile's facing direction
 #
-# Summary: Applies forces and rotation corrections of gravity and tracking respectively
+# Summary: Sums together missile velocity data and writes results to its nbt data
 #
-# Arguments:
-#	f_tracking_scalar		: Scalar of strength of tracking towards potential targets
+# Arguments: (none)
 
 # =============================
 # Sum together component velocities

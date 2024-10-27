@@ -21,6 +21,9 @@
 #	cv_G	:	
 #	cv_H	:	
 
+# Release from any grabs
+tag @a[tag=t_pm_owner,limit=1] add t_grab_release
+
 # Raycast behind target to find a good place to teleport, then teleport there
 execute if entity @e[tag=t_hex_target,tag=!t_hexblade_remnant_timer] at @e[tag=t_hex_target,limit=1] positioned ~ ~1 ~ rotated as @e[tag=t_hex_target,limit=1] rotated ~180 -15 run function cashgrab:util/npe_raycast {\
 i_range_m:3,\

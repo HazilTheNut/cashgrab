@@ -45,7 +45,7 @@ func_npe_tick:"$(func_npe_tick)",\
 func_npe_end:"$(func_npe_end)",\
 vel_x:0.0f,vel_y:0.0f,vel_z:0.0f,\
 f_speed_mpt:$(f_speed_mpt)f,\
-f_tracking_scalar:$(f_tracking_scalar),\
+f_tracking_scalar:$(f_tracking_scalar)f,\
 func_npe_tracking_filter:"$(func_npe_tracking_filter)",\
 tracking_dyaw:0,tracking_dpitch:0}}
 
