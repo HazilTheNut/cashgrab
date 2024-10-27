@@ -18,7 +18,7 @@
 #	cv_G	:	Crash Landing cutoff height, in mm
 #	cv_H	:	Creeper fuse timer
 
-scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 10000
+scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 11000
 scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_charges_max 1
 scoreboard players set @a[tag=t_pm_owner,limit=1] ability_charges 1
 

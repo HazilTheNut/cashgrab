@@ -18,6 +18,6 @@
 #	cv_G	:	
 #	cv_H	:	
 
-scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 12000
-scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_charges_max 3
-scoreboard players set @a[tag=t_pm_owner,limit=1] ability_charges 3
+scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 10000
+scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_charges_max 2
+scoreboard players set @a[tag=t_pm_owner,limit=1] ability_charges 2

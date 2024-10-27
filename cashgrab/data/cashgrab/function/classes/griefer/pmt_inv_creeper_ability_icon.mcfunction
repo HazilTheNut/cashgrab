@@ -30,6 +30,6 @@ minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"You take reduced damage from\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" your creeper explosions.\"}",\
 "{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"=====\"}",\
-"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"8\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown\"}]"\
+"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"9\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown\"}]"\
 ]\
 ]

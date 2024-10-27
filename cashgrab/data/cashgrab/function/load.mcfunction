@@ -3,7 +3,7 @@
 # Arguments: (none)
 
 # Version number
-scoreboard players set CASHGRAB_VERSION_NUMBER num 000000001
+scoreboard players set CASHGRAB_VERSION_NUMBER num 0000001
 
 function cashgrab:runtime_config
 
@@ -295,7 +295,7 @@ scoreboard objectives add mis_gravity_const_mmpt2 dummy
 # Vertical velocity from gravity, in mm/tick
 scoreboard objectives add mis_gravity_vel_y_mmpt dummy
 
-# Pitch and yaw adjustments provided by missile's func_step, in millidegrees
+# Pitch and yaw adjustments modified by missile's func_npe_tick, in millidegrees
 scoreboard objectives add mis_func_step_dyaw_mdeg dummy
 scoreboard objectives add mis_func_step_dpitch_mdeg dummy
 
@@ -310,6 +310,9 @@ scoreboard objectives add mis_sum_vel_x_mmpt dummy
 scoreboard objectives add mis_sum_vel_y_mmpt dummy
 scoreboard objectives add mis_sum_vel_z_mmpt dummy
 
+# = if either col_terrain or col_entity == 1
+scoreboard objectives add __mis_has_collided dummy
+
 # =============================
 # Values used for collision detection
 
@@ -318,8 +321,6 @@ scoreboard objectives add __col_terrain_count dummy
 scoreboard objectives add col_terrain dummy
 scoreboard objectives add col_entity dummy
 
-# = if either col_terrain or col_entity == 1
-scoreboard objectives add has_collided dummy
 
 # =============================
 # Values used for raycasting

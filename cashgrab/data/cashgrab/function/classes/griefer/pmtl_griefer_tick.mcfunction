@@ -56,7 +56,7 @@ func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_none",\
 func_npe_step:"cashgrab:util/noop",\
 func_npe_end:"cashgrab:classes/griefer/pmtl_summon_creeper",\
 }
-execute if score @a[tag=t_pm_owner,limit=1] evc_xpbottles matches 1.. run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 8000
+execute if score @a[tag=t_pm_owner,limit=1] evc_xpbottles matches 1.. run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 9000
 execute if score @a[tag=t_pm_owner,limit=1] evc_xpbottles matches 1.. run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_D 0
 execute if score @a[tag=t_pm_owner,limit=1] evc_xpbottles matches 1.. run function cashgrab:classes/griefer/pmt_inv_creeper_ability_icon
 

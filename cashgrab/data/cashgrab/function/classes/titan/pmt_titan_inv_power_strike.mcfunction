@@ -34,5 +34,5 @@ minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" that slows them if you\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" hit them into a wall.\"}",\
 "{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"=====\"}",\
-"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"7\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown for \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"1\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" charge\"}]"\
+"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"7\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown\"}]"\
 ]] 1
