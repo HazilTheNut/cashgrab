@@ -12,5 +12,4 @@ execute store result storage cashgrab:find_eid_args eid int 1 run scoreboard pla
 function cashgrab:util/find_eid_owned_by with storage cashgrab:find_eid_args
 
 # Tag them for cleanup
-tag @e[tag=!t_pm,tag=t_eid_matches] add t_cleanup
 execute as @e[tag=!t_pm,tag=t_eid_matches] run function cashgrab:base/npe_cleanup
