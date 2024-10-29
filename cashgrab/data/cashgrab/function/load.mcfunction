@@ -232,7 +232,7 @@ execute if score NUM_COINSHOWER_EXCHANGE_DIVISOR num matches 0 run scoreboard pl
 
 # Target time for coin showers to dispense coins, in ticks
 scoreboard players add NUM_COINSHOWER_TARGET_TIME_TICKS num 0
-execute if score NUM_COINSHOWER_TARGET_TIME_TICKS num matches 0 run scoreboard players set NUM_COINSHOWER_TARGET_TIME_TICKS num 100
+execute if score NUM_COINSHOWER_TARGET_TIME_TICKS num matches 0 run scoreboard players set NUM_COINSHOWER_TARGET_TIME_TICKS num 135
 
 # Maximum period for coin drops by coin showers, in ticks
 scoreboard players add NUM_COINSHOWER_MAX_PERIOD_TICKS num 0
@@ -240,7 +240,11 @@ execute if score NUM_COINSHOWER_MAX_PERIOD_TICKS num matches 0 run scoreboard pl
 
 # Number of coins awarded by stepping on a coin plate
 scoreboard players add NUM_COINS_PER_COINPLATE num 0
-execute if score NUM_COINS_PER_COINPLATE num matches 0 run scoreboard players set NUM_COINS_PER_COINPLATE num 1
+execute if score NUM_COINS_PER_COINPLATE num matches 0 run scoreboard players set NUM_COINS_PER_COINPLATE num 2
+
+# Coin plate cooldown timer, in ticks
+scoreboard players add NUM_COINPLATE_CD_TICKS num 0
+execute if score NUM_COINPLATE_CD_TICKS num matches 0 run scoreboard players set NUM_COINPLATE_CD_TICKS num 300
 
 # === Misc. global variables
 

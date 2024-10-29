@@ -20,6 +20,7 @@ scoreboard players set NUM_TICKS_PER_MIN num 1200
 scoreboard players add CGAW_CFG_MATCH_TIME_DISPLAY_MIN num 0
 
 scoreboard players add CGAW_MATCH_TIME_TICKS num 0
+execute if score CGAW_MATCH_TIME_TICKS num matches 0 run scoreboard players set CGAW_MATCH_TIME_TICKS num 6000
 
 # --- CTS Room
 

@@ -17,6 +17,6 @@ summon minecraft:marker ~0.5 ~0.25 ~0.5 {Tags:["t_coinplate_cooldown_init"]}
 setblock ~ ~ ~ minecraft:heavy_weighted_pressure_plate
 
 # Coin plate initialization
-scoreboard players set @e[tag=t_coinplate_cooldown_init] __coinplate_timer_ticks 300
+scoreboard players operation @e[tag=t_coinplate_cooldown_init] __coinplate_timer_ticks = NUM_COINPLATE_CD_TICKS num
 tag @e[tag=t_coinplate_cooldown_init] add t_coinplate_cooldown
 tag @e[tag=t_coinplate_cooldown_init] remove t_coinplate_cooldown_init

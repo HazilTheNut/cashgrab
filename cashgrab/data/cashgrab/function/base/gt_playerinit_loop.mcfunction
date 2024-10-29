@@ -7,7 +7,7 @@
 # Arguments: (none)
 
 # Tag a player with t_player_initialize
-tag @r[scores={reinitialize=1..}] add t_player_initialize
+tag @r[scores={reinitialize=1..},limit=1] add t_player_initialize
 
 # Invalidate eid_state as it is being overwritten
 scoreboard players set @a[tag=t_player_initialize] eid_state 0
@@ -24,7 +24,8 @@ scoreboard players operation @e[tag=t_pm_init,limit=1] eid_owner = @a[tag=t_play
 scoreboard players operation @e[tag=t_pm_init,limit=1] eid_self = @e[tag=t_pm_init,limit=1] eid_owner
 scoreboard players add @e[tag=t_pm_init,limit=1] eid_self 10000
 scoreboard players set @e[tag=t_pm_init,limit=1] eid_state 1
-# Set selected indices to bad values. pm will eventually pick on this and import owner player's selections as well as load data from cashgrab:game_info.classes
+# Set selected indices to bad values. pm will eventually pick on this and 
+#	import owner player's selections as well as load data from cashgrab:game_info.classes and cashgrab:game_info.trinkets
 scoreboard players set @e[tag=t_pm_init,limit=1] __cts_selected_class_idx 0
 scoreboard players set @e[tag=t_pm_init,limit=1] __cts_selected_trinket_idx 0
 
