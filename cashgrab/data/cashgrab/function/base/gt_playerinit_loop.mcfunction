@@ -40,7 +40,7 @@ execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches
 execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches 1.. run scoreboard players set @a[tag=t_player_initialize] activity_state 10
 
 # Reset player gravity to default
-attribute @a[tag=t_player_initialize] minecraft:gravity base set 0.08
+attribute @a[tag=t_player_initialize,limit=1] minecraft:gravity base set 0.08
 
 # --- Initialize player scoreboard values
 
