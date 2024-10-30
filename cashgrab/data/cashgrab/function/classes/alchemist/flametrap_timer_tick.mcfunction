@@ -34,6 +34,9 @@ execute if score @s cv_D matches ..0 run return 0
 # =================================
 #	61-120	= trap is arming
 execute if score @s tmr_lifetime_ticks matches 61..120 run particle minecraft:dust{color:[0.8f,0.2f,0.4f],scale:1.0} ~ ~ ~ 0 0 0 0 1
+execute if score @s tmr_lifetime_ticks matches 120 run playsound minecraft:entity.tnt.primed player @a ~ ~ ~ 0.5 2.0
+execute if score @s tmr_lifetime_ticks matches 100 run playsound minecraft:entity.tnt.primed player @a ~ ~ ~ 0.5 2.0
+execute if score @s tmr_lifetime_ticks matches 80 run playsound minecraft:entity.tnt.primed player @a ~ ~ ~ 0.5 2.0
 
 # =================================
 #	20-60	= trap is armed
@@ -46,7 +49,7 @@ execute if score @s tmr_lifetime_ticks matches 21 run scoreboard players set @s 
 
 # Detect nearby enemies
 execute if score @s tmr_lifetime_ticks matches 21..60 run function cashgrab:util/npe_col_entity_filter_hostile
-execute if score @s tmr_lifetime_ticks matches 21..60 if entity @e[distance=..2.5,tag=t_collision_candidate] run scoreboard players set @s tmr_lifetime_ticks 15
+execute if score @s tmr_lifetime_ticks matches 21..60 if entity @e[distance=..2.5,tag=t_collision_candidate,tag=!t_invisible] run scoreboard players set @s tmr_lifetime_ticks 15
 
 # =================================
 #	1-15	= trap is tripped and about to explode
