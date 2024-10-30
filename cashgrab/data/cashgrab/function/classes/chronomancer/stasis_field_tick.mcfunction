@@ -13,7 +13,7 @@
 #	cv_A	:	1 if crossbow is in offhand, and 0 otherwise
 #	cv_B	:	Crossbow reload timer
 #	cv_C	:	1 if crossbow is loaded, and 0 otherwise
-#	cv_D	:	
+#	cv_D	:	state value if player is in a Stasis Field
 #	cv_E	:	1 if Stasis field is active, and 0 otherwise
 #	cv_F	:	
 #	cv_G	:	
@@ -34,5 +34,7 @@ particle minecraft:enchanted_hit ~-6 ~ ~-6 0 2.5 0 0 20 force
 particle minecraft:enchanted_hit ~-6 ~ ~6 0 2.5 0 0 20 force
 particle minecraft:enchant ~ ~ ~ 2.5 2.5 2.5 1 7 force
 
+#particle minecraft:enchanted_hit ~ ~ ~ 0 0 0 0 4 force
+
 # Apply stasis to everything inside
-execute positioned ~-6 ~-6 ~-6 run tag @e[dx=12,dy=12,dz=12] add t_stasis
+execute positioned ~-7 ~-7 ~-7 run tag @e[dx=13,dy=13,dz=13] add t_stasis

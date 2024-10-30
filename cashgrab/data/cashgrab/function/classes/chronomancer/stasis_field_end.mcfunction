@@ -13,7 +13,7 @@
 #	cv_A	:	1 if crossbow is in offhand, and 0 otherwise
 #	cv_B	:	Crossbow reload timer
 #	cv_C	:	1 if crossbow is loaded, and 0 otherwise
-#	cv_D	:	
+#	cv_D	:	state value if player is in a Stasis Field
 #	cv_E	:	1 if Stasis field is active, and 0 otherwise
 #	cv_F	:	
 #	cv_G	:	
