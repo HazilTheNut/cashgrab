@@ -382,6 +382,8 @@ scoreboard objectives add grab_state dummy
 #		thus must be constantly applied to hold something in stasis
 scoreboard objectives add stasis_state dummy
 
+scoreboard objectives add stasis_reset_pos_timer dummy
+
 scoreboard objectives add stasis_stored_x_pos_mm dummy
 scoreboard objectives add stasis_stored_y_pos_mm dummy
 scoreboard objectives add stasis_stored_z_pos_mm dummy

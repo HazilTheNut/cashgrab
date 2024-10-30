@@ -30,7 +30,7 @@ execute if items entity @a[tag=t_pm_owner,limit=1] hotbar.* minecraft:crossbow[m
 execute if items entity @a[tag=t_pm_owner,limit=1] weapon.* minecraft:crossbow[minecraft:count=1,minecraft:charged_projectiles=[]] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 0
 
 # Upon firing an arrow, initiate reload timer
-execute if score @a[tag=t_pm_owner,limit=1] evl_crossbows matches 1.. run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 50
+execute if score @a[tag=t_pm_owner,limit=1] evl_crossbows matches 1.. run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 55
 
 # Detect if player is inside a stasis field and update state accordingly
 execute if score @a[tag=t_pm_owner,limit=1] cv_D matches 2 positioned ~-4 ~-4 ~-4 if entity @e[tag=t_stasis_field,dx=7,dy=7,dz=7] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_D 1
@@ -41,7 +41,7 @@ execute if score @a[tag=t_pm_owner,limit=1] cv_D matches 1.. positioned ~-4 ~-4 
 
 # Decrement reload timer and reload when complete
 scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={cv_B=0..}] cv_B 1
-scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={cv_B=5..,cv_D=1..}] cv_B 5
+scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={cv_B=4..,cv_D=1..}] cv_B 4
 execute if score @a[tag=t_pm_owner,limit=1] cv_B matches 0 run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 1
 execute if score @a[tag=t_pm_owner,limit=1] cv_B matches 0 run function cashgrab:classes/chronomancer/pmt_chronomancer_inv_crossbow
 

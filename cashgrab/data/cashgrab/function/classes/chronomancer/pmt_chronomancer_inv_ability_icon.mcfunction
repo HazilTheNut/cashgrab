@@ -28,7 +28,7 @@ minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"This ability can be reactivated\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" to end the effect early.\"}",\
 "{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"=====\"}",\
-"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"10\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown for \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"1\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" charges\"}]"\
+"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"8\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown for \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"1\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" charges\"}]"\
 ]] $(charges)
 
 $execute if score @a[tag=t_pm_owner,limit=1] cv_E matches 1 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:barrier[\

@@ -70,8 +70,7 @@ execute as @e[type=minecraft:marker,tag=t_coinshower] at @s run function cashgra
 
 kill @e[type=minecraft:egg]
 kill @e[type=minecraft:experience_bottle]
-execute as @e[type=minecraft:arrow,nbt={inGround:1b}] at @s run particle minecraft:block{block_state:"minecraft:birch_planks"} ^ ^ ^-0.2 0.1 0.1 0.1 1 5
-kill @e[type=minecraft:arrow,nbt={inGround:1b}]
+execute as @e[type=minecraft:arrow,tag=!t_stasis,nbt={inGround:1b}] at @s run function cashgrab:base/arrow_cleanup
 
 # =============================
 # Grab mechanics

@@ -29,7 +29,7 @@ playsound minecraft:block.beacon.deactivate player @a ~ ~ ~ 1 2
 
 # Create Stasis Field
 execute align xyz positioned ~0.5 ~0.5 ~0.5 run function cashgrab:util/npe_create_timer {\
-lifetime_ticks:200,\
+lifetime_ticks:140,\
 b_anchor_at_pos:1,\
 t_timer_name:"t_stasis_field_init",\
 func_npe_start:"cashgrab:util/noop",\
