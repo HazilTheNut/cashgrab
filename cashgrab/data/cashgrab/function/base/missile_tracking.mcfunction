@@ -13,6 +13,9 @@
 # Run filter function
 $function $(func_npe_tracking_filter)
 
+scoreboard players set @s mis_tracking_dyaw_mdeg 0
+scoreboard players set @s mis_tracking_dpitch_mdeg 0
+
 # If no entity found, do no track onto nothing
 execute unless entity @e[tag=t_collision_candidate,tag=!t_invisible] run return 0
 

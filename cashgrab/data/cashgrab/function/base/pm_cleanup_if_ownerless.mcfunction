@@ -11,6 +11,8 @@
 execute store result storage cashgrab:find_eid_args eid int 1 run scoreboard players get @s eid_owner
 function cashgrab:util/find_eid_self with storage cashgrab:find_eid_args
 
+#tellraw @a[tag=t_debug] [{"type":"text","text":"pm_cleanup_if_ownerless owners: "},{"type":"selector","selector":"@a[tag=t_eid_matches]"}]
+
 # If owner does not exist, destroy this marker
 execute if entity @a[tag=t_eid_matches] run return 0
 

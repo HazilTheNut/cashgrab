@@ -7,6 +7,8 @@
 #
 # Arguments: (none)
 
+tag @a remove t_pm_owner
+
 # Find owner and tag them with t_pm_owner
 execute store result storage cashgrab:find_eid_args eid int 1 run scoreboard players get @s eid_owner
 function cashgrab:util/find_eid_self with storage cashgrab:find_eid_args
@@ -23,8 +25,9 @@ scoreboard players add @a[tag=t_pm_owner,limit=1] pm_count 1
 # This case is not expected to occur but this is a failsafe in case it somehow happens.
 # Destroying this pm will resolve the issue as the player entity holds all of their data,
 #	so pms can be freely be destroyed without worry of corrupting player data
-execute if entity @a[tag=t_pm_owner,limit=1,scores={pm_count=2..}] run tellraw @a[tag=t_pm_owner] "An error has occurred with your session - reinitializing"
+execute if entity @a[tag=t_pm_owner,limit=1,scores={pm_count=2..}] run tellraw @a[tag=t_pm_owner] "double ownership An error has occurred with your session - reinitializing"
 execute if entity @a[tag=t_pm_owner,limit=1,scores={pm_count=2..}] run scoreboard players set @s eid_owner 0
+execute if entity @a[tag=t_pm_owner,limit=1,scores={pm_count=2..}] run scoreboard players set @a[tag=t_pm_owner,limit=1] reinitialize 1
 execute if entity @a[tag=t_pm_owner,limit=1,scores={pm_count=2..}] run function cashgrab:base/pm_cleanup_if_ownerless
 execute if entity @a[tag=t_pm_owner,limit=1,scores={pm_count=2..}] run return 0
 

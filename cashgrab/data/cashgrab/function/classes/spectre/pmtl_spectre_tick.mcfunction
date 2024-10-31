@@ -49,4 +49,4 @@ scoreboard players operation @a[tag=t_pm_owner,limit=1,scores={cv_C=0..}] cv_C -
 execute unless score @a[tag=t_pm_owner,limit=1,scores={cv_B=..60}] cv_C matches ..0 run return 0
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 60
 execute store result storage cashgrab:spectre_args data.count int 1 run scoreboard players get @a[tag=t_pm_owner,limit=1] cv_B
-function cashgrab:classes/spectre/pmt_spectre_inv_shadow_walk with storage coinwwars:spectre_args data
+function cashgrab:classes/spectre/pmt_spectre_inv_shadow_walk with storage cashgrab:spectre_args data

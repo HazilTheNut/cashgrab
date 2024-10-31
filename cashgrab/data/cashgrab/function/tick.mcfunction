@@ -13,11 +13,12 @@ scoreboard players set @a[scores={eid_state=2},gamemode=spectator] eid_state 1
 # Player eid and pm management
 
 # pms query if their owner still exists and clean up if not
+#tellraw @a[tag=t_debug] [{"type":"text","text":"starting pm_cleanup_if_ownerless "},{"type":"score","score":{"name":"@s","objective":"eid_owner"}}]
 execute as @e[tag=t_pm] run function cashgrab:base/pm_cleanup_if_ownerless
 
 # If a pm has been cleaned up, a player likely left the server and their subordinates (who are now ownerless) should be cleaned up
 #execute if entity @e[tag=t_pm,tag=t_pm_no_owner] run tellraw @a[tag=t_debug] "pm cleanup"
-execute if entity @e[tag=t_pm,tag=t_pm_no_owner] as @e[type=!minecraft:player,scores={eid_state=1..}] run function cashgrab:base/npe_cleanup_if_ownerless
+execute if entity @e[tag=t_pm,tag=t_pm_no_owner] as @e[type=!minecraft:player,tag=!t_pm,scores={eid_state=1..}] run function cashgrab:base/npe_cleanup_if_ownerless
 execute if entity @e[tag=t_pm,tag=t_pm_no_owner] run scoreboard players set NUM_PLAYERCOUNT_CHANGED num 1
 
 # Cleaned up pms should now be killed
