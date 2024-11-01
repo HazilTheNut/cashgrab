@@ -74,8 +74,11 @@ tag @a[tag=t_pm_owner,limit=1] remove t_award_creeper_bottle
 
 # Find subordinates of player
 execute store result storage cashgrab:find_eid_args eid int 1 run scoreboard players get @s eid_owner
-#tellraw @a[tag=t_debug,tag=t_pm_owner,scores={cv_C=1..}] [{"text":"pmtl_griefer_loop: pm eid_owner: "},{"score":{"name":"@s","objective":"eid_owner"}}]
 function cashgrab:util/find_eid_owned_by with storage cashgrab:find_eid_args
+#tellraw @a[tag=t_debug,tag=t_pm_owner,scores={cv_C=7250..}] [{"text":"pmtl_griefer_loop: pm eid_owner: "},{"score":{"name":"@s","objective":"eid_owner"}},{"type":"text","text":" peers: "},{"type":"selector","selector":"@e[tag=t_eid_matches]"}]
+tag @e[type=minecraft:creeper,tag=t_eid_matches] add t_creeper_peer
 
-execute as @e[type=minecraft:creeper,tag=t_griefer_creeper,tag=t_eid_matches] at @s run function cashgrab:classes/griefer/creeper_func_tick
-execute as @e[type=minecraft:creeper,tag=t_griefer_creeper_stasis,tag=t_eid_matches] at @s run function cashgrab:classes/griefer/creeper_stasis_func_tick
+execute as @e[type=minecraft:creeper,tag=t_griefer_creeper,tag=t_creeper_peer] at @s run function cashgrab:classes/griefer/creeper_func_tick
+execute as @e[type=minecraft:creeper,tag=t_griefer_creeper_stasis,tag=t_creeper_peer] at @s run function cashgrab:classes/griefer/creeper_stasis_func_tick
+
+tag @e remove t_creeper_peer

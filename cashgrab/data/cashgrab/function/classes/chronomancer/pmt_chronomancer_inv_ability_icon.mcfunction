@@ -22,6 +22,7 @@ $execute if score @a[tag=t_pm_owner,limit=1] cv_E matches 0 run item replace ent
 minecraft:custom_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Stasis Field\"}]",\
 minecraft:enchantment_glint_override=true,\
 minecraft:lore=[\
+"{\"color\":\"dark_gray\",\"italic\":true,\"text\":\"Toss any item to use.\"}",\
 "[{\"color\":\"gray\",\"italic\":false,\"text\":\"Projects a \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Stasis Field \"},{\"color\":\"gray\",\"italic\":false,\"text\":\"around you \"}]",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" that freezes all projectiles,\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" constructs, and traps within it.\"}",\
@@ -35,5 +36,6 @@ $execute if score @a[tag=t_pm_owner,limit=1] cv_E matches 1 run item replace ent
 minecraft:custom_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Cancel Stasis Field\"}]",\
 minecraft:enchantment_glint_override=true,\
 minecraft:lore=[\
+"{\"color\":\"dark_gray\",\"italic\":true,\"text\":\"Toss any item to use.\"}",\
 "[{\"color\":\"gray\",\"italic\":false,\"text\":\"Ends the \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Stasis Field.\"}]",\
 ]] $(charges)

@@ -18,6 +18,9 @@
 #	cv_G	:	
 #	cv_H	:	Glacier height
 
+# If in stasis, do not create damage pulses
+execute if score @s stasis_state matches 1..2 run return 0
+
 # Pulse at regular intervals of timer lifetime
 execute if score @s tmr_lifetime_ticks matches 161 run function cashgrab:classes/frostknight/glacier_timer_pulse
 execute if score @s tmr_lifetime_ticks matches 121 run function cashgrab:classes/frostknight/glacier_timer_pulse

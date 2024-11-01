@@ -32,11 +32,11 @@ execute unless entity @e[tag=t_hex_target] run scoreboard players set @a[tag=t_p
 execute unless entity @e[tag=t_hex_target] run function cashgrab_ex:classes/hexblade/pmt_hexblade_inv_blight_step
 
 # If target is a player that has died, place a "remnant" timer the Hexblade can teleport to
-execute if entity @e[type=minecraft:player,tag=t_hex_target,scores={evl_death=1..}] run function cashgrab_ex:classes/hexblade/pmtl_hexblade_create_remnant_at_hex_target
+execute if entity @a[tag=t_hex_target,scores={evl_death=1..}] run function cashgrab_ex:classes/hexblade/pmtl_hexblade_create_remnant_at_hex_target
 
 # If target is a player that is not in Gameplay state, set pointer to null
-execute if entity @e[type=minecraft:player,tag=t_hex_target,scores={activity_state=0..19}] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_A 0
-execute if entity @e[type=minecraft:player,tag=t_hex_target,scores={activity_state=0..19}] run function cashgrab_ex:classes/hexblade/pmt_hexblade_inv_blight_step
+execute if entity @a[tag=t_hex_target,scores={activity_state=0..19}] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_A 0
+execute if entity @a[tag=t_hex_target,scores={activity_state=0..19}] run function cashgrab_ex:classes/hexblade/pmt_hexblade_inv_blight_step
 
 # If no Hex target, end Hex sequence early
 execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=0,cv_B=1..}] run tag @e remove t_hex_target

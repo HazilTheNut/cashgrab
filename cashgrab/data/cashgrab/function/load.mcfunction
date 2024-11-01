@@ -481,6 +481,27 @@ evc_usage_score:"",\
 }
 
 
+# DEVELOPER MODE data
+execute if score DEVELOPER_MODE num matches 1 run data modify storage cashgrab:game_info classes append value {\
+s_class_name:"Mapmaker",\
+func_pmt_init:"cashgrab:classes/mapmaker/pmt_mapmaker_init",\
+func_pmt_inv:"cashgrab:classes/mapmaker/pmt_mapmaker_inv",\
+func_pmt_inv_ability_icon:"cashgrab:classes/mapmaker/pmt_mapmaker_inv_ability_icon",\
+func_pmtl_tick:"cashgrab:classes/mapmaker/pmtl_mapmaker_tick",\
+func_pmtl_use_ability:"cashgrab:classes/mapmaker/pmtl_mapmaker_use_ability",\
+func_pmt_cts_icon:"cashgrab:classes/mapmaker/pmt_mapmaker_cts_inv_icon",\
+func_pmtl_cts_tick:"cashgrab:util/noop",\
+}
+
+execute if score DEVELOPER_MODE num matches 1 run data modify storage cashgrab:game_info trinkets append value {\
+s_trinket_name:"Test Item",\
+func_pmt_init:"cashgrab:trinkets/test_item/pmt_test_item_init",\
+func_pmt_inv:"cashgrab:trinkets/test_item/pmt_test_item_inv",\
+func_pmtl_use_item:"cashgrab:trinkets/test_item/pmtl_test_item_use_item",\
+func_pmt_cts_icon:"cashgrab:trinkets/test_item/pmt_test_item_cts_inv_icon",\
+evc_usage_score:"evc_eggs",\
+}
+
 # Calculate classes list quantites for later use
 scoreboard players set NUM_CTS_CLASSES_LIST_LEN num 0
 execute store result score NUM_CTS_CLASSES_LIST_LEN num run data get storage cashgrab:game_info classes

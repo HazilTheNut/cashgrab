@@ -1,6 +1,6 @@
 {
 	"replace": false,
 	"values": [
-		"cgada:pmt_tick_post"
+		"cgada:gt_tick_post"
 	]
 }

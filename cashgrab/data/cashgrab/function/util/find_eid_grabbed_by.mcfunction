@@ -11,9 +11,11 @@
 
 # Remove leftover t_eid_matches tags
 tag @e remove t_eid_matches
+tag @a remove t_eid_matches
 
 # Searching for null pointer gives nothing
 $execute if score NUM_ZERO num matches $(eid) run return 0
 
 $tag @e[scores={eid_grabbed_by=$(eid),eid_state=1..}] add t_eid_matches
+$tag @a[scores={eid_grabbed_by=$(eid),eid_state=1..}] add t_eid_matches
 #$tellraw @a[tag=t_debug] "util/find_eid_owned_by: eid_owner searched for: $(eid)"
