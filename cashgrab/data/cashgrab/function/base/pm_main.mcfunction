@@ -64,7 +64,7 @@ execute unless score @s __cts_selected_trinket_idx = @a[tag=t_pm_owner,limit=1] 
 # Prior-tick functions
 
 # Allow plugins to run code before main pm tick
-execute if score ENABLE_PLUGINS num matches 1.. run function #cashgrab:pmt_tick_prior
+function #cashgrab:pmt_tick_prior
 
 function cashgrab:base/pmt_player_state
 execute at @a[tag=t_pm_owner,limit=1] rotated as @a[tag=t_pm_owner,limit=1] run function cashgrab:base/pmtl_ability
@@ -98,7 +98,7 @@ function cashgrab:base/pmt_scoring
 function cashgrab:base/pm_grab
 
 # Allow plugins to run code after main pm tick
-execute if score ENABLE_PLUGINS num matches 1.. run function #cashgrab:pmt_tick_post
+function #cashgrab:pmt_tick_post
 
 # =============================
 # End of pm_main

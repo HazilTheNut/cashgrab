@@ -17,6 +17,6 @@ execute if score DEVELOPER_MODE num matches 0 run tag @a add dtm_send_to_cts
 function cashgrab:base/gt_display_coin_score
 
 # Allow plugins to run code when game ends
-execute if score ENABLE_PLUGINS num matches 1.. run function #cashgrab:gt_game_start
+function #cashgrab:gt_game_start
 
 scoreboard players set NUM_GAMESTATE num 1

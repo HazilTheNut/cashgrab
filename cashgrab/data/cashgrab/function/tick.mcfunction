@@ -40,7 +40,7 @@ execute if score DEVELOPER_MODE num matches 0 if score NUM_PLAYERCOUNT_CHANGED n
 scoreboard players operation GOAL __coins_score = GOAL coins
 
 # Allow plugins to run code before pms do
-execute if score ENABLE_PLUGINS num matches 1.. run function #cashgrab:gt_tick_prior
+function #cashgrab:gt_tick_prior
 
 # =============================
 # Run pm-specific code
@@ -80,7 +80,7 @@ execute as @e[type=!minecraft:player,scores={eid_state=2}] run function cashgrab
 
 # =============================
 # Allow plugins to run code at the end of server tick but before events are cleared
-execute if score ENABLE_PLUGINS num matches 1.. run function #cashgrab:gt_tick_post
+function #cashgrab:gt_tick_post
 
 # =============================
 # Clear all listenable events
