@@ -12,8 +12,8 @@
 
 # If timer is anchored at its creation position
 $execute if entity @s[scores={tmr_anchor_pos=1..}] run function $(func_npe_end) {end_reason:0}
-$execute if entity @s[scores={tmr_anchor_pos=1..}] run kill @s
-$execute if entity @s[scores={tmr_anchor_pos=1..}] run return 0
+execute if entity @s[scores={tmr_anchor_pos=1..}] run kill @s
+execute if entity @s[scores={tmr_anchor_pos=1..}] run return 0
 
 # If timer not anchored at its creation position, find owner
 execute store result storage cashgrab:find_eid_args eid int 1 run scoreboard players get @s eid_owner
