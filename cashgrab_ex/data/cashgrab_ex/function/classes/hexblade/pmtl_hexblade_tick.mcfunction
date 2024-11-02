@@ -26,10 +26,11 @@
 execute store result storage cashgrab:find_eid_args eid int 1 run scoreboard players get @a[tag=t_pm_owner,limit=1] cv_A
 function cashgrab:util/find_eid_self with storage cashgrab:find_eid_args
 tag @e[tag=t_eid_matches,limit=1] add t_hex_target
+tag @a[tag=t_eid_matches,limit=1] add t_hex_target
 
 # If target does not exist, set pointer to null
-execute unless entity @e[tag=t_hex_target] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_A 0
-execute unless entity @e[tag=t_hex_target] run function cashgrab_ex:classes/hexblade/pmt_hexblade_inv_blight_step
+execute unless entity @e[tag=t_hex_target] unless entity @a[tag=t_hex_target] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_A 0
+execute unless entity @e[tag=t_hex_target] unless entity @a[tag=t_hex_target] run function cashgrab_ex:classes/hexblade/pmt_hexblade_inv_blight_step
 
 # If target is a player that has died, place a "remnant" timer the Hexblade can teleport to
 execute if entity @a[tag=t_hex_target,scores={evl_death=1..}] run function cashgrab_ex:classes/hexblade/pmtl_hexblade_create_remnant_at_hex_target
@@ -55,6 +56,9 @@ execute at @e[tag=t_hex_target,tag=!t_hexblade_remnant_timer] run particle minec
 execute if score @a[tag=t_pm_owner,limit=1] cv_B matches 160 if entity @e[tag=t_hex_target,tag=!t_hexblade_remnant_timer] run function cashgrab_ex:classes/hexblade/pmtl_hex_pulse
 execute if score @a[tag=t_pm_owner,limit=1] cv_B matches 100 if entity @e[tag=t_hex_target,tag=!t_hexblade_remnant_timer] run function cashgrab_ex:classes/hexblade/pmtl_hex_pulse
 execute if score @a[tag=t_pm_owner,limit=1] cv_B matches 40 if entity @e[tag=t_hex_target,tag=!t_hexblade_remnant_timer] run function cashgrab_ex:classes/hexblade/pmtl_hex_pulse
+
+# If a pulse caused a player death, create the remnant timer
+execute if entity @a[tag=t_hex_target,scores={evl_death=1..}] run function cashgrab_ex:classes/hexblade/pmtl_hexblade_create_remnant_at_hex_target
 
 # End of Hex sequence
 effect clear @a[tag=t_pm_owner,limit=1,scores={cv_B=1}] minecraft:glowing

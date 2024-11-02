@@ -14,6 +14,7 @@
 # Run filter function
 $function $(func_npe_entity_filter)
 
+tag @a remove t_collision_found
 tag @e remove t_collision_found
 
 # Find collision candidates within the hitbox (three 0.85m radius spheres vertically stacked on each other)
