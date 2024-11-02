@@ -224,6 +224,8 @@ scoreboard players set NUM_RAYCAST_STEPS_PER_M num 2
 # Goal number of coins to reach to win the game
 scoreboard players add GOAL coins 0
 execute if score GOAL coins matches 0 run scoreboard players set GOAL coins 100
+
+# See runtime_config for more info on DEVELOPER_MODE
 execute if score DEVELOPER_MODE num matches 0 run function cashgrab:base/gt_display_coin_score
 
 # When player dies, their coin count is divded by this number and the other portion is given to coin shower

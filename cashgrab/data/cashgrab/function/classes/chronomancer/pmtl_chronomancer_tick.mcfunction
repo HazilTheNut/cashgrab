@@ -30,7 +30,7 @@ execute if items entity @a[tag=t_pm_owner,limit=1] hotbar.* minecraft:crossbow[m
 execute if items entity @a[tag=t_pm_owner,limit=1] weapon.* minecraft:crossbow[minecraft:count=1,minecraft:charged_projectiles=[]] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 0
 
 # Upon firing an arrow, initiate reload timer
-execute if score @a[tag=t_pm_owner,limit=1] evl_crossbows matches 1.. run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 5
+execute if score @a[tag=t_pm_owner,limit=1] evl_crossbows matches 1.. run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 55
 
 #execute if score @a[tag=t_pm_owner,limit=1] ps_selected_hotbar_slot matches 2 positioned ~ ~1.625 ~ positioned ^-0.5 ^ ^3.5 run particle minecraft:dragon_breath ~ ~ ~ 0 0 0 0 1
 #execute if score @a[tag=t_pm_owner,limit=1] ps_selected_hotbar_slot matches 2 positioned ~ ~1.625 ~ positioned ^0.5 ^ ^3.5 run particle minecraft:dragon_breath ~ ~ ~ 0 0 0 0 1
