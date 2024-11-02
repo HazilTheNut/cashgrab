@@ -6,7 +6,7 @@ execute if score CGAW_SPAWN_CD_C_TICKS num matches 1.. run scoreboard players re
 execute if score CGAW_SPAWN_CD_D_TICKS num matches 1.. run scoreboard players remove CGAW_SPAWN_CD_D_TICKS num 1
 
 # Tick down game timer
-execute if score CGAW_MATCH_TIME_TICKS num matches 1.. run scoreboard players remove CGAW_MATCH_TIME_TICKS num 1
+execute if score DEVELOPER_MODE num matches 0 if score CGAW_MATCH_TIME_TICKS num matches 1.. run scoreboard players remove CGAW_MATCH_TIME_TICKS num 1
 
 # Make announcements at various time amounts remaining
 execute if score CGAW_MATCH_TIME_TICKS num matches 12000 run tellraw @a [{"type":"text","color":"yellow","text":"10"},{"type":"text","color":"aqua","text":" minutes remaining!"}]

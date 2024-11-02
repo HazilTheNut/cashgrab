@@ -37,4 +37,4 @@ particle minecraft:enchant ~ ~ ~ 2.5 2.5 2.5 1 7 force
 #particle minecraft:enchanted_hit ~ ~ ~ 0 0 0 0 4 force
 
 # Apply stasis to everything inside
-execute positioned ~-7 ~-7 ~-7 run tag @e[dx=13,dy=13,dz=13] add t_stasis
+execute positioned ~-6.5 ~-6.5 ~-6.5 run tag @e[dx=12,dy=12,dz=12] add t_stasis
