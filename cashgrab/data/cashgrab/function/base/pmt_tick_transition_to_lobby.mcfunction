@@ -11,6 +11,8 @@
 clear @a[tag=t_pm_owner,limit=1]
 function cashgrab:util/pmt_inv_refresh
 
+effect clear @a[tag=t_pm_owner,limit=1]
+
 # Set player gamemode
 execute if score DEVELOPER_MODE num matches 0 run gamemode adventure @a[tag=t_pm_owner,limit=1]
 

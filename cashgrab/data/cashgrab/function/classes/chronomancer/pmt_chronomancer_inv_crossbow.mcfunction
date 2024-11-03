@@ -27,7 +27,7 @@ minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"This crossbow automatically\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" reloads itself.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"While you are near and aiming\"}",\
-"[{\"color\":\"gray\",\"italic\":false,\"text\":\"into a \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Stasis Field\"},{\"color\":\"gray\",\"italic\":false,\"text\":\":\"}]",\
+"[{\"color\":\"gray\",\"italic\":false,\"text\":\" into a \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Stasis Field\"},{\"color\":\"gray\",\"italic\":false,\"text\":\":\"}]",\
 "{\"color\":\"gold\",\"italic\":false,\"text\":\"+ it reloads faster\"}",\
 "{\"color\":\"gold\",\"italic\":false,\"text\":\"+ it fires more arrows\"}"\
 ],\
@@ -40,7 +40,7 @@ minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"This crossbow automatically\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" reloads itself.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"While you are near and aiming\"}",\
-"[{\"color\":\"gray\",\"italic\":false,\"text\":\"into a \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Stasis Field\"},{\"color\":\"gray\",\"italic\":false,\"text\":\":\"}]",\
+"[{\"color\":\"gray\",\"italic\":false,\"text\":\" into a \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Stasis Field\"},{\"color\":\"gray\",\"italic\":false,\"text\":\":\"}]",\
 "{\"color\":\"gold\",\"italic\":false,\"text\":\"+ it reloads faster\"}",\
 "{\"color\":\"gold\",\"italic\":false,\"text\":\"+ it fires more arrows\"}"\
 ],\
@@ -53,7 +53,7 @@ minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"This crossbow automatically\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" reloads itself.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"While you are near and aiming\"}",\
-"[{\"color\":\"gray\",\"italic\":false,\"text\":\"into a \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Stasis Field\"},{\"color\":\"gray\",\"italic\":false,\"text\":\":\"}]",\
+"[{\"color\":\"gray\",\"italic\":false,\"text\":\" into a \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Stasis Field\"},{\"color\":\"gray\",\"italic\":false,\"text\":\":\"}]",\
 "{\"color\":\"gold\",\"italic\":false,\"text\":\"+ it reloads faster\"}",\
 "{\"color\":\"gold\",\"italic\":false,\"text\":\"+ it fires more arrows\"}"\
 ],\
@@ -66,7 +66,7 @@ minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"This crossbow automatically\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" reloads itself.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"While you are near and aiming\"}",\
-"[{\"color\":\"gray\",\"italic\":false,\"text\":\"into a \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Stasis Field\"},{\"color\":\"gray\",\"italic\":false,\"text\":\":\"}]",\
+"[{\"color\":\"gray\",\"italic\":false,\"text\":\" into a \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Stasis Field\"},{\"color\":\"gray\",\"italic\":false,\"text\":\":\"}]",\
 "{\"color\":\"gold\",\"italic\":false,\"text\":\"+ it reloads faster\"}",\
 "{\"color\":\"gold\",\"italic\":false,\"text\":\"+ it fires more arrows\"}"\
 ],\
@@ -79,7 +79,7 @@ minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"This crossbow automatically\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" reloads itself.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"While you are near and aiming\"}",\
-"[{\"color\":\"gray\",\"italic\":false,\"text\":\"into a \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Stasis Field\"},{\"color\":\"gray\",\"italic\":false,\"text\":\":\"}]",\
+"[{\"color\":\"gray\",\"italic\":false,\"text\":\" into a \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Stasis Field\"},{\"color\":\"gray\",\"italic\":false,\"text\":\":\"}]",\
 "{\"color\":\"gold\",\"italic\":false,\"text\":\"+ it reloads faster\"}",\
 "{\"color\":\"gold\",\"italic\":false,\"text\":\"+ it fires more arrows\"}"\
 ],\
@@ -94,7 +94,7 @@ minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"This crossbow automatically\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" reloads itself.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"While you are near and aiming\"}",\
-"[{\"color\":\"gray\",\"italic\":false,\"text\":\"into a \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Stasis Field\"},{\"color\":\"gray\",\"italic\":false,\"text\":\":\"}]",\
+"[{\"color\":\"gray\",\"italic\":false,\"text\":\" into a \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Stasis Field\"},{\"color\":\"gray\",\"italic\":false,\"text\":\":\"}]",\
 "{\"color\":\"gold\",\"italic\":false,\"text\":\"+ it reloads faster\"}",\
 "{\"color\":\"gold\",\"italic\":false,\"text\":\"+ it fires more arrows\"}"\
 ],\
@@ -109,7 +109,7 @@ minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"This crossbow automatically\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" reloads itself.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"While you are near and aiming\"}",\
-"[{\"color\":\"gray\",\"italic\":false,\"text\":\"into a \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Stasis Field\"},{\"color\":\"gray\",\"italic\":false,\"text\":\":\"}]",\
+"[{\"color\":\"gray\",\"italic\":false,\"text\":\" into a \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Stasis Field\"},{\"color\":\"gray\",\"italic\":false,\"text\":\":\"}]",\
 "{\"color\":\"gold\",\"italic\":false,\"text\":\"+ it reloads faster\"}",\
 "{\"color\":\"gold\",\"italic\":false,\"text\":\"+ it fires more arrows\"}"\
 ],\
@@ -124,7 +124,7 @@ minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"This crossbow automatically\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" reloads itself.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"While you are near and aiming\"}",\
-"[{\"color\":\"gray\",\"italic\":false,\"text\":\"into a \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Stasis Field\"},{\"color\":\"gray\",\"italic\":false,\"text\":\":\"}]",\
+"[{\"color\":\"gray\",\"italic\":false,\"text\":\" into a \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Stasis Field\"},{\"color\":\"gray\",\"italic\":false,\"text\":\":\"}]",\
 "{\"color\":\"gold\",\"italic\":false,\"text\":\"+ it reloads faster\"}",\
 "{\"color\":\"gold\",\"italic\":false,\"text\":\"+ it fires more arrows\"}"\
 ],\

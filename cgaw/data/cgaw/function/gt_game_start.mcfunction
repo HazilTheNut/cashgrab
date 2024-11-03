@@ -21,3 +21,10 @@ function cgaw:gt_set_daytime with storage cgaw:runtime active_map
 
 # Set match timer
 execute if score DEVELOPER_MODE num matches 0 run scoreboard players operation CGAW_MATCH_TIME_TICKS num = CGAW_CFG_MATCH_TIME_TICKS num
+
+# Reset configuration triggers
+scoreboard players reset @a cgaw_selected_map_id_input
+scoreboard players reset @a cgaw_change_coin_goal_input
+scoreboard players reset @a cgaw_reset_coin_goal_input
+scoreboard players reset @a cgaw_change_match_time_input
+scoreboard players reset @a cgaw_reset_match_time_input
