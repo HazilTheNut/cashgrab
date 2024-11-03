@@ -34,7 +34,7 @@ scoreboard players set CGAW_SPAWN_PLATE_CD_TICKS num 100
 
 # Define lobby location
 
-data modify storage cgaw:world_info lobby_data set value {loc_lobby:"18 -18 43",yaw_lobby:"0"}
+data modify storage cgaw:world_info lobby_data set value {loc_lobby:"18 -18 43",yaw_lobby:"0",daytime:6000}
 
 # Create map data structure
 
@@ -42,6 +42,7 @@ data modify storage cgaw:world_info map_data set value {\
 fissure:{\
 size:1,\
 map_name:"Fissure",\
+daytime:6000,\
 loc_cts:"1131 95 -2998",\
 yaw_cts:"-90",\
 loc_spawn_a:"1198 106 -3028",\
@@ -56,6 +57,7 @@ rot_spawn_d:"0 0",\
 crystal:{\
 size:1,\
 map_name:"Crystal",\
+daytime:6000,\
 loc_cts:"1047 93 -1998",\
 yaw_cts:"-90",\
 loc_spawn_a:"1114 128 -2002",\
@@ -70,6 +72,7 @@ rot_spawn_d:"90 0",\
 sunken:{\
 size:1,\
 map_name:"Sunken",\
+daytime:6000,\
 loc_cts:"1040 93 -1000",\
 yaw_cts:"-90",\
 loc_spawn_a:"1066 98 -988",\
@@ -84,6 +87,7 @@ rot_spawn_d:"180 0",\
 scald:{\
 size:2,\
 map_name:"Scald",\
+daytime:11500,\
 loc_cts:"1035 96 0",\
 yaw_cts:"-90",\
 loc_spawn_a:"1091 100 2",\
@@ -98,6 +102,7 @@ rot_spawn_d:"90 0",\
 golden:{\
 size:2,\
 map_name:"Golden",\
+daytime:23800,\
 loc_cts:"1054 94 2000",\
 yaw_cts:"-90",\
 loc_spawn_a:"1102 107 1957",\
@@ -112,6 +117,7 @@ rot_spawn_d:"-180 -15",\
 deepgrove:{\
 size:3,\
 map_name:"Deepgrove",\
+daytime:6000,\
 loc_cts:"1027 95 1000",\
 yaw_cts:"-90",\
 loc_spawn_a:"1080 110 984",\
@@ -126,6 +132,7 @@ rot_spawn_d:"130 0",\
 skullway:{\
 size:3,\
 map_name:"Skullway",\
+daytime:6000,\
 loc_cts:"1031 95 3000",\
 yaw_cts:"-90",\
 loc_spawn_a:"1080 102 2960",\
