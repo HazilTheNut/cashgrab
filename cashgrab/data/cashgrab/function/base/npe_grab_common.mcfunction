@@ -35,6 +35,8 @@ execute if score @e[tag=t_grab_subject,limit=1] grab_state matches 1..2 store re
 execute if score @e[tag=t_grab_subject,limit=1] grab_state matches 1..2 run function cashgrab:util/find_eid_self with storage cashgrab:find_eid_args
 execute if score @e[tag=t_grab_subject,limit=1] grab_state matches 1..2 unless entity @e[tag=t_eid_matches] run scoreboard players set @e[tag=t_grab_subject,limit=1] eid_grabbed_by 0
 execute if score @e[tag=t_grab_subject,limit=1] grab_state matches 1..2 unless entity @e[tag=t_eid_matches] run scoreboard players set @e[tag=t_grab_subject,limit=1] grab_state -1
+execute if score @e[tag=t_grab_subject,limit=1] grab_state matches 1..2 if entity @a[tag=t_eid_matches] run scoreboard players set @e[tag=t_grab_subject,limit=1] eid_grabbed_by 0
+execute if score @e[tag=t_grab_subject,limit=1] grab_state matches 1..2 if entity @a[tag=t_eid_matches] run scoreboard players set @e[tag=t_grab_subject,limit=1] grab_state -1
 execute if score @e[tag=t_grab_subject,limit=1] grab_state matches 1..2 at @n[tag=t_eid_matches] run tp @e[tag=t_grab_subject,limit=1] ~ ~-0.75 ~
 
 # Restore gravity for entities exiting a grab

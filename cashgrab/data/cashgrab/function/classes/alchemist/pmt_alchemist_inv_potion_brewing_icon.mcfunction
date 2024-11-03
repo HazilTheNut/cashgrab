@@ -42,7 +42,7 @@
 execute if score @a[tag=t_pm_owner,limit=1] cv_C matches ..0 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:cauldron[\
 minecraft:custom_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Crouch]\"},{\"color\":\"white\",\"text\":\" Brew Potions\"}]",\
 minecraft:lore=[\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"Brews potions while crouching\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\"Crafts items while crouching\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" in the following order with the\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" listed time required:\"}",\
 "[{\"color\":\"yellow\",\"italic\":false,\"text\":\"Caustic Fume\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" (2.5 sec)\"}]",\

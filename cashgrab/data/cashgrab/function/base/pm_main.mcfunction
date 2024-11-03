@@ -32,6 +32,17 @@ execute if entity @a[tag=t_pm_owner,limit=1,scores={pm_count=2..}] run function 
 execute if entity @a[tag=t_pm_owner,limit=1,scores={pm_count=2..}] run return 0
 
 # =============================
+# Class and trinket selection data redundancy error mitigation
+
+execute unless score @s __cts_selected_class_idx = @a[tag=t_pm_owner,limit=1] __cts_selected_class_idx run tellraw @a[tag=t_debug] [{"type":"text","text":"base/pm_main recovering class data; pm class = "},{"type":"score","score":{"name":"@s","objective":"__cts_selected_class_idx"}},{"type":"text","text":" player class = "},{"type":"score","score":{"name":"@a[tag=t_pm_owner,limit=1]","objective":"__cts_selected_class_idx"}}]
+execute unless score @s __cts_selected_class_idx = @a[tag=t_pm_owner,limit=1] __cts_selected_class_idx store result storage cashgrab:pm_recovery_args class_id int 1 run scoreboard players get @a[tag=t_pm_owner,limit=1] __cts_selected_class_idx
+execute unless score @s __cts_selected_class_idx = @a[tag=t_pm_owner,limit=1] __cts_selected_class_idx run function cashgrab:base/pm_recover_class with storage cashgrab:pm_recovery_args
+
+execute unless score @s __cts_selected_trinket_idx = @a[tag=t_pm_owner,limit=1] __cts_selected_trinket_idx run tellraw @a[tag=t_debug] [{"type":"text","text":"base/pm_main recovering trinket data; pm trinket = "},{"type":"score","score":{"name":"@s","objective":"__cts_selected_trinket_idx"}},{"type":"text","text":" player trinket = "},{"type":"score","score":{"name":"@a[tag=t_pm_owner,limit=1]","objective":"__cts_selected_trinket_idx"}}]
+execute unless score @s __cts_selected_trinket_idx = @a[tag=t_pm_owner,limit=1] __cts_selected_trinket_idx store result storage cashgrab:pm_recovery_args trinket_id int 1 run scoreboard players get @a[tag=t_pm_owner,limit=1] __cts_selected_trinket_idx
+execute unless score @s __cts_selected_trinket_idx = @a[tag=t_pm_owner,limit=1] __cts_selected_trinket_idx run function cashgrab:base/pm_recover_trinket with storage cashgrab:pm_recovery_args
+
+# =============================
 # Handle player deaths
 
 # === Detect if player has died
@@ -48,17 +59,6 @@ tag @a[tag=t_pm_owner,limit=1,scores={evl_death=1..}] add t_died
 execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches 0 run tag @a[tag=t_pm_owner,limit=1,tag=t_died,scores={stat_alive_ticks=1..}] add dtm_send_to_lobby
 execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches 1.. run tag @a[tag=t_pm_owner,limit=1,tag=t_died,scores={stat_alive_ticks=1..}] add dtm_send_to_cts
 tag @a[tag=t_pm_owner,limit=1,tag=t_died,scores={stat_alive_ticks=1..}] remove t_died
-
-# =============================
-# Class and trinket selection data redundancy error mitigation
-
-execute unless score @s __cts_selected_class_idx = @a[tag=t_pm_owner,limit=1] __cts_selected_class_idx run tellraw @a[tag=t_debug] [{"type":"text","text":"base/pm_main recovering class data; pm class = "},{"type":"score","score":{"name":"@s","objective":"__cts_selected_class_idx"}},{"type":"text","text":" player class = "},{"type":"score","score":{"name":"@a[tag=t_pm_owner,limit=1]","objective":"__cts_selected_class_idx"}}]
-execute unless score @s __cts_selected_class_idx = @a[tag=t_pm_owner,limit=1] __cts_selected_class_idx store result storage cashgrab:pm_recovery_args class_id int 1 run scoreboard players get @a[tag=t_pm_owner,limit=1] __cts_selected_class_idx
-execute unless score @s __cts_selected_class_idx = @a[tag=t_pm_owner,limit=1] __cts_selected_class_idx run function cashgrab:base/pm_recover_class with storage cashgrab:pm_recovery_args
-
-execute unless score @s __cts_selected_trinket_idx = @a[tag=t_pm_owner,limit=1] __cts_selected_trinket_idx run tellraw @a[tag=t_debug] [{"type":"text","text":"base/pm_main recovering trinket data; pm trinket = "},{"type":"score","score":{"name":"@s","objective":"__cts_selected_trinket_idx"}},{"type":"text","text":" player trinket = "},{"type":"score","score":{"name":"@a[tag=t_pm_owner,limit=1]","objective":"__cts_selected_trinket_idx"}}]
-execute unless score @s __cts_selected_trinket_idx = @a[tag=t_pm_owner,limit=1] __cts_selected_trinket_idx store result storage cashgrab:pm_recovery_args trinket_id int 1 run scoreboard players get @a[tag=t_pm_owner,limit=1] __cts_selected_trinket_idx
-execute unless score @s __cts_selected_trinket_idx = @a[tag=t_pm_owner,limit=1] __cts_selected_trinket_idx run function cashgrab:base/pm_recover_trinket with storage cashgrab:pm_recovery_args
 
 # =============================
 # Prior-tick functions
