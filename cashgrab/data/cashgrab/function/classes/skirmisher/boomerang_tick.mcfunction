@@ -54,14 +54,14 @@ execute if entity @s[tag=t_boomerang_begin_return] run data merge entity @s \
 {data:{f_speed_mpt:0.75f,func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_owner",f_tracking_scalar:1.0f,func_npe_tracking_filter:"cashgrab:util/npe_col_entity_filter_owner"}}
 execute if entity @s[tag=t_boomerang_begin_return] facing entity @a[tag=t_eid_matches,limit=1] eyes run function cashgrab:util/npe_calc_facing_vector {magnitude:1.0f}
 # Direction towards owner now stored on facing_vector_yaw_mdeg and facing_vector_pitch_mdeg
-execute if entity @s[tag=t_boomerang_begin_return] run scoreboard players operation @s mis_func_step_dyaw_mdeg = @s facing_vector_yaw_mdeg
-execute if entity @s[tag=t_boomerang_begin_return] run scoreboard players operation @s mis_func_step_dpitch_mdeg = @s facing_vector_pitch_mdeg
+execute if entity @s[tag=t_boomerang_begin_return] run scoreboard players operation @s mis_func_tick_dyaw_mdeg = @s facing_vector_yaw_mdeg
+execute if entity @s[tag=t_boomerang_begin_return] run scoreboard players operation @s mis_func_tick_dpitch_mdeg = @s facing_vector_pitch_mdeg
 # Store my own rotation onto facing_vector_yaw_mdeg and facing_vector_pitch_mdeg
 execute if entity @s[tag=t_boomerang_begin_return] store result score @s facing_vector_yaw_mdeg run data get entity @s Rotation[0] 1000
 execute if entity @s[tag=t_boomerang_begin_return] store result score @s facing_vector_pitch_mdeg run data get entity @s Rotation[1] 1000
 # Correction angle to point towards owner = direction towards owner - my orientation
-execute if entity @s[tag=t_boomerang_begin_return] run scoreboard players operation @s mis_func_step_dyaw_mdeg -= @s facing_vector_yaw_mdeg
-execute if entity @s[tag=t_boomerang_begin_return] run scoreboard players operation @s mis_func_step_dpitch_mdeg -= @s facing_vector_pitch_mdeg
+execute if entity @s[tag=t_boomerang_begin_return] run scoreboard players operation @s mis_func_tick_dyaw_mdeg -= @s facing_vector_yaw_mdeg
+execute if entity @s[tag=t_boomerang_begin_return] run scoreboard players operation @s mis_func_tick_dpitch_mdeg -= @s facing_vector_pitch_mdeg
 
 # On starting return, enable tracking and recalculate
 tag @s[tag=t_boomerang_begin_return] add t_missile_has_tracking

@@ -13,4 +13,4 @@
 #	-	Prevents player activity_state values from being written to by the datapack
 #	-	Tags used to teleport players to lobby/respawn room are not issued
 #	-	Scoreboard display is not updated
-scoreboard players set DEVELOPER_MODE num 0
+scoreboard players set DEVELOPER_MODE num 1

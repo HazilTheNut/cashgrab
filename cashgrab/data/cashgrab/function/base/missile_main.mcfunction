@@ -24,8 +24,8 @@ $execute if entity @s[tag=t_cleanup] run function $(func_npe_end) {end_reason:0}
 execute if entity @s[tag=t_cleanup] run kill @s
 execute if entity @s[tag=t_cleanup] run return 0
 
-scoreboard players set @s mis_func_step_dyaw_mdeg 0
-scoreboard players set @s mis_func_step_dpitch_mdeg 0
+scoreboard players set @s mis_func_tick_dyaw_mdeg 0
+scoreboard players set @s mis_func_tick_dpitch_mdeg 0
 
 $execute if entity @s[scores={mis_lifetime_ticks=1..}] run function $(func_npe_tick)
 

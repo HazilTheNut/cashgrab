@@ -302,8 +302,8 @@ scoreboard objectives add mis_gravity_const_mmpt2 dummy
 scoreboard objectives add mis_gravity_vel_y_mmpt dummy
 
 # Pitch and yaw adjustments modified by missile's func_npe_tick, in millidegrees
-scoreboard objectives add mis_func_step_dyaw_mdeg dummy
-scoreboard objectives add mis_func_step_dpitch_mdeg dummy
+scoreboard objectives add mis_func_tick_dyaw_mdeg dummy
+scoreboard objectives add mis_func_tick_dpitch_mdeg dummy
 
 # Pitch and yaw of direction heading towards potential tracking target, in millidegrees
 scoreboard objectives add mis_tracking_dyaw_mdeg dummy

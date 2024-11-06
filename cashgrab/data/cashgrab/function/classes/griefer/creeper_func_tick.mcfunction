@@ -64,7 +64,7 @@ tag @e[tag=t_collision_candidate,distance=..4.5] add t_dmg_trgt
 tellraw @a[tag=t_debug] [{"type":"text","text":"classes/griefer/creeper_func_tick: aoe      eid_owner: "},{"type":"score","score":{"objective":"eid_owner","name":"@s"}},{"type":"text","text":" owner: "},{"type":"selector","selector":"@a[tag=t_creeper_owner]"},{"type":"text","text":" trgt: "},{"type":"selector","selector":"@a[tag=t_dmg_trgt]"}]
 
 function cashgrab:util/npe_dmg {\
-d_dmg_amount:8.0,\
+d_dmg_amount:10.0,\
 s_dmg_type:"minecraft:fireball",\
 t_dmg_target:"t_dmg_trgt",\
 t_dmg_by:"t_dmg_by",\

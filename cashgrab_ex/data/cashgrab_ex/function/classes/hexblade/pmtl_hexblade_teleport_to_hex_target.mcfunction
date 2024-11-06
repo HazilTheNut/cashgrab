@@ -1,4 +1,4 @@
-# classes/hexblade/pmtl_hexblade_create_remnant_at_hex_target.mcfunction
+# classes/hexblade/pmtl_hexblade_teleport_to_hex_target.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker

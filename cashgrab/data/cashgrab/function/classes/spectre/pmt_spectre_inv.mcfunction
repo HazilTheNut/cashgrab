@@ -39,7 +39,7 @@ item replace entity @a[tag=t_pm_owner,limit=1] armor.feet with minecraft:air
 item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=..0}] hotbar.0 with minecraft:diamond_sword[minecraft:unbreakable={show_in_tooltip:false},\
 minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Spectral Blade\"}",\
 minecraft:attribute_modifiers=[\
-{type:"attack_damage",slot:"mainhand",id:"cashgrab:spectral_blade_atkdmg",amount:7,operation:"add_value"},\
+{type:"attack_damage",slot:"mainhand",id:"cashgrab:spectral_blade_atkdmg",amount:6,operation:"add_value"},\
 {type:"attack_speed",slot:"mainhand",id:"cashgrab:spectral_blade_atkspd",amount:-2,operation:"add_value"}],\
 minecraft:enchantment_glint_override=true]
 

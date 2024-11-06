@@ -21,8 +21,10 @@
 #	cv_G	:	
 #	cv_H	:	
 
+tellraw @a[tag=debug] "classes/hexblade/pmtl_hexblade_create_remnant_at_hex_target"
+
 # Set timer
-execute at @e[tag=t_hex_target,limit=1] rotated as @e[tag=t_hex_target,limit=1] run function cashgrab:util/npe_create_timer {\
+execute at @a[tag=t_hex_target,limit=1] rotated as @a[tag=t_hex_target,limit=1] run function cashgrab:util/npe_create_timer {\
 lifetime_ticks:100,\
 b_anchor_at_pos:1,\
 t_timer_name:"t_hexblade_remnant_timer_init",\
@@ -35,7 +37,7 @@ b_assign_as_peer:1,\
 # Point Hexblade Hex target to timer
 scoreboard players operation @a[tag=t_pm_owner,limit=1] cv_A = @n[tag=t_hexblade_remnant_timer_init] eid_self
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 100
-tag @e[tag=t_hex_target] remove t_hex_target
+tag @a[tag=t_hex_target] remove t_hex_target
 tag @n[tag=t_hexblade_remnant_timer_init] add t_hex_target
 tag @n[tag=t_hexblade_remnant_timer_init] add t_hexblade_remnant_timer
 tag @n[tag=t_hexblade_remnant_timer_init] add t_stasis_immune

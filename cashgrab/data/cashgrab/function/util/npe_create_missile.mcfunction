@@ -62,8 +62,8 @@ $scoreboard players set @e[tag=t_missile_init,limit=1,sort=nearest] mis_lifetime
 $scoreboard players set @e[tag=t_missile_init,limit=1,sort=nearest] mis_gravity_vel_y_mmpt $(i_gravity_vy_mmpt)
 $scoreboard players set @e[tag=t_missile_init,limit=1,sort=nearest] mis_gravity_const_mmpt2 $(i_gravity_const_mmpt2)
 
-scoreboard players set @e[tag=t_missile_init,limit=1,sort=nearest] mis_func_step_dyaw_mdeg 0
-scoreboard players set @e[tag=t_missile_init,limit=1,sort=nearest] mis_func_step_dpitch_mdeg 0
+scoreboard players set @e[tag=t_missile_init,limit=1,sort=nearest] mis_func_tick_dyaw_mdeg 0
+scoreboard players set @e[tag=t_missile_init,limit=1,sort=nearest] mis_func_tick_dpitch_mdeg 0
 
 $tag @e[tag=t_missile_init,limit=1,sort=nearest] add $(t_missile_name)
 

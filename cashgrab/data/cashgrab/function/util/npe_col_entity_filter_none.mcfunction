@@ -8,3 +8,4 @@
 # Arguments: (none)
 
 tag @e[scores={eid_state=1..}] remove t_collision_candidate
+tag @a[scores={eid_state=1..}] remove t_collision_candidate

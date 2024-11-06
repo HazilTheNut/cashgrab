@@ -37,8 +37,8 @@ execute if score @a[tag=t_pm_owner,limit=1] evl_crossbows matches 1.. run scoreb
 
 # Test points ahead
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_F 0
-execute positioned ~ ~1.625 ~ positioned ^-0.6 ^ ^3.5 positioned ~-5 ~-5 ~-5 if entity @e[tag=t_stasis_field,dx=9,dy=9,dz=9] run scoreboard players add @a[tag=t_pm_owner,limit=1] cv_F 1
-execute positioned ~ ~1.625 ~ positioned ^0.6 ^ ^3.5 positioned ~-5 ~-5 ~-5 if entity @e[tag=t_stasis_field,dx=9,dy=9,dz=9] run scoreboard players add @a[tag=t_pm_owner,limit=1] cv_F 1
+execute positioned ~ ~1.625 ~ positioned ^-0.6 ^ ^2.0 positioned ~-5 ~-5 ~-5 if entity @e[tag=t_stasis_field,dx=9,dy=9,dz=9] run scoreboard players add @a[tag=t_pm_owner,limit=1] cv_F 1
+execute positioned ~ ~1.625 ~ positioned ^0.6 ^ ^2.0 positioned ~-5 ~-5 ~-5 if entity @e[tag=t_stasis_field,dx=9,dy=9,dz=9] run scoreboard players add @a[tag=t_pm_owner,limit=1] cv_F 1
 
 # If both test points are within a stasis field, 
 #	a player firing a crossbow into it will be caught by the stasis field.

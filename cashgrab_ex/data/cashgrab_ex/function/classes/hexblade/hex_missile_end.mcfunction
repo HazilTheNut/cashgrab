@@ -52,6 +52,9 @@ scoreboard players operation @a[tag=t_missile_owner,limit=1] cv_A = @n[tag=t_hex
 # Initiate Hex sequence timer
 scoreboard players set @a[tag=t_missile_owner,limit=1] cv_B 220
 
+# If owner was counting down Blight Step, reset count
+scoreboard players set @a[tag=t_missile_owner,limit=1,scores={cv_D=1..}] cv_D 30
+
 # Apply damage
 tag @s add t_dmg_by
 function cashgrab:util/npe_dmg {\

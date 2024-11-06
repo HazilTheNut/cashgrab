@@ -3,10 +3,9 @@
 # Context:
 #	as: a nonplayer entity
 #	at: the entity
-#	facing: as the entity
+#	facing as: the direction to calculate the facing vector
 #
 # Summary: Calculates the x, y, z, of its facing direction vector and stores it onto facing_vector_x_mm, facing_vector_y_mm, and facing_vector_z_mm respectively
-#			This "base velocity" has the effect of gravity added onto it to achieve the missile's velocity vector per tick
 #
 # Arguments:
 #	magnitude				: Magnitude of vector

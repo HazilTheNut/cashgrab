@@ -18,4 +18,4 @@
 #	cv_G	:	
 #	cv_H	:	
 
-particle minecraft:dust{color:[0.8f,0.2f,0.6f],scale:1.0} ~ ~1.5 ~ 0.1 0.1 0.1 0 3
+particle minecraft:dust{color:[0.8f,0.2f,0.6f],scale:1.0} ~ ~0.5 ~ 0.1 0.1 0.1 0 3
