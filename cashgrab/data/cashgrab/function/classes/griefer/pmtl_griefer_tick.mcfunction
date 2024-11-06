@@ -16,24 +16,24 @@
 #	cv_C	:	Creeper in a Bottle cooldown (in ms)
 #	cv_D	:	Creeper in a Bottle charge
 #	cv_E	:	
-#	cv_F	:	Player Y position, in mm
-#	cv_G	:	Crash Landing cutoff height, in mm
+#	cv_F	:	
+#	cv_G	:	
 #	cv_H	:	Creeper fuse timer
 
 # --- Crash Landing
 
 # When on the ground, calculate the Crash Landing cutoff height
-execute if score @a[tag=t_pm_owner,limit=1] ps_falling matches ..0 store result score @a[tag=t_pm_owner,limit=1] cv_G run data get entity @a[tag=t_pm_owner,limit=1] Pos[1] 1000
-execute if score @a[tag=t_pm_owner,limit=1] ps_falling matches ..0 run scoreboard players add @a[tag=t_pm_owner,limit=1] cv_G 2380
+execute if score @a[tag=t_pm_owner,limit=1,scores={cv_A=0}] ps_falling matches ..0 store result score @a[tag=t_pm_owner,limit=1] cv_G run data get entity @a[tag=t_pm_owner,limit=1] Pos[1] 1000
+execute if score @a[tag=t_pm_owner,limit=1,scores={cv_A=0}] ps_falling matches ..0 run scoreboard players add @a[tag=t_pm_owner,limit=1] cv_G 2380
 
 # Tick down Crash Landing timer
 scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={cv_B=0..}] cv_B 1
 
 # If during a Crash Landing, check if my Y position exceeded the cutoff
-execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1,cv_B=1..}] store result score @a[tag=t_pm_owner,limit=1] cv_F run data get entity @a[tag=t_pm_owner,limit=1] Pos[1] 1000
-execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1,cv_B=1..}] if score @a[tag=t_pm_owner,limit=1] cv_F < @a[tag=t_pm_owner,limit=1] cv_G run tellraw @a[tag=t_pm_owner,tag=t_debug] [{"text":"Lift frame "},{"score":{"name":"@a[tag=t_pm_owner]","objective":"cv_F"}},{"text":" vs "},{"score":{"name":"@a[tag=t_pm_owner]","objective":"cv_G"}}]
-execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1,cv_B=1..}] if score @a[tag=t_pm_owner,limit=1] cv_F >= @a[tag=t_pm_owner,limit=1] cv_G run tellraw @a[tag=t_pm_owner,tag=t_debug] [{"text":"Lift cutoff ","color":"red"},{"score":{"name":"@a[tag=t_pm_owner]","objective":"cv_F"}},{"text":" vs "},{"score":{"name":"@a[tag=t_pm_owner]","objective":"cv_G"}}]
-execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1,cv_B=1..}] if score @a[tag=t_pm_owner,limit=1] cv_F >= @a[tag=t_pm_owner,limit=1] cv_G run scoreboard players set @a[tag=t_pm_owner] cv_B 0
+#execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1,cv_B=1..}] store result score @a[tag=t_pm_owner,limit=1] cv_F run data get entity @a[tag=t_pm_owner,limit=1] Pos[1] 1000
+#execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1,cv_B=1..}] if score @a[tag=t_pm_owner,limit=1] cv_F < @a[tag=t_pm_owner,limit=1] cv_G run tellraw @a[tag=t_pm_owner,tag=t_debug] [{"text":"Lift frame "},{"score":{"name":"@a[tag=t_pm_owner]","objective":"cv_F"}},{"text":"mm vs "},{"score":{"name":"@a[tag=t_pm_owner]","objective":"cv_G"}},{"text":"mm Motion[1] = "},{"source":"entity","entity":"@a[tag=t_pm_owner]","nbt":"Motion[1]"}]
+#execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1,cv_B=1..}] if score @a[tag=t_pm_owner,limit=1] cv_F >= @a[tag=t_pm_owner,limit=1] cv_G run tellraw @a[tag=t_pm_owner,tag=t_debug] [{"text":"Lift cutoff ","color":"red"},{"score":{"name":"@a[tag=t_pm_owner]","objective":"cv_F"}},{"text":"mm vs "},{"score":{"name":"@a[tag=t_pm_owner]","objective":"cv_G"}},{"text":"mm Motion[1] = "},{"source":"entity","entity":"@a[tag=t_pm_owner]","nbt":"Motion[1]"}]
+#execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1,cv_B=1..}] if score @a[tag=t_pm_owner,limit=1] cv_F >= @a[tag=t_pm_owner,limit=1] cv_G run scoreboard players set @a[tag=t_pm_owner] cv_B 0
 
 # End levitation effect when timer is ending
 effect clear @a[tag=t_pm_owner,limit=1,scores={cv_B=0}] minecraft:levitation

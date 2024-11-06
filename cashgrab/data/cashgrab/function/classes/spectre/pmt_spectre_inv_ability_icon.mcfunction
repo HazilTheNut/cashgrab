@@ -10,7 +10,7 @@
 #	charges		: Number of charges of ability
 
 $item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:slime_ball[\
-minecraft:custom_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Blink\"}]",\
+minecraft:custom_name="[{\"color\":\"light_purple\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Blink\"}]",\
 minecraft:lore=[\
 "{\"color\":\"dark_gray\",\"italic\":true,\"text\":\"Toss any item to use.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Teleports forwards.\"}",\

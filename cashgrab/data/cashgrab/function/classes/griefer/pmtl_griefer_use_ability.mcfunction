@@ -16,13 +16,13 @@
 #	cv_C	:	Creeper in a Bottle cooldown (in ms)
 #	cv_D	:	Creeper in a Bottle charge
 #	cv_E	:	
-#	cv_F	:	Player Y position, in mm
-#	cv_G	:	Crash Landing cutoff height, in mm
+#	cv_F	:	
+#	cv_G	:	
 #	cv_H	:	Creeper fuse timer
 
 
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_A 1
-scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 7
+scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 5
 
 effect give @a[tag=t_pm_owner,limit=1] minecraft:levitation 1 35 true
 

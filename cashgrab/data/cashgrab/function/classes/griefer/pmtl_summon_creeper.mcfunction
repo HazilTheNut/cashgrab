@@ -13,11 +13,11 @@
 # Class variable usage:
 #	cv_A	:	Crash Landing state (0 = inactive, 1 = active)
 #	cv_B	:	Crash Landing levitation timer
-#	cv_C	:	Creeper in a Bottle cooldown
-#	cv_D	:	
+#	cv_C	:	Creeper in a Bottle cooldown (in ms)
+#	cv_D	:	Creeper in a Bottle charge
 #	cv_E	:	
-#	cv_F	:	Player Y position, in mm
-#	cv_G	:	Crash Landing cutoff height, in mm
+#	cv_F	:	
+#	cv_G	:	
 #	cv_H	:	Creeper fuse timer
 
 execute align y positioned ~ ~0.25 ~ run summon minecraft:creeper ~ ~ ~ {Tags:["t_griefer_creeper_init"],Fuse:6000,ignited:1b}

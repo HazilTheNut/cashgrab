@@ -14,8 +14,8 @@
 #	cv_C	:	Creeper in a Bottle cooldown (in ms)
 #	cv_D	:	Creeper in a Bottle charge
 #	cv_E	:	
-#	cv_F	:	Player Y position, in mm
-#	cv_G	:	Crash Landing cutoff height, in mm
+#	cv_F	:	
+#	cv_G	:	
 #	cv_H	:	Creeper fuse timer
 
 item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_D=..0}] hotbar.1 with minecraft:gray_stained_glass_pane[\

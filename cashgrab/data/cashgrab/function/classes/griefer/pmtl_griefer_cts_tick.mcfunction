@@ -16,8 +16,8 @@
 #	cv_C	:	Creeper in a Bottle cooldown (in ms)
 #	cv_D	:	Creeper in a Bottle charge
 #	cv_E	:	
-#	cv_F	:	Player Y position, in mm
-#	cv_G	:	Crash Landing cutoff height, in mm
+#	cv_F	:	
+#	cv_G	:	
 #	cv_H	:	Creeper fuse timer
 
 execute if score @a[tag=t_pm_owner,limit=1] evc_xpbottles matches 1.. run function cashgrab:util/pmt_inv_refresh

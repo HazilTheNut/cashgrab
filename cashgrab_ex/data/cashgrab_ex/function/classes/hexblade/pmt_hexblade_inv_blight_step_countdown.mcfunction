@@ -22,8 +22,9 @@
 #$tellraw @a[tag=t_debug] "classes/hexblade/pmt_hexblade_inv_blight_step_countdown: count = $(count)"
 
 $item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:glow_ink_sac[\
-minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Crouch]\"},{\"color\":\"white\",\"text\":\" Blight Step\"}]",\
+minecraft:item_name="[{\"color\":\"light_purple\",\"italic\":false,\"text\":\"[Crouch]\"},{\"color\":\"white\",\"text\":\" Blight Step\"}]",\
 minecraft:lore=[\
+"{\"color\":\"dark_gray\",\"italic\":true,\"text\":\"Crouch holding any item to use.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"After holding for 1.5 secs,\"}",\
 "[{\"color\":\"gray\",\"italic\":false,\"text\":\" you consume your \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Hex\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" to \"}]",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" teleport behind the target.\"}",\
