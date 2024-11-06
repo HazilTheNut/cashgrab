@@ -29,11 +29,13 @@ execute if score @s cv_D matches ..0 run return 0
 #		15	= trap trigger sfx and vfx
 #	20-60	= trap is armed
 #		21	= trap creates a puff of smoke
-#	61-120	= trap is arming
+#	61-160	= trap is arming
 
 # =================================
 #	61-120	= trap is arming
-execute if score @s tmr_lifetime_ticks matches 61..120 run particle minecraft:dust{color:[0.8f,0.2f,0.4f],scale:1.0} ~ ~ ~ 0 0 0 0 1
+execute if score @s tmr_lifetime_ticks matches 61..160 run particle minecraft:dust{color:[0.8f,0.2f,0.4f],scale:1.0} ~ ~ ~ 0 0 0 0 1
+execute if score @s tmr_lifetime_ticks matches 160 run playsound minecraft:entity.tnt.primed player @a ~ ~ ~ 0.5 2.0
+execute if score @s tmr_lifetime_ticks matches 140 run playsound minecraft:entity.tnt.primed player @a ~ ~ ~ 0.5 2.0
 execute if score @s tmr_lifetime_ticks matches 120 run playsound minecraft:entity.tnt.primed player @a ~ ~ ~ 0.5 2.0
 execute if score @s tmr_lifetime_ticks matches 100 run playsound minecraft:entity.tnt.primed player @a ~ ~ ~ 0.5 2.0
 execute if score @s tmr_lifetime_ticks matches 80 run playsound minecraft:entity.tnt.primed player @a ~ ~ ~ 0.5 2.0

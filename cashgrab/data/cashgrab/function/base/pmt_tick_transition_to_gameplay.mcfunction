@@ -25,6 +25,8 @@ tag @a[tag=t_pm_owner,limit=1] remove t_invisible
 execute if score DEVELOPER_MODE num matches 0 run gamemode adventure @a[tag=t_pm_owner,limit=1]
 
 # Spawn protection potion effects
+effect clear @a[tag=t_pm_owner,limit=1]
+effect give @a[tag=t_pm_owner,limit=1] minecraft:saturation 7 1 false
 effect give @a[tag=t_pm_owner,limit=1] minecraft:regeneration 5 20
 effect give @a[tag=t_pm_owner,limit=1] minecraft:resistance 5 20
 

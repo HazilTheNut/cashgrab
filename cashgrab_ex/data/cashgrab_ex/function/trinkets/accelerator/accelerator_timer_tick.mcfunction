@@ -9,4 +9,4 @@
 #
 # Arguments: (none)
 
-execute unless entity @e[tag=t_timer_owner,tag=t_invisible] run particle minecraft:dust{color:[0.5,1.0,0.3],scale:1.0} ~ ~1 ~ 0.15 0.35 0.15 0 3 force
+execute unless entity @e[tag=t_timer_owner,tag=t_invisible] run particle minecraft:dust{color:[0.5,1.0,0.3],scale:1.0} ~ ~1 ~ 0.15 0.35 0.15 0 2 force

@@ -31,7 +31,7 @@ minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"When used with Sword Boomerang:\"}",\
 "{\"color\":\"gold\",\"italic\":false,\"text\":\"+ Deals increased damage\"}"],\
 minecraft:attribute_modifiers=[\
-{type:"attack_damage",slot:"mainhand",id:"cashgrab:cleaving_cutlass_atkdmg",amount:6,operation:"add_value"},\
+{type:"attack_damage",slot:"mainhand",id:"cashgrab:cleaving_cutlass_atkdmg",amount:7,operation:"add_value"},\
 {type:"attack_speed",slot:"mainhand",id:"cashgrab:cleaving_cutlass_atkspd",amount:-2,operation:"add_value"}\
 ]\
 ]
@@ -47,7 +47,7 @@ minecraft:lore=[\
 "{\"color\":\"gold\",\"italic\":false,\"text\":\"+ Travels farther and faster\"}",\
 "{\"color\":\"gold\",\"italic\":false,\"text\":\"+ Returns sooner\"}"],\
 minecraft:attribute_modifiers=[\
-{type:"attack_damage",slot:"mainhand",id:"cashgrab:dancing_rapier_atkdmg",amount:4,operation:"add_value"},\
+{type:"attack_damage",slot:"mainhand",id:"cashgrab:dancing_rapier_atkdmg",amount:5,operation:"add_value"},\
 {type:"attack_speed",slot:"mainhand",id:"cashgrab:dancing_rapier_atkspd",amount:-2,operation:"add_value"},\
 {type:"movement_speed",slot:"mainhand",id:"cashgrab:dancing_rapier_atkspd",amount:0.15,operation:"add_multiplied_base"}\
 ],\

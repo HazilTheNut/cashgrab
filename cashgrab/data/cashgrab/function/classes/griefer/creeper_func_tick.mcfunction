@@ -45,9 +45,9 @@ execute if score @s cv_H matches 1.. run return 0
 # -- Explode
 
 # vfx / sfx
-particle minecraft:explosion ~ ~0.65 ~ 2.5 0.2 2.5 0 20 force
-particle minecraft:lava ~ ~0.65 ~ 2.5 0.2 2.5 0 15 force
-particle minecraft:flame ~ ~0.65 ~ 2.5 0.2 2.5 0 15 force
+particle minecraft:explosion ~ ~0.65 ~ 2.75 0.2 2.75 0 20 force
+particle minecraft:lava ~ ~0.65 ~ 2.75 0.2 2.75 0 15
+particle minecraft:flame ~ ~0.65 ~ 2.75 0.2 2.75 0 15 force
 playsound minecraft:entity.generic.explode player @a ~ ~ ~ 3.0 0.75
 
 # Tag owner with t_eid_matches
@@ -59,7 +59,7 @@ tag @a[tag=t_eid_matches] add t_creeper_owner
 tag @a[tag=t_creeper_owner] add t_dmg_from
 tag @s add t_dmg_by
 function cashgrab:util/npe_col_entity_filter_hostile
-tag @e[tag=t_collision_candidate,distance=..4.5] add t_dmg_trgt
+tag @e[tag=t_collision_candidate,distance=..5.5] add t_dmg_trgt
 
 tellraw @a[tag=t_debug] [{"type":"text","text":"classes/griefer/creeper_func_tick: aoe      eid_owner: "},{"type":"score","score":{"objective":"eid_owner","name":"@s"}},{"type":"text","text":" owner: "},{"type":"selector","selector":"@a[tag=t_creeper_owner]"},{"type":"text","text":" trgt: "},{"type":"selector","selector":"@a[tag=t_dmg_trgt]"}]
 
@@ -73,7 +73,7 @@ b_remove_tags:1\
 }
 
 # Damage owner
-tag @a[tag=t_creeper_owner,distance=..4.5] add t_dmg_trgt
+tag @a[tag=t_creeper_owner,distance=..4] add t_dmg_trgt
 tag @s add t_dmg_by
 tag @s add t_dmg_from
 

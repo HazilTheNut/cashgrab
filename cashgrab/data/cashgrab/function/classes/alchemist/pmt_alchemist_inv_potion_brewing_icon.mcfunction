@@ -18,25 +18,25 @@
 #	cv_G	:	
 #	cv_H	:	
 
-# Each potion takes 3 seconds to brew which defines these ranges for cv_C:
+# Each potion takes various amounts of time to brew which defines these ranges for cv_C:
 #	0		= idle
-#	1-50	= brewing Caustic Brew
+#	1-40	= brewing Caustic Brew
 #		1	= (step 1 icon)
-#		16	= (step 2 icon)
-#		32	= (step 3 icon)
-#		50	= award potion
-#	51-100	= brewing Booster Brew
-#		51	= (step 1 icon)
-#		66	= (step 2 icon)
-#		82	= (step 3 icon)
-#		100	= award potion
-#	101-200	= crafting Trinket
+#		14	= (step 2 icon)
+#		27	= (step 3 icon)
+#		40	= award potion
+#	101-140	= brewing Booster Brew
 #		101	= (step 1 icon)
-#		121	= (step 2 icon)
-#		141	= (step 3 icon)
-#		161	= (step 4 icon)
-#		181	= (step 5 icon)
-#		200	= award potion
+#		114	= (step 2 icon)
+#		127	= (step 3 icon)
+#		140	= award potion
+#	201-280	= crafting Trinket
+#		201	= (step 1 icon)
+#		216	= (step 2 icon)
+#		232	= (step 3 icon)
+#		248	= (step 4 icon)
+#		264	= (step 5 icon)
+#		280	= award potion
 
 #	0		= idle
 execute if score @a[tag=t_pm_owner,limit=1] cv_C matches ..0 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:cauldron[\
@@ -45,65 +45,65 @@ minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Crafts items while crouching\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" in the following order with the\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" listed time required:\"}",\
-"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"Caustic Fume\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" (2.5 sec)\"}]",\
-"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"Booster Brew\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" (2.5 sec)\"}]",\
-"[{\"color\":\"green\",\"italic\":false,\"text\":\"Your Trinket\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" (5 sec)\"}]"\
+"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"Caustic Fume\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" (2 secs)\"}]",\
+"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"Booster Brew\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" (2 secs)\"}]",\
+"[{\"color\":\"green\",\"italic\":false,\"text\":\"Your Trinket\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" (4 secs)\"}]"\
 ]] 1
 
-#	1-50	= brewing Caustic Brew
+#	1-40	= brewing Caustic Brew
 #		1	= (step 1 icon)
-execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 1..15 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:poisonous_potato[\
+execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 1..13 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:poisonous_potato[\
 minecraft:custom_name="{\"color\":\"green\",\"italic\":false,\"text\":\"Brewing Caustic Brew...\"}",\
 ] 1
 
-#		16	= (step 2 icon)
-execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 16..31 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:turtle_scute[\
+#		14	= (step 2 icon)
+execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 14..26 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:turtle_scute[\
 minecraft:custom_name="{\"color\":\"green\",\"italic\":false,\"text\":\"Brewing Caustic Brew...\"}",\
 ] 2
 
-#		32	= (step 3 icon)
-execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 32..49 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:lime_dye[\
+#		27	= (step 3 icon)
+execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 27..39 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:lime_dye[\
 minecraft:custom_name="{\"color\":\"green\",\"italic\":false,\"text\":\"Brewing Caustic Brew...\"}",\
 ] 3
 
-#	51-100	= brewing Booster Brew
-#		51	= (step 1 icon)
-execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 51..65 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:honeycomb[\
-minecraft:custom_name="{\"color\":\"green\",\"italic\":false,\"text\":\"Brewing Booster Brew...\"}",\
-] 1
-
-#		66	= (step 2 icon)
-execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 66..81 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:orange_dye[\
-minecraft:custom_name="{\"color\":\"green\",\"italic\":false,\"text\":\"Brewing Booster Brew...\"}",\
-] 2
-
-#		82	= (step 3 icon)
-execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 82..99 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:glowstone_dust[\
-minecraft:custom_name="{\"color\":\"green\",\"italic\":false,\"text\":\"Brewing Booster Brew...\"}",\
-] 3
-
-#	101-200	= brewing Booster Brew
+#	101-140	= brewing Booster Brew
 #		101	= (step 1 icon)
-execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 101..120 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:quartz[\
+execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 101..113 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:honeycomb[\
+minecraft:custom_name="{\"color\":\"green\",\"italic\":false,\"text\":\"Brewing Booster Brew...\"}",\
+] 1
+
+#		114	= (step 2 icon)
+execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 114..126 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:orange_dye[\
+minecraft:custom_name="{\"color\":\"green\",\"italic\":false,\"text\":\"Brewing Booster Brew...\"}",\
+] 2
+
+#		127	= (step 3 icon)
+execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 127..139 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:glowstone_dust[\
+minecraft:custom_name="{\"color\":\"green\",\"italic\":false,\"text\":\"Brewing Booster Brew...\"}",\
+] 3
+
+#	201-280	= crafting Trinket
+#		201	= (step 1 icon)
+execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 201..215 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:quartz[\
 minecraft:custom_name="{\"color\":\"green\",\"italic\":false,\"text\":\"Crafting Trinket...\"}",\
 ] 1
 
-#		121	= (step 2 icon)
-execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 121..140 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:phantom_membrane[\
+#		216	= (step 2 icon)
+execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 216..231 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:phantom_membrane[\
 minecraft:custom_name="{\"color\":\"green\",\"italic\":false,\"text\":\"Crafting Trinket...\"}",\
 ] 2
 
-#		141	= (step 3 icon)
-execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 141..160 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:white_dye[\
+#		232	= (step 3 icon)
+execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 232..247 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:white_dye[\
 minecraft:custom_name="{\"color\":\"green\",\"italic\":false,\"text\":\"Crafting Trinket...\"}",\
 ] 3
 
-#		161	= (step 4 icon)
-execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 161..180 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:bone_meal[\
+#		248	= (step 4 icon)
+execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 248..263 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:bone_meal[\
 minecraft:custom_name="{\"color\":\"green\",\"italic\":false,\"text\":\"Crafting Trinket...\"}",\
 ] 4
 
-#		181	= (step 5 icon)
-execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 181..200 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:sugar[\
+#		264	= (step 5 icon)
+execute if score @a[tag=t_pm_owner,limit=1] cv_C matches 264..279 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:sugar[\
 minecraft:custom_name="{\"color\":\"green\",\"italic\":false,\"text\":\"Crafting Trinket...\"}",\
 ] 5

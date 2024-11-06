@@ -14,6 +14,6 @@
 execute if score NUM_GAMESTATE num matches 1.. if block ~ ~ ~ minecraft:light_weighted_pressure_plate align xyz run function cashgrab:base/pmtl_consume_coinplate_argloader
 
 # When a player picks up a coin, award some health and refresh coin display
-execute if entity @a[tag=t_pm_owner,scores={evl_coin_pickup=1..}] run function cashgrab:util/pmt_inv_coins_argloader
-effect give @a[tag=t_pm_owner,scores={evl_coin_pickup=1..},nbt=!{active_effects:[{id:"minecraft:regeneration"}]}] minecraft:regeneration 7 1 false
-effect give @a[tag=t_pm_owner,scores={evl_coin_pickup=1..}] minecraft:saturation 7 1 false
+execute if entity @a[tag=t_pm_owner,limit=1,scores={evl_coin_pickup=1..}] run function cashgrab:util/pmt_inv_coins_argloader
+effect give @a[tag=t_pm_owner,limit=1,scores={evl_coin_pickup=1..},nbt=!{active_effects:[{id:"minecraft:regeneration"}]}] minecraft:regeneration 7 1 false
+effect give @a[tag=t_pm_owner,limit=1,scores={evl_coin_pickup=1..}] minecraft:saturation 7 1 false

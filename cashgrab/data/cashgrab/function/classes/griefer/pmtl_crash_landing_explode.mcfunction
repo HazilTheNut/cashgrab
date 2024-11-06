@@ -22,16 +22,16 @@
 
 # vfx / sfx
 
-particle minecraft:explosion ~ ~0.65 ~ 2.5 0.2 2.5 0 20 force
-particle minecraft:lava ~ ~0.65 ~ 2.5 0.2 2.5 0 15 force
-particle minecraft:flame ~ ~0.65 ~ 2.5 0.2 2.5 0 15 force
+particle minecraft:explosion ~ ~0.65 ~ 2.75 0.2 2.75 0 20 force
+particle minecraft:lava ~ ~0.65 ~ 2.75 0.2 2.75 0 15
+particle minecraft:flame ~ ~0.65 ~ 2.75 0.2 2.75 0 15 force
 playsound minecraft:entity.generic.explode player @a ~ ~ ~ 3.0 0.75
 
 # Apply damage
 tag @a[tag=t_pm_owner] add t_dmg_by
 tag @a[tag=t_pm_owner] add t_dmg_from
 function cashgrab:util/npe_col_entity_filter_hostile
-tag @e[tag=t_collision_candidate,distance=..4.5] add t_dmg_trgt
+tag @e[tag=t_collision_candidate,distance=..5.5] add t_dmg_trgt
 function cashgrab:util/npe_dmg {\
 d_dmg_amount:6.0,\
 s_dmg_type:"minecraft:fireball",\

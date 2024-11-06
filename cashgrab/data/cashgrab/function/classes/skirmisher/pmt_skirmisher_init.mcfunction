@@ -18,7 +18,7 @@
 #	cv_G	:	Boomerang item display rotation
 #	cv_H	:	Boomerang life timer (counts upwards instead of downwards for more readable code)
 
-scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 15000
+scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 13000
 scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_charges_max 1
 scoreboard players set @a[tag=t_pm_owner,limit=1] ability_charges 1
 

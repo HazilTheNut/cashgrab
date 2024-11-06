@@ -15,6 +15,18 @@
 # If max trinket count is 0, act as the trinket is disabled
 execute if score @a[tag=t_pm_owner,limit=1] trinket_charges_max matches ..0 run return 0
 
+# If trinket has being replenished, reset charge count to max
+execute if entity @a[tag=t_pm_owner,limit=1,tag=t_trinket_replenish] run scoreboard players operation @a[tag=t_pm_owner,limit=1] trinket_charges += @a[tag=t_pm_owner,limit=1] trinket_charges_max
+execute if entity @a[tag=t_pm_owner,limit=1,tag=t_trinket_replenish] run scoreboard players operation @a[tag=t_pm_owner,limit=1] __trinket_charges_prev += @a[tag=t_pm_owner,limit=1] trinket_charges_max
+execute if entity @a[tag=t_pm_owner,limit=1,tag=t_trinket_replenish] run function cashgrab:util/pmt_inv_trinket_argloader
+tag @a[tag=t_pm_owner,limit=1,tag=t_trinket_replenish] remove t_trinket_replenish
+
+# If trinket has being revoked, set charge count to 0
+execute if entity @a[tag=t_pm_owner,limit=1,tag=t_trinket_revoke] run scoreboard players set @a[tag=t_pm_owner,limit=1] trinket_charges 0
+execute if entity @a[tag=t_pm_owner,limit=1,tag=t_trinket_revoke] run scoreboard players set @a[tag=t_pm_owner,limit=1] __trinket_charges_prev 0
+execute if entity @a[tag=t_pm_owner,limit=1,tag=t_trinket_revoke] run function cashgrab:util/pmt_inv_trinket_argloader
+tag @a[tag=t_pm_owner,limit=1,tag=t_trinket_revoke] remove t_trinket_revoke
+
 # Track whether trinket is in offhand
 scoreboard players set @a[tag=t_pm_owner,limit=1] trinket_in_offhand 0
 execute if items entity @a[tag=t_pm_owner,limit=1] weapon.offhand *[custom_data={is_trinket:1}] run scoreboard players set @a[tag=t_pm_owner,limit=1] trinket_in_offhand 1

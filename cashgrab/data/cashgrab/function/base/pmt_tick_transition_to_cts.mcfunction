@@ -18,6 +18,9 @@ function cashgrab:classes/pmt_class_init with entity @s data.class_info
 # Set player gamemode
 execute if score DEVELOPER_MODE num matches 0 run gamemode adventure @a[tag=t_pm_owner,limit=1]
 
+# Grant saturation
+effect give @a[tag=t_pm_owner,limit=1] minecraft:saturation 7 1 false
+
 # Move player team
 team join team_ffa_cts @a[tag=t_pm_owner,limit=1]
 
