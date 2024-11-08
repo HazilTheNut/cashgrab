@@ -353,6 +353,10 @@ scoreboard objectives add __coinshower_timer_ticks dummy
 scoreboard objectives add __coinshower_period_ticks dummy
 
 # =============================
+# Values used for coin spilling
+scoreboard objectives add __coinspilling_timer_ticks dummy
+
+# =============================
 # Values used for grab mechanics
 
 # EID of entity grabbing this entity

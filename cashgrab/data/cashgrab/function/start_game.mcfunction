@@ -16,6 +16,10 @@ execute if score DEVELOPER_MODE num matches 0 run tag @a add dtm_send_to_cts
 # Redraw coin sidebar display
 function cashgrab:base/gt_display_coin_score
 
+# Calculate coin spilling threshold
+execute store result storage cashgrab:coin_spill_threshold value int 0.9 run scoreboard players get GOAL coins
+execute store result score NUM_COIN_SPILLING_THRESHOLD num run data get storage cashgrab:coin_spill_threshold value 1
+
 # Allow plugins to run code when game ends
 function #cashgrab:gt_game_start
 

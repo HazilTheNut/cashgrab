@@ -14,3 +14,10 @@
 #	-	Tags used to teleport players to lobby/respawn room are not issued
 #	-	Scoreboard display is not updated
 scoreboard players set DEVELOPER_MODE num 1
+
+# Enables coin spilling mechanics.
+#	While enabled, players at or above 90% of the goal number of coins
+#	will continually drop coins.
+#	This is intended to push players near the goal number to fight
+#	other players to finish the game.
+scoreboard players set ENABLE_COIN_SPILLING num 1
