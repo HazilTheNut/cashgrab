@@ -23,10 +23,10 @@
 execute if score @s stasis_state matches 1..2 run return 0
 
 scoreboard players add @s cv_H 1
-tag @s[scores={cv_E=1,cv_H=70}] add t_boomerang_returning
-tag @s[scores={cv_E=1,cv_H=70}] add t_boomerang_begin_return
-tag @s[scores={cv_E=2,cv_H=40}] add t_boomerang_returning
-tag @s[scores={cv_E=2,cv_H=40}] add t_boomerang_begin_return
+tag @s[scores={cv_E=1,cv_H=50}] add t_boomerang_returning
+tag @s[scores={cv_E=1,cv_H=50}] add t_boomerang_begin_return
+tag @s[scores={cv_E=2,cv_H=35}] add t_boomerang_returning
+tag @s[scores={cv_E=2,cv_H=35}] add t_boomerang_begin_return
 
 # Find owner and tag them with t_boomerang_owner
 execute store result storage cashgrab:find_eid_args eid int 1 run scoreboard players get @s eid_owner
@@ -46,8 +46,8 @@ execute if entity @s[scores={cv_F=2},tag=t_boomerang_returning] run playsound mi
 #tellraw @a[tag=t_debug] [{"text":"classes/skirmisher/boomerang_tick tags = "},{"type":"nbt","entity":"@s","nbt":"Tags"}]
 
 # Slowing down of boomerang
-execute if entity @s[scores={cv_H=12..},tag=!t_boomerang_returning] store result entity @s data.f_speed_mpt float 0.0008 run data get entity @s data.f_speed_mpt 1000
-execute if entity @s[scores={cv_H=12..},tag=!t_boomerang_returning] run tag @s add t_missile_calc_base_vel
+execute if entity @s[scores={cv_H=10..},tag=!t_boomerang_returning] store result entity @s data.f_speed_mpt float 0.0008 run data get entity @s data.f_speed_mpt 1000
+execute if entity @s[scores={cv_H=10..},tag=!t_boomerang_returning] run tag @s add t_missile_calc_base_vel
 
 # Reorient boomerang and track onto owner
 execute if entity @s[tag=t_boomerang_begin_return] run data merge entity @s \
