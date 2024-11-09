@@ -7,7 +7,7 @@
 # Summary: Runs the timer
 #
 # Arguments:
-#	lifetime_ticks		: Duration of timer, in ticks
+#	i_lifetime_ticks	: Duration of timer, in ticks
 #	b_anchor_at_pos		: If nonzero, causes the timer to run func_npe_tick and func_npe_end at the location where the timer was created.
 #							Otherwise, func_npe_tick and func_npe_end are ran at the timer creator's location.
 #							If b_anchor_at_pos is 0, the owner of the timer will be tagged with t_timer_owner
@@ -27,7 +27,7 @@ execute as @e[type=minecraft:marker,limit=1,tag=t_timer_init] run function cashg
 scoreboard players operation @e[type=minecraft:marker,limit=1,tag=t_timer_init] team_id = @s team_id
 $execute if score NUM_ZERO num matches $(b_assign_as_peer) run scoreboard players operation @e[type=minecraft:marker,limit=1,tag=t_timer_init] eid_owner = @s eid_self
 $execute unless score NUM_ZERO num matches $(b_assign_as_peer) run scoreboard players operation @e[type=minecraft:marker,limit=1,tag=t_timer_init] eid_owner = @s eid_owner
-$scoreboard players set @e[type=minecraft:marker,limit=1,tag=t_timer_init] tmr_lifetime_ticks $(lifetime_ticks)
+$scoreboard players set @e[type=minecraft:marker,limit=1,tag=t_timer_init] tmr_lifetime_ticks $(i_lifetime_ticks)
 $scoreboard players set @e[type=minecraft:marker,limit=1,tag=t_timer_init] tmr_anchor_pos $(b_anchor_at_pos)
 
 $tag @e[type=minecraft:marker,limit=1,tag=t_timer_init] add $(t_timer_name)

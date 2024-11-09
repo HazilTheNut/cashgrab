@@ -19,7 +19,7 @@ execute at @a[tag=t_eid_matches,limit=1,scores={stat_hp=..6}] run playsound mine
 execute at @a[tag=t_eid_matches,limit=1,scores={stat_hp=7..12}] run playsound minecraft:item.axe.wax_off player @a ~ ~ ~ 1.0 1.3
 execute at @a[tag=t_eid_matches,limit=1,scores={stat_hp=13..}] run playsound minecraft:item.axe.wax_off player @a ~ ~ ~ 1.0 1.6
 execute at @a[tag=t_eid_matches,limit=1] run function cashgrab:util/npe_create_timer {\
-lifetime_ticks:80,\
+i_lifetime_ticks:80,\
 b_anchor_at_pos:0,\
 t_timer_name:"t_champion_absorption_timer_init",\
 func_npe_start:"cashgrab:util/noop",\

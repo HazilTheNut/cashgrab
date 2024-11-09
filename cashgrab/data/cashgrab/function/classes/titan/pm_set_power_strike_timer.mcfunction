@@ -16,7 +16,7 @@ execute unless entity @a[tag=t_eid_matches,limit=1,tag=t_titan_set_power_strike_
 # If owner has tag, set timer
 execute at @a[tag=t_eid_matches,limit=1] run particle minecraft:crit ~ ~0.4 ~ 1.25 1.0 1.25 0 50
 execute at @a[tag=t_eid_matches,limit=1] run function cashgrab:util/npe_create_timer {\
-lifetime_ticks:200,\
+i_lifetime_ticks:200,\
 b_anchor_at_pos:0,\
 t_timer_name:"t_titan_power_strike_knockback_tmr",\
 func_npe_start:"cashgrab:util/noop",\

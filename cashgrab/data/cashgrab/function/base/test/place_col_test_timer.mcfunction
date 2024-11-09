@@ -1,6 +1,6 @@
 
 $function cashgrab:util/npe_create_timer {\
-lifetime_ticks:300,\
+i_lifetime_ticks:300,\
 b_anchor_at_pos:1,\
 t_timer_name:"t_rc_test_timer",\
 func_npe_start:"cashgrab:util/noop",\

@@ -17,7 +17,7 @@ execute if entity @e[tag=t_accelerator_timer,scores={eid_compare=0}] run return 
 
 # Generate accelerator timer if none exist
 function cashgrab:util/npe_create_timer {\
-lifetime_ticks:400,\
+i_lifetime_ticks:400,\
 b_anchor_at_pos:0,\
 t_timer_name:"t_accelerator_timer",\
 func_npe_start:"cashgrab_ex:trinkets/accelerator/accelerator_timer_start",\

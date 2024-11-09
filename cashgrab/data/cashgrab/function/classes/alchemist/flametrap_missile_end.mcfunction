@@ -33,7 +33,7 @@ execute unless score @s temp_A matches 1..2 run return 0
 
 execute align xyz positioned ~0.5 ~0.5 ~0.5 run particle minecraft:smoke ~ ~ ~ 0.2 0.2 0.2 0 15
 execute align xyz positioned ~0.5 ~0.5 ~0.5 run function cashgrab:util/npe_create_timer {\
-lifetime_ticks:160,\
+i_lifetime_ticks:160,\
 b_anchor_at_pos:1,\
 t_timer_name:"t_alchemist_flametrap_timer_init",\
 func_npe_start:"cashgrab:util/noop",\

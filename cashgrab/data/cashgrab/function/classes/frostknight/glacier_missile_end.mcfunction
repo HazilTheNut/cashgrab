@@ -36,7 +36,7 @@ execute align xyz positioned ~0.5 ~0.5 ~0.5 if score @s cv_H matches 2 run fill 
 
 # Set glacier timer
 execute align xyz positioned ~0.5 ~0.5 ~0.5 run function cashgrab:util/npe_create_timer {\
-lifetime_ticks:162,\
+i_lifetime_ticks:162,\
 b_anchor_at_pos:1,\
 t_timer_name:"t_frostknight_glacier_timer_init",\
 func_npe_start:"cashgrab:util/noop",\

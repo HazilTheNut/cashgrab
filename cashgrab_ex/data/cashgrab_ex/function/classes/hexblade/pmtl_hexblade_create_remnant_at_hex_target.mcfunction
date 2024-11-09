@@ -25,7 +25,7 @@ tellraw @a[tag=debug] "classes/hexblade/pmtl_hexblade_create_remnant_at_hex_targ
 
 # Set timer
 execute at @a[tag=t_hex_target,limit=1] rotated as @a[tag=t_hex_target,limit=1] run function cashgrab:util/npe_create_timer {\
-lifetime_ticks:100,\
+i_lifetime_ticks:100,\
 b_anchor_at_pos:1,\
 t_timer_name:"t_hexblade_remnant_timer_init",\
 func_npe_start:"cashgrab:util/noop",\
