@@ -33,6 +33,7 @@ function cashgrab:base/gt_playerinit
 # Misc. functions ran prior to pms
 
 # Set up coin score display
+execute if score DEVELOPER_MODE num matches 0 if score NUM_PLAYERCOUNT_CHANGED num matches 1.. if score NUM_GAMESTATE num matches 0 run scoreboard objectives setdisplay sidebar __coins_score
 execute if score DEVELOPER_MODE num matches 0 if score NUM_PLAYERCOUNT_CHANGED num matches 1.. if score NUM_GAMESTATE num matches 1.. run function cashgrab:base/gt_display_coin_score
 
 # Show goal coin amount
