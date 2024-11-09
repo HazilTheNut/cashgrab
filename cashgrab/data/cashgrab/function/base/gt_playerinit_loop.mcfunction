@@ -9,6 +9,9 @@
 # Tag a player with t_player_initialize
 tag @r[scores={reinitialize=1..},limit=1] add t_player_initialize
 
+# Removes t_debug tag from initializing player when not in developer mode
+execute if score DEVELOPER_MODE num matches 0 run tag @a[tag=t_player_initialize,limit=1] remove t_debug
+
 # Invalidate eid_state as it is being overwritten
 scoreboard players set @a[tag=t_player_initialize] eid_state 0
 

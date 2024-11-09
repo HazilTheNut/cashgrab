@@ -2,10 +2,13 @@
 #
 # Arguments: (none)
 
-# Version number
-scoreboard players set CASHGRAB_VERSION_NUMBER num 0000001
+# Version number (major * 1000000 + minor * 1000 + patch)
+scoreboard players set CASHGRAB_VERSION_NUMBER num 0009000
 
 function cashgrab:runtime_config
+
+# Removes t_debug tag from all players when not in developer mode
+execute if score DEVELOPER_MODE num matches 0 run tag @a remove t_debug
 
 # gamerules
 gamerule mobGriefing false
@@ -225,8 +228,10 @@ scoreboard players set NUM_RAYCAST_STEPS_PER_M num 2
 scoreboard players add GOAL coins 0
 execute if score GOAL coins matches 0 run scoreboard players set GOAL coins 100
 
+scoreboard players set NUM_COIN_SPILLING_THRESHOLD num 100
+
 # See runtime_config for more info on DEVELOPER_MODE
-execute if score DEVELOPER_MODE num matches 0 run function cashgrab:base/gt_display_coin_score
+execute if score DEVELOPER_MODE num matches 0 run function cashgrab:util/gt_display_coin_score
 
 # When player dies, their coin count is divded by this number and the other portion is given to coin shower
 scoreboard players add NUM_COINSHOWER_EXCHANGE_DIVISOR num 0

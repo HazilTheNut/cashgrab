@@ -5,6 +5,7 @@
 
 # Selected map
 scoreboard players add CGAW_CFG_MAP_ID num 0
+execute if score CGAW_CFG_MAP_ID num matches 0 run scoreboard players set CGAW_CFG_MAP_ID num 101
 scoreboard objectives add cgaw_selected_map_id_input trigger
 
 # Coin goal config
@@ -146,3 +147,5 @@ rot_spawn_d:"-90 0",\
 },\
 }
 
+# Populate lobby configuration
+function cgaw:gt_populate_lobby

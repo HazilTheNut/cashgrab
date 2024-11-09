@@ -34,7 +34,6 @@ function cashgrab:base/gt_playerinit
 
 # Set up coin score display
 execute if score DEVELOPER_MODE num matches 0 if score NUM_PLAYERCOUNT_CHANGED num matches 1.. if score NUM_GAMESTATE num matches 1.. run function cashgrab:base/gt_display_coin_score
-execute if score DEVELOPER_MODE num matches 0 if score NUM_PLAYERCOUNT_CHANGED num matches 1.. if score NUM_GAMESTATE num matches 1.. run function cashgrab:base/gt_display_coin_score
 
 # Show goal coin amount
 scoreboard players operation GOAL __coins_score = GOAL coins
