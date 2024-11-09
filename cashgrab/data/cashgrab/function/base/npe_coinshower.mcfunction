@@ -12,8 +12,8 @@
 execute if entity @s[scores={__coinshower_timer_ticks=0,__coinshower_coins=1..}] run function cashgrab:base/npe_coinshower_dispense_coin
 
 # Destroy coin shower when it has no more coins to drop
-scoreboard players reset @s[scores={__coinshower_coins=..0}]
 kill @s[scores={__coinshower_coins=..0}]
+scoreboard players reset @s[scores={__coinshower_coins=..0}]
 
 # Decrement coin shower timers
 scoreboard players remove @s[scores={__coinshower_timer_ticks=1..}] __coinshower_timer_ticks 1

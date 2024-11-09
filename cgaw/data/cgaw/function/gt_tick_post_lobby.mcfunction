@@ -17,6 +17,7 @@ scoreboard players enable @a cgaw_reset_coin_goal_input
 # If a player triggers cgaw_change_coin_goal_input, modify coin goal
 execute if entity @a[scores={cgaw_change_coin_goal_input=1..}] run scoreboard players operation GOAL coins += @a[scores={cgaw_change_coin_goal_input=1..},limit=1] cgaw_change_coin_goal_input
 execute if entity @a[scores={cgaw_change_coin_goal_input=..-1}] run scoreboard players operation GOAL coins += @a[scores={cgaw_change_coin_goal_input=..-1},limit=1] cgaw_change_coin_goal_input
+execute if entity @a[scores={cgaw_change_coin_goal_input=1..}] if score GOAL coins matches 601.. run scoreboard players set GOAL coins 600
 execute if entity @a[scores={cgaw_change_coin_goal_input=..-1}] if score GOAL coins matches ..9 run scoreboard players set GOAL coins 10
 
 # If a player triggers cgaw_reset_coin_goal_input, set coin goal to default
