@@ -29,5 +29,8 @@ t_dmg_from:"$(t_dmg_from)"}
 # Aftewards, clean up tags if b_remove_tags is nonzero
 $execute if score NUM_ZERO num matches $(b_remove_tags) run return 0
 $tag @e remove $(t_dmg_target)
+$tag @a remove $(t_dmg_target)
 $tag @e remove $(t_dmg_by)
+$tag @a remove $(t_dmg_by)
 $tag @e remove $(t_dmg_from)
+$tag @a remove $(t_dmg_from)

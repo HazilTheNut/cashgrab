@@ -2,7 +2,6 @@
 #
 # Context:
 #	as: a nonplayer entity
-#	at: the entity
 #
 # Summary: Copies its x, y, z position to pos_x_mm, pos_y_mm, and pos_z_mm
 #

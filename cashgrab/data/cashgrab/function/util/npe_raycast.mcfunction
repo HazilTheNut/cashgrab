@@ -11,7 +11,7 @@
 #	col_terrain_allowed		: Block tag or block type that describes what counts as not solid collision
 #	b_fit_player			: If nonzero, raycast will try to call func_end where a player can stand if they can one step further ("ascending" ledges and lowering if heading into a ceiling)
 #	func_npe_entity_filter	: Filtering function for which entities to collide with. Function applies the tag "t_collision_candidate" to all possible entities the missile can collide with
-#	func_npe_step			: String function name to run every tick
+#	func_npe_step			: String function name to run on each raycast step
 #	func_npe_end			: String function name to run when either the missile collides or expires
 #								func_end is supplied with an end_reason argument based on why func_end was called: 1 = hit block terrain, 2 = hit entity, 3 = expired
 
