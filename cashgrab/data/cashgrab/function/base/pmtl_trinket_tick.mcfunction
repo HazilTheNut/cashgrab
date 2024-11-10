@@ -16,8 +16,8 @@
 execute if score @a[tag=t_pm_owner,limit=1] trinket_charges_max matches ..0 run return 0
 
 # If trinket has being replenished, reset charge count to max
-execute if entity @a[tag=t_pm_owner,limit=1,tag=t_trinket_replenish] run scoreboard players operation @a[tag=t_pm_owner,limit=1] trinket_charges += @a[tag=t_pm_owner,limit=1] trinket_charges_max
-execute if entity @a[tag=t_pm_owner,limit=1,tag=t_trinket_replenish] run scoreboard players operation @a[tag=t_pm_owner,limit=1] __trinket_charges_prev += @a[tag=t_pm_owner,limit=1] trinket_charges_max
+execute if entity @a[tag=t_pm_owner,limit=1,tag=t_trinket_replenish] run scoreboard players operation @a[tag=t_pm_owner,limit=1] trinket_charges = @a[tag=t_pm_owner,limit=1] trinket_charges_max
+execute if entity @a[tag=t_pm_owner,limit=1,tag=t_trinket_replenish] run scoreboard players operation @a[tag=t_pm_owner,limit=1] __trinket_charges_prev = @a[tag=t_pm_owner,limit=1] trinket_charges_max
 execute if entity @a[tag=t_pm_owner,limit=1,tag=t_trinket_replenish] run function cashgrab:util/pmt_inv_trinket_argloader
 tag @a[tag=t_pm_owner,limit=1,tag=t_trinket_replenish] remove t_trinket_replenish
 

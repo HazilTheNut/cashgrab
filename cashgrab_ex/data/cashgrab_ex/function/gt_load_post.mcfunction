@@ -36,3 +36,14 @@ func_pmt_cts_icon:"cashgrab_ex:trinkets/accelerator/pmt_accelerator_cts_inv_icon
 evc_usage_score:"evc_xpbottles",\
 }
 
+# Spring Plume
+data modify storage cashgrab:game_info trinkets append value {\
+s_trinket_name:"Spring Plume",\
+func_pmt_init:"cashgrab_ex:trinkets/spring_plume/pmt_spring_plume_init",\
+func_pmt_inv:"cashgrab_ex:trinkets/spring_plume/pmt_spring_plume_inv",\
+func_pmtl_use_item:"cashgrab_ex:trinkets/spring_plume/pmtl_spring_plume_use_item",\
+func_pmt_cts_icon:"cashgrab_ex:trinkets/spring_plume/pmt_spring_plume_cts_inv_icon",\
+evc_usage_score:"evc_feathers",\
+}
+
+scoreboard objectives add evc_feathers minecraft.used:minecraft.feather

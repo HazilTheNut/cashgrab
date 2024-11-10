@@ -4,7 +4,7 @@
 #	as: a Player Monitor (pm) marker
 #	+ the owner of the pm is tagged with t_pm_owner
 #
-# Summary: Inserts equipped trinket item into hotbar slot 3
+# Summary: Inserts equipped trinket item into the provided inventory slot
 #
 # Arguments:
 #	charges		: Number of charges remaining
