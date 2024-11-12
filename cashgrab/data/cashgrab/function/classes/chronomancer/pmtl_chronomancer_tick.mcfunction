@@ -30,15 +30,15 @@ execute if items entity @a[tag=t_pm_owner,limit=1] hotbar.* minecraft:crossbow[m
 execute if items entity @a[tag=t_pm_owner,limit=1] weapon.* minecraft:crossbow[minecraft:count=1,minecraft:charged_projectiles=[]] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 0
 
 # Upon firing an arrow, initiate reload timer
-execute if score @a[tag=t_pm_owner,limit=1] evl_crossbows matches 1.. run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 55
+execute if score @a[tag=t_pm_owner,limit=1] evl_crossbows matches 1.. run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 44
 
 #execute if score @a[tag=t_pm_owner,limit=1] ps_selected_hotbar_slot matches 2 positioned ~ ~1.625 ~ positioned ^-0.5 ^ ^3.5 run particle minecraft:dragon_breath ~ ~ ~ 0 0 0 0 1
 #execute if score @a[tag=t_pm_owner,limit=1] ps_selected_hotbar_slot matches 2 positioned ~ ~1.625 ~ positioned ^0.5 ^ ^3.5 run particle minecraft:dragon_breath ~ ~ ~ 0 0 0 0 1
 
 # Test points ahead
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_F 0
-execute positioned ~ ~1.625 ~ positioned ^-0.6 ^ ^2.0 positioned ~-5 ~-5 ~-5 if entity @e[tag=t_stasis_field,dx=9,dy=9,dz=9] run scoreboard players add @a[tag=t_pm_owner,limit=1] cv_F 1
-execute positioned ~ ~1.625 ~ positioned ^0.6 ^ ^2.0 positioned ~-5 ~-5 ~-5 if entity @e[tag=t_stasis_field,dx=9,dy=9,dz=9] run scoreboard players add @a[tag=t_pm_owner,limit=1] cv_F 1
+execute positioned ~ ~1.625 ~ positioned ^-0.6 ^ ^2.0 positioned ~-7 ~-7 ~-7 if entity @e[tag=t_stasis_field,dx=13,dy=13,dz=13] run scoreboard players add @a[tag=t_pm_owner,limit=1] cv_F 1
+execute positioned ~ ~1.625 ~ positioned ^0.6 ^ ^2.0 positioned ~-7 ~-7 ~-7 if entity @e[tag=t_stasis_field,dx=13,dy=13,dz=13] run scoreboard players add @a[tag=t_pm_owner,limit=1] cv_F 1
 
 # If both test points are within a stasis field, 
 #	a player firing a crossbow into it will be caught by the stasis field.
@@ -51,10 +51,12 @@ scoreboard players set @a[tag=t_pm_owner,limit=1,scores={cv_D=-1,cv_F=..1}] cv_D
 scoreboard players set @a[tag=t_pm_owner,limit=1,scores={cv_D=1..,cv_F=..1}] cv_D -1
 
 # Decrement reload timer and reload when complete
-scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={cv_B=0..}] cv_B 1
-scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={cv_B=4..,cv_D=1..}] cv_B 4
-execute if score @a[tag=t_pm_owner,limit=1] cv_B matches 0 run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 1
-execute if score @a[tag=t_pm_owner,limit=1] cv_B matches 0 run function cashgrab:classes/chronomancer/pmt_chronomancer_inv_crossbow
+scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={cv_B=0..,cv_D=..0}] cv_B 1
+scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={cv_B=0..,cv_D=1..}] cv_B 4
+tag @a[tag=t_pm_owner,limit=1,scores={cv_B=..0,cv_C=0}] add t_chronomancer_reload_crossbow
+execute if entity @a[tag=t_pm_owner,limit=1,tag=t_chronomancer_reload_crossbow] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 1
+execute if entity @a[tag=t_pm_owner,limit=1,tag=t_chronomancer_reload_crossbow] run function cashgrab:classes/chronomancer/pmt_chronomancer_inv_crossbow
+tag @a[tag=t_pm_owner,limit=1] remove t_chronomancer_reload_crossbow
 
 # Update crossbow after firing an arrow
 execute if score @a[tag=t_pm_owner,limit=1] evl_crossbows matches 1.. run function cashgrab:classes/chronomancer/pmt_chronomancer_inv_crossbow

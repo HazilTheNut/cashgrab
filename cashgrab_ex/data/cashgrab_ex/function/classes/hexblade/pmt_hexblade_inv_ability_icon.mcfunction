@@ -19,5 +19,5 @@ minecraft:lore=[\
 "[{\"color\":\"yellow\",\"italic\":false,\"text\":\"Hexed\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" enemies are revealed\"}]",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" and periodically take damage.\"}",\
 "{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"=====\"}",\
-"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"13\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown for \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"1\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" charge\"}]"\
+"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"16\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown for \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"1\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" charge\"}]"\
 ]] $(charges)

@@ -11,7 +11,7 @@
 
 #$tellraw @a[tag=t_debug] "trinkets/vigor_flask/pmt_vigor_flask_cts_inv_icon: slot:'$(slot)'"
 
-$item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:map[\
+$item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:paper[\
 minecraft:item_name="[{\"color\":\"dark_green\",\"italic\":false,\"text\":\"<Trinket>\"},{\"color\":\"white\",\"text\":\" Bandage\"}]",\
 minecraft:custom_data={is_cts_icon:1},\
 minecraft:lore=[\

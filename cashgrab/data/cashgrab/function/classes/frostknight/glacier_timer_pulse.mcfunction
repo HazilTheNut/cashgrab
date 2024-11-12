@@ -33,7 +33,7 @@ function cashgrab:util/npe_col_entity_filter_hostile
 execute positioned ~-5 ~-2 ~-5 run tag @e[tag=t_collision_candidate,dx=9,dy=5,dz=9] add t_dmg_trgt
 effect give @e[tag=t_dmg_trgt] minecraft:slowness 3 2
 function cashgrab:util/npe_dmg {\
-d_dmg_amount:2.0,\
+d_dmg_amount:1.5,\
 s_dmg_type:"minecraft:player_explosion",\
 t_dmg_target:"t_dmg_trgt",\
 t_dmg_by:"t_dmg_by",\

@@ -20,21 +20,21 @@
 #	cv_H	:	
 
 # Particles
-particle minecraft:enchanted_hit ~6 ~6 ~ 0 0 2.5 0 20 force
-particle minecraft:enchanted_hit ~-6 ~6 ~ 0 0 2.5 0 20 force
-particle minecraft:enchanted_hit ~ ~6 ~6 2.5 0 0 0 20 force
-particle minecraft:enchanted_hit ~ ~6 ~-6 2.5 0 0 0 20 force
-particle minecraft:enchanted_hit ~6 ~-6 ~ 0 0 2.5 0 20 force
-particle minecraft:enchanted_hit ~-6 ~-6 ~ 0 0 2.5 0 20 force
-particle minecraft:enchanted_hit ~ ~-6 ~6 2.5 0 0 0 20 force
-particle minecraft:enchanted_hit ~ ~-6 ~-6 2.5 0 0 0 20 force
-particle minecraft:enchanted_hit ~6 ~ ~6 0 2.5 0 0 20 force
-particle minecraft:enchanted_hit ~6 ~ ~-6 0 2.5 0 0 20 force
-particle minecraft:enchanted_hit ~-6 ~ ~-6 0 2.5 0 0 20 force
-particle minecraft:enchanted_hit ~-6 ~ ~6 0 2.5 0 0 20 force
-particle minecraft:enchant ~ ~ ~ 2.5 2.5 2.5 1 7 force
+particle minecraft:enchanted_hit ~8 ~8 ~ 0 0 3.25 0 20 force
+particle minecraft:enchanted_hit ~-8 ~8 ~ 0 0 3.25 0 20 force
+particle minecraft:enchanted_hit ~ ~8 ~8 3.25 0 0 0 20 force
+particle minecraft:enchanted_hit ~ ~8 ~-8 3.25 0 0 0 20 force
+particle minecraft:enchanted_hit ~8 ~-8 ~ 0 0 3.25 0 20 force
+particle minecraft:enchanted_hit ~-8 ~-8 ~ 0 0 3.25 0 20 force
+particle minecraft:enchanted_hit ~ ~-8 ~8 3.25 0 0 0 20 force
+particle minecraft:enchanted_hit ~ ~-8 ~-8 3.25 0 0 0 20 force
+particle minecraft:enchanted_hit ~8 ~ ~8 0 3.25 0 0 20 force
+particle minecraft:enchanted_hit ~8 ~ ~-8 0 3.25 0 0 20 force
+particle minecraft:enchanted_hit ~-8 ~ ~-8 0 3.25 0 0 20 force
+particle minecraft:enchanted_hit ~-8 ~ ~8 0 3.25 0 0 20 force
+particle minecraft:enchant ~ ~ ~ 3.25 3.25 3.25 1 7 force
 
 #particle minecraft:enchanted_hit ~ ~ ~ 0 0 0 0 4 force
 
 # Apply stasis to everything inside
-execute positioned ~-6.5 ~-6.5 ~-6.5 run tag @e[dx=12,dy=12,dz=12] add t_stasis
+execute positioned ~-8.5 ~-8.5 ~-8.5 run tag @e[dx=16,dy=16,dz=16] add t_stasis

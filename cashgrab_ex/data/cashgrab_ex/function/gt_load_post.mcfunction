@@ -23,8 +23,10 @@ func_pmt_init:"cashgrab_ex:trinkets/bandage/pmt_bandage_init",\
 func_pmt_inv:"cashgrab_ex:trinkets/bandage/pmt_bandage_inv",\
 func_pmtl_use_item:"cashgrab_ex:trinkets/bandage/pmtl_bandage_use_item",\
 func_pmt_cts_icon:"cashgrab_ex:trinkets/bandage/pmt_bandage_cts_inv_icon",\
-evc_usage_score:"evc_maps",\
+evc_usage_score:"evc_papers",\
 }
+
+scoreboard objectives add evc_papers minecraft.used:minecraft.paper
 
 # Accelerator
 data modify storage cashgrab:game_info trinkets append value {\

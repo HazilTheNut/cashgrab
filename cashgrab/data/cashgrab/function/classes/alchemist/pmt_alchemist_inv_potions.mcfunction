@@ -26,9 +26,9 @@ minecraft:custom_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Use]\"
 minecraft:enchantment_glint_override=true,\
 minecraft:custom_data={is_alchemist_potion:1},\
 minecraft:potion_contents={custom_color:7206301,custom_effects:[\
-{id:"minecraft:poison",amplifier:0,duration:140},\
-{id:"minecraft:slowness",amplifier:0,duration:140},\
-{id:"minecraft:mining_fatigue",amplifier:4,duration:140},\
+{id:"minecraft:poison",amplifier:0,duration:240},\
+{id:"minecraft:slowness",amplifier:0,duration:240},\
+{id:"minecraft:mining_fatigue",amplifier:4,duration:240},\
 ]}]
 
 # Booster Brew

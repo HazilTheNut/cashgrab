@@ -17,6 +17,7 @@ minecraft:custom_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Use]\"
 minecraft:custom_data={is_trinket:1},\
 minecraft:enchantment_glint_override=false,\
 minecraft:potion_contents={custom_color:16598149,custom_effects:[\
-{id:"minecraft:regeneration",amplifier:4,duration:37},\
-{id:"minecraft:speed",amplifier:0,duration:100},\
+{id:"minecraft:instant_health",amplifier:2,duration:0},\
+{id:"minecraft:regeneration",amplifier:2,duration:260},\
+{id:"minecraft:speed",amplifier:0,duration:260},\
 ]}] $(charges)
