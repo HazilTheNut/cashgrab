@@ -13,8 +13,8 @@
 #	cv_B	:	
 #	cv_C	:	
 #	cv_D	:	
-#	cv_E	:	
-#	cv_F	:	
+#	cv_E	:	Power Shot charge
+#	cv_F	:	Power Shot cooldown, in ms
 #	cv_G	:	
 #	cv_H	:	
 
@@ -34,9 +34,4 @@ minecraft:attribute_modifiers=[\
 # =============================
 # Hotbar
 
-# Infinibow
-item replace entity @a[tag=t_pm_owner,limit=1] hotbar.0 with minecraft:bow[minecraft:unbreakable={show_in_tooltop:false},\
-minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Infinibow\"}",\
-minecraft:enchantments={levels:{infinity:1}}]
-
-item replace entity @a[tag=t_pm_owner,limit=1] hotbar.6 with minecraft:arrow
+function cashgrab:classes/artillery/pmt_artillery_inv_bow_and_arrow

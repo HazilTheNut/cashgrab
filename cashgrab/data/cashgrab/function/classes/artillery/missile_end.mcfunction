@@ -15,8 +15,8 @@
 #	cv_B	:	
 #	cv_C	:	
 #	cv_D	:	
-#	cv_E	:	
-#	cv_F	:	
+#	cv_E	:	Power Shot charge
+#	cv_F	:	Power Shot cooldown, in ms
 #	cv_G	:	
 #	cv_H	:	
 

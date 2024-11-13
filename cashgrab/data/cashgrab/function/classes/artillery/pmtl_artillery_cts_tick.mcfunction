@@ -15,10 +15,11 @@
 #	cv_B	:	
 #	cv_C	:	
 #	cv_D	:	
-#	cv_E	:	
-#	cv_F	:	
+#	cv_E	:	Power Shot charge
+#	cv_F	:	Power Shot cooldown, in ms
 #	cv_G	:	
 #	cv_H	:	
 
 # If player used crossbow, delete arrow
 execute if score @a[tag=t_pm_owner,limit=1] evl_bows matches 1.. run kill @e[type=minecraft:arrow,limit=1,sort=nearest,distance=..3]
+execute if score @a[tag=t_pm_owner,limit=1] evl_bows matches 1.. run function cashgrab:classes/artillery/pmt_artillery_inv_bow_and_arrow

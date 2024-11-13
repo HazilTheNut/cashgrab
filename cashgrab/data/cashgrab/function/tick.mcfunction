@@ -99,3 +99,4 @@ scoreboard players set @a evl_dmg_dealt 0
 scoreboard players set @a evl_dmg_taken 0
 scoreboard players set @a evl_coin_pickup 0
 scoreboard players set @a evl_crossbows 0
+scoreboard players set @a evl_bows 0
