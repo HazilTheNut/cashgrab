@@ -22,5 +22,6 @@ scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 10000
 scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_charges_max 1
 scoreboard players set @a[tag=t_pm_owner,limit=1] ability_charges 1
 
-# Initialize with crossbow loaded
+# Initialize with crossbow loaded in offhand
+scoreboard players set @a[tag=t_pm_owner,limit=1] cv_A 1
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 1
