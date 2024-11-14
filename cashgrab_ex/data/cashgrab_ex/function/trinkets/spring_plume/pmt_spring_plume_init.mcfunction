@@ -4,7 +4,7 @@
 #	as: a Player Monitor (pm) marker
 #	+ the owner of the pm is tagged with t_pm_owner
 #
-# Summary: Initializes Bandage and its charge count
+# Summary: Initializes Spring Plume and its charge count
 #
 # Arguments: (none)
 

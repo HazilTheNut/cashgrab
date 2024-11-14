@@ -28,5 +28,5 @@ effects:[\
 ]}\
 ]},\
 minecraft:lore=[\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"Restores health\"}"],\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\"Restores health.\"}"],\
 ] $(charges)

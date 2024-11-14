@@ -205,6 +205,9 @@ scoreboard objectives add num dummy
 # === Math constants
 
 scoreboard players set NUM_ZERO num 0
+scoreboard players set NUM_ONE num 1
+scoreboard players set NUM_TWO num 2
+scoreboard players set NUM_THREE num 3
 scoreboard players set NUM_NEG_ONE num -1
 scoreboard players set NUM_TEN num 10
 scoreboard players set NUM_ONE_HUNDRED num 100
