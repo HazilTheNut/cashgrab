@@ -27,9 +27,9 @@ tag @a[tag=t_eid_matches,limit=1] add t_dmg_from
 
 # Apply damage
 tag @s add t_dmg_by
-effect give @e[tag=t_collision_found] minecraft:slowness 2 5
+effect give @e[tag=t_collision_found] minecraft:slowness 5 0
 function cashgrab:util/npe_dmg {\
-d_dmg_amount:4.0,\
+d_dmg_amount:6.0,\
 s_dmg_type:"minecraft:player_attack",\
 t_dmg_target:"t_collision_found",\
 t_dmg_by:"t_dmg_by",\
