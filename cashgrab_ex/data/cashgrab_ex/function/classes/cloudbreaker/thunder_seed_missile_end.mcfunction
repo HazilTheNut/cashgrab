@@ -25,7 +25,7 @@ function cashgrab:util/find_eid_self with storage cashgrab:find_eid_args
 tag @s add t_dmg_by
 tag @a[tag=t_eid_matches] add t_dmg_from
 function cashgrab:util/npe_col_entity_filter_hostile
-tag @e[tag=t_collision_candidate,distance=..3] add t_dmg_trgt
+tag @e[tag=t_collision_candidate,distance=..3.5] add t_dmg_trgt
 function cashgrab:util/npe_dmg {\
 d_dmg_amount:6.0,\
 s_dmg_type:"minecraft:player_explosion",\
