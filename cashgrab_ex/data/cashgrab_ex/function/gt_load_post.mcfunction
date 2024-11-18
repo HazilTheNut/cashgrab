@@ -14,6 +14,21 @@ func_pmt_cts_icon:"cashgrab_ex:classes/hexblade/pmt_hexblade_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:util/noop",\
 }
 
+# Cloudbreaker
+data modify storage cashgrab:game_info classes append value {\
+s_class_name:"Cloudbreaker",\
+func_pmt_init:"cashgrab_ex:classes/cloudbreaker/pmt_cloudbreaker_init",\
+func_pmt_inv:"cashgrab_ex:classes/cloudbreaker/pmt_cloudbreaker_inv",\
+func_pmt_inv_ability_icon:"cashgrab_ex:classes/cloudbreaker/pmt_cloudbreaker_inv_ability_icon",\
+func_pmtl_tick:"cashgrab_ex:classes/cloudbreaker/pmtl_cloudbreaker_tick",\
+func_pmtl_use_ability:"cashgrab_ex:classes/cloudbreaker/pmtl_cloudbreaker_use_ability",\
+func_pmtl_end:"cashgrab:util/noop",\
+func_pmt_cts_icon:"cashgrab_ex:classes/cloudbreaker/pmt_cloudbreaker_cts_inv_icon",\
+func_pmtl_cts_tick:"cashgrab_ex:classes/cloudbreaker/pmtl_cloudbreaker_cts_tick",\
+}
+
+scoreboard objectives add evc_torchflower_seeds minecraft.used:minecraft.torchflower_seeds
+
 # --- Add Trinket data
 
 # Bandage
