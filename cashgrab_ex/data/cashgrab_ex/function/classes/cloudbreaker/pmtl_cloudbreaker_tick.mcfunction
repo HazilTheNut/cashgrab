@@ -27,7 +27,7 @@ execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 1.. run function cashgr
 
 # Find cloud timers near player and reset their lifetimes
 execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 1.. run function cashgrab:util/npe_eid_find_peers
-execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 1.. run scoreboard players set @e[tag=t_cloudbreaker_cloud,scores={eid_compare=0},distance=..2] tmr_lifetime_ticks 10
+execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 1.. run scoreboard players set @e[tag=t_cloudbreaker_cloud,scores={eid_compare=0},distance=..2] tmr_lifetime_ticks 3
 
 # Tick down Nimbus Stride
 scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={cv_A=1..}] cv_A 1

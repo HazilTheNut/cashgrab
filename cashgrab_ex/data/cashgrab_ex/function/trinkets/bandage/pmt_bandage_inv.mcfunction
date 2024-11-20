@@ -24,7 +24,7 @@ on_consume_effects:[\
 {\
 type:"apply_effects",\
 effects:[\
-{id:"minecraft:regeneration",amplifier:3b,duration:27},\
+{id:"minecraft:regeneration",amplifier:3b,duration:35},\
 ]}\
 ]},\
 minecraft:lore=[\
