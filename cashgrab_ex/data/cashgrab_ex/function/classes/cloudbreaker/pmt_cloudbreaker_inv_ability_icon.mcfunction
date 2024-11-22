@@ -13,7 +13,7 @@ $execute if score @a[tag=t_pm_owner,limit=1] team_id matches 0 run item replace 
 minecraft:custom_name="[{\"color\":\"light_purple\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Nimbus Stride\"}]",\
 minecraft:lore=[\
 "{\"color\":\"dark_gray\",\"italic\":true,\"text\":\"Toss any item to use.\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"For a bried period, you gain\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\"For a brief period, you gain\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" increased speed and clouds\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" form beneath you, allowing\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" you to run through the air\"}",\
