@@ -1,44 +1,9 @@
+# Write map metadata
+scoreboard players set CGAW_MAPS_SMALL_COUNT num 3
+scoreboard players set CGAW_MAPS_MEDIUM_COUNT num 2
+scoreboard players set CGAW_MAPS_LARGE_COUNT num 2
 
-# Create scoreboard objectives / globals
-
-# --- Lobby / game config
-
-# Selected map
-scoreboard players add CGAW_CFG_MAP_ID num 0
-execute if score CGAW_CFG_MAP_ID num matches 0 run scoreboard players set CGAW_CFG_MAP_ID num 101
-scoreboard objectives add cgaw_selected_map_id_input trigger
-
-# Coin goal config
-scoreboard objectives add cgaw_change_coin_goal_input trigger
-scoreboard objectives add cgaw_reset_coin_goal_input trigger
-
-# Match time config
-scoreboard players add CGAW_CFG_MATCH_TIME_TICKS num 0
-execute if score CGAW_CFG_MATCH_TIME_TICKS num matches 0 run scoreboard players set CGAW_CFG_MATCH_TIME_TICKS num 6000
-scoreboard objectives add cgaw_change_match_time_input trigger
-scoreboard objectives add cgaw_reset_match_time_input trigger
-
-scoreboard players set NUM_TICKS_PER_MIN num 1200
-scoreboard players add CGAW_CFG_MATCH_TIME_DISPLAY_MIN num 0
-
-scoreboard players add CGAW_MATCH_TIME_TICKS num 0
-
-# --- CTS Room
-
-# Spawn plate cooldowns
-scoreboard players add CGAW_SPAWN_CD_A_TICKS num 0
-scoreboard players add CGAW_SPAWN_CD_B_TICKS num 0
-scoreboard players add CGAW_SPAWN_CD_C_TICKS num 0
-scoreboard players add CGAW_SPAWN_CD_D_TICKS num 0
-
-scoreboard players set CGAW_SPAWN_PLATE_CD_TICKS num 100
-
-# Define lobby location
-function cgaw:dynamic/gt_load_lobby_data
-
-# Create map data structure
-function cgaw:dynamic/gt_load_map_data
-
+# Initialize map data structure
 data modify storage cgaw:world_info map_data set value {\
 fissure:{\
 size:1,\
@@ -54,6 +19,7 @@ loc_spawn_c:"1183 129 -2977",\
 rot_spawn_c:"180 0",\
 loc_spawn_d:"1169 113 -3013",\
 rot_spawn_d:"0 0",\
+objects:[],\
 },\
 crystal:{\
 size:1,\
@@ -69,6 +35,7 @@ loc_spawn_c:"1082 95 -1970",\
 rot_spawn_c:"-90 0",\
 loc_spawn_d:"1114 94 -2028",\
 rot_spawn_d:"90 0",\
+objects:[],\
 },\
 sunken:{\
 size:1,\
@@ -84,6 +51,7 @@ loc_spawn_c:"1132 98 -1015",\
 rot_spawn_c:"0 0",\
 loc_spawn_d:"1113 94 -993",\
 rot_spawn_d:"180 0",\
+objects:[],\
 },\
 scald:{\
 size:2,\
@@ -99,6 +67,7 @@ loc_spawn_c:"1077 101 26",\
 rot_spawn_c:"-135 0",\
 loc_spawn_d:"1138 110 30",\
 rot_spawn_d:"90 0",\
+objects:[],\
 },\
 golden:{\
 size:2,\
@@ -114,6 +83,7 @@ loc_spawn_c:"1153 101 1999",\
 rot_spawn_c:"50 0",\
 loc_spawn_d:"1171 123 2016",\
 rot_spawn_d:"-180 -15",\
+objects:[],\
 },\
 deepgrove:{\
 size:3,\
@@ -129,6 +99,7 @@ loc_spawn_c:"1098 88 1067",\
 rot_spawn_c:"-90 0",\
 loc_spawn_d:"1157 85 1021",\
 rot_spawn_d:"130 0",\
+objects:[],\
 },\
 skullway:{\
 size:3,\
@@ -144,8 +115,6 @@ loc_spawn_c:"1125 109 3042",\
 rot_spawn_c:"0 0",\
 loc_spawn_d:"1073 92 3044",\
 rot_spawn_d:"-90 0",\
+objects:[],\
 },\
 }
-
-# Populate lobby configuration
-function cgaw:gt_populate_lobby
