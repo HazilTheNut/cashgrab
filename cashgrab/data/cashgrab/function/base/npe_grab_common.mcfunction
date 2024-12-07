@@ -40,4 +40,4 @@ execute if score @e[tag=t_grab_subject,limit=1] grab_state matches 1..2 if entit
 execute if score @e[tag=t_grab_subject,limit=1] grab_state matches 1..2 at @n[tag=t_eid_matches] run tp @e[tag=t_grab_subject,limit=1] ~ ~-0.75 ~
 
 # Restore gravity for entities exiting a grab
-execute if score @e[tag=t_grab_subject,limit=1] grab_state matches -1 run attribute @e[tag=t_grab_subject,limit=1] minecraft:gravity base set 0.08
+execute if score @e[tag=t_grab_subject,limit=1] grab_state matches -1 run attribute @e[tag=t_grab_subject,limit=1] minecraft:gravity base reset
