@@ -8,6 +8,16 @@
 #
 # Arguments: (none)
 
+# Class variable usage:
+#	cv_A	:	1 if Tools are toggled on
+#	cv_B	:	Smoothing Tool calculation temp
+#	cv_C	:	Lighting Update timer
+#	cv_D	:	
+#	cv_E	:	Anchor X pos, in m
+#	cv_F	:	Anchor Y pos, in m
+#	cv_G	:	Anchor Z pos, in m
+#	cv_H	:	Page Number
+
 # Armor
 item replace entity @a[tag=t_pm_owner] armor.head with minecraft:air
 item replace entity @a[tag=t_pm_owner] armor.chest with minecraft:air
@@ -15,21 +25,5 @@ item replace entity @a[tag=t_pm_owner] armor.legs with minecraft:air
 item replace entity @a[tag=t_pm_owner] armor.feet with minecraft:air
 
 # Hotbar
-item replace entity @a[tag=t_pm_owner] hotbar.0 with minecraft:brush[\
-minecraft:custom_name="{\"italic\":false,\"text\":\"Smoothing Tool\"}",\
-minecraft:custom_data={mapmaker_tool_id:1}]
-item replace entity @a[tag=t_pm_owner] hotbar.1 with minecraft:grass_block[\
-minecraft:custom_name="{\"italic\":false,\"text\":\"Topsoil Tool\"}",\
-minecraft:custom_data={mapmaker_tool_id:2}]
-item replace entity @a[tag=t_pm_owner] hotbar.2 with minecraft:map[\
-minecraft:custom_name="{\"italic\":false,\"text\":\"Shoot Fireball (strong)\"}",\
-minecraft:custom_data={mapmaker_tool_id:3}]
-item replace entity @a[tag=t_pm_owner] hotbar.3 with minecraft:map[\
-minecraft:custom_name="{\"italic\":false,\"text\":\"Shoot Fireball (weak)\"}",\
-minecraft:custom_data={mapmaker_tool_id:4}]
-item replace entity @a[tag=t_pm_owner] hotbar.5 with minecraft:map[\
-minecraft:custom_name="{\"italic\":false,\"text\":\"Update Lighting\"}",\
-minecraft:custom_data={mapmaker_tool_id:5}]
-item replace entity @a[tag=t_pm_owner] hotbar.6 with minecraft:map[\
-minecraft:custom_name="{\"italic\":false,\"text\":\"Lock Blocks\"}",\
-minecraft:custom_data={mapmaker_tool_id:6}]
+execute if entity @a[tag=t_pm_owner,scores={cv_H=0}] run function cashgrab:classes/mapmaker/pmt_mapmaker_inv_page_one
+execute if entity @a[tag=t_pm_owner,scores={cv_H=1}] run function cashgrab:classes/mapmaker/pmt_mapmaker_inv_page_two

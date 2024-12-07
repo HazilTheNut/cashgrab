@@ -10,6 +10,16 @@
 #
 # Arguments: (none)
 
+# Class variable usage:
+#	cv_A	:	1 if Tools are toggled on
+#	cv_B	:	Smoothing Tool calculation temp
+#	cv_C	:	Lighting Update timer
+#	cv_D	:	
+#	cv_E	:	Anchor X pos, in m
+#	cv_F	:	Anchor Y pos, in m
+#	cv_G	:	Anchor Z pos, in m
+#	cv_H	:	Page Number
+
 # Toggle cv_A value
 scoreboard players add @a[tag=t_pm_owner] cv_A 1
 scoreboard players set @a[tag=t_pm_owner,scores={cv_A=2..}] cv_A 0

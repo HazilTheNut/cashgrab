@@ -8,6 +8,4 @@
 #	cv_G	:	Anchor Z pos, in m
 #	cv_H	:	Page Number
 
-#particle smoke ~ ~ ~ 0 0 0 0 1
-
-execute if block ~ ~ ~ #cashgrab:lockable run data modify block ~ ~ ~ lock set value {components:{"minecraft:custom_data":{can_open_locked_things:1}}}
+execute if block ~ ~ ~ minecraft:air run setblock ~ ~ ~ minecraft:white_concrete replace
