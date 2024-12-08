@@ -30,6 +30,9 @@ item replace entity @a[tag=t_pm_owner] hotbar.2 with minecraft:egg[\
 minecraft:custom_name="{\"italic\":false,\"text\":\"Lock Blocks\"}",\
 minecraft:custom_data={mapmaker_tool_id:22}]
 
+item replace entity @a[tag=t_pm_owner] hotbar.5 with minecraft:egg[\
+minecraft:custom_name="{\"italic\":false,\"text\":\"Set Anchor\"}",\
+minecraft:custom_data={mapmaker_tool_id:25}]
 item replace entity @a[tag=t_pm_owner] hotbar.6 with minecraft:egg[\
 minecraft:custom_name="{\"italic\":false,\"text\":\"Print Position\"}",\
 minecraft:custom_data={mapmaker_tool_id:26}]

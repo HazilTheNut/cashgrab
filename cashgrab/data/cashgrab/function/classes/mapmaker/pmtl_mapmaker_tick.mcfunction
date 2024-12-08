@@ -53,6 +53,9 @@ execute if entity @a[tag=t_pm_owner,scores={evc_eggs=1..,cv_H=1,ps_selected_hotb
 # --- Lock Blocks
 execute if entity @a[tag=t_pm_owner,scores={evc_eggs=1..,cv_H=1,ps_selected_hotbar_slot=2}] run function cashgrab:classes/mapmaker/run_over_volume {func:"cashgrab:classes/mapmaker/lock_block"} 
 
+# --- Set Anchor
+execute if entity @a[tag=t_pm_owner,scores={evc_eggs=1..,cv_H=1,ps_selected_hotbar_slot=5}] run function cashgrab:classes/mapmaker/set_anchor
+
 # --- Print Position
 execute if entity @a[tag=t_pm_owner,scores={evc_eggs=1..,cv_H=1,ps_selected_hotbar_slot=6}] run function cashgrab:classes/mapmaker/print_position_argloader
 
