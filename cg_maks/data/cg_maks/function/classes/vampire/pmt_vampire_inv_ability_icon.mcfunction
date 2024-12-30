@@ -9,7 +9,8 @@
 # Arguments:
 #	charges		: Number of charges of ability
 
-$item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:wind_charge[\
+$item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:clay_ball[\
+minecraft:item_model="wind_charge",\
 minecraft:item_name="[{\"color\":\"light_purple\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Soul Siphon\"}]",\
 minecraft:hide_additional_tooltip={},\
 minecraft:lore=[\

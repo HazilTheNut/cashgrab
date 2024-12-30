@@ -12,11 +12,11 @@
 
 # ===
 # Armor 
-item replace entity @a[tag=t_pm_owner,limit=1] armor.head with minecraft:leather_helmet[minecraft:unbreakable={show_in_tooltop:false},\
+item replace entity @a[tag=t_pm_owner,limit=1] armor.head with minecraft:leather_helmet[minecraft:unbreakable={show_in_tooltip:false},\
 minecraft:dyed_color=1908001]
-item replace entity @a[tag=t_pm_owner,limit=1] armor.chest with minecraft:leather_chestplate[minecraft:unbreakable={show_in_tooltop:false},\
+item replace entity @a[tag=t_pm_owner,limit=1] armor.chest with minecraft:leather_chestplate[minecraft:unbreakable={show_in_tooltip:false},\
 minecraft:dyed_color=11546150]
-item replace entity @a[tag=t_pm_owner,limit=1] armor.legs with minecraft:leather_leggings[minecraft:unbreakable={show_in_tooltop:false},\
+item replace entity @a[tag=t_pm_owner,limit=1] armor.legs with minecraft:leather_leggings[minecraft:unbreakable={show_in_tooltip:false},\
 minecraft:dyed_color=1908001]
 item replace entity @a[tag=t_pm_owner,limit=1] armor.feet with minecraft:leather_boots[minecraft:unbreakable={show_in_tooltip:false},\
 minecraft:dyed_color=1908001,\
@@ -33,7 +33,7 @@ item replace entity @a[tag=t_pm_owner,limit=1] hotbar.0 with minecraft:iron_hoe[
 minecraft:custom_name="{\"italic\":false,\"color\":\"dark_red\",\"text\":\"Nightreaver Scythe\"}",\
 minecraft:attribute_modifiers=[\
 {type:"attack_damage",slot:"mainhand",id:"cashgrab:nightreaver_atkdmg",amount:6,operation:"add_value"},\
-{type:"attack_speed",slot:"mainhand",id:"cashgrab:nightreaver_atkspd",amount:-1.2,operation:"add_value"}]]
+{type:"attack_speed",slot:"mainhand",id:"cashgrab:nightreaver_atkspd",amount:-2,operation:"add_value"}]]
 
 # Soul Siphon Icon
 function cg_maks:classes/vampire/pmt_vampire_inv_soul_siphon
