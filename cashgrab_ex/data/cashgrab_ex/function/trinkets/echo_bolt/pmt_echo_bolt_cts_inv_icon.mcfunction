@@ -18,4 +18,4 @@ minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" damages and slows.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Beams that hit\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" refund their charge.\"}"]\
-] 3
+] 4
