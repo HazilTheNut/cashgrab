@@ -41,7 +41,7 @@ minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" with bonus damage, \"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" knockback, and slowness.\"}",\
 "{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"=====\"}",\
-"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"7\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown\"}]"\
+"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"5\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown\"}]"\
 ]\
 ]
 
@@ -56,6 +56,6 @@ minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" with bonus damage, \"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" knockback, and slowness.\"}",\
 "{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"=====\"}",\
-"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"7\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown\"}]"\
+"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"5\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown\"}]"\
 ]\
 ]

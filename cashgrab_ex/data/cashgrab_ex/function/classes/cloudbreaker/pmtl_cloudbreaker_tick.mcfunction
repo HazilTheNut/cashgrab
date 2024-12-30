@@ -68,7 +68,7 @@ scoreboard players set @a[tag=t_pm_owner,limit=1] evc_torchflower_seeds 0
 scoreboard players operation @a[tag=t_pm_owner,limit=1,scores={cv_F=1..}] cv_F -= @a[tag=t_pm_owner,limit=1] ability_cd_tickrate
 
 # Speed up cooldown while Nimbus Stride is active
-scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={cv_A=1..cv_F=1..}] cv_F 600
+scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={cv_A=1..,cv_F=1..}] cv_F 600
 
 # Award ability
 tag @a[tag=t_pm_owner,limit=1,scores={cv_E=0,cv_F=..0}] add t_award_thunder_seed

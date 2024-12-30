@@ -23,7 +23,7 @@
 playsound minecraft:block.portal.travel player @a ~ ~ ~ 0.15 2.0
 
 execute positioned ~ ~1.625 ~ run function cashgrab:util/npe_raycast {\
-i_range_m:25,\
+i_range_m:20,\
 i_origin_loc:1,\
 col_terrain_allowed:"#cashgrab:nonsolid",\
 b_fit_player:0,\

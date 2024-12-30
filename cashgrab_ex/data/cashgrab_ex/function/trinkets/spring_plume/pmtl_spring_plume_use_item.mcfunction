@@ -10,4 +10,5 @@
 #
 # Arguments: (none)
 
+tag @a[tag=t_pm_owner,limit=1] add t_grab_release
 
