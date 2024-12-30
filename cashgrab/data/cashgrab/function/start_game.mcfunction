@@ -20,6 +20,10 @@ function cashgrab:base/gt_display_coin_score
 execute store result storage cashgrab:coin_spill_threshold value int 0.9 run scoreboard players get GOAL coins
 execute store result score NUM_COIN_SPILLING_THRESHOLD num run data get storage cashgrab:coin_spill_threshold value 1
 
+# Display chat message
+tellraw @a [{"type":"text","color":"aqua","text":"The game has begun!","underlined":true}]
+tellraw @a [{"type":"text","color":"gold","text":"You can select your class and trinket in your inventory between respawns"}]
+
 # Allow plugins to run code when game ends
 function #cashgrab:gt_game_start
 
