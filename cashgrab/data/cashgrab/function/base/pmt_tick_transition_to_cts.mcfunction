@@ -11,6 +11,9 @@
 # Clear inventory (including armor which typically isn't cleared)
 clear @a[tag=t_pm_owner,limit=1]
 
+# Remove trinket hotbar force tag in case it got stuck
+tag @a[tag=t_pm_owner,limit=1] remove t_trinket_force_hotbar
+
 # Initialize trinket and class - they should look like what it would look like to start gameplay with those options
 function cashgrab:trinkets/pmt_trinket_init with entity @s data.trinket_info
 function cashgrab:classes/pmt_class_init with entity @s data.class_info
