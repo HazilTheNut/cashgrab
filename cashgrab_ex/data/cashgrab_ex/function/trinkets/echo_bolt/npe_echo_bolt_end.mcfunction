@@ -25,6 +25,9 @@ execute store result storage cashgrab:eid_args eid int 1 run scoreboard players 
 function cashgrab:util/find_eid_self with storage cashgrab:eid_args
 tag @a[tag=t_eid_matches,limit=1] add t_dmg_from
 
+# Refund charge
+scoreboard players set @a[tag=t_eid_matches,limit=1] trinket_charges_modify 1
+
 # Apply damage
 tag @s add t_dmg_by
 effect give @e[tag=t_collision_found] minecraft:slowness 5 0

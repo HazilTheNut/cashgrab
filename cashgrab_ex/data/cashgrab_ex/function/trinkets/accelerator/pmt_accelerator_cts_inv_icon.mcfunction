@@ -17,4 +17,4 @@ minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Speeds up your ability\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" cooldowns for a\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" short period.\"}"],\
-] 1
+] 2
