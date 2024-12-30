@@ -25,8 +25,9 @@ $item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:glow_ink
 minecraft:item_name="[{\"color\":\"light_purple\",\"italic\":false,\"text\":\"[Crouch]\"},{\"color\":\"white\",\"text\":\" Blight Step\"}]",\
 minecraft:lore=[\
 "{\"color\":\"dark_gray\",\"italic\":true,\"text\":\"Crouch holding any item to use.\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"After holding for 1.5 secs,\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\"After holding for 1 second,\"}",\
 "[{\"color\":\"gray\",\"italic\":false,\"text\":\" you consume your \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Hex\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" to \"}]",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\" heal a small amount and\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" teleport behind the target.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"You may also teleport to\"}",\
 "[{\"color\":\"yellow\",\"italic\":false,\"text\":\" Hexed\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" players shortly\"}]",\
