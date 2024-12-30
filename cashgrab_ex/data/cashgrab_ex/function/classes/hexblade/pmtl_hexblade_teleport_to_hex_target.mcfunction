@@ -26,7 +26,7 @@ tag @a[tag=t_pm_owner,limit=1] add t_grab_release
 
 # Raycast behind target to find a good place to teleport, then teleport there
 execute if entity @e[tag=t_hex_target,tag=!t_hexblade_remnant_timer] at @e[tag=t_hex_target,limit=1] positioned ~ ~1 ~ rotated as @e[tag=t_hex_target,limit=1] rotated ~180 -15 run function cashgrab:util/npe_raycast {\
-i_range_m:3,\
+i_range_m:2,\
 i_origin_loc:0,\
 col_terrain_allowed:"#cashgrab:nonsolid",\
 b_fit_player:1,\
@@ -37,6 +37,9 @@ func_npe_end:"cashgrab_ex:classes/hexblade/pmtl_hexblade_perform_tp"\
 
 # If Hex target is remnant, teleport directly to it
 execute if entity @e[tag=t_hex_target,tag=t_hexblade_remnant_timer] at @e[tag=t_hex_target,limit=1] positioned ~ ~1 ~ rotated as @e[tag=t_hex_target,limit=1] run function cashgrab_ex:classes/hexblade/pmtl_hexblade_perform_tp
+
+# Heal player
+effect give @a[tag=t_pm_owner,limit=1] minecraft:regeneration 5 1
 
 # Consume Hex
 effect clear @e[tag=t_hex_target,limit=1] minecraft:glowing

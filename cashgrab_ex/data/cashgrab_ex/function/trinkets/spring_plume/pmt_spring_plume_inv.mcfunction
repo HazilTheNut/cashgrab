@@ -27,10 +27,16 @@ effects:[\
 {id:"minecraft:speed",amplifier:3b,duration:60},\
 {id:"minecraft:jump_boost",amplifier:5b,duration:60},\
 {id:"minecraft:slow_falling",amplifier:0b,duration:60}\
-]}\
+]},\
+{\
+type:"remove_effects",\
+effects:"minecraft:slowness"\
+}\
 ]},\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Grants you brief burst of\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" speed, jump height, and\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\" slow falling.\"}"],\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\" slow falling.\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\"Removes slowing and\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\" grabbing effects.\"}"],\
 ] $(charges)

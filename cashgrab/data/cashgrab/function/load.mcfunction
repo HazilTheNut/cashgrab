@@ -79,10 +79,17 @@ scoreboard objectives add trinket_charges dummy
 scoreboard objectives add trinket_charges_max dummy
 scoreboard objectives add __trinket_charges_prev dummy
 
+# When nonzero, modifies charge count by value. Positive
+#   values add charges (up to trinket_charges_max) while
+#   negative values remove charges (to min of 0)
+scoreboard objectives add trinket_charges_modify dummy
+
 # 1 if holding trinket and 0 otherwise
-scoreboard objectives add trinket_held dummy
+scoreboard objectives remove trinket_held
 
 # 1 if trinket is in offhand and 0 otherwise
+#   The t_trinket_force_hotbar tag forces trinket to
+#   to be drawn in hotbar.3
 scoreboard objectives add trinket_in_offhand dummy
 
 # --- Game objective-related
@@ -291,12 +298,6 @@ scoreboard objectives add facing_vector_pitch_mdeg dummy
 # =============================
 # Values used for missiles
 scoreboard objectives add mis_lifetime_ticks dummy
-
-# Vertical velocity from gravity, in mm/tick
-scoreboard objectives remove mis_gravity_vy
-
-# Vertical velocity gained per tick, in mm/tick^2
-scoreboard objectives remove mis_gravity_const
 
 # Velocity inherited from initial speed, in mm/tick
 scoreboard objectives add mis_base_vel_x_mmpt dummy

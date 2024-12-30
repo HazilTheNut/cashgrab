@@ -68,7 +68,7 @@ execute if score @a[tag=t_pm_owner,limit=1] cv_B matches 1 run function cashgrab
 # --- Blight Step
 
 # Start Blight Step countdown
-scoreboard players set @a[tag=t_pm_owner,limit=1,scores={cv_A=1..,cv_D=0,ps_sneaking=1..2}] cv_D 30
+scoreboard players set @a[tag=t_pm_owner,limit=1,scores={cv_A=1..,cv_D=0,ps_sneaking=1..2}] cv_D 20
 
 # Reset Blight Step countdown if target is invalid
 scoreboard players set @a[tag=t_pm_owner,limit=1,scores={cv_A=0}] cv_D 0
@@ -81,7 +81,7 @@ execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1..,ps_sneaking=..0}] r
 scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={cv_D=1..}] cv_D 1
 
 # Update inventory display
-execute if score @a[tag=t_pm_owner,limit=1] cv_D matches 1..30 run function cashgrab_ex:classes/hexblade/pmt_hexblade_inv_blight_step
+execute if score @a[tag=t_pm_owner,limit=1] cv_D matches 1..20 run function cashgrab_ex:classes/hexblade/pmt_hexblade_inv_blight_step
 
 # At Blight Step countdown = 1, teleport to target and consume hex
 execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1..,cv_D=1}] run function cashgrab_ex:classes/hexblade/pmtl_hexblade_teleport_to_hex_target

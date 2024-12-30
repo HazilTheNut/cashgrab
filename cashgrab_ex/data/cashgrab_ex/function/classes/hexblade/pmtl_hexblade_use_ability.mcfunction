@@ -29,7 +29,7 @@ i_origin_loc:1,\
 f_focal_dist_m:50,\
 i_gravity_vy_mmpt:0,\
 i_gravity_const_mmpt2:0,\
-f_tracking_scalar:0.55f,\
+f_tracking_scalar:0.65f,\
 t_missile_name:"t_hexblade_hex_missile",\
 col_terrain_allowed:"#cashgrab:partialsolid",\
 func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_hostile",\

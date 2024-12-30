@@ -17,5 +17,5 @@ minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" explodes and reveals enemies.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Traps persist for 2 minutes.\"}",\
 "{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"=====\"}",\
-"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"35\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown for \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"3\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" charges\"}]"\
+"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"40\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown for \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"3\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" charges\"}]"\
 ]] $(charges)

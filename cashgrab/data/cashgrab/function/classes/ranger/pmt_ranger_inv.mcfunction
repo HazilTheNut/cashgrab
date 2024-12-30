@@ -35,7 +35,7 @@ item replace entity @a[tag=t_pm_owner,limit=1] armor.feet with minecraft:leather
 item replace entity @a[tag=t_pm_owner,limit=1] hotbar.0 with minecraft:stone_sword[minecraft:unbreakable={show_in_tooltip:false},\
 minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Machete\"}",\
 minecraft:attribute_modifiers=[\
-{type:"attack_damage",slot:"mainhand",id:"cashgrab:machete_atkdmg",amount:6,operation:"add_value"},\
+{type:"attack_damage",slot:"mainhand",id:"cashgrab:machete_atkdmg",amount:5,operation:"add_value"},\
 {type:"attack_speed",slot:"mainhand",id:"cashgrab:machete_atkspd",amount:-2,operation:"add_value"}]]
 
 # Crossbow

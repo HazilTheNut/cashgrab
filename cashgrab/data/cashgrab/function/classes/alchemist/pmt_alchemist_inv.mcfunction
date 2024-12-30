@@ -41,7 +41,7 @@ item replace entity @a[tag=t_pm_owner,limit=1] hotbar.0 with minecraft:amethyst_
 minecraft:enchantment_glint_override=true,\
 minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Magicite Shiv\"}",\
 minecraft:attribute_modifiers=[\
-{type:"attack_damage",slot:"mainhand",id:"cashgrab:magiciteshiv_atkdmg",amount:5,operation:"add_value"},\
+{type:"attack_damage",slot:"mainhand",id:"cashgrab:magiciteshiv_atkdmg",amount:6,operation:"add_value"},\
 {type:"attack_speed",slot:"mainhand",id:"cashgrab:magiciteshiv_atkspd",amount:-2,operation:"add_value"}]]
 
 # Potions

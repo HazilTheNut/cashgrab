@@ -37,6 +37,6 @@ minecraft:custom_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Use]\"
 minecraft:enchantment_glint_override=true,\
 minecraft:custom_data={is_alchemist_potion:1},\
 minecraft:potion_contents={custom_color:15108608,custom_effects:[\
-{id:"minecraft:resistance",amplifier:0,duration:300},\
+{id:"minecraft:resistance",amplifier:1,duration:300},\
 {id:"minecraft:strength",amplifier:0,duration:300},\
 ]}]

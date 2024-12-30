@@ -24,9 +24,10 @@
 execute unless score @a[tag=t_pm_owner,limit=1] cv_A matches -1 run return 0
 
 # Exit state
+tag @a[tag=t_pm_owner,limit=1] remove t_invisible
+tag @a[tag=t_pm_owner,limit=1] remove t_trinket_force_hotbar
 function cashgrab:util/pmt_inv_refresh
 particle minecraft:smoke ~ ~1 ~ 0.5 0.75 0.5 0 40
 effect clear @a[tag=t_pm_owner,limit=1] minecraft:speed
-tag @a[tag=t_pm_owner,limit=1] remove t_invisible
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 5000
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_A 0

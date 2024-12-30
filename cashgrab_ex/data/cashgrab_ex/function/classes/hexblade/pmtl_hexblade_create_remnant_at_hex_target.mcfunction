@@ -25,7 +25,7 @@ tellraw @a[tag=debug] "classes/hexblade/pmtl_hexblade_create_remnant_at_hex_targ
 
 # Set timer
 execute at @a[tag=t_hex_target,limit=1] rotated as @a[tag=t_hex_target,limit=1] run function cashgrab:util/npe_create_timer {\
-i_lifetime_ticks:100,\
+i_lifetime_ticks:160,\
 b_anchor_at_pos:1,\
 t_timer_name:"t_hexblade_remnant_timer_init",\
 func_npe_start:"cashgrab:util/noop",\
@@ -42,3 +42,6 @@ tag @n[tag=t_hexblade_remnant_timer_init] add t_hex_target
 tag @n[tag=t_hexblade_remnant_timer_init] add t_hexblade_remnant_timer
 tag @n[tag=t_hexblade_remnant_timer_init] add t_stasis_immune
 tag @n[tag=t_hexblade_remnant_timer_init] remove t_hexblade_remnant_timer_init
+
+# Notify owner by text chat
+tellraw @a[tag=t_pm_owner,limit=1] [{"color":"green","type":"text","text":"Your "},{"color":"yellow","type":"text","text":"Hexed"},{"color":"green","type":"text","text":" target has died! You can use "},{"color":"yellow","type":"text","text":"Blight Step"},{"color":"green","type":"text","text":" to teleport to their remains"}]

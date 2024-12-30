@@ -23,7 +23,7 @@
 item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=..0}] armor.head with minecraft:leather_helmet[minecraft:unbreakable={show_in_tooltip:false},minecraft:dyed_color=7727312,\
 minecraft:attribute_modifiers=[\
 {type:"movement_speed",slot:"head",id:"cashgrab:speed_bonus",amount:0.3,operation:"add_multiplied_base"},\
-{type:"armor",slot:"head",id:"cashgrab:helmet_armor",amount:4,operation:"add_value"}],\
+{type:"armor",slot:"head",id:"cashgrab:helmet_armor",amount:5,operation:"add_value"}],\
 minecraft:enchantment_glint_override=true]
 item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=..0}] armor.chest with minecraft:leather_chestplate[minecraft:unbreakable={show_in_tooltip:false},minecraft:dyed_color=7727312,\
 minecraft:enchantment_glint_override=true]

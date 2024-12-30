@@ -42,7 +42,7 @@ tag @e[tag=t_collision_candidate,distance=..4] add t_dmg_trgt
 
 # Apply damage
 function cashgrab:util/npe_dmg {\
-d_dmg_amount:6.0,\
+d_dmg_amount:9.0,\
 s_dmg_type:"minecraft:fireball",\
 t_dmg_target:"t_dmg_trgt",\
 t_dmg_by:"t_dmg_by",\
