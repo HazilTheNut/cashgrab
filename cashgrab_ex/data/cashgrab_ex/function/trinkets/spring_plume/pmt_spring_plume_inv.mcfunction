@@ -36,5 +36,7 @@ effects:"minecraft:slowness"\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Grants you brief burst of\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" speed, jump height, and\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\" slow falling.\"}"],\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\" slow falling.\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\"Removes slowing and\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\" grabbing effects.\"}"],\
 ] $(charges)
