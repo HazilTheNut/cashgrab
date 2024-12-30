@@ -28,8 +28,8 @@ execute if entity @a[tag=t_pm_owner,limit=1,tag=t_trinket_revoke] run function c
 tag @a[tag=t_pm_owner,limit=1,tag=t_trinket_revoke] remove t_trinket_revoke
 
 # Track whether trinket is in offhand
-scoreboard players set @a[tag=t_pm_owner,limit=1] trinket_in_offhand 0
-execute if items entity @a[tag=t_pm_owner,limit=1] weapon.offhand *[custom_data={is_trinket:1}] run scoreboard players set @a[tag=t_pm_owner,limit=1] trinket_in_offhand 1
+scoreboard players set @a[tag=t_pm_owner,limit=1,tag=!t_trinket_force_hotbar] trinket_in_offhand 0
+execute if items entity @a[tag=t_pm_owner,limit=1] weapon.offhand *[custom_data={is_trinket:1}] run scoreboard players set @a[tag=t_pm_owner,limit=1,tag=!t_trinket_force_hotbar] trinket_in_offhand 1
 
 # Get trinket quantity in inventory and store into trinket_charges
 function cashgrab:base/pmt_trinket_count
