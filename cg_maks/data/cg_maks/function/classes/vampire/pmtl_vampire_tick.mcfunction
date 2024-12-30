@@ -10,4 +10,5 @@
 #
 # Arguments: (none)
 
-# TODO Implement
+# Decrement Marked sequence timer
+scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={cv_A=1..}] cv_A 1
