@@ -9,13 +9,3 @@
 # Arguments: (none)
 
 particle minecraft:dust{color:[1f,0f,0f],scale:1.0} ~ ~0.5 ~ 0.1 0.1 0.1 0 3
-
-# Check for collision
-function cashgrab:util/npe_col_entity_filter_owner
-execute store result score @s temp_B if entity @a[distance=..0.5,tag=t_collision_candidate,tag=t_mark_owner] run scoreboard players set @s temp_B 1
-
-# If collision was detected, clean up this object and apply desired effects to owner.
-# execute if entity @s[scores={temp_B=1..}] run tellraw @a[tag=t_debug] "Remnant collision detected"
-execute if entity @s[scores={temp_B=1..}] run playsound minecraft:block.beacon.power_select player @a[distance=..0.5,tag=t_collision_candidate,tag=t_mark_owner] ~ ~ ~ 2 1.5
-execute if entity @s[scores={temp_B=1..}] run effect give @a[distance=..0.5,tag=t_collision_candidate,tag=t_mark_owner] instant_health 1 0
-execute if entity @s[scores={temp_B=1..}] run tag @e[tag=t_vampire_remnant_timer] add t_cleanup

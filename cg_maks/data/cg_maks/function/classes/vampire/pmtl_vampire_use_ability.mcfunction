@@ -14,12 +14,6 @@
 
 # vfx
 playsound entity.elder_guardian.curse player @e[type=player,distance=0..10] ~ ~ ~ 1 1.1
-title @e[type=player,distance=1..10] times 0 120 20
-title @e[type=player,distance=1..10] subtitle {"text":"MARKED!","bold":true,"color":"yellow"}
-title @e[type=player,distance=1..10] title ""
-tag @e[type=player,distance=1..10] add t_marked_target
-tag @a[tag=t_pm_owner,limit=1] add t_mark_owner
-effect give @a[tag=t_marked_target] minecraft:weakness 7 1
 
 # spawn bat swarm
 execute at @a[tag=t_pm_owner,limit=1] facing entity @a[tag=t_marked_target] eyes run function cashgrab:util/npe_create_missile {\
@@ -39,6 +33,3 @@ func_npe_tick:"cg_maks:classes/vampire/vampire_missile_tick",\
 func_npe_end:"cg_maks:classes/vampire/vampire_missile_end",\
 b_assign_as_peer:1,\
 }
-
-# Start mark timer
-scoreboard players set @a[tag=t_pm_owner,limit=1] cv_A 150

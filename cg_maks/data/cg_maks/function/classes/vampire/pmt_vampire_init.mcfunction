@@ -9,7 +9,7 @@
 # Arguments: (none)
 
 # Class variable usage: TODO Document these!
-#	cv_A	:	Marked target timer
+#	cv_A	:	
 #	cv_B	:	Pointer to this Vampire
 #	cv_C	:	
 #	cv_D	:	

@@ -10,13 +10,11 @@
 #
 # Arguments: (none)
 
-# If a marked target died on this server tick, create a remnant timer at their death location.
-execute if entity @a[tag=t_marked_target,scores={evl_death=1..}] run function cg_maks:classes/vampire/pmtl_vampire_create_remnant_at_marked_target
+# Search for Remnant timers
+function cashgrab:util/npe_eid_find_peers
 
-# Decrement Marked sequence timer
-scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={cv_A=1..}] cv_A 1
-
-#If timer has hit 0, remove the marked target tag
-execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1}] run function cashgrab:util/npe_col_entity_filter_hostile
-execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1}] run tag @e[tag=t_collision_candidate,tag=t_marked_target] remove t_marked_target
-execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1}] run tag @a[tag=t_mark_owner,tag=t_pm_owner,limit=1] remove t_mark_owner
+# Tag all eligible Remnant timers for consumption, and then consume them.
+tag @e[scores={eid_compare=0},tag=t_vampire_remnant_timer,distance=..0.5] add t_vampire_remnant_consume
+execute if entity @e[tag=t_vampire_remnant_consume] run effect give @a[tag=t_pm_owner,limit=1] instant_health 1 0
+execute if entity @e[tag=t_vampire_remnant_consume] run playsound minecraft:block.beacon.power_select player @a[tag=t_pm_owner,limit=1] ~ ~ ~ 2 1.5
+tag @e[tag=t_vampire_remnant_consume] add t_cleanup
