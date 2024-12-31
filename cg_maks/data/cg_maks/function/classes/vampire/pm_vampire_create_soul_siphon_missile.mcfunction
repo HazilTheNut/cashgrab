@@ -30,7 +30,7 @@ t_missile_name:"t_vampire_soulsiphon_missile_init",\
 col_terrain_allowed:"#cashgrab:partialsolid",\
 func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_hostile",\
 func_npe_tracking_filter:"cashgrab:util/npe_col_entity_filter_hostile",\
-func_npe_start:"cashgrab:util/noop",\
+func_npe_start:"cg_maks:classes/vampire/vampire_missile_start",\
 func_npe_tick:"cg_maks:classes/vampire/vampire_missile_tick",\
 func_npe_end:"cg_maks:classes/vampire/vampire_missile_end",\
 b_assign_as_peer:1,\
