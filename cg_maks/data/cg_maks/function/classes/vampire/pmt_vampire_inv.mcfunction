@@ -30,7 +30,7 @@ minecraft:attribute_modifiers=[\
 
 # Nightreaver Scythe
 item replace entity @a[tag=t_pm_owner,limit=1] hotbar.0 with minecraft:iron_hoe[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:custom_name="{\"italic\":false,\"color\":\"dark_red\",\"text\":\"Nightreaver Scythe\"}",\
+minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Nightreaver Scythe\"}",\
 minecraft:attribute_modifiers=[\
 {type:"attack_damage",slot:"mainhand",id:"cashgrab:nightreaver_atkdmg",amount:6,operation:"add_value"},\
 {type:"attack_speed",slot:"mainhand",id:"cashgrab:nightreaver_atkspd",amount:-2,operation:"add_value"}]]
