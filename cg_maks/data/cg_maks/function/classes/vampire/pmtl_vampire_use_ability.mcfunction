@@ -34,7 +34,7 @@ func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_hostile",\
 func_npe_tracking_filter:"cashgrab:util/npe_col_entity_filter_hostile",\
 func_npe_start:"cashgrab:util/noop",\
 func_npe_tick:"cg_maks:classes/vampire/vampire_missile_tick",\
-func_npe_end:"cgmaks:classes/vampire/vampire_missile_end",\
+func_npe_end:"cg_maks:classes/vampire/vampire_missile_end",\
 b_assign_as_peer:1,\
 }
 
