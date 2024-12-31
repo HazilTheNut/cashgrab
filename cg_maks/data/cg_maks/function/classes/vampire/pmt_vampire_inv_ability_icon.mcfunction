@@ -18,8 +18,7 @@ minecraft:lore=[\
 '["",{"text":"Summons a homing swarm of bats","italic":false,"color":"gray"}]',\
 '["",{"text":" that damages and ","italic":false,"color":"gray"},{"text":"Marks","italic":false,"color":"yellow"},{"text":" enemies.","italic":false,"color":"gray"}]',\
 '["",{"text":"Marked ","italic":false,"color":"yellow"},{"text":"enemies are weakened and","italic":false,"color":"gray"}]',\
-'["",{"text":" drop a","italic":false,"color":"gray"},{"text":" ","italic":false},{"text":"Remnant ","italic":false,"color":"dark_red"},{"text":"if","italic":false,"color":"gray"}]',\
-'["",{"text":" they","italic":false,"color":"gray"},{"text":" are killed.","italic":false,"color":"gray"}]',\
+'["",{"text":" drop a","italic":false,"color":"gray"},{"text":" ","italic":false},{"text":"Remnant ","italic":false,"color":"dark_red"},{"text":"if they are killed.","italic":false,"color":"gray"}]',\
 '["",{"text":"Remnants","italic":false,"color":"dark_red"},{"text":" can be picked up to","italic":false,"color":"gray"}]',\
 '["",{"text":" restore some health.","italic":false,"color":"gray"}]',\
 '["",{"text":"====","italic":false,"color":"dark_gray"}]',\
