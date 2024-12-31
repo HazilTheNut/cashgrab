@@ -30,10 +30,10 @@ t_dmg_from:"t_missile_owner",\
 b_remove_tags:0\
 }
 
-# If this damage killed a player, create a Remnant timer.
+# If this damage killed a player, create a Remnant timer and transfer ownership to the player who used the ability.
 execute if entity @a[tag=t_marked_target,scores={evl_death=1..}] run tag @a[tag=t_missile_owner,limit=1] add t_pm_owner
 execute if entity @a[tag=t_marked_target,scores={evl_death=1..}] run function cg_maks:classes/vampire/pmtl_vampire_create_remnant_at_marked_target
-execute if entity @a[tag=t_marked_target,scores={evl_death=1..}] run tag @a remove t_pm_owner
+execute if entity @a[tag=t_marked_target,scores={evl_death=1..}] as @a[tag=t_marked_target,scores={evl_death=1..},limit=1] run tag @s remove t_pm_owner
 
 #If missile missed, do nothing except clean up.
 particle explosion ~ ~ ~ 0.0 0.0 0.0 0 2
