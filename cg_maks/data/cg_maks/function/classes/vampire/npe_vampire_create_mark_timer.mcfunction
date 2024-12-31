@@ -10,7 +10,12 @@
 # Summary: Creates a Mark timer that handles the Vampire's Marked debuff.
 #
 # Arguments: (none)
-# TODO look into delegating debuff behavior into this timer's start function
+
+# Apply weakness and display action text.
+title @a[tag=t_vampire_marked_target,limit=1] actionbar {"text":"MARKED!","bold":true,"color":"yellow"}
+effect give @a[tag=t_vampire_marked_target,limit=1] minecraft:weakness 7 0
+
+# Apply timer
 execute at @a[tag=t_vampire_marked_target,limit=1] rotated as @a[tag=t_vampire_marked_target,limit=1] run function cashgrab:util/npe_create_timer {\
 i_lifetime_ticks:140,\
 b_anchor_at_pos:0,\

@@ -8,4 +8,5 @@
 #
 # Arguments: (none)
 
+#Play particles above targets head.
 particle minecraft:dust{color:[1f,0f,0f],scale:1.0} ~ ~3 ~ 0.1 0.1 0.1 0 3
