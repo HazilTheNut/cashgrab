@@ -18,4 +18,3 @@ execute if entity @s[scores={temp_B=1..}] run tellraw @a[tag=t_debug] "Remnant c
 execute if entity @s[scores={temp_B=1..}] run playsound minecraft:block.beacon.power_select player @a[tag=t_collision_found,limit=1] ~ ~ ~ 2 1.5
 execute if entity @s[scores={temp_B=1..}] run effect give @a[tag=t_collision_found,limit=1] instant_health 1 0
 execute if entity @s[scores={temp_B=1..}] run tag @e[tag=t_vampire_remnant_timer] add t_cleanup
-execute if entity @s[scores={temp_B=1..}] run scoreboard players set @s temp_B 0

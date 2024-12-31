@@ -7,7 +7,7 @@
 #	at: the owner's position
 #	rotated: as the owner
 #
-# Summary: Equips the Hexblade class onto the command executor
+# Summary: Creates a Remnant timer that the Vampire can interact with.
 #
 # Arguments: (none)
 
@@ -25,6 +25,9 @@ func_npe_end:"cashgrab:util/noop",\
 b_assign_as_peer:1,\
 }
 
+# Transfer ownership of this timer to the Vampire who marked the player initially.
+execute unless score @a[tag=t_pm_owner,limit=1] cv_B = @n[tag=t_vampire_remnant_timer_init] eid_owner run scoreboard players operation @n[tag=t_vampire_remnant_timer_init] eid_owner = @a[tag=t_pm_owner,limit=1] cv_B
+
 # Update inventory display to show available Remnant
 
 # Add/remove necessary tags to timer and notify Vampire.
@@ -32,6 +35,8 @@ tag @a[tag=t_marked_target,limit=1] remove t_marked_target
 tag @n[tag=t_vampire_remnant_timer_init] add t_vampire_remnant_timer
 tag @n[tag=t_vampire_remnant_timer_init] add t_stasis_immune
 tag @n[tag=t_vampire_remnant_timer_init] remove t_vampire_remnant_timer_init
-tellraw @a[tag=t_pm_owner,limit=1] "remnant ready"
+# TODO replace with inventory update
+tellraw @a[tag=t_pm_owner,limit=1] "remnant ready" 
+
 
 
