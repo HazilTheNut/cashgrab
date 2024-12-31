@@ -17,7 +17,7 @@ effect give @a[tag=t_vampire_marked_target,limit=1] minecraft:weakness 7 0
 
 # Apply timer
 execute at @a[tag=t_vampire_marked_target,limit=1] rotated as @a[tag=t_vampire_marked_target,limit=1] run function cashgrab:util/npe_create_timer {\
-i_lifetime_ticks:140,\
+i_lifetime_ticks:200,\
 b_anchor_at_pos:0,\
 t_timer_name:"t_vampire_mark_timer_init",\
 func_npe_start:"cg_maks:classes/vampire/vampire_mark_timer_start",\
