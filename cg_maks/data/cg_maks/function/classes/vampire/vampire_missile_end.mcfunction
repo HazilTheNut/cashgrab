@@ -10,6 +10,11 @@
 # Arguments:
 #	end_reason	: The reason for why the end function was called (0 = cleaned up, 1 = hit block terrain, 2 = hit entity, 3 = expired)
 
+# Clean up subordinate bat.
+function cashgrab:util/npe_eid_find_subs
+tp @e[scores={eid_compare=0}] ~ ~-1000 ~
+kill @e[scores={eid_compare=0}]
+
 $scoreboard players set @s temp_A $(end_reason)
 
 # Play particle effect, and then terminate function if this missile missed an entity.
@@ -43,11 +48,6 @@ execute unless entity @a[tag=t_vampire_marked_target,scores={evl_death=1..}] run
 
 # If this damage killed a player, create a Remnant timer and transfer ownership to the player who used the ability.
 execute if entity @a[tag=t_vampire_marked_target,scores={evl_death=1..}] run function cg_maks:classes/vampire/npe_vampire_create_remnant_at_marked_target
-
-# Clean up subordinate bat.
-function cashgrab:util/npe_eid_find_subs
-tp @e[scores={eid_compare=0}] ~ ~-1000 ~
-kill @e[scores={eid_compare=0}]
 
 # Clean up tags
 tag @e remove t_dmg_by
