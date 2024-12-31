@@ -20,7 +20,7 @@ tag @e[type=player,distance=1..10] add t_marked_target
 effect give @a[tag=t_marked_target] minecraft:weakness 7 1
 
 # spawn bat swarm
-execute at @a[tag=t_pm_owner,limit=1] facing entity @a[distance=1..10] eyes run function cashgrab:util/npe_create_missile {\
+execute at @a[tag=t_pm_owner,limit=1] facing entity @a[tag=t_marked_target] eyes run function cashgrab:util/npe_create_missile {\
 f_speed_mpt:0.65f,\
 i_lifetime_ticks:50,\
 i_origin_loc:1,\
@@ -39,4 +39,4 @@ b_assign_as_peer:1,\
 }
 
 # Start mark timer
-scoreboard players set @a[tag=t_pm_owner,limit=1] cv_A 140
+scoreboard players set @a[tag=t_pm_owner,limit=1] cv_A 150

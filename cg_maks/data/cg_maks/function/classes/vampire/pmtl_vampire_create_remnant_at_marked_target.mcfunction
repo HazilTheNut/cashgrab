@@ -11,6 +11,9 @@
 #
 # Arguments: (none)
 
+# Debug statement
+tellraw @a[tag=t_debug] "classes/vampire/pmtl_vampire_create_remnant_at_marked_target.mcfunction"
+
 # Set timer
 execute at @a[tag=t_marked_target,limit=1] rotated as @a[tag=t_marked_target,limit=1] run function cashgrab:util/npe_create_timer {\
 i_lifetime_ticks:140,\
