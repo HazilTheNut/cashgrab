@@ -15,7 +15,8 @@
 # vfx
 playsound entity.elder_guardian.curse player @e[type=player,distance=0..10] ~ ~ ~ 1 1.1
 title @e[type=player,distance=1..10] times 0 120 20
-title @e[type=player,distance=1..10] actionbar {"text":"MARKED!","bold":true,"color":"yellow"}
+title @e[type=player,distance=1..10] subtitle {"text":"MARKED!","bold":true,"color":"yellow"}
+title @e[type=player,distance=1..10] title ""
 tag @e[type=player,distance=1..10] add t_marked_target
 effect give @a[tag=t_marked_target] minecraft:weakness 7 1
 

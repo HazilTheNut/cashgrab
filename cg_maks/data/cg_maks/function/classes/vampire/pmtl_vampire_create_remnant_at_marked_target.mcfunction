@@ -27,7 +27,8 @@ b_assign_as_peer:1,\
 
 # Update inventory display to show available Remnant
 
-# Add necessary tags to timer
+# Add/remove necessary tags to timer
+tag @a[tag=t_marked_target,limit=1] remove t_marked_target
 tag @n[tag=t_vampire_remnant_timer_init] add t_vampire_remnant_timer
 tag @n[tag=t_vampire_remnant_timer_init] add t_stasis_immune
 tag @n[tag=t_vampire_remnant_timer_init] remove t_vampire_remnant_timer_init
