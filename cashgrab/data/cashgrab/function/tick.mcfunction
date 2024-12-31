@@ -76,7 +76,7 @@ execute as @e[type=minecraft:arrow,tag=!t_stasis,nbt={inGround:1b}] at @s run fu
 # =============================
 # Grab mechanics
 
-execute as @e[type=!minecraft:player,scores={eid_state=2}] run function cashgrab:base/npe_grab
+execute as @e[type=!minecraft:player,scores={eid_state=1..2}] run function cashgrab:base/npe_grab
 
 # =============================
 # Player death handling - this occurs after any deaths that might occur from missiles / timers

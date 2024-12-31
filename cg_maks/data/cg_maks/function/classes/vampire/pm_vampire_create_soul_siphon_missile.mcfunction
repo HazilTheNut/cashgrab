@@ -19,7 +19,7 @@ execute unless entity @a[tag=t_eid_matches,tag=t_vampire_soulsiphon_target] run 
 
 # Create soul siphon missile flying from Vampire originator to PM owner
 execute at @a[tag=t_vampire_mark_owner,limit=1] positioned ~ ~ ~ facing entity @a[tag=t_eid_matches,limit=1] eyes run function cashgrab:util/npe_create_missile {\
-f_speed_mpt:0.65f,\
+f_speed_mpt:0.4f,\
 i_lifetime_ticks:50,\
 i_origin_loc:1,\
 f_focal_dist_m:50,\

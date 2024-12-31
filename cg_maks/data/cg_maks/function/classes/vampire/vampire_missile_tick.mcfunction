@@ -9,5 +9,5 @@
 #
 # Arguments: (none)
 
-particle minecraft:dust{color:[0.7f,0.7f,0.7f],scale:1.0} ~ ~ ~ 0.1 0.1 0.1 0 1
+particle minecraft:dust{color:[0.84f,0.69f,0.64f],scale:1.0} ~ ~ ~ 0.3 0.3 0.3 0 1
 particle minecraft:mycelium ~ ~ ~ 0 0 0 0 2
