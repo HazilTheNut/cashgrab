@@ -19,15 +19,15 @@ tag @e[tag=t_eid_matches,limit=1] add t_missile_owner
 
 # If missile hit, reduce cooldown by 3 seconds and damage target.
 execute if score @s temp_A matches 2 run tellraw @a[tag=t_debug] "vampire_missile_end returned 2"
-execute if score @s temp_A matches 2 run scoreboard players remove @a[tag=t_missile_owner,limit=1,scores={ability_cd_ms=3001..30000}] ability_cd_ms 3000
+execute if score @s temp_A matches 2 run scoreboard players remove @a[tag=t_missile_owner,limit=1,scores={ability_cd_ms=3001..}] ability_cd_ms 3000
 execute if score @s temp_A matches 2 run tag @s add t_dmg_by
 execute if score @s temp_A matches 2 run function cashgrab:util/npe_dmg {\
-d_dmg_amount:1.0,\
+d_dmg_amount:2.0,\
 s_dmg_type:"minecraft:magic",\
 t_dmg_target:"t_collision_found",\
 t_dmg_by:"t_dmg_by",\
 t_dmg_from:"t_missile_owner",\
-b_remove_tags:1\
+b_remove_tags:0\
 }
 
 # If this damage killed a player, create a Remnant timer.
