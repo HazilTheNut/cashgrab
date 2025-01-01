@@ -9,7 +9,10 @@
 # Arguments:
 #	func_npe_tick		: Function to run every tick
 #	func_npe_end		: Function to run when the timer expires
-#						func_npe_end is supplied with an end_reason argument based on why func_npe_end was called: 0 = cleaned up, 1 = timer expired
+#						func_npe_end is supplied with an end_reason argument based on why func_npe_end was called
+#                           end_reason 0   = cleaned up
+#                           end_reason 1   = cleaned up from player death
+#                           end_reason 10  = timer lifetime expired
 
 # Run func_npe_tick or func_npe_end
 $execute if entity @s[scores={tmr_lifetime_ticks=1..}] run function $(func_npe_tick)

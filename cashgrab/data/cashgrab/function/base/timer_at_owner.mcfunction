@@ -9,7 +9,10 @@
 # Arguments:
 #	func_npe_tick		: Function to run every tick
 #	func_npe_end		: Function to run when the timer expires
-#						func_npe_end is supplied with an end_reason argument based on why func_npe_end was called: 0 = cleaned up, 1 = timer expired
+#						func_npe_end is supplied with an end_reason argument based on why func_npe_end was called
+#                           end_reason 0   = cleaned up
+#                           end_reason 1   = cleaned up from player death
+#                           end_reason 10  = timer lifetime expired
 
 # Get owner and tag them with t_timer_owner
 execute store result storage cashgrab:find_eid_args eid int 1 run scoreboard players get @s eid_owner

@@ -8,7 +8,7 @@
 # Summary: Titan's missile end function
 #
 # Arguments:
-#	end_reason	: The reason for why the end function was called (0 = cleaned up, 1 = hit block terrain, 2 = hit entity, 3 = expired)
+#	end_reason	: The reason for why the end function was called
 
 # Class variable usage:
 #	cv_A	:	Power Strike cooldown timer (in ms)

@@ -8,15 +8,16 @@
 # Summary: Echo Bolt missile end function
 #
 # Arguments:
-#	end_reason	: The reason for why the end function was called (0 = cleaned up, 1 = hit block terrain, 2 = hit entity, 3 = expired)
+#	end_reason	: The reason for why the end function was called
 
-$execute if score NUM_ZERO num matches $(end_reason) run return 0
+$execute if score NUM_END_REASON_CLEANUP num matches $(end_reason) run return 0
+$execute if score NUM_END_REASON_CLEANUP_PLAYER_DEATH num matches $(end_reason) run return 0
 
 # vfx / sfx
 particle minecraft:block{block_state:"minecraft:cyan_glazed_terracotta"} ~ ~ ~ 0.3 0.3 0.3 0 15
 playsound minecraft:block.ancient_debris.break player @a ~ ~ ~ 1.0 2.0
 
-$execute unless score NUM_TWO num matches $(end_reason) run return 0
+$execute unless score NUM_END_REASON_ENTITY_COLLISION num matches $(end_reason) run return 0
 
 # If missile hit an entity, damage them
 

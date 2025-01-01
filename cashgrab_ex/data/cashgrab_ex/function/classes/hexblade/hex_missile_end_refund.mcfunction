@@ -7,8 +7,7 @@
 #
 # Summary: Hexblade's Hex missile end function when refunding cooldown
 #
-# Arguments:
-#	end_reason	: The reason for why the end function was called (0 = cleaned up, 1 = hit block terrain, 2 = hit entity, 3 = expired)
+# Arguments: (none)
 
 # Class variable usage:
 #	cv_A	:	Pointer to target of hex (from Hexblade to target)

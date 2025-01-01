@@ -8,7 +8,7 @@
 # Summary: Frost Knight's missile end function
 #
 # Arguments:
-#	end_reason	: The reason for why the end function was called (0 = cleaned up, 1 = hit block terrain, 2 = hit entity, 3 = expired)
+#	end_reason	: The reason for why the end function was called
 
 # Class variable usage:
 #	cv_A	:	
@@ -22,7 +22,7 @@
 
 $scoreboard players set @s temp_A $(end_reason)
 
-execute unless score @s temp_A matches 1 run return 0
+execute unless score @s temp_A = NUM_END_REASON_TERRAIN_COLLISION num run return 0
 
 # Measure height on glacier
 scoreboard players set @s cv_H 0

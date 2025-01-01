@@ -8,7 +8,7 @@
 # Summary: Artillery's missile end function
 #
 # Arguments:
-#	end_reason	: The reason for why the end function was called (0 = cleaned up, 1 = hit block terrain, 2 = hit entity, 3 = expired)
+#	end_reason	: The reason for why the end function was called
 
 # Class variable usage:
 #	cv_A	:	Rocket Barrage missiles sequence timer
@@ -22,8 +22,9 @@
 
 $scoreboard players set @s temp_A $(end_reason)
 
-execute if score @s temp_A matches 0 run return 0
-execute if score @s temp_A matches 3 run return 0
+execute if score @s temp_A = NUM_END_REASON_CLEANUP num run return 0
+execute if score @s temp_A = NUM_END_REASON_CLEANUP_PLAYER_DEATH num run return 0
+execute if score @s temp_A = NUM_END_REASON_EXPIRE num run return 0
 
 particle minecraft:explosion ~ ~ ~ 1.5 1 1.5 0 15 force
 particle minecraft:lava ~ ~ ~ 2 0.2 2 0 10 force

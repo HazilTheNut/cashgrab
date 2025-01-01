@@ -8,7 +8,7 @@
 # Summary: Alchemist's flame trap missile end function
 #
 # Arguments:
-#	end_reason	: The reason for why the end function was called (0 = cleaned up, 1 = hit block terrain, 2 = hit entity, 3 = expired)
+#	end_reason	: The reason for why the end function was called
 
 # Class variable usage:
 #	cv_A	:	1 if has Caustic Brew, 0 otherwise
@@ -28,8 +28,7 @@
 #		21	= trap creates a puff of smoke
 #	61-120	= trap is arming
 
-$scoreboard players set @s temp_A $(end_reason)
-execute unless score @s temp_A matches 1..2 run return 0
+$execute unless score NUM_END_REASON_TERRAIN_COLLISION num matches $(end_reason) run return 0
 
 execute align xyz positioned ~0.5 ~0.5 ~0.5 run particle minecraft:smoke ~ ~ ~ 0.2 0.2 0.2 0 15
 execute align xyz positioned ~0.5 ~0.5 ~0.5 run function cashgrab:util/npe_create_timer {\

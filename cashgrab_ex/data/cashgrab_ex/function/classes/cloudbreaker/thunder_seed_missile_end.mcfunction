@@ -8,7 +8,7 @@
 # Summary: Thunder Seed missile end function
 #
 # Arguments:
-#	end_reason	: The reason for why the end function was called (0 = cleaned up, 1 = hit block terrain, 2 = hit entity, 3 = expired)
+#	end_reason	: The reason for why the end function was called
 
 # vfx / sfx
 execute positioned ~ ~6.5 ~ run particle minecraft:dust{color:[1.0f,1.0f,0.0f],scale:1.5} ~ ~ ~ 0.05 5 0.05 0 30 normal

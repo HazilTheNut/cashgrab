@@ -8,18 +8,16 @@
 # Summary: Vampire's Soul Siphon missile end function
 #
 # Arguments:
-#	end_reason	: The reason for why the end function was called (0 = cleaned up, 1 = hit block terrain, 2 = hit entity, 3 = expired)
+#	end_reason	: The reason for why the end function was called
 
 # Clean up subordinate bat.
 function cashgrab:util/npe_eid_find_subs
 tp @e[scores={eid_compare=0}] ~ ~-1000 ~
 kill @e[scores={eid_compare=0}]
 
-$scoreboard players set @s temp_A $(end_reason)
-
 # Play particle effect, and then terminate function if this missile missed an entity.
 particle explosion ~ ~ ~ 0.0 0.0 0.0 0 2
-execute unless score @s temp_A matches 2 run return 0
+$execute unless score NUM_END_REASON_ENTITY_COLLISION num matches $(end_reason) run return 0
 
 # Find owner and tag with t_missile_owner
 execute store result storage cashgrab:eid_args eid int 1 run scoreboard players get @s eid_owner

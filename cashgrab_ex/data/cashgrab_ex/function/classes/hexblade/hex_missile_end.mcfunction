@@ -8,7 +8,7 @@
 # Summary: Hexblade's Hex missile end function
 #
 # Arguments:
-#	end_reason	: The reason for why the end function was called (0 = cleaned up, 1 = hit block terrain, 2 = hit entity, 3 = expired)
+#	end_reason	: The reason for why the end function was called
 
 # Class variable usage:
 #	cv_A	:	Pointer to target of hex (from Hexblade to target)
@@ -23,8 +23,8 @@
 $scoreboard players set @s temp_A $(end_reason)
 
 # If missile missed, reduce cooldown
-execute if score @s temp_A matches 1 run function cashgrab_ex:classes/hexblade/hex_missile_end_refund
-execute if score @s temp_A matches 3 run function cashgrab_ex:classes/hexblade/hex_missile_end_refund
+execute if score @s temp_A = NUM_END_REASON_TERRAIN_COLLISION num run function cashgrab_ex:classes/hexblade/hex_missile_end_refund
+execute if score @s temp_A = NUM_END_REASON_EXPIRE num run function cashgrab_ex:classes/hexblade/hex_missile_end_refund
 
 # If missile hit an entity, damage and set as hex target
-execute if score @s temp_A matches 2 run function cashgrab_ex:classes/hexblade/hex_missile_end_entity_hit
+execute if score @s temp_A = NUM_END_REASON_ENTITY_COLLISION num run function cashgrab_ex:classes/hexblade/hex_missile_end_entity_hit
