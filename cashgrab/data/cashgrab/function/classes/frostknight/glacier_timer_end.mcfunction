@@ -7,7 +7,7 @@
 # Summary: Frost Knight's glacier end function
 #
 # Arguments:
-#	end_reason	: The reason for why the end function was called (0 = cleaned up, 1 = timer expired)
+#	end_reason	: The reason for why the end function was called
 
 # Class variable usage:
 #	cv_A	:	

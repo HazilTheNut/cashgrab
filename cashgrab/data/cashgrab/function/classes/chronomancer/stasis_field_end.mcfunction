@@ -7,7 +7,7 @@
 # Summary: Chronomancer's stasis field end function
 #
 # Arguments:
-#	end_reason	: The reason for why the end function was called (0 = cleaned up, 1 = hit block terrain, 2 = hit entity, 3 = expired)
+#	end_reason	: The reason for why the end function was called
 
 # Class variable usage:
 #	cv_A	:	1 if crossbow is in offhand, and 0 otherwise

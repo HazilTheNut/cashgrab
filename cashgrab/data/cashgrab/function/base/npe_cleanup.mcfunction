@@ -19,8 +19,8 @@ execute if entity @s[tag=t_cleanup_player_death] run tag @e[scores={eid_state=1.
 execute as @e[scores={eid_state=1..,eid_compare=0}] run function cashgrab:base/npe_cleanup_recursion
 
 # If I am a missile or timer, call my respective end function behaviors
-execute if entity @s[type=minecraft:marker,tag=t_missile] run function cashgrab:base/missile_end_cleanup with entity @s data
-execute if entity @s[type=minecraft:marker,tag=t_timer] run function cashgrab:base/timer_end_cleanup with entity @s data
+execute if entity @s[type=minecraft:marker,tag=t_missile] at @s rotated as @s run function cashgrab:base/missile_end_cleanup with entity @s data
+execute if entity @s[type=minecraft:marker,tag=t_timer] at @s rotated as @s run function cashgrab:base/timer_end_cleanup with entity @s data
 
 # If I am tagged as t_no_self_cleanup, I am not an entity that has code elsewhere that completes the cleanup
 #	Thus, destroy myself
