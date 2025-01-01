@@ -13,5 +13,4 @@
 
 # Run func_npe_tick or func_npe_end
 $execute if entity @s[scores={tmr_lifetime_ticks=1..}] run function $(func_npe_tick)
-$execute if entity @s[scores={tmr_lifetime_ticks=..0},tag=t_cleanup] run function $(func_npe_end) {end_reason:0}
-$execute if entity @s[scores={tmr_lifetime_ticks=..0},tag=!t_cleanup] run function $(func_npe_end) {end_reason:1}
+$execute if entity @s[scores={tmr_lifetime_ticks=..0}] run function $(func_npe_end) {end_reason:10}
