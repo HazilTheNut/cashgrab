@@ -19,7 +19,8 @@ execute if entity @s[scores={tmr_anchor_pos=0}] run function cashgrab:base/timer
 # If anchored at creation position
 execute if entity @s[scores={tmr_anchor_pos=1..}] run function cashgrab:base/timer_at_self with entity @s data
 
-# Cleanup
-tag @s[scores={tmr_lifetime_ticks=..0}] add t_kill
-scoreboard players reset @s[tag=t_kill]
-kill @s[tag=t_kill]
+# Cleanup when timer expires
+execute unless entity @s[scores={tmr_lifetime_ticks=..0}] run return 0
+function cashgrab:base/npe_cleanup {b_self_destruct:0}
+scoreboard players reset @s
+kill @s

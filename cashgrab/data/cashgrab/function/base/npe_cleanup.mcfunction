@@ -5,7 +5,8 @@
 #
 # Summary: Tags self and subordinates to the executor and tags them all as t_cleanup
 #
-# Arguments: (none)
+# Arguments:
+#   b_self_destruct  : if 1, call end functions and/or destroy caller
 
 tellraw @a[tag=t_debug] [{"type":"text","text":"npe_cleanup eid_self: "},{"type":"score","score":{"name":"@s","objective":"eid_self"}}]
 
@@ -17,6 +18,8 @@ function cashgrab:util/npe_eid_find_subs
 execute if entity @s[tag=t_cleanup_player_death] run tag @e[scores={eid_state=1..,eid_compare=0}] add t_cleanup_player_death
 
 execute as @e[scores={eid_state=1..,eid_compare=0}] run function cashgrab:base/npe_cleanup_recursion
+
+$execute unless score NUM_ONE num matches $(b_self_destruct) run return 0
 
 # If I am a missile or timer, call my respective end function behaviors
 execute if entity @s[type=minecraft:marker,tag=t_missile] at @s rotated as @s run function cashgrab:base/missile_end_cleanup with entity @s data

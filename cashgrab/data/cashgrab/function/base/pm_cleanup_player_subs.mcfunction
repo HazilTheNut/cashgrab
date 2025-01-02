@@ -16,4 +16,4 @@ function cashgrab:util/find_eid_owned_by with storage cashgrab:find_eid_args
 $execute if score NUM_ONE num matches $(b_player_died) run tag @e[tag=!t_pm,tag=t_eid_matches] add t_cleanup_player_death
 
 # Tag them for cleanup
-execute as @e[tag=!t_pm,tag=t_eid_matches] run function cashgrab:base/npe_cleanup
+execute as @e[tag=!t_pm,tag=t_eid_matches] run function cashgrab:base/npe_cleanup {b_self_destruct:1}

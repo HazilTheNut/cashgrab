@@ -59,19 +59,10 @@ scoreboard players set @a[scores={pm_count=0}] reinitialize 1
 
 # =============================
 # Operate non-pm non-player entities such as timers, missiles, etc.
-
-# All dropped item entities are destroyed except for those that are tagged as "t_pickup"
-kill @e[type=minecraft:item,tag=!t_pickup]
-
 function cashgrab:base/gt_stasis
 function cashgrab:base/gt_coins
-execute as @e[type=minecraft:marker,tag=t_missile] at @s rotated as @s run function cashgrab:base/missile_main with entity @s data
-execute as @e[type=minecraft:marker,tag=t_timer] at @s rotated as @s run function cashgrab:base/timer_main with entity @s data
-execute as @e[type=minecraft:marker,tag=t_coinshower] at @s run function cashgrab:base/npe_coinshower
 
-kill @e[type=minecraft:egg]
-kill @e[type=minecraft:experience_bottle]
-execute as @e[type=minecraft:arrow,tag=!t_stasis,nbt={inGround:1b}] at @s run function cashgrab:base/arrow_cleanup
+execute as @e[type=!minecraft:player,tag=!t_pm] run function cashgrab:base/npe_main
 
 # =============================
 # Grab mechanics

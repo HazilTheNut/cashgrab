@@ -1,4 +1,4 @@
-# base/missile_main.mcfunction
+# base/missile_end_cleanup.mcfunction
 #
 # Context:
 #	as: a missile
@@ -13,4 +13,6 @@
 # Self-destruct if cleaned up
 $execute if entity @s[tag=!t_cleanup_player_death] run function $(func_npe_end) {end_reason:0}
 $execute if entity @s[tag=t_cleanup_player_death] run function $(func_npe_end) {end_reason:1}
+
+scoreboard players reset @s
 kill @s

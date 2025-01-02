@@ -21,10 +21,10 @@
 #	cv_H	:	Boomerang life timer (counts upwards instead of downwards for more readable code)
 
 # Desstroy item display
-function cashgrab:util/npe_eid_find_subs
-tag @e[scores={eid_compare=0}] add t_kill
-scoreboard players reset @e[tag=t_kill]
-kill @e[tag=t_kill]
+#function cashgrab:util/npe_eid_find_subs
+#tag @e[scores={eid_compare=0}] add t_kill
+#scoreboard players reset @e[tag=t_kill]
+#kill @e[tag=t_kill]
 
 $scoreboard players set @s temp_A $(end_reason)
 
