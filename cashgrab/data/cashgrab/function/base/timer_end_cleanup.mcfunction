@@ -25,9 +25,8 @@ function cashgrab:util/find_eid_self with storage cashgrab:find_eid_args
 tag @a[tag=t_eid_matches,limit=1] add t_timer_owner
 tag @e[tag=t_eid_matches,limit=1] add t_timer_owner
 
-data modify storage cashgrab:end_reason end_reason set value 0
-execute if entity @a[tag=t_eid_matches,tag=t_cleanup_player_death] run data modify storage cashgrab:end_reason end_reason set value 1
-execute if entity @e[tag=t_eid_matches,tag=t_cleanup_player_death] run data modify storage cashgrab:end_reason end_reason set value 1
+execute unless entity @s[tag=t_cleanup_player_death] store result storage cashgrab:end_reason end_reason int 1.0 run scoreboard players get NUM_END_REASON_CLEANUP num
+execute if entity @s[tag=t_cleanup_player_death] store result storage cashgrab:end_reason end_reason int 1.0 run scoreboard players get NUM_END_REASON_CLEANUP_PLAYER_DEATH num
 
 $execute if entity @a[tag=t_timer_owner] at @a[tag=t_timer_owner,limit=1] rotated as @a[tag=t_timer_owner,limit=1] run function $(func_npe_end) with storage cashgrab:end_reason
 $execute unless entity @a[tag=t_timer_owner] at @e[tag=t_timer_owner,limit=1] rotated as @e[tag=t_timer_owner,limit=1] run function $(func_npe_end) with storage cashgrab:end_reason

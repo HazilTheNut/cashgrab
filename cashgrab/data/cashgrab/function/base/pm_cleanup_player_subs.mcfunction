@@ -8,6 +8,8 @@
 # Arguments:
 #   b_player_died   :   1 iff cleanup occurred from player death
 
+$tellraw @a[tag=t_debug] "base/pm_cleanup_player_subs: b_player_died $(b_player_died)"
+
 # Find subordinates of player
 execute store result storage cashgrab:find_eid_args eid int 1 run scoreboard players get @s eid_owner
 function cashgrab:util/find_eid_owned_by with storage cashgrab:find_eid_args

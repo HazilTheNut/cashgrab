@@ -20,7 +20,7 @@
 #	func_npe_end			: String function name to run when either the missile collides or expires
 
 # Self-destruct if tagged for cleanup
-execute if entity @s[tag=t_cleanup] run function cashgrab:base/missile_end_cleanup
+execute if entity @s[tag=t_cleanup] run function cashgrab:base/missile_end_cleanup with entity @s data
 execute if entity @s[tag=t_cleanup] run return 0
 
 scoreboard players set @s mis_func_tick_dyaw_mdeg 0

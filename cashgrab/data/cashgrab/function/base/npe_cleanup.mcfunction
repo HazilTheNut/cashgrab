@@ -8,11 +8,13 @@
 # Arguments:
 #   b_self_destruct  : if 1, call end functions and/or destroy caller
 
-tellraw @a[tag=t_debug] [{"type":"text","text":"npe_cleanup eid_self: "},{"type":"score","score":{"name":"@s","objective":"eid_self"}}]
-
 tag @s add t_cleanup
 
 function cashgrab:util/npe_eid_find_subs
+
+execute store result score @s temp_A run execute if entity @e[scores={eid_state=1..,eid_compare=0}]
+
+tellraw @a[tag=t_debug] [{"type":"text","text":"base/npe_cleanup eid_self: "},{"type":"score","score":{"name":"@s","objective":"eid_self"}},{"type":"text","text":" eid_owner: "},{"type":"score","score":{"name":"@s","objective":"eid_owner"}},{"type":"text","text":" num subs: "},{"type":"score","score":{"name":"@s","objective":"temp_A"}}]
 
 # If cleanup originated from player death, propagate t_cleanup_player_death tag
 execute if entity @s[tag=t_cleanup_player_death] run tag @e[scores={eid_state=1..,eid_compare=0}] add t_cleanup_player_death

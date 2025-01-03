@@ -21,7 +21,7 @@ tag @e[tag=t_eid_matches,limit=1] add t_timer_owner
 tag @a[tag=t_eid_matches,limit=1] add t_timer_owner
 
 # If there is no owner, self destruct
-execute unless entity @e[tag=t_timer_owner] unless entity @a[tag=t_timer_owner] run return run function cashgrab:base/timer_end_cleanup
+execute unless entity @e[tag=t_timer_owner] unless entity @a[tag=t_timer_owner] run return run function cashgrab:base/timer_end_cleanup with entity @s data
 
 # Run func_npe_tick or func_npe_end
 $execute unless entity @a[tag=t_timer_owner] if entity @s[scores={tmr_lifetime_ticks=1..}] at @e[tag=t_timer_owner,limit=1] rotated as @e[tag=t_timer_owner,limit=1] run function $(func_npe_tick)

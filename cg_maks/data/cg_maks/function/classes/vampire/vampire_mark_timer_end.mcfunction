@@ -8,7 +8,8 @@
 #
 # Arguments: (none)
 
-tellraw @a[tag=t_debug] "classes/vampire/vampire_mark_timer_end"
+$tellraw @a[tag=t_debug] "classes/vampire/vampire_mark_timer_end: end_reason $(end_reason)"
+tellraw @a[tag=t_debug] ["classes/vampire/vampire_mark_timer_end: timer tags ",{"type":"nbt","nbt":"Tags","source":"entity","entity":"@s"}]
 
 # Check if the timer was cleaned up due to its owner dying
 $execute unless score NUM_END_REASON_CLEANUP_PLAYER_DEATH num matches $(end_reason) run return 0

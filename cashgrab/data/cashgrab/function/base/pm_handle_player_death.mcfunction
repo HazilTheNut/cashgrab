@@ -1,4 +1,4 @@
-# base/pm_main.mcfunction
+# base/pm_handle_player_death.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
@@ -18,6 +18,7 @@ tag @a[tag=t_eid_matches,limit=1] add t_pm_owner
 # Handle player deaths
 
 # === Detect if player has died
+execute if score @a[tag=t_pm_owner,limit=1] evl_death matches 1.. run tellraw @a[tag=t_debug] "base/pm_handle_player_death: Player death caught"
 execute if score @a[tag=t_pm_owner,limit=1] evl_death matches 1.. run function cashgrab:base/pm_cleanup_player_subs {b_player_died:1}
 execute if entity @a[tag=t_pm_owner,limit=1,scores={evl_death=1..,activity_state=21}] at @a[tag=t_pm_owner,limit=1] rotated as @a[tag=t_pm_owner,limit=1] run function cashgrab:base/pmtl_create_coinshower
 execute if entity @a[tag=t_pm_owner,limit=1,scores={evl_death=1..,activity_state=21}] at @a[tag=t_pm_owner,limit=1] rotated as @a[tag=t_pm_owner,limit=1] run function cashgrab:classes/pmtl_class_end with entity @s data.class_info
