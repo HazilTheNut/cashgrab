@@ -10,11 +10,6 @@
 # Arguments:
 #	end_reason	: The reason for why the end function was called
 
-# Clean up subordinate bat.
-function cashgrab:util/npe_eid_find_subs
-tp @e[scores={eid_compare=0}] ~ ~-1000 ~
-kill @e[scores={eid_compare=0}]
-
 # Play particle effect, and then terminate function if this missile missed an entity.
 particle explosion ~ ~ ~ 0.0 0.0 0.0 0 2
 $execute unless score NUM_END_REASON_ENTITY_COLLISION num matches $(end_reason) run return 0
@@ -40,12 +35,8 @@ b_remove_tags:0\
 tag @a[tag=t_collision_found] add t_vampire_marked_target
 tag @a[tag=t_missile_owner,limit=1] add t_vampire_mark_owner
 
-
-# If this damage did not kill the player, mark them for 7 seconds and apply weakness.
-execute unless entity @a[tag=t_vampire_marked_target,scores={evl_death=1..}] run function cg_maks:classes/vampire/npe_vampire_create_mark_timer
-
-# If this damage killed a player, create a Remnant timer and transfer ownership to the player who used the ability.
-execute if entity @a[tag=t_vampire_marked_target,scores={evl_death=1..}] run function cg_maks:classes/vampire/npe_vampire_create_remnant_at_marked_target
+# Mark player for 7 seconds and apply weakness.
+function cg_maks:classes/vampire/npe_vampire_create_mark_timer
 
 # Clean up tags
 tag @e remove t_dmg_by
