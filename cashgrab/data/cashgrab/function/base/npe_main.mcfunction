@@ -7,6 +7,8 @@
 #
 # Arguments: (none)
 
+# TODO: figure out how to use @s target selectors to check if I am dead and return if so
+
 # All dropped item entities are destroyed except for those that are tagged as "t_pickup"
 kill @s[type=minecraft:item,tag=!t_pickup]
 
