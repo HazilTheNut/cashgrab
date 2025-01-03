@@ -17,4 +17,4 @@ execute if entity @e[tag=t_eid_matches] run return 0
 
 tellraw @a[tag=t_debug] [{"type":"text","text":"npe_cleanup_if_ownerless eid_owner: "},{"type":"score","score":{"name":"@s","objective":"eid_owner"}}]
 
-function cashgrab:base/npe_cleanup
+function cashgrab:base/npe_cleanup {b_self_destruct:1}

@@ -20,9 +20,10 @@
 # Decrement i_lifetime_ticks and run func_npe_tick or func_npe_end
 scoreboard players remove @s mis_lifetime_ticks 1
 
-$execute if entity @s[scores={mis_lifetime_ticks=..0}] run function $(func_npe_end) {end_reason:3}
+$execute if entity @s[scores={mis_lifetime_ticks=..0}] run function $(func_npe_end) {end_reason:10}
 execute if entity @s[scores={mis_lifetime_ticks=..0}] run tag @s add t_kill
-execute if entity @s[scores={mis_lifetime_ticks=..0}] run scoreboard players reset @s
+execute if entity @s[tag=t_kill] run function cashgrab:base/npe_cleanup {b_self_destruct:0}
+execute if entity @s[tag=t_kill] run scoreboard players reset @s
 kill @s[tag=t_kill]
 
 # func_npe_tick can run commands like tp to alter its location and facing angle and should therefore influence where it goes
@@ -60,18 +61,10 @@ $execute if entity @s[scores={__mis_has_collided=0}] run tp @s ~$(vel_x) ~$(vel_
 # 	C) If the missile has gravity and does not have the t_missile_fall tag, apply t_missile_fall tag
 
 # Case A
-$execute if entity @s[scores={__mis_has_collided=1,mis_gravity_const_mmpt2=..0,col_terrain=1..}] run function $(func_npe_end) {end_reason:1}
-$execute if entity @s[scores={__mis_has_collided=1,mis_gravity_const_mmpt2=..0,col_terrain=0,col_entity=1..}] run function $(func_npe_end) {end_reason:2}
-execute if entity @s[scores={__mis_has_collided=1,mis_gravity_const_mmpt2=..0}] run tag @s add t_kill
-execute if entity @s[tag=t_kill] run scoreboard players reset @s
-kill @s[tag=t_kill]
+execute if entity @s[scores={__mis_has_collided=1,mis_gravity_const_mmpt2=..0}] run return run function cashgrab:base/missile_travel_end_collision with entity @s data
 
 # Case B
-$execute if entity @s[scores={__mis_has_collided=1,mis_gravity_const_mmpt2=1..,col_terrain=1..},tag=t_missile_fall] run function $(func_npe_end) {end_reason:1}
-$execute if entity @s[scores={__mis_has_collided=1,mis_gravity_const_mmpt2=1..,col_terrain=0,col_entity=1..},tag=t_missile_fall] run function $(func_npe_end) {end_reason:2}
-execute if entity @s[scores={__mis_has_collided=1,mis_gravity_const_mmpt2=1..},tag=t_missile_fall] run tag @s add t_kill
-execute if entity @s[tag=t_kill] run scoreboard players reset @s
-kill @s[tag=t_kill]
+execute if entity @s[scores={__mis_has_collided=1,mis_gravity_const_mmpt2=1..},tag=t_missile_fall] run return run function cashgrab:base/missile_travel_end_collision with entity @s data
 
 # Case C
 execute if entity @s[scores={__mis_has_collided=1,mis_gravity_const_mmpt2=1..},tag=!t_missile_fall] run tag @s add t_missile_fall

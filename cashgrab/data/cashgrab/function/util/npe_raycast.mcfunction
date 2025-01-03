@@ -13,7 +13,10 @@
 #	func_npe_entity_filter	: Filtering function for which entities to collide with. Function applies the tag "t_collision_candidate" to all possible entities the missile can collide with
 #	func_npe_step			: String function name to run on each raycast step
 #	func_npe_end			: String function name to run when either the missile collides or expires
-#								func_end is supplied with an end_reason argument based on why func_end was called: 1 = hit block terrain, 2 = hit entity, 3 = expired
+#								func_end is supplied with an end_reason argument based on why func_end was called:
+#                               end_reason 10  = reached end of raycast
+#                               end_reason 20  = raycast struck terrain
+#                               end_reason 30  = raycast hit an entity
 
 $scoreboard players set @s rc_steps_remaining $(i_range_m)
 scoreboard players operation @s rc_steps_remaining *= NUM_RAYCAST_STEPS_PER_M num

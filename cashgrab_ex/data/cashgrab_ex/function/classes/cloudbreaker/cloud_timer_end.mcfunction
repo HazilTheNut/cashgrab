@@ -7,7 +7,7 @@
 # Summary: Cloud timer end function
 #
 # Arguments:
-#	end_reason	: The reason for why the end function was called (0 = cleaned up, 1 = timer expired)
+#	end_reason	: The reason for why the end function was called
 
 # vfx / sfx
 particle minecraft:cloud ~ ~ ~ 0.25 0.25 0.25 0 1 normal

@@ -9,7 +9,7 @@
 # Summary: Titan's missile end function
 #
 # Arguments:
-#	end_reason	: The reason for why the end function was called (1 = hit block terrain, 2 = hit entity, 3 = expired)
+#	end_reason	: The reason for why the end function was called
 
 # Class variable usage:
 #	cv_A	:	Power Strike cooldown timer (in ms)
@@ -26,10 +26,11 @@ $scoreboard players set @s temp_A $(end_reason)
 $tellraw @a[tag=t_debug] "classes/titan/pull_raycast_end: end_reason: $(end_reason)"
 execute if score @s col_terrain matches 1.. run tellraw @a[tag=t_debug] [{"type":"text","text":"classes/titan/pull_raycast_end: temp_A: "},{"type":"score","score":{"name":"@s","objective":"temp_A"}}]
 
+# If there is no entity collision, raycast missed and should reduce cooldown
+execute unless score @s temp_A = NUM_END_REASON_ENTITY_COLLISION num run scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 6000
+execute unless score @s temp_A = NUM_END_REASON_ENTITY_COLLISION num run return 0
 
-execute unless score @s temp_A matches 2 run scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 6000
-execute unless score @s temp_A matches 2 run return 0
-
+# If there is a hit, set proper cooldown
 scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 13000
 
 execute positioned ~ ~ ~ facing ^ ^ ^-1 run function cashgrab:util/npe_create_missile {\
