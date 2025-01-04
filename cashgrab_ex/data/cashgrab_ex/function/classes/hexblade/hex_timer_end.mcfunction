@@ -23,8 +23,10 @@
 # Remove glowing effect from owner
 effect clear @e[tag=t_timer_owner] minecraft:glowing
 
-# If this timer expired, nullify owner's Hex target pointer
-$execute if score NUM_END_REASON_EXPIRE num matches $(end_reason) run scoreboard players set @a[tag=t_timer_owner] cv_A 0
+# If this timer expired, nullify Hex originator's Hex target pointer
+$execute if score NUM_END_REASON_EXPIRE num matches $(end_reason) store result storage cashgrab:eid_args eid int 1 run scoreboard players get @s cv_B
+$execute if score NUM_END_REASON_EXPIRE num matches $(end_reason) run function cashgrab:util/find_eid_self with storage cashgrab:eid_args
+$execute if score NUM_END_REASON_EXPIRE num matches $(end_reason) run scoreboard players set @a[tag=t_eid_matches] cv_A 0
 
 # Check if owner died
 $execute unless score NUM_END_REASON_CLEANUP_PLAYER_DEATH num matches $(end_reason) run return 0
