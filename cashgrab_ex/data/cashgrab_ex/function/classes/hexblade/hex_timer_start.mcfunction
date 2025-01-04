@@ -4,6 +4,7 @@
 #	as: a timer
 #	at: the timer's owner
 #   rotated: as the timer's owner
+#   + Hexblade Hex originator is tagged with t_hexblade_hex_originator
 #
 # Summary: Hexblade's Hex timer start function
 #
@@ -21,3 +22,6 @@
 
 # Apply glowing effect to owner
 effect give @e[tag=t_timer_owner] minecraft:glowing 11
+
+# Set pointer of Hex originator to my owner
+scoreboard players operation @a[tag=t_hexblade_hex_originator,limit=1] cv_A = @s eid_self

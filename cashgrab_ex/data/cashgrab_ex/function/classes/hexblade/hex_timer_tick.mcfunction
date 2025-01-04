@@ -22,6 +22,10 @@
 # Display particles at hex target (other than remnant)
 particle minecraft:dust{color:[0.8f,0.2f,0.6f],scale:1.0} ~ ~2.5 ~ 0.1 0.1 0.1 0 1
 
+# If you hit a target twice with Hex, the glowing effect removal takes priority over applying it
+#   So on the first tick of lifetime, apply glowing effect again
+execute if score @s tmr_lifetime_ticks matches 219 run effect give @e[tag=t_timer_owner] minecraft:glowing 11
+
 # At specific timer lifetime values, pulse
 execute if score @s tmr_lifetime_ticks matches 160 run function cashgrab_ex:classes/hexblade/hex_timer_pulse
 execute if score @s tmr_lifetime_ticks matches 100 run function cashgrab_ex:classes/hexblade/hex_timer_pulse

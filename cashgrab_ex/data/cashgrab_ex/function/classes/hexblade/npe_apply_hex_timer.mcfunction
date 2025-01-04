@@ -2,7 +2,7 @@
 #
 # Context:
 #	as: a non-player entity
-#   + Hexblade originator is tagged with t_hexblade_hex_originator
+#   + Hexblade Hex originator is tagged with t_hexblade_hex_originator
 #
 # Summary: Generates a Hex timer that points back towards entity with t_hexblade_hex_originator
 #
