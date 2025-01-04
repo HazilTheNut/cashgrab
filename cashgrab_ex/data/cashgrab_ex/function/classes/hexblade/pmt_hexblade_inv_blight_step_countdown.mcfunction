@@ -10,14 +10,14 @@
 #	count	:	Quantity of item displayed
 
 # Class variable usage:
-#	cv_A	:	Pointer to target of hex (from Hexblade to target)
-#	cv_B	:	Hex duration/sequence timer
+#	cv_A	:	Pointer (stored on Hexblade) to target of hex
+#	cv_B	:	Pointer (stored on Hex timer) to Hexblade
 #	cv_C	:	
 #	cv_D	:	Blight Step countdown
 #	cv_E	:	
 #	cv_F	:	
 #	cv_G	:	
-#	cv_H	:	
+#	cv_H	:
 
 #$tellraw @a[tag=t_debug] "classes/hexblade/pmt_hexblade_inv_blight_step_countdown: count = $(count)"
 

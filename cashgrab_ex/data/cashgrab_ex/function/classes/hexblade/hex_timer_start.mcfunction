@@ -1,10 +1,11 @@
-# classes/hexblade/hex_remnant_timer_tick.mcfunction
+# classes/hexblade/hex_timer_start.mcfunction
 #
 # Context:
 #	as: a timer
-#	at: the timer
+#	at: the timer's owner
+#   rotated: as the timer's owner
 #
-# Summary: Hexblade's Hex remnant timer tick function (what player can teleport to after target player death)
+# Summary: Hexblade's Hex timer start function
 #
 # Arguments: (none)
 
@@ -18,4 +19,5 @@
 #	cv_G	:	
 #	cv_H	:
 
-particle minecraft:dust{color:[0.8f,0.2f,0.6f],scale:1.0} ~ ~0.5 ~ 0.1 0.1 0.1 0 3
+# Apply glowing effect to owner
+effect give @e[tag=t_timer_owner] minecraft:glowing 11
