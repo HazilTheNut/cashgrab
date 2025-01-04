@@ -24,4 +24,4 @@
 effect give @e[tag=t_timer_owner] minecraft:glowing 11
 
 # Set pointer of Hex originator to my owner
-scoreboard players operation @a[tag=t_hexblade_hex_originator,limit=1] cv_A = @s eid_self
+scoreboard players operation @a[tag=t_hexblade_hex_originator,limit=1] cv_A = @s eid_owner

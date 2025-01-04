@@ -33,6 +33,9 @@ scoreboard players set @a[tag=t_pm_owner,limit=1] cv_E 0
 execute if entity @e[tag=t_hex_target] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_E 1
 execute if entity @a[tag=t_hex_target] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_E 1
 
+# If Hex target doesn't exist, nullify pointer
+scoreboard players set @a[tag=t_pm_owner,limit=1,scores={cv_E=0}] cv_A 0
+
 # Update cv_F (hex target existence state)
 scoreboard players set @a[tag=t_pm_owner,limit=1,scores={cv_E=1,cv_F=2}] cv_F 1
 scoreboard players set @a[tag=t_pm_owner,limit=1,scores={cv_E=1,cv_F=-1..0}] cv_F 2
