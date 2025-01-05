@@ -22,11 +22,21 @@
 # Armor
 item replace entity @a[tag=t_pm_owner,limit=1] armor.head with minecraft:iron_helmet[minecraft:unbreakable={show_in_tooltop:false}]
 item replace entity @a[tag=t_pm_owner,limit=1] armor.chest with minecraft:leather_chestplate[minecraft:unbreakable={show_in_tooltop:false},\
-minecraft:dyed_color=9699666]
+minecraft:dyed_color=5048136,\
+minecraft:trim={\
+pattern:"host",\
+material:"diamond",\
+show_in_tooltip:false\
+}]
 item replace entity @a[tag=t_pm_owner,limit=1] armor.legs with minecraft:leather_leggings[minecraft:unbreakable={show_in_tooltop:false},\
-minecraft:dyed_color=9699666]
+minecraft:dyed_color=5048136,\
+minecraft:trim={\
+pattern:"host",\
+material:"diamond",\
+show_in_tooltip:false\
+}]
 item replace entity @a[tag=t_pm_owner,limit=1] armor.feet with minecraft:leather_boots[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:dyed_color=9699666,\
+minecraft:dyed_color=5048136,\
 minecraft:attribute_modifiers=[\
 {type:"movement_speed",slot:"feet",id:"cashgrab:speed_bonus",amount:0.3,operation:"add_multiplied_base"},\
 {type:"armor",slot:"feet",id:"cashgrab:boots_armor",amount:5,operation:"add_value"}\

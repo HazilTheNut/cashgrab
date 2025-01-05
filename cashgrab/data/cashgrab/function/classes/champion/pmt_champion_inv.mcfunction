@@ -20,9 +20,9 @@
 
 # =============================
 # Armor
-item replace entity @a[tag=t_pm_owner,limit=1] armor.head with minecraft:golden_helmet[minecraft:unbreakable={show_in_tooltop:false}]
-item replace entity @a[tag=t_pm_owner,limit=1] armor.chest with minecraft:golden_chestplate[minecraft:unbreakable={show_in_tooltop:false}]
-item replace entity @a[tag=t_pm_owner,limit=1] armor.legs with minecraft:golden_leggings[minecraft:unbreakable={show_in_tooltop:false}]
+item replace entity @a[tag=t_pm_owner,limit=1] armor.head with minecraft:golden_helmet[minecraft:unbreakable={show_in_tooltip:false}]
+item replace entity @a[tag=t_pm_owner,limit=1] armor.chest with minecraft:golden_chestplate[minecraft:unbreakable={show_in_tooltip:false}]
+item replace entity @a[tag=t_pm_owner,limit=1] armor.legs with minecraft:golden_leggings[minecraft:unbreakable={show_in_tooltip:false}]
 item replace entity @a[tag=t_pm_owner,limit=1] armor.feet with minecraft:golden_boots[minecraft:unbreakable={show_in_tooltip:false},\
 minecraft:attribute_modifiers=[\
 {type:"movement_speed",slot:"feet",id:"cashgrab:speed_bonus",amount:0.2,operation:"add_multiplied_base"},\
