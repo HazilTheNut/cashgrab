@@ -11,14 +11,14 @@
 # Arguments: (none)
 
 # Class variable usage:
-#	cv_A	:	Pointer to target of hex (from Hexblade to target)
-#	cv_B	:	Hex duration/sequence timer
+#	cv_A	:	Pointer (stored on Hexblade) to target of hex
+#	cv_B	:	Pointer (stored on Hex timer) to Hexblade
 #	cv_C	:	
 #	cv_D	:	Blight Step countdown
-#	cv_E	:	
-#	cv_F	:	
+#	cv_E	:	1 iff Hex target exists
+#	cv_F	:	Hex target existence state (-1..2 style state for if Hex target exists)
 #	cv_G	:	
-#	cv_H	:	
+#	cv_H	:
 
 # Teleport
 execute align xyz positioned ~0.5 ~0.5 ~0.5 run tp @a[tag=t_pm_owner,limit=1] ~ ~ ~ ~180 10

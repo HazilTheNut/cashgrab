@@ -11,14 +11,14 @@
 # Arguments: (none)
 
 # Class variable usage:
-#	cv_A	:	Pointer to target of hex (from Hexblade to target)
-#	cv_B	:	Hex duration/sequence timer
+#	cv_A	:	Pointer (stored on Hexblade) to target of hex
+#	cv_B	:	Pointer (stored on Hex timer) to Hexblade
 #	cv_C	:	
 #	cv_D	:	Blight Step countdown
-#	cv_E	:	
-#	cv_F	:	
+#	cv_E	:	1 iff Hex target exists
+#	cv_F	:	Hex target existence state (-1..2 style state for if Hex target exists)
 #	cv_G	:	
-#	cv_H	:	
+#	cv_H	:
 
 # --- Hex
 
@@ -28,54 +28,35 @@ function cashgrab:util/find_eid_self with storage cashgrab:find_eid_args
 tag @e[tag=t_eid_matches,limit=1] add t_hex_target
 tag @a[tag=t_eid_matches,limit=1] add t_hex_target
 
-# If target does not exist, set pointer to null
-execute unless entity @e[tag=t_hex_target] unless entity @a[tag=t_hex_target] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_A 0
-execute unless entity @e[tag=t_hex_target] unless entity @a[tag=t_hex_target] run function cashgrab_ex:classes/hexblade/pmt_hexblade_inv_blight_step
+# Update cv_E (hex target existence)
+scoreboard players set @a[tag=t_pm_owner,limit=1] cv_E 0
+execute if entity @e[tag=t_hex_target] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_E 1
+execute if entity @a[tag=t_hex_target] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_E 1
 
-# If target is a player that has died, place a "remnant" timer the Hexblade can teleport to
-execute if entity @a[tag=t_hex_target,scores={evl_death=1..}] run function cashgrab_ex:classes/hexblade/pmtl_hexblade_create_remnant_at_hex_target
+# If Hex target doesn't exist, nullify pointer
+scoreboard players set @a[tag=t_pm_owner,limit=1,scores={cv_E=0}] cv_A 0
 
-# If target is a player that is not in Gameplay state, set pointer to null
-execute if entity @a[tag=t_hex_target,scores={activity_state=0..19}] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_A 0
-execute if entity @a[tag=t_hex_target,scores={activity_state=0..19}] run function cashgrab_ex:classes/hexblade/pmt_hexblade_inv_blight_step
-
-# If no Hex target, end Hex sequence early
-execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=0,cv_B=1..}] run tag @e remove t_hex_target
-execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=0,cv_B=1..}] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 0
-
-# Decrement Hex sequence timer
-scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={cv_B=1..}] cv_B 1
-
-# Start of hex sequence, update inventory display
-execute if score @a[tag=t_pm_owner,limit=1] cv_B matches 219 run function cashgrab_ex:classes/hexblade/pmt_hexblade_inv_blight_step
-
-# Display particles at hex target (other than remnant)
-execute at @e[tag=t_hex_target,tag=!t_hexblade_remnant_timer] run particle minecraft:dust{color:[0.8f,0.2f,0.6f],scale:1.0} ~ ~2.5 ~ 0.1 0.1 0.1 0 1
-
-# Pulse every 3 seconds if afflicting a mob
-execute if score @a[tag=t_pm_owner,limit=1] cv_B matches 160 if entity @e[tag=t_hex_target,tag=!t_hexblade_remnant_timer] run function cashgrab_ex:classes/hexblade/pmtl_hex_pulse
-execute if score @a[tag=t_pm_owner,limit=1] cv_B matches 100 if entity @e[tag=t_hex_target,tag=!t_hexblade_remnant_timer] run function cashgrab_ex:classes/hexblade/pmtl_hex_pulse
-execute if score @a[tag=t_pm_owner,limit=1] cv_B matches 40 if entity @e[tag=t_hex_target,tag=!t_hexblade_remnant_timer] run function cashgrab_ex:classes/hexblade/pmtl_hex_pulse
-
-# If a pulse caused a player death, create the remnant timer
-execute if entity @a[tag=t_hex_target,scores={evl_death=1..}] run function cashgrab_ex:classes/hexblade/pmtl_hexblade_create_remnant_at_hex_target
-
-# End of Hex sequence
-effect clear @a[tag=t_pm_owner,limit=1,scores={cv_B=1}] minecraft:glowing
-scoreboard players set @a[tag=t_pm_owner,limit=1,scores={cv_B=1}] cv_A 0
-execute if score @a[tag=t_pm_owner,limit=1] cv_B matches 1 run function cashgrab_ex:classes/hexblade/pmt_hexblade_inv_blight_step
+# Update cv_F (hex target existence state)
+scoreboard players set @a[tag=t_pm_owner,limit=1,scores={cv_E=1,cv_F=2}] cv_F 1
+scoreboard players set @a[tag=t_pm_owner,limit=1,scores={cv_E=1,cv_F=-1..0}] cv_F 2
+scoreboard players set @a[tag=t_pm_owner,limit=1,scores={cv_E=0,cv_F=-1}] cv_F 0
+scoreboard players set @a[tag=t_pm_owner,limit=1,scores={cv_E=0,cv_F=1..2}] cv_F -1
 
 # --- Blight Step
+
+# Update inventory display when cv_E transitions between true and false
+execute if score @a[tag=t_pm_owner,limit=1] cv_F matches -1 run function cashgrab_ex:classes/hexblade/pmt_hexblade_inv_blight_step
+execute if score @a[tag=t_pm_owner,limit=1] cv_F matches 2 run function cashgrab_ex:classes/hexblade/pmt_hexblade_inv_blight_step
 
 # Start Blight Step countdown
 scoreboard players set @a[tag=t_pm_owner,limit=1,scores={cv_A=1..,cv_D=0,ps_sneaking=1..2}] cv_D 20
 
 # Reset Blight Step countdown if target is invalid
-scoreboard players set @a[tag=t_pm_owner,limit=1,scores={cv_A=0}] cv_D 0
+scoreboard players set @a[tag=t_pm_owner,limit=1,scores={cv_E=0}] cv_D 0
 
 # Reset Blight Step countdown if you cease to be crouching
-scoreboard players set @a[tag=t_pm_owner,limit=1,scores={cv_A=1..,ps_sneaking=..0,cv_D=1..}] cv_D 0
-execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1..,ps_sneaking=..0}] run function cashgrab_ex:classes/hexblade/pmt_hexblade_inv_blight_step
+scoreboard players set @a[tag=t_pm_owner,limit=1,scores={cv_E=1,ps_sneaking=-1,cv_D=1..}] cv_D 0
+execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_E=1,ps_sneaking=-1}] run function cashgrab_ex:classes/hexblade/pmt_hexblade_inv_blight_step
 
 # Blight Step countdown
 scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={cv_D=1..}] cv_D 1

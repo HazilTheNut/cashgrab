@@ -9,26 +9,26 @@
 # Arguments: (none)
 
 # Class variable usage:
-#	cv_A	:	Pointer to target of hex (from Hexblade to target)
-#	cv_B	:	Hex duration/sequence timer
+#	cv_A	:	Pointer (stored on Hexblade) to target of hex
+#	cv_B	:	Pointer (stored on Hex timer) to Hexblade
 #	cv_C	:	
 #	cv_D	:	Blight Step countdown
-#	cv_E	:	
-#	cv_F	:	
+#	cv_E	:	1 iff Hex target exists
+#	cv_F	:	Hex target existence state (-1..2 style state for if Hex target exists)
 #	cv_G	:	
-#	cv_H	:	
+#	cv_H	:
 
 # =============================
 # Armor
-item replace entity @a[tag=t_pm_owner,limit=1] armor.head with minecraft:iron_helmet[minecraft:unbreakable={show_in_tooltop:false}]
-item replace entity @a[tag=t_pm_owner,limit=1] armor.chest with minecraft:leather_chestplate[minecraft:unbreakable={show_in_tooltop:false},\
+item replace entity @a[tag=t_pm_owner,limit=1] armor.head with minecraft:iron_helmet[minecraft:unbreakable={show_in_tooltip:false}]
+item replace entity @a[tag=t_pm_owner,limit=1] armor.chest with minecraft:leather_chestplate[minecraft:unbreakable={show_in_tooltip:false},\
 minecraft:dyed_color=5048136,\
 minecraft:trim={\
 pattern:"host",\
 material:"diamond",\
 show_in_tooltip:false\
 }]
-item replace entity @a[tag=t_pm_owner,limit=1] armor.legs with minecraft:leather_leggings[minecraft:unbreakable={show_in_tooltop:false},\
+item replace entity @a[tag=t_pm_owner,limit=1] armor.legs with minecraft:leather_leggings[minecraft:unbreakable={show_in_tooltip:false},\
 minecraft:dyed_color=5048136,\
 minecraft:trim={\
 pattern:"host",\
