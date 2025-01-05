@@ -20,9 +20,14 @@
 
 # =============================
 # Armor
-item replace entity @a[tag=t_pm_owner,limit=1] armor.head with minecraft:iron_helmet[minecraft:unbreakable={show_in_tooltop:false}]
-item replace entity @a[tag=t_pm_owner,limit=1] armor.chest with minecraft:iron_chestplate[minecraft:unbreakable={show_in_tooltop:false}]
-item replace entity @a[tag=t_pm_owner,limit=1] armor.legs with minecraft:iron_leggings[minecraft:unbreakable={show_in_tooltop:false}]
+item replace entity @a[tag=t_pm_owner,limit=1] armor.head with minecraft:iron_helmet[minecraft:unbreakable={show_in_tooltip:false}]
+item replace entity @a[tag=t_pm_owner,limit=1] armor.chest with minecraft:iron_chestplate[minecraft:unbreakable={show_in_tooltip:false},\
+minecraft:trim={\
+pattern:"shaper",\
+material:"amethyst",\
+show_in_tooltip:false\
+}]
+item replace entity @a[tag=t_pm_owner,limit=1] armor.legs with minecraft:iron_leggings[minecraft:unbreakable={show_in_tooltip:false}]
 item replace entity @a[tag=t_pm_owner,limit=1] armor.feet with minecraft:iron_boots[minecraft:unbreakable={show_in_tooltip:false},\
 minecraft:attribute_modifiers=[\
 {type:"movement_speed",slot:"feet",id:"cashgrab:speed_bonus",amount:0.15,operation:"add_multiplied_base"},\

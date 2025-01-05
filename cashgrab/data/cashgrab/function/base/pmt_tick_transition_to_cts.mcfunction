@@ -27,5 +27,8 @@ effect give @a[tag=t_pm_owner,limit=1] minecraft:saturation 7 1 false
 # Move player team
 team join team_ffa_cts @a[tag=t_pm_owner,limit=1]
 
+# Reset coin spilling announcement lockout timer
+scoreboard players set @a[tag=t_pm_owner,limit=1] __coinspilling_announcement_lockout_ticks 0
+
 # Move to Class-and-Trinket Select activity_state
 scoreboard players set @a[tag=t_pm_owner,limit=1] activity_state 11
