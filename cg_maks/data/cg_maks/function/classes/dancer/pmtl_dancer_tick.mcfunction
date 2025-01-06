@@ -14,12 +14,41 @@
 #	cv_A	:	Tempo Stacks (0-3)
 #	cv_B	:	Tempo Hit Combo Window
 #	cv_C	:	Tempo Timer
-#	cv_D	:	
+#	cv_D	:	Sound Effect timer
 #	cv_E	:	
 #	cv_F	:	
 #	cv_G	:	
 #	cv_H	:
 
+# =========================================
+# SOUND EFFECTS
+# =========================================
+
+#If 0 stacks, play power down (1.15 1.07 0.99)
+execute if score @a[tag=t_pm_owner,limit=1] cv_D matches 9 if score @a[tag=t_pm_owner,limit=1] cv_A matches 0 run playsound minecraft:block.note_block.pling player @a[tag=t_pm_owner,limit=1] ~ ~ ~ 1 1.15
+execute if score @a[tag=t_pm_owner,limit=1] cv_D matches 6 if score @a[tag=t_pm_owner,limit=1] cv_A matches 0 run playsound minecraft:block.note_block.pling player @a[tag=t_pm_owner,limit=1] ~ ~ ~ 1 1.07
+execute if score @a[tag=t_pm_owner,limit=1] cv_D matches 3 if score @a[tag=t_pm_owner,limit=1] cv_A matches 0 run playsound minecraft:block.note_block.pling player @a[tag=t_pm_owner,limit=1] ~ ~ ~ 1 0.99
+
+# If one stack, play power up x1 (1 x3)
+execute if score @a[tag=t_pm_owner,limit=1] cv_D matches 9 if score @a[tag=t_pm_owner,limit=1] cv_A matches 1 run playsound minecraft:block.note_block.pling player @a[tag=t_pm_owner,limit=1] ~ ~ ~ 1 1
+execute if score @a[tag=t_pm_owner,limit=1] cv_D matches 6 if score @a[tag=t_pm_owner,limit=1] cv_A matches 1 run playsound minecraft:block.note_block.pling player @a[tag=t_pm_owner,limit=1] ~ ~ ~ 1 1
+execute if score @a[tag=t_pm_owner,limit=1] cv_D matches 3 if score @a[tag=t_pm_owner,limit=1] cv_A matches 1 run playsound minecraft:block.note_block.pling player @a[tag=t_pm_owner,limit=1] ~ ~ ~ 1 1
+
+# If two stacks, power up x2 (1.05 x3)
+execute if score @a[tag=t_pm_owner,limit=1] cv_D matches 9 if score @a[tag=t_pm_owner,limit=1] cv_A matches 2 run playsound minecraft:block.note_block.pling player @a[tag=t_pm_owner,limit=1] ~ ~ ~ 1 1.05
+execute if score @a[tag=t_pm_owner,limit=1] cv_D matches 6 if score @a[tag=t_pm_owner,limit=1] cv_A matches 2 run playsound minecraft:block.note_block.pling player @a[tag=t_pm_owner,limit=1] ~ ~ ~ 1 1.05
+execute if score @a[tag=t_pm_owner,limit=1] cv_D matches 3 if score @a[tag=t_pm_owner,limit=1] cv_A matches 2 run playsound minecraft:block.note_block.pling player @a[tag=t_pm_owner,limit=1] ~ ~ ~ 1 1.05
+
+# If one stack, play power up x3 (1.1 x3)
+execute if score @a[tag=t_pm_owner,limit=1] cv_D matches 9 if score @a[tag=t_pm_owner,limit=1] cv_A matches 3 run playsound minecraft:block.note_block.pling player @a[tag=t_pm_owner,limit=1] ~ ~ ~ 1 1.1
+execute if score @a[tag=t_pm_owner,limit=1] cv_D matches 6 if score @a[tag=t_pm_owner,limit=1] cv_A matches 3 run playsound minecraft:block.note_block.pling player @a[tag=t_pm_owner,limit=1] ~ ~ ~ 1 1.1
+execute if score @a[tag=t_pm_owner,limit=1] cv_D matches 3 if score @a[tag=t_pm_owner,limit=1] cv_A matches 3 run playsound minecraft:block.note_block.pling player @a[tag=t_pm_owner,limit=1] ~ ~ ~ 1 1.1
+
+# =========================================
+# PARTICLE EFFECTS
+# =========================================
+execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 1..3 run particle minecraft:note ~ ~1 ~ 0.5 0.5 0.5 0.5 1
+ 
 # =========================================
 # DETECT EDGE CASES WHERE TIMER NEEDS TO BE RESET
 # =========================================
@@ -40,12 +69,18 @@ execute unless score @a[tag=t_pm_owner,limit=1] evl_dmg_dealt matches 1.. if sco
 # Update Tempo slot in inventory
 execute unless score @a[tag=t_pm_owner,limit=1] evl_dmg_dealt matches 1.. if score @a[tag=t_pm_owner,limit=1] cv_C matches -1 run function cg_maks:classes/dancer/pmt_dancer_inv_tempo
 
+#Start sound effect timer
+execute unless score @a[tag=t_pm_owner,limit=1] evl_dmg_dealt matches 1.. if score @a[tag=t_pm_owner,limit=1] cv_C matches -1 run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_D 10
+
 #Set cv_C to -2 (inactive timer state)
 execute unless score @a[tag=t_pm_owner,limit=1] evl_dmg_dealt matches 1.. if score @a[tag=t_pm_owner,limit=1] cv_C matches -1 run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C -2
 
 # =========================================
 # ON EVERY TICK
 # =========================================
+
+# Decrement Sound Effect Timer
+execute unless score @a[tag=t_pm_owner,limit=1] cv_D matches ..0 run scoreboard players remove @a[tag=t_pm_owner,limit=1] cv_D 1
 
 # Decrement Hit Combo Window by 1 (until 0 ticks).
 execute unless score @a[tag=t_pm_owner,limit=1] cv_B matches ..0 run scoreboard players remove @a[tag=t_pm_owner,limit=1] cv_B 1
@@ -79,6 +114,9 @@ function cg_maks:classes/dancer/pmt_dancer_inv_armor
 
 # Update Tempo slot in inventory
 function cg_maks:classes/dancer/pmt_dancer_inv_tempo
+
+# Start sound effect timer
+scoreboard players set @a[tag=t_pm_owner,tag=t_add_tempo,limit=1] cv_D 9
 
 # Clean up tags
 tag @a remove t_add_tempo
