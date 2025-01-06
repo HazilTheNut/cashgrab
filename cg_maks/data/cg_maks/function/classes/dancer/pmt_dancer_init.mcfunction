@@ -9,9 +9,9 @@
 # Arguments: (none)
 
 # Class variable usage:
-#	cv_A	:	
-#	cv_B	:	
-#	cv_C	:	
+#	cv_A	:	Tempo Stacks (0-3)
+#	cv_B	:	Tempo Hit Combo Window
+#	cv_C	:	Tempo Timer (if necessary)
 #	cv_D	:	
 #	cv_E	:	
 #	cv_F	:	
