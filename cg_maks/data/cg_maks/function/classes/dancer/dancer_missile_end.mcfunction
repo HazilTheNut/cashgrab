@@ -10,6 +10,10 @@
 # Arguments: 
 #   end_reason: The reason this missile is being cleaned up
 
+#Check the end reason
+$execute if score NUM_END_REASON_CLEANUP num matches $(end_reason) run return 0
+$execute if score NUM_END_REASON_CLEANUP_PLAYER_DEATH num matches $(end_reason) run return 0
+
 # Play sfx/vfx
 particle minecraft:dust{color:[0.8f,0.4f,0.8f],scale:1.0} ~ ~ ~ 1.25 1.25 1.25 0 70
 particle minecraft:gust ~ ~ ~ 0.5 0.25 0.5 0.1 10
