@@ -9,7 +9,10 @@
 # Arguments:
 #	func_npe_tick		: Function to run every tick
 #	func_npe_end		: Function to run when the timer expires
-#						func_npe_end is supplied with an end_reason argument based on why func_npe_end was called: 0 = cleaned up, 1 = timer expired
+#						func_npe_end is supplied with an end_reason argument based on why func_npe_end was called
+#                           end_reason 0   = cleaned up
+#                           end_reason 1   = cleaned up from player death
+#                           end_reason 10  = timer lifetime expired
 
 # Get owner and tag them with t_timer_owner
 execute store result storage cashgrab:find_eid_args eid int 1 run scoreboard players get @s eid_owner
@@ -18,16 +21,13 @@ tag @e[tag=t_eid_matches,limit=1] add t_timer_owner
 tag @a[tag=t_eid_matches,limit=1] add t_timer_owner
 
 # If there is no owner, self destruct
-execute unless entity @e[tag=t_timer_owner] unless entity @a[tag=t_timer_owner] run scoreboard players set @s tmr_lifetime_ticks 0
-execute unless entity @e[tag=t_timer_owner] unless entity @a[tag=t_timer_owner] run tag @s add t_cleanup
+execute unless entity @e[tag=t_timer_owner] unless entity @a[tag=t_timer_owner] run return run function cashgrab:base/timer_end_cleanup with entity @s data
 
 # Run func_npe_tick or func_npe_end
 $execute unless entity @a[tag=t_timer_owner] if entity @s[scores={tmr_lifetime_ticks=1..}] at @e[tag=t_timer_owner,limit=1] rotated as @e[tag=t_timer_owner,limit=1] run function $(func_npe_tick)
-$execute unless entity @a[tag=t_timer_owner] if entity @s[scores={tmr_lifetime_ticks=..0},tag=t_cleanup] at @e[tag=t_timer_owner,limit=1] rotated as @e[tag=t_timer_owner,limit=1] run function $(func_npe_end) {end_reason:0}
-$execute unless entity @a[tag=t_timer_owner] if entity @s[scores={tmr_lifetime_ticks=..0},tag=!t_cleanup] at @e[tag=t_timer_owner,limit=1] rotated as @e[tag=t_timer_owner,limit=1] run function $(func_npe_end) {end_reason:1}
+$execute unless entity @a[tag=t_timer_owner] if entity @s[scores={tmr_lifetime_ticks=..0}] at @e[tag=t_timer_owner,limit=1] rotated as @e[tag=t_timer_owner,limit=1] run function $(func_npe_end) {end_reason:10}
 $execute if entity @a[tag=t_timer_owner] if entity @s[scores={tmr_lifetime_ticks=1..}] at @a[tag=t_timer_owner,limit=1] rotated as @a[tag=t_timer_owner,limit=1] run function $(func_npe_tick)
-$execute if entity @a[tag=t_timer_owner] if entity @s[scores={tmr_lifetime_ticks=..0},tag=t_cleanup] at @a[tag=t_timer_owner,limit=1] rotated as @a[tag=t_timer_owner,limit=1] run function $(func_npe_end) {end_reason:0}
-$execute if entity @a[tag=t_timer_owner] if entity @s[scores={tmr_lifetime_ticks=..0},tag=!t_cleanup] at @a[tag=t_timer_owner,limit=1] rotated as @a[tag=t_timer_owner,limit=1] run function $(func_npe_end) {end_reason:1}
+$execute if entity @a[tag=t_timer_owner] if entity @s[scores={tmr_lifetime_ticks=..0}] at @a[tag=t_timer_owner,limit=1] rotated as @a[tag=t_timer_owner,limit=1] run function $(func_npe_end) {end_reason:10}
 
 tag @e[tag=t_timer_owner] remove t_timer_owner
 tag @a[tag=t_timer_owner] remove t_timer_owner

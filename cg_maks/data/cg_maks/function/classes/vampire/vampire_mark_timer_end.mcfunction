@@ -8,13 +8,12 @@
 #
 # Arguments: (none)
 
-tellraw @a[tag=t_debug] "classes/vampire/vampire_mark_timer_end"
+$tellraw @a[tag=t_debug] "classes/vampire/vampire_mark_timer_end: end_reason $(end_reason)"
+tellraw @a[tag=t_debug] ["classes/vampire/vampire_mark_timer_end: timer tags ",{"type":"nbt","nbt":"Tags","source":"entity","entity":"@s"}]
 
-# If the timer expired naturally (by hitting 0), do nothing.
-$execute unless score NUM_ZERO num matches $(end_reason) run return 0
+# Check if the timer was cleaned up due to its owner dying
+$execute unless score NUM_END_REASON_CLEANUP_PLAYER_DEATH num matches $(end_reason) run return 0
 
-# Check to see that the timer's owner still exists (i.e. they didn't log off).
-execute unless entity @a[tag=t_timer_owner] run return 0
 tellraw @a[tag=t_debug] "found dead target"
 
 # Tag originator and target entitys to ensure proper ownership of remnant.

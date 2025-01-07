@@ -21,12 +21,12 @@
 # Infinibow
 execute unless items entity @a[tag=t_pm_owner,limit=1] hotbar.0 minecraft:bow run clear @a[tag=t_pm_owner,limit=1] minecraft:bow
 
-item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_E=..0}] hotbar.0 with minecraft:bow[minecraft:unbreakable={show_in_tooltop:false},\
+item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_E=..0}] hotbar.0 with minecraft:bow[minecraft:unbreakable={show_in_tooltip:false},\
 minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Infinibow\"}",\
 minecraft:enchantment_glint_override=false,\
 minecraft:enchantments={levels:{infinity:1}}]
 
-item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_E=1..}] hotbar.0 with minecraft:bow[minecraft:unbreakable={show_in_tooltop:false},\
+item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_E=1..}] hotbar.0 with minecraft:bow[minecraft:unbreakable={show_in_tooltip:false},\
 minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Infinibow\"}",\
 minecraft:enchantment_glint_override=true,\
 minecraft:enchantments={levels:{infinity:1,power:1,punch:3}}]

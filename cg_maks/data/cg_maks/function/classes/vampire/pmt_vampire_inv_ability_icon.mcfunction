@@ -22,6 +22,7 @@ minecraft:lore=[\
 '["",{"text":"Remnants","italic":false,"color":"dark_red"},{"text":" can be picked up to","italic":false,"color":"gray"}]',\
 '["",{"text":" restore some health.","italic":false,"color":"gray"}]',\
 '["",{"text":"====","italic":false,"color":"dark_gray"}]',\
-'["",{"text":"20 ","italic":false,"color":"yellow"},{"text":"sec cooldown for ","italic":false,"color":"gray"},{"text":"1 ","italic":false,"color":"yellow"},{"text":"charge","italic":false,"color":"gray"}]'\
-'["",{"text":"(Marking a target slightly reduces cooldown.)","italic":true,"color":"dark_gray"}]',]'\
+'["",{"text":"20 ","italic":false,"color":"yellow"},{"text":"sec cooldown for ","italic":false,"color":"gray"},{"text":"1 ","italic":false,"color":"yellow"},{"text":"charge","italic":false,"color":"gray"}]',\
+'["",{"text":"(Each target marked","italic":true,"color":"dark_gray"}]',\
+'["",{"text":" reduces the cooldown)","italic":true,"color":"dark_gray"}]'\
 ]] $(charges)

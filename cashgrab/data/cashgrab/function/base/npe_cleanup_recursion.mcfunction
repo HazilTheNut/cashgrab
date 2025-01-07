@@ -7,4 +7,4 @@
 #
 # Arguments: (none)
 
-function cashgrab:base/npe_cleanup
+function cashgrab:base/npe_cleanup {b_self_destruct:1}

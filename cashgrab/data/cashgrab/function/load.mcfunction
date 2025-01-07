@@ -232,6 +232,13 @@ scoreboard players set NUM_MISSILE_TRACKING_DIVISOR num 1
 
 scoreboard players set NUM_RAYCAST_STEPS_PER_M num 2
 
+# === end_reason enum values
+scoreboard players set NUM_END_REASON_CLEANUP num 0
+scoreboard players set NUM_END_REASON_CLEANUP_PLAYER_DEATH num 1
+scoreboard players set NUM_END_REASON_EXPIRE num 10
+scoreboard players set NUM_END_REASON_TERRAIN_COLLISION num 20
+scoreboard players set NUM_END_REASON_ENTITY_COLLISION num 30
+
 # === Coin mechanics configurable parameters
 
 # Goal number of coins to reach to win the game
@@ -364,6 +371,7 @@ scoreboard objectives add __coinshower_period_ticks dummy
 # =============================
 # Values used for coin spilling
 scoreboard objectives add __coinspilling_timer_ticks dummy
+scoreboard objectives add __coinspilling_announcement_lockout_ticks dummy
 
 # =============================
 # Values used for grab mechanics

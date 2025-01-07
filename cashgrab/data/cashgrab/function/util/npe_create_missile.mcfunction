@@ -26,7 +26,12 @@
 #	func_npe_start				: Function to run as the missile on instantiation
 #	func_npe_tick				: Function to run as the missile every tick
 #	func_npe_end				: Function to run as the missile when either the missile collides or expires
-#									func_end is supplied with an end_reason argument based on why func_end was called: 0 = cleaned up, 1 = hit block terrain, 2 = hit entity, 3 = expired
+#									func_end is supplied with an end_reason argument based on why func_end was called
+#                                   end_reason 0   = cleaned up
+#                                   end_reason 1   = cleaned up from player death
+#                                   end_reason 10  = missile lifetime expired
+#                                   end_reason 20  = missile struck terrain
+#                                   end_reason 30  = missile hit an entity
 #	b_assign_as_peer			: Set to nonzero to assign eid_owner to missile to be a peer to the executor rather than owned by them. 
 #									Useful for pms that call this function.
 

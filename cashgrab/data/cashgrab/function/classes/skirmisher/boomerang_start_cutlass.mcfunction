@@ -22,7 +22,7 @@
 scoreboard players set @s cv_E 1
 
 # Generate item display entity
-summon minecraft:item_display ~ ~ ~ {item:{id:"minecraft:iron_sword",Count:1b},Tags:["t_boomerang_itemdisp_init"],Rotation:[0.0f,90.0f]}
+summon minecraft:item_display ~ ~ ~ {item:{id:"minecraft:iron_sword",Count:1b},Tags:["t_boomerang_itemdisp_init","t_no_self_cleanup"],Rotation:[0.0f,90.0f]}
 execute as @e[type=minecraft:item_display,tag=t_boomerang_itemdisp_init] run function cashgrab:util/npe_eid_acquire
 
 # Set item display's owner to be this missile

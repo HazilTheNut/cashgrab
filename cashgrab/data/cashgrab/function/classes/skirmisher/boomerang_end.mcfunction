@@ -21,20 +21,20 @@
 #	cv_H	:	Boomerang life timer (counts upwards instead of downwards for more readable code)
 
 # Desstroy item display
-function cashgrab:util/npe_eid_find_subs
-tag @e[scores={eid_compare=0}] add t_kill
-scoreboard players reset @e[tag=t_kill]
-kill @e[tag=t_kill]
+#function cashgrab:util/npe_eid_find_subs
+#tag @e[scores={eid_compare=0}] add t_kill
+#scoreboard players reset @e[tag=t_kill]
+#kill @e[tag=t_kill]
 
 $scoreboard players set @s temp_A $(end_reason)
 
 # Create breakage particles on impact with terrain
-execute if score @s temp_A matches 1 if score @s cv_E matches 1 run particle minecraft:item{item:"minecraft:iron_sword"} ~ ~ ~ 0.5 0.25 0.5 0.1 30
-execute if score @s temp_A matches 1 if score @s cv_E matches 2 run particle minecraft:item{item:"minecraft:golden_sword"} ~ ~ ~ 0.5 0.25 0.5 0.1 30
-execute if score @s temp_A matches 1 run playsound minecraft:entity.item.break player @a ~ ~ ~ 1.0 1.0
+execute if score @s temp_A = NUM_END_REASON_TERRAIN_COLLISION num if score @s cv_E matches 1 run particle minecraft:item{item:"minecraft:iron_sword"} ~ ~ ~ 0.5 0.25 0.5 0.1 30
+execute if score @s temp_A = NUM_END_REASON_TERRAIN_COLLISION num if score @s cv_E matches 2 run particle minecraft:item{item:"minecraft:golden_sword"} ~ ~ ~ 0.5 0.25 0.5 0.1 30
+execute if score @s temp_A = NUM_END_REASON_TERRAIN_COLLISION num run playsound minecraft:entity.item.break player @a ~ ~ ~ 1.0 1.0
 
-execute unless score @s temp_A matches 2 run return 0
-# Below executes when end_reason = 2, when we hit an entity (the player who threw the boomerang)
+execute unless score @s temp_A = NUM_END_REASON_ENTITY_COLLISION num run return 0
+# Below executes when we hit an entity (the player who threw the boomerang)
 
 playsound minecraft:entity.breeze.jump player @a ~ ~ ~ 1.0 0.25
 
