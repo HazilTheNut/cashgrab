@@ -15,5 +15,5 @@ minecraft:custom_data={is_cts_icon:1},\
 minecraft:hide_additional_tooltip={},\
 minecraft:lore=[\
 '["",{"text":"Keep up the tempo for","color":"dark_gray","italic":true}]',\
-'["",{"text":" an extragavant flourish.","italic":true,"color":"dark_gray"}]'\
+'["",{"text":" an extravagant flourish.","italic":true,"color":"dark_gray"}]'\
 ]] 1
