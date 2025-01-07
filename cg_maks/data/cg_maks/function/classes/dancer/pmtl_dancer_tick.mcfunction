@@ -15,10 +15,30 @@
 #	cv_B	:	Tempo Hit Combo Window
 #	cv_C	:	Tempo Timer
 #	cv_D	:	Sound Effect timer
-#	cv_E	:	
+#	cv_E	:	Sforzando missile sequence timer
 #	cv_F	:	
 #	cv_G	:	
-#	cv_H	:
+#	cv_H	:   
+
+# =========================================
+# SFORZANDO
+# =========================================
+
+# Add a tag to this player if their Tempo matches and they recently used their ability.
+execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=0..3,cv_E=6}] run tag @a[tag=t_pm_owner,limit=1] add t_dancer_sforz_missile
+execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=0..3,cv_E=5}] run tag @a[tag=t_pm_owner,limit=1] add t_dancer_sforz_missile
+execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=0..3,cv_E=4}] run tag @a[tag=t_pm_owner,limit=1] add t_dancer_sforz_missile
+execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1..3,cv_E=3}] run tag @a[tag=t_pm_owner,limit=1] add t_dancer_sforz_missile
+execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=2..3,cv_E=2}] run tag @a[tag=t_pm_owner,limit=1] add t_dancer_sforz_missile
+execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=3,cv_E=1}] run tag @a[tag=t_pm_owner,limit=1] add t_dancer_sforz_missile
+
+# Roll random values for use in missile creation
+execute if entity @a[tag=t_pm_owner,limit=1,tag=t_dancer_sforz_missile] store result storage cg_maks:offset_args pitch int 1 run random value -30..30
+execute if entity @a[tag=t_pm_owner,limit=1,tag=t_dancer_sforz_missile] store result storage cg_maks:offset_args yaw int 1 run random value -15..15
+
+# Create missiles
+execute if entity @a[tag=t_pm_owner,limit=1,tag=t_dancer_sforz_missile] at @a[tag=t_pm_owner,limit=1,tag=t_dancer_sforz_missile] run function cg_maks:classes/dancer/pmtl_dancer_create_missile with storage cg_maks:offset_args
+execute if entity @a[tag=t_pm_owner,limit=1,tag=t_dancer_sforz_missile] run tellraw @a[tag=t_debug] "classes/dancer/pmtl_dancer_tick: Missile created"
 
 # =========================================
 # SOUND EFFECTS
@@ -79,6 +99,10 @@ execute unless score @a[tag=t_pm_owner,limit=1] evl_dmg_dealt matches 1.. if sco
 # ON EVERY TICK
 # =========================================
 
+# Decrement Missile sequence timer and clear relevant tag
+execute unless score @a[tag=t_pm_owner,limit=1] cv_E matches ..0 run scoreboard players remove @a[tag=t_pm_owner,limit=1] cv_E 1
+tag @a remove t_dancer_sforz_missile
+
 # Decrement Sound Effect Timer
 execute unless score @a[tag=t_pm_owner,limit=1] cv_D matches ..0 run scoreboard players remove @a[tag=t_pm_owner,limit=1] cv_D 1
 
@@ -103,6 +127,7 @@ execute if score @a[tag=t_pm_owner,limit=1] cv_B matches 1..30 run tag @a[tag=t_
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 30
 
 # Increment Tempo stacks by 1 (unless already full).
+execute if score @a[tag=t_pm_owner,tag=t_add_tempo,limit=1] cv_A matches 3.. run tag @a[tag=t_pm_owner,tag=t_add_tempo,limit=1] add t_no_sfx
 execute unless score @a[tag=t_pm_owner,tag=t_add_tempo,limit=1] cv_A matches 3.. run scoreboard players add @a[tag=t_pm_owner,tag=t_add_tempo,limit=1] cv_A 1
 execute unless score @a[tag=t_pm_owner,tag=t_add_tempo,limit=1] cv_A matches 3.. run tellraw @a[tag=t_debug] "classes/dancer/pmtl_dancer_tick: Tempo stack added"
 
@@ -116,7 +141,8 @@ function cg_maks:classes/dancer/pmt_dancer_inv_armor
 function cg_maks:classes/dancer/pmt_dancer_inv_tempo
 
 # Start sound effect timer
-scoreboard players set @a[tag=t_pm_owner,tag=t_add_tempo,limit=1] cv_D 9
+execute unless entity @a[tag=t_pm_owner,tag=t_no_sfx,limit=1] run scoreboard players set @a[tag=t_pm_owner,tag=t_add_tempo,limit=1] cv_D 9
 
 # Clean up tags
 tag @a remove t_add_tempo
+tag @a remove t_no_sfx
