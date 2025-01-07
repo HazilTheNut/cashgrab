@@ -20,4 +20,4 @@
 #	cv_G	:	
 #	cv_H	:
 
-scoreboard players set @a[tag=t_pm_owner,limit=1] cv_E 6
+scoreboard players set @a[tag=t_pm_owner,limit=1] cv_E 8

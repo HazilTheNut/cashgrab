@@ -25,11 +25,11 @@
 # =========================================
 
 # Add a tag to this player if their Tempo matches and they recently used their ability.
+execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=0..3,cv_E=8}] run tag @a[tag=t_pm_owner,limit=1] add t_dancer_sforz_missile
+execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=0..3,cv_E=7}] run tag @a[tag=t_pm_owner,limit=1] add t_dancer_sforz_missile
 execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=0..3,cv_E=6}] run tag @a[tag=t_pm_owner,limit=1] add t_dancer_sforz_missile
-execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=0..3,cv_E=5}] run tag @a[tag=t_pm_owner,limit=1] add t_dancer_sforz_missile
-execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=0..3,cv_E=4}] run tag @a[tag=t_pm_owner,limit=1] add t_dancer_sforz_missile
-execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1..3,cv_E=3}] run tag @a[tag=t_pm_owner,limit=1] add t_dancer_sforz_missile
-execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=2..3,cv_E=2}] run tag @a[tag=t_pm_owner,limit=1] add t_dancer_sforz_missile
+execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1..3,cv_E=5}] run tag @a[tag=t_pm_owner,limit=1] add t_dancer_sforz_missile
+execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=2..3,cv_E=3}] run tag @a[tag=t_pm_owner,limit=1] add t_dancer_sforz_missile
 execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=3,cv_E=1}] run tag @a[tag=t_pm_owner,limit=1] add t_dancer_sforz_missile
 
 # Roll random values for use in missile creation
