@@ -10,7 +10,7 @@
 # Arguments: (none)
 
 # Check if the pm's owner has each stack of Tempo, then give them the corresponding icon.
-execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 1 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:note_block[\
+execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 1 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.6 with minecraft:note_block[\
 minecraft:item_name="[{\"color\":\"light_purple\",\"italic\":false,\"text\":\"[Passive]\"},{\"color\":\"white\",\"text\":\" Tempo\"}]",\
 minecraft:hide_additional_tooltip={},\
 minecraft:lore=[\
@@ -23,7 +23,7 @@ minecraft:lore=[\
 '["",{"text":"You have ","italic":false,"color":"dark_gray"},{"text":"1","italic":false,"color":"yellow"},{"text":" stack.","italic":false,"color":"dark_gray"}]'\
 ]] 1
 
-execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 2 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:note_block[\
+execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 2 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.6 with minecraft:note_block[\
 minecraft:item_name="[{\"color\":\"light_purple\",\"italic\":false,\"text\":\"[Passive]\"},{\"color\":\"white\",\"text\":\" Tempo\"}]",\
 minecraft:hide_additional_tooltip={},\
 minecraft:lore=[\
@@ -36,7 +36,7 @@ minecraft:lore=[\
 '["",{"text":"You have ","italic":false,"color":"dark_gray"},{"text":"2","italic":false,"color":"yellow"},{"text":" stacks.","italic":false,"color":"dark_gray"}]'\
 ]] 2
 
-execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 3 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:note_block[\
+execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 3 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.6 with minecraft:note_block[\
 minecraft:item_name="[{\"color\":\"light_purple\",\"italic\":false,\"text\":\"[Passive]\"},{\"color\":\"white\",\"text\":\" Tempo\"}]",\
 minecraft:hide_additional_tooltip={},\
 minecraft:lore=[\

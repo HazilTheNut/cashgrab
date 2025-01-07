@@ -17,5 +17,5 @@ minecraft:lore=[\
 '["",{"text":"Strikes your enemies with a","italic":false,"color":"gray"}]',\
 '["",{"text":" dazzling flourish.","italic":false,"color":"gray"}]',\
 '["",{"text":"More stacks of ","italic":false,"color":"gray"},{"text":"Tempo","italic":false,"color":"yellow"},{"text":" creates","italic":false,"color":"gray"}]',\
-'["",{"text":" a larger flourish.","italic":false,"color":"gray"}]'\
+'["",{"text":" a larger and deadlier flourish.","italic":false,"color":"gray"}]'\
 ]] $(charges)

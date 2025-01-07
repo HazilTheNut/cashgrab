@@ -14,7 +14,8 @@ execute unless score @a[tag=t_pm_owner,limit=1] cv_A matches 0 run return 0
 
 # If 0 stacks, display a glass pane named "Tempo" describing the buffs
 
-item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:gray_stained_glass_pane[\
+item replace entity @a[tag=t_pm_owner,limit=1] hotbar.6 with minecraft:clay_ball[\
+minecraft:item_model="minecraft:music_disc_11",\
 minecraft:item_name="[{\"color\":\"light_purple\",\"italic\":false,\"text\":\"[Passive]\"},{\"color\":\"white\",\"text\":\" Tempo\"}]",\
 minecraft:hide_additional_tooltip={},\
 minecraft:lore=[\
