@@ -130,7 +130,7 @@ scoreboard objectives add __eid_prev dummy
 # Entity state regarding its EID:
 #	eid_state == 0	:	Entity does not have a valid EID
 #	eid_state == 1	:	Entity has a valid self EID
-#	eid_state == 2	:	Entity has a valid self EID, missiles/raycasts can collide with them, and they can be grabbed
+#	eid_state == 2	:	Entity has a valid self EID, missiles/raycasts can collide with them
 scoreboard objectives add eid_state dummy
 
 # =============================
