@@ -10,6 +10,6 @@
 #
 # Arguments: (none)
 
-effect give @a[tag=t_pm_owner,limit=1] minecraft:regeneration 3 2
+#effect give @a[tag=t_pm_owner,limit=1] minecraft:regeneration 3 2
 
 #clear @a[tag=t_pm_owner,limit=1] minecraft:filled_map

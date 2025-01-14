@@ -20,7 +20,13 @@ consume_seconds:0f,\
 animation:"brush",\
 sound:"ui.cartography_table.take_result",\
 has_consume_particles:false,\
-},\
+on_consume_effects:[\
+{\
+type:"apply_effects",\
+effects:[\
+{id:"minecraft:regeneration",amplifier:3b,duration:35},\
+]}\
+]},\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Restores health.\"}"],\
 ] $(charges)

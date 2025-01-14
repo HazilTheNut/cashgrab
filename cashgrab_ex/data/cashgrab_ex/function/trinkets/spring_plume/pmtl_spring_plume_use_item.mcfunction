@@ -10,13 +10,8 @@
 #
 # Arguments: (none)
 
-# Remove slowness and grab effects
-effect clear @a[tag=t_pm_owner,limit=1] minecraft:slowness
+# Remove grab effects
 tag @a[tag=t_pm_owner,limit=1] add t_grab_release
-
-# Grant potion effects
-effect give @a[tag=t_pm_owner,limit=1] minecraft:speed 3 3
-effect give @a[tag=t_pm_owner,limit=1] minecraft:jump_boost 3 5
 
 # Create effect timer to grant slow falling when player jumps
 function cashgrab:util/npe_create_timer {\
