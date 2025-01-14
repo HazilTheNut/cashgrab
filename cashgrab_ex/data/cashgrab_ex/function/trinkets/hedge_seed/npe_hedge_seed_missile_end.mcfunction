@@ -1,0 +1,41 @@
+# trinkets/hedge_seed/npe_hedge_seed_missile_end.mcfunction
+#
+# Context:
+#	as: a missile
+#	at: the missile
+#	facing: the missile's facing direction
+#
+# Summary: Hedge Seed missile end function
+#
+# Arguments: (none)
+
+function cashgrab_ex:trinkets/hedge_seed/npe_place_hedge_timer
+
+# Initialize collsiion detection for landcrawl
+data merge storage cashgrab_ex:hedge_args {data:{col_terrain_allowed:"minecraft:air",delta_x:0.0f,delta_y:0.0f,delta_z:0.0f}}
+
+# --- 90 degree clockwise turned landcrawl
+
+# Set recursion loop count
+scoreboard players set @s tv_A 8
+
+# Calculate facing vector
+execute rotated ~90 0 run function cashgrab:util/npe_calc_facing_vector {magnitude:1.0}
+execute store result storage cashgrab_ex:hedge_args data.delta_x float 0.001 run scoreboard players get @s facing_vector_x_mm
+execute store result storage cashgrab_ex:hedge_args data.delta_z float 0.001 run scoreboard players get @s facing_vector_z_mm
+
+# Crawl along ground in one direction to the side
+execute rotated ~90 0 run function cashgrab_ex:trinkets/hedge_seed/npe_hedge_landcrawl
+
+# --- 90 degree counter-clockwise turned landcrawl
+
+# Set recursion loop count
+scoreboard players set @s tv_A 8
+
+# Calculate facing vector
+execute rotated ~-90 0 run function cashgrab:util/npe_calc_facing_vector {magnitude:1.0}
+execute store result storage cashgrab_ex:hedge_args data.delta_x float 0.001 run scoreboard players get @s facing_vector_x_mm
+execute store result storage cashgrab_ex:hedge_args data.delta_z float 0.001 run scoreboard players get @s facing_vector_z_mm
+
+# Crawl along ground in one direction to the side
+execute rotated ~-90 0 run function cashgrab_ex:trinkets/hedge_seed/npe_hedge_landcrawl
