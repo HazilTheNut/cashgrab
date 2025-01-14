@@ -8,4 +8,4 @@
 #
 # Arguments: (none)
 
-execute store result score @a[tag=t_pm_owner,limit=1] trinket_in_offhand run execute if items entity @a[tag=t_pm_owner,limit=1] weapon.offhand *[custom_data={is_trinket:1}]
+execute store success score @a[tag=t_pm_owner,limit=1] trinket_in_offhand run execute if items entity @a[tag=t_pm_owner,limit=1] weapon.offhand *[custom_data={is_trinket:1}]
