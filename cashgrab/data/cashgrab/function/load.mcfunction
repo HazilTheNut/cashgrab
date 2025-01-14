@@ -84,8 +84,11 @@ scoreboard objectives add __trinket_charges_prev dummy
 #   negative values remove charges (to min of 0)
 scoreboard objectives add trinket_charges_modify dummy
 
-# 1 if holding trinket and 0 otherwise
-scoreboard objectives remove trinket_held
+# Variables reserved for trinkets to use (prefix: "tv_"). These values are set to zero whenever you run #cashgrab:classes/pmt_trinket_init
+scoreboard objectives add tv_A dummy
+scoreboard objectives add tv_B dummy
+scoreboard objectives add tv_C dummy
+scoreboard objectives add tv_D dummy
 
 # 1 if trinket is in offhand and 0 otherwise
 #   The t_trinket_force_hotbar tag forces trinket to
@@ -134,7 +137,7 @@ scoreboard objectives add __eid_prev dummy
 scoreboard objectives add eid_state dummy
 
 # =============================
-# Variables reserved for classes to use (prefix: "cv_"). These values are set to zero whenever you run #cashgrab:classes/pmt_equip_perclass
+# Variables reserved for classes to use (prefix: "cv_"). These values are set to zero whenever you run #cashgrab:classes/pmt_class_init
 scoreboard objectives add cv_A dummy
 scoreboard objectives add cv_B dummy
 scoreboard objectives add cv_C dummy
