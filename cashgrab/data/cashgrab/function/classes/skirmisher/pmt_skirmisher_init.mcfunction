@@ -22,3 +22,5 @@ scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 13000
 scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_charges_max 1
 scoreboard players set @a[tag=t_pm_owner,limit=1] ability_charges 1
 
+# Force trinket onto hotbar since this class is focused on dual-wielding two weapons
+tag @a[tag=t_pm_owner,limit=1] add t_trinket_force_hotbar

@@ -25,3 +25,6 @@ scoreboard players set @a[tag=t_pm_owner,limit=1] ability_charges 1
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 20
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_E 3
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_F 1
+
+# If trinket is in the offhand, move crossbow to hotbar
+scoreboard players set @a[tag=t_pm_owner,limit=1,scores={trinket_in_offhand=1..}] cv_F 3

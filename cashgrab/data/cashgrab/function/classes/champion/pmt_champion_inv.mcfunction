@@ -39,6 +39,10 @@ minecraft:attribute_modifiers=[\
 {type:"attack_damage",slot:"mainhand",id:"cashgrab:duskpiercer_atkdmg",amount:5,operation:"add_value"},\
 {type:"attack_speed",slot:"mainhand",id:"cashgrab:duskpiercer_atkspd",amount:-2,operation:"add_value"}]]
 
-# Bastion
-item replace entity @a[tag=t_pm_owner,limit=1] weapon.offhand with minecraft:shield[minecraft:unbreakable={show_in_tooltip:false},\
+# Bastion (offhand if trinket is not in slot)
+item replace entity @a[tag=t_pm_owner,limit=1,scores={trinket_in_offhand=0}] weapon.offhand with minecraft:shield[minecraft:unbreakable={show_in_tooltip:false},\
+minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Bastion\"}"]
+
+# Bastion (hotbar if trinket is in offhand)
+item replace entity @a[tag=t_pm_owner,limit=1,scores={trinket_in_offhand=1..}] hotbar.1 with minecraft:shield[minecraft:unbreakable={show_in_tooltip:false},\
 minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Bastion\"}"]
