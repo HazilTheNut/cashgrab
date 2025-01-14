@@ -67,7 +67,7 @@ function cashgrab:base/pmt_player_state
 execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=0}] run function cashgrab:base/pmt_tick_transition_to_lobby
 
 #	activity_state 1	=	In Pregame Lobby
-execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=0}] run function cashgrab:base/pmt_tick_lobby
+execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=1}] run function cashgrab:base/pmt_tick_lobby
 
 #	activity_state 10	=	Transition to Class-and-Trinket Select
 execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=10}] run function cashgrab:base/pmt_tick_transition_to_cts
