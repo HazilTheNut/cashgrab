@@ -8,3 +8,5 @@
 #
 # Arguments: (none)
 
+# Run toss ability code
+execute at @a[tag=t_pm_owner,limit=1] rotated as @a[tag=t_pm_owner,limit=1] run function cashgrab:base/pmtl_ability

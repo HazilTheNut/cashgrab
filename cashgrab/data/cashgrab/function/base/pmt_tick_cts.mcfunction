@@ -8,6 +8,9 @@
 #
 # Arguments: (none)
 
+# Run toss ability code
+execute at @a[tag=t_pm_owner,limit=1] rotated as @a[tag=t_pm_owner,limit=1] run function cashgrab:base/pmtl_ability
+
 # Get input from inventory menu
 function cashgrab:base/cts/pmt_cts_input_main
 function cashgrab:base/pmt_trinket_cts_tick

@@ -59,7 +59,6 @@ tag @a[tag=t_pm_owner,limit=1,tag=t_died,scores={stat_alive_ticks=1..}] remove t
 function #cashgrab:pmt_tick_prior
 
 function cashgrab:base/pmt_player_state
-execute at @a[tag=t_pm_owner,limit=1] rotated as @a[tag=t_pm_owner,limit=1] run function cashgrab:base/pmtl_ability
 
 # =============================
 # Main tick - Player activity_state handling
