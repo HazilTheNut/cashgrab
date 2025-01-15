@@ -21,7 +21,7 @@ data merge storage cashgrab_ex:hedge_args {data:{col_terrain_allowed:"minecraft:
 # --- 90 degree clockwise turned landcrawl
 
 # Set recursion loop count
-scoreboard players set @s tv_A 7
+scoreboard players set @s tv_A 8
 
 # Calculate facing vector
 execute rotated ~90 0 run function cashgrab:util/npe_calc_facing_vector {magnitude:1.0}
@@ -34,7 +34,7 @@ execute rotated ~90 0 run function cashgrab_ex:trinkets/hedge_seed/npe_hedge_lan
 # --- 90 degree counter-clockwise turned landcrawl
 
 # Set recursion loop count
-scoreboard players set @s tv_A 7
+scoreboard players set @s tv_A 8
 
 # Calculate facing vector
 execute rotated ~-90 0 run function cashgrab:util/npe_calc_facing_vector {magnitude:1.0}
