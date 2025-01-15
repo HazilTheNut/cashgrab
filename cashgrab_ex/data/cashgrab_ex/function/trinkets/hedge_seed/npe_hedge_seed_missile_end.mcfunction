@@ -7,7 +7,11 @@
 #
 # Summary: Hedge Seed missile end function
 #
-# Arguments: (none)
+# Arguments:
+#	end_reason	: The reason for why the end function was called 
+
+# Check end reason
+$execute unless score NUM_END_REASON_TERRAIN_COLLISION num matches $(end_reason) run return 0
 
 function cashgrab_ex:trinkets/hedge_seed/npe_place_hedge_timer
 
@@ -17,7 +21,7 @@ data merge storage cashgrab_ex:hedge_args {data:{col_terrain_allowed:"minecraft:
 # --- 90 degree clockwise turned landcrawl
 
 # Set recursion loop count
-scoreboard players set @s tv_A 8
+scoreboard players set @s tv_A 7
 
 # Calculate facing vector
 execute rotated ~90 0 run function cashgrab:util/npe_calc_facing_vector {magnitude:1.0}
@@ -30,7 +34,7 @@ execute rotated ~90 0 run function cashgrab_ex:trinkets/hedge_seed/npe_hedge_lan
 # --- 90 degree counter-clockwise turned landcrawl
 
 # Set recursion loop count
-scoreboard players set @s tv_A 8
+scoreboard players set @s tv_A 7
 
 # Calculate facing vector
 execute rotated ~-90 0 run function cashgrab:util/npe_calc_facing_vector {magnitude:1.0}
