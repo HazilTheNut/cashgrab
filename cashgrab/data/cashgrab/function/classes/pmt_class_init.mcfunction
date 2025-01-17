@@ -24,7 +24,11 @@ scoreboard players set @a[tag=t_pm_owner] cv_F 0
 scoreboard players set @a[tag=t_pm_owner] cv_G 0
 scoreboard players set @a[tag=t_pm_owner] cv_H 0
 
+# Remove all potion effects
 effect clear @a[tag=t_pm_owner]
+
+# Reset t_trinket_force_hotbar tag
+tag @a[tag=t_pm_owner] remove t_trinket_force_hotbar
 
 # Run respective class equipment function
 $function $(func_pmt_init)
