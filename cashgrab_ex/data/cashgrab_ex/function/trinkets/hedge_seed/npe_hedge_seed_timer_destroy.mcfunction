@@ -13,4 +13,4 @@
 
 
 # Destroy blocks
-$fill ~ ~ ~ ~ ~$(height) ~ minecraft:air destroy
+$fill ~ ~ ~ ~ ~$(height) ~ minecraft:air replace minecraft:mangrove_leaves

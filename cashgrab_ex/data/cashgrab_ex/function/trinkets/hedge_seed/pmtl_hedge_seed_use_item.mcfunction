@@ -17,7 +17,7 @@ i_lifetime_ticks:60,\
 i_origin_loc:1,\
 f_focal_dist_m:35,\
 i_gravity_vy_mmpt:300,\
-i_gravity_const_mmpt2:60,\
+i_gravity_const_mmpt2:70,\
 t_missile_name:"t_hedge_seed_missile",\
 f_tracking_scalar:0.0f,\
 col_terrain_allowed:"minecraft:air",\
