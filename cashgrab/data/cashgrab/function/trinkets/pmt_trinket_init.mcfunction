@@ -9,6 +9,12 @@
 # Arguments:
 #	func_pmt_init	: trinket init function
 
+# Reset trinket variables
+scoreboard players set @a[tag=t_pm_owner] tv_A 0
+scoreboard players set @a[tag=t_pm_owner] tv_B 0
+scoreboard players set @a[tag=t_pm_owner] tv_C 0
+scoreboard players set @a[tag=t_pm_owner] tv_D 0
+
 # Branch execution based on equipped trinket
 $function $(func_pmt_init)
 
