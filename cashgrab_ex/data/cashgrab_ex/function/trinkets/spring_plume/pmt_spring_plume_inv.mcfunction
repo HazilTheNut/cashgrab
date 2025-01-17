@@ -25,8 +25,7 @@ on_consume_effects:[\
 type:"apply_effects",\
 effects:[\
 {id:"minecraft:speed",amplifier:3b,duration:60},\
-{id:"minecraft:jump_boost",amplifier:5b,duration:60},\
-{id:"minecraft:slow_falling",amplifier:0b,duration:60}\
+{id:"minecraft:jump_boost",amplifier:5b,duration:60}\
 ]},\
 {\
 type:"remove_effects",\
