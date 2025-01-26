@@ -45,17 +45,17 @@ function #cashgrab:gt_tick_prior
 # =============================
 # Run pm-specific code
 
-# Reset pm_count of all players
-scoreboard players set @a pm_count 0
+# Reset __pm_count of all players
+scoreboard players set @a __pm_count 0
 # If the previous server tick ran out of time, a player might still have the t_pm_owner tag
 tag @a remove t_pm_owner
 
 # Run pm_main for all pms
 execute as @e[type=minecraft:marker,tag=t_pm,tag=!t_pm_no_owner,scores={eid_state=1}] run function cashgrab:base/pm_main
 
-# If a player still has a pm_count of 0, no pm ran for that player. Reinitialize them
-tellraw @a[scores={pm_count=0}] "An error has occurred with your session - reinitializing"
-scoreboard players set @a[scores={pm_count=0}] reinitialize 1
+# If a player still has a __pm_count of 0, no pm ran for that player. Reinitialize them
+tellraw @a[scores={__pm_count=0}] "An error has occurred with your session - reinitializing"
+scoreboard players set @a[scores={__pm_count=0}] reinitialize 1
 
 # =============================
 # Operate non-pm non-player entities such as timers, missiles, etc.

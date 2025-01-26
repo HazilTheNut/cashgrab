@@ -64,8 +64,8 @@ tag @e[tag=t_missile_init,limit=1,sort=nearest] add t_missile_calc_base_vel
 
 # Write miscellaneous scoreboard data to missile
 $scoreboard players set @e[tag=t_missile_init,limit=1,sort=nearest] mis_lifetime_ticks $(i_lifetime_ticks)
-$scoreboard players set @e[tag=t_missile_init,limit=1,sort=nearest] mis_gravity_vel_y_mmpt $(i_gravity_vy_mmpt)
-$scoreboard players set @e[tag=t_missile_init,limit=1,sort=nearest] mis_gravity_const_mmpt2 $(i_gravity_const_mmpt2)
+$scoreboard players set @e[tag=t_missile_init,limit=1,sort=nearest] __mis_gravity_vel_y_mmpt $(i_gravity_vy_mmpt)
+$scoreboard players set @e[tag=t_missile_init,limit=1,sort=nearest] __mis_gravity_const_mmpt2 $(i_gravity_const_mmpt2)
 
 scoreboard players set @e[tag=t_missile_init,limit=1,sort=nearest] mis_func_tick_dyaw_mdeg 0
 scoreboard players set @e[tag=t_missile_init,limit=1,sort=nearest] mis_func_tick_dpitch_mdeg 0
@@ -73,7 +73,7 @@ scoreboard players set @e[tag=t_missile_init,limit=1,sort=nearest] mis_func_tick
 $tag @e[tag=t_missile_init,limit=1,sort=nearest] add $(t_missile_name)
 
 # If the missile has gravity (if i_gravity_const_mmpt2 > 0), tag missile to apply tracking and calculate its parameters
-tag @e[tag=t_missile_init,limit=1,sort=nearest,scores={mis_gravity_const_mmpt2=1..}] add t_missile_has_gravity
+tag @e[tag=t_missile_init,limit=1,sort=nearest,scores={__mis_gravity_const_mmpt2=1..}] add t_missile_has_gravity
 
 # Issue EID to missile
 execute as @e[tag=t_missile_init,limit=1,sort=nearest] at @s run function cashgrab:util/npe_eid_acquire

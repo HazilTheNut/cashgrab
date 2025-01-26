@@ -11,8 +11,8 @@
 #	f_tracking_scalar		: Scalar of strength of tracking towards potential targets
 
 # Add pitch and yaw deflection of both func_npe_tick and projectile tracking
-scoreboard players operation @s mis_func_tick_dyaw_mdeg += @s mis_tracking_dyaw_mdeg
-scoreboard players operation @s mis_func_tick_dpitch_mdeg += @s mis_tracking_dpitch_mdeg
+scoreboard players operation @s mis_func_tick_dyaw_mdeg += @s __mis_tracking_dyaw_mdeg
+scoreboard players operation @s mis_func_tick_dpitch_mdeg += @s __mis_tracking_dpitch_mdeg
 
 # Write final angle adjustment
 execute store result entity @s data.tracking_dyaw float 0.001 run scoreboard players get @s mis_func_tick_dyaw_mdeg

@@ -24,7 +24,6 @@
 $scoreboard players set @s temp_A $(end_reason)
 
 $tellraw @a[tag=t_debug] "classes/titan/pull_raycast_end: end_reason: $(end_reason)"
-execute if score @s col_terrain matches 1.. run tellraw @a[tag=t_debug] [{"type":"text","text":"classes/titan/pull_raycast_end: temp_A: "},{"type":"score","score":{"name":"@s","objective":"temp_A"}}]
 
 # If there is no entity collision, raycast missed and should reduce cooldown
 execute unless score @s temp_A = NUM_END_REASON_ENTITY_COLLISION num run scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 6000

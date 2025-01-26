@@ -35,22 +35,22 @@ scoreboard players set @s __mis_has_collided 0
 
 # =============================
 # Terrain collision
-$execute store result score @s col_terrain run function cashgrab:util/npe_col_detect_terrain {delta_x:$(vel_x),delta_y:$(vel_y),delta_z:$(vel_z),col_terrain_allowed:"$(col_terrain_allowed)"}
+$execute store result score @s __col_terrain run function cashgrab:util/npe_col_detect_terrain {delta_x:$(vel_x),delta_y:$(vel_y),delta_z:$(vel_z),col_terrain_allowed:"$(col_terrain_allowed)"}
 
 # =============================
 # Entity hit detection
-scoreboard players set @s col_entity 0
+scoreboard players set @s __col_entity 0
 
 # Run entity collision filter function
-$execute if score @s col_terrain matches 0 store result score @s col_entity positioned ~$(vel_x) ~$(vel_y) ~$(vel_z) run function cashgrab:util/npe_col_detect_entity {func_npe_entity_filter:"$(func_npe_entity_filter)"}
+$execute if score @s __col_terrain matches 0 store result score @s __col_entity positioned ~$(vel_x) ~$(vel_y) ~$(vel_z) run function cashgrab:util/npe_col_detect_entity {func_npe_entity_filter:"$(func_npe_entity_filter)"}
 
 #tellraw @a[tag=t_debug] [{"type":"text","text":"Missile tags: "},{"type":"nbt","nbt":"Tags","entity":"@s"}]
 #tellraw @a[tag=t_debug] [{"type":"text","text":"  Candidates: "},{"type":"selector","selector":"@e[tag=t_collision_candidate]"}]
 #tellraw @a[tag=t_debug] [{"type":"text","text":"  Found: "},{"type":"selector","selector":"@e[tag=t_collision_found]"}]
 
-# = if either col_terrain or col_entity == 1
-execute if entity @s[scores={col_terrain=1..}] run scoreboard players set @s __mis_has_collided 1
-execute if entity @s[scores={col_entity=1..}] run scoreboard players set @s __mis_has_collided 1
+# = if either __col_terrain or __col_entity == 1
+execute if entity @s[scores={__col_terrain=1..}] run scoreboard players set @s __mis_has_collided 1
+execute if entity @s[scores={__col_entity=1..}] run scoreboard players set @s __mis_has_collided 1
 
 # If no collision, travel forwards
 $execute if entity @s[scores={__mis_has_collided=0}] run tp @s ~$(vel_x) ~$(vel_y) ~$(vel_z) ~$(tracking_dyaw) ~$(tracking_dpitch)
@@ -61,15 +61,15 @@ $execute if entity @s[scores={__mis_has_collided=0}] run tp @s ~$(vel_x) ~$(vel_
 # 	C) If the missile has gravity and does not have the t_missile_fall tag, apply t_missile_fall tag
 
 # Case A
-execute if entity @s[scores={__mis_has_collided=1,mis_gravity_const_mmpt2=..0}] run return run function cashgrab:base/missile_travel_end_collision with entity @s data
+execute if entity @s[scores={__mis_has_collided=1,__mis_gravity_const_mmpt2=..0}] run return run function cashgrab:base/missile_travel_end_collision with entity @s data
 
 # Case B
-execute if entity @s[scores={__mis_has_collided=1,mis_gravity_const_mmpt2=1..},tag=t_missile_fall] run return run function cashgrab:base/missile_travel_end_collision with entity @s data
+execute if entity @s[scores={__mis_has_collided=1,__mis_gravity_const_mmpt2=1..},tag=t_missile_fall] run return run function cashgrab:base/missile_travel_end_collision with entity @s data
 
 # Case C
-execute if entity @s[scores={__mis_has_collided=1,mis_gravity_const_mmpt2=1..},tag=!t_missile_fall] run tag @s add t_missile_fall
-execute if entity @s[scores={__mis_has_collided=1,mis_gravity_const_mmpt2=1..}] run scoreboard players set @s mis_base_vel_x_mmpt 0
-execute if entity @s[scores={__mis_has_collided=1,mis_gravity_const_mmpt2=1..}] run scoreboard players set @s[scores={mis_base_vel_y_mmpt=1..}] mis_base_vel_y_mmpt 0
-execute if entity @s[scores={__mis_has_collided=1,mis_gravity_const_mmpt2=1..}] run scoreboard players set @s[scores={mis_gravity_vel_y_mmpt=1..}] mis_gravity_vel_y_mmpt 0
-execute if entity @s[scores={__mis_has_collided=1,mis_gravity_const_mmpt2=1..}] run scoreboard players set @s mis_base_vel_z_mmpt 0
-execute if entity @s[scores={__mis_has_collided=1,mis_gravity_const_mmpt2=1..}] run scoreboard players set @s __mis_has_collided 0
+execute if entity @s[scores={__mis_has_collided=1,__mis_gravity_const_mmpt2=1..},tag=!t_missile_fall] run tag @s add t_missile_fall
+execute if entity @s[scores={__mis_has_collided=1,__mis_gravity_const_mmpt2=1..}] run scoreboard players set @s mis_base_vel_x_mmpt 0
+execute if entity @s[scores={__mis_has_collided=1,__mis_gravity_const_mmpt2=1..}] run scoreboard players set @s[scores={mis_base_vel_y_mmpt=1..}] mis_base_vel_y_mmpt 0
+execute if entity @s[scores={__mis_has_collided=1,__mis_gravity_const_mmpt2=1..}] run scoreboard players set @s[scores={__mis_gravity_vel_y_mmpt=1..}] __mis_gravity_vel_y_mmpt 0
+execute if entity @s[scores={__mis_has_collided=1,__mis_gravity_const_mmpt2=1..}] run scoreboard players set @s mis_base_vel_z_mmpt 0
+execute if entity @s[scores={__mis_has_collided=1,__mis_gravity_const_mmpt2=1..}] run scoreboard players set @s __mis_has_collided 0

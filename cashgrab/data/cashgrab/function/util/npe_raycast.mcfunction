@@ -21,14 +21,14 @@
 $scoreboard players set @s rc_steps_remaining $(i_range_m)
 scoreboard players operation @s rc_steps_remaining *= NUM_RAYCAST_STEPS_PER_M num
 
-$scoreboard players set @s rc_fit_player $(b_fit_player)
-$scoreboard players set @s rc_align_camera $(i_origin_loc)
+$scoreboard players set @s __rc_fit_player $(b_fit_player)
+$scoreboard players set @s __rc_align_camera $(i_origin_loc)
 
 $data merge storage cashgrab:rc_args {data:{col_terrain_allowed:"$(col_terrain_allowed)",func_npe_entity_filter:"$(func_npe_entity_filter)",func_npe_step:"$(func_npe_step)",func_npe_end:"$(func_npe_end)",delta_x:0.0f,delta_y:0.0f,delta_z:0.0f}}
 
-execute if entity @s[scores={rc_align_camera=0}] facing ^ ^ ^1 run function cashgrab:util/npe_calc_facing_vector {magnitude:0.5f}
-$execute if entity @s[scores={rc_align_camera=1}] facing ^0.5 ^0.3 ^$(i_range_m) run function cashgrab:util/npe_calc_facing_vector {magnitude:0.5f}
-$execute if entity @s[scores={rc_align_camera=2}] facing ^-0.5 ^-0.3 ^$(i_range_m) run function cashgrab:util/npe_calc_facing_vector {magnitude:0.5f}
+execute if entity @s[scores={__rc_align_camera=0}] facing ^ ^ ^1 run function cashgrab:util/npe_calc_facing_vector {magnitude:0.5f}
+$execute if entity @s[scores={__rc_align_camera=1}] facing ^0.5 ^0.3 ^$(i_range_m) run function cashgrab:util/npe_calc_facing_vector {magnitude:0.5f}
+$execute if entity @s[scores={__rc_align_camera=2}] facing ^-0.5 ^-0.3 ^$(i_range_m) run function cashgrab:util/npe_calc_facing_vector {magnitude:0.5f}
 
 
 execute store result storage cashgrab:rc_args data.delta_x float 0.001 run scoreboard players get @s facing_vector_x_mm
@@ -39,8 +39,8 @@ execute store result storage cashgrab:rc_args data.delta_z float 0.001 run score
 
 $function $(func_npe_entity_filter)
 
-execute if entity @s[scores={rc_align_camera=0}] anchored eyes positioned ^ ^ ^ run function cashgrab:base/npe_raycast_loop with storage cashgrab:rc_args data
-execute if entity @s[scores={rc_align_camera=1}] anchored eyes positioned ^-0.5 ^-0.3 ^ run function cashgrab:base/npe_raycast_loop with storage cashgrab:rc_args data
-execute if entity @s[scores={rc_align_camera=2}] anchored eyes positioned ^0.5 ^-0.3 ^ run function cashgrab:base/npe_raycast_loop with storage cashgrab:rc_args data
+execute if entity @s[scores={__rc_align_camera=0}] anchored eyes positioned ^ ^ ^ run function cashgrab:base/npe_raycast_loop with storage cashgrab:rc_args data
+execute if entity @s[scores={__rc_align_camera=1}] anchored eyes positioned ^-0.5 ^-0.3 ^ run function cashgrab:base/npe_raycast_loop with storage cashgrab:rc_args data
+execute if entity @s[scores={__rc_align_camera=2}] anchored eyes positioned ^0.5 ^-0.3 ^ run function cashgrab:base/npe_raycast_loop with storage cashgrab:rc_args data
 
 tag @e remove t_collision_candidate

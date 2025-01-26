@@ -26,7 +26,7 @@
 
 # Get delta_y, which determines if raycaster is looking more upwards or more downwards
 #execute store result score @s temp_A run data get storage cashgrab:rc_args data.delta_y 1000
-#tellraw @s[tag=t_debug,scores={col_terrain=1..}] [{"type":"text","text":"pe_raycast_fit_player temp_A: "},{"type":"score","score":{"name":"@s","objective":"temp_A"}}]
+#tellraw @s[tag=t_debug,scores={__col_terrain=1..}] [{"type":"text","text":"pe_raycast_fit_player temp_A: "},{"type":"score","score":{"name":"@s","objective":"temp_A"}}]
 
 tag @s remove t_raycast_player_fit_case_met
 
