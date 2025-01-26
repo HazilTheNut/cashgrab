@@ -42,11 +42,11 @@ scoreboard players operation @a[tag=t_pm_owner,limit=1,scores={ability_cd_ms=0..
 
 # Display cooldown icon
 
-# Calculate ability_cd_display_secs based on ability_cd_ms
-scoreboard players operation @a[tag=t_pm_owner,limit=1] ability_cd_display_secs = @a[tag=t_pm_owner,limit=1] ability_cd_ms
-scoreboard players operation @a[tag=t_pm_owner,limit=1] ability_cd_display_secs /= NUM_ONE_THOUSAND num
+# Calculate __ability_cd_display_secs based on ability_cd_ms
+scoreboard players operation @a[tag=t_pm_owner,limit=1] __ability_cd_display_secs = @a[tag=t_pm_owner,limit=1] ability_cd_ms
+scoreboard players operation @a[tag=t_pm_owner,limit=1] __ability_cd_display_secs /= NUM_ONE_THOUSAND num
 # we have rounding up at home
-scoreboard players add @a[tag=t_pm_owner,scores={ability_cd_ms=1..}] ability_cd_display_secs 1
+scoreboard players add @a[tag=t_pm_owner,scores={ability_cd_ms=1..}] __ability_cd_display_secs 1
 
 # Display ability icon while cooldown is ticking down
 execute if entity @a[tag=t_pm_owner,scores={ability_cd_ms=0..}] run function cashgrab:util/pmt_inv_ability_icon_argloader
