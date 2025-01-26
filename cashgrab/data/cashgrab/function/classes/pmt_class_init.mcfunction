@@ -12,7 +12,7 @@
 # Reset ability cooldown
 scoreboard players set @a[tag=t_pm_owner] ability_cd_tickrate 50
 scoreboard players set @a[tag=t_pm_owner] ability_cd_ms 0
-scoreboard players set @a[tag=t_pm_owner] ability_cd_display_secs 0
+scoreboard players set @a[tag=t_pm_owner] __ability_cd_display_secs 0
 
 # Reset class variables
 scoreboard players set @a[tag=t_pm_owner] cv_A 0

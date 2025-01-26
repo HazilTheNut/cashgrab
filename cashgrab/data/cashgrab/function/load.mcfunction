@@ -64,7 +64,8 @@ scoreboard objectives add ability_cd_ms dummy
 scoreboard objectives add ability_cd_tickrate dummy
 
 # Current cooldown time remaining, in secs, derived from ability_cd_ms
-scoreboard objectives add ability_cd_display_secs dummy
+scoreboard objectives add __ability_cd_display_secs dummy
+scoreboard objectives remove ability_cd_display_secs
 
 # Class-configured ability max charge count
 scoreboard objectives add ability_cfg_charges_max dummy
