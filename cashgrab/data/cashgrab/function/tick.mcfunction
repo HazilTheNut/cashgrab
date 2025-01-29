@@ -70,9 +70,10 @@ execute as @e[type=!minecraft:player,tag=!t_pm] run function cashgrab:base/npe_m
 execute as @e[type=!minecraft:player,scores={eid_state=1..2}] run function cashgrab:base/npe_grab
 
 # =============================
-# Player death handling - this occurs after any deaths that might occur from missiles / timers
+# Player kill scoring and death handling - this occurs after any deaths that might occur from missiles / timers
 
 execute as @e[type=minecraft:marker,tag=t_pm,tag=!t_pm_no_owner,scores={eid_state=1}] run function cashgrab:base/pm_handle_player_death
+execute as @e[type=minecraft:marker,tag=t_pm,tag=!t_pm_no_owner,scores={eid_state=1}] run function cashgrab:base/pm_handle_score_kill
 
 # =============================
 # Allow plugins to run code at the end of server tick but before events are cleared
