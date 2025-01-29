@@ -33,7 +33,7 @@ function cashgrab:classes/pmt_class_score_kill with entity @s data.class_info
 # Run kill scoring listener code for direct subordinates of player
 function cashgrab:util/npe_eid_find_peers
 tag @a[tag=t_pm_owner] add t_player_owner
-execute as @e[scores={eid_compare=0},tag=t_score_kill_listener,type=minecraft:marker] at @s run function cashgrab:base/npe_score_kill_listener with entity @s data
+execute as @e[scores={eid_compare=0},tag=t_score_kill_listener,type=minecraft:marker] at @s rotated as @s run function cashgrab:base/npe_score_kill_listener with entity @s data
 
 # Run all kill scoring listener code from plugins
 function #cashgrab:pmt_score_kill
