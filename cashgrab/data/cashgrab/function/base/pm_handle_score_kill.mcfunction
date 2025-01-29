@@ -17,6 +17,9 @@ tag @a[tag=t_eid_matches,limit=1] add t_pm_owner
 # If owner has not scored a kill, clean up and exit
 execute if score @a[tag=t_pm_owner,limit=1] evl_player_kills matches ..0 run return run tag @a[tag=t_pm_owner] remove t_pm_owner
 
+# Exclude players not in gameplay
+execute unless score @a[tag=t_pm_owner,limit=1] activity_state matches 21..29 run return run tag @a[tag=t_pm_owner] remove t_pm_owner
+
 # Below only runs when player scores a kill
 
 # =============================
