@@ -24,6 +24,18 @@
 		{
 			"id": "#minecraft:trapdoors",
 			"required": false
+		},
+		{
+			"id": "minecraft:lantern",
+			"required": false
+		},
+		{
+			"id": "minecraft:soul_lantern",
+			"required": false
+		},
+		{
+			"id": "minecraft:chain",
+			"required": false
 		}
 	]
 }

@@ -145,6 +145,21 @@ rot_spawn_c:"0 0",\
 loc_spawn_d:"1073 92 3044",\
 rot_spawn_d:"-90 0",\
 },\
+graphite:{\
+size:3,\
+map_name:"Graphite",\
+daytime:20000,\
+loc_cts:"1043 102 4000",\
+yaw_cts:"-90",\
+loc_spawn_a:"1105 138 3967",\
+rot_spawn_a:"37 0",\
+loc_spawn_b:"1138 140 3970",\
+rot_spawn_b:"-45 0",\
+loc_spawn_c:"1168 137 4027",\
+rot_spawn_c:"-180 0",\
+loc_spawn_d:"1085 145 4043",\
+rot_spawn_d:"-120 0",\
+},\
 }
 
 # Populate lobby configuration

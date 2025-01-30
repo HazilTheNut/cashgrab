@@ -15,6 +15,7 @@ execute if score CGAW_CFG_MAP_ID num matches 202 run data modify storage cgaw:ru
 
 execute if score CGAW_CFG_MAP_ID num matches 301 run data modify storage cgaw:runtime active_map set from storage cgaw:world_info map_data.deepgrove
 execute if score CGAW_CFG_MAP_ID num matches 302 run data modify storage cgaw:runtime active_map set from storage cgaw:world_info map_data.skullway
+execute if score CGAW_CFG_MAP_ID num matches 303 run data modify storage cgaw:runtime active_map set from storage cgaw:world_info map_data.graphite
 
 # Set time of day
 function cgaw:gt_set_daytime with storage cgaw:runtime active_map
