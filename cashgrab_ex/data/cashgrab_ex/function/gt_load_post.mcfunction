@@ -108,3 +108,15 @@ evc_usage_score:"evc_clay_balls",\
 }
 
 scoreboard objectives add evc_clay_balls minecraft.used:minecraft.clay_ball
+
+# Nox Bomb
+data modify storage cashgrab:game_info trinkets append value {\
+s_trinket_name:"Nox Bomb",\
+func_pmt_init:"cashgrab_ex:trinkets/nox_bomb/pmt_nox_bomb_init",\
+func_pmt_inv:"cashgrab_ex:trinkets/nox_bomb/pmt_nox_bomb_inv",\
+func_pmtl_use_item:"cashgrab_ex:trinkets/nox_bomb/pmtl_nox_bomb_use_item",\
+func_pmt_cts_icon:"cashgrab_ex:trinkets/nox_bomb/pmt_nox_bomb_cts_inv_icon",\
+evc_usage_score:"evc_lime_dyes",\
+}
+
+scoreboard objectives add evc_lime_dyes minecraft.used:minecraft.lime_dye
