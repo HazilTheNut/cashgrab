@@ -96,3 +96,15 @@ evc_usage_score:"evc_mangrove_leaves",\
 }
 
 scoreboard objectives add evc_mangrove_leaves minecraft.used:minecraft.mangrove_leaves
+
+# Risk-It Biscuit
+data modify storage cashgrab:game_info trinkets append value {\
+s_trinket_name:"Risk-It Biscuit",\
+func_pmt_init:"cashgrab_ex:trinkets/risk_it_biscuit/pmt_risk_it_biscuit_init",\
+func_pmt_inv:"cashgrab_ex:trinkets/risk_it_biscuit/pmt_risk_it_biscuit_inv",\
+func_pmtl_use_item:"cashgrab_ex:trinkets/risk_it_biscuit/pmtl_risk_it_biscuit_use_item",\
+func_pmt_cts_icon:"cashgrab_ex:trinkets/risk_it_biscuit/pmt_risk_it_biscuit_cts_inv_icon",\
+evc_usage_score:"evc_clay_balls",\
+}
+
+scoreboard objectives add evc_clay_balls minecraft.used:minecraft.clay_ball
