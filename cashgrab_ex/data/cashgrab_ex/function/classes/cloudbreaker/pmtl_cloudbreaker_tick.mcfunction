@@ -48,7 +48,7 @@ i_gravity_const_mmpt2:40,\
 t_missile_name:"t_thunder_seed_missile",\
 f_tracking_scalar:0.0f,\
 col_terrain_allowed:"#cashgrab:partialsolid",\
-func_npe_entity_filter:"cashgrab:util/noop",\
+func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_none",\
 func_npe_tracking_filter:"cashgrab:util/noop",\
 func_npe_start:"cashgrab:util/noop",\
 func_npe_tick:"cashgrab_ex:classes/cloudbreaker/thunder_seed_missile_tick",\
