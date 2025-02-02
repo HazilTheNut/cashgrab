@@ -84,3 +84,15 @@ evc_usage_score:"evc_feathers",\
 }
 
 scoreboard objectives add evc_feathers minecraft.used:minecraft.feather
+
+# Hedge Seed
+data modify storage cashgrab:game_info trinkets append value {\
+s_trinket_name:"Hedge Seed",\
+func_pmt_init:"cashgrab_ex:trinkets/hedge_seed/pmt_hedge_seed_init",\
+func_pmt_inv:"cashgrab_ex:trinkets/hedge_seed/pmt_hedge_seed_inv",\
+func_pmtl_use_item:"cashgrab_ex:trinkets/hedge_seed/pmtl_hedge_seed_use_item",\
+func_pmt_cts_icon:"cashgrab_ex:trinkets/hedge_seed/pmt_hedge_seed_cts_inv_icon",\
+evc_usage_score:"evc_mangrove_leaves",\
+}
+
+scoreboard objectives add evc_mangrove_leaves minecraft.used:minecraft.mangrove_leaves
