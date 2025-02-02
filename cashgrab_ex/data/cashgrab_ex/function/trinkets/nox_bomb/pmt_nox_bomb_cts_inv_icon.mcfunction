@@ -14,8 +14,9 @@ minecraft:item_name="[{\"color\":\"dark_green\",\"italic\":false,\"text\":\"<Tri
 minecraft:enchantment_glint_override=true,\
 minecraft:custom_data={is_cts_icon:1},\
 minecraft:lore=[\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"Fires a beam that\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\" damages and slows.\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"Beams that hit\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\" refund their charge.\"}"]\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\"Lobs a poison bomb that\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\" splits into more bombs\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\" on impact.\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\"Each explosion poisons\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\" and slows in a wide area.\"}"]\
 ] 2

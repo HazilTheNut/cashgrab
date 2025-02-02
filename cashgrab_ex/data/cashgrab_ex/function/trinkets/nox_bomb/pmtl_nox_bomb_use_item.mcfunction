@@ -10,8 +10,6 @@
 #
 # Arguments: (none)
 
-playsound minecraft:block.glass.break player @a ~ ~ ~ 1.0 2.0
-
 function cashgrab:util/npe_create_missile {\
 f_speed_mpt:0.6f,\
 i_lifetime_ticks:100,\

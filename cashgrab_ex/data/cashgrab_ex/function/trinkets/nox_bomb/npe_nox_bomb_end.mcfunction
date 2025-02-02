@@ -16,6 +16,8 @@ $execute unless score NUM_END_REASON_TERRAIN_COLLISION num matches $(end_reason)
 
 function cashgrab_ex:trinkets/nox_bomb/npe_nox_bomb_splash
 
+playsound minecraft:block.slime_block.hit player @a ~ ~ ~ 1.0 1.25
+
 # Spawn secondary wave of missiles
 
 execute positioned ~ ~0.5 ~ rotated ~90 0 run function cashgrab:util/npe_create_missile {\
