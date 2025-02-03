@@ -24,8 +24,7 @@ has_consume_particles:false,\
 },\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Lobs a poison bomb that\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\" splits into more bombs\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\" on impact.\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\" splits into more bombs.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Each explosion poisons\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" and slows in a wide area.\"}"]\
 ] $(charges)
