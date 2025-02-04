@@ -5,13 +5,13 @@
 #	at: the missile
 #	facing: the missile's facing direction
 #
-# Summary: Echo Bolt missile end function
+# Summary: Nox Bomb splash effect
 #
 # Arguments: (none)
 
 # vfx / sfx
-particle minecraft:dust{color:[0.45f,0.9f,0.15f],scale:1.0} ~ ~ ~ 2.20 0.05 2.20 0 60
-particle minecraft:entity_effect{color:[0.35f,0.6f,0.15f,0.75f]} ~ ~ ~ 2.20 0.05 2.20 0 60
+particle minecraft:dust{color:[0.45f,0.9f,0.15f],scale:1.0} ~ ~ ~ 2.40 0.05 2.40 0 65
+particle minecraft:entity_effect{color:[0.35f,0.6f,0.15f,0.75f]} ~ ~ ~ 2.40 0.05 2.40 0 65
 playsound minecraft:entity.generic.extinguish_fire player @a ~ ~ ~ 1.0 1.5
 
 # Apply poison

@@ -18,4 +18,4 @@ minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" splits into more bombs.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Each explosion poisons\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" and slows in a wide area.\"}"]\
-] 2
+] 1
