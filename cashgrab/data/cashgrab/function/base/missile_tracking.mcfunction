@@ -10,20 +10,27 @@
 # Arguments:
 #	func_npe_tracking_filter	: Used for determining targets to track towards
 
-# Run filter function
-$function $(func_npe_tracking_filter)
-
 scoreboard players set @s __mis_tracking_dyaw_mdeg 0
 scoreboard players set @s __mis_tracking_dpitch_mdeg 0
 
-# If no entity found, do no track onto nothing
-execute unless entity @e[tag=t_collision_candidate,tag=!t_invisible] run return 0
-
-# If t_missile_init_tracking is set, calculate minimum and maximum displacement angles to apply tracking to
+# If t_missile_init_tracking is set, 
+#   calculate minimum and maximum angles to apply tracking to
+#   and find a tracking target if one is not yet provided
 execute if entity @s[tag=t_missile_init_tracking] run function cashgrab:base/missile_tracking_init with entity @s data
 
+# If no tracking target, do nothing
+execute if score @s mis_tracking_target_eid matches 0 run return 0
+
+# Search for tracking target and tag them with t_missile_tracking_target
+execute store result storage cashgrab:find_eid_args eid int 1 run scoreboard players get @s mis_tracking_target_eid
+function cashgrab:util/find_eid_self with storage cashgrab:find_eid_args
+tag @e[tag=t_eid_matches,limit=1] add t_missile_tracking_target
+
+# If tracking target doesn't exist, do no track onto nothing
+execute unless entity @e[tag=t_missile_tracking_target] run return run scoreboard players set @s mis_tracking_target_eid 0
+
 # Calculate yaw and pitch of direction facing towards tracking target
-execute facing entity @e[tag=t_collision_candidate,tag=!t_invisible,limit=1,sort=nearest] eyes run function cashgrab:util/npe_calc_facing_vector {magnitude:1.0f}
+execute facing entity @e[tag=t_missile_tracking_target,tag=!t_invisible,limit=1] eyes run function cashgrab:util/npe_calc_facing_vector {magnitude:1.0f}
 scoreboard players operation @s __mis_tracking_dyaw_mdeg = @s facing_vector_yaw_mdeg
 scoreboard players operation @s __mis_tracking_dpitch_mdeg = @s facing_vector_pitch_mdeg
 
@@ -70,3 +77,6 @@ execute if score @s __mis_tracking_dyaw_mdeg < @s __mis_tracking_adjust_min_mdeg
 execute if score @s __mis_tracking_dpitch_mdeg < @s __mis_tracking_adjust_min_mdeg run scoreboard players operation @s __mis_tracking_dpitch_mdeg = @s __mis_tracking_adjust_min_mdeg
 execute if score @s __mis_tracking_dyaw_mdeg > @s __mis_tracking_adjust_max_mdeg run scoreboard players operation @s __mis_tracking_dyaw_mdeg = @s __mis_tracking_adjust_max_mdeg
 execute if score @s __mis_tracking_dpitch_mdeg > @s __mis_tracking_adjust_max_mdeg run scoreboard players operation @s __mis_tracking_dpitch_mdeg = @s __mis_tracking_adjust_max_mdeg
+
+# Clean up tags
+tag @e remove t_missile_tracking_target

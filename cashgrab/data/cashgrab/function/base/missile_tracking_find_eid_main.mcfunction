@@ -25,7 +25,7 @@ scoreboard players add @s __mis_tracking_nearest_angle_dp_max_um 975000
 # Calculate missile's facing angle - this writes to facing_vector_yaw_mdeg and facing_vector_pitch_mdeg
 function cashgrab:util/npe_calc_facing_vector {magnitude:1.0}
 
-tellraw @a[tag=t_debug] [{"color":"yellow","text":"\nbase/missile_tracking_find_eid_main"}]
+tellraw @a[tag=t_debug] [{"color":"yellow","text":"\nbase/missile_tracking_find_eid_main dp min = "},{"score":{"name":"@s","objective":"__mis_tracking_nearest_angle_dp_max_um"}}]
 
 # Tag myself as the missile performing calculation
 tag @s add t_missile_tracking_calc_nearest_angle
