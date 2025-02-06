@@ -58,6 +58,7 @@ tracking_dyaw:0,tracking_dpitch:0}}
 execute store result score @s temp_B run data get entity @e[tag=t_missile_init,limit=1,sort=nearest] data.f_tracking_scalar 1000000
 execute if entity @s[scores={temp_B=1..}] run tag @e[tag=t_missile_init,limit=1,sort=nearest] add t_missile_has_tracking
 execute if entity @s[scores={temp_B=1..}] run tag @e[tag=t_missile_init,limit=1,sort=nearest] add t_missile_init_tracking
+execute if entity @s[scores={temp_B=1..}] run scoreboard players set @e[tag=t_missile_init,limit=1,sort=nearest] mis_tracking_target_eid 0
 
 # Schedule missile to calcualte its base velocity
 tag @e[tag=t_missile_init,limit=1,sort=nearest] add t_missile_calc_base_vel
