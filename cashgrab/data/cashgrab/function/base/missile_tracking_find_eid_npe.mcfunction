@@ -50,5 +50,5 @@ scoreboard players operation @e[tag=t_missile_tracking_update_nearest_angle,limi
 execute if entity @e[tag=t_missile_tracking_update_nearest_angle] run tellraw @a[tag=t_debug] [{"color":"aqua","text":" Updating target EID, newest largest dp = "},{"score":{"name":"@e[tag=t_missile_tracking_calc_nearest_angle,limit=1]","objective":"__mis_tracking_nearest_angle_dp_max_um"}}]
 
 # Clean up tags
-tag @e remove t_missile_tracking_update_nearest_angle
+tag @e[type=minecraft:marker] remove t_missile_tracking_update_nearest_angle
 

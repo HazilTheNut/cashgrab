@@ -18,29 +18,45 @@ execute if entity @a[tag=t_pm_owner,tag=!t_collision_candidate] run return run t
 # Player must be in gameplay state
 execute unless score @a[tag=t_pm_owner,limit=1] activity_state matches 21..29 run return run tag @a remove t_pm_owner
 
-# Calculate player facing angle
-execute at @a[tag=t_pm_owner,limit=1] rotated as @a[tag=t_pm_owner,limit=1] run function cashgrab:util/npe_calc_facing_vector {magnitude:1.0}
+# Calculate facing angle towards player
+execute at @e[tag=t_missile_tracking_calc_nearest_angle,limit=1] facing entity @a[tag=t_pm_owner,limit=1] eyes run function cashgrab:util/npe_calc_facing_vector {magnitude:1.0}
 
-# Store player facing angle onto missile then subtract by its facing angle
-scoreboard players operation @e[tag=t_missile_tracking_calc_nearest_angle,limit=1] __mis_tracking_temp_angle_diff_yaw_mdeg = @s facing_vector_yaw_mdeg
-scoreboard players operation @e[tag=t_missile_tracking_calc_nearest_angle,limit=1] __mis_tracking_temp_angle_diff_yaw_mdeg -= @e[tag=t_missile_tracking_calc_nearest_angle,limit=1] facing_vector_yaw_mdeg
-scoreboard players operation @e[tag=t_missile_tracking_calc_nearest_angle,limit=1] __mis_tracking_temp_angle_diff_pitch_mdeg = @s facing_vector_pitch_mdeg
-scoreboard players operation @e[tag=t_missile_tracking_calc_nearest_angle,limit=1] __mis_tracking_temp_angle_diff_pitch_mdeg -= @e[tag=t_missile_tracking_calc_nearest_angle,limit=1] facing_vector_pitch_mdeg
+tellraw @a[tag=t_debug] ["base/missile_tracking_find_eid_pm eid_owner: ",{"score":{"name":"@s","objective":"eid_owner"}}]
 
-# Get absolute value of angle differences
-execute as @e[tag=t_missile_tracking_calc_nearest_angle,limit=1] if score @s __mis_tracking_temp_angle_diff_yaw_mdeg matches ..0 run scoreboard players operation @s __mis_tracking_temp_angle_diff_yaw_mdeg *= NUM_NEG_ONE num
-execute as @e[tag=t_missile_tracking_calc_nearest_angle,limit=1] if score @s __mis_tracking_temp_angle_diff_pitch_mdeg matches ..0 run scoreboard players operation @s __mis_tracking_temp_angle_diff_pitch_mdeg *= NUM_NEG_ONE num
+# ================================================
+# Calculate dot product using facing vector data already on missile
 
-# If either angle difference is less the missile's current nearest angle, update and set EID target
-execute as @e[tag=t_missile_tracking_calc_nearest_angle,limit=1] if score @s __mis_tracking_temp_angle_diff_yaw_mdeg < @s __mis_tracking_nearest_angle_min_mdeg run tag @s add t_missile_tracking_update_nearest_angle
-execute as @e[tag=t_missile_tracking_calc_nearest_angle,limit=1] if score @s __mis_tracking_temp_angle_diff_pitch_mdeg < @s __mis_tracking_nearest_angle_min_mdeg run tag @s add t_missile_tracking_update_nearest_angle
+scoreboard players set @e[tag=t_missile_tracking_calc_nearest_angle,limit=1] __mis_tracking_nearest_angle_dp_sum_um 0
 
-scoreboard players operation @e[tag=t_missile_tracking_update_nearest_angle,limit=1] __mis_tracking_nearest_angle_yaw_mdeg = @e[tag=t_missile_tracking_update_nearest_angle,limit=1] __mis_tracking_temp_angle_diff_yaw_mdeg
-scoreboard players operation @e[tag=t_missile_tracking_update_nearest_angle,limit=1] __mis_tracking_nearest_angle_pitch_mdeg = @e[tag=t_missile_tracking_update_nearest_angle,limit=1] __mis_tracking_temp_angle_diff_pitch_mdeg
-execute as @e[tag=t_missile_tracking_update_nearest_angle,limit=1] if score @s __mis_tracking_nearest_angle_yaw_mdeg <= @s __mis_tracking_nearest_angle_pitch_mdeg run scoreboard players operation @s __mis_tracking_nearest_angle_min_mdeg = @s __mis_tracking_nearest_angle_yaw_mdeg
-execute as @e[tag=t_missile_tracking_update_nearest_angle,limit=1] if score @s __mis_tracking_nearest_angle_yaw_mdeg > @s __mis_tracking_nearest_angle_pitch_mdeg run scoreboard players operation @s __mis_tracking_nearest_angle_min_mdeg = @s __mis_tracking_nearest_angle_pitch_mdeg
-scoreboard players operation @e[tag=t_missile_tracking_update_nearest_angle,limit=1] mis_tracking_target_eid = @s eid_owner
+# x axis
+scoreboard players operation @e[tag=t_missile_tracking_calc_nearest_angle,limit=1] __mis_tracking_nearest_angle_dp_term_um = @e[tag=t_missile_tracking_calc_nearest_angle,limit=1] facing_vector_x_mm
+scoreboard players operation @e[tag=t_missile_tracking_calc_nearest_angle,limit=1] __mis_tracking_nearest_angle_dp_term_um *= @s facing_vector_x_mm
+scoreboard players operation @e[tag=t_missile_tracking_calc_nearest_angle,limit=1] __mis_tracking_nearest_angle_dp_sum_um += @e[tag=t_missile_tracking_calc_nearest_angle,limit=1] __mis_tracking_nearest_angle_dp_term_um
+
+# y axis
+scoreboard players operation @e[tag=t_missile_tracking_calc_nearest_angle,limit=1] __mis_tracking_nearest_angle_dp_term_um = @e[tag=t_missile_tracking_calc_nearest_angle,limit=1] facing_vector_y_mm
+scoreboard players operation @e[tag=t_missile_tracking_calc_nearest_angle,limit=1] __mis_tracking_nearest_angle_dp_term_um *= @s facing_vector_y_mm
+scoreboard players operation @e[tag=t_missile_tracking_calc_nearest_angle,limit=1] __mis_tracking_nearest_angle_dp_sum_um += @e[tag=t_missile_tracking_calc_nearest_angle,limit=1] __mis_tracking_nearest_angle_dp_term_um
+
+# z axis
+scoreboard players operation @e[tag=t_missile_tracking_calc_nearest_angle,limit=1] __mis_tracking_nearest_angle_dp_term_um = @e[tag=t_missile_tracking_calc_nearest_angle,limit=1] facing_vector_z_mm
+scoreboard players operation @e[tag=t_missile_tracking_calc_nearest_angle,limit=1] __mis_tracking_nearest_angle_dp_term_um *= @s facing_vector_z_mm
+scoreboard players operation @e[tag=t_missile_tracking_calc_nearest_angle,limit=1] __mis_tracking_nearest_angle_dp_sum_um += @e[tag=t_missile_tracking_calc_nearest_angle,limit=1] __mis_tracking_nearest_angle_dp_term_um
+
+# dot_product(a,b) = magnitude(a)*magnitude(b)*cos(angle) = cos(angle)
+#   since magnitude(a)=magnitude(b)=1, larger dot products are more codirectional
+
+tellraw @a[tag=t_debug] [" dp = ",{"score":{"name":"@e[tag=t_missile_tracking_calc_nearest_angle,limit=1]","objective":"__mis_tracking_nearest_angle_dp_sum_um"}}]
+
+# ================================================
+# If dot product is the newest largest, update EID target
+execute as @e[tag=t_missile_tracking_calc_nearest_angle,limit=1] if score @s __mis_tracking_nearest_angle_dp_sum_um > @s __mis_tracking_nearest_angle_dp_max_um run tag @s add t_missile_tracking_update_nearest_angle
+
+scoreboard players operation @e[tag=t_missile_tracking_update_nearest_angle,limit=1] __mis_tracking_nearest_angle_dp_max_um = @e[tag=t_missile_tracking_update_nearest_angle,limit=1] __mis_tracking_nearest_angle_dp_sum_um
+scoreboard players operation @e[tag=t_missile_tracking_update_nearest_angle,limit=1] mis_tracking_target_eid = @s eid_self
+
+execute if entity @e[tag=t_missile_tracking_update_nearest_angle] run tellraw @a[tag=t_debug] [{"color":"aqua","text":" Updating target EID, newest largest dp = "},{"score":{"name":"@e[tag=t_missile_tracking_calc_nearest_angle,limit=1]","objective":"__mis_tracking_nearest_angle_dp_max_um"}}]
 
 # Clean up tags
 tag @a remove t_pm_owner
-tag @e remove t_missile_tracking_update_nearest_angle
+tag @e[type=minecraft:marker] remove t_missile_tracking_update_nearest_angle

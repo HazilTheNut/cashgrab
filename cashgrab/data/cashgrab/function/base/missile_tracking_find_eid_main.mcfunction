@@ -18,7 +18,7 @@ scoreboard players set @s mis_tracking_target_eid 0
 
 # Don't want missile tracking towards targets behind it, 
 #   so set a minimum for dot product equal to 0.975 - f_tracking_scalar
-#   (giveup angle ranges from 12.83 to 91.4 degrees from 0 to 1 f_tracking_scalar)
+#   (giveup angle ranges from 12.83 to 91.43 degrees from 0 to 1 f_tracking_scalar)
 execute store result score @s __mis_tracking_nearest_angle_dp_max_um run data get entity @s data.f_tracking_scalar -1000000
 scoreboard players add @s __mis_tracking_nearest_angle_dp_max_um 975000
 
