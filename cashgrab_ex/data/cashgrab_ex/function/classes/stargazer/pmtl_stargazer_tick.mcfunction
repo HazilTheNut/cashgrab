@@ -39,6 +39,9 @@ execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=..24,cv_B=..0}] run fun
 execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1..,evc_vex_armor_trim_smithing_templates=1..}] run function cashgrab_ex:classes/stargazer/pmtl_stargazer_cast_astral_dart
 
 # Rift Glyph
+execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=4..,evc_wayfinder_armor_trim_smithing_templates=1..}] run function cashgrab_ex:classes/stargazer/pmtl_stargazer_cast_rift_glyph
+
+# Rift Glyph
 
 # Vortex Snare
 

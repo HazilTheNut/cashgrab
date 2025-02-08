@@ -42,8 +42,8 @@ b_assign_as_peer:1,\
 # Decrement Mana
 scoreboard players remove @a[tag=t_pm_owner,limit=1] cv_A 1
 
-# Set lockout timer to 0.75 seconds
-scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 15
+# Set lockout timer to 0.6 seconds
+scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 12
 
 # Reload inventory displays
 function cashgrab_ex:classes/stargazer/pmt_stargazer_inv_spells
