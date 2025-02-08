@@ -55,5 +55,8 @@ minecraft:attribute_modifiers=[\
 # Forgeblade (I-IV)
 function cashgrab_ex:classes/battlesmith/pmt_battlesmith_inv_sword
 
+# Upgrade Weapon
+function cashgrab_ex:classes/battlesmith/pmt_battlesmith_inv_upgrade
+
 # Scrap Counter
 function cashgrab_ex:classes/battlesmith/pmt_battlesmith_inv_scrap

@@ -35,7 +35,7 @@ function cashgrab:util/npe_col_entity_filter_hostile
 execute positioned ~-2 ~-2 ~-2 run tag @e[tag=t_collision_candidate,dx=4,dy=7,dz=4] add t_dmg_trgt
 
 # If any damage dealt, award scrap
-execute if entity @e[tag=t_dmg_trgt,distance=..10] run tag @a[tag=t_dmg_from,limit=1] add t_award_scrap
+execute if entity @e[tag=t_dmg_trgt,distance=..10] run tag @a[tag=t_dmg_from,limit=1,scores={cv_A=..19}] add t_award_scrap
 
 # Apply damage
 function cashgrab:util/npe_dmg {\
