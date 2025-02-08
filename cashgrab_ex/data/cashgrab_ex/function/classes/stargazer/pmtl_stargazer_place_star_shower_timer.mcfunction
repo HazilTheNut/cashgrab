@@ -1,4 +1,4 @@
-# classes/stargazer/pmtl_stargazer_use_ability.mcfunction
+# classes/stargazer/pmtl_stargazer_place_star_shower_timer.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
@@ -20,12 +20,14 @@
 #	cv_G	:	Star Shower yaw offset
 #	cv_H	:   Star Shower pitch offset
 
-execute positioned ~ ~1.625 ~ rotated ~ -70 run function cashgrab:util/npe_raycast {\
-i_range_m:7,\
-i_origin_loc:1,\
-col_terrain_allowed:"#cashgrab:partialsolid",\
-b_fit_player:0,\
-func_npe_entity_filter:"cashgrab:util/npe_col_filter_entity_none",\
-func_npe_step:"cashgrab_ex:classes/stargazer/npe_star_shower_missile_tick",\
-func_npe_end:"cashgrab_ex:classes/stargazer/pmtl_stargazer_place_star_shower_timer",\
+function cashgrab:util/npe_create_timer {\
+i_lifetime_ticks:80,\
+b_anchor_at_pos:1,\
+t_timer_name:"t_stargazer_star_shower_timer_init",\
+func_npe_start:"cashgrab_ex:classes/stargazer/npe_star_shower_timer_start",\
+func_npe_tick:"cashgrab_ex:classes/stargazer/npe_star_shower_timer_tick",\
+func_npe_end:"cashgrab:util/noop",\
+b_assign_as_peer:1,\
 }
+
+rotate @n[tag=t_stargazer_star_shower_timer_init] ~ 0
