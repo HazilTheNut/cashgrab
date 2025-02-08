@@ -13,7 +13,7 @@
 #	cv_B	:	Mana generation timer, in ms
 #	cv_C	:	Spell usage lockout timer, in ticks
 #	cv_D	:	
-#	cv_E	:	
+#	cv_E	:	Vortex Snare sfx timer
 #	cv_F	:	Star Shower activation timer
 #	cv_G	:	Star Shower yaw offset
 #	cv_H	:   Star Shower pitch offset
