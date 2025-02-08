@@ -27,4 +27,7 @@ scoreboard players add @a[tag=t_pm_owner,limit=1] cv_A 1
 function cashgrab_ex:classes/stargazer/pmt_stargazer_inv_mana
 
 # Refresh various inventory displays at certain Mana values
+execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 1 run function cashgrab_ex:classes/stargazer/pmt_stargazer_inv_astral_dart
+execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 4 run function cashgrab_ex:classes/stargazer/pmt_stargazer_inv_rift_glyph
+execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 10 run function cashgrab_ex:classes/stargazer/pmt_stargazer_inv_vortex_snare
 execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 25 run function cashgrab:util/pmt_inv_ability_icon_argloader

@@ -48,6 +48,7 @@ minecraft:attribute_modifiers=[\
 # Hotbar
 
 # Spells
+function cashgrab_ex:classes/stargazer/pmt_stargazer_inv_spells
 
 # Mana
 function cashgrab_ex:classes/stargazer/pmt_stargazer_inv_mana
