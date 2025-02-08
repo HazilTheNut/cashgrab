@@ -10,13 +10,13 @@
 #	charges		: Number of charges of ability
 
 # Class variable usage:
-#	cv_A	:	
-#	cv_B	:	
+#	cv_A	:	Scrap count
+#	cv_B	:	Upgrade Weapon sequence time, in ticks
 #	cv_C	:	
-#	cv_D	:	
-#	cv_E	:	
+#	cv_D	:	Coin pickup scrap generation lockout timer
+#	cv_E	:	Weapon progression level
 #	cv_F	:	
-#	cv_G	:	
+#	cv_G	:	Molten Mortar sfx timer
 #	cv_H	:
 
 $item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:clay_ball[\

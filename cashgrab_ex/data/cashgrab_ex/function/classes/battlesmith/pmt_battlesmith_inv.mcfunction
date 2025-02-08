@@ -9,13 +9,13 @@
 # Arguments: (none)
 
 # Class variable usage:
-#	cv_A	:	
-#	cv_B	:	
+#	cv_A	:	Scrap count
+#	cv_B	:	Upgrade Weapon sequence time, in ticks
 #	cv_C	:	
-#	cv_D	:	
-#	cv_E	:	
+#	cv_D	:	Coin pickup scrap generation lockout timer
+#	cv_E	:	Weapon progression level
 #	cv_F	:	
-#	cv_G	:	
+#	cv_G	:	Molten Mortar sfx timer
 #	cv_H	:
 
 # =============================
@@ -52,10 +52,5 @@ minecraft:attribute_modifiers=[\
 # =============================
 # Hotbar
 
-# Absolute Edge
-item replace entity @a[tag=t_pm_owner,limit=1] hotbar.0 with minecraft:netherite_sword[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Absolute Edge\"}",\
-minecraft:attribute_modifiers=[\
-{type:"attack_damage",slot:"mainhand",id:"cashgrab:absoluteedge_atkdmg",amount:6,operation:"add_value"},\
-{type:"attack_speed",slot:"mainhand",id:"cashgrab:absoluteedge_atkspd",amount:-2,operation:"add_value"}]]
-
+# Forgeblade (I-IV)
+function cashgrab_ex:classes/battlesmith/pmt_battlesmith_inv_sword
