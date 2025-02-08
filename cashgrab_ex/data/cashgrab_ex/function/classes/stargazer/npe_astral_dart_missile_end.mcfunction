@@ -30,8 +30,8 @@ tag @a[tag=t_eid_matches,limit=1] add t_dmg_from
 # Apply damage
 tag @s add t_dmg_by
 function cashgrab:util/npe_dmg {\
-d_dmg_amount:5.0,\
-s_dmg_type:"minecraft:player_attack",\
+d_dmg_amount:4.0,\
+s_dmg_type:"minecraft:magic",\
 t_dmg_target:"t_collision_found",\
 t_dmg_by:"t_dmg_by",\
 t_dmg_from:"t_dmg_from",\
