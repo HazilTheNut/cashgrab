@@ -22,7 +22,7 @@
 
 $execute unless score NUM_END_REASON_TERRAIN_COLLISION num matches $(end_reason) run return 0
 
-function cashgrab:util/npe_create_timer {\
+execute align y positioned ~ ~0.1 ~ run function cashgrab:util/npe_create_timer {\
 i_lifetime_ticks:130,\
 b_anchor_at_pos:1,\
 t_timer_name:"t_battlesmith_mortar_timer",\
