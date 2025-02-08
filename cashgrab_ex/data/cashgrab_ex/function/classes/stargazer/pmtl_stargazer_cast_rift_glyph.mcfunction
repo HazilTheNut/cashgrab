@@ -56,6 +56,7 @@ tag @e[tag=t_stargazer_rift_glyph_target] add t_cleanup
 
 # Clean up tags
 tag @e[tag=t_stargazer_rift_glyph_timer_new] add t_stargazer_rift_glyph_timer
+tag @e[tag=t_stargazer_rift_glyph_timer_new] add t_stasis_immune
 tag @e[tag=t_stargazer_rift_glyph_timer_new] remove t_stargazer_rift_glyph_timer_new
 
 # Decrement Mana

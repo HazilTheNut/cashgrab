@@ -28,3 +28,6 @@ playsound minecraft:entity.enderman.teleport player @a ~ ~ ~ 1.0 0.75
 
 function cashgrab:util/npe_col_entity_filter_hostile
 execute positioned ~-3 ~-4 ~-3 run scoreboard players operation @n[tag=t_collision_candidate,dx=5,dy=8,dz=5] eid_grabbed_by = @s eid_self
+
+# Self destruct if no candidate found
+execute positioned ~-3 ~-4 ~-3 unless entity @n[tag=t_collision_candidate,dx=5,dy=8,dz=5] run tag @s add t_cleanup

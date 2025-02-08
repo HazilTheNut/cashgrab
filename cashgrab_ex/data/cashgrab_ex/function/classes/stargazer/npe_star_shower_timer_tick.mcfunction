@@ -22,27 +22,29 @@
 # vfx
 particle minecraft:entity_effect{color:[1.0,1.0,0.8,1.0]} ~ ~ ~ 0.02 0.02 0.02 0 1
 
+execute if score @s stasis_state matches 1..2 run return 0
+
 # ========================
 # Fire missile
 scoreboard players add @s cv_F 1
-execute unless score @s cv_F matches 2 run return 0
+execute unless score @s cv_F matches 3 run return 0
 
 # ========================
 # Get random yaw and pitch values
 
 # Yaw
-execute store result score @s temp_A run random roll 1..40
+execute store result score @s temp_A run random value 1..30
 scoreboard players operation @s cv_G += @s temp_A
-scoreboard players set @s[scores={cv_G=40..}] cv_G -40
+scoreboard players remove @s[scores={cv_G=35..}] cv_G 70
 #scoreboard players set @s cv_G 0
 execute store result storage cashgrab_ex:stargazer_args dyaw int 1 run scoreboard players get @s cv_G
 
-# Pitch
-execute store result score @s temp_A run random roll 1..15
+# Speed
+execute store result score @s temp_A run random value 1..15
 scoreboard players operation @s cv_H += @s temp_A
-scoreboard players set @s[scores={cv_H=20..}] cv_H -30
+scoreboard players remove @s[scores={cv_H=80..}] cv_H 65
 #scoreboard players set @s cv_H 0
-execute store result storage cashgrab_ex:stargazer_args dpitch int 1 run scoreboard players get @s cv_H
+execute store result storage cashgrab_ex:stargazer_args f_speed_mpt float 0.01 run scoreboard players get @s cv_H
 
 function cashgrab_ex:classes/stargazer/npe_star_shower_timer_fire_missile with storage cashgrab_ex:stargazer_args
 scoreboard players set @s cv_F 0

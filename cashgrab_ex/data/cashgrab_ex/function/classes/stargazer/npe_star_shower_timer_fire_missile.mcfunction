@@ -9,15 +9,17 @@
 #
 # Arguments: 
 #   dyaw    :   Yaw offset
-#   dpitch    :   Yaw offset
+#   f_speed_mpt    :   Missile speed
 
-$execute rotated ~$(dyaw) ~$(dpitch) run function cashgrab:util/npe_create_missile {\
-f_speed_mpt:0.6f,\
+playsound minecraft:entity.experience_orb.pickup player @a ~ ~ ~ 0.25 1.1
+
+$execute rotated ~$(dyaw) -10 run function cashgrab:util/npe_create_missile {\
+f_speed_mpt:$(f_speed_mpt)f,\
 i_lifetime_ticks:50,\
 i_origin_loc:0,\
 f_focal_dist_m:35,\
 i_gravity_vy_mmpt:200,\
-i_gravity_const_mmpt2:50,\
+i_gravity_const_mmpt2:55,\
 t_missile_name:"t_stargazer_star_shower_missile",\
 f_tracking_scalar:0.0f,\
 col_terrain_allowed:"#cashgrab:partialsolid",\

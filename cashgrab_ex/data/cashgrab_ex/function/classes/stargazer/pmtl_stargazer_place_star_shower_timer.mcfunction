@@ -21,7 +21,7 @@
 #	cv_H	:   Star Shower pitch offset
 
 function cashgrab:util/npe_create_timer {\
-i_lifetime_ticks:80,\
+i_lifetime_ticks:140,\
 b_anchor_at_pos:1,\
 t_timer_name:"t_stargazer_star_shower_timer_init",\
 func_npe_start:"cashgrab_ex:classes/stargazer/npe_star_shower_timer_start",\

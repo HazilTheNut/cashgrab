@@ -16,7 +16,7 @@ $execute if score NUM_END_REASON_CLEANUP_PLAYER_DEATH num matches $(end_reason) 
 # vfx / sfx
 particle minecraft:entity_effect{color:[1.0,0.9,0.6,1.0]} ~ ~ ~ 0.25 0.25 0.25 0.5 7
 
-playsound minecraft:entity.experience_orb.pickup player @a ~ ~ ~ 0.75 1.25
+playsound minecraft:block.snow.break player @a ~ ~ ~ 0.75 2
 
 $execute unless score NUM_END_REASON_ENTITY_COLLISION num matches $(end_reason) run return 0
 
