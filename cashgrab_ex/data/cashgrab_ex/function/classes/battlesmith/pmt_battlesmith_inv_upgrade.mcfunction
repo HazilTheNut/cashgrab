@@ -34,6 +34,7 @@ item replace entity @a[tag=t_pm_owner,limit=1,scores={temp_A=0}] hotbar.5 with m
 minecraft:item_name="[{\"color\":\"light_purple\",\"italic\":false,\"text\":\"[Crouch]\"},{\"color\":\"white\",\"text\":\" Upgrade Weapon\"}]",\
 minecraft:hide_additional_tooltip={},\
 minecraft:lore=[\
+"{\"color\":\"dark_gray\",\"italic\":true,\"text\":\"Crouch holding any item to use.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"After holding for 1.5 secs,\"}",\
 "[{\"color\":\"gray\",\"italic\":false,\"text\":\" spends \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Scrap\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" to upgrade\"}]",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" your weapon:\"}",\
@@ -48,6 +49,7 @@ minecraft:item_name="[{\"color\":\"light_purple\",\"italic\":false,\"text\":\"[C
 minecraft:hide_additional_tooltip={},\
 minecraft:enchantment_glint_override=true,\
 minecraft:lore=[\
+"{\"color\":\"dark_gray\",\"italic\":true,\"text\":\"Crouch holding any item to use.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"After holding for 1.5 secs,\"}",\
 "[{\"color\":\"gray\",\"italic\":false,\"text\":\" spends \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Scrap\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" to upgrade\"}]",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" your weapon:\"}",\
@@ -61,6 +63,7 @@ item replace entity @a[tag=t_pm_owner,limit=1,scores={temp_A=1,cv_B=3..12}] hotb
 minecraft:item_name="[{\"color\":\"light_purple\",\"italic\":false,\"text\":\"[Crouch]\"},{\"color\":\"white\",\"text\":\" Upgrade Weapon\"}]",\
 minecraft:hide_additional_tooltip={},\
 minecraft:lore=[\
+"{\"color\":\"dark_gray\",\"italic\":true,\"text\":\"Crouch holding any item to use.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"After holding for 1.5 secs,\"}",\
 "[{\"color\":\"gray\",\"italic\":false,\"text\":\" spends \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Scrap\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" to upgrade\"}]",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" your weapon:\"}",\
@@ -74,6 +77,7 @@ item replace entity @a[tag=t_pm_owner,limit=1,scores={temp_A=1,cv_B=13..22}] hot
 minecraft:item_name="[{\"color\":\"light_purple\",\"italic\":false,\"text\":\"[Crouch]\"},{\"color\":\"white\",\"text\":\" Upgrade Weapon\"}]",\
 minecraft:hide_additional_tooltip={},\
 minecraft:lore=[\
+"{\"color\":\"dark_gray\",\"italic\":true,\"text\":\"Crouch holding any item to use.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"After holding for 1.5 secs,\"}",\
 "[{\"color\":\"gray\",\"italic\":false,\"text\":\" spends \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Scrap\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" to upgrade\"}]",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" your weapon:\"}",\
@@ -87,6 +91,7 @@ item replace entity @a[tag=t_pm_owner,limit=1,scores={temp_A=1,cv_B=23..32}] hot
 minecraft:item_name="[{\"color\":\"light_purple\",\"italic\":false,\"text\":\"[Crouch]\"},{\"color\":\"white\",\"text\":\" Upgrade Weapon\"}]",\
 minecraft:hide_additional_tooltip={},\
 minecraft:lore=[\
+"{\"color\":\"dark_gray\",\"italic\":true,\"text\":\"Crouch holding any item to use.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"After holding for 1.5 secs,\"}",\
 "[{\"color\":\"gray\",\"italic\":false,\"text\":\" spends \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Scrap\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" to upgrade\"}]",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" your weapon:\"}",\
@@ -101,6 +106,7 @@ item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_B=33..}] hotbar.5 with 
 minecraft:item_name="[{\"color\":\"light_purple\",\"italic\":false,\"text\":\"[Crouch]\"},{\"color\":\"white\",\"text\":\" Upgrade Weapon\"}]",\
 minecraft:hide_additional_tooltip={},\
 minecraft:lore=[\
+"{\"color\":\"dark_gray\",\"italic\":true,\"text\":\"Crouch holding any item to use.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"After holding for 1.5 secs,\"}",\
 "[{\"color\":\"gray\",\"italic\":false,\"text\":\" spends \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Scrap\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" to upgrade\"}]",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" your weapon:\"}",\
