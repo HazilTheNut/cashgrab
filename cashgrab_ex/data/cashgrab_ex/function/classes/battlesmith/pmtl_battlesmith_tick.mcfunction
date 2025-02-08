@@ -34,9 +34,9 @@ scoreboard players set @a[tag=t_pm_owner,limit=1,scores={cv_A=..19,cv_D=0,evl_co
 scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={cv_D=1..}] cv_D 1
 
 # Award scrap
-scoreboard players add @a[tag=t_pm_owner,limit=1,tag=t_award_scrap] cv_A 1
-execute if entity @a[tag=t_pm_owner,limit=1,tag=t_award_scrap] run function cashgrab_ex:classes/battlesmith/pmt_battlesmith_inv_scrap
-execute if entity @a[tag=t_pm_owner,limit=1,tag=t_award_scrap] run function cashgrab_ex:classes/battlesmith/pmt_battlesmith_inv_upgrade
+scoreboard players add @a[tag=t_pm_owner,limit=1,tag=t_award_scrap,scores={cv_E=..2}] cv_A 1
+execute if entity @a[tag=t_pm_owner,limit=1,tag=t_award_scrap,scores={cv_E=..2}] run function cashgrab_ex:classes/battlesmith/pmt_battlesmith_inv_scrap
+execute if entity @a[tag=t_pm_owner,limit=1,tag=t_award_scrap,scores={cv_E=..2}] run function cashgrab_ex:classes/battlesmith/pmt_battlesmith_inv_upgrade
 tag @a[tag=t_pm_owner,limit=1] remove t_award_scrap
 
 # =========================
