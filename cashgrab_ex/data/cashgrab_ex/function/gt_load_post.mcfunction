@@ -33,6 +33,7 @@ func_pmt_score_kill:"cashgrab:util/noop",\
 
 scoreboard objectives add evc_torchflower_seeds minecraft.used:minecraft.torchflower_seeds
 
+# Battlesmith
 data modify storage cashgrab:game_info classes append value {\
 format:1,\
 s_class_name:"Battlesmith",\
@@ -43,6 +44,21 @@ func_pmtl_tick:"cashgrab_ex:classes/battlesmith/pmtl_battlesmith_tick",\
 func_pmtl_use_ability:"cashgrab_ex:classes/battlesmith/pmtl_battlesmith_use_ability",\
 func_pmtl_end:"cashgrab:util/noop",\
 func_pmt_cts_icon:"cashgrab_ex:classes/battlesmith/pmt_battlesmith_cts_inv_icon",\
+func_pmtl_cts_tick:"cashgrab:util/noop",\
+func_pmt_score_kill:"cashgrab:util/noop",\
+}
+
+# Stargazer
+data modify storage cashgrab:game_info classes append value {\
+format:1,\
+s_class_name:"Stargazer",\
+func_pmt_init:"cashgrab_ex:classes/stargazer/pmt_stargazer_init",\
+func_pmt_inv:"cashgrab_ex:classes/stargazer/pmt_stargazer_inv",\
+func_pmt_inv_ability_icon:"cashgrab_ex:classes/stargazer/pmt_stargazer_inv_ability_icon",\
+func_pmtl_tick:"cashgrab_ex:classes/stargazer/pmtl_stargazer_tick",\
+func_pmtl_use_ability:"cashgrab_ex:classes/stargazer/pmtl_stargazer_use_ability",\
+func_pmtl_end:"cashgrab:util/noop",\
+func_pmt_cts_icon:"cashgrab_ex:classes/stargazer/pmt_stargazer_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:util/noop",\
 func_pmt_score_kill:"cashgrab:util/noop",\
 }
