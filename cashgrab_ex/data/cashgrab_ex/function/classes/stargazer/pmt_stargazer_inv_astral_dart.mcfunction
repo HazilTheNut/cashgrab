@@ -23,6 +23,12 @@
 item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1..,cv_C=..0}] hotbar.0 with minecraft:vex_armor_trim_smithing_template[\
 minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Use]\"},{\"color\":\"white\",\"text\":\" Astral Dart\"}]",\
 minecraft:hide_additional_tooltip={},\
+minecraft:consumable={\
+consume_seconds:0f,\
+animation:"none",\
+sound:"minecraft:entity.ender_eye.death",\
+has_consume_particles:false,\
+},\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Fires a bolt of starlight.\"}",\
 "{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"=====\"}",\

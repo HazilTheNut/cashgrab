@@ -23,9 +23,15 @@
 item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=4..,cv_C=..0}] hotbar.1 with minecraft:wayfinder_armor_trim_smithing_template[\
 minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Use]\"},{\"color\":\"white\",\"text\":\" Rift Glyph\"}]",\
 minecraft:hide_additional_tooltip={},\
+minecraft:consumable={\
+consume_seconds:0f,\
+animation:"none",\
+sound:"minecraft:entity.ender_eye.death",\
+has_consume_particles:false,\
+},\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Teleports forward a short distance\"}",\
-"[{\"color\":\"gray\",\"italic\":false,\"text\":\" and leaves behind a \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Rift Glyph\"}]",\
+"[{\"color\":\"gray\",\"italic\":false,\"text\":\" and leaves behind a \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Rift Glyph\"},{\"color\":\"gray\",\"italic\":false,\"text\":\".\"}]",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Using this ability additional times\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" teleports you to your previous\"}",\
 "[{\"color\":\"yellow\",\"italic\":false,\"text\":\" Rift Glyph\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" instead.\"}]",\

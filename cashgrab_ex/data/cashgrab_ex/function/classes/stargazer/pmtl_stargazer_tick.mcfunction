@@ -32,3 +32,21 @@ scoreboard players operation @a[tag=t_pm_owner,limit=1,scores={cv_B=0..}] cv_B -
 # If Mana recharge timer is complete, award mana
 execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=..24,cv_B=..0}] run function cashgrab_ex:classes/stargazer/pmt_stargazer_award_mana
 
+# =========================
+# Spell casting
+
+# Astral Dart
+execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1..,evc_vex_armor_trim_smithing_templates=1..}] run function cashgrab_ex:classes/stargazer/pmtl_stargazer_cast_astral_dart
+
+# Rift Glyph
+
+# Vortex Snare
+
+# =========================
+# Spell lockout timer
+
+# Decrement spell lockout timer
+scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={cv_C=0..}] cv_C 1
+
+# When timer reaches 0, refresh spells display
+execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_C=0}] run function cashgrab_ex:classes/stargazer/pmt_stargazer_inv_spells

@@ -23,6 +23,12 @@
 item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=10..,cv_C=..0}] hotbar.2 with minecraft:spire_armor_trim_smithing_template[\
 minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Use]\"},{\"color\":\"white\",\"text\":\" Vortex Snare\"}]",\
 minecraft:hide_additional_tooltip={},\
+minecraft:consumable={\
+consume_seconds:0f,\
+animation:"none",\
+sound:"minecraft:entity.ender_eye.death",\
+has_consume_particles:false,\
+},\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Fires a miniature black hole\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" that pulls in and traps\"}",\

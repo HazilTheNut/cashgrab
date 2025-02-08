@@ -59,9 +59,13 @@ func_pmtl_tick:"cashgrab_ex:classes/stargazer/pmtl_stargazer_tick",\
 func_pmtl_use_ability:"cashgrab_ex:classes/stargazer/pmtl_stargazer_use_ability",\
 func_pmtl_end:"cashgrab:util/noop",\
 func_pmt_cts_icon:"cashgrab_ex:classes/stargazer/pmt_stargazer_cts_inv_icon",\
-func_pmtl_cts_tick:"cashgrab:util/noop",\
+func_pmtl_cts_tick:"cashgrab_ex:classes/stargazer/pmtl_stargazer_cts_tick",\
 func_pmt_score_kill:"cashgrab:util/noop",\
 }
+
+scoreboard objectives add evc_vex_armor_trim_smithing_templates minecraft.used:minecraft.vex_armor_trim_smithing_template
+scoreboard objectives add evc_wayfinder_armor_trim_smithing_templates minecraft.used:minecraft.wayfinder_armor_trim_smithing_template
+scoreboard objectives add evc_spire_armor_trim_smithing_templates minecraft.used:minecraft.spire_armor_trim_smithing_template
 
 # --- Add Trinket data
 
