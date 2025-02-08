@@ -59,6 +59,9 @@ tag @e[tag=t_stargazer_rift_glyph_timer_new] add t_stargazer_rift_glyph_timer
 tag @e[tag=t_stargazer_rift_glyph_timer_new] add t_stasis_immune
 tag @e[tag=t_stargazer_rift_glyph_timer_new] remove t_stargazer_rift_glyph_timer_new
 
+# Release player from grabs
+tag @a[tag=t_pm_owner,limit=1] add t_grab_release
+
 # Decrement Mana
 scoreboard players remove @a[tag=t_pm_owner,limit=1] cv_A 6
 
