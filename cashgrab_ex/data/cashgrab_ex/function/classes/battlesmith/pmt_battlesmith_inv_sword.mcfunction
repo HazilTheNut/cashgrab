@@ -6,8 +6,7 @@
 #
 # Summary: Inserts sword into inventory based on progression level
 #
-# Arguments:
-#	charges		: Number of charges of ability
+# Arguments: (none)
 
 # Class variable usage:
 #	cv_A	:	Scrap count

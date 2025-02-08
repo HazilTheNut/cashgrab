@@ -20,7 +20,7 @@
 #	cv_G	:	Molten Mortar sfx timer
 #	cv_H	:
 
-playsound minecraft:block.lava.pop player @a ~ ~ ~ 1.0 0.75
+playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 1.0 1.0
 
 function cashgrab:util/npe_create_missile {\
 f_speed_mpt:0.30f,\

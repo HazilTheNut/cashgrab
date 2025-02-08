@@ -28,11 +28,16 @@ playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 1.0 1.5
 execute store result storage cashgrab:find_eid_args eid int 1 run scoreboard players get @s eid_owner
 function cashgrab:util/find_eid_self with storage cashgrab:find_eid_args
 
-# Apply damage
+# Tag entities for applying damage
 tag @s add t_dmg_by
 tag @a[tag=t_eid_matches] add t_dmg_from
 function cashgrab:util/npe_col_entity_filter_hostile
 execute positioned ~-2 ~-2 ~-2 run tag @e[tag=t_collision_candidate,dx=4,dy=7,dz=4] add t_dmg_trgt
+
+# If any damage dealt, award scrap
+execute if entity @e[tag=t_dmg_trgt,distance=..10] run tag @a[tag=t_dmg_from,limit=1] add t_award_scrap
+
+# Apply damage
 function cashgrab:util/npe_dmg {\
 d_dmg_amount:4,\
 s_dmg_type:"minecraft:in_fire",\
