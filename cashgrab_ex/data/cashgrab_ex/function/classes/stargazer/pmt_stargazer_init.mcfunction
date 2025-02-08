@@ -18,7 +18,7 @@
 #	cv_G	:	Star Shower yaw offset
 #	cv_H	:   Star Shower pitch offset
 
-scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 1000
+scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 300
 scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_charges_max 1
 scoreboard players set @a[tag=t_pm_owner,limit=1] ability_charges 1
 

@@ -59,7 +59,7 @@ tag @e[tag=t_stargazer_rift_glyph_timer_new] add t_stargazer_rift_glyph_timer
 tag @e[tag=t_stargazer_rift_glyph_timer_new] remove t_stargazer_rift_glyph_timer_new
 
 # Decrement Mana
-scoreboard players remove @a[tag=t_pm_owner,limit=1] cv_A 4
+scoreboard players remove @a[tag=t_pm_owner,limit=1] cv_A 6
 
 # Set lockout timer to 0.6 seconds
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 12
@@ -67,6 +67,7 @@ scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 12
 # Reload inventory displays
 function cashgrab_ex:classes/stargazer/pmt_stargazer_inv_spells
 function cashgrab_ex:classes/stargazer/pmt_stargazer_inv_mana
+function cashgrab:util/pmt_inv_ability_icon_argloader
 
 # Consume event
 scoreboard players set @a[tag=t_pm_owner,limit=1] evc_wayfinder_armor_trim_smithing_templates 0

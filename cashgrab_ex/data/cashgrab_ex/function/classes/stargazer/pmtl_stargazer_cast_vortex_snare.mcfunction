@@ -1,4 +1,4 @@
-# classes/stargazer/pmtl_stargazer_cast_astral_dart.mcfunction
+# classes/stargazer/pmtl_stargazer_cast_vortex_snare.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
@@ -6,7 +6,7 @@
 #	at: the owner's position
 #	rotated: as the owner
 #
-# Summary: Casts Astral Dart
+# Summary: Casts Vortex Snare
 #
 # Arguments: (none)
 
@@ -23,24 +23,24 @@
 # Create missile
 function cashgrab:util/npe_create_missile {\
 f_speed_mpt:0.95f,\
-i_lifetime_ticks:50,\
+i_lifetime_ticks:60,\
 i_origin_loc:1,\
 f_focal_dist_m:35,\
 i_gravity_vy_mmpt:0,\
 i_gravity_const_mmpt2:0,\
-t_missile_name:"t_stargazer_astral_dart_missile",\
+t_missile_name:"t_stargazer_vortex_snare_missile",\
 f_tracking_scalar:0.0f,\
-col_terrain_allowed:"#cashgrab:partialsolid",\
+col_terrain_allowed:"#cashgrab:nonsolid",\
 func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_hostile",\
 func_npe_tracking_filter:"cashgrab:util/noop",\
 func_npe_start:"cashgrab:util/noop",\
-func_npe_tick:"cashgrab_ex:classes/stargazer/npe_astral_dart_missile_tick",\
-func_npe_end:"cashgrab_ex:classes/stargazer/npe_astral_dart_missile_end",\
+func_npe_tick:"cashgrab_ex:classes/stargazer/npe_vortex_snare_missile_tick",\
+func_npe_end:"cashgrab_ex:classes/stargazer/npe_vortex_snare_missile_end",\
 b_assign_as_peer:1,\
 }
 
 # Decrement Mana
-scoreboard players remove @a[tag=t_pm_owner,limit=1] cv_A 1
+scoreboard players remove @a[tag=t_pm_owner,limit=1] cv_A 10
 
 # Set lockout timer to 0.6 seconds
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 12
@@ -51,4 +51,4 @@ function cashgrab_ex:classes/stargazer/pmt_stargazer_inv_mana
 function cashgrab:util/pmt_inv_ability_icon_argloader
 
 # Consume event
-scoreboard players set @a[tag=t_pm_owner,limit=1] evc_vex_armor_trim_smithing_templates 0
+scoreboard players set @a[tag=t_pm_owner,limit=1] evc_spire_armor_trim_smithing_templates 0

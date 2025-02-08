@@ -20,7 +20,7 @@
 
 
 # Display if Mana is sufficient and lockout timer is ended
-item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=4..,cv_C=..0}] hotbar.1 with minecraft:wayfinder_armor_trim_smithing_template[\
+item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=6..,cv_C=..0}] hotbar.1 with minecraft:wayfinder_armor_trim_smithing_template[\
 minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Use]\"},{\"color\":\"white\",\"text\":\" Rift Glyph\"}]",\
 minecraft:hide_additional_tooltip={},\
 minecraft:consumable={\
@@ -36,11 +36,11 @@ minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" teleports you to your previous\"}",\
 "[{\"color\":\"yellow\",\"italic\":false,\"text\":\" Rift Glyph\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" instead.\"}]",\
 "{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"=====\"}",\
-"[{\"color\":\"gray\",\"italic\":false,\"text\":\"Costs \"},{\"color\":\"aqua\",\"italic\":false,\"text\":\"4\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" Mana\"}]"\
+"[{\"color\":\"gray\",\"italic\":false,\"text\":\"Costs \"},{\"color\":\"aqua\",\"italic\":false,\"text\":\"6\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" Mana\"}]"\
 ]] 1
 
 # Display "Out of Mana" if insufficent and lockout timer is ended
-item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=..3,cv_C=..0}] hotbar.1 with minecraft:red_stained_glass_pane[\
+item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=..5,cv_C=..0}] hotbar.1 with minecraft:red_stained_glass_pane[\
 minecraft:item_name="[{\"color\":\"red\",\"italic\":false,\"text\":\"Out of Mana\"}]",\
 minecraft:hide_additional_tooltip={},\
 ] 1
