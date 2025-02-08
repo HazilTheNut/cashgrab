@@ -9,14 +9,14 @@
 # Arguments: (none)
 
 # Class variable usage:
-#	cv_A	:	
-#	cv_B	:	
-#	cv_C	:	
+#	cv_A	:	Mana count
+#	cv_B	:	Mana generation timer, in ms
+#	cv_C	:	Spell usage lockout timer, in ticks
 #	cv_D	:	
 #	cv_E	:	
-#	cv_F	:	
-#	cv_G	:	
-#	cv_H	:
+#	cv_F	:	Star Shower activation timer
+#	cv_G	:	Star Shower yaw offset
+#	cv_H	:   Star Shower pitch offset
 
 # =============================
 # Armor
@@ -47,3 +47,7 @@ minecraft:attribute_modifiers=[\
 # =============================
 # Hotbar
 
+# Spells
+
+# Mana
+function cashgrab_ex:classes/stargazer/pmt_stargazer_inv_mana

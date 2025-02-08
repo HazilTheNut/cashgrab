@@ -11,13 +11,24 @@
 # Arguments: (none)
 
 # Class variable usage:
-#	cv_A	:	
-#	cv_B	:	
-#	cv_C	:	
+#	cv_A	:	Mana count
+#	cv_B	:	Mana generation timer, in ms
+#	cv_C	:	Spell usage lockout timer, in ticks
 #	cv_D	:	
 #	cv_E	:	
-#	cv_F	:	
-#	cv_G	:	
-#	cv_H	:
+#	cv_F	:	Star Shower activation timer
+#	cv_G	:	Star Shower yaw offset
+#	cv_H	:   Star Shower pitch offset
 
+# =========================
+# Mana generation
+
+# Start timer if Mana needs to recharge
+scoreboard players set @a[tag=t_pm_owner,limit=1,scores={cv_A=..24,cv_B=..0}] cv_B 1000
+
+# Decrement Mana recharge timer
+scoreboard players operation @a[tag=t_pm_owner,limit=1,scores={cv_B=0..}] cv_B -= @a[tag=t_pm_owner,limit=1] ability_cd_tickrate
+
+# If Mana recharge timer is complete, award mana
+execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=..24,cv_B=..0}] run function cashgrab_ex:classes/stargazer/pmt_stargazer_award_mana
 
