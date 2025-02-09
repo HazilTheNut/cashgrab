@@ -40,7 +40,7 @@ show_in_tooltip:false\
 item replace entity @a[tag=t_pm_owner,limit=1] armor.feet with minecraft:leather_boots[minecraft:unbreakable={show_in_tooltip:false},\
 minecraft:dyed_color=3286700,\
 minecraft:attribute_modifiers=[\
-{type:"movement_speed",slot:"feet",id:"cashgrab:speed_bonus",amount:0.3,operation:"add_multiplied_base"},\
+{type:"movement_speed",slot:"feet",id:"cashgrab:speed_bonus",amount:0.2,operation:"add_multiplied_base"},\
 {type:"armor",slot:"feet",id:"cashgrab:boots_armor",amount:4,operation:"add_value"}\
 ]]
 
