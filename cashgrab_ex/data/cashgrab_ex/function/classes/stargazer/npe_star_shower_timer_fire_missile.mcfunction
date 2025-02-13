@@ -19,7 +19,7 @@ i_lifetime_ticks:50,\
 i_origin_loc:0,\
 f_focal_dist_m:35,\
 i_gravity_vy_mmpt:200,\
-i_gravity_const_mmpt2:55,\
+i_gravity_const_mmpt2:50,\
 t_missile_name:"t_stargazer_star_shower_missile",\
 f_tracking_scalar:0.0f,\
 col_terrain_allowed:"#cashgrab:partialsolid",\

@@ -24,8 +24,11 @@ particle minecraft:entity_effect{color:[1.0,1.0,0.8,1.0]} ~ ~ ~ 0.02 0.02 0.02 0
 
 execute if score @s stasis_state matches 1..2 run return 0
 
+# Wait a short period before firing missiles
+execute if score @s tmr_lifetime_ticks matches 141.. run return 0
+
 # ========================
-# Fire missile
+# Fire missile 
 scoreboard players add @s cv_F 1
 execute unless score @s cv_F matches 3 run return 0
 
@@ -35,14 +38,14 @@ execute unless score @s cv_F matches 3 run return 0
 # Yaw
 execute store result score @s temp_A run random value 1..30
 scoreboard players operation @s cv_G += @s temp_A
-scoreboard players remove @s[scores={cv_G=35..}] cv_G 70
+scoreboard players remove @s[scores={cv_G=33..}] cv_G 66
 #scoreboard players set @s cv_G 0
 execute store result storage cashgrab_ex:stargazer_args dyaw int 1 run scoreboard players get @s cv_G
 
 # Speed
 execute store result score @s temp_A run random value 1..15
 scoreboard players operation @s cv_H += @s temp_A
-scoreboard players remove @s[scores={cv_H=80..}] cv_H 65
+scoreboard players remove @s[scores={cv_H=75..}] cv_H 52
 #scoreboard players set @s cv_H 0
 execute store result storage cashgrab_ex:stargazer_args f_speed_mpt float 0.01 run scoreboard players get @s cv_H
 

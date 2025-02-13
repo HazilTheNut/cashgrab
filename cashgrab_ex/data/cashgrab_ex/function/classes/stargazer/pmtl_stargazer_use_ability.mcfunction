@@ -28,7 +28,7 @@ playsound minecraft:entity.firework_rocket.launch player @a ~ ~ ~ 1.0 2.0
 
 # Spawn Star Shower
 execute positioned ~ ~1.625 ~ rotated ~ -70 run function cashgrab:util/npe_raycast {\
-i_range_m:6,\
+i_range_m:7,\
 i_origin_loc:1,\
 col_terrain_allowed:"#cashgrab:partialsolid",\
 b_fit_player:1,\

@@ -20,4 +20,4 @@
 #	cv_H	:   Star Shower pitch offset
 
 scoreboard players set @s cv_G 0
-scoreboard players set @s cv_H 15
+scoreboard players set @s cv_H 23
