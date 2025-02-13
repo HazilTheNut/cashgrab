@@ -14,7 +14,7 @@ $execute if score NUM_END_REASON_CLEANUP num matches $(end_reason) run return 0
 $execute if score NUM_END_REASON_CLEANUP_PLAYER_DEATH num matches $(end_reason) run return 0
 
 # vfx / sfx
-particle minecraft:entity_effect{color:[1.0,0.9,0.6,1.0]} ~ ~ ~ 0.25 0.25 0.25 0.5 7
+particle minecraft:entity_effect{color:[0.36,0.80,0.97,1.0]} ~ ~ ~ 0.25 0.25 0.25 0.5 7
 
 playsound minecraft:block.snow.break player @a ~ ~ ~ 0.75 2
 
