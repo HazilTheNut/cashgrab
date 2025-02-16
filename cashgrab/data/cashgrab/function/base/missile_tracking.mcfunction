@@ -24,13 +24,13 @@ execute if score @s mis_tracking_target_eid matches 0 run return 0
 # Search for tracking target and tag them with t_missile_tracking_target
 execute store result storage cashgrab:find_eid_args eid int 1 run scoreboard players get @s mis_tracking_target_eid
 function cashgrab:util/find_eid_self with storage cashgrab:find_eid_args
-tag @e[tag=t_eid_matches,limit=1] add t_missile_tracking_target
+tag @e[tag=t_eid_matches,tag=!t_invisible,limit=1] add t_missile_tracking_target
 
-# If tracking target doesn't exist, do no track onto nothing
+# If tracking target doesn't exist or is invisible, erase tracking target EID
 execute unless entity @e[tag=t_missile_tracking_target] run return run scoreboard players set @s mis_tracking_target_eid 0
 
 # Calculate yaw and pitch of direction facing towards tracking target
-execute facing entity @e[tag=t_missile_tracking_target,tag=!t_invisible,limit=1] eyes run function cashgrab:util/npe_calc_facing_vector {magnitude:1.0f}
+execute facing entity @e[tag=t_missile_tracking_target,limit=1] eyes run function cashgrab:util/npe_calc_facing_vector {magnitude:1.0f}
 scoreboard players operation @s __mis_tracking_dyaw_mdeg = @s facing_vector_yaw_mdeg
 scoreboard players operation @s __mis_tracking_dpitch_mdeg = @s facing_vector_pitch_mdeg
 

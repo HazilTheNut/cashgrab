@@ -34,7 +34,7 @@ tag @s add t_missile_tracking_calc_nearest_angle
 $function $(func_npe_tracking_filter)
 
 # Perform nearest angle comparisons for entities within 50 meters
-execute as @e[tag=t_collision_candidate,distance=..50] at @s rotated as @s run function cashgrab:base/missile_tracking_find_eid_npe
+execute as @e[tag=t_collision_candidate,distance=..50,tag=!t_invisible] at @s rotated as @s run function cashgrab:base/missile_tracking_find_eid_npe
 
 # Perform nearest angle comparisons for players
 execute as @e[tag=t_pm] run function cashgrab:base/missile_tracking_find_eid_pm

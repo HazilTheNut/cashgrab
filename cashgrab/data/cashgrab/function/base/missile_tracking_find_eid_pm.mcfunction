@@ -15,6 +15,9 @@ tag @a[tag=t_eid_matches,limit=1] add t_pm_owner
 # If player is not a candidate, return
 execute if entity @a[tag=t_pm_owner,tag=!t_collision_candidate] run return run tag @a remove t_pm_owner
 
+# Ignore invisible players
+execute if entity @a[tag=t_pm_owner,tag=t_invisible] run return run tag @a remove t_pm_owner
+
 # Player must be in gameplay state
 execute unless score @a[tag=t_pm_owner,limit=1] activity_state matches 21..29 run return run tag @a remove t_pm_owner
 
