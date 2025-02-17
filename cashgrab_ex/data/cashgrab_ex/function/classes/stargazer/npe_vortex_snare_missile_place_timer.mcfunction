@@ -10,9 +10,9 @@
 # Arguments:
 #	end_reason	: The reason for why the end function was called
 
-execute positioned ~ ~-1 ~ run function cashgrab:base/test/place_col_test_timer_line
-execute positioned ~ ~ ~ run function cashgrab:base/test/place_col_test_timer_line
-execute positioned ~ ~1 ~ run function cashgrab:base/test/place_col_test_timer_line
+#execute positioned ~ ~-1 ~ run function cashgrab:base/test/place_col_test_timer_line
+#execute positioned ~ ~ ~ run function cashgrab:base/test/place_col_test_timer_line
+#execute positioned ~ ~1 ~ run function cashgrab:base/test/place_col_test_timer_line
 
 # If this position is too small, do nothing
 execute unless block ~ ~-1 ~ #cashgrab:nonsolid unless block ~ ~1 ~ #cashgrab:nonsolid run return 0

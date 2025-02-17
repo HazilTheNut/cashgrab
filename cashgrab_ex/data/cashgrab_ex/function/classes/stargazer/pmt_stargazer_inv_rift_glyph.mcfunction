@@ -32,7 +32,7 @@ has_consume_particles:false,\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Teleports you backwards\"}",\
 "[{\"color\":\"gray\",\"italic\":false,\"text\":\" and leaves behind a \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Rift Glyph\"},{\"color\":\"gray\",\"italic\":false,\"text\":\".\"}]",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"Using this ability additional times\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\"Using this ability shortly after\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" teleports you to your previous\"}",\
 "[{\"color\":\"yellow\",\"italic\":false,\"text\":\" Rift Glyph\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" instead.\"}]",\
 "{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"=====\"}",\

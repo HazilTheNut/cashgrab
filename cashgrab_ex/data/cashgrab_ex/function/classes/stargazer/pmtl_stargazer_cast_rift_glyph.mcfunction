@@ -29,7 +29,7 @@ tag @n[tag=t_stargazer_rift_glyph_timer,limit=1,scores={eid_compare=0}] add t_st
 
 # Place Rift Glyph timer prior to teleport
 function cashgrab:util/npe_create_timer {\
-i_lifetime_ticks:160,\
+i_lifetime_ticks:100,\
 b_anchor_at_pos:1,\
 t_timer_name:"t_stargazer_rift_glyph_timer_new",\
 func_npe_start:"cashgrab:util/noop",\
