@@ -30,7 +30,7 @@ sound:"minecraft:entity.ender_eye.death",\
 has_consume_particles:false,\
 },\
 minecraft:lore=[\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"Teleports forward a short distance\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\"Teleports you backwards\"}",\
 "[{\"color\":\"gray\",\"italic\":false,\"text\":\" and leaves behind a \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Rift Glyph\"},{\"color\":\"gray\",\"italic\":false,\"text\":\".\"}]",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Using this ability additional times\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" teleports you to your previous\"}",\

@@ -31,7 +31,7 @@ i_gravity_const_mmpt2:0,\
 t_missile_name:"t_stargazer_vortex_snare_missile",\
 f_tracking_scalar:0.0f,\
 col_terrain_allowed:"#cashgrab:nonsolid",\
-func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_hostile",\
+func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_none",\
 func_npe_tracking_filter:"cashgrab:util/noop",\
 func_npe_start:"cashgrab:util/noop",\
 func_npe_tick:"cashgrab_ex:classes/stargazer/npe_vortex_snare_missile_tick",\

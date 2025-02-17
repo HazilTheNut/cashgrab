@@ -30,7 +30,7 @@ execute if score @s tmr_lifetime_ticks matches 141.. run return 0
 # ========================
 # Fire missile 
 scoreboard players add @s cv_F 1
-execute unless score @s cv_F matches 3 run return 0
+execute unless score @s cv_F matches 4 run return 0
 
 # ========================
 # Get random yaw and pitch values

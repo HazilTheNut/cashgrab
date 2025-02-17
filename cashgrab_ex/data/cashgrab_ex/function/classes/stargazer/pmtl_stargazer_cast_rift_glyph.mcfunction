@@ -39,7 +39,7 @@ b_assign_as_peer:1,\
 }
 
 # Teleport forwards if no Rift Glyph timer
-execute unless entity @e[tag=t_stargazer_rift_glyph_target] positioned ~ ~1.625 ~ run function cashgrab:util/npe_raycast {\
+execute unless entity @e[tag=t_stargazer_rift_glyph_target] positioned ~ ~1.625 ~ rotated ~180 0 run function cashgrab:util/npe_raycast {\
 i_range_m:6,\
 i_origin_loc:1,\
 col_terrain_allowed:"#cashgrab:nonsolid",\

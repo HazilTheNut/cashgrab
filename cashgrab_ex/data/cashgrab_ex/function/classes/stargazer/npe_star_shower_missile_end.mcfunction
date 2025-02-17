@@ -14,7 +14,7 @@ $execute if score NUM_END_REASON_CLEANUP num matches $(end_reason) run return 0
 $execute if score NUM_END_REASON_CLEANUP_PLAYER_DEATH num matches $(end_reason) run return 0
 
 # vfx / sfx
-particle minecraft:dust{color:[1.0,1.0,0.7],scale:1.25} ~ ~ ~ 2 0.75 2 0.5 40 force
+particle minecraft:dust{color:[1.0,1.0,0.7],scale:1.25} ~ ~0.1 ~ 2.25 0.45 2.25 0.5 40 force
 particle minecraft:electric_spark ~ ~ ~ 2 0.25 2 0 25
 playsound minecraft:block.glass.break player @a ~ ~ ~ 0.25 2.0
 
@@ -25,10 +25,10 @@ tag @a[tag=t_eid_matches,limit=1] add t_dmg_from
 
 # Apply damage in an area
 function cashgrab:util/npe_col_entity_filter_hostile
-tag @e[distance=..4.5,tag=t_collision_candidate] add t_dmg_trgt
+tag @e[distance=..5.5,tag=t_collision_candidate] add t_dmg_trgt
 tag @s add t_dmg_by
 function cashgrab:util/npe_dmg {\
-d_dmg_amount:5.0,\
+d_dmg_amount:4.0,\
 s_dmg_type:"minecraft:magic",\
 t_dmg_target:"t_dmg_trgt",\
 t_dmg_by:"t_dmg_by",\

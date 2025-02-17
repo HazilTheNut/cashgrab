@@ -20,6 +20,8 @@
 #	cv_G	:	Star Shower yaw offset
 #	cv_H	:   Star Shower pitch offset
 
+$tellraw @a[tag=t_debug] "classes/stargazer/pmtl_stargazer_place_star_shower_timer end_reason = $(end_reason)"
+
 function cashgrab:util/npe_create_timer {\
 i_lifetime_ticks:148,\
 b_anchor_at_pos:1,\
@@ -31,3 +33,5 @@ b_assign_as_peer:1,\
 }
 
 rotate @n[tag=t_stargazer_star_shower_timer_init] ~ 0
+tag @n[tag=t_stargazer_star_shower_timer_init] add t_stargazer_star_shower_timer
+tag @n[tag=t_stargazer_star_shower_timer_init] remove t_stargazer_star_shower_timer_init
