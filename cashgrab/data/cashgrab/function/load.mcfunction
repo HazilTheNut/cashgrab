@@ -456,6 +456,26 @@ scoreboard objectives add __cts_trinkets_page_idx dummy
 scoreboard objectives add __cts_trinkets_page_num dummy
 
 # =============================
+# Tutorial
+
+# Index number of stage of tutorial sequence
+scoreboard objectives add __tutorial_seq_idx dummy
+
+# Progression of Trainee class
+#   0   =   Has nothing
+#   1   =   Has Trainee selectable in inventory
+#   2   =   Has inventory, Toss ability
+#   3   =   Has inventory, Toss ability, Crouch ability
+#   4   =   Has inventory, Toss ability, Crouch ability, Passive ability
+#   5   =   Has inventory, Toss ability, Crouch ability, Passive ability, Trinket
+scoreboard objectives add __tutorial_trainee_progress dummy
+
+# Player inputs
+scoreboard objectives add __tutorial_progress_request trigger
+scoreboard objectives add __tutorial_other_request trigger
+scoreboard objectives add __tutorial_transcript_request trigger
+
+# =============================
 # Teams
 
 # Team used while in lobby
