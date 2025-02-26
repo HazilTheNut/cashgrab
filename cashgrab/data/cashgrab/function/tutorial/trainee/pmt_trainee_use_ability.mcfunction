@@ -1,10 +1,10 @@
-# tutorial/trainee/pmt_trainee_inv.mcfunction
+# tutorial/trainee/pmt_trainee_use_ability.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
 #	+ the owner of the pm is tagged with t_pm_owner
 #
-# Summary: Populates inventory for the Trainee class for the command executor
+# Summary: Uses command executor's equipped class ability
 #
 # Arguments: (none)
 
