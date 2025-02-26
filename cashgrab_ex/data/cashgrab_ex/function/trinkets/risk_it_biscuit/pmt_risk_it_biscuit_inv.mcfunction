@@ -16,8 +16,8 @@ minecraft:enchantment_glint_override=false,\
 minecraft:custom_data={is_trinket:1},\
 minecraft:item_model="minecraft:cookie",\
 minecraft:consumable={\
-consume_seconds:0f,\
-animation:"none",\
+consume_seconds:0.5f,\
+animation:"eat",\
 sound:"entity.generic.eat",\
 },\
 minecraft:lore=[\
