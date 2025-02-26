@@ -22,7 +22,7 @@ function cashgrab:base/gt_playerinit_loop_assign_eid
 
 # Generate a Player Monitor marker (pm) at 0,100,0 whose owner is this new player
 # pms occupy an eid space = 10001-19999 that is their owner's eid + 10000
-summon minecraft:marker 0 100 0 {Tags:["t_pm_init"],CustomName:"pm"}
+summon minecraft:marker 0 100 0 {Tags:["t_pm_init"]}
 scoreboard players operation @e[tag=t_pm_init,limit=1] eid_owner = @a[tag=t_player_initialize,limit=1] eid_self
 scoreboard players operation @e[tag=t_pm_init,limit=1] eid_self = @e[tag=t_pm_init,limit=1] eid_owner
 scoreboard players add @e[tag=t_pm_init,limit=1] eid_self 10000
@@ -67,6 +67,11 @@ scoreboard players add @a[tag=t_player_initialize,limit=1] __cts_trinkets_page_i
 # Clear events
 scoreboard players set @a[tag=t_player_initialize,limit=1] __iev_logout 0
 scoreboard players set @a[tag=t_player_initialize,limit=1] reinitialize 0
+
+# Tutorial inputs
+scoreboard players reset @a[tag=t_player_initialize,limit=1] __tutorial_other_request
+scoreboard players reset @a[tag=t_player_initialize,limit=1] __tutorial_transcript_request
+scoreboard players reset @a[tag=t_player_initialize,limit=1] __tutorial_progress_request
 
 # Remove tag as operation has completed
 tag @a remove t_player_initialize

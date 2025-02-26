@@ -9,8 +9,6 @@
 # Arguments: (none)
 
 clear @a[tag=t_pm_owner,limit=1]
-function cashgrab:util/pmt_inv_refresh
-
 effect clear @a[tag=t_pm_owner,limit=1]
 
 # Set player gamemode
@@ -18,6 +16,10 @@ execute if score DEVELOPER_MODE num matches 0 run gamemode adventure @a[tag=t_pm
 
 # Move player team
 team join team_lobby @a[tag=t_pm_owner,limit=1]
+
+# Initialize tutorial
+scoreboard players set @a[tag=t_pm_owner,limit=1] __tutorial_seq_idx 1
+function cashgrab:tutorial/pmt_sequence_init
 
 # Move to Tutorial activity_state
 scoreboard players set @a[tag=t_pm_owner,limit=1] activity_state 31
