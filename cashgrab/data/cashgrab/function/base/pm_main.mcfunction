@@ -48,8 +48,9 @@ execute unless score @s __cts_selected_trinket_idx = @a[tag=t_pm_owner,limit=1] 
 # A player that died the previous server tick will be tagged with t_died
 
 # === Detect if player has respawned
-execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches 0 run tag @a[tag=t_pm_owner,limit=1,tag=t_died,scores={stat_alive_ticks=1..}] add dtm_send_to_lobby
-execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches 1.. run tag @a[tag=t_pm_owner,limit=1,tag=t_died,scores={stat_alive_ticks=1..}] add dtm_send_to_cts
+execute if score DEVELOPER_MODE num matches 0 run tag @a[tag=t_pm_owner,limit=1,tag=t_died,scores={stat_alive_ticks=1..,activity_state=0..9}] add dtm_send_to_lobby
+execute if score DEVELOPER_MODE num matches 0 run tag @a[tag=t_pm_owner,limit=1,tag=t_died,scores={stat_alive_ticks=1..,activity_state=10..29}] add dtm_send_to_cts
+execute if score DEVELOPER_MODE num matches 0 run tag @a[tag=t_pm_owner,limit=1,tag=t_died,scores={stat_alive_ticks=1..,activity_state=30..39}] add dtm_send_to_tutorial
 tag @a[tag=t_pm_owner,limit=1,tag=t_died,scores={stat_alive_ticks=1..}] remove t_died
 
 # =============================
