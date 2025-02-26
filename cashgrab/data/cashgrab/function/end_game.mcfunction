@@ -23,9 +23,9 @@ kill @e[type=#cashgrab:projectile]
 
 # Reset player data and return them to the lobby
 scoreboard players set @a coins 0
-execute if score DEVELOPER_MODE num matches 0 run scoreboard players set @a activity_state 0
-execute if score DEVELOPER_MODE num matches 0 run scoreboard players set @a team_id 0
-execute if score DEVELOPER_MODE num matches 0 run tag @a add dtm_send_to_lobby
+execute if score DEVELOPER_MODE num matches 0 run scoreboard players set @a[scores={activity_state=..29}] activity_state 0
+execute if score DEVELOPER_MODE num matches 0 run scoreboard players set @a[scores={activity_state=..29}] team_id 0
+execute if score DEVELOPER_MODE num matches 0 run tag @a[scores={activity_state=..29}] add dtm_send_to_lobby
 
 # Allow plugins to run code when game ends
 function #cashgrab:gt_game_end

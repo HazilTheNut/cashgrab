@@ -81,11 +81,15 @@ execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=20}] run func
 #	activity_state 21	=	Gameplay
 execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=21}] run function cashgrab:base/pmt_tick_gameplay
 
+#	activity_state 30	=	Transition to Tutorial
+execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=30}] run function cashgrab:base/pmt_tick_transition_to_tutorial
+
+#	activity_state 31	=	Tutorial
+execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=31}] run function cashgrab:base/pmt_tick_tutorial
+
 # =============================
 # Post-tick actions
 
-execute at @a[tag=t_pm_owner,limit=1] rotated as @a[tag=t_pm_owner,limit=1] run function cashgrab:base/pmtl_coins
-function cashgrab:base/pmt_scoring
 function cashgrab:base/pm_grab
 
 # Allow plugins to run code after main pm tick
