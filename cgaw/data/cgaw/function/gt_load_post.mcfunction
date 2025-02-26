@@ -37,6 +37,17 @@ scoreboard players set CGAW_SPAWN_PLATE_CD_TICKS num 100
 
 data modify storage cgaw:world_info lobby_data set value {loc_lobby:"18 -18 43",yaw_lobby:"0",daytime:6000}
 
+# Define tutorial locations
+
+data modify storage cgaw:world_info tutorial_data set value {\
+intro:{loc:"-11 95 -1064",yaw:"90"},\
+coins:{loc:"-43 77 -1064",yaw:"90"},\
+toss:{loc:"-16 77 -1086",yaw:"0"},\
+crouch:{loc:"34 92 -1126",yaw:"180"},\
+passive:{loc:"22 128 -1147",yaw:"-90"},\
+trinket:{loc:"36 127 -1134",yaw:"0"}\
+}
+
 # Create map data structure
 
 data modify storage cgaw:world_info map_data set value {\

@@ -463,6 +463,16 @@ scoreboard objectives add __cts_trinkets_page_num dummy
 # Index number of stage of tutorial sequence
 scoreboard objectives add __tutorial_seq_idx dummy
 
+# Index number of area player in tutorial should be teleported to when tagged with dtm_send_to_tutorial
+#   0   =   Nowhere
+#   1   =   Intro
+#   2   =   Coins Demo
+#   3   =   Toss Ability Demo
+#   4   =   Crouch Ability Demo
+#   5   =   Passive Ability Demo
+#   6   =   Trinket Demo
+scoreboard objectives add dtm_tutorial_dest_idx dummy
+
 # Progression of Trainee class
 #   0   =   Has nothing
 #   1   =   Has Trainee selectable in inventory
