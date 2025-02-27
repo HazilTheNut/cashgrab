@@ -19,7 +19,7 @@ minecraft:lore=[\
 "{\"italic\":false,\"color\":\"white\",\"text\":\"Even though this is a PvP game, this tutorial will focus more\"}",\
 "{\"italic\":false,\"color\":\"white\",\"text\":\" on the game rules and controls rather than combat.\"}",\
 "{\"italic\":false,\"color\":\"dark_gray\",\"text\":\"\"}",\
-"{\"italic\":false,\"color\":\"gold\",\"text\":\"To continue, head to the next area.\"}",\
+"{\"italic\":false,\"color\":\"yellow\",\"text\":\"To continue, head to the next area.\"}",\
 "{\"italic\":false,\"color\":\"dark_gray\",\"text\":\"\"}",\
 "[{\"italic\":false,\"color\":\"gray\",\"text\":\"You may need to \"},{\"color\":\"gold\",\"text\":\"set your Chat Settings\"}]",\
 "[{\"italic\":false,\"color\":\"gold\",\"text\":\" > Unfocused Height to 125px\"},{\"color\":\"gray\",\"text\":\" or \"},{\"color\":\"gold\",\"text\":\"pick up a transcript\"}]",\

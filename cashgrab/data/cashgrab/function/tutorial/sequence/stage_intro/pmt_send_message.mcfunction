@@ -15,7 +15,7 @@ tellraw @a[tag=t_pm_owner,limit=1] [\
 {"color":"aqua","text":"Return"},\
 {"color":"gray","text":" item on your hotbar."},\
 {"color":"white","text":"\n\nEven though this is a PvP game, this tutorial will focus more on the game rules and controls rather than combat."},\
-{"color":"gold","text":"\n\nTo continue, head to the next area."},\
+{"color":"yellow","text":"\n\nTo continue, head to the next area."},\
 {"color":"gray","text":"\n\nYou may need to "},\
 {"color":"gold","text":"set your Chat Settings > Unfocused Height to 125px"},\
 {"color":"gray","text":" or "},\
