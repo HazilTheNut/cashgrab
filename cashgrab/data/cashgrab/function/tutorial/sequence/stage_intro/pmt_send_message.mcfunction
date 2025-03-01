@@ -11,13 +11,12 @@
 tellraw @a[tag=t_pm_owner,limit=1] [\
 {"color":"dark_gray","text":"\n--------------------------------------------"},\
 {"color":"white","text":"\nWelcome to the Cash Grab Arena tutorial!"},\
-{"color":"gray","text":"\n\nIf this was a misclick, use the "},\
+{"color":"gray","text":"\nIf this was a misclick, use the "},\
 {"color":"aqua","text":"Return"},\
 {"color":"gray","text":" item on your hotbar."},\
-{"color":"white","text":"\n\nEven though this is a PvP game, this tutorial will focus more on the game rules and controls rather than combat."},\
 {"color":"yellow","text":"\n\nTo continue, head to the next area."},\
 {"color":"gray","text":"\n\nYou may need to "},\
-{"color":"gold","text":"set your Chat Settings > Unfocused Height to 125px"},\
+{"color":"gold","text":"set your Chat Settings > Unfocused Height to 75px"},\
 {"color":"gray","text":" or "},\
 {"color":"gold","text":"pick up a transcript"},\
 {"color":"gray","text":" from a nearby sign for the best experience."}\

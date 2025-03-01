@@ -18,7 +18,6 @@ minecraft:lore=[\
 "{\"italic\":false,\"color\":\"dark_gray\",\"text\":\"\"}",\
 "[{\"italic\":false,\"color\":\"white\",\"text\":\"For quicker access, you can often \"},{\"italic\":false,\"color\":\"gold\",\"text\":\"put your\"}]",\
 "[{\"italic\":false,\"color\":\"gold\",\"text\":\" Trinket in your offhand slot\"},{\"italic\":false,\"color\":\"white\",\"text\":\".\"}]",\
-"{\"italic\":false,\"color\":\"dark_gray\",\"text\":\"\"}",\
 "{\"italic\":false,\"color\":\"gray\",\"text\":\"(This may not be fully supported on all Classes)\"}",\
 "{\"italic\":false,\"color\":\"dark_gray\",\"text\":\"\"}",\
 "{\"italic\":false,\"color\":\"yellow\",\"text\":\"To continue, put your Vigor Flask in your\"}",\

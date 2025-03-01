@@ -13,8 +13,8 @@ tellraw @a[tag=t_pm_owner,limit=1] [\
 {"color":"white","text":"\nAll Classes have a "},\
 {"color":"aqua","text":"Toss Ability"},\
 {"color":"white","text":" that activates when you"},\
-{"color":"gold","text":" drop any item."},\
-{"color":"white","text":"\n\nDuring the tutorial, "},\
+{"color":"gold","text":" drop any item"},\
+{"color":"white","text":". During the tutorial, "},\
 {"underlined":true,"color":"gold","text":"you must drop your weapon to activate this ability"},\
 {"color":"white","text":"."},\
 {"color":"white","text":"\n\nYour "},\

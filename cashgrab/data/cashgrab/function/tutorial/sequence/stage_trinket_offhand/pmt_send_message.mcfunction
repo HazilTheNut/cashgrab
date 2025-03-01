@@ -16,6 +16,6 @@ tellraw @a[tag=t_pm_owner,limit=1] [\
 {"color":"white","text":"\n\nFor quicker access, you can often"},\
 {"color":"gold","text":" put your Trinket in your offhand slot"},\
 {"color":"white","text":"."},\
-{"color":"gray","text":"\n\n(This may not be fully supported on all Classes)"},\
+{"color":"gray","text":"\n(This may not be fully supported on all Classes)"},\
 {"color":"yellow","text":"\n\nTo continue, put your Vigor Flask in your offhand and drink it."}\
 ]

@@ -18,6 +18,9 @@ scoreboard players set @a[tag=t_pm_owner,limit=1] dtm_tutorial_dest_idx 6
 # Teleport player
 tag @a[tag=t_pm_owner,limit=1] add dtm_send_to_tutorial
 
+# Set Trinket to hotbar
+scoreboard players set @a[tag=t_pm_owner,limit=1] trinket_in_offhand 0
+
 # Grant trinket
 tag @a[tag=t_pm_owner,limit=1] add t_trinket_replenish
 

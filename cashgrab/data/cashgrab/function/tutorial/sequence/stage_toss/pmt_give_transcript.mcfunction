@@ -13,10 +13,8 @@ minecraft:item_name="{\"color\":\"aqua\",\"italic\":false,\"text\":\"Transcript\
 minecraft:lore=[\
 "{\"italic\":false,\"color\":\"dark_gray\",\"text\":\"--------------------------------------------\"}",\
 "[{\"italic\":false,\"color\":\"white\",\"text\":\"All Classes have a \"},{\"italic\":false,\"color\":\"aqua\",\"text\":\"Toss Ability\"},{\"italic\":false,\"color\":\"white\",\"text\":\" that activates\"}]",\
-"[{\"italic\":false,\"color\":\"white\",\"text\":\" when you \"},{\"italic\":false,\"color\":\"gold\",\"text\":\"drop any item\"},{\"italic\":false,\"color\":\"white\",\"text\":\".\"}]",\
-"{\"italic\":false,\"color\":\"dark_gray\",\"text\":\"\"}",\
-"[{\"italic\":false,\"color\":\"white\",\"text\":\"During the tutorial, \"},{\"italic\":false,\"underlined\":true,\"color\":\"gold\",\"text\":\"you must drop your weapon to\"}]",\
-"[{\"italic\":false,\"underlined\":true,\"color\":\"gold\",\"text\":\" activate this ability\"},{\"italic\":false,\"underlined\":false,\"color\":\"white\",\"text\":\".\"}]",\
+"[{\"italic\":false,\"color\":\"white\",\"text\":\" when you \"},{\"italic\":false,\"color\":\"gold\",\"text\":\"drop any item\"},{\"italic\":false,\"color\":\"white\",\"text\":\".\"},{\"italic\":false,\"color\":\"white\",\"text\":\" During the tutorial, \"}]",\
+"[{\"italic\":false,\"underlined\":false,\"color\":\"white\",\"text\":\" \"},{\"italic\":false,\"underlined\":true,\"color\":\"gold\",\"text\":\"you must drop your weapon to activate this ability\"},{\"italic\":false,\"underlined\":false,\"color\":\"white\",\"text\":\".\"}]",\
 "{\"italic\":false,\"color\":\"dark_gray\",\"text\":\"\"}",\
 "[{\"italic\":false,\"color\":\"white\",\"text\":\"Your \"},{\"italic\":false,\"color\":\"aqua\",\"text\":\"Toss Ability\"},{\"italic\":false,\"color\":\"white\",\"text\":\" is adapted from the Spectre's \"}]",\
 "[{\"italic\":false,\"color\":\"aqua\",\"text\":\" Blink\"},{\"italic\":false,\"color\":\"white\",\"text\":\", which is a short-range teleport.\"}]",\
