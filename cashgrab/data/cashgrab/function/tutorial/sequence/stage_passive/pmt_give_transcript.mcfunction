@@ -1,4 +1,4 @@
-# tutorial/sequence/stage_/pmt_give_transcript.mcfunction
+# tutorial/sequence/stage_passive/pmt_give_transcript.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker

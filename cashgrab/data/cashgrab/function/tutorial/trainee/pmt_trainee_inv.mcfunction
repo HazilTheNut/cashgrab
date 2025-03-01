@@ -39,3 +39,13 @@ minecraft:lore=[\
 
 #   2   =   Has inventory, Toss ability
 execute if score @a[tag=t_pm_owner,limit=1] __tutorial_trainee_progress matches 2.. run function cashgrab:tutorial/trainee/pmt_trainee_inv_equipment
+
+#   4   =   Has inventory, Toss ability, Crouch ability, Passive ability
+execute if score @a[tag=t_pm_owner,limit=1] __tutorial_trainee_progress matches 4.. run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.6 with minecraft:clay_ball[\
+minecraft:item_name="[{\"color\":\"light_purple\",\"italic\":false,\"text\":\"[Passive]\"},{\"color\":\"white\",\"text\":\" Cool Rock\"}]",\
+minecraft:hide_additional_tooltip={},\
+minecraft:lore=[\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\"Perhaps the real abilities\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\" were the friends we made\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\" along the way.\"}",\
+]] 1

@@ -8,8 +8,8 @@
 #
 # Arguments: (none)
 
-# If player consumes exit item, exit tutorial via reinitializing the player
-execute if score @a[tag=t_pm_owner,limit=1] evc_barriers matches 1.. run scoreboard players set @a[tag=t_pm_owner,limit=1] reinitialize 1
+# If player consumes exit item, exit tutorial
+execute if score @a[tag=t_pm_owner,limit=1] evc_barriers matches 1.. run function cashgrab:tutorial/pmt_sequence_end
 scoreboard players set @a[tag=t_pm_owner,limit=1] evc_barriers 0
 
 # Check if player requests further progress
