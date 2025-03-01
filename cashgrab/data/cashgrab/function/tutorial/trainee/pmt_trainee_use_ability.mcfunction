@@ -12,8 +12,8 @@
 execute if score @a[tag=t_pm_owner,limit=1] __tutorial_trainee_progress matches ..1 run return 0
 
 # No effect if not holding sword
-execute if score @a[tag=t_pm_owner,limit=1] cv_A matches ..0 run scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 50
-execute if score @a[tag=t_pm_owner,limit=1] cv_A matches ..0 run return 0
+execute if score @a[tag=t_pm_owner,limit=1] cv_F matches ..0 run scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 50
+execute if score @a[tag=t_pm_owner,limit=1] cv_F matches ..0 run return 0
 
 scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 5000
 

@@ -1,4 +1,4 @@
-# classes/ranger/pmt_ranger_inv_climbing_energy.mcfunction
+# tutorial/trainee/pmt_trainee_inv_climbing_energy.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
@@ -22,7 +22,7 @@
 $item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:kelp[\
 minecraft:custom_name="[{\"color\":\"light_purple\",\"italic\":false,\"text\":\"[Crouch]\"},{\"color\":\"white\",\"text\":\" Wall Climb\"}]",\
 minecraft:lore=[\
-"{\"color\":\"dark_gray\",\"italic\":true,\"text\":\"Crouch holding any item to use.\"}",\
+"{\"color\":\"blue\",\"italic\":true,\"text\":\"Crouch holding your weapon to use.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"While facing a wall, uses\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" energy to climb it.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Landing on the ground\"}",\

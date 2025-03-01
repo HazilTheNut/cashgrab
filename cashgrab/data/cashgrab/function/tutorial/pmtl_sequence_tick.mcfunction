@@ -37,6 +37,7 @@ scoreboard players enable @a[tag=t_pm_owner,limit=1] __tutorial_transcript_reque
 execute if score @a[tag=t_pm_owner,limit=1] __tutorial_other_request matches 1 unless score @a[tag=t_pm_owner,limit=1] stat_hp matches ..19 run effect give @a[tag=t_pm_owner,limit=1] minecraft:instant_damage
 execute if score @a[tag=t_pm_owner,limit=1] __tutorial_other_request matches 2 run tag @a[tag=t_pm_owner,limit=1] add t_trinket_replenish
 execute if score @a[tag=t_pm_owner,limit=1] __tutorial_other_request matches 3 run function cashgrab:tutorial/pmt_send_message
+execute if score @a[tag=t_pm_owner,limit=1] __tutorial_other_request matches 4 run function cashgrab:tutorial/pmt_sequence_init
 scoreboard players set @a[tag=t_pm_owner,limit=1] __tutorial_other_request 0
 scoreboard players enable @a[tag=t_pm_owner,limit=1] __tutorial_other_request
 
