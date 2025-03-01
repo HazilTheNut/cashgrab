@@ -39,8 +39,8 @@ execute store result storage cashgrab:rc_args data.delta_z float 0.001 run score
 
 $function $(func_npe_entity_filter)
 
-execute if entity @s[scores={__rc_align_camera=0}] anchored eyes positioned ^ ^ ^ run function cashgrab:base/npe_raycast_loop with storage cashgrab:rc_args data
-execute if entity @s[scores={__rc_align_camera=1}] anchored eyes positioned ^-0.5 ^-0.3 ^ run function cashgrab:base/npe_raycast_loop with storage cashgrab:rc_args data
-execute if entity @s[scores={__rc_align_camera=2}] anchored eyes positioned ^0.5 ^-0.3 ^ run function cashgrab:base/npe_raycast_loop with storage cashgrab:rc_args data
+execute if entity @s[scores={__rc_align_camera=0}] anchored eyes positioned ^ ^ ^ run function cashgrab:base/npe_raycast_start with storage cashgrab:rc_args data
+execute if entity @s[scores={__rc_align_camera=1}] anchored eyes positioned ^-0.5 ^-0.3 ^ run function cashgrab:base/npe_raycast_start with storage cashgrab:rc_args data
+execute if entity @s[scores={__rc_align_camera=2}] anchored eyes positioned ^0.5 ^-0.3 ^ run function cashgrab:base/npe_raycast_start with storage cashgrab:rc_args data
 
 tag @e remove t_collision_candidate

@@ -1,4 +1,4 @@
-# base/npe_raycast_loop.mcfunction
+# base/npe_raycast_start.mcfunction
 #
 # Context:
 #	as: a nonplayer entity
@@ -19,8 +19,8 @@
 #                               end_reason 30  = raycast hit an entity
 
 # Perform immediate collision detection
-$execute if block ~ ~ ~ $(col_terrain_allowed) run function $(func_npe_end) {end_reason:21}
-$execute if block ~ ~ ~ $(col_terrain_allowed) run return 0
+$execute unless block ~ ~ ~ $(col_terrain_allowed) run function $(func_npe_end) {end_reason:21}
+$execute unless block ~ ~ ~ $(col_terrain_allowed) run return 0
 
 # Begin raycast loop
 function cashgrab:base/npe_raycast_loop with storage cashgrab:rc_args data
