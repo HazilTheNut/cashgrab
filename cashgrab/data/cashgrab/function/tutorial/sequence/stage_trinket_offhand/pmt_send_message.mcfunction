@@ -10,7 +10,7 @@
 
 tellraw @a[tag=t_pm_owner,limit=1] [\
 {"color":"dark_gray","text":"\n--------------------------------------------"},\
-{"color":"white","text":"\nYou usually are not able to regain your trinkets after using them, though you can here by "},\
+{"color":"white","text":"\nYou usually are not able to regain your Trinkets after using them, though you can here by "},\
 {"color":"gold","text":"clicking on the sign nearby"},\
 {"color":"white","text":"."},\
 {"color":"white","text":"\n\nFor quicker access, you can often"},\

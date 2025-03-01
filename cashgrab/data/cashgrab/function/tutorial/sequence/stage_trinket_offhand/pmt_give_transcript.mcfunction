@@ -12,7 +12,7 @@ give @a[tag=t_pm_owner,limit=1] minecraft:paper[\
 minecraft:item_name="{\"color\":\"aqua\",\"italic\":false,\"text\":\"Transcript\"}",\
 minecraft:lore=[\
 "{\"italic\":false,\"color\":\"dark_gray\",\"text\":\"--------------------------------------------\"}",\
-"[{\"italic\":false,\"color\":\"white\",\"text\":\"You usually are not able to regain your trinkets\"}]",\
+"[{\"italic\":false,\"color\":\"white\",\"text\":\"You usually are not able to regain your Trinkets\"}]",\
 "[{\"italic\":false,\"color\":\"white\",\"text\":\" after using them, though you can here by\"}]",\
 "[{\"italic\":false,\"color\":\"gold\",\"text\":\" clicking on the sign nearby\"},{\"italic\":false,\"color\":\"white\",\"text\":\".\"}]",\
 "{\"italic\":false,\"color\":\"dark_gray\",\"text\":\"\"}",\
