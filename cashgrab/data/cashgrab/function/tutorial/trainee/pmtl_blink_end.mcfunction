@@ -1,4 +1,4 @@
-# classes/spectre/pmtl_blink_end.mcfunction
+# tutorial/trainee/pmtl_blink_end.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
@@ -6,19 +6,9 @@
 #	at: the owner's position
 #	rotated: as the owner
 #
-# Summary: Performs blink teleportation
+# Summary: Performs Blink teleportation
 #
 # Arguments: (none)
-
-# Class variable usage:
-#	cv_A	:	Shadow Walk state (-1 = exit, 0 = inactive, 1 = active, 2 = enter)
-#	cv_B	:	Shadow Walk timer
-#	cv_C	:	Shadow Walk cooldown (in ms)
-#	cv_D	:	
-#	cv_E	:	
-#	cv_F	:	
-#	cv_G	:	
-#	cv_H	:	
 
 # If there was an immediate collision, do nothing
 $execute if score NUM_END_REASON_TERRAIN_COLLISION_IMMEDIATE num matches $(end_reason) run return 0

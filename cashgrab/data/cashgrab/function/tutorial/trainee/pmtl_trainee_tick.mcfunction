@@ -10,4 +10,5 @@
 #
 # Arguments: (none)
 
-
+# Track if player is holding the weapon (==> cv_A = 1)
+execute store result score @a[tag=t_pm_owner,limit=1] cv_A run execute if items entity @a[tag=t_pm_owner,limit=1] weapon.mainhand minecraft:wooden_sword

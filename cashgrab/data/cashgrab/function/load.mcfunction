@@ -243,6 +243,7 @@ scoreboard players set NUM_END_REASON_CLEANUP num 0
 scoreboard players set NUM_END_REASON_CLEANUP_PLAYER_DEATH num 1
 scoreboard players set NUM_END_REASON_EXPIRE num 10
 scoreboard players set NUM_END_REASON_TERRAIN_COLLISION num 20
+scoreboard players set NUM_END_REASON_TERRAIN_COLLISION_IMMEDIATE num 21
 scoreboard players set NUM_END_REASON_ENTITY_COLLISION num 30
 
 # === Coin mechanics configurable parameters
