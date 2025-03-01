@@ -1,4 +1,4 @@
-# base/pe_display_coins.mcfunction
+# base/pmt_inv_coins.mcfunction
 #
 # Context:
 #	as: an entity

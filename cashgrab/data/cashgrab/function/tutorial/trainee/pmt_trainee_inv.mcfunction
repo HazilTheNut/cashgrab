@@ -22,6 +22,7 @@ minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Use]\"},
 minecraft:consumable={\
 consume_seconds:0f,\
 animation:"brush",\
+sound:"entity.villager.work_librarian",\
 has_consume_particles:false,\
 }\
 ] 1

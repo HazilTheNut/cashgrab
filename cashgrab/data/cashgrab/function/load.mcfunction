@@ -489,6 +489,7 @@ scoreboard objectives add __tutorial_progress_request trigger
 scoreboard objectives add __tutorial_other_request trigger
 scoreboard objectives add __tutorial_transcript_request trigger
 
+scoreboard objectives add evc_books minecraft.used:minecraft.book
 scoreboard objectives add evc_barriers minecraft.used:minecraft.barrier
 
 # =============================
