@@ -25,6 +25,13 @@ function cashgrab:base/cts/pmt_cts_input_trinkets {trinket_id:1}
 
 # Initialize tutorial
 scoreboard players set @a[tag=t_pm_owner,limit=1] __tutorial_seq_idx 1
+scoreboard players set @a[tag=t_pm_owner,limit=1] __tutorial_seq_next_idx 0
+
+# Reset ability configuration
+scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 50
+scoreboard players set @a[tag=t_pm_owner,limit=1] ability_charges 1
+scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_charges_max 1
+
 function cashgrab:tutorial/pmt_sequence_init
 
 # Move to Tutorial activity_state

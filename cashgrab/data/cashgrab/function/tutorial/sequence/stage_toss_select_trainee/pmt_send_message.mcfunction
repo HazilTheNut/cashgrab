@@ -1,4 +1,4 @@
-# tutorial/sequence/stage_/pmt_send_message.mcfunction
+# tutorial/sequence/stage_toss_select_trainee/pmt_send_message.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker

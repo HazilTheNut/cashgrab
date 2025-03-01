@@ -1,4 +1,4 @@
-# tutorial/sequence/stage_/pmt_tick.mcfunction
+# tutorial/sequence/stage_toss/pmt_tick.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker

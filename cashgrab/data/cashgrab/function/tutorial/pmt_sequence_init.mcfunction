@@ -35,9 +35,8 @@ scoreboard players enable @a[tag=t_pm_owner,limit=1] __tutorial_progress_request
 # Set player gamemode
 execute if score DEVELOPER_MODE num matches 0 run gamemode adventure @a[tag=t_pm_owner,limit=1]
 
-# Restore hunger and health
+# Restore hunger
 effect give @a[tag=t_pm_owner,limit=1] minecraft:saturation 15 1 true
-effect give @a[tag=t_pm_owner,limit=1] minecraft:regeneration 5 20 true
 
 # Refresh inventory
 function cashgrab:util/pmt_inv_refresh

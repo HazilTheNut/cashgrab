@@ -1,4 +1,4 @@
-# tutorial/sequence/stage_/pmt_init.mcfunction
+# tutorial/sequence/stage_coins/pmt_init.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
@@ -19,3 +19,6 @@ tag @a[tag=t_pm_owner,limit=1] add dtm_send_to_tutorial
 
 # Revoke trinket
 tag @a[tag=t_pm_owner,limit=1] add t_trinket_revoke
+
+# Restore health
+effect give @a[tag=t_pm_owner,limit=1] minecraft:regeneration 5 20 true

@@ -26,8 +26,8 @@ scoreboard players set @a[tag=t_pm_owner,limit=1] __iev_drop 0
 # =============================
 # Handle cooldowns
 
-# Only run the below during Gameplay activity_state
-execute unless entity @a[tag=t_pm_owner,limit=1,scores={activity_state=20..29}] run return 0
+# Only run the below during Gameplay or Tutorial activity_states
+execute unless entity @a[tag=t_pm_owner,limit=1,scores={activity_state=20..39}] run return 0
 
 # If no charges are left to recharge, return
 execute if score @a[tag=t_pm_owner,limit=1] ability_charges >= @a[tag=t_pm_owner,limit=1] ability_cfg_charges_max run return 0

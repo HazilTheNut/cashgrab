@@ -23,6 +23,11 @@ execute if score @a[tag=t_pm_owner,limit=1] __tutorial_seq_idx matches 51 run fu
 execute if score @a[tag=t_pm_owner,limit=1] __tutorial_seq_idx matches 52 run function cashgrab:tutorial/sequence/stage_trinket_offhand/pmt_tick
 execute if score @a[tag=t_pm_owner,limit=1] __tutorial_seq_idx matches 53 run function cashgrab:tutorial/sequence/stage_trinket_end/pmt_tick
 
+# Progress to next sequence index if set
+execute if score @a[tag=t_pm_owner,limit=1] __tutorial_seq_next_idx matches 1.. run scoreboard players operation @a[tag=t_pm_owner,limit=1] __tutorial_seq_idx = @a[tag=t_pm_owner,limit=1] __tutorial_seq_next_idx
+execute if score @a[tag=t_pm_owner,limit=1] __tutorial_seq_next_idx matches 1.. run function cashgrab:tutorial/pmt_sequence_init
+scoreboard players set @a[tag=t_pm_owner,limit=1] __tutorial_seq_next_idx 0
+
 # If player requests a transcript, grant it
 execute if score @a[tag=t_pm_owner,limit=1] __tutorial_transcript_request matches 1.. run function cashgrab:tutorial/pmt_give_transcript
 scoreboard players set @a[tag=t_pm_owner,limit=1] __tutorial_transcript_request 0
@@ -36,4 +41,4 @@ scoreboard players set @a[tag=t_pm_owner,limit=1] __tutorial_other_request 0
 scoreboard players enable @a[tag=t_pm_owner,limit=1] __tutorial_other_request
 
 # If player's coins exceeds 10, cap it
-scoreboard players set @a[tag=t_pm_owner,limit=1,scores={coins=11..}] coins 10
+scoreboard players set @a[tag=t_pm_owner,limit=1,scores={coins=101..}] coins 100

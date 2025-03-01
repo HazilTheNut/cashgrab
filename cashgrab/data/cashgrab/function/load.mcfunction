@@ -462,6 +462,7 @@ scoreboard objectives add __cts_trinkets_page_num dummy
 
 # Index number of stage of tutorial sequence
 scoreboard objectives add __tutorial_seq_idx dummy
+scoreboard objectives add __tutorial_seq_next_idx dummy
 
 # Index number of area player in tutorial should be teleported to when tagged with dtm_send_to_tutorial
 #   0   =   Nowhere
