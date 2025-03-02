@@ -123,8 +123,8 @@ loc_cts:"1027 95 1000",\
 yaw_cts:"-90",\
 loc_spawn_a:"1080 110 984",\
 rot_spawn_a:"45 0",\
-loc_spawn_b:"1058 96 1027",\
-rot_spawn_b:"-128 0",\
+loc_spawn_b:"1124 94 964",\
+rot_spawn_b:"0 0",\
 loc_spawn_c:"1098 88 1067",\
 rot_spawn_c:"-90 0",\
 loc_spawn_d:"1157 85 1021",\
