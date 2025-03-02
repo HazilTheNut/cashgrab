@@ -12,4 +12,4 @@
 
 # Search for and destroy any existing timers associated with this vampire
 execute store result storage cg_maks:vampire_eid_args vampire_eid int 1 run scoreboard players get @s eid_owner
-function cg_maks:classes/vampire/npe_destory_vampire_timers with storage cg_maks:vampire_eid_args
+function cg_maks:classes/vampire/npe_destroy_vampire_timers with storage cg_maks:vampire_eid_args
