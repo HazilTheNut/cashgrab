@@ -18,5 +18,6 @@ minecraft:lore=[\
 '["",{"text":" dazzling flourish.","italic":false,"color":"gray"}]',\
 '["",{"text":"More stacks of ","italic":false,"color":"gray"},{"text":"Tempo","italic":false,"color":"yellow"},{"text":" creates","italic":false,"color":"gray"}]',\
 '["",{"text":" a larger and deadlier flourish.","italic":false,"color":"gray"}]',\
+'["",{"text":"====","italic":false,"color":"dark_gray"}]',\
 '["",{"text":"12 ","italic":false,"color":"yellow"},{"text":"sec cooldown for ","italic":false,"color":"gray"},{"text":"1 ","italic":false,"color":"yellow"},{"text":"charge","italic":false,"color":"gray"}]'\
 ]] $(charges)
