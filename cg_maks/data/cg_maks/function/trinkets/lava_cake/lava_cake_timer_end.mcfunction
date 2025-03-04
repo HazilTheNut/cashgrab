@@ -17,12 +17,12 @@ particle minecraft:explosion ~ ~ ~ 0.0 0.0 0.0 0 2
 particle minecraft:lava ~ ~1 ~ 0.5 0.5 0.5 5 7
 playsound minecraft:entity.generic.explode player @a ~ ~ ~ 1 1
 
-execute if entity @e[distance=0..3,tag=!t_timer_owner] run tag @e[distance=0..3,tag=!t_timer_owner] add t_in_range
+execute if entity @e[distance=0..5,tag=!t_timer_owner] run tag @e[distance=0..5,tag=!t_timer_owner] add t_in_range
 
 # Damage players nearby
 tag @s add t_dmg_by
 function cashgrab:util/npe_dmg {\
-d_dmg_amount:8.0,\
+d_dmg_amount:10.0,\
 s_dmg_type:"minecraft:explosion",\
 t_dmg_target:"t_in_range",\
 t_dmg_by:"t_dmg_by",\

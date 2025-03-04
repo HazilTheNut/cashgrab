@@ -21,7 +21,10 @@ sound:"entity.generic.eat",\
 has_consume_particles:false,\
 },\
 minecraft:lore=[\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"Eating this cake grants\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\" Fire Resistance and Haste,\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\" and clears Mining Fatigue.\"}"]\
-] $(charges)
+'["",{"text":"Eating this cake grants ","italic":false,"color":"gray"},{"text":"Fire","italic":false,"color":"yellow"}]',\
+'["",{"text":" Resistance ","italic":false,"color":"yellow"},{"text":"and clears ","italic":false,"color":"gray"},{"text":"Mining","italic":false,"color":"yellow"}]',\
+'["",{"text":" Fatigue","italic":false,"color":"yellow"},{"text":".","italic":false,"color":"gray"}]',\
+'["",{"text":"After a brief period of time,","italic":false,"color":"gray"}]',\
+'["",{"text":" the cake ","italic":false,"color":"gray"},{"text":"explodes","italic":false,"color":"yellow"},{"text":", dealing","italic":false,"color":"gray"}]',\
+'["",{"text":" damage to nearby enemies!","italic":false,"color":"gray"}]'\
+]] $(charges)
