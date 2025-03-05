@@ -19,4 +19,4 @@ minecraft:lore=[\
 '["",{"text":"After a brief period of time,","italic":false,"color":"gray"}]',\
 '["",{"text":" the cake ","italic":false,"color":"gray"},{"text":"explodes","italic":false,"color":"yellow"},{"text":", dealing","italic":false,"color":"gray"}]',\
 '["",{"text":" damage to nearby enemies!","italic":false,"color":"gray"}]'\
-]] 1
+]] 2
