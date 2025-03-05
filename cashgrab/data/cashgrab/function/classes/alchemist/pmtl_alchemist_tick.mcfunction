@@ -15,7 +15,7 @@
 #	cv_B	:	1 if has Booster Brew, 0 otherwise
 #	cv_C	:	Potion brewing timer
 #	cv_D	:	
-#	cv_E	:	Translocator ability state (0 = throw, 1 = teleport, 2 = update display for teleport)
+#	cv_E	:	Translocator ability state (0 = throw, 1 = teleport)
 #	cv_F	:	Translocator teleport sequence timer, in ticks
 #	cv_G	:	
 #	cv_H	:	
@@ -128,8 +128,7 @@ execute if score @a[tag=t_pm_owner,limit=1] cv_C matches -1 run scoreboard playe
 # ===========================================================
 # Translocator teleport sequence
 scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={cv_F=0..}] cv_F 1
-execute if score @a[tag=t_pm_owner,limit=1] cv_F matches 0 run function cashgrab:util/npe_eid_find_peers
-execute if score @a[tag=t_pm_owner,limit=1] cv_F matches 0 run tag @e[tag=t_alchemist_translocator,scores={eid_compare=0},limit=1,sort=arbitrary] add t_alchemist_tp_target
-execute if score @a[tag=t_pm_owner,limit=1] cv_F matches 0 run tag @e[tag=t_alchemist_tp_target,limit=1] add t_cleanup
-execute if score @a[tag=t_pm_owner,limit=1] cv_F matches 0 run tp @a[tag=t_pm_owner,limit=1] @e[tag=t_alchemist_tp_target,limit=1]
-execute if score @a[tag=t_pm_owner,limit=1] cv_F matches 0 run tag @e[tag=t_alchemist_tp_target,limit=1] remove t_alchemist_tp_target
+scoreboard players add @a[tag=t_pm_owner,limit=1,scores={evl_dmg_taken=1..,cv_F=0..}] cv_F 10
+execute if score @a[tag=t_pm_owner,limit=1] cv_F matches 1.. run particle minecraft:dust{color:[0.4,1.0,0.8],scale:2.0f} ~ ~1.2 ~ 0.35 0.6 0.35 0.2 1
+execute if score @a[tag=t_pm_owner,limit=1] cv_F matches 1.. run particle minecraft:enchanted_hit ~ ~1.2 ~ 0.35 0.6 0.35 0.2 1
+execute if score @a[tag=t_pm_owner,limit=1] cv_F matches 0 run function cashgrab:classes/alchemist/pmtl_alchemist_teleport

@@ -15,7 +15,7 @@
 #	cv_B	:	1 if has Booster Brew, 0 otherwise
 #	cv_C	:	Potion brewing timer
 #	cv_D	:	
-#	cv_E	:	Translocator ability state (0 = throw, 1 = teleport, 2 = update display for teleport)
+#	cv_E	:	Translocator ability state (0 = throw, 1 = teleport)
 #	cv_F	:	Translocator teleport sequence timer, in ticks
 #	cv_G	:	Translocator entity count
 #	cv_H	:	
@@ -28,7 +28,8 @@ execute store result score @s cv_G run execute if entity @e[tag=t_alchemist_tran
 execute if score @s cv_G matches 0 run function cashgrab:classes/alchemist/pmtl_alchemist_use_ability_throw
 
 # If a translocator exists, begin teleport sequence
-execute if score @s cv_G matches 1.. run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_F 20
-execute if score @s cv_G matches 1.. run effect give @a[tag=t_pm_owner,limit=1] minecraft:slowness 1 2
+execute if score @s cv_G matches 1.. run playsound minecraft:block.beacon.activate player @a[tag=t_pm_owner,limit=1] ~ ~ ~ 1.0 1.25
+execute if score @s cv_G matches 1.. run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_F 30
+execute if score @s cv_G matches 1.. run effect give @a[tag=t_pm_owner,limit=1] minecraft:slowness 10 2
 execute if score @s cv_G matches 1.. run scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 10000
 execute if score @s cv_G matches 1 run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_E 0

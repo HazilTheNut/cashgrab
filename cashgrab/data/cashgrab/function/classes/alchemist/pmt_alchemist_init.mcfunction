@@ -13,7 +13,7 @@
 #	cv_B	:	1 if has Booster Brew, 0 otherwise
 #	cv_C	:	Potion brewing timer
 #	cv_D	:	
-#	cv_E	:	Translocator ability state (0 = throw, 1 = teleport, 2 = update display for teleport)
+#	cv_E	:	Translocator ability state (0 = throw, 1 = teleport)
 #	cv_F	:	Translocator teleport sequence timer, in ticks
 #	cv_G	:	
 #	cv_H	:	

@@ -15,13 +15,15 @@
 #	cv_B	:	1 if has Booster Brew, 0 otherwise
 #	cv_C	:	Potion brewing timer
 #	cv_D	:	
-#	cv_E	:	Translocator ability state (0 = throw, 1 = teleport, 2 = update display for teleport)
+#	cv_E	:	Translocator ability state (0 = throw, 1 = teleport)
 #	cv_F	:	Translocator teleport sequence timer, in ticks
 #	cv_G	:	
 #	cv_H	:	
 
+# sfx
 playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 0.5 1.5
 
+# Launch missile
 function cashgrab:util/npe_create_missile {\
 f_speed_mpt:0.3f,\
 i_lifetime_ticks:200,\
@@ -43,3 +45,7 @@ b_assign_as_peer:1,\
 tag @n[tag=t_alchemist_translocator_missile_init] add t_alchemist_translocator
 tag @n[tag=t_alchemist_translocator_missile_init] add t_alchemist_translocator_missile
 tag @n[tag=t_alchemist_translocator_missile_init] remove t_alchemist_translocator_missile_init
+
+# Set ability state
+scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 3000
+scoreboard players set @a[tag=t_pm_owner,limit=1] cv_E 1
