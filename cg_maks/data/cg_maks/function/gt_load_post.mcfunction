@@ -1,3 +1,7 @@
+# =======================
+# CLASSES
+# =======================
+
 # Vampire
 
 data modify storage cashgrab:game_info classes append value {\
@@ -28,4 +32,20 @@ func_pmtl_end:"cg_maks:classes/dancer/pmtl_dancer_end",\
 func_pmt_cts_icon:"cg_maks:classes/dancer/pmt_dancer_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:util/noop",\
 func_pmt_score_kill:"cashgrab:util/noop",\
+}
+
+# =======================
+# TRINKETS
+# =======================
+
+scoreboard objectives add evc_clay_balls minecraft.used:minecraft.clay_ball
+
+data modify storage cashgrab:game_info trinkets append value {\
+format:1,\
+s_trinket_name:"lava_cake",\
+func_pmt_init:"cg_maks:trinkets/lava_cake/pmt_lava_cake_init",\
+func_pmt_inv:"cg_maks:trinkets/lava_cake/pmt_lava_cake_inv",\
+func_pmtl_use_item:"cg_maks:trinkets/lava_cake/pmt_lava_cake_use_item",\
+func_pmt_cts_icon:"cg_maks:trinkets/lava_cake/pmt_lava_cake_cts_inv_icon",\
+evc_usage_score:"evc_clay_balls",\
 }

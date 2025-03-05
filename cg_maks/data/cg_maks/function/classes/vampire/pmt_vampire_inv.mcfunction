@@ -34,6 +34,3 @@ minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Nightreave
 minecraft:attribute_modifiers=[\
 {type:"attack_damage",slot:"mainhand",id:"cashgrab:nightreaver_atkdmg",amount:6,operation:"add_value"},\
 {type:"attack_speed",slot:"mainhand",id:"cashgrab:nightreaver_atkspd",amount:-2,operation:"add_value"}]]
-
-# Soul Siphon Icon
-function cg_maks:classes/vampire/pmt_vampire_inv_soul_siphon

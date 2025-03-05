@@ -14,10 +14,10 @@
 #	cv_A	:	Tempo Stacks (0-3)
 #	cv_B	:	Tempo Hit Combo Window
 #	cv_C	:	Tempo Timer
-#	cv_D	:	Sound Effect timer
+#	cv_D	:	Sound Effect timer (base)
 #	cv_E	:	Sforzando missile sequence timer
-#	cv_F	:	
-#	cv_G	:	
+#	cv_F	:	Sound Effect timer (refresh buff)
+#	cv_G	:	Refresh Buff Timer Cooldown
 #	cv_H	:   
 
 # =========================================
@@ -64,6 +64,11 @@ execute if score @a[tag=t_pm_owner,limit=1] cv_D matches 9 if score @a[tag=t_pm_
 execute if score @a[tag=t_pm_owner,limit=1] cv_D matches 6 if score @a[tag=t_pm_owner,limit=1] cv_A matches 3 run playsound minecraft:block.note_block.pling player @a[tag=t_pm_owner,limit=1] ~ ~ ~ 1 1.1
 execute if score @a[tag=t_pm_owner,limit=1] cv_D matches 3 if score @a[tag=t_pm_owner,limit=1] cv_A matches 3 run playsound minecraft:block.note_block.pling player @a[tag=t_pm_owner,limit=1] ~ ~ ~ 1 1.1
 
+# If full stacks and refreshing buff, play refresh (0.99 1.07 1.15)
+execute if score @a[tag=t_pm_owner,limit=1] cv_F matches 9 if score @a[tag=t_pm_owner,limit=1] cv_A matches 3 run playsound minecraft:block.note_block.pling player @a[tag=t_pm_owner,limit=1] ~ ~ ~ 1 0.99
+execute if score @a[tag=t_pm_owner,limit=1] cv_F matches 6 if score @a[tag=t_pm_owner,limit=1] cv_A matches 3 run playsound minecraft:block.note_block.pling player @a[tag=t_pm_owner,limit=1] ~ ~ ~ 1 1.07
+execute if score @a[tag=t_pm_owner,limit=1] cv_F matches 3 if score @a[tag=t_pm_owner,limit=1] cv_A matches 3 run playsound minecraft:block.note_block.pling player @a[tag=t_pm_owner,limit=1] ~ ~ ~ 1 1.15
+
 # =========================================
 # PARTICLE EFFECTS
 # =========================================
@@ -103,8 +108,10 @@ execute unless score @a[tag=t_pm_owner,limit=1] evl_dmg_dealt matches 1.. if sco
 execute unless score @a[tag=t_pm_owner,limit=1] cv_E matches ..0 run scoreboard players remove @a[tag=t_pm_owner,limit=1] cv_E 1
 tag @a remove t_dancer_sforz_missile
 
-# Decrement Sound Effect Timer
+# Decrement Sound Effect Timer(s)
 execute unless score @a[tag=t_pm_owner,limit=1] cv_D matches ..0 run scoreboard players remove @a[tag=t_pm_owner,limit=1] cv_D 1
+execute unless score @a[tag=t_pm_owner,limit=1] cv_F matches ..0 run scoreboard players remove @a[tag=t_pm_owner,limit=1] cv_F 1
+execute unless score @a[tag=t_pm_owner,limit=1] cv_G matches ..0 run scoreboard players remove @a[tag=t_pm_owner,limit=1] cv_G 1
 
 # Decrement Hit Combo Window by 1 (until 0 ticks).
 execute unless score @a[tag=t_pm_owner,limit=1] cv_B matches ..0 run scoreboard players remove @a[tag=t_pm_owner,limit=1] cv_B 1
@@ -127,7 +134,7 @@ execute if score @a[tag=t_pm_owner,limit=1] cv_B matches 1..30 run tag @a[tag=t_
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 30
 
 # Increment Tempo stacks by 1 (unless already full).
-execute if score @a[tag=t_pm_owner,tag=t_add_tempo,limit=1] cv_A matches 3.. run tag @a[tag=t_pm_owner,tag=t_add_tempo,limit=1] add t_no_sfx
+execute if score @a[tag=t_pm_owner,tag=t_add_tempo,limit=1] cv_A matches 3.. run tag @a[tag=t_pm_owner,tag=t_add_tempo,limit=1] add t_refresh_sfx
 execute unless score @a[tag=t_pm_owner,tag=t_add_tempo,limit=1] cv_A matches 3.. run scoreboard players add @a[tag=t_pm_owner,tag=t_add_tempo,limit=1] cv_A 1
 execute unless score @a[tag=t_pm_owner,tag=t_add_tempo,limit=1] cv_A matches 3.. run tellraw @a[tag=t_debug] "classes/dancer/pmtl_dancer_tick: Tempo stack added"
 
@@ -141,8 +148,10 @@ function cg_maks:classes/dancer/pmt_dancer_inv_armor
 function cg_maks:classes/dancer/pmt_dancer_inv_tempo
 
 # Start sound effect timer
-execute unless entity @a[tag=t_pm_owner,tag=t_no_sfx,limit=1] run scoreboard players set @a[tag=t_pm_owner,tag=t_add_tempo,limit=1] cv_D 9
+execute unless entity @a[tag=t_pm_owner,tag=t_refresh_sfx,limit=1] run scoreboard players set @a[tag=t_pm_owner,tag=t_add_tempo,limit=1] cv_D 9
+execute if entity @a[tag=t_pm_owner,tag=t_refresh_sfx,limit=1,scores={cv_G=..0}] run scoreboard players set @a[tag=t_pm_owner,tag=t_add_tempo,limit=1] cv_F 9
+execute if entity @a[tag=t_pm_owner,tag=t_refresh_sfx,limit=1,scores={cv_G=..0}] run scoreboard players set @a[tag=t_pm_owner,tag=t_add_tempo,limit=1] cv_G 100
 
 # Clean up tags
 tag @a remove t_add_tempo
-tag @a remove t_no_sfx
+tag @a remove t_refresh_sfx

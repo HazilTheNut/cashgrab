@@ -8,9 +8,9 @@
 #
 # Arguments: (none)
 
-# Class variable usage: TODO Document these!
+# Class variable usage:
 #	cv_A	:	
-#	cv_B	:	Pointer to this Vampire
+#	cv_B	:	Pointer to this Vampire (stored on timers)
 #	cv_C	:	
 #	cv_D	:	
 #	cv_E	:	
