@@ -9,7 +9,8 @@
 # Arguments:
 #	slot	: Inventory slot to insert into
 
-$item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:cake[\
+$item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:clay_ball[\
+minecraft:item_model="minecraft:cake",\
 minecraft:item_name="[{\"color\":\"dark_green\",\"italic\":false,\"text\":\"<Trinket>\"},{\"color\":\"white\",\"text\":\" Lava Cake\"}]",\
 minecraft:custom_data={is_cts_icon:1},\
 minecraft:lore=[\
