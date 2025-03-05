@@ -36,11 +36,15 @@ execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 0 run function cashgrab
 # Bastion
 
 # When blocking a hit, decrement durability, reduce Valiant/Commander Charge cooldown, start cooldown timer
-scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={evl_dmg_blocked_by_shield=1..}] cv_E 1
+scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={evl_dmg_blocked_by_shield=1..}] cv_E 5
 scoreboard players set @a[tag=t_pm_owner,limit=1,scores={evl_dmg_blocked_by_shield=1..}] cv_F 4000
 scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={evl_dmg_blocked_by_shield=1..,ability_cd_ms=1001..}] ability_cd_ms 1000
 scoreboard players set @a[tag=t_pm_owner,limit=1,scores={evl_dmg_blocked_by_shield=1..,ability_cd_ms=1..1000}] ability_cd_ms 1
 execute if score @a[tag=t_pm_owner,limit=1] evl_dmg_blocked_by_shield matches 1.. run function cashgrab:classes/champion/pmt_champion_inv_bastion_argloader
+
+# If this damage blocked is the final hit, play sfx / vfx
+execute if score @a[tag=t_pm_owner,limit=1] evl_dmg_blocked_by_shield matches 1.. if score @a[tag=t_pm_owner,limit=1] cv_E matches 0 run playsound minecraft:item.shield.break player @a ~ ~ ~ 1.0 1.2
+execute if score @a[tag=t_pm_owner,limit=1] evl_dmg_blocked_by_shield matches 1.. if score @a[tag=t_pm_owner,limit=1] cv_E matches 0 rotated ~ 0 run particle minecraft:item{item:"minecraft:shield"} ^ ^1 ^0.75 0.35 0.75 0.35 0.05 15 force
 
 # Decrement Bastion cooldown
 scoreboard players operation @a[tag=t_pm_owner,limit=1,scores={cv_F=1..}] cv_F -= @a[tag=t_pm_owner,limit=1] ability_cd_tickrate
