@@ -18,3 +18,5 @@ function cashgrab:base/pmt_trinket_cts_tick
 # Run cts tick function for class
 execute at @a[tag=t_pm_owner,limit=1] rotated as @a[tag=t_pm_owner,limit=1] run function cashgrab:classes/pmtl_class_cts_tick with entity @s data.class_info
 
+# Update score
+function cashgrab:base/pmt_scoring

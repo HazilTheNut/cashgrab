@@ -51,11 +51,19 @@ item replace entity @a[tag=t_pm_owner] inventory.26 with minecraft:air
 
 #tellraw @a[tag=t_pm_owner,tag=t_debug] "util/pmt_inv_refresh"
 
+# While in Lobby, display inventory
+execute if entity @a[tag=t_pm_owner,scores={activity_state=0..9}] run function cashgrab:base/pmt_inv_lobby
+
 # During class-and-trinket selection, display inventory UI
 execute if entity @a[tag=t_pm_owner,scores={activity_state=10..19}] run function cashgrab:base/cts/pmt_cts_inv_main
 
-# During either class-and-trinket selection or gameplay, load class inventory, ability icon, trinket, and coin display
+# During either class-and-trinket selection or gameplay, load class inventory
 execute if entity @a[tag=t_pm_owner,scores={activity_state=10..29}] run function cashgrab:classes/pmt_class_inv with entity @s data.class_info
-execute if entity @a[tag=t_pm_owner,scores={activity_state=10..29}] run function cashgrab:util/pmt_inv_ability_icon_argloader
-execute if entity @a[tag=t_pm_owner,scores={activity_state=10..29}] run function cashgrab:util/pmt_inv_trinket_argloader
-execute if entity @a[tag=t_pm_owner,scores={activity_state=10..29}] run function cashgrab:util/pmt_inv_coins_argloader
+
+# During class-and-trinket selection, gameplay, or tutorial, load ability icon, trinket, and coin display
+execute if entity @a[tag=t_pm_owner,scores={activity_state=10..39}] run function cashgrab:util/pmt_inv_ability_icon_argloader
+execute if entity @a[tag=t_pm_owner,scores={activity_state=10..39}] run function cashgrab:util/pmt_inv_trinket_argloader
+execute if entity @a[tag=t_pm_owner,scores={activity_state=10..39}] run function cashgrab:util/pmt_inv_coins_argloader
+
+# During Tutorial, display Trainee class
+execute if entity @a[tag=t_pm_owner,scores={activity_state=30..39}] run function cashgrab:tutorial/trainee/pmt_trainee_inv

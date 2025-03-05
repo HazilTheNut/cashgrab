@@ -48,8 +48,9 @@ execute unless score @s __cts_selected_trinket_idx = @a[tag=t_pm_owner,limit=1] 
 # A player that died the previous server tick will be tagged with t_died
 
 # === Detect if player has respawned
-execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches 0 run tag @a[tag=t_pm_owner,limit=1,tag=t_died,scores={stat_alive_ticks=1..}] add dtm_send_to_lobby
-execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches 1.. run tag @a[tag=t_pm_owner,limit=1,tag=t_died,scores={stat_alive_ticks=1..}] add dtm_send_to_cts
+execute if score DEVELOPER_MODE num matches 0 run tag @a[tag=t_pm_owner,limit=1,tag=t_died,scores={stat_alive_ticks=1..,activity_state=0..9}] add dtm_send_to_lobby
+execute if score DEVELOPER_MODE num matches 0 run tag @a[tag=t_pm_owner,limit=1,tag=t_died,scores={stat_alive_ticks=1..,activity_state=10..29}] add dtm_send_to_cts
+execute if score DEVELOPER_MODE num matches 0 run tag @a[tag=t_pm_owner,limit=1,tag=t_died,scores={stat_alive_ticks=1..,activity_state=30..39}] add dtm_send_to_tutorial
 tag @a[tag=t_pm_owner,limit=1,tag=t_died,scores={stat_alive_ticks=1..}] remove t_died
 
 # =============================
@@ -81,11 +82,15 @@ execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=20}] run func
 #	activity_state 21	=	Gameplay
 execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=21}] run function cashgrab:base/pmt_tick_gameplay
 
+#	activity_state 30	=	Transition to Tutorial
+execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=30}] run function cashgrab:base/pmt_tick_transition_to_tutorial
+
+#	activity_state 31	=	Tutorial
+execute if entity @a[tag=t_pm_owner,limit=1,scores={activity_state=31}] run function cashgrab:base/pmt_tick_tutorial
+
 # =============================
 # Post-tick actions
 
-execute at @a[tag=t_pm_owner,limit=1] rotated as @a[tag=t_pm_owner,limit=1] run function cashgrab:base/pmtl_coins
-function cashgrab:base/pmt_scoring
 function cashgrab:base/pm_grab
 
 # Allow plugins to run code after main pm tick

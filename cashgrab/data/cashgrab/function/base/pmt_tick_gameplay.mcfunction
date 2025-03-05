@@ -17,3 +17,7 @@ execute at @a[tag=t_pm_owner,limit=1] rotated as @a[tag=t_pm_owner,limit=1] run 
 
 # Run tick functions for class
 execute at @a[tag=t_pm_owner,limit=1] rotated as @a[tag=t_pm_owner,limit=1] run function cashgrab:classes/pmtl_class_tick with entity @s data.class_info
+
+# Handle coin mechanics and scoring
+execute at @a[tag=t_pm_owner,limit=1] rotated as @a[tag=t_pm_owner,limit=1] run function cashgrab:base/pmtl_coins
+function cashgrab:base/pmt_scoring

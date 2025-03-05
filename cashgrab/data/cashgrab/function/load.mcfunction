@@ -243,6 +243,7 @@ scoreboard players set NUM_END_REASON_CLEANUP num 0
 scoreboard players set NUM_END_REASON_CLEANUP_PLAYER_DEATH num 1
 scoreboard players set NUM_END_REASON_EXPIRE num 10
 scoreboard players set NUM_END_REASON_TERRAIN_COLLISION num 20
+scoreboard players set NUM_END_REASON_TERRAIN_COLLISION_IMMEDIATE num 21
 scoreboard players set NUM_END_REASON_ENTITY_COLLISION num 30
 
 # === Coin mechanics configurable parameters
@@ -251,7 +252,9 @@ scoreboard players set NUM_END_REASON_ENTITY_COLLISION num 30
 scoreboard players add GOAL coins 0
 execute if score GOAL coins matches 0 run scoreboard players set GOAL coins 100
 
-scoreboard players set NUM_COIN_SPILLING_THRESHOLD num 100
+# Coin spilling threshold
+scoreboard players add NUM_COIN_SPILLING_THRESHOLD num 0
+execute if score NUM_COIN_SPILLING_THRESHOLD num matches 0 run scoreboard players set NUM_COIN_SPILLING_THRESHOLD num 90
 
 # See runtime_config for more info on DEVELOPER_MODE
 execute if score DEVELOPER_MODE num matches 0 run function cashgrab:base/gt_display_coin_score
@@ -454,6 +457,40 @@ scoreboard objectives add __cts_classes_page_idx dummy
 scoreboard objectives add __cts_classes_page_num dummy
 scoreboard objectives add __cts_trinkets_page_idx dummy
 scoreboard objectives add __cts_trinkets_page_num dummy
+
+# =============================
+# Tutorial
+
+# Index number of stage of tutorial sequence
+scoreboard objectives add __tutorial_seq_idx dummy
+scoreboard objectives add __tutorial_seq_next_idx dummy
+
+# Index number of area player in tutorial should be teleported to when tagged with dtm_send_to_tutorial
+#   0   =   Nowhere
+#   1   =   Intro
+#   2   =   Coins Demo
+#   3   =   Toss Ability Demo
+#   4   =   Crouch Ability Demo
+#   5   =   Passive Ability Demo
+#   6   =   Trinket Demo
+scoreboard objectives add dtm_tutorial_dest_idx dummy
+
+# Progression of Trainee class
+#   0   =   Has nothing
+#   1   =   Has Trainee selectable in inventory
+#   2   =   Has inventory, Toss ability
+#   3   =   Has inventory, Toss ability, Crouch ability
+#   4   =   Has inventory, Toss ability, Crouch ability, Passive ability
+#   5   =   Has inventory, Toss ability, Crouch ability, Passive ability, Trinket
+scoreboard objectives add __tutorial_trainee_progress dummy
+
+# Player inputs
+scoreboard objectives add __tutorial_progress_request trigger
+scoreboard objectives add __tutorial_other_request trigger
+scoreboard objectives add __tutorial_transcript_request trigger
+
+scoreboard objectives add evc_books minecraft.used:minecraft.book
+scoreboard objectives add evc_barriers minecraft.used:minecraft.barrier
 
 # =============================
 # Teams

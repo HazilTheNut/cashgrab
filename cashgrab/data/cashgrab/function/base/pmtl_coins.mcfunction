@@ -11,7 +11,7 @@
 # Arguments: (none)
 
 # Consume coin plate when a player runs over a coin plate
-execute if score NUM_GAMESTATE num matches 1.. if block ~ ~ ~ minecraft:light_weighted_pressure_plate align xyz run function cashgrab:base/pmtl_consume_coinplate_argloader
+execute if block ~ ~ ~ minecraft:light_weighted_pressure_plate align xyz run function cashgrab:base/pmtl_consume_coinplate_argloader
 
 # When a player picks up a coin, award some health and refresh coin display
 execute if entity @a[tag=t_pm_owner,limit=1,scores={evl_coin_pickup=1..}] run function cashgrab:util/pmt_inv_coins_argloader

@@ -13,10 +13,11 @@
 # =============================
 # Consume toss item event
 
-# If the player is in Gameplay activity state and has an ability charge, use ability and then expend charge
+# If the player is in Gameplay or Tutorial activity states and has an ability charge, use ability and then expend charge
 execute if entity @a[tag=t_pm_owner,limit=1,scores={__iev_drop=1..,ability_charges=1..,activity_state=20..29}] run function cashgrab:classes/pmtl_class_use_ability with entity @s data.class_info
-scoreboard players operation @a[tag=t_pm_owner,limit=1,scores={__iev_drop=1..,ability_charges=1..,activity_state=20..29,ability_cd_ms=..0}] ability_cd_ms = @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms
-scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={__iev_drop=1..,ability_charges=1..,activity_state=20..29}] ability_charges 1
+execute if entity @a[tag=t_pm_owner,limit=1,scores={__iev_drop=1..,ability_charges=1..,activity_state=30..39}] run function cashgrab:tutorial/trainee/pmt_trainee_use_ability
+scoreboard players operation @a[tag=t_pm_owner,limit=1,scores={__iev_drop=1..,ability_charges=1..,activity_state=20..39,ability_cd_ms=..0}] ability_cd_ms = @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms
+scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={__iev_drop=1..,ability_charges=1..,activity_state=20..39}] ability_charges 1
 # Regardless of player state, refresh inventory whenever they toss an item
 execute if entity @a[tag=t_pm_owner,limit=1,scores={__iev_drop=1..}] run function cashgrab:util/pmt_inv_refresh
 # Consume event
@@ -25,8 +26,8 @@ scoreboard players set @a[tag=t_pm_owner,limit=1] __iev_drop 0
 # =============================
 # Handle cooldowns
 
-# Only run the below during Gameplay activity_state
-execute unless entity @a[tag=t_pm_owner,limit=1,scores={activity_state=20..29}] run return 0
+# Only run the below during Gameplay or Tutorial activity_states
+execute unless entity @a[tag=t_pm_owner,limit=1,scores={activity_state=20..39}] run return 0
 
 # If no charges are left to recharge, return
 execute if score @a[tag=t_pm_owner,limit=1] ability_charges >= @a[tag=t_pm_owner,limit=1] ability_cfg_charges_max run return 0
