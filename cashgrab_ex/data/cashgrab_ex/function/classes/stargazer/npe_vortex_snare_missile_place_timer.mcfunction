@@ -57,6 +57,7 @@ b_assign_as_peer:1,\
 }
 
 scoreboard players operation @n[tag=t_stargazer_vortex_snare_timer_init] tmr_lifetime_ticks += @s mis_lifetime_ticks
+tag @n[tag=t_stargazer_vortex_snare_timer_init] add t_stasis_immune
 tag @n[tag=t_stargazer_vortex_snare_timer_init] add t_stargazer_vortex_snare_timer
 tag @n[tag=t_stargazer_vortex_snare_timer_init] remove t_stargazer_vortex_snare_timer_init
 
