@@ -1,4 +1,4 @@
-# classes/alchemist/flametrap_timer_trip.mcfunction
+# trinkets/flame_trap/npe_flametrap_timer_trip.mcfunction
 #
 # Context:
 #	as: a timer
@@ -8,15 +8,11 @@
 #
 # Arguments: (none)
 
-# Class variable usage:
-#	cv_A	:	1 if has Caustic Brew, 0 otherwise
-#	cv_B	:	1 if has Booster Brew, 0 otherwise
-#	cv_C	:	Potion brewing timer
-#	cv_D	:	Flame Trap expiration timer
-#	cv_E	:	
-#	cv_F	:	
-#	cv_G	:	
-#	cv_H	:	
+# Trinket variable usage:
+#	tv_A	:	Flame Trap expiration timer
+#	tv_B	:	
+#	tv_C	:	
+#	tv_D	:	
 
 # Find owner and tag them with t_eid_matches
 execute store result storage cashgrab:find_eid_args eid int 1 run scoreboard players get @s eid_owner

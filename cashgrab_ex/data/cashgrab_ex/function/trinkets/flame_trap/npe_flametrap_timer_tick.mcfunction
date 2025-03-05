@@ -1,4 +1,4 @@
-# classes/alchemist/flametrap_timer_tick.mcfunction
+# trinkets/flame_trap/npe_flametrap_timer_tick.mcfunction
 #
 # Context:
 #	as: a timer
@@ -8,20 +8,16 @@
 #
 # Arguments: (none)
 
-# Class variable usage:
-#	cv_A	:	1 if has Caustic Brew, 0 otherwise
-#	cv_B	:	1 if has Booster Brew, 0 otherwise
-#	cv_C	:	Potion brewing timer
-#	cv_D	:	Flame Trap expiration timer
-#	cv_E	:	
-#	cv_F	:	
-#	cv_G	:	
-#	cv_H	:	
+# Trinket variable usage:
+#	tv_A	:	Flame Trap expiration timer
+#	tv_B	:	
+#	tv_C	:	
+#	tv_D	:	
 
 # Expiration timer
-scoreboard players remove @s cv_D 1
-execute if score @s cv_D matches ..0 run tag @s add t_cleanup
-execute if score @s cv_D matches ..0 run return 0
+scoreboard players remove @s tv_A 1
+execute if score @s tv_A matches ..0 run tag @s add t_cleanup
+execute if score @s tv_A matches ..0 run return 0
 
 # The Flame Trap's entire arming and activation sequence uses the timer based on particular ranges of tmr_lifetime_ticks:
 #	1-15	= trap is tripped and about to explode
@@ -29,7 +25,7 @@ execute if score @s cv_D matches ..0 run return 0
 #		15	= trap trigger sfx and vfx
 #	20-60	= trap is armed
 #		21	= trap creates a puff of smoke
-#	61-160	= trap is arming
+#	61-80	= trap is arming
 
 # =================================
 #	1-15	= trap is tripped and about to explode
@@ -41,17 +37,16 @@ execute if score @s tmr_lifetime_ticks matches 2..13 run particle minecraft:flam
 # Only create the above flame particles when the trap is tripped while in stasis
 execute if score @s stasis_state matches 1..2 run return 0
 
-execute if score @s tmr_lifetime_ticks matches 14 run function cashgrab:classes/alchemist/flametrap_timer_trip
-execute if score @s tmr_lifetime_ticks matches 1 run function cashgrab:classes/alchemist/flametrap_timer_explode
+execute if score @s tmr_lifetime_ticks matches 14 run function cashgrab_ex:trinkets/flame_trap/npe_flametrap_timer_trip
+execute if score @s tmr_lifetime_ticks matches 1 run function cashgrab_ex:trinkets/flame_trap/npe_flametrap_timer_explode
 
 # =================================
-#	61-120	= trap is arming
-execute if score @s tmr_lifetime_ticks matches 61..160 run particle minecraft:dust{color:[0.8f,0.2f,0.4f],scale:1.0} ~ ~ ~ 0 0 0 0 1
-execute if score @s tmr_lifetime_ticks matches 160 run playsound minecraft:entity.tnt.primed player @a ~ ~ ~ 0.5 2.0
-execute if score @s tmr_lifetime_ticks matches 140 run playsound minecraft:entity.tnt.primed player @a ~ ~ ~ 0.5 2.0
-execute if score @s tmr_lifetime_ticks matches 120 run playsound minecraft:entity.tnt.primed player @a ~ ~ ~ 0.5 2.0
-execute if score @s tmr_lifetime_ticks matches 100 run playsound minecraft:entity.tnt.primed player @a ~ ~ ~ 0.5 2.0
-execute if score @s tmr_lifetime_ticks matches 80 run playsound minecraft:entity.tnt.primed player @a ~ ~ ~ 0.5 2.0
+#	61-80	= trap is arming
+execute if score @s tmr_lifetime_ticks matches 61..80 run particle minecraft:dust{color:[0.8f,0.2f,0.4f],scale:1.0} ~ ~ ~ 0 0 0 0 1
+execute if score @s tmr_lifetime_ticks matches 61 run playsound minecraft:entity.tnt.primed player @a ~ ~ ~ 0.5 2.0
+execute if score @s tmr_lifetime_ticks matches 61 run function cashgrab:util/npe_col_entity_filter_hostile
+execute if score @s tmr_lifetime_ticks matches 61 if entity @e[distance=..4,tag=t_collision_candidate,tag=!t_invisible] run scoreboard players set @s tmr_lifetime_ticks 80
+
 
 # =================================
 #	30-60	= trap is armed

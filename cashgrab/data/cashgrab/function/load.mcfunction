@@ -186,6 +186,7 @@ scoreboard objectives add evl_death minecraft.custom:minecraft.deaths
 scoreboard objectives add evl_player_kills minecraft.custom:minecraft.player_kills
 scoreboard objectives add evl_jump minecraft.custom:minecraft.jump
 scoreboard objectives add evl_dmg_absorbed minecraft.custom:minecraft.damage_absorbed
+scoreboard objectives add evl_dmg_blocked_by_shield minecraft.custom:minecraft.damage_blocked_by_shield
 scoreboard objectives add evl_dmg_dealt minecraft.custom:minecraft.damage_dealt
 scoreboard objectives add evl_dmg_taken minecraft.custom:minecraft.damage_taken
 scoreboard objectives add evl_coin_pickup minecraft.picked_up:minecraft.gold_nugget

@@ -43,8 +43,8 @@ f_speed_mpt:0.6f,\
 i_lifetime_ticks:50,\
 i_origin_loc:1,\
 f_focal_dist_m:25,\
-i_gravity_vy_mmpt:175,\
-i_gravity_const_mmpt2:40,\
+i_gravity_vy_mmpt:200,\
+i_gravity_const_mmpt2:50,\
 t_missile_name:"t_thunder_seed_missile",\
 f_tracking_scalar:0.0f,\
 col_terrain_allowed:"#cashgrab:partialsolid",\

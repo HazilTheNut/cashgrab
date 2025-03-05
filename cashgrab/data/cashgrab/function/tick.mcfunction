@@ -87,6 +87,7 @@ scoreboard players set @a evl_death 0
 scoreboard players set @a evl_player_kills 0
 scoreboard players set @a evl_jump 0
 scoreboard players set @a evl_dmg_absorbed 0
+scoreboard players set @a evl_dmg_blocked_by_shield 0
 scoreboard players set @a evl_dmg_dealt 0
 scoreboard players set @a evl_dmg_taken 0
 scoreboard players set @a evl_coin_pickup 0
