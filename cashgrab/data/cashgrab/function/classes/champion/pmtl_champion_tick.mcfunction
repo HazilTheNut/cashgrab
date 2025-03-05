@@ -36,7 +36,7 @@ execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 0 run function cashgrab
 # Bastion
 
 # When blocking a hit, decrement durability, reduce Valiant/Commander Charge cooldown, start cooldown timer
-scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={evl_dmg_blocked_by_shield=1..}] cv_E 5
+scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={evl_dmg_blocked_by_shield=1..}] cv_E 1
 scoreboard players set @a[tag=t_pm_owner,limit=1,scores={evl_dmg_blocked_by_shield=1..}] cv_F 4000
 scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={evl_dmg_blocked_by_shield=1..,ability_cd_ms=1001..}] ability_cd_ms 1000
 scoreboard players set @a[tag=t_pm_owner,limit=1,scores={evl_dmg_blocked_by_shield=1..,ability_cd_ms=1..1000}] ability_cd_ms 1
