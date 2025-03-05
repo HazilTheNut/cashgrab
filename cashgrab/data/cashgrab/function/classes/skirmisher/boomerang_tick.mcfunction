@@ -62,6 +62,8 @@ execute if entity @s[tag=t_boomerang_begin_return] store result score @s facing_
 # Correction angle to point towards owner = direction towards owner - my orientation
 execute if entity @s[tag=t_boomerang_begin_return] run scoreboard players operation @s mis_func_tick_dyaw_mdeg -= @s facing_vector_yaw_mdeg
 execute if entity @s[tag=t_boomerang_begin_return] run scoreboard players operation @s mis_func_tick_dpitch_mdeg -= @s facing_vector_pitch_mdeg
+# Set boomerang tracking target to owner
+execute if entity @s[tag=t_boomerang_begin_return] run scoreboard players operation @s mis_tracking_target_eid = @s eid_owner
 
 # On starting return, enable tracking and recalculate
 tag @s[tag=t_boomerang_begin_return] add t_missile_has_tracking

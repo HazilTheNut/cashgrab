@@ -344,6 +344,14 @@ scoreboard objectives add __mis_tracking_giveup_max_mdeg dummy
 scoreboard objectives add __mis_tracking_adjust_min_mdeg dummy
 scoreboard objectives add __mis_tracking_adjust_max_mdeg dummy
 
+# Missile tracking nearest angle dot product calculation variables, in "micrometers"
+scoreboard objectives add __mis_tracking_nearest_angle_dp_term_um dummy
+scoreboard objectives add __mis_tracking_nearest_angle_dp_sum_um dummy
+scoreboard objectives add __mis_tracking_nearest_angle_dp_max_um dummy
+
+# EID of entity missile tracks towards
+scoreboard objectives add mis_tracking_target_eid dummy
+
 # Summation of all physics effects on a missile
 scoreboard objectives add __mis_sum_vel_x_mmpt dummy
 scoreboard objectives remove mis_sum_vel_x_mmpt

@@ -17,8 +17,11 @@ function cashgrab:util/find_eid_self with storage cashgrab:eid_args
 # If owner is not a target of Soul Siphon, do nothing
 execute unless entity @a[tag=t_eid_matches,tag=t_vampire_soulsiphon_target] run return 0
 
+# Tag owner with t_vampire_soulsiphon_target_temp
+tag @a[tag=t_eid_matches,limit=1] add t_vampire_soulsiphon_target_temp
+
 # Create soul siphon missile flying from Vampire originator to PM owner
-execute at @a[tag=t_vampire_mark_owner,limit=1] facing entity @a[tag=t_eid_matches,limit=1] eyes positioned ^ ^ ^1 run function cashgrab:util/npe_create_missile {\
+execute at @a[tag=t_vampire_mark_owner,limit=1] facing entity @a[tag=t_vampire_soulsiphon_target_temp,limit=1] eyes positioned ^ ^ ^1 run function cashgrab:util/npe_create_missile {\
 f_speed_mpt:0.65f,\
 i_lifetime_ticks:50,\
 i_origin_loc:1,\
@@ -39,6 +42,11 @@ b_assign_as_peer:1,\
 # Set the owner of this missile to be the originator of the missile
 scoreboard players operation @n[tag=t_vampire_soulsiphon_missile_init,limit=1] eid_owner = @a[tag=t_vampire_mark_owner,limit=1] eid_self
 
+# Set tracking target of missile to Soul Siphon target
+scoreboard players operation @n[tag=t_vampire_soulsiphon_missile_init,limit=1] mis_tracking_target_eid = @a[tag=t_vampire_soulsiphon_target_temp,limit=1] eid_self
+
 # Clean up tags
 tag @n[tag=t_vampire_soulsiphon_missile_init,limit=1] add t_vampire_soulsiphon_missile
 tag @n[tag=t_vampire_soulsiphon_missile_init,limit=1] remove t_vampire_soulsiphon_missile_init
+
+tag @a remove t_vampire_soulsiphon_target_temp
