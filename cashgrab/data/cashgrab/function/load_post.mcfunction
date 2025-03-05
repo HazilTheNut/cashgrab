@@ -6,17 +6,17 @@
 
 # --- Append class roster data
 
-# Champion
+# Frost Knight
 data modify storage cashgrab:game_info classes append value {\
 format:1,\
-s_class_name:"Champion",\
-func_pmt_init:"cashgrab:classes/champion/pmt_champion_init",\
-func_pmt_inv:"cashgrab:classes/champion/pmt_champion_inv",\
-func_pmt_inv_ability_icon:"cashgrab:classes/champion/pmt_champion_inv_ability_icon",\
-func_pmtl_tick:"cashgrab:classes/champion/pmtl_champion_tick",\
-func_pmtl_use_ability:"cashgrab:classes/champion/pmtl_champion_use_ability",\
+s_class_name:"Frost Knight",\
+func_pmt_init:"cashgrab:classes/frostknight/pmt_frostknight_init",\
+func_pmt_inv:"cashgrab:classes/frostknight/pmt_frostknight_inv",\
+func_pmt_inv_ability_icon:"cashgrab:classes/frostknight/pmt_frostknight_inv_ability_icon",\
+func_pmtl_tick:"cashgrab:classes/frostknight/pmtl_frostknight_tick",\
+func_pmtl_use_ability:"cashgrab:classes/frostknight/pmtl_frostknight_use_ability",\
 func_pmtl_end:"cashgrab:util/noop",\
-func_pmt_cts_icon:"cashgrab:classes/champion/pmt_champion_cts_inv_icon",\
+func_pmt_cts_icon:"cashgrab:classes/frostknight/pmt_frostknight_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:util/noop",\
 func_pmt_score_kill:"cashgrab:util/noop",\
 }
@@ -96,17 +96,17 @@ func_pmtl_cts_tick:"cashgrab:classes/artillery/pmtl_artillery_cts_tick",\
 func_pmt_score_kill:"cashgrab:util/noop",\
 }
 
-# Frost Knight
+# Champion
 data modify storage cashgrab:game_info classes append value {\
 format:1,\
-s_class_name:"Frost Knight",\
-func_pmt_init:"cashgrab:classes/frostknight/pmt_frostknight_init",\
-func_pmt_inv:"cashgrab:classes/frostknight/pmt_frostknight_inv",\
-func_pmt_inv_ability_icon:"cashgrab:classes/frostknight/pmt_frostknight_inv_ability_icon",\
-func_pmtl_tick:"cashgrab:classes/frostknight/pmtl_frostknight_tick",\
-func_pmtl_use_ability:"cashgrab:classes/frostknight/pmtl_frostknight_use_ability",\
+s_class_name:"Champion",\
+func_pmt_init:"cashgrab:classes/champion/pmt_champion_init",\
+func_pmt_inv:"cashgrab:classes/champion/pmt_champion_inv",\
+func_pmt_inv_ability_icon:"cashgrab:classes/champion/pmt_champion_inv_ability_icon",\
+func_pmtl_tick:"cashgrab:classes/champion/pmtl_champion_tick",\
+func_pmtl_use_ability:"cashgrab:classes/champion/pmtl_champion_use_ability",\
 func_pmtl_end:"cashgrab:util/noop",\
-func_pmt_cts_icon:"cashgrab:classes/frostknight/pmt_frostknight_cts_inv_icon",\
+func_pmt_cts_icon:"cashgrab:classes/champion/pmt_champion_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:util/noop",\
 func_pmt_score_kill:"cashgrab:util/noop",\
 }
