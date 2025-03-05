@@ -38,7 +38,7 @@ func_pmt_score_kill:"cashgrab:util/noop",\
 # TRINKETS
 # =======================
 
-scoreboard objectives add evc_clay_ball minecraft.used:minecraft.clay_ball
+scoreboard objectives add evc_clay_balls minecraft.used:minecraft.clay_ball
 
 data modify storage cashgrab:game_info trinkets append value {\
 format:1,\
@@ -47,5 +47,5 @@ func_pmt_init:"cg_maks:trinkets/lava_cake/pmt_lava_cake_init",\
 func_pmt_inv:"cg_maks:trinkets/lava_cake/pmt_lava_cake_inv",\
 func_pmtl_use_item:"cg_maks:trinkets/lava_cake/pmt_lava_cake_use_item",\
 func_pmt_cts_icon:"cg_maks:trinkets/lava_cake/pmt_lava_cake_cts_inv_icon",\
-evc_usage_score:"evc_clay_ball",\
+evc_usage_score:"evc_clay_balls",\
 }
