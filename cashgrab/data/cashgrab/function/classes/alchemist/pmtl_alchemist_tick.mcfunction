@@ -14,9 +14,9 @@
 #	cv_A	:	1 if has Caustic Brew, 0 otherwise
 #	cv_B	:	1 if has Booster Brew, 0 otherwise
 #	cv_C	:	Potion brewing timer
-#	cv_D	:	Flame Trap expiration timer
-#	cv_E	:	
-#	cv_F	:	
+#	cv_D	:	
+#	cv_E	:	Translocator ability state (0 = throw, 1 = teleport, 2 = update display for teleport)
+#	cv_F	:	Translocator teleport sequence timer, in ticks
 #	cv_G	:	
 #	cv_H	:	
 
@@ -124,3 +124,12 @@ execute if score @a[tag=t_pm_owner,limit=1] ps_sneaking matches 2 run function c
 # Update potion brewing icon on sequence complete
 execute if score @a[tag=t_pm_owner,limit=1] cv_C matches -1 run function cashgrab:classes/alchemist/pmt_alchemist_inv_potion_brewing_icon
 execute if score @a[tag=t_pm_owner,limit=1] cv_C matches -1 run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 0
+
+# ===========================================================
+# Translocator teleport sequence
+scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={cv_F=0..}] cv_F 1
+execute if score @a[tag=t_pm_owner,limit=1] cv_F matches 0 run function cashgrab:util/npe_eid_find_peers
+execute if score @a[tag=t_pm_owner,limit=1] cv_F matches 0 run tag @e[tag=t_alchemist_translocator,scores={eid_compare=0},limit=1,sort=arbitrary] add t_alchemist_tp_target
+execute if score @a[tag=t_pm_owner,limit=1] cv_F matches 0 run tag @e[tag=t_alchemist_tp_target,limit=1] add t_cleanup
+execute if score @a[tag=t_pm_owner,limit=1] cv_F matches 0 run tp @a[tag=t_pm_owner,limit=1] @e[tag=t_alchemist_tp_target,limit=1]
+execute if score @a[tag=t_pm_owner,limit=1] cv_F matches 0 run tag @e[tag=t_alchemist_tp_target,limit=1] remove t_alchemist_tp_target

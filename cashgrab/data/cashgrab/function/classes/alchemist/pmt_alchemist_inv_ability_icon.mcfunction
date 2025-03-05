@@ -9,11 +9,11 @@
 # Arguments:
 #	charges		: Number of charges of ability
 
-$item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:redstone_torch[\
-minecraft:custom_name="[{\"color\":\"light_purple\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Flame Trap\"}]",\
+$item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:daylight_detector[\
+minecraft:custom_name="[{\"color\":\"light_purple\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Translocator Pad\"}]",\
 minecraft:lore=[\
 "{\"color\":\"dark_gray\",\"italic\":true,\"text\":\"Toss any item to use.\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"Deploys a proximity trap that\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\"Deploys a teleport pad.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" explodes and reveals enemies.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Traps persist for 2 minutes.\"}",\
 "{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"=====\"}",\
