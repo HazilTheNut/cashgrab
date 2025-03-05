@@ -24,7 +24,7 @@ minecraft:lore=[\
 '["",{"text":"Eating this cake grants ","italic":false,"color":"gray"},{"text":"Fire","italic":false,"color":"yellow"}]',\
 '["",{"text":" Resistance ","italic":false,"color":"yellow"},{"text":"and clears ","italic":false,"color":"gray"},{"text":"Mining","italic":false,"color":"yellow"}]',\
 '["",{"text":" Fatigue","italic":false,"color":"yellow"},{"text":".","italic":false,"color":"gray"}]',\
-'["",{"text":"After a brief period of time,","italic":false,"color":"gray"}]',\
-'["",{"text":" the cake ","italic":false,"color":"gray"},{"text":"explodes","italic":false,"color":"yellow"},{"text":", dealing","italic":false,"color":"gray"}]',\
-'["",{"text":" damage to nearby enemies!","italic":false,"color":"gray"}]'\
+'["",{"text":"When the effect ends, you","italic":false,"color":"gray"}]',\
+'["",{"text":" explode","italic":false,"color":"yellow"},{"text":", dealing damage","italic":false,"color":"gray"}]',\
+'["",{"text":" to nearby enemies!","italic":false,"color":"gray"}]'\
 ]] $(charges)
