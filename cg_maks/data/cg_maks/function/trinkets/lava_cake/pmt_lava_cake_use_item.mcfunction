@@ -21,6 +21,3 @@ func_npe_tick:"cg_maks:trinkets/lava_cake/lava_cake_timer_tick",\
 func_npe_end:"cg_maks:trinkets/lava_cake/lava_cake_timer_end",\
 b_assign_as_peer:1,\
 }
-
-#Make timer stasis immune
-tag @e[tag=t_lava_cake_timer] add t_stasis_immune
