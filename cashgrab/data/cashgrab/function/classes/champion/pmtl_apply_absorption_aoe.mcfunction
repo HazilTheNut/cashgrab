@@ -48,6 +48,5 @@ func_npe_tick:"cashgrab:classes/champion/npe_absorption_particle_timer_tick",\
 func_npe_end:"cashgrab:util/noop",\
 }
 
-tag @e[tag=t_champion_absorption_timer_init] add t_stasis_immune
 tag @e[tag=t_champion_absorption_timer_init] add t_champion_absorption_timer
 tag @e[tag=t_champion_absorption_timer_init] remove t_champion_absorption_timer_init

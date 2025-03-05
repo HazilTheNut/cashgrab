@@ -28,6 +28,5 @@ func_npe_end:"cashgrab:util/noop",\
 b_assign_as_peer:1,\
 }
 
-tag @e[tag=t_champion_absorption_timer_init] add t_stasis_immune
 tag @e[tag=t_champion_absorption_timer_init] add t_champion_absorption_timer
 tag @e[tag=t_champion_absorption_timer_init] remove t_champion_absorption_timer_init

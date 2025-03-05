@@ -31,6 +31,5 @@ scoreboard players operation @n[tag=t_vampire_mark_timer_init] eid_owner = @a[ta
 scoreboard players operation @n[tag=t_vampire_mark_timer_init] cv_B = @a[tag=t_vampire_mark_owner,limit=1] eid_self
 
 # Clean up some tags
-tag @n[tag=t_vampire_mark_timer_init] add t_stasis_immune
 tag @n[tag=t_vampire_mark_timer_init] add t_vampire_mark_timer
 tag @n[tag=t_vampire_mark_timer_init] remove t_vampire_mark_timer_init
