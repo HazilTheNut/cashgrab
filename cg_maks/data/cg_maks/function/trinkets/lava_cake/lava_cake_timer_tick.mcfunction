@@ -8,7 +8,8 @@
 #
 # Arguments: (none)
 
-particle minecraft:lava ~ ~ ~ 0.25 0.25 0.25 1 1
+# Play particle effect (unless currently invisible)
+execute unless entity @a[tag=t_timer_owner,tag=t_invisible] run particle minecraft:lava ~ ~ ~ 0.25 0.25 0.25 1 1
 
 #If on a relevant tick, play a sound effect
 execute if entity @s[scores={tmr_lifetime_ticks=140}] run playsound minecraft:block.note_block.hat player @a ~ ~ ~ 1 1
