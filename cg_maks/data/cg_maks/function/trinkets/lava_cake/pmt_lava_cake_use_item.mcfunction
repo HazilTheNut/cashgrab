@@ -13,7 +13,7 @@ function cashgrab:util/npe_eid_find_peers
 execute if entity @e[tag=t_lava_cake_timer,scores={eid_compare=0}] run scoreboard players set @a[tag=t_eid_matches,limit=1] trinket_charges_modify 1
 execute if entity @e[tag=t_lava_cake_timer,scores={eid_compare=0}] run return 0
 
-effect give @a[tag=t_pm_owner,limit=1] minecraft:fire_resistance 7 0
+effect give @a[tag=t_pm_owner,limit=1] minecraft:fire_resistance 7 0 true
 effect clear @a[tag=t_pm_owner,limit=1] minecraft:mining_fatigue
 
 # Create explosion timer
