@@ -20,4 +20,10 @@
 #	cv_G	:	
 #	cv_H	:   
 
+particle item{item:"minecraft:iron_sword"} ~ ~ ~ 0.5 0.5 0.5 0.25 20
 
+execute rotated ~-30 ~ run function cashgrab_ex:classes/evincer/pmtl_evincer_create_pearlescent_wave_missile
+execute rotated ~-15 ~ run function cashgrab_ex:classes/evincer/pmtl_evincer_create_pearlescent_wave_missile
+execute rotated ~0 ~ run function cashgrab_ex:classes/evincer/pmtl_evincer_create_pearlescent_wave_missile
+execute rotated ~15 ~ run function cashgrab_ex:classes/evincer/pmtl_evincer_create_pearlescent_wave_missile
+execute rotated ~30 ~ run function cashgrab_ex:classes/evincer/pmtl_evincer_create_pearlescent_wave_missile

@@ -23,3 +23,13 @@
 # =========================
 # Cast abilities based on current sword state
 
+execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1,evc_sticks=1..}] run function cashgrab_ex:classes/evincer/pmtl_evincer_cast_ochre_laser
+execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=2,evc_sticks=1..}] positioned ~ ~1 ~ positioned ^-0.20 ^-0.05 ^0.25 run function cashgrab_ex:classes/evincer/pmtl_evincer_cast_pearlescent_wave
+execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=3,evc_sticks=1..}] run function cashgrab_ex:classes/evincer/pmtl_evincer_cast_cerulean_sphere
+
+# Reset sword back to normal and refresh inventory
+scoreboard players set @a[tag=t_pm_owner,limit=1,scores={evc_sticks=1..}] cv_A 0
+execute if entity @a[tag=t_pm_owner,limit=1,scores={evc_sticks=1..}] run function cashgrab_ex:classes/evincer/pmt_evincer_inv
+
+# Consume event
+scoreboard players set @a[tag=t_pm_owner,limit=1] evc_sticks 0
