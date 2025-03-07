@@ -12,7 +12,7 @@
 
 function cashgrab:util/npe_create_missile {\
 f_speed_mpt:0.65f,\
-i_lifetime_ticks:20,\
+i_lifetime_ticks:16,\
 i_origin_loc:0,\
 f_focal_dist_m:100,\
 i_gravity_vy_mmpt:0,\
