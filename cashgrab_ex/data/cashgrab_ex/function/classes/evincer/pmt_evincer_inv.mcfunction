@@ -57,6 +57,10 @@ animation:"none",\
 sound:"minecraft:block.amethyst_block.break",\
 has_consume_particles:false,\
 },\
+minecraft:lore=[\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\"Fires a laser that damages\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\" and reveals a target.\"}",\
+],\
 minecraft:attribute_modifiers=[\
 {type:"attack_damage",slot:"mainhand",id:"cashgrab:chaosshaper_atkdmg",amount:6,operation:"add_value"},\
 {type:"attack_speed",slot:"mainhand",id:"cashgrab:chaosshaper_atkspd",amount:-2,operation:"add_value"}]]
@@ -72,6 +76,10 @@ animation:"none",\
 sound:"minecraft:block.amethyst_block.break",\
 has_consume_particles:false,\
 },\
+minecraft:lore=[\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\"Creates an area\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\" damage wave.\"}",\
+],\
 minecraft:attribute_modifiers=[\
 {type:"attack_damage",slot:"mainhand",id:"cashgrab:chaosshaper_atkdmg",amount:6,operation:"add_value"},\
 {type:"attack_speed",slot:"mainhand",id:"cashgrab:chaosshaper_atkspd",amount:-2,operation:"add_value"}]]
@@ -87,6 +95,10 @@ animation:"none",\
 sound:"minecraft:block.amethyst_block.break",\
 has_consume_particles:false,\
 },\
+minecraft:lore=[\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\"Fires a homing beam that \"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\" damages and slows.\"}",\
+],\
 minecraft:attribute_modifiers=[\
 {type:"attack_damage",slot:"mainhand",id:"cashgrab:chaosshaper_atkdmg",amount:6,operation:"add_value"},\
 {type:"attack_speed",slot:"mainhand",id:"cashgrab:chaosshaper_atkspd",amount:-2,operation:"add_value"}]]

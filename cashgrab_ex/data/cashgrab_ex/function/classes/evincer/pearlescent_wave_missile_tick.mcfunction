@@ -18,6 +18,7 @@ execute store result storage cashgrab:eid_args eid int 1 run scoreboard players 
 function cashgrab:util/find_eid_self with storage cashgrab:eid_args
 tag @a[tag=t_eid_matches] add t_dmg_from
 tag @s add t_dmg_by
+function cashgrab:util/npe_col_entity_filter_hostile
 execute positioned ~-1 ~-2 ~-1 run tag @e[dx=2,dy=3,dz=2,tag=t_collision_candidate] add t_dmg_trgt
 
 function cashgrab:util/npe_dmg {\

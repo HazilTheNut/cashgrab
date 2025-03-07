@@ -20,6 +20,8 @@
 #	cv_G	:	
 #	cv_H	:   
 
+execute positioned ~ ~1 ~ run particle item{item:"minecraft:diamond_sword"} ^-0.5 ^0.45 ^0.4 0.075 0.2 0.075 0.025 20
+
 function cashgrab:util/npe_create_missile {\
 f_speed_mpt:0.40f,\
 i_lifetime_ticks:100,\

@@ -22,7 +22,6 @@
 
 # Grant a random ability to sword
 execute store result score @a[tag=t_pm_owner,limit=1] cv_A run random value 1..3
-scoreboard players set @a[tag=t_pm_owner,limit=1] cv_A 3
 
 # Blink
 particle minecraft:dust{color:[1.0,1.0,0.7],scale:2.0} ~ ~1 ~ 0.5 0.75 0.5 0 40
