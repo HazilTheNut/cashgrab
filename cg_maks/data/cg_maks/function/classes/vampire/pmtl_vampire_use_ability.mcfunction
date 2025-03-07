@@ -13,7 +13,7 @@
 # Play some vfx and spawn in bat missiles to have them track towards each player within X blocks.
 
 # Tag affected players
-tag @e[type=player,distance=..10,tag=!t_pm_owner] add t_vampire_soulsiphon_target
+tag @e[type=player,distance=..15,tag=!t_pm_owner] add t_vampire_soulsiphon_target
 
 # sfx
 playsound entity.elder_guardian.curse player @a ~ ~ ~ 1 1.1

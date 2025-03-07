@@ -28,14 +28,10 @@ b_assign_as_peer:1,\
 # Transfer ownership of this timer to the Vampire who marked the player initially.
 scoreboard players operation @n[tag=t_vampire_remnant_timer_init] eid_owner = @a[tag=t_vampire_mark_owner,limit=1] eid_self
 
-# Update inventory display to show available Remnant
-
 # Add/remove necessary tags to timer and notify Vampire.
 tag @n[tag=t_vampire_remnant_timer_init] add t_vampire_remnant_timer
 tag @n[tag=t_vampire_remnant_timer_init] add t_stasis_immune
 tag @n[tag=t_vampire_remnant_timer_init] remove t_vampire_remnant_timer_init
-# TODO replace with inventory update
-# tellraw @a[tag=t_pm_owner,limit=1] "remnant ready" 
 
 
 
