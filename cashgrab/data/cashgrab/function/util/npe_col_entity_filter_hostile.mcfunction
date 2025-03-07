@@ -1,4 +1,4 @@
-# util/npe_col_filter_entity_hostile.mcfunction
+# util/npe_col_entity_filter_hostile.mcfunction
 #
 # Context:
 #	as: a nonplayer entity

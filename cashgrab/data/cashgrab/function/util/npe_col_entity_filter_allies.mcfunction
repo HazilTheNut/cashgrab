@@ -1,4 +1,4 @@
-# util/npe_col_filter_entity_allies.mcfunction
+# util/npe_col_entity_filter_allies.mcfunction
 #
 # Context:
 #	as: a nonplayer entity
