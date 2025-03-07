@@ -8,6 +8,7 @@ trinket_data:[],\
 i_entry_total:0,\
 i_kills_total:0,\
 i_coins_total:0,\
+i_deaths_total:0,\
 }
 
 # Copy class name from cashgrab:game_info.classes
