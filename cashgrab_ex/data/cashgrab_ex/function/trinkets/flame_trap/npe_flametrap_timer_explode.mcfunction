@@ -1,4 +1,4 @@
-# classes/alchemist/flametrap_timer_explode.mcfunction
+# trinkets/flame_trap/npe_flametrap_timer_explode.mcfunction
 #
 # Context:
 #	as: a timer
@@ -8,15 +8,11 @@
 #
 # Arguments: (none)
 
-# Class variable usage:
-#	cv_A	:	1 if has Caustic Brew, 0 otherwise
-#	cv_B	:	1 if has Booster Brew, 0 otherwise
-#	cv_C	:	Potion brewing timer
-#	cv_D	:	Flame Trap expiration timer
-#	cv_E	:	
-#	cv_F	:	
-#	cv_G	:	
-#	cv_H	:	
+# Trinket variable usage:
+#	tv_A	:	Flame Trap expiration timer
+#	tv_B	:	
+#	tv_C	:	
+#	tv_D	:	
 
 # Find owner and tag them with t_eid_matches
 execute store result storage cashgrab:find_eid_args eid int 1 run scoreboard players get @s eid_owner
@@ -33,9 +29,8 @@ tag @s add t_dmg_by
 tag @a[tag=t_eid_matches] add t_dmg_from
 function cashgrab:util/npe_col_entity_filter_hostile
 tag @e[tag=t_collision_candidate,distance=..4.25] add t_dmg_trgt
-effect give @e[tag=t_dmg_trgt] minecraft:glowing 5 0
 function cashgrab:util/npe_dmg {\
-d_dmg_amount:6.0,\
+d_dmg_amount:7.5,\
 s_dmg_type:"minecraft:fireball",\
 t_dmg_target:"t_dmg_trgt",\
 t_dmg_by:"t_dmg_by",\

@@ -13,8 +13,8 @@
 #	cv_B	:	
 #	cv_C	:	
 #	cv_D	:	
-#	cv_E	:	
-#	cv_F	:	
+#	cv_E	:	Bastion (shield) durability/hits remaining
+#	cv_F	:	Bastion (shield) refresh cooldown, in ms
 #	cv_G	:	
 #	cv_H	:	
 

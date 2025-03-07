@@ -171,3 +171,15 @@ evc_usage_score:"evc_lime_dyes",\
 }
 
 scoreboard objectives add evc_lime_dyes minecraft.used:minecraft.lime_dye
+
+# Flame Trap
+data modify storage cashgrab:game_info trinkets append value {\
+s_trinket_name:"Flame Trap",\
+func_pmt_init:"cashgrab_ex:trinkets/flame_trap/pmt_flame_trap_init",\
+func_pmt_inv:"cashgrab_ex:trinkets/flame_trap/pmt_flame_trap_inv",\
+func_pmtl_use_item:"cashgrab_ex:trinkets/flame_trap/pmtl_flame_trap_use_item",\
+func_pmt_cts_icon:"cashgrab_ex:trinkets/flame_trap/pmt_flame_trap_cts_inv_icon",\
+evc_usage_score:"evc_redstone_torches",\
+}
+
+scoreboard objectives add evc_redstone_torches minecraft.used:minecraft.redstone_torch

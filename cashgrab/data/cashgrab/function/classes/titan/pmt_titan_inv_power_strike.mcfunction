@@ -27,7 +27,7 @@ minecraft:damage=31,\
 minecraft:enchantments={levels:{knockback:5},show_in_tooltip:false},\
 minecraft:attribute_modifiers=[\
 {type:"attack_damage",slot:"mainhand",id:"cashgrab:power_strike_atkdmg",amount:8,operation:"add_value"},\
-{type:"attack_speed",slot:"mainhand",id:"cashgrab:power_strike_atkspd",amount:-1,operation:"add_value"}],\
+{type:"attack_speed",slot:"mainhand",id:"cashgrab:power_strike_atkspd",amount:-2.5,operation:"add_value"}],\
 minecraft:custom_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Attack]\"},{\"color\":\"white\",\"text\":\" Power Strike\"}]",\
 minecraft:lore=[\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Strong knockback attack\"}",\
