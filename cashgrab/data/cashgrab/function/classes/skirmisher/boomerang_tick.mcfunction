@@ -46,7 +46,7 @@ execute if entity @s[scores={cv_F=2},tag=t_boomerang_returning] run playsound mi
 #tellraw @a[tag=t_debug] [{"text":"classes/skirmisher/boomerang_tick tags = "},{"type":"nbt","entity":"@s","nbt":"Tags"}]
 
 # Slowing down of boomerang
-execute if entity @s[scores={cv_H=10..},tag=!t_boomerang_returning] store result entity @s data.f_speed_mpt float 0.0008 run data get entity @s data.f_speed_mpt 1000
+execute if entity @s[scores={cv_H=10..},tag=!t_boomerang_returning] store result entity @s data.f_speed_mpt float 0.00055 run data get entity @s data.f_speed_mpt 1000
 execute if entity @s[scores={cv_H=10..},tag=!t_boomerang_returning] run tag @s add t_missile_calc_base_vel
 
 # Reorient boomerang and track onto owner
@@ -71,18 +71,18 @@ tag @s[tag=t_boomerang_begin_return] add t_missile_init_tracking
 tag @s remove t_boomerang_begin_return
 
 # --- Damage enemies that collide with boomerang
-execute store result score @s temp_A run function cashgrab:util/npe_col_detect_entity {func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_hostile"}
+function cashgrab:util/npe_col_entity_filter_hostile
+execute positioned ~-1.25 ~-1.5 ~-1.25 run tag @e[tag=t_collision_candidate,dx=1.5,dy=2,dz=1.5] add t_dmg_trgt
+tag @s add t_dmg_by
+tag @a[tag=t_boomerang_owner] add t_dmg_from
 
 # Load args based on weapon type
-execute if score @s temp_A matches 1 if score @s cv_E matches 1 run data merge storage cashgrab:boomerang_dmg_args \
-{d_dmg_amount:7.0,s_dmg_type:"minecraft:player_attack",t_dmg_target:"t_collision_found",t_dmg_by:"t_dmg_by",t_dmg_from:"t_dmg_from",b_remove_tags:1}
-execute if score @s temp_A matches 1 if score @s cv_E matches 2 run data merge storage cashgrab:boomerang_dmg_args \
-{d_dmg_amount:5.0,s_dmg_type:"minecraft:player_attack",t_dmg_target:"t_collision_found",t_dmg_by:"t_dmg_by",t_dmg_from:"t_dmg_from",b_remove_tags:1}
+execute if score @s cv_E matches 1 run data merge storage cashgrab:boomerang_dmg_args \
+{d_dmg_amount:6.0,s_dmg_type:"minecraft:player_attack",t_dmg_target:"t_dmg_trgt",t_dmg_by:"t_dmg_by",t_dmg_from:"t_dmg_from",b_remove_tags:1}
+execute if score @s cv_E matches 2 run data merge storage cashgrab:boomerang_dmg_args \
+{d_dmg_amount:4.0,s_dmg_type:"minecraft:player_attack",t_dmg_target:"t_dmg_trgt",t_dmg_by:"t_dmg_by",t_dmg_from:"t_dmg_from",b_remove_tags:1}
 
-execute if score @s temp_A matches 1 run tag @s add t_dmg_by
-execute if score @s temp_A matches 1 run tag @a[tag=t_boomerang_owner] add t_dmg_from
-
-execute if score @s temp_A matches 1 run function cashgrab:util/npe_dmg with storage cashgrab:boomerang_dmg_args
+function cashgrab:util/npe_dmg with storage cashgrab:boomerang_dmg_args
 
 # t_boomerang_owner no longer in use
 tag @a[tag=t_boomerang_owner] remove t_boomerang_owner

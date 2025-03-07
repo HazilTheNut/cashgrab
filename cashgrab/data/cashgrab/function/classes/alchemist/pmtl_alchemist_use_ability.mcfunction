@@ -14,28 +14,22 @@
 #	cv_A	:	1 if has Caustic Brew, 0 otherwise
 #	cv_B	:	1 if has Booster Brew, 0 otherwise
 #	cv_C	:	Potion brewing timer
-#	cv_D	:	Flame Trap expiration timer
-#	cv_E	:	
-#	cv_F	:	
-#	cv_G	:	
+#	cv_D	:	
+#	cv_E	:	Translocator ability state (0 = throw, 1 = teleport)
+#	cv_F	:	Translocator teleport sequence timer, in ticks
+#	cv_G	:	Translocator entity count
 #	cv_H	:	
 
-playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 0.5 1.5
+# Search for existing translocators
+function cashgrab:util/npe_eid_find_peers
+execute store result score @s cv_G run execute if entity @e[tag=t_alchemist_translocator,scores={eid_compare=0}]
 
-function cashgrab:util/npe_create_missile {\
-f_speed_mpt:0.7f,\
-i_lifetime_ticks:200,\
-i_origin_loc:1,\
-f_focal_dist_m:10,\
-i_gravity_vy_mmpt:75,\
-i_gravity_const_mmpt2:20,\
-f_tracking_scalar:0,\
-t_missile_name:"t_alchemist_flametrap_missile",\
-col_terrain_allowed:"#cashgrab:nonsolid",\
-func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_none",\
-func_npe_tracking_filter:"cashgrab:util/noop",\
-func_npe_start:"cashgrab:util/noop",\
-func_npe_tick:"cashgrab:classes/alchemist/flametrap_missile_tick",\
-func_npe_end:"cashgrab:classes/alchemist/flametrap_missile_end",\
-b_assign_as_peer:1,\
-}
+# If no translocators exist, throw one
+execute if score @s cv_G matches 0 run function cashgrab:classes/alchemist/pmtl_alchemist_use_ability_throw
+
+# If a translocator exists, begin teleport sequence
+execute if score @s cv_G matches 1.. run playsound minecraft:block.beacon.activate player @a[tag=t_pm_owner,limit=1] ~ ~ ~ 1.0 1.25
+execute if score @s cv_G matches 1.. run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_F 30
+execute if score @s cv_G matches 1.. run effect give @a[tag=t_pm_owner,limit=1] minecraft:slowness 10 2
+execute if score @s cv_G matches 1.. run scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 10000
+execute if score @s cv_G matches 1 run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_E 0
