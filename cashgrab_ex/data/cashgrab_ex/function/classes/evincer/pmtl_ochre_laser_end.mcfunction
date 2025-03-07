@@ -14,8 +14,6 @@ $tellraw @a "classes/evincer/pmtl_ochre_laser_end $(end_reason)"
 
 $execute unless score NUM_END_REASON_ENTITY_COLLISION num matches $(end_reason) run return 0
 # Apply damage and glowing to enemy hit
-execute store result storage cashgrab:eid_args eid int 1 run scoreboard players get @s eid_owner
-function cashgrab:util/find_eid_self with storage cashgrab:eid_args
 tag @a[tag=t_pm_owner] add t_dmg_from
 tag @a[tag=t_pm_owner] add t_dmg_by
 tag @e[tag=t_collision_found] add t_dmg_trgt
