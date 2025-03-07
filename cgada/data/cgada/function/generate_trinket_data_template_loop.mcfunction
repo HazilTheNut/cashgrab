@@ -5,6 +5,7 @@
 data modify storage cgada:data trinket_data_template append value {\
 s_trinket_name:"",\
 i_entry_total:0,\
+i_coins_total:0,\
 }
 
 # Copy trinket name from cashgrab:game_info.trinkets
