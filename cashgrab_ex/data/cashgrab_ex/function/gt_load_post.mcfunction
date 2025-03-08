@@ -67,6 +67,23 @@ scoreboard objectives add evc_vex_armor_trim_smithing_templates minecraft.used:m
 scoreboard objectives add evc_wayfinder_armor_trim_smithing_templates minecraft.used:minecraft.wayfinder_armor_trim_smithing_template
 scoreboard objectives add evc_spire_armor_trim_smithing_templates minecraft.used:minecraft.spire_armor_trim_smithing_template
 
+# Evincer
+data modify storage cashgrab:game_info classes append value {\
+format:1,\
+s_class_name:"Evincer",\
+func_pmt_init:"cashgrab_ex:classes/evincer/pmt_evincer_init",\
+func_pmt_inv:"cashgrab_ex:classes/evincer/pmt_evincer_inv",\
+func_pmt_inv_ability_icon:"cashgrab_ex:classes/evincer/pmt_evincer_inv_ability_icon",\
+func_pmtl_tick:"cashgrab_ex:classes/evincer/pmtl_evincer_tick",\
+func_pmtl_use_ability:"cashgrab_ex:classes/evincer/pmtl_evincer_use_ability",\
+func_pmtl_end:"cashgrab:util/noop",\
+func_pmt_cts_icon:"cashgrab_ex:classes/evincer/pmt_evincer_cts_inv_icon",\
+func_pmtl_cts_tick:"cashgrab_ex:classes/evincer/pmtl_evincer_cts_tick",\
+func_pmt_score_kill:"cashgrab:util/noop",\
+}
+
+scoreboard objectives add evc_sticks minecraft.used:minecraft.stick
+
 # --- Add Trinket data
 
 # Bandage
