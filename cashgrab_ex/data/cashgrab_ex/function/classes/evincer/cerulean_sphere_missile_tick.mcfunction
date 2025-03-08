@@ -20,4 +20,4 @@
 #	cv_H	:   
 
 particle minecraft:dust{color:[0.00,0.70,1.00],scale:3.0} ~ ~ ~ 0 0 0 0 1 force
-particle minecraft:splash ~ ~ ~ 0.1 0.1 0.1 0 1
+particle minecraft:splash ~ ~ ~ 0.1 0.1 0.1 0 1 normal

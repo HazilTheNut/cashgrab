@@ -19,7 +19,7 @@
 #	cv_G	:	
 #	cv_H	:   
 
-particle minecraft:dust_color_transition{from_color:[1.00,0.85,0.95],to_color:[0.95,1.00,0.85],scale:1.5} ~ ~ ~ 0.3 0.02 0.3 0 2
+particle minecraft:dust_color_transition{from_color:[1.00,0.85,0.95],to_color:[0.95,1.00,0.85],scale:1.5} ~ ~ ~ 0.3 0.02 0.3 0 2 force
 
 execute if score @s stasis_state matches 1..2 run return 0
 
@@ -32,7 +32,7 @@ function cashgrab:util/npe_col_entity_filter_hostile
 execute positioned ~-1 ~-2 ~-1 run tag @e[dx=2,dy=3,dz=2,tag=t_collision_candidate] add t_dmg_trgt
 
 function cashgrab:util/npe_dmg {\
-d_dmg_amount:4.0,\
+d_dmg_amount:4.5,\
 s_dmg_type:"minecraft:magic",\
 t_dmg_target:"t_dmg_trgt",\
 t_dmg_by:"t_dmg_by",\
