@@ -20,7 +20,9 @@
 #	cv_G	:	
 #	cv_H	:   
 
+# sfx / vfx
 particle item{item:"minecraft:iron_sword"} ^-0.30 ^0.5 ^0.15 0.075 0.2 0.075 0.025 20
+playsound minecraft:entity.evoker.cast_spell player @a ~ ~ ~ 1.0 1.5
 
 execute rotated ~-30 ~ run function cashgrab_ex:classes/evincer/pmtl_evincer_create_pearlescent_wave_missile
 execute rotated ~-15 ~ run function cashgrab_ex:classes/evincer/pmtl_evincer_create_pearlescent_wave_missile

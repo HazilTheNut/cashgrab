@@ -20,7 +20,9 @@
 #	cv_G	:	
 #	cv_H	:   
 
+# sfx / vfx
 execute positioned ~ ~1 ~ run particle item{item:"minecraft:diamond_sword"} ^-0.5 ^0.45 ^0.4 0.075 0.2 0.075 0.025 20
+playsound minecraft:entity.dolphin.jump player @a ~ ~ ~ 1.0 2.0
 
 function cashgrab:util/npe_create_missile {\
 f_speed_mpt:0.40f,\

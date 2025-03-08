@@ -9,6 +9,16 @@
 #
 # Arguments: (none)
 
+# Class variable usage:
+#	cv_A	:	Sword state (0 = base, 1 = ochre, 2 = pearl, 3 = cerulean)
+#	cv_B	:	
+#	cv_C	:	
+#	cv_D	:	
+#	cv_E	:	
+#	cv_F	:	
+#	cv_G	:	
+#	cv_H	:   
+
 particle minecraft:dust_color_transition{from_color:[1.00,0.85,0.95],to_color:[0.95,1.00,0.85],scale:1.5} ~ ~ ~ 0.3 0.02 0.3 0 2
 
 execute if score @s stasis_state matches 1..2 run return 0

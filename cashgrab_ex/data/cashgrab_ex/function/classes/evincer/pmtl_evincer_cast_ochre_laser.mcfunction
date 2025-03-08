@@ -20,7 +20,9 @@
 #	cv_G	:	
 #	cv_H	:   
 
+# sfx / vfx
 execute positioned ~ ~1 ~ run particle item{item:"minecraft:golden_sword"} ^-0.5 ^0.45 ^0.4 0.075 0.2 0.075 0.025 20
+playsound minecraft:entity.blaze.hurt player @a ~ ~ ~ 1.0 2.0
 
 execute positioned ~ ~1.625 ~ run function cashgrab:util/npe_raycast {\
 i_range_m:14,\

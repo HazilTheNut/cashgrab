@@ -10,9 +10,21 @@
 # Arguments:
 #	end_reason	: The reason for why the end function was called
 
+# Class variable usage:
+#	cv_A	:	Sword state (0 = base, 1 = ochre, 2 = pearl, 3 = cerulean)
+#	cv_B	:	
+#	cv_C	:	
+#	cv_D	:	
+#	cv_E	:	
+#	cv_F	:	
+#	cv_G	:	
+#	cv_H	:   
+
+# sfx / vfx
 particle minecraft:bubble_pop ~ ~ ~ 0.3 0.6 0.3 0 20 normal
 particle minecraft:splash ~ ~ ~ 0.3 0.6 0.3 0.1 20 normal
 particle minecraft:dust{color:[0.00,0.70,1.00],scale:2.0} ~ ~ ~ 0.5 0.8 0.5 0.2 20 force
+playsound minecraft:entity.dolphin.splash player @a ~ ~ ~ 1.0 2.0
 
 $tellraw @a[tag=t_debug] "classes/evincer/cerulean_sphere_missile_end end_reason $(end_reason)"
 $execute unless score NUM_END_REASON_ENTITY_COLLISION num matches $(end_reason) run return 0

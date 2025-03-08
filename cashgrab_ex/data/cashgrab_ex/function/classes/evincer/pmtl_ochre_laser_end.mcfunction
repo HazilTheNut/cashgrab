@@ -10,6 +10,17 @@
 #
 # Arguments:
 #   end_reason  :   The reason why the raycast ended
+
+# Class variable usage:
+#	cv_A	:	Sword state (0 = base, 1 = ochre, 2 = pearl, 3 = cerulean)
+#	cv_B	:	
+#	cv_C	:	
+#	cv_D	:	
+#	cv_E	:	
+#	cv_F	:	
+#	cv_G	:	
+#	cv_H	:   
+
 $tellraw @a "classes/evincer/pmtl_ochre_laser_end $(end_reason)"
 
 $execute unless score NUM_END_REASON_ENTITY_COLLISION num matches $(end_reason) run return 0

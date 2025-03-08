@@ -10,6 +10,16 @@
 #
 # Arguments: (none)
 
+# Class variable usage:
+#	cv_A	:	Sword state (0 = base, 1 = ochre, 2 = pearl, 3 = cerulean)
+#	cv_B	:	
+#	cv_C	:	
+#	cv_D	:	
+#	cv_E	:	
+#	cv_F	:	
+#	cv_G	:	
+#	cv_H	:   
+
 function cashgrab:util/npe_create_missile {\
 f_speed_mpt:0.65f,\
 i_lifetime_ticks:16,\
