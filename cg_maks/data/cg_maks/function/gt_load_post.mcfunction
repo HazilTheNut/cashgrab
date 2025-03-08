@@ -38,6 +38,8 @@ func_pmt_score_kill:"cashgrab:util/noop",\
 # TRINKETS
 # =======================
 
+# Lava Cake
+
 scoreboard objectives add evc_clay_balls minecraft.used:minecraft.clay_ball
 
 data modify storage cashgrab:game_info trinkets append value {\
@@ -48,4 +50,18 @@ func_pmt_inv:"cg_maks:trinkets/lava_cake/pmt_lava_cake_inv",\
 func_pmtl_use_item:"cg_maks:trinkets/lava_cake/pmt_lava_cake_use_item",\
 func_pmt_cts_icon:"cg_maks:trinkets/lava_cake/pmt_lava_cake_cts_inv_icon",\
 evc_usage_score:"evc_clay_balls",\
+}
+
+# Smoke Screen
+
+scoreboard objectives add evc_ink_sac minecraft.used:minecraft.ink_sac
+
+data modify storage cashgrab:game_info trinkets append value {\
+format:1,\
+s_trinket_name:"lava_cake",\
+func_pmt_init:"cg_maks:trinkets/smoke_screen/pmt_smoke_screen_init",\
+func_pmt_inv:"cg_maks:trinkets/smoke_screen/pmt_smoke_screen_inv",\
+func_pmtl_use_item:"cg_maks:trinkets/smoke_screen/pmt_smoke_screen_use_item",\
+func_pmt_cts_icon:"cg_maks:trinkets/smoke_screen/pmt_smoke_screen_cts_inv_icon",\
+evc_usage_score:"evc_ink_sac",\
 }
