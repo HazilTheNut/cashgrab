@@ -21,8 +21,6 @@
 #	cv_G	:	
 #	cv_H	:   
 
-$tellraw @a "classes/evincer/pmtl_ochre_laser_end $(end_reason)"
-
 $execute unless score NUM_END_REASON_ENTITY_COLLISION num matches $(end_reason) run return 0
 # Apply damage and glowing to enemy hit
 tag @a[tag=t_pm_owner] add t_dmg_from
