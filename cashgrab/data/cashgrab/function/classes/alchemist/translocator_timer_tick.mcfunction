@@ -23,7 +23,7 @@
 particle minecraft:enchanted_hit ~ ~0.8 ~ 0.25 0.5 0.25 0 1
 
 # Timer persists forever
-scoreboard players set @s tmr_lifetime_ticks 2
+scoreboard players set @s tmr_lifetime_ticks 3
 
 # Apply glowing to nearby hostiles
 function cashgrab:util/npe_col_entity_filter_hostile

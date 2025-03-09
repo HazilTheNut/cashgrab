@@ -23,6 +23,6 @@ func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_none",\
 func_npe_tracking_filter:"cashgrab:util/noop",\
 func_npe_start:"cashgrab:util/noop",\
 func_npe_tick:"cashgrab_ex:trinkets/nox_bomb/npe_nox_bomb_tick",\
-func_npe_end:"cashgrab_ex:trinkets/nox_bomb/npe_nox_bomb_splash",\
+func_npe_end:"cashgrab_ex:trinkets/nox_bomb/npe_nox_bomb_secondary_end",\
 b_assign_as_peer:1,\
 }

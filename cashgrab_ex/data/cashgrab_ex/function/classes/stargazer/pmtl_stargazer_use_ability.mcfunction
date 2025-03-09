@@ -32,7 +32,7 @@ i_range_m:7,\
 i_origin_loc:1,\
 col_terrain_allowed:"#cashgrab:partialsolid",\
 b_fit_player:1,\
-func_npe_entity_filter:"cashgrab:util/npe_col_filter_entity_none",\
+func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_none",\
 func_npe_step:"cashgrab_ex:classes/stargazer/npe_star_shower_missile_tick",\
 func_npe_end:"cashgrab_ex:classes/stargazer/pmtl_stargazer_place_star_shower_timer",\
 }

@@ -23,7 +23,8 @@ $item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_E=0}] hotbar.4 with mi
 minecraft:custom_name="[{\"color\":\"light_purple\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Translocator Pad\"}]",\
 minecraft:lore=[\
 "{\"color\":\"dark_gray\",\"italic\":true,\"text\":\"Toss any item to use.\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"Deploys a teleport pad.\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\"Deploys a teleport pad that\"}",\
+"{\"color\":\"gray\",\"italic\":false,\"text\":\" reveals nearby enemies.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Activating this ability again\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" teleports you to it after\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\" a brief moment.\"}",\

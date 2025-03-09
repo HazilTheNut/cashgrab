@@ -19,4 +19,4 @@ effect give @a[tag=t_pm_owner,limit=1,scores={evl_coin_pickup=1..},nbt=!{active_
 effect give @a[tag=t_pm_owner,limit=1,scores={evl_coin_pickup=1..}] minecraft:saturation 7 1 false
 
 # If coin spilling mechanics are enabled, run spilling mechanics
-execute if score ENABLE_COIN_SPILLING num matches 1.. run function cashgrab:base/pmtl_coins_spilling
+execute if score ENABLE_COIN_SPILLING num matches 1.. if score @a[tag=t_pm_owner,limit=1] activity_state matches 20..29 run function cashgrab:base/pmtl_coins_spilling
