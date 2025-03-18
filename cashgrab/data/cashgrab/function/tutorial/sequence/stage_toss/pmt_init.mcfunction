@@ -18,7 +18,9 @@ scoreboard players set @a[tag=t_pm_owner,limit=1] dtm_tutorial_dest_idx 3
 tag @a[tag=t_pm_owner,limit=1] add t_trinket_revoke
 
 # Initialize ability cooldown
+scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cd_tickrate 50
 scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 5000
+scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cd_ms 0
 
 # Restore health
 effect give @a[tag=t_pm_owner,limit=1] minecraft:regeneration 5 20 true

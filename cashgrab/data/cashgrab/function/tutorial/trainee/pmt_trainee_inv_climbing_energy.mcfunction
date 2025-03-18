@@ -12,10 +12,10 @@
 # Class variable usage:
 #	cv_A	:	Wall Climb state (-1 = exit, 0 = inactive, 1 = active, 2 = enter)
 #	cv_B	:	Wall Climb energy
-#	cv_C	:	
+#	cv_C	:	Wall Climb sound effect timer
 #	cv_D	:	
-#	cv_E	:	Arrow count
-#	cv_F	:	Crossbow state (b'XY, where X is if in hotbar and Y is if arrow loaded)
+#	cv_E	:	
+#	cv_F	:	If player is holding the weapon (==> cv_F = 1)
 #	cv_G	:	
 #	cv_H	:	
 

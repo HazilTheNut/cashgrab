@@ -16,9 +16,9 @@
 #	cv_C	:	Wall Climb sound effect timer
 #	cv_D	:	
 #	cv_E	:	
-#	cv_F	:	
+#	cv_F	:	If player is holding the weapon (==> cv_F = 1)
 #	cv_G	:	
-#	cv_H	:	If player is holding the weapon (==> cv_F = 1)
+#	cv_H	:	
 
 # Wall Climb enter state
 scoreboard players set @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1..2,cv_A=0,cv_B=1..,cv_F=1}] cv_A 2

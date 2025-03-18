@@ -21,7 +21,9 @@ tag @a[tag=t_pm_owner,limit=1] add dtm_send_to_tutorial
 tag @a[tag=t_pm_owner,limit=1] add t_trinket_revoke
 
 # Initialize Wall Climb
+scoreboard players set @a[tag=t_pm_owner,limit=1] cv_A 0
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 25
+scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 0
 
 # Restore health
 effect give @a[tag=t_pm_owner,limit=1] minecraft:regeneration 5 20 true

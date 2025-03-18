@@ -16,9 +16,9 @@
 #	cv_C	:	Wall Climb sound effect timer
 #	cv_D	:	
 #	cv_E	:	
-#	cv_F	:	
+#	cv_F	:	If player is holding the weapon (==> cv_F = 1)
 #	cv_G	:	
-#	cv_H	:	If player is holding the weapon (==> cv_F = 1)
+#	cv_H	:	
 
 # Track if player is holding the weapon (==> cv_F = 1)
 execute store result score @a[tag=t_pm_owner,limit=1] cv_F run execute if items entity @a[tag=t_pm_owner,limit=1] weapon.mainhand minecraft:wooden_sword
