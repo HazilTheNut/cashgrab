@@ -23,7 +23,8 @@
 $execute unless score NUM_END_REASON_TERRAIN_COLLISION num matches $(end_reason) run return 0
 
 # If space is insufficient, do nothing
-execute unless block ~ ~1 ~ #cashgrab:nonsolid run return 0
+execute unless block ~ ~ ~ minecraft:air run return run function cashgrab:classes/alchemist/translocator_missile_end_reset_ability
+execute unless block ~ ~1 ~ minecraft:air run return run function cashgrab:classes/alchemist/translocator_missile_end_reset_ability
 
 # Spawn timer
 execute align xyz positioned ~0.5 ~0.2 ~0.5 run function cashgrab:util/npe_create_timer {\
