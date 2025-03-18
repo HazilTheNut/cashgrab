@@ -15,5 +15,5 @@ minecraft:lore=[\
 "{\"color\":\"blue\",\"italic\":true,\"text\":\"Toss your weapon to use.\"}",\
 "{\"color\":\"gray\",\"italic\":false,\"text\":\"Teleports forwards.\"}",\
 "{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"=====\"}",\
-"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"5\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown for \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"1\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" charges\"}]"],\
+"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"5\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown for \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"1\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" charge\"}]"],\
 ] $(charges)
