@@ -9,5 +9,5 @@
 # Arguments:
 #	slot	:	Inventory slot to insert into
 
-$item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:light_gray_stained_glass_pane[minecraft:item_name="[{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"-\"}]"] 1
+$item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:light_gray_stained_glass_pane[minecraft:item_name=[{color:"dark_gray",italic:false,text:"-"}]] 1
 
