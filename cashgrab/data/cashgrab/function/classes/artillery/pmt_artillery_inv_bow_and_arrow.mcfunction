@@ -21,41 +21,41 @@
 # Infinibow
 execute unless items entity @a[tag=t_pm_owner,limit=1] hotbar.0 minecraft:bow run clear @a[tag=t_pm_owner,limit=1] minecraft:bow
 
-item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_E=..0}] hotbar.0 with minecraft:bow[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Infinibow\"}",\
+item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_E=..0}] hotbar.0 with minecraft:bow[\
+minecraft:custom_name={italic:false,color:"red",text:"Infinibow"},\
 minecraft:enchantment_glint_override=false,\
-minecraft:enchantments={levels:{infinity:1}}]
+minecraft:enchantments={infinity:1}]
 
-item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_E=1..}] hotbar.0 with minecraft:bow[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Infinibow\"}",\
+item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_E=1..}] hotbar.0 with minecraft:bow[\
+minecraft:custom_name={italic:false,color:"red",text:"Infinibow"},\
 minecraft:enchantment_glint_override=true,\
-minecraft:enchantments={levels:{infinity:1,power:1,punch:3}}]
+minecraft:enchantments={infinity:1,power:1,punch:3}]
 
 # Arrow
 
 item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_E=..0}] hotbar.6 with minecraft:arrow[\
-minecraft:custom_name="[{\"color\":\"light_purple\",\"italic\":false,\"text\":\"[Passive]\"},{\"color\":\"white\",\"text\":\" Power Shot\"}]",\
+minecraft:custom_name=[{color:"light_purple",italic:false,text:"[Passive]"},{color:"white",text:" Power Shot"}],\
 minecraft:custom_data={artillery_power_shot:1},\
 minecraft:lore=[\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"Empowers your next shot\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\" with bonus damage, \"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\" knockback, and slowness.\"}",\
-"{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"=====\"}",\
-"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"4\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown\"}]"\
+{color:"gray",italic:false,text:"Empowers your next shot"},\
+{color:"gray",italic:false,text:" with bonus damage, "},\
+{color:"gray",italic:false,text:" knockback, and slowness."},\
+{color:"dark_gray",italic:false,text:"====="},\
+[{color:"yellow",italic:false,text:"4"},{color:"gray",italic:false,text:" sec cooldown"}]\
 ]\
 ]
 
 item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_E=1..}] hotbar.6 with minecraft:tipped_arrow[\
-minecraft:custom_name="[{\"color\":\"light_purple\",\"italic\":false,\"text\":\"[Passive]\"},{\"color\":\"white\",\"text\":\" Power Shot\"}]",\
+minecraft:custom_name=[{color:"light_purple",italic:false,text:"[Passive]"},{color:"white",text:" Power Shot"}],\
 minecraft:custom_data={artillery_power_shot:1},\
-minecraft:hide_additional_tooltip={},\
+minecraft:tooltip_display={hidden_components:["minecraft:potion_contents"]},\
 minecraft:potion_contents={\
 potion:"minecraft:slowness"},\
 minecraft:lore=[\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"Empowers your next shot\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\" with bonus damage, \"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\" knockback, and slowness.\"}",\
-"{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"=====\"}",\
-"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"4\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown\"}]"\
+{color:"gray",italic:false,text:"Empowers your next shot"},\
+{color:"gray",italic:false,text:" with bonus damage, "},\
+{color:"gray",italic:false,text:" knockback, and slowness."},\
+{color:"dark_gray",italic:false,text:"====="},\
+[{color:"yellow",italic:false,text:"4"},{color:"gray",italic:false,text:" sec cooldown"}]\
 ]\
 ]
