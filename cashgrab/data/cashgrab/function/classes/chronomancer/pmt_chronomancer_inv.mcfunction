@@ -41,7 +41,7 @@ minecraft:attribute_modifiers=[\
 
 # Time-Worn Splinter
 item replace entity @a[tag=t_pm_owner,limit=1] hotbar.0 with minecraft:stone_sword[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Time-Worn Splinter\"}",\
+minecraft:custom_name={italic:false,color:"red",text:"Time-Worn Splinter"},\
 minecraft:attribute_modifiers=[\
 {type:"attack_damage",slot:"mainhand",id:"cashgrab:timeworn_atkdmg",amount:5,operation:"add_value"},\
 {type:"attack_speed",slot:"mainhand",id:"cashgrab:timeworn_atkspd",amount:-2,operation:"add_value"}]]
