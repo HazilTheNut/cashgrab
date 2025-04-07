@@ -20,13 +20,13 @@
 #	cv_H	:
 
 $item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:clay_ball[\
-minecraft:item_name="[{\"color\":\"light_purple\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Molten Mortar\"}]",\
+minecraft:item_name=[{color:"light_purple",italic:false,text:"[Toss]"},{color:"white",text:" Molten Mortar"}],\
 minecraft:hide_additional_tooltip={},\
 minecraft:item_model="minecraft:lava_bucket",\
 minecraft:lore=[\
-"{\"color\":\"dark_gray\",\"italic\":true,\"text\":\"Toss any item to use.\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"Fires a line of molten slag\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\" that repeatedly explodes.\"}",\
-"{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"=====\"}",\
-"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"16\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown for \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"1\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" charge\"}]"\
+{color:"dark_gray",italic:true,text:"Toss any item to use."},\
+{color:"gray",italic:false,text:"Fires a line of molten slag"},\
+{color:"gray",italic:false,text:" that repeatedly explodes."},\
+{color:"dark_gray",italic:false,text:"====="},\
+[{color:"yellow",italic:false,text:"16"},{color:"gray",italic:false,text:" sec cooldown for "},{color:"yellow",italic:false,text:"1"},{color:"gray",italic:false,text:" charge"}]\
 ]] $(charges)

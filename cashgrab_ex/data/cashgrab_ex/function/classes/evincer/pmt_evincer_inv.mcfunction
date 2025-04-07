@@ -56,14 +56,14 @@ minecraft:attribute_modifiers=[\
 
 # Chaos Shaper (cv_A = 0)
 item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=0}] hotbar.0 with minecraft:stone_sword[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Chaos Shaper\"}",\
+minecraft:custom_name={italic:false,color:"red",text:"Chaos Shaper"},\
 minecraft:attribute_modifiers=[\
 {type:"attack_damage",slot:"mainhand",id:"cashgrab:chaosshaper_atkdmg",amount:6,operation:"add_value"},\
 {type:"attack_speed",slot:"mainhand",id:"cashgrab:chaosshaper_atkspd",amount:-2,operation:"add_value"}]]
 
 # Ochre Laser (cv_A = 1)
 item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1}] hotbar.0 with minecraft:stick[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:custom_name="[{\"italic\":false,\"color\":\"green\",\"text\":\"[Use]\"},{\"italic\":false,\"color\":\"red\",\"text\":\" Ochre Laser\"}]",\
+minecraft:custom_name=[{italic:false,color:"green",text:"[Use]"},{italic:false,color:"red",text:" Ochre Laser"}],\
 minecraft:item_model="minecraft:golden_sword",\
 minecraft:enchantment_glint_override=true,\
 minecraft:consumable={\
@@ -73,8 +73,8 @@ sound:"minecraft:block.amethyst_block.break",\
 has_consume_particles:false,\
 },\
 minecraft:lore=[\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"Fires a laser that damages\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\" and reveals a target.\"}",\
+{color:"gray",italic:false,text:"Fires a laser that damages"},\
+{color:"gray",italic:false,text:" and reveals a target."},\
 ],\
 minecraft:attribute_modifiers=[\
 {type:"attack_damage",slot:"mainhand",id:"cashgrab:chaosshaper_atkdmg",amount:6,operation:"add_value"},\
@@ -82,7 +82,7 @@ minecraft:attribute_modifiers=[\
 
 # Pearlescent Wave (cv_A = 2)
 item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=2}] hotbar.0 with minecraft:stick[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:custom_name="[{\"italic\":false,\"color\":\"green\",\"text\":\"[Use]\"},{\"italic\":false,\"color\":\"red\",\"text\":\" Pearlescent Wave\"}]",\
+minecraft:custom_name=[{italic:false,color:"green",text:"[Use]"},{italic:false,color:"red",text:" Pearlescent Wave"}],\
 minecraft:item_model="minecraft:iron_sword",\
 minecraft:enchantment_glint_override=true,\
 minecraft:consumable={\
@@ -92,8 +92,8 @@ sound:"minecraft:block.amethyst_block.break",\
 has_consume_particles:false,\
 },\
 minecraft:lore=[\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"Creates an area\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\" damage wave.\"}",\
+{color:"gray",italic:false,text:"Creates an area"},\
+{color:"gray",italic:false,text:" damage wave."},\
 ],\
 minecraft:attribute_modifiers=[\
 {type:"attack_damage",slot:"mainhand",id:"cashgrab:chaosshaper_atkdmg",amount:6,operation:"add_value"},\
@@ -101,7 +101,7 @@ minecraft:attribute_modifiers=[\
 
 # Cerulean Sphere (cv_A = 3)
 item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=3}] hotbar.0 with minecraft:stick[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:custom_name="[{\"italic\":false,\"color\":\"green\",\"text\":\"[Use]\"},{\"italic\":false,\"color\":\"red\",\"text\":\" Cerulean Sphere\"}]",\
+minecraft:custom_name=[{italic:false,color:"green",text:"[Use]"},{italic:false,color:"red",text:" Cerulean Sphere"}],\
 minecraft:item_model="minecraft:diamond_sword",\
 minecraft:enchantment_glint_override=true,\
 minecraft:consumable={\
@@ -111,8 +111,8 @@ sound:"minecraft:block.amethyst_block.break",\
 has_consume_particles:false,\
 },\
 minecraft:lore=[\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"Fires a homing beam that \"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\" damages and slows.\"}",\
+{color:"gray",italic:false,text:"Fires a homing beam that "},\
+{color:"gray",italic:false,text:" damages and slows."},\
 ],\
 minecraft:attribute_modifiers=[\
 {type:"attack_damage",slot:"mainhand",id:"cashgrab:chaosshaper_atkdmg",amount:6,operation:"add_value"},\

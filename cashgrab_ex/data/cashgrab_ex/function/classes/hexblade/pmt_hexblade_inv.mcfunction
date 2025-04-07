@@ -47,7 +47,7 @@ minecraft:attribute_modifiers=[\
 
 # Absolute Edge
 item replace entity @a[tag=t_pm_owner,limit=1] hotbar.0 with minecraft:netherite_sword[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Absolute Edge\"}",\
+minecraft:custom_name={italic:false,color:"red",text:"Absolute Edge"},\
 minecraft:attribute_modifiers=[\
 {type:"attack_damage",slot:"mainhand",id:"cashgrab:absoluteedge_atkdmg",amount:6.5,operation:"add_value"},\
 {type:"attack_speed",slot:"mainhand",id:"cashgrab:absoluteedge_atkspd",amount:-2,operation:"add_value"}]]

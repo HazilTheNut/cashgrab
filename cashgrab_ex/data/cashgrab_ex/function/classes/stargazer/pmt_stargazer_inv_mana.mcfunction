@@ -20,13 +20,13 @@
 
 # Display "0" count if at 0
 execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 0 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.6 with minecraft:blue_stained_glass_pane[\
-minecraft:item_name="[{\"color\":\"light_purple\",\"italic\":false,\"text\":\"[Passive]\"},{\"color\":\"white\",\"text\":\" Mana\"}]",\
+minecraft:item_name=[{color:"light_purple",italic:false,text:"[Passive]"},{color:"white",text:" Mana"}],\
 minecraft:hide_additional_tooltip={},\
 minecraft:lore=[\
-"[{\"color\":\"gray\",\"italic\":false,\"text\":\"You generate \"},{\"color\":\"aqua\",\"italic\":false,\"text\":\"1 \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Mana\"}]",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\" every second.\"}",\
-"{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"---\"}",\
-"[{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"You have \"},{\"color\":\"aqua\",\"italic\":false,\"text\":\"0\"},{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"/25 Mana.\"}]",\
+[{color:"gray",italic:false,text:"You generate "},{color:"aqua",italic:false,text:"1 "},{color:"yellow",italic:false,text:"Mana"}],\
+{color:"gray",italic:false,text:" every second."},\
+{color:"dark_gray",italic:false,text:"---"},\
+[{color:"dark_gray",italic:false,text:"You have "},{color:"aqua",italic:false,text:"0"},{color:"dark_gray",italic:false,text:"/25 Mana."}],\
 ]] 1
 
 execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 0 run return 0

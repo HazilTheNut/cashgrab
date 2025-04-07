@@ -25,4 +25,4 @@ playsound minecraft:block.lever.click player @a ~ ~ ~ 0.5 1.5
 playsound minecraft:block.lever.click player @a[tag=t_eid_matches,limit=1] ~ ~ ~ 0.5 1.5 0.5
 
 # Notify owner by text chat
-tellraw @a[tag=t_eid_matches,limit=1] {"color":"green","type":"text","text":"Someone has triggered one of your Flame Traps!"}
+tellraw @a[tag=t_eid_matches,limit=1] {color:"green","type":text,text:"Someone has triggered one of your Flame Traps!"}

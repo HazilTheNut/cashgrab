@@ -55,7 +55,7 @@ function cashgrab:util/find_eid_self with storage cashgrab:eid_args
 scoreboard players operation @a[tag=t_eid_matches,limit=1] cv_A = @n[tag=t_hexblade_remnant_timer_init] eid_self
 
 # Notify Hex originator by text chat
-tellraw @a[tag=t_eid_matches,limit=1] [{"color":"green","type":"text","text":"Your "},{"color":"yellow","type":"text","text":"Hexed"},{"color":"green","type":"text","text":" target has died! You can use "},{"color":"yellow","type":"text","text":"Blight Step"},{"color":"green","type":"text","text":" to teleport to their remains"}]
+tellraw @a[tag=t_eid_matches,limit=1] [{color:"green","type":text,text:"Your "},{color:"yellow","type":text,text:"Hexed"},{color:"green","type":text,text:" target has died! You can use "},{color:"yellow","type":text,text:"Blight Step"},{color:"green","type":text,text:" to teleport to their remains"}]
 
 # Clean up tags
 tag @n[tag=t_hexblade_remnant_timer_init] add t_hexblade_remnant_timer
