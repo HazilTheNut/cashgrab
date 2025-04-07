@@ -40,7 +40,7 @@ minecraft:item_model="minecraft:ender_eye",\
 minecraft:enchantment_glint_override=true,\
 minecraft:lore=[\
 {color:"dark_gray",italic:true,text:"Toss any item to use."},\
-{color:"gray",italic:false,text:"Teleports you to your Translocator"}.\
+{color:"gray",italic:false,text:"Teleports you to your Translocator"},\
 {color:"gray",italic:false,text:" Pad after a brief moment."},\
 {color:"gray",italic:false,text:"Taking damage prolongs the"},\
 {color:"gray",italic:false,text:" teleportation."},\

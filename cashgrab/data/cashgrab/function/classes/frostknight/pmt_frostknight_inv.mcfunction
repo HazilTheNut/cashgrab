@@ -45,7 +45,7 @@ minecraft:attribute_modifiers=[\
 
 # Glacial Shard
 item replace entity @a[tag=t_pm_owner,limit=1] hotbar.0 with minecraft:iron_sword[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:custom_name="{italic:false,color:"red",text:"Glacial Shard"}",\
+minecraft:custom_name={italic:false,color:"red",text:"Glacial Shard"},\
 minecraft:attribute_modifiers=[\
 {type:"attack_damage",slot:"mainhand",id:"cashgrab:glacialshard_atkdmg",amount:5.5,operation:"add_value"},\
 {type:"attack_speed",slot:"mainhand",id:"cashgrab:glacialshard_atkspd",amount:-2,operation:"add_value"}]]

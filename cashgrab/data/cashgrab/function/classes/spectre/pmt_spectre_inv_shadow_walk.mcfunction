@@ -20,12 +20,12 @@
 #	cv_H	:	
 
 $item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:gunpowder[\
-minecraft:custom_name="[{color:"light_purple",italic:false,text:"[Crouch]"},{color:"white",text:" Shadow Walk"}]",\
+minecraft:custom_name=[{color:"light_purple",italic:false,text:"[Crouch]"},{color:"white",text:" Shadow Walk"}],\
 minecraft:lore=[\
-"{color:"dark_gray",italic:true,text:"Crouch holding any item to use."}",\
-"{color:"gray",italic:false,text:"Turns you invisible while"}",\
-"{color:"gray",italic:false,text:" energy remains."}",\
-"{color:"gray",italic:false,text:"This ability recharges itself"}",\
-"[{color:"yellow",italic:false,text:" 5"},{color:"gray",italic:false,text:" seconds after use."}]"\
+{color:"dark_gray",italic:true,text:"Crouch holding any item to use."},\
+{color:"gray",italic:false,text:"Turns you invisible while"},\
+{color:"gray",italic:false,text:" energy remains."},\
+{color:"gray",italic:false,text:"This ability recharges itself"},\
+[{color:"yellow",italic:false,text:" 5"},{color:"gray",italic:false,text:" seconds after use."}]\
 ]\
 ] $(count)
