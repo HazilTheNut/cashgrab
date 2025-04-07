@@ -30,7 +30,7 @@ minecraft:lore=[\
 {color:"gray",italic:false,text:" a brief moment."},\
 {color:"gray",italic:false,text:"Taking damage prolongs the"},\
 {color:"gray",italic:false,text:" teleportation."},\
-{color:"dark_gray","italic":false,"text":"====="},\
+{color:"dark_gray",italic:false,text:"====="},\
 [{color:"yellow",italic:false,text:"10"},{color:"gray",italic:false,text:" sec cooldown for "},{color:"yellow",italic:false,text:"1"},{color:"gray",italic:false,text:" charge"}]\
 ]] $(charges)
 

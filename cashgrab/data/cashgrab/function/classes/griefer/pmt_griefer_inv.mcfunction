@@ -45,7 +45,7 @@ minecraft:attribute_modifiers=[\
 
 # Flame Staff
 item replace entity @a[tag=t_pm_owner,limit=1] hotbar.0 with minecraft:blaze_rod[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Flame Staff\"}",\
+minecraft:custom_name="{italic:false,color:"red",text:"Flame Staff"}",\
 minecraft:attribute_modifiers=[\
 {type:"attack_damage",slot:"mainhand",id:"cashgrab:flame_staff_atkdmg",amount:4,operation:"add_value"},\
 {type:"attack_speed",slot:"mainhand",id:"cashgrab:flame_staff_atkspd",amount:-1.5,operation:"add_value"}],\

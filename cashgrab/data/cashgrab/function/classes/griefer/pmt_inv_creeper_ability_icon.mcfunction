@@ -19,17 +19,17 @@
 #	cv_H	:	Creeper fuse timer
 
 item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_D=..0}] hotbar.1 with minecraft:gray_stained_glass_pane[\
-minecraft:custom_name="{\"italic\":false,\"color\":\"gray\",\"text\":\"Ability on Cooldown\"}"\
+minecraft:custom_name="{italic:false,color:"gray",text:"Ability on Cooldown"}"\
 ]
 
 item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_D=1..}] hotbar.1 with minecraft:experience_bottle[\
-minecraft:custom_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Use]\"},{\"color\":\"white\",\"text\":\" Creeper in a Bottle\"}]",\
+minecraft:custom_name="[{color:"green",italic:false,text:"[Use]"},{color:"white",text:" Creeper in a Bottle"}]",\
 minecraft:custom_data={griefer_creeper:1},\
 minecraft:lore=[\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"Releases an ignited creeper.\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"You take reduced damage from\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\" your creeper explosions.\"}",\
-"{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"=====\"}",\
-"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"9\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown\"}]"\
+"{color:"gray",italic:false,text:"Releases an ignited creeper."}",\
+"{color:"gray",italic:false,text:"You take reduced damage from"}",\
+"{color:"gray",italic:false,text:" your creeper explosions."}",\
+"{color:"dark_gray",italic:false,text:"====="}",\
+"[{color:"yellow",italic:false,text:"9"},{color:"gray",italic:false,text:" sec cooldown"}]"\
 ]\
 ]

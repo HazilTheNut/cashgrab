@@ -16,5 +16,5 @@ minecraft:lore=[\
 {color:"dark_gray",italic:true,text:"Toss any item to use."},\
 {color:"gray",italic:false,text:"Fires a barrage of missiles."},\
 {color:"dark_gray",italic:false,text:"====="},\
-[{color:"yellow",italic:false,text:"8"},{color:"gray",italic:false,text:" sec cooldown for "},{color:"yellow",italic:false,"text":"1"},{color:"gray",italic:false,text:" charge"}]\
+[{color:"yellow",italic:false,text:"8"},{color:"gray",italic:false,text:" sec cooldown for "},{color:"yellow",italic:false,text:"1"},{color:"gray",italic:false,text:" charge"}]\
 ]] $(charges)

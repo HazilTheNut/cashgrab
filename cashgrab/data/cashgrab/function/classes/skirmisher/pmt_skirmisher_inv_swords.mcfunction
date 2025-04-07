@@ -26,10 +26,10 @@
 $scoreboard players set @a[tag=t_pm_owner,limit=1] temp_A $(b_cleaving_scimitar_enable)
 
 $item replace entity @a[tag=t_pm_owner,limit=1,scores={temp_A=1..}] $(s_cleaving_scimitar_slot) with minecraft:iron_sword[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Cleaving Cutlass\"}",\
+minecraft:custom_name="{italic:false,color:"red",text:"Cleaving Cutlass"}",\
 minecraft:lore=[\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"When used with Sword Boomerang:\"}",\
-"{\"color\":\"gold\",\"italic\":false,\"text\":\"+ Deals increased damage\"}"],\
+"{color:"gray",italic:false,text:"When used with Sword Boomerang:"}",\
+"{color:"gold",italic:false,text:"+ Deals increased damage"}"],\
 minecraft:attribute_modifiers=[\
 {type:"attack_damage",slot:"mainhand",id:"cashgrab:cleaving_cutlass_atkdmg",amount:7,operation:"add_value"},\
 {type:"attack_speed",slot:"mainhand",id:"cashgrab:cleaving_cutlass_atkspd",amount:-2,operation:"add_value"}\
@@ -40,12 +40,12 @@ minecraft:attribute_modifiers=[\
 $scoreboard players set @a[tag=t_pm_owner,limit=1] temp_A $(b_dancing_rapier_enable)
 
 $item replace entity @a[tag=t_pm_owner,limit=1,scores={temp_A=1..}] $(s_dancing_rapier_slot) with minecraft:golden_sword[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Dancing Rapier\"}",\
+minecraft:custom_name="{italic:false,color:"red",text:"Dancing Rapier"}",\
 minecraft:lore=[\
-"{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"---\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"When used with Sword Boomerang:\"}",\
-"{\"color\":\"gold\",\"italic\":false,\"text\":\"+ Travels farther and faster\"}",\
-"{\"color\":\"gold\",\"italic\":false,\"text\":\"+ Returns sooner\"}"],\
+"{color:"dark_gray",italic:false,text:"---"}",\
+"{color:"gray",italic:false,text:"When used with Sword Boomerang:"}",\
+"{color:"gold",italic:false,text:"+ Travels farther and faster"}",\
+"{color:"gold",italic:false,text:"+ Returns sooner"}"],\
 minecraft:attribute_modifiers=[\
 {type:"attack_damage",slot:"mainhand",id:"cashgrab:dancing_rapier_atkdmg",amount:5,operation:"add_value"},\
 {type:"attack_speed",slot:"mainhand",id:"cashgrab:dancing_rapier_atkspd",amount:-2,operation:"add_value"},\

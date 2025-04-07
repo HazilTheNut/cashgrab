@@ -61,7 +61,7 @@ tag @s add t_dmg_by
 function cashgrab:util/npe_col_entity_filter_hostile
 tag @e[tag=t_collision_candidate,distance=..5.5] add t_dmg_trgt
 
-tellraw @a[tag=t_debug] [{"type":"text","text":"classes/griefer/creeper_func_tick: aoe      eid_owner: "},{"type":"score","score":{"objective":"eid_owner","name":"@s"}},{"type":"text","text":" owner: "},{"type":"selector","selector":"@a[tag=t_creeper_owner]"},{"type":"text","text":" trgt: "},{"type":"selector","selector":"@a[tag=t_dmg_trgt]"}]
+tellraw @a[tag=t_debug] [{"type":text,text:"classes/griefer/creeper_func_tick: aoe      eid_owner: "},{"type":"score","score":{"objective":"eid_owner","name":"@s"}},{"type":text,text:" owner: "},{"type":"selector","selector":"@a[tag=t_creeper_owner]"},{"type":text,text:" trgt: "},{"type":"selector","selector":"@a[tag=t_dmg_trgt]"}]
 
 function cashgrab:util/npe_dmg {\
 d_dmg_amount:10.0,\
@@ -77,7 +77,7 @@ tag @a[tag=t_creeper_owner,distance=..4] add t_dmg_trgt
 tag @s add t_dmg_by
 tag @s add t_dmg_from
 
-tellraw @a[tag=t_debug] [{"type":"text","text":"classes/griefer/creeper_func_tick: selfdmg eid_owner: "},{"type":"score","score":{"objective":"eid_owner","name":"@s"}},{"type":"text","text":" owner: "},{"type":"selector","selector":"@a[tag=t_creeper_owner]"},{"type":"text","text":" trgt: "},{"type":"selector","selector":"@a[tag=t_dmg_trgt]"}]
+tellraw @a[tag=t_debug] [{"type":text,text:"classes/griefer/creeper_func_tick: selfdmg eid_owner: "},{"type":"score","score":{"objective":"eid_owner","name":"@s"}},{"type":text,text:" owner: "},{"type":"selector","selector":"@a[tag=t_creeper_owner]"},{"type":text,text:" trgt: "},{"type":"selector","selector":"@a[tag=t_dmg_trgt]"}]
 
 
 function cashgrab:util/npe_dmg {\

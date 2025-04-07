@@ -20,21 +20,21 @@
 
 # Hotbar
 item replace entity @a[tag=t_pm_owner] hotbar.0 with minecraft:egg[\
-minecraft:custom_name="{\"italic\":false,\"text\":\"Change Pages\"}",\
+minecraft:custom_name="{italic:false,text:"Change Pages"}",\
 minecraft:custom_data={mapmaker_tool_id:1}]
 
 item replace entity @a[tag=t_pm_owner] hotbar.1 with minecraft:brush[\
-minecraft:custom_name="{\"italic\":false,\"text\":\"Smoothing Tool\"}",\
+minecraft:custom_name="{italic:false,text:"Smoothing Tool"}",\
 minecraft:custom_data={mapmaker_tool_id:11}]
 item replace entity @a[tag=t_pm_owner] hotbar.2 with minecraft:grass_block[\
-minecraft:custom_name="{\"italic\":false,\"text\":\"Topsoil Tool\"}",\
+minecraft:custom_name="{italic:false,text:"Topsoil Tool"}",\
 minecraft:custom_data={mapmaker_tool_id:12}]
 item replace entity @a[tag=t_pm_owner] hotbar.3 with minecraft:netherite_scrap[\
-minecraft:custom_name="{\"italic\":false,\"text\":\"Leveler Tool\"}",\
+minecraft:custom_name="{italic:false,text:"Leveler Tool"}",\
 minecraft:custom_data={mapmaker_tool_id:13}]
 item replace entity @a[tag=t_pm_owner] hotbar.5 with minecraft:egg[\
-minecraft:custom_name="{\"italic\":false,\"text\":\"Shoot Fireball (strong)\"}",\
+minecraft:custom_name="{italic:false,text:"Shoot Fireball (strong)"}",\
 minecraft:custom_data={mapmaker_tool_id:15}]
 item replace entity @a[tag=t_pm_owner] hotbar.6 with minecraft:egg[\
-minecraft:custom_name="{\"italic\":false,\"text\":\"Shoot Fireball (weak)\"}",\
+minecraft:custom_name="{italic:false,text:"Shoot Fireball (weak)"}",\
 minecraft:custom_data={mapmaker_tool_id:16}]

@@ -28,7 +28,7 @@ execute as @e[type=minecraft:item_display,tag=t_boomerang_itemdisp_init] run fun
 # Set item display's owner to be this missile
 scoreboard players operation @e[type=minecraft:item_display,tag=t_boomerang_itemdisp_init] eid_owner = @s eid_self
 
-#tellraw @a[tag=t_debug] [{"text":"my eid_self "},{"score":{"name":"@s","objective":"eid_self"}},{"text":" disp eid_owner "},{"score":{"name":"@e[type=minecraft:item_display,tag=t_boomerang_itemdisp_init]","objective":"eid_owner"}}]
+#tellraw @a[tag=t_debug] [{text:"my eid_self "},{"score":{"name":"@s","objective":"eid_self"}},{text:" disp eid_owner "},{"score":{"name":"@e[type=minecraft:item_display,tag=t_boomerang_itemdisp_init]","objective":"eid_owner"}}]
 
 tag @e[type=minecraft:item_display,tag=t_boomerang_itemdisp_init] add t_boomerang_itemdisp
 tag @e[type=minecraft:item_display,tag=t_boomerang_itemdisp_init] remove t_boomerang_itemdisp_init

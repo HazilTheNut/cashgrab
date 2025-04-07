@@ -59,7 +59,7 @@ scoreboard players operation @e[tag=t_collision_found,limit=1] eid_grabbed_by = 
 scoreboard players operation @e[tag=t_titan_missile_init,limit=1,sort=nearest] mis_lifetime_ticks -= @s rc_steps_remaining
 scoreboard players remove @e[tag=t_titan_missile_init,limit=1,sort=nearest] mis_lifetime_ticks 3
 
-#tellraw @a[tag=t_debug] [{"type":"text","text":"classes/titan/pull_raycast_end: mis_lifetime_ticks: "},{"type":"score","score":{"name":"@e[tag=t_titan_missile_init,limit=1,sort=nearest]","objective":"mis_lifetime_ticks"}}]
+#tellraw @a[tag=t_debug] [{"type":text,text:"classes/titan/pull_raycast_end: mis_lifetime_ticks: "},{"type":"score","score":{"name":"@e[tag=t_titan_missile_init,limit=1,sort=nearest]","objective":"mis_lifetime_ticks"}}]
 
 tag @e[tag=t_titan_missile_init,limit=1,sort=nearest] add t_stasis_immune
 tag @e[tag=t_titan_missile_init,limit=1,sort=nearest] add t_titan_missile

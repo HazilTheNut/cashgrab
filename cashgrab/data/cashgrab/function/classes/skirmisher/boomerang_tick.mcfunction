@@ -42,8 +42,8 @@ execute if entity @s[tag=t_boomerang_returning] run particle end_rod ~ ~-0.5 ~ 0
 execute if entity @s[scores={cv_F=0},tag=t_boomerang_returning] run playsound minecraft:entity.bat.takeoff player @a ~ ~ ~ 0.5 1.25
 execute if entity @s[scores={cv_F=2},tag=t_boomerang_returning] run playsound minecraft:entity.bat.takeoff player @a ~ ~ ~ 0.5 1.25
 
-#tellraw @a[tag=t_debug] [{"text":"classes/skirmisher/boomerang_tick data = "},{"type":"nbt","entity":"@s","nbt":"data"}]
-#tellraw @a[tag=t_debug] [{"text":"classes/skirmisher/boomerang_tick tags = "},{"type":"nbt","entity":"@s","nbt":"Tags"}]
+#tellraw @a[tag=t_debug] [{text:"classes/skirmisher/boomerang_tick data = "},{"type":"nbt","entity":"@s","nbt":"data"}]
+#tellraw @a[tag=t_debug] [{text:"classes/skirmisher/boomerang_tick tags = "},{"type":"nbt","entity":"@s","nbt":"Tags"}]
 
 # Slowing down of boomerang
 execute if entity @s[scores={cv_H=10..},tag=!t_boomerang_returning] store result entity @s data.f_speed_mpt float 0.00055 run data get entity @s data.f_speed_mpt 1000

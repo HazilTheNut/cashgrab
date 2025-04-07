@@ -39,7 +39,7 @@ minecraft:attribute_modifiers=[\
 
 # Giant Hammer
 item replace entity @a[tag=t_pm_owner,limit=1] hotbar.0 with minecraft:iron_axe[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Giant Hammer\"}",\
+minecraft:custom_name="{italic:false,color:"red",text:"Giant Hammer"}",\
 minecraft:enchantments={levels:{knockback:1},show_in_tooltip:true},\
 minecraft:attribute_modifiers=[\
 {type:"attack_damage",slot:"mainhand",id:"cashgrab:giant_hammer_atkdmg",amount:8,operation:"add_value"},\
