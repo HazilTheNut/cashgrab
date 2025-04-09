@@ -21,7 +21,6 @@
 # Display "0" count if at 0
 execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 0 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.6 with minecraft:iron_nugget[\
 minecraft:item_name=[{color:"light_purple",italic:false,text:"[Passive]"},{color:"white",text:" Scrap"}],\
-minecraft:hide_additional_tooltip={},\
 minecraft:lore=[\
 [{color:"gray",italic:false,text:"You generate "},{color:"yellow",italic:false,text:"Scrap"},{color:"gray",italic:false,text:" from:"}],\
 {color:"gold",italic:false,text:"+ Weapon hits"},\

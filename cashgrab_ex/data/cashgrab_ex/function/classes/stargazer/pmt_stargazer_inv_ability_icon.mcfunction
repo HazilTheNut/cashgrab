@@ -23,7 +23,6 @@
 # Display if Mana is sufficient
 $item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=25..}] hotbar.4 with minecraft:nether_star[\
 minecraft:item_name=[{color:"light_purple",italic:false,text:"[Toss]"},{color:"white",text:" Star Shower"}],\
-minecraft:hide_additional_tooltip={},\
 minecraft:lore=[\
 {color:"dark_gray",italic:true,text:"Toss any item to use."},\
 {color:"gray",italic:false,text:"Calls in a powerful shower"},\
@@ -35,5 +34,4 @@ minecraft:lore=[\
 # Display "Out of Mana" if insufficent
 $item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=..24}] hotbar.4 with minecraft:red_stained_glass_pane[\
 minecraft:item_name=[{color:"red",italic:false,text:"Out of Mana"}],\
-minecraft:hide_additional_tooltip={},\
 ] $(charges)

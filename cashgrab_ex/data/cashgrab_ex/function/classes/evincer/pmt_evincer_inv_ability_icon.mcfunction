@@ -22,7 +22,6 @@
 # Display if Mana is sufficient
 $item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:prismarine_crystals[\
 minecraft:item_name=[{color:"light_purple",italic:false,text:"[Toss]"},{color:"white",text:" Prismatic Flash"}],\
-minecraft:hide_additional_tooltip={},\
 minecraft:lore=[\
 {color:"dark_gray",italic:true,text:"Toss any item to use."},\
 {color:"gray",italic:false,text:"Teleports forwards and infuses"},\

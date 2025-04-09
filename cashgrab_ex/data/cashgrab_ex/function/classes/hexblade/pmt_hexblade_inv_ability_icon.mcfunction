@@ -9,9 +9,9 @@
 # Arguments:
 #	charges		: Number of charges of ability
 
-$item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:silence_armor_trim_smithing_template[\
+$item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:clay_ball[\
 minecraft:item_name=[{color:"light_purple",italic:false,text:"[Toss]"},{color:"white",text:" Hex"}],\
-minecraft:hide_additional_tooltip={},\
+minecraft:item_model="minecraft:silence_armor_trim_smithing_template",\
 minecraft:lore=[\
 {color:"dark_gray",italic:true,text:"Toss any item to use."},\
 {color:"gray",italic:false,text:"Fires a homing spell that"},\
