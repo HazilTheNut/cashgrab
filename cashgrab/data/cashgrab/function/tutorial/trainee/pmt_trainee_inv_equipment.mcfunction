@@ -35,7 +35,7 @@ minecraft:attribute_modifiers=[\
 # Practice Sword
 item replace entity @a[tag=t_pm_owner,limit=1] hotbar.0 with minecraft:wooden_sword[minecraft:unbreakable={},\
 minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},\
-minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Practice Sword\"}",\
+minecraft:custom_name={italic:false,color:"red",text:"Practice Sword"},\
 minecraft:attribute_modifiers=[\
 {type:"attack_damage",slot:"mainhand",id:"cashgrab:machete_atkdmg",amount:3,operation:"add_value"},\
 {type:"attack_speed",slot:"mainhand",id:"cashgrab:machete_atkspd",amount:-2,operation:"add_value"}]]
