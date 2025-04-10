@@ -41,7 +41,7 @@ minecraft:attribute_modifiers=[\
 $scoreboard players set @a[tag=t_pm_owner,limit=1] temp_A $(b_dancing_rapier_enable)
 
 $item replace entity @a[tag=t_pm_owner,limit=1,scores={temp_A=1..}] $(s_dancing_rapier_slot) with minecraft:golden_sword[minecraft:unbreakable={},\
-minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable","minecraft:enchantments"]},\
 minecraft:custom_name={italic:false,color:"red",text:"Dancing Rapier"},\
 minecraft:lore=[\
 {color:"dark_gray",italic:false,text:"---"},\
@@ -54,5 +54,4 @@ minecraft:attribute_modifiers=[\
 {type:"movement_speed",slot:"mainhand",id:"cashgrab:dancing_rapier_atkspd",amount:0.15,operation:"add_multiplied_base"}\
 ],\
 minecraft:enchantments={knockback:1},\
-minecraft:tooltip_display={hidden_components:["minecraft:enchantments"]}\
 ]
