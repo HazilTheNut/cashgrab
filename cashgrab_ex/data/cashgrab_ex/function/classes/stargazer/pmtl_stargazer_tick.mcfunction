@@ -36,13 +36,13 @@ execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=..24,cv_B=..0}] run fun
 # Spell casting
 
 # Astral Dart
-execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1..,evc_vex_armor_trim_smithing_templates=1..}] run function cashgrab_ex:classes/stargazer/pmtl_stargazer_cast_astral_dart
+execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1..,evc_iron_ingots=1..}] run function cashgrab_ex:classes/stargazer/pmtl_stargazer_cast_astral_dart
 
 # Rift Glyph
-execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=6..,evc_wayfinder_armor_trim_smithing_templates=1..}] run function cashgrab_ex:classes/stargazer/pmtl_stargazer_cast_rift_glyph
+execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=6..,evc_resin_bricks=1..}] run function cashgrab_ex:classes/stargazer/pmtl_stargazer_cast_rift_glyph
 
 # Vortex Snare
-execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=10..,evc_spire_armor_trim_smithing_templates=1..}] run function cashgrab_ex:classes/stargazer/pmtl_stargazer_cast_vortex_snare
+execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=10..,evc_gold_ingots=1..}] run function cashgrab_ex:classes/stargazer/pmtl_stargazer_cast_vortex_snare
 
 # =========================
 # Spell lockout timer

@@ -25,7 +25,8 @@
 # Cleaving Cutlass
 $scoreboard players set @a[tag=t_pm_owner,limit=1] temp_A $(b_cleaving_scimitar_enable)
 
-$item replace entity @a[tag=t_pm_owner,limit=1,scores={temp_A=1..}] $(s_cleaving_scimitar_slot) with minecraft:iron_sword[minecraft:unbreakable={show_in_tooltip:false},\
+$item replace entity @a[tag=t_pm_owner,limit=1,scores={temp_A=1..}] $(s_cleaving_scimitar_slot) with minecraft:iron_sword[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},\
 minecraft:custom_name={italic:false,color:"red",text:"Cleaving Cutlass"},\
 minecraft:lore=[\
 {color:"gray",italic:false,text:"When used with Sword Boomerang:"},\
@@ -39,7 +40,8 @@ minecraft:attribute_modifiers=[\
 # Dancing Rapier
 $scoreboard players set @a[tag=t_pm_owner,limit=1] temp_A $(b_dancing_rapier_enable)
 
-$item replace entity @a[tag=t_pm_owner,limit=1,scores={temp_A=1..}] $(s_dancing_rapier_slot) with minecraft:golden_sword[minecraft:unbreakable={show_in_tooltip:false},\
+$item replace entity @a[tag=t_pm_owner,limit=1,scores={temp_A=1..}] $(s_dancing_rapier_slot) with minecraft:golden_sword[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},\
 minecraft:custom_name={italic:false,color:"red",text:"Dancing Rapier"},\
 minecraft:lore=[\
 {color:"dark_gray",italic:false,text:"---"},\

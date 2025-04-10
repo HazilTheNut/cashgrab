@@ -20,20 +20,23 @@
 
 # =============================
 # Armor
-item replace entity @a[tag=t_pm_owner,limit=1] armor.head with minecraft:golden_helmet[minecraft:unbreakable={show_in_tooltip:false}]
-item replace entity @a[tag=t_pm_owner,limit=1] armor.chest with minecraft:leather_chestplate[minecraft:unbreakable={show_in_tooltip:false},minecraft:dyed_color=16490297]
-item replace entity @a[tag=t_pm_owner,limit=1] armor.legs with minecraft:leather_leggings[minecraft:unbreakable={show_in_tooltip:false},\
+item replace entity @a[tag=t_pm_owner,limit=1] armor.head with minecraft:golden_helmet[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]}]
+item replace entity @a[tag=t_pm_owner,limit=1] armor.chest with minecraft:leather_chestplate[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable","minecraft:dyed_color"]},\
+minecraft:dyed_color=16490297]
+item replace entity @a[tag=t_pm_owner,limit=1] armor.legs with minecraft:leather_leggings[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable","minecraft:trim","minecraft:dyed_color"]},\
 minecraft:dyed_color=16490297,\
 minecraft:trim={\
 pattern:"tide",\
 material:"resin",\
-show_in_tooltip:false\
 }]
-item replace entity @a[tag=t_pm_owner,limit=1] armor.feet with minecraft:golden_boots[minecraft:unbreakable={show_in_tooltip:false},\
+item replace entity @a[tag=t_pm_owner,limit=1] armor.feet with minecraft:golden_boots[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable","minecraft:trim"]},\
 minecraft:trim={\
 pattern:"spire",\
 material:"resin",\
-show_in_tooltip:false\
 },\
 minecraft:attribute_modifiers=[\
 {type:"movement_speed",slot:"feet",id:"cashgrab:speed_bonus",amount:0.2,operation:"add_multiplied_base"},\
@@ -44,7 +47,8 @@ minecraft:attribute_modifiers=[\
 # Hotbar
 
 # Flame Staff
-item replace entity @a[tag=t_pm_owner,limit=1] hotbar.0 with minecraft:blaze_rod[minecraft:unbreakable={show_in_tooltip:false},\
+item replace entity @a[tag=t_pm_owner,limit=1] hotbar.0 with minecraft:blaze_rod[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},\
 minecraft:custom_name={italic:false,color:"red",text:"Flame Staff"},\
 minecraft:attribute_modifiers=[\
 {type:"attack_damage",slot:"mainhand",id:"cashgrab:flame_staff_atkdmg",amount:4,operation:"add_value"},\

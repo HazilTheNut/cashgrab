@@ -12,10 +12,11 @@
 #$tellraw @a[tag=t_debug] "trinkets/test_item/pmt_test_item_cts_inv_icon: slot:'$(slot)'"
 
 $item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:egg[\
-minecraft:item_name="[{\"color\":\"red\",\"italic\":false,\"text\":\"<Trinket>\"},{\"color\":\"white\",\"text\":\" Test Item\"}]",\
+minecraft:item_name=[{color:"red",italic:false,text:"<Trinket>"},{color:"white",text:" Test Item"}],\
 minecraft:custom_data={is_cts_icon:1},\
 minecraft:lore=[\
-"{\"color\":\"gray\",\"italic\":true,\"text\":\"Makes harmless\"}",\
-"{\"color\":\"gray\",\"italic\":true,\"text\":\" fireworks\"}"],\
+{color:"gray",italic:true,text:"Makes harmless"},\
+{color:"gray",italic:true,text:" fireworks"}\
+],\
 minecraft:enchantment_glint_override=true,\
 ] 1

@@ -63,9 +63,13 @@ func_pmtl_cts_tick:"cashgrab_ex:classes/stargazer/pmtl_stargazer_cts_tick",\
 func_pmt_score_kill:"cashgrab:util/noop",\
 }
 
-scoreboard objectives add evc_vex_armor_trim_smithing_templates minecraft.used:minecraft.vex_armor_trim_smithing_template
-scoreboard objectives add evc_wayfinder_armor_trim_smithing_templates minecraft.used:minecraft.wayfinder_armor_trim_smithing_template
-scoreboard objectives add evc_spire_armor_trim_smithing_templates minecraft.used:minecraft.spire_armor_trim_smithing_template
+scoreboard objectives remove evc_vex_armor_trim_smithing_templates
+scoreboard objectives remove evc_wayfinder_armor_trim_smithing_templates
+scoreboard objectives remove evc_spire_armor_trim_smithing_templates
+
+scoreboard objectives add evc_iron_ingots minecraft.used:minecraft.iron_ingot
+scoreboard objectives add evc_resin_bricks minecraft.used:minecraft.resin_brick
+scoreboard objectives add evc_gold_ingots minecraft.used:minecraft.gold_ingot
 
 # Evincer
 data modify storage cashgrab:game_info classes append value {\

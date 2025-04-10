@@ -20,11 +20,15 @@
 
 # =============================
 # Armor
-item replace entity @a[tag=t_pm_owner,limit=1] armor.head with minecraft:leather_helmet[minecraft:unbreakable={show_in_tooltop:false},\
+item replace entity @a[tag=t_pm_owner,limit=1] armor.head with minecraft:leather_helmet[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable","minecraft:dyed_color"]},\
 minecraft:dyed_color=11842740]
-item replace entity @a[tag=t_pm_owner,limit=1] armor.chest with minecraft:chainmail_chestplate[minecraft:unbreakable={show_in_tooltop:false}]
-item replace entity @a[tag=t_pm_owner,limit=1] armor.legs with minecraft:chainmail_leggings[minecraft:unbreakable={show_in_tooltop:false}]
-item replace entity @a[tag=t_pm_owner,limit=1] armor.feet with minecraft:leather_boots[minecraft:unbreakable={show_in_tooltip:false},\
+item replace entity @a[tag=t_pm_owner,limit=1] armor.chest with minecraft:chainmail_chestplate[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]}]
+item replace entity @a[tag=t_pm_owner,limit=1] armor.legs with minecraft:chainmail_leggings[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]}]
+item replace entity @a[tag=t_pm_owner,limit=1] armor.feet with minecraft:leather_boots[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable","minecraft:dyed_color"]},\
 minecraft:dyed_color=11842740,\
 minecraft:attribute_modifiers=[\
 {type:"movement_speed",slot:"feet",id:"cashgrab:speed_bonus",amount:0.2,operation:"add_multiplied_base"},\
