@@ -9,33 +9,33 @@
 # Arguments: (none)
 
 # Boots! +5% speed per stack.
-execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 0 run item replace entity @a[tag=t_pm_owner,limit=1] armor.feet with leather_boots[\
-dyed_color={rgb:15961002},\
-minecraft:unbreakable={show_in_tooltip:false},\
+execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 0 run item replace entity @a[tag=t_pm_owner,limit=1] armor.feet with leather_boots[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable","minecraft:dyed_color"]},\
+dyed_color=15961002,\
 minecraft:attribute_modifiers=[\
 {type:"movement_speed",slot:"feet",id:"cashgrab:speed_bonus",amount:0.2,operation:"add_multiplied_base"},\
 {type:"armor",slot:"feet",id:"cashgrab:boots_armor",amount:3,operation:"add_value"}\
 ]]
 
-execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 1 run item replace entity @a[tag=t_pm_owner,limit=1] armor.feet with leather_boots[\
-dyed_color={rgb:15961002},\
-minecraft:unbreakable={show_in_tooltip:false},\
+execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 1 run item replace entity @a[tag=t_pm_owner,limit=1] armor.feet with leather_boots[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable","minecraft:dyed_color"]},\
+dyed_color=15961002,\
 minecraft:attribute_modifiers=[\
 {type:"movement_speed",slot:"feet",id:"cashgrab:speed_bonus",amount:0.25,operation:"add_multiplied_base"},\
 {type:"armor",slot:"feet",id:"cashgrab:boots_armor",amount:3,operation:"add_value"}\
 ]]
 
-execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 2 run item replace entity @a[tag=t_pm_owner,limit=1] armor.feet with leather_boots[\
-dyed_color={rgb:15961002},\
-minecraft:unbreakable={show_in_tooltip:false},\
+execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 2 run item replace entity @a[tag=t_pm_owner,limit=1] armor.feet with leather_boots[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable","minecraft:dyed_color"]},\
+dyed_color=15961002,\
 minecraft:attribute_modifiers=[\
 {type:"movement_speed",slot:"feet",id:"cashgrab:speed_bonus",amount:0.3,operation:"add_multiplied_base"},\
 {type:"armor",slot:"feet",id:"cashgrab:boots_armor",amount:3,operation:"add_value"}\
 ]]
 
-execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 3 run item replace entity @a[tag=t_pm_owner,limit=1] armor.feet with leather_boots[\
-dyed_color={rgb:15961002},\
-minecraft:unbreakable={show_in_tooltip:false},\
+execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 3 run item replace entity @a[tag=t_pm_owner,limit=1] armor.feet with leather_boots[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable","minecraft:dyed_color"]},\
+dyed_color=15961002,\
 minecraft:attribute_modifiers=[\
 {type:"movement_speed",slot:"feet",id:"cashgrab:speed_bonus",amount:0.35,operation:"add_multiplied_base"},\
 {type:"armor",slot:"feet",id:"cashgrab:boots_armor",amount:3,operation:"add_value"}\

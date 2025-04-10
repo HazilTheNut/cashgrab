@@ -16,14 +16,13 @@ execute unless score @a[tag=t_pm_owner,limit=1] cv_A matches 0 run return 0
 
 item replace entity @a[tag=t_pm_owner,limit=1] hotbar.6 with minecraft:clay_ball[\
 minecraft:item_model="minecraft:music_disc_11",\
-minecraft:item_name="[{\"color\":\"light_purple\",\"italic\":false,\"text\":\"[Passive]\"},{\"color\":\"white\",\"text\":\" Tempo\"}]",\
-minecraft:hide_additional_tooltip={},\
+minecraft:item_name=[{color:"light_purple",italic:false,text:"[Passive]"},{color:"white",text:" Tempo"}],\
 minecraft:lore=[\
-'["",{"text":"Hitting enemies with ","italic":false,"color":"gray"}]',\
-'["",{"text":" consecutive melee hits ","italic":false,"color":"gray"}]',\
-'["",{"text":" grants stacks of ","italic":false,"color":"gray"},{"text":"Tempo","italic":false,"color":"yellow"},{"text":".","italic":false,"color":"gray"}]',\
-'["",{"text":"Each ","italic":false,"color":"gray"},{"text":"Tempo","italic":false,"color":"yellow"},{"text":" stack grants","italic":false,"color":"gray"}]',\
-'["",{"text":" increased speed.","italic":false,"color":"gray"}]',\
-'["",{"text":"===","italic":false,"color":"dark_gray"}]',\
-'["",{"text":"You have ","italic":false,"color":"dark_gray"},{"text":"0","italic":false,"color":"yellow"},{"text":" stacks.","italic":false,"color":"dark_gray"}]'\
+[{text:"Hitting enemies with ",italic:false,color:"gray"}],\
+[{text:" consecutive melee hits ",italic:false,color:"gray"}],\
+[{text:" grants stacks of ",italic:false,color:"gray"},{text:"Tempo",italic:false,color:"yellow"},{text:".",italic:false,color:"gray"}],\
+[{text:"Each ",italic:false,color:"gray"},{text:"Tempo",italic:false,color:"yellow"},{text:" stack grants",italic:false,color:"gray"}],\
+[{text:" increased speed.",italic:false,color:"gray"}],\
+[{text:"===",italic:false,color:"dark_gray"}],\
+[{text:"You have ",italic:false,color:"dark_gray"},{text:"0",italic:false,color:"yellow"},{text:" stacks.",italic:false,color:"dark_gray"}]\
 ]] 1

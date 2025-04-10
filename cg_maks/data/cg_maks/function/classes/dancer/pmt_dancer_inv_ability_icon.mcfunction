@@ -10,14 +10,13 @@
 #	charges		: Number of charges of ability
 
 $item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:orange_dye[\
-minecraft:item_name="[{\"color\":\"light_purple\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Sforzando\"}]",\
-minecraft:hide_additional_tooltip={},\
+minecraft:item_name=[{color:"light_purple",italic:false,text:"[Toss]"},{color:"white",text:" Sforzando"}],\
 minecraft:lore=[\
-'["",{"text":"Toss any item to use.","color":"dark_gray"}]',\
-'["",{"text":"Strikes your enemies with a","italic":false,"color":"gray"}]',\
-'["",{"text":" dazzling flourish.","italic":false,"color":"gray"}]',\
-'["",{"text":"More stacks of ","italic":false,"color":"gray"},{"text":"Tempo","italic":false,"color":"yellow"},{"text":" creates","italic":false,"color":"gray"}]',\
-'["",{"text":" a larger and deadlier flourish.","italic":false,"color":"gray"}]',\
-'["",{"text":"====","italic":false,"color":"dark_gray"}]',\
-'["",{"text":"12 ","italic":false,"color":"yellow"},{"text":"sec cooldown for ","italic":false,"color":"gray"},{"text":"1 ","italic":false,"color":"yellow"},{"text":"charge","italic":false,"color":"gray"}]'\
+[{text:"Toss any item to use.",color:"dark_gray"}],\
+[{text:"Strikes your enemies with a",italic:false,color:"gray"}],\
+[{text:" dazzling flourish.",italic:false,color:"gray"}],\
+[{text:"More stacks of ",italic:false,color:"gray"},{text:"Tempo",italic:false,color:"yellow"},{text:" creates",italic:false,color:"gray"}],\
+[{text:" a larger and deadlier flourish.",italic:false,color:"gray"}],\
+[{text:"====",italic:false,color:"dark_gray"}],\
+[{text:"12 ",italic:false,color:"yellow"},{text:"sec cooldown for ",italic:false,color:"gray"},{text:"1 ",italic:false,color:"yellow"},{text:"charge",italic:false,color:"gray"}]\
 ]] $(charges)
