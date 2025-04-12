@@ -19,6 +19,6 @@
 #	cv_H	:	Page Number
 
 item replace entity @a[tag=t_pm_owner,scores={cv_A=0}] hotbar.4 with minecraft:ink_sac[\
-minecraft:custom_name="{\"text\":\"Toggle Tools\"}"]
+minecraft:custom_name={text:"Toggle Tools"}]
 item replace entity @a[tag=t_pm_owner,scores={cv_A=1}] hotbar.4 with minecraft:glow_ink_sac[\
-minecraft:custom_name="{\"text\":\"Toggle Tools\"}"]
+minecraft:custom_name={text:"Toggle Tools"}]

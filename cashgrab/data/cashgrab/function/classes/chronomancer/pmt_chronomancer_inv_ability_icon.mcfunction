@@ -19,23 +19,23 @@
 #	cv_H	:	
 
 $execute if score @a[tag=t_pm_owner,limit=1] cv_E matches 0 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:cyan_stained_glass[\
-minecraft:custom_name="[{\"color\":\"light_purple\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Stasis Field\"}]",\
+minecraft:custom_name=[{color:"light_purple",italic:false,text:"[Toss]"},{color:"white",text:" Stasis Field"}],\
 minecraft:enchantment_glint_override=true,\
 minecraft:lore=[\
-"{\"color\":\"dark_gray\",\"italic\":true,\"text\":\"Toss any item to use.\"}",\
-"[{\"color\":\"gray\",\"italic\":false,\"text\":\"Projects a \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Stasis Field \"},{\"color\":\"gray\",\"italic\":false,\"text\":\"around you \"}]",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\" that freezes all projectiles,\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\" constructs, and traps within it.\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"This ability can be reactivated\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\" to end the effect early.\"}",\
-"{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"=====\"}",\
-"[{\"color\":\"yellow\",\"italic\":false,\"text\":\"10\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" sec cooldown for \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"1\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" charges\"}]"\
+{color:"dark_gray",italic:true,text:"Toss any item to use."},\
+[{color:"gray",italic:false,text:"Projects a "},{color:"yellow",italic:false,text:"Stasis Field "},{color:"gray",italic:false,text:"around you "}],\
+{color:"gray",italic:false,text:" that freezes all projectiles,"},\
+{color:"gray",italic:false,text:" constructs, and traps within it."},\
+{color:"gray",italic:false,text:"This ability can be reactivated"},\
+{color:"gray",italic:false,text:" to end the effect early."},\
+{color:"dark_gray",italic:false,text:"====="},\
+[{color:"yellow",italic:false,text:"10"},{color:"gray",italic:false,text:" sec cooldown for "},{color:"yellow",italic:false,text:"1"},{color:"gray",italic:false,text:" charges"}]\
 ]] $(charges)
 
 $execute if score @a[tag=t_pm_owner,limit=1] cv_E matches 1 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:barrier[\
-minecraft:custom_name="[{\"color\":\"light_purple\",\"italic\":false,\"text\":\"[Toss]\"},{\"color\":\"white\",\"text\":\" Cancel Stasis Field\"}]",\
+minecraft:custom_name=[{color:"light_purple",italic:false,text:"[Toss]"},{color:"white",text:" Cancel Stasis Field"}],\
 minecraft:enchantment_glint_override=true,\
 minecraft:lore=[\
-"{\"color\":\"dark_gray\",\"italic\":true,\"text\":\"Toss any item to use.\"}",\
-"[{\"color\":\"gray\",\"italic\":false,\"text\":\"Ends the \"},{\"color\":\"yellow\",\"italic\":false,\"text\":\"Stasis Field.\"}]",\
+{color:"dark_gray",italic:true,text:"Toss any item to use."},\
+[{color:"gray",italic:false,text:"Ends the "},{color:"yellow",italic:false,text:"Stasis Field."}],\
 ]] $(charges)

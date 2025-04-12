@@ -9,7 +9,7 @@
 # Arguments: (none)
 
 tellraw @a[tag=t_pm_owner,limit=1] [\
-{"color":"dark_gray","text":"\n--------------------------------------------"},\
-{"color":"yellow","text":"\n\nTo continue, head to the next area."}\
+{color:"dark_gray",text:"\n--------------------------------------------"},\
+{color:"yellow",text:"\n\nTo continue, head to the next area."}\
 ]
 

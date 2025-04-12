@@ -51,4 +51,4 @@ function cashgrab_ex:classes/stargazer/pmt_stargazer_inv_mana
 function cashgrab:util/pmt_inv_ability_icon_argloader
 
 # Consume event
-scoreboard players set @a[tag=t_pm_owner,limit=1] evc_vex_armor_trim_smithing_templates 0
+scoreboard players set @a[tag=t_pm_owner,limit=1] evc_iron_ingots 0

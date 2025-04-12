@@ -13,7 +13,7 @@
 #$tellraw @a[tag=t_debug] "trinkets/vigor_flask/pmt_vigor_flask_inv: slot: $(slot) ; charges: $(charges)"
 
 $item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:paper[\
-minecraft:item_name="[{\"color\":\"green\",\"italic\":false,\"text\":\"[Use]\"},{\"color\":\"white\",\"text\":\" Bandage\"}]",\
+minecraft:item_name=[{color:"green",italic:false,text:"[Use]"},{color:"white",text:" Bandage"}],\
 minecraft:custom_data={is_trinket:1},\
 minecraft:consumable={\
 consume_seconds:0f,\
@@ -28,5 +28,5 @@ effects:[\
 ]}\
 ]},\
 minecraft:lore=[\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"Restores health.\"}"],\
+{color:"gray",italic:false,text:"Restores health."}],\
 ] $(charges)

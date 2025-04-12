@@ -18,5 +18,5 @@ $execute if score NUM_CTS_CLASSES_PAGE_IDX_MAX num matches ..0 run function cash
 execute if score NUM_CTS_CLASSES_PAGE_IDX_MAX num matches ..0 run return 0
 
 $item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:gray_stained_glass_pane[\
-minecraft:item_name="[{\"color\":\"gold\",\"italic\":false,\"text\":\"Page $(classes_page_num) / $(classes_page_num_max)\"}]"\
+minecraft:item_name=[{color:"gold","italic":false,text:"Page $(classes_page_num) / $(classes_page_num_max)"}]\
 ] $(classes_page_num)

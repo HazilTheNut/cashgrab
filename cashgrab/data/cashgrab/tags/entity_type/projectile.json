@@ -6,7 +6,7 @@
 			"required": true
 		},
 		{
-			"id": "minecraft:potion",
+			"id": "minecraft:splash_potion",
 			"required": true
 		},
 		{

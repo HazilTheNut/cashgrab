@@ -11,7 +11,7 @@
 
 $item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:barrier[\
 minecraft:enchantment_glint_override=true,\
-minecraft:item_name="[{\"color\":\"red\",\"italic\":false,\"text\":\"NULL\"}]",\
+minecraft:item_name=[{color:"red",italic:false,text:"NULL"}],\
 minecraft:lore=[\
-"{\"color\":\"dark_gray\",\"italic\":true,\"text\":\"Something wrong happened!\"}",\
+{color:"dark_gray",italic:true,text:"Something wrong happened!"},\
 ]] 1

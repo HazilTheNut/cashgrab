@@ -20,21 +20,23 @@
 
 # =============================
 # Armor
-item replace entity @a[tag=t_pm_owner,limit=1] armor.head with minecraft:iron_helmet[minecraft:unbreakable={show_in_tooltip:false}]
-item replace entity @a[tag=t_pm_owner,limit=1] armor.chest with minecraft:leather_chestplate[minecraft:unbreakable={show_in_tooltip:false},\
+item replace entity @a[tag=t_pm_owner,limit=1] armor.head with minecraft:iron_helmet[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable","minecraft:trim"]}]
+item replace entity @a[tag=t_pm_owner,limit=1] armor.chest with minecraft:leather_chestplate[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable","minecraft:trim","minecraft:dyed_color"]},\
 minecraft:dyed_color=8314871,\
 minecraft:trim={\
 pattern:"dune",\
 material:"diamond",\
-show_in_tooltip:false\
 }]
-item replace entity @a[tag=t_pm_owner,limit=1] armor.legs with minecraft:iron_leggings[minecraft:unbreakable={show_in_tooltip:false},\
+item replace entity @a[tag=t_pm_owner,limit=1] armor.legs with minecraft:iron_leggings[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable","minecraft:trim"]},\
 minecraft:trim={\
 pattern:"dune",\
 material:"diamond",\
-show_in_tooltip:false\
 }]
-item replace entity @a[tag=t_pm_owner,limit=1] armor.feet with minecraft:iron_boots[minecraft:unbreakable={show_in_tooltip:false},\
+item replace entity @a[tag=t_pm_owner,limit=1] armor.feet with minecraft:iron_boots[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},\
 minecraft:attribute_modifiers=[\
 {type:"movement_speed",slot:"feet",id:"cashgrab:speed_bonus",amount:0.2,operation:"add_multiplied_base"},\
 {type:"armor",slot:"feet",id:"cashgrab:boots_armor",amount:4,operation:"add_value"}\
@@ -44,8 +46,9 @@ minecraft:attribute_modifiers=[\
 # Hotbar
 
 # Glacial Shard
-item replace entity @a[tag=t_pm_owner,limit=1] hotbar.0 with minecraft:iron_sword[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Glacial Shard\"}",\
+item replace entity @a[tag=t_pm_owner,limit=1] hotbar.0 with minecraft:iron_sword[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},\
+minecraft:custom_name={italic:false,color:"red",text:"Glacial Shard"},\
 minecraft:attribute_modifiers=[\
 {type:"attack_damage",slot:"mainhand",id:"cashgrab:glacialshard_atkdmg",amount:5.5,operation:"add_value"},\
 {type:"attack_speed",slot:"mainhand",id:"cashgrab:glacialshard_atkspd",amount:-2,operation:"add_value"}]]

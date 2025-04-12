@@ -10,4 +10,4 @@
 #	cd_secs		: Cooldown remaining, in seconds
 
 $execute if entity @a[tag=t_pm_owner,scores={__ability_cd_display_secs=1..}] run item replace entity @a[tag=t_pm_owner] hotbar.4 with minecraft:black_stained_glass_pane[\
-minecraft:item_name="{\"italic\":false,\"color\":\"gray\",\"text\":\"Ability on Cooldown\"}"] $(cd_secs)
+minecraft:item_name={italic:false,color:"gray",text:"Ability on Cooldown"}] $(cd_secs)

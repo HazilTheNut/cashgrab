@@ -22,13 +22,13 @@
 
 $item replace entity @a[tag=t_pm_owner,limit=1] $(shield_slot) with minecraft:shield[\
 minecraft:damage=$(shield_damage),\
-minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Bastion\"}",\
+minecraft:custom_name={italic:false,color:"red",text:"Bastion"},\
 minecraft:lore=[\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"This shield breaks after\"}",\
-"[{\"color\":\"gray\",\"italic\":false,\"text\":\" blocking \"},{\"color\":\"aqua\",\"italic\":false,\"text\":\"5\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" hits.\"}]",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"Each hit blocked reduces\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\" your Valiant Charge cooldown.\"}",\
-"{\"color\":\"gray\",\"italic\":false,\"text\":\"This ability recharges itself\"}",\
-"[{\"color\":\"yellow\",\"italic\":false,\"text\":\" 4\"},{\"color\":\"gray\",\"italic\":false,\"text\":\" seconds after use.\"}]"\
+{color:"gray",italic:false,text:"This shield breaks after"},\
+[{color:"gray",italic:false,text:" blocking "},{color:"aqua",italic:false,text:"5"},{color:"gray",italic:false,text:" hits."}],\
+{color:"gray",italic:false,text:"Each hit blocked reduces"},\
+{color:"gray",italic:false,text:" your Valiant Charge cooldown."},\
+{color:"gray",italic:false,text:"This ability recharges itself"},\
+[{color:"yellow",italic:false,text:" 4"},{color:"gray",italic:false,text:" seconds after use."}]\
 ]\
 ]

@@ -31,8 +31,8 @@ scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={cv_B=0..}] cv_B 1
 
 # If during a Crash Landing, check if my Y position exceeded the cutoff
 #execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1,cv_B=1..}] store result score @a[tag=t_pm_owner,limit=1] cv_F run data get entity @a[tag=t_pm_owner,limit=1] Pos[1] 1000
-#execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1,cv_B=1..}] if score @a[tag=t_pm_owner,limit=1] cv_F < @a[tag=t_pm_owner,limit=1] cv_G run tellraw @a[tag=t_pm_owner,tag=t_debug] [{"text":"Lift frame "},{"score":{"name":"@a[tag=t_pm_owner]","objective":"cv_F"}},{"text":"mm vs "},{"score":{"name":"@a[tag=t_pm_owner]","objective":"cv_G"}},{"text":"mm Motion[1] = "},{"source":"entity","entity":"@a[tag=t_pm_owner]","nbt":"Motion[1]"}]
-#execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1,cv_B=1..}] if score @a[tag=t_pm_owner,limit=1] cv_F >= @a[tag=t_pm_owner,limit=1] cv_G run tellraw @a[tag=t_pm_owner,tag=t_debug] [{"text":"Lift cutoff ","color":"red"},{"score":{"name":"@a[tag=t_pm_owner]","objective":"cv_F"}},{"text":"mm vs "},{"score":{"name":"@a[tag=t_pm_owner]","objective":"cv_G"}},{"text":"mm Motion[1] = "},{"source":"entity","entity":"@a[tag=t_pm_owner]","nbt":"Motion[1]"}]
+#execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1,cv_B=1..}] if score @a[tag=t_pm_owner,limit=1] cv_F < @a[tag=t_pm_owner,limit=1] cv_G run tellraw @a[tag=t_pm_owner,tag=t_debug] [{text:"Lift frame "},{"score":{"name":"@a[tag=t_pm_owner]","objective":"cv_F"}},{text:"mm vs "},{"score":{"name":"@a[tag=t_pm_owner]","objective":"cv_G"}},{text:"mm Motion[1] = "},{"source":"entity","entity":"@a[tag=t_pm_owner]","nbt":"Motion[1]"}]
+#execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1,cv_B=1..}] if score @a[tag=t_pm_owner,limit=1] cv_F >= @a[tag=t_pm_owner,limit=1] cv_G run tellraw @a[tag=t_pm_owner,tag=t_debug] [{text:"Lift cutoff ",color:"red"},{"score":{"name":"@a[tag=t_pm_owner]","objective":"cv_F"}},{text:"mm vs "},{"score":{"name":"@a[tag=t_pm_owner]","objective":"cv_G"}},{text:"mm Motion[1] = "},{"source":"entity","entity":"@a[tag=t_pm_owner]","nbt":"Motion[1]"}]
 #execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1,cv_B=1..}] if score @a[tag=t_pm_owner,limit=1] cv_F >= @a[tag=t_pm_owner,limit=1] cv_G run scoreboard players set @a[tag=t_pm_owner] cv_B 0
 
 # End levitation effect when timer is ending
@@ -75,7 +75,7 @@ tag @a[tag=t_pm_owner,limit=1] remove t_award_creeper_bottle
 # Find subordinates of player
 execute store result storage cashgrab:find_eid_args eid int 1 run scoreboard players get @s eid_owner
 function cashgrab:util/find_eid_owned_by with storage cashgrab:find_eid_args
-#tellraw @a[tag=t_debug,tag=t_pm_owner,scores={cv_C=7250..}] [{"text":"pmtl_griefer_loop: pm eid_owner: "},{"score":{"name":"@s","objective":"eid_owner"}},{"type":"text","text":" peers: "},{"type":"selector","selector":"@e[tag=t_eid_matches]"}]
+#tellraw @a[tag=t_debug,tag=t_pm_owner,scores={cv_C=7250..}] [{text:"pmtl_griefer_loop: pm eid_owner: "},{"score":{"name":"@s","objective":"eid_owner"}},{"type":text,text:" peers: "},{"type":"selector","selector":"@e[tag=t_eid_matches]"}]
 tag @e[type=minecraft:creeper,tag=t_eid_matches] add t_creeper_peer
 
 execute as @e[type=minecraft:creeper,tag=t_griefer_creeper,tag=t_creeper_peer] at @s run function cashgrab:classes/griefer/creeper_func_tick

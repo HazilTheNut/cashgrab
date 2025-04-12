@@ -28,7 +28,7 @@ scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 1
 clear @a[tag=t_pm_owner,limit=1] minecraft:glass_bottle
 
 # If player used splash potion, delete it
-execute if score @a[tag=t_pm_owner,limit=1] evc_splash_potions matches 1.. run kill @e[type=minecraft:potion,limit=1,sort=nearest,distance=..3]
+execute if score @a[tag=t_pm_owner,limit=1] evc_splash_potions matches 1.. run kill @e[type=minecraft:splash_potion,limit=1,sort=nearest,distance=..3]
 
 # If player uses potions, refresh inv
 execute if score @a[tag=t_pm_owner,limit=1] evc_potions matches 1.. run function cashgrab:util/pmt_inv_refresh

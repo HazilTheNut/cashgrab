@@ -20,21 +20,25 @@
 
 # =============================
 # Armor
-item replace entity @a[tag=t_pm_owner,limit=1] armor.head with minecraft:leather_helmet[minecraft:unbreakable={show_in_tooltip:false},minecraft:dyed_color=2665010]
-item replace entity @a[tag=t_pm_owner,limit=1] armor.chest with minecraft:leather_chestplate[minecraft:unbreakable={show_in_tooltip:false},minecraft:dyed_color=2665010]
-item replace entity @a[tag=t_pm_owner,limit=1] armor.legs with minecraft:leather_leggings[minecraft:unbreakable={show_in_tooltip:false},\
+item replace entity @a[tag=t_pm_owner,limit=1] armor.head with minecraft:leather_helmet[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable","minecraft:dyed_color"]},\
+minecraft:dyed_color=2665010]
+item replace entity @a[tag=t_pm_owner,limit=1] armor.chest with minecraft:leather_chestplate[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable","minecraft:dyed_color"]},\
+minecraft:dyed_color=2665010]
+item replace entity @a[tag=t_pm_owner,limit=1] armor.legs with minecraft:leather_leggings[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable","minecraft:trim","minecraft:dyed_color"]},\
 minecraft:dyed_color=2665010,\
 minecraft:trim={\
 pattern:"rib",\
 material:"copper",\
-show_in_tooltip:false\
 }]
-item replace entity @a[tag=t_pm_owner,limit=1] armor.feet with minecraft:leather_boots[minecraft:unbreakable={show_in_tooltip:false},\
+item replace entity @a[tag=t_pm_owner,limit=1] armor.feet with minecraft:leather_boots[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable","minecraft:trim","minecraft:dyed_color"]},\
 minecraft:dyed_color=7820589,\
 minecraft:trim={\
 pattern:"wild",\
 material:"netherite",\
-show_in_tooltip:false\
 },\
 minecraft:attribute_modifiers=[\
 {type:"movement_speed",slot:"feet",id:"cashgrab:speed_bonus",amount:0.3,operation:"add_multiplied_base"},\
@@ -45,28 +49,33 @@ minecraft:attribute_modifiers=[\
 # Hotbar
 
 # Machete
-item replace entity @a[tag=t_pm_owner,limit=1] hotbar.0 with minecraft:stone_sword[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Machete\"}",\
+item replace entity @a[tag=t_pm_owner,limit=1] hotbar.0 with minecraft:stone_sword[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},\
+minecraft:custom_name={italic:false,color:"red",text:"Machete"},\
 minecraft:attribute_modifiers=[\
 {type:"attack_damage",slot:"mainhand",id:"cashgrab:machete_atkdmg",amount:5,operation:"add_value"},\
 {type:"attack_speed",slot:"mainhand",id:"cashgrab:machete_atkspd",amount:-2,operation:"add_value"}]]
 
 # Crossbow
-item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_F=0}] weapon.offhand with minecraft:crossbow[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Hunting Bow\"}",\
+item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_F=0}] weapon.offhand with minecraft:crossbow[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},\
+minecraft:custom_name={italic:false,color:"red",text:"Hunting Bow"},\
 minecraft:enchantment_glint_override=false,\
 minecraft:enchantments={quick_charge:1}]
-item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_F=1}] weapon.offhand with minecraft:crossbow[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Hunting Bow\"}",\
+item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_F=1}] weapon.offhand with minecraft:crossbow[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},\
+minecraft:custom_name={italic:false,color:"red",text:"Hunting Bow"},\
 minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1}],\
 minecraft:enchantment_glint_override=false,\
 minecraft:enchantments={quick_charge:1}]
-item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_F=2}] hotbar.1 with minecraft:crossbow[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Hunting Bow\"}",\
+item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_F=2}] hotbar.1 with minecraft:crossbow[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},\
+minecraft:custom_name={italic:false,color:"red",text:"Hunting Bow"},\
 minecraft:enchantment_glint_override=false,\
 minecraft:enchantments={quick_charge:1}]
-item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_F=3}] hotbar.1 with minecraft:crossbow[minecraft:unbreakable={show_in_tooltip:false},\
-minecraft:custom_name="{\"italic\":false,\"color\":\"red\",\"text\":\"Hunting Bow\"}",\
+item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_F=3}] hotbar.1 with minecraft:crossbow[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},\
+minecraft:custom_name={italic:false,color:"red",text:"Hunting Bow"},\
 minecraft:enchantment_glint_override=false,\
 minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1}],\
 minecraft:enchantments={quick_charge:1}]

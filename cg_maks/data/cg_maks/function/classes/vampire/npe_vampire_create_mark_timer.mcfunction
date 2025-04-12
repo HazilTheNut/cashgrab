@@ -12,7 +12,7 @@
 # Arguments: (none)
 
 # Apply weakness and display action text.
-title @a[tag=t_vampire_marked_target,limit=1] actionbar {"text":"MARKED!","bold":true,"color":"yellow"}
+title @a[tag=t_vampire_marked_target,limit=1] actionbar {text:"MARKED!","bold":true,color:"yellow"}
 effect give @a[tag=t_vampire_marked_target,limit=1] minecraft:weakness 10 0
 
 # Apply timer

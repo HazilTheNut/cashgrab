@@ -11,7 +11,7 @@
 #	end_reason	: The reason for why the end function was called
 
 # If the timer expired, notifuy user in text chat
-$execute if score NUM_END_REASON_EXPIRE num matches $(end_reason) run tellraw @a[tag=t_eid_matches,limit=1] {"color":"green","type":"text","text":"The Accelerator's effect has worn off"}
+$execute if score NUM_END_REASON_EXPIRE num matches $(end_reason) run tellraw @a[tag=t_eid_matches,limit=1] {color:"green","type":text,text:"The Accelerator's effect has worn off"}
 
 # If the timer expired, play a sound to notify user the effect has ended
 $execute if score NUM_END_REASON_EXPIRE num matches $(end_reason) run playsound minecraft:block.beacon.power_select player @a[tag=t_timer_owner,limit=1] ~ ~ ~ 1.0 1.0

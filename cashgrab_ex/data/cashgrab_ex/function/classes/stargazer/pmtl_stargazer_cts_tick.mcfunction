@@ -21,12 +21,12 @@
 #	cv_H	:   Star Shower pitch offset
 
 # Reload spells if they are used
-execute if entity @a[tag=t_pm_owner,limit=1,scores={evc_vex_armor_trim_smithing_templates=1..}] run function cashgrab_ex:classes/stargazer/pmt_stargazer_inv_astral_dart
-execute if entity @a[tag=t_pm_owner,limit=1,scores={evc_wayfinder_armor_trim_smithing_templates=1..}] run function cashgrab_ex:classes/stargazer/pmt_stargazer_inv_rift_glyph
-execute if entity @a[tag=t_pm_owner,limit=1,scores={evc_spire_armor_trim_smithing_templates=1..}] run function cashgrab_ex:classes/stargazer/pmt_stargazer_inv_vortex_snare
+execute if entity @a[tag=t_pm_owner,limit=1,scores={evc_iron_ingots=1..}] run function cashgrab_ex:classes/stargazer/pmt_stargazer_inv_astral_dart
+execute if entity @a[tag=t_pm_owner,limit=1,scores={evc_resin_bricks=1..}] run function cashgrab_ex:classes/stargazer/pmt_stargazer_inv_rift_glyph
+execute if entity @a[tag=t_pm_owner,limit=1,scores={evc_gold_ingots=1..}] run function cashgrab_ex:classes/stargazer/pmt_stargazer_inv_vortex_snare
 
 # Consume events
-scoreboard players set @a[tag=t_pm_owner,limit=1] evc_vex_armor_trim_smithing_templates 0
-scoreboard players set @a[tag=t_pm_owner,limit=1] evc_wayfinder_armor_trim_smithing_templates 0
-scoreboard players set @a[tag=t_pm_owner,limit=1] evc_spire_armor_trim_smithing_templates 0
+scoreboard players set @a[tag=t_pm_owner,limit=1] evc_iron_ingots 0
+scoreboard players set @a[tag=t_pm_owner,limit=1] evc_resin_bricks 0
+scoreboard players set @a[tag=t_pm_owner,limit=1] evc_gold_ingots 0
 

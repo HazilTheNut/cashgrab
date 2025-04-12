@@ -11,7 +11,7 @@
 # Arguments: (none)
 
 # If player is too low health, do nothing
-execute if entity @a[tag=t_pm_owner,limit=1,scores={stat_hp=..6}] run tellraw @a[tag=t_pm_owner] {"color":"red","type":"text","text":"You don't have the appetite right now."}
+execute if entity @a[tag=t_pm_owner,limit=1,scores={stat_hp=..6}] run tellraw @a[tag=t_pm_owner] {color:"red","type":text,text:"You don't have the appetite right now."}
 execute if entity @a[tag=t_pm_owner,limit=1,scores={stat_hp=..6}] run return run scoreboard players set @a[tag=t_pm_owner,limit=1] trinket_charges_modify 1
 
 # Apply potion effects

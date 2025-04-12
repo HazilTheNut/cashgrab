@@ -12,4 +12,4 @@ execute store result score @a[tag=t_pm_owner,limit=1] cv_E run data get entity @
 execute store result score @a[tag=t_pm_owner,limit=1] cv_F run data get entity @a[tag=t_pm_owner,limit=1] Pos[1]
 execute store result score @a[tag=t_pm_owner,limit=1] cv_G run data get entity @a[tag=t_pm_owner,limit=1] Pos[2]
 
-tellraw @a[tag=t_pm_owner,limit=1] [{"type":"text","text":"Anchor set to your current position","color": "aqua"}]
+tellraw @a[tag=t_pm_owner,limit=1] [{"type":text,text:"Anchor set to your current position",color: "aqua"}]

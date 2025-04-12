@@ -9,11 +9,11 @@
 # Arguments:
 #	slot	: Inventory slot to insert into
 
-$item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:silence_armor_trim_smithing_template[\
-minecraft:item_name="[{\"color\":\"dark_aqua\",\"italic\":false,\"text\":\"<Class>\"},{\"color\":\"white\",\"text\":\" Hexblade\"}]",\
+$item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:clay_ball[\
+minecraft:item_name=[{color:"dark_aqua",italic:false,text:"<Class>"},{color:"white",text:" Hexblade"}],\
+minecraft:item_model="minecraft:silence_armor_trim_smithing_template",\
 minecraft:custom_data={is_cts_icon:1},\
-minecraft:hide_additional_tooltip={},\
 minecraft:lore=[\
-"{\"color\":\"dark_gray\",\"italic\":true,\"text\":\"Hex your enemies and\"}",\
-"{\"color\":\"dark_gray\",\"italic\":true,\"text\":\" get the drop on them.\"}",\
+{color:"dark_gray",italic:true,text:"Hex your enemies and"},\
+{color:"dark_gray",italic:true,text:" get the drop on them."},\
 ]] 1

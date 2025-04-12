@@ -25,6 +25,8 @@ execute if entity @a[tag=t_pm_owner,limit=1,scores={evl_death=1..,activity_state
 # Set dead player activity_state
 execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches 0 run scoreboard players set @a[tag=t_pm_owner,limit=1,scores={evl_death=1..,activity_state=0..29}] activity_state 0
 execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches 1.. run scoreboard players set @a[tag=t_pm_owner,limit=1,scores={evl_death=1..,activity_state=0..29}] activity_state 10
+# Release dead player from grabs
+tag @a[tag=t_pm_owner,limit=1,scores={evl_death=1..}] add t_grab_release
 # Tag dead player to handle when they respawn
 tag @a[tag=t_pm_owner,limit=1,scores={evl_death=1..}] add t_died
 

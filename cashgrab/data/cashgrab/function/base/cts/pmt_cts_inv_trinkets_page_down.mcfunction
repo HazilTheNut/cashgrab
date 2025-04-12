@@ -10,7 +10,7 @@
 #	slot	:	Inventory slot to insert into
 
 $execute if score @a[tag=t_pm_owner,limit=1] __cts_trinkets_page_idx < NUM_CTS_TRINKETS_PAGE_IDX_MAX num run item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:glass_pane[\
-minecraft:item_name="[{\"color\":\"gold\",\"italic\":false,\"text\":\"<Next Page>\"}]"\
+minecraft:item_name=[{color:"gold",italic:false,text:"<Next Page>"}]\
 ] 1
 
 execute if score @a[tag=t_pm_owner,limit=1] __cts_trinkets_page_idx < NUM_CTS_TRINKETS_PAGE_IDX_MAX num run return 0
