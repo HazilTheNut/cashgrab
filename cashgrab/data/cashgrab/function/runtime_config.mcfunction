@@ -13,7 +13,7 @@
 #	-	Prevents player activity_state values from being written to by the datapack
 #	-	Tags used to teleport players to lobby/respawn room are not issued
 #	-	Scoreboard display is not updated
-scoreboard players set DEVELOPER_MODE num 1
+scoreboard players set DEVELOPER_MODE num 0
 
 # Enables coin spilling mechanics.
 #	While enabled, players at or above 90% of the goal number of coins
