@@ -1,16 +1,18 @@
 
 # --- Map selection backdrop
-fill 28 -18 57 28 -18 59 minecraft:polished_blackstone
-fill 28 -18 63 28 -18 65 minecraft:polished_blackstone
-fill 28 -18 69 28 -18 71 minecraft:polished_blackstone
+fill 28 -18 57 28 -17 59 minecraft:polished_blackstone
+fill 28 -18 63 28 -17 65 minecraft:polished_blackstone
+fill 28 -18 69 28 -17 71 minecraft:polished_blackstone
 
 # Place gold block behind selected map
 execute if score CGAW_CFG_MAP_ID num matches 101 run setblock 28 -18 57 minecraft:gold_block
 execute if score CGAW_CFG_MAP_ID num matches 102 run setblock 28 -18 58 minecraft:gold_block
 execute if score CGAW_CFG_MAP_ID num matches 103 run setblock 28 -18 59 minecraft:gold_block
+execute if score CGAW_CFG_MAP_ID num matches 104 run setblock 28 -17 57 minecraft:gold_block
 
 execute if score CGAW_CFG_MAP_ID num matches 201 run setblock 28 -18 63 minecraft:gold_block
 execute if score CGAW_CFG_MAP_ID num matches 202 run setblock 28 -18 64 minecraft:gold_block
+execute if score CGAW_CFG_MAP_ID num matches 203 run setblock 28 -18 65 minecraft:gold_block
 
 execute if score CGAW_CFG_MAP_ID num matches 301 run setblock 28 -18 69 minecraft:gold_block
 execute if score CGAW_CFG_MAP_ID num matches 302 run setblock 28 -18 70 minecraft:gold_block
@@ -42,6 +44,14 @@ setblock 27 -18 59 minecraft:bamboo_wall_sign[facing=west]{is_waxed:1b,front_tex
 ""\
 ]}} replace
 
+# Dustworks
+setblock 27 -17 57 minecraft:bamboo_wall_sign[facing=west]{is_waxed:1b,front_text:{messages:[\
+"",\
+{type:"text",text:"[Dustworks]",click_event:{action:"run_command",command:"/trigger cgaw_selected_map_id_input set 104"}},\
+"",\
+""\
+]}} replace
+
 # Scald
 setblock 27 -18 63 minecraft:bamboo_wall_sign[facing=west]{is_waxed:1b,front_text:{messages:[\
 "",\
@@ -54,6 +64,14 @@ setblock 27 -18 63 minecraft:bamboo_wall_sign[facing=west]{is_waxed:1b,front_tex
 setblock 27 -18 64 minecraft:bamboo_wall_sign[facing=west]{is_waxed:1b,front_text:{messages:[\
 "",\
 {type:"text",text:"[Golden]",click_event:{action:"run_command",command:"/trigger cgaw_selected_map_id_input set 202"}},\
+"",\
+""\
+]}} replace
+
+# Bogpit
+setblock 27 -18 65 minecraft:bamboo_wall_sign[facing=west]{is_waxed:1b,front_text:{messages:[\
+"",\
+{type:"text",text:"[Bogpit]",click_event:{action:"run_command",command:"/trigger cgaw_selected_map_id_input set 203"}},\
 "",\
 ""\
 ]}} replace

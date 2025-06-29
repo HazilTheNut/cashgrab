@@ -96,6 +96,21 @@ rot_spawn_c:"0 0",\
 loc_spawn_d:"1113 94 -993",\
 rot_spawn_d:"180 0",\
 },\
+dustworks:{\
+size:1,\
+map_name:"Dustworks",\
+daytime:6000,\
+loc_cts:"1029 97 5001",\
+yaw_cts:"-90",\
+loc_spawn_a:"1087 109 4970",\
+rot_spawn_a:"-0 0",\
+loc_spawn_b:"1054 96 5009",\
+rot_spawn_b:"-90 0",\
+loc_spawn_c:"1066 109 5036",\
+rot_spawn_c:"180 0",\
+loc_spawn_d:"1102 101 5027",\
+rot_spawn_d:"180 0",\
+},\
 scald:{\
 size:2,\
 map_name:"Scald",\
@@ -125,6 +140,21 @@ loc_spawn_c:"1153 101 1999",\
 rot_spawn_c:"50 0",\
 loc_spawn_d:"1171 123 2016",\
 rot_spawn_d:"-180 -15",\
+},\
+bogpit:{\
+size:2,\
+map_name:"Bogpit",\
+daytime:12000,\
+loc_cts:"1041 94 -3999",\
+yaw_cts:"-90",\
+loc_spawn_a:"1116 104 -3964",\
+rot_spawn_a:"180 0",\
+loc_spawn_b:"1087 105 -4032",\
+rot_spawn_b:"-26 0",\
+loc_spawn_c:"1132 123 -3990",\
+rot_spawn_c:"180 0",\
+loc_spawn_d:"1067 117 -3991",\
+rot_spawn_d:"-132 0",\
 },\
 deepgrove:{\
 size:3,\
