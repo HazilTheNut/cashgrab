@@ -46,6 +46,9 @@ execute if score DEVELOPER_MODE num matches 0 if score NUM_GAMESTATE num matches
 # Reset player gravity to default
 attribute @a[tag=t_player_initialize,limit=1] minecraft:gravity base reset
 
+# Set maximum locator bar waypoint distance
+attribute @a[tag=t_player_initialize,limit=1] minecraft:waypoint_transmit_range base set 500
+
 # --- Initialize player scoreboard values
 
 # EID values
