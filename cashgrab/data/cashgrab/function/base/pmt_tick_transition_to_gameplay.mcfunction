@@ -24,6 +24,9 @@ tag @a[tag=t_pm_owner,limit=1] remove t_invisible
 # Set player gamemode
 execute if score DEVELOPER_MODE num matches 0 run gamemode adventure @a[tag=t_pm_owner,limit=1]
 
+# Set maximum locator bar waypoint distance
+attribute @a[tag=t_player_initialize,limit=1] minecraft:waypoint_transmit_range base set 500
+
 # Spawn protection potion effects
 effect clear @a[tag=t_pm_owner,limit=1]
 effect give @a[tag=t_pm_owner,limit=1] minecraft:saturation 7 1 false

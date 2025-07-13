@@ -21,6 +21,9 @@ function cashgrab:classes/pmt_class_init with entity @s data.class_info
 # Set player gamemode
 execute if score DEVELOPER_MODE num matches 0 run gamemode adventure @a[tag=t_pm_owner,limit=1]
 
+# Set maximum locator bar waypoint distance
+attribute @a[tag=t_player_initialize,limit=1] minecraft:waypoint_transmit_range base set 10
+
 # Grant saturation
 effect give @a[tag=t_pm_owner,limit=1] minecraft:saturation 7 1 false
 
