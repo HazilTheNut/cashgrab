@@ -1,0 +1,45 @@
+{
+    "replace": false,
+    "values": [
+        {
+            "id": "cashgrab:arcane_combo",
+            "required": false
+        },
+        {
+            "id": "cashgrab:chemical_combo",
+            "required": false
+        },
+        {
+            "id": "cashgrab:dark_combo",
+            "required": false
+        },
+        {
+            "id": "cashgrab:electric_combo",
+            "required": false
+        },
+        {
+            "id": "cashgrab:fire_combo",
+            "required": false
+        },
+        {
+            "id": "cashgrab:ice_combo",
+            "required": false
+        },
+        {
+            "id": "cashgrab:kinetic_combo",
+            "required": false
+        },
+        {
+            "id": "cashgrab:light_combo",
+            "required": false
+        },
+        {
+            "id": "cashgrab:melee_combo",
+            "required": false
+        },
+        {
+            "id": "cashgrab:ranged_combo",
+            "required": false
+        }
+    ]
+}

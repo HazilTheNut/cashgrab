@@ -1,0 +1,45 @@
+{
+    "replace": false,
+    "values": [
+        {
+            "id": "cashgrab:arcane_attack",
+            "required": false
+        },
+        {
+            "id": "cashgrab:chemical_attack",
+            "required": false
+        },
+        {
+            "id": "cashgrab:dark_attack",
+            "required": false
+        },
+        {
+            "id": "cashgrab:electric_attack",
+            "required": false
+        },
+        {
+            "id": "cashgrab:fire_attack",
+            "required": false
+        },
+        {
+            "id": "cashgrab:ice_attack",
+            "required": false
+        },
+        {
+            "id": "cashgrab:kinetic_attack",
+            "required": false
+        },
+        {
+            "id": "cashgrab:light_attack",
+            "required": false
+        },
+        {
+            "id": "cashgrab:melee_attack",
+            "required": false
+        },
+        {
+            "id": "cashgrab:ranged_attack",
+            "required": false
+        }
+    ]
+}
