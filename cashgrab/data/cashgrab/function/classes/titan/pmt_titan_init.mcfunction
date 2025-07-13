@@ -11,8 +11,8 @@
 # Class variable usage:
 #	cv_A	:	Power Strike cooldown timer (in ms)
 #	cv_B	:	Power Strike charge
-#	cv_C	:	
-#	cv_D	:	
+#	cv_C	:	Power Strike on ground cleanup timer
+#	cv_D	:	Power Strike timer originator EID
 #	cv_E	:	
 #	cv_F	:	
 #	cv_G	:	
