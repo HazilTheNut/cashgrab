@@ -31,7 +31,7 @@ function cashgrab:util/npe_col_entity_filter_hostile
 tag @e[tag=t_collision_candidate,distance=..4.25] add t_dmg_trgt
 function cashgrab:util/npe_dmg {\
 d_dmg_amount:7.5,\
-s_dmg_type:"minecraft:fireball",\
+s_dmg_type:"cashgrab:fire_explosion",\
 t_dmg_target:"t_dmg_trgt",\
 t_dmg_by:"t_dmg_by",\
 t_dmg_from:"t_dmg_from",\

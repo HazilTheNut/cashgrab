@@ -33,7 +33,7 @@ execute positioned ~-1 ~-2 ~-1 run tag @e[dx=2,dy=3,dz=2,tag=t_collision_candida
 
 function cashgrab:util/npe_dmg {\
 d_dmg_amount:4.5,\
-s_dmg_type:"minecraft:magic",\
+s_dmg_type:"cashgrab:light_volume",\
 t_dmg_target:"t_dmg_trgt",\
 t_dmg_by:"t_dmg_by",\
 t_dmg_from:"t_dmg_from",\
