@@ -26,6 +26,18 @@
             "required": false
         },
         {
+            "id": "cashgrab:kinetic_attack",
+            "required": false
+        },
+        {
+            "id": "cashgrab:kinetic_combo",
+            "required": false
+        },
+        {
+            "id": "cashgrab:kinetic_explosion",
+            "required": false
+        },
+        {
             "id": "cashgrab:kinetic_volume",
             "required": false
         },
