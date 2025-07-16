@@ -24,7 +24,7 @@
 execute unless score @a[tag=t_pm_owner,limit=1] cv_A matches 25.. run return 0
 
 # sfx
-playsound minecraft:entity.firework_rocket.launch player @a ~ ~ ~ 1.0 2.0
+playsound minecraft:entity.firework_rocket.launch player @a ~ ~ ~ 1.0 1.75
 
 # Spawn Star Shower
 execute positioned ~ ~1.625 ~ rotated ~ -70 run function cashgrab:util/npe_raycast {\

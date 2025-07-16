@@ -11,7 +11,7 @@
 #   dyaw    :   Yaw offset
 #   f_speed_mpt    :   Missile speed
 
-playsound minecraft:entity.experience_orb.pickup player @a ~ ~ ~ 0.25 1.1
+playsound minecraft:entity.firework_rocket.launch player @a ~ ~ ~ 0.33 2.0
 
 $execute rotated ~$(dyaw) -10 run function cashgrab:util/npe_create_missile {\
 f_speed_mpt:$(f_speed_mpt)f,\
