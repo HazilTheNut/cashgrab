@@ -1,0 +1,85 @@
+{
+    "replace": false,
+    "values": [
+        {
+            "id": "cashgrab:arcane_explosion",
+            "required": false
+        },
+        {
+            "id": "cashgrab:arcane_volume",
+            "required": false
+        },
+        {
+            "id": "cashgrab:chemical_explosion",
+            "required": false
+        },
+        {
+            "id": "cashgrab:chemical_volume",
+            "required": false
+        },
+        {
+            "id": "cashgrab:dark_explosion",
+            "required": false
+        },
+        {
+            "id": "cashgrab:dark_volume",
+            "required": false
+        },
+        {
+            "id": "cashgrab:electric_explosion",
+            "required": false
+        },
+        {
+            "id": "cashgrab:electric_volume",
+            "required": false
+        },
+        {
+            "id": "cashgrab:fire_explosion",
+            "required": false
+        },
+        {
+            "id": "cashgrab:fire_volume",
+            "required": false
+        },
+        {
+            "id": "cashgrab:ice_explosion",
+            "required": false
+        },
+        {
+            "id": "cashgrab:ice_volume",
+            "required": false
+        },
+        {
+            "id": "cashgrab:kinetic_explosion",
+            "required": false
+        },
+        {
+            "id": "cashgrab:kinetic_volume",
+            "required": false
+        },
+        {
+            "id": "cashgrab:light_explosion",
+            "required": false
+        },
+        {
+            "id": "cashgrab:light_volume",
+            "required": false
+        },
+        {
+            "id": "cashgrab:melee_explosion",
+            "required": false
+        },
+        {
+            "id": "cashgrab:melee_volume",
+            "required": false
+        },
+        {
+            "id": "cashgrab:ranged_explosion",
+            "required": false
+        },
+        {
+            "id": "cashgrab:ranged_volume",
+            "required": false
+        }
+    ]
+}

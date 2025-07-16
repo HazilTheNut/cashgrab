@@ -13,8 +13,8 @@
 # Class variable usage:
 #	cv_A	:	Power Strike cooldown timer (in ms)
 #	cv_B	:	Power Strike charge
-#	cv_C	:	
-#	cv_D	:	
+#	cv_C	:	Power Strike on ground cleanup timer
+#	cv_D	:	Power Strike timer originator EID
 #	cv_E	:	
 #	cv_F	:	
 #	cv_G	:	
@@ -35,9 +35,14 @@ tag @a remove t_titan_set_power_strike_timer
 execute as @n[type=!minecraft:player,tag=t_collision_found,scores={eid_state=1..}] at @s run function cashgrab:util/npe_create_timer {\
 i_lifetime_ticks:200,\
 b_anchor_at_pos:0,\
-t_timer_name:"t_titan_power_strike_knockback_tmr",\
+t_timer_name:"t_titan_power_strike_knockback_tmr_init",\
 func_npe_start:"cashgrab:util/noop",\
 func_npe_tick:"cashgrab:classes/titan/power_strike_timer_tick",\
 func_npe_end:"cashgrab:util/noop",\
 b_assign_as_peer:0,\
 }
+
+# Initialize knockback timer
+scoreboard players operation @e[tag=t_titan_power_strike_knockback_tmr_init] cv_D = @s eid_owner
+tag @e[tag=t_titan_power_strike_knockback_tmr_init] add t_titan_power_strike_knockback_tmr
+tag @e[tag=t_titan_power_strike_knockback_tmr_init] remove t_titan_power_strike_knockback_tmr_init

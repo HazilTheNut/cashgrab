@@ -1,0 +1,117 @@
+{
+    "replace": false,
+    "values": [
+        {
+            "id": "cashgrab:arcane_attack",
+            "required": false
+        },
+        {
+            "id": "cashgrab:arcane_combo",
+            "required": false
+        },
+        {
+            "id": "cashgrab:arcane_explosion",
+            "required": false
+        },
+        {
+            "id": "cashgrab:arcane_volume",
+            "required": false
+        },
+        {
+            "id": "cashgrab:chemical_attack",
+            "required": false
+        },
+        {
+            "id": "cashgrab:chemical_combo",
+            "required": false
+        },
+        {
+            "id": "cashgrab:chemical_explosion",
+            "required": false
+        },
+        {
+            "id": "cashgrab:chemical_volume",
+            "required": false
+        },        
+        {
+            "id": "cashgrab:dark_attack",
+            "required": false
+        },
+        {
+            "id": "cashgrab:dark_combo",
+            "required": false
+        },
+        {
+            "id": "cashgrab:dark_explosion",
+            "required": false
+        },
+        {
+            "id": "cashgrab:dark_volume",
+            "required": false
+        },
+        {
+            "id": "cashgrab:electric_attack",
+            "required": false
+        },
+        {
+            "id": "cashgrab:electric_combo",
+            "required": false
+        },
+        {
+            "id": "cashgrab:electric_explosion",
+            "required": false
+        },
+        {
+            "id": "cashgrab:electric_volume",
+            "required": false
+        },
+        {
+            "id": "cashgrab:fire_attack",
+            "required": false
+        },
+        {
+            "id": "cashgrab:fire_combo",
+            "required": false
+        },
+        {
+            "id": "cashgrab:fire_explosion",
+            "required": false
+        },
+        {
+            "id": "cashgrab:fire_volume",
+            "required": false
+        },
+        {
+            "id": "cashgrab:ice_attack",
+            "required": false
+        },
+        {
+            "id": "cashgrab:ice_combo",
+            "required": false
+        },
+        {
+            "id": "cashgrab:ice_explosion",
+            "required": false
+        },
+        {
+            "id": "cashgrab:ice_volume",
+            "required": false
+        },
+        {
+            "id": "cashgrab:light_attack",
+            "required": false
+        },
+        {
+            "id": "cashgrab:light_combo",
+            "required": false
+        },
+        {
+            "id": "cashgrab:light_explosion",
+            "required": false
+        },
+        {
+            "id": "cashgrab:light_volume",
+            "required": false
+        }
+    ]
+}

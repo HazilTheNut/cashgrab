@@ -1,0 +1,21 @@
+{
+    "replace": false,
+    "values": [
+        {
+            "id": "cashgrab:fire_attack",
+            "required": false
+        },
+        {
+            "id": "cashgrab:fire_combo",
+            "required": false
+        },
+        {
+            "id": "cashgrab:fire_explosion",
+            "required": false
+        },
+        {
+            "id": "cashgrab:fire_volume",
+            "required": false
+        }
+    ]
+}

@@ -29,7 +29,7 @@ tag @e[distance=..5.5,tag=t_collision_candidate] add t_dmg_trgt
 tag @s add t_dmg_by
 function cashgrab:util/npe_dmg {\
 d_dmg_amount:4.0,\
-s_dmg_type:"minecraft:magic",\
+s_dmg_type:"cashgrab:light_volume",\
 t_dmg_target:"t_dmg_trgt",\
 t_dmg_by:"t_dmg_by",\
 t_dmg_from:"t_dmg_from",\

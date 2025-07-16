@@ -1,0 +1,21 @@
+{
+    "replace": false,
+    "values": [
+        {
+            "id": "cashgrab:ranged_attack",
+            "required": false
+        },
+        {
+            "id": "cashgrab:ranged_combo",
+            "required": false
+        },
+        {
+            "id": "cashgrab:ranged_explosion",
+            "required": false
+        },
+        {
+            "id": "cashgrab:ranged_volume",
+            "required": false
+        }
+    ]
+}

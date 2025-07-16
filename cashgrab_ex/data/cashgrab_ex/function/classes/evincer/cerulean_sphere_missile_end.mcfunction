@@ -39,7 +39,7 @@ tag @e[tag=t_collision_found] add t_dmg_trgt
 effect give @e[tag=t_collision_found] minecraft:slowness 3 2
 function cashgrab:util/npe_dmg {\
 d_dmg_amount:6.0,\
-s_dmg_type:"minecraft:magic",\
+s_dmg_type:"cashgrab:light_attack",\
 t_dmg_target:"t_dmg_trgt",\
 t_dmg_by:"t_dmg_by",\
 t_dmg_from:"t_dmg_from",\

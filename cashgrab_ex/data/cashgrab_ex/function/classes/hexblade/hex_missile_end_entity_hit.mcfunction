@@ -47,7 +47,7 @@ execute if entity @e[tag=t_hexblade_apply_hex,type=!minecraft:player] as @n[tag=
 tag @s add t_dmg_by
 function cashgrab:util/npe_dmg {\
 d_dmg_amount:3.0,\
-s_dmg_type:"minecraft:wither",\
+s_dmg_type:"cashgrab:dark_attack",\
 t_dmg_target:"t_hexblade_apply_hex",\
 t_dmg_by:"t_dmg_by",\
 t_dmg_from:"t_hexblade_hex_originator",\
