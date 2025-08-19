@@ -10,6 +10,7 @@ execute if score CGAW_CFG_MAP_ID num matches 101 run data modify storage cgaw:ru
 execute if score CGAW_CFG_MAP_ID num matches 102 run data modify storage cgaw:runtime active_map set from storage cgaw:world_info map_data.crystal
 execute if score CGAW_CFG_MAP_ID num matches 103 run data modify storage cgaw:runtime active_map set from storage cgaw:world_info map_data.sunken
 execute if score CGAW_CFG_MAP_ID num matches 104 run data modify storage cgaw:runtime active_map set from storage cgaw:world_info map_data.dustworks
+execute if score CGAW_CFG_MAP_ID num matches 105 run data modify storage cgaw:runtime active_map set from storage cgaw:world_info map_data.polaris
 
 execute if score CGAW_CFG_MAP_ID num matches 201 run data modify storage cgaw:runtime active_map set from storage cgaw:world_info map_data.scald
 execute if score CGAW_CFG_MAP_ID num matches 202 run data modify storage cgaw:runtime active_map set from storage cgaw:world_info map_data.golden

@@ -111,6 +111,21 @@ rot_spawn_c:"180 0",\
 loc_spawn_d:"1102 101 5027",\
 rot_spawn_d:"180 0",\
 },\
+polaris:{\
+size:1,\
+map_name:"Polaris",\
+daytime:13000,\
+loc_cts:"1052 95 -4999",\
+yaw_cts:"-90",\
+loc_spawn_a:"1098 102 -5030",\
+rot_spawn_a:"0 0",\
+loc_spawn_b:"1085 94 -4989",\
+rot_spawn_b:"-90 0",\
+loc_spawn_c:"1122 101 -4961",\
+rot_spawn_c:"180 0",\
+loc_spawn_d:"1138 103 -4987",\
+rot_spawn_d:"180 0",\
+},\
 scald:{\
 size:2,\
 map_name:"Scald",\

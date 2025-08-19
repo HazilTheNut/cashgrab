@@ -9,6 +9,7 @@ execute if score CGAW_CFG_MAP_ID num matches 101 run setblock 28 -18 57 minecraf
 execute if score CGAW_CFG_MAP_ID num matches 102 run setblock 28 -18 58 minecraft:gold_block
 execute if score CGAW_CFG_MAP_ID num matches 103 run setblock 28 -18 59 minecraft:gold_block
 execute if score CGAW_CFG_MAP_ID num matches 104 run setblock 28 -17 57 minecraft:gold_block
+execute if score CGAW_CFG_MAP_ID num matches 105 run setblock 28 -17 58 minecraft:gold_block
 
 execute if score CGAW_CFG_MAP_ID num matches 201 run setblock 28 -18 63 minecraft:gold_block
 execute if score CGAW_CFG_MAP_ID num matches 202 run setblock 28 -18 64 minecraft:gold_block
@@ -48,6 +49,14 @@ setblock 27 -18 59 minecraft:bamboo_wall_sign[facing=west]{is_waxed:1b,front_tex
 setblock 27 -17 57 minecraft:bamboo_wall_sign[facing=west]{is_waxed:1b,front_text:{messages:[\
 "",\
 {type:"text",text:"[Dustworks]",click_event:{action:"run_command",command:"/trigger cgaw_selected_map_id_input set 104"}},\
+"",\
+""\
+]}} replace
+
+# Polaris
+setblock 27 -17 58 minecraft:bamboo_wall_sign[facing=west]{is_waxed:1b,front_text:{messages:[\
+"",\
+{type:"text",text:"[Polaris]",click_event:{action:"run_command",command:"/trigger cgaw_selected_map_id_input set 105"}},\
 "",\
 ""\
 ]}} replace
