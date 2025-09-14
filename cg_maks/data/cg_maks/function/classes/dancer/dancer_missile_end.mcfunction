@@ -32,7 +32,7 @@ tag @e[tag=t_collision_candidate,distance=..3] add t_dmg_trgt
 # Apply damage (dependent on stack sizes)
 execute if score @a[tag=t_dmg_from,limit=1] cv_A matches 0 run function cashgrab:util/npe_dmg {\
 d_dmg_amount:4.0,\
-s_dmg_type:"cashgrab:light_explosion",\
+s_dmg_type:"minecraft:player_explosion",\
 t_dmg_target:"t_dmg_trgt",\
 t_dmg_by:"t_dmg_by",\
 t_dmg_from:"t_dmg_from",\
@@ -40,7 +40,7 @@ b_remove_tags:1}
 
 execute if score @a[tag=t_dmg_from,limit=1] cv_A matches 1 run function cashgrab:util/npe_dmg {\
 d_dmg_amount:6.0,\
-s_dmg_type:"cashgrab:light_explosion",\
+s_dmg_type:"minecraft:player_explosion",\
 t_dmg_target:"t_dmg_trgt",\
 t_dmg_by:"t_dmg_by",\
 t_dmg_from:"t_dmg_from",\
@@ -48,7 +48,7 @@ b_remove_tags:1}
 
 execute if score @a[tag=t_dmg_from,limit=1] cv_A matches 2 run function cashgrab:util/npe_dmg {\
 d_dmg_amount:8.0,\
-s_dmg_type:"cashgrab:light_explosion",\
+s_dmg_type:"minecraft:player_explosion",\
 t_dmg_target:"t_dmg_trgt",\
 t_dmg_by:"t_dmg_by",\
 t_dmg_from:"t_dmg_from",\
@@ -56,7 +56,7 @@ b_remove_tags:1}
 
 execute if score @a[tag=t_dmg_from,limit=1] cv_A matches 3 run function cashgrab:util/npe_dmg {\
 d_dmg_amount:10.0,\
-s_dmg_type:"cashgrab:light_explosion",\
+s_dmg_type:"minecraft:player_explosion",\
 t_dmg_target:"t_dmg_trgt",\
 t_dmg_by:"t_dmg_by",\
 t_dmg_from:"t_dmg_from",\

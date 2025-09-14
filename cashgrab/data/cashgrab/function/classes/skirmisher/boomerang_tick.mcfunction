@@ -78,9 +78,9 @@ tag @a[tag=t_boomerang_owner] add t_dmg_from
 
 # Load args based on weapon type
 execute if score @s cv_E matches 1 run data merge storage cashgrab:boomerang_dmg_args \
-{d_dmg_amount:6.0,s_dmg_type:"minecraft:melee_explosion",t_dmg_target:"t_dmg_trgt",t_dmg_by:"t_dmg_by",t_dmg_from:"t_dmg_from",b_remove_tags:1}
+{d_dmg_amount:6.0,s_dmg_type:"minecraft:player_attack",t_dmg_target:"t_dmg_trgt",t_dmg_by:"t_dmg_by",t_dmg_from:"t_dmg_from",b_remove_tags:1}
 execute if score @s cv_E matches 2 run data merge storage cashgrab:boomerang_dmg_args \
-{d_dmg_amount:4.0,s_dmg_type:"minecraft:melee_explosion",t_dmg_target:"t_dmg_trgt",t_dmg_by:"t_dmg_by",t_dmg_from:"t_dmg_from",b_remove_tags:1}
+{d_dmg_amount:4.0,s_dmg_type:"minecraft:player_attack",t_dmg_target:"t_dmg_trgt",t_dmg_by:"t_dmg_by",t_dmg_from:"t_dmg_from",b_remove_tags:1}
 
 function cashgrab:util/npe_dmg with storage cashgrab:boomerang_dmg_args
 

@@ -6,7 +6,7 @@ damage_methods = ['attack', 'combo', 'explosion', 'volume']
 
 def generate_file(type, method):
     json_dict = {'exhaustion':0.0, 'scaling':'never', 'death_message_type':'default'}
-    fp = open(f'{type}_{method}.json', 'w')
+    fp = open(f'cga_{type}_{method}.json', 'w')
     # message_id
     if method == 'explosion' or method == 'volume':
         json_dict['message_id'] = 'player_explosion'

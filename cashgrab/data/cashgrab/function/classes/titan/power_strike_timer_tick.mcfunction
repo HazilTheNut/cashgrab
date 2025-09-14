@@ -11,8 +11,8 @@
 # Class variable usage:
 #	cv_A	:	Power Strike cooldown timer (in ms)
 #	cv_B	:	Power Strike charge
-#	cv_C	:	Power Strike on ground cleanup timer
-#	cv_D	:	Power Strike timer originator EID
+#	cv_C	:	
+#	cv_D	:	
 #	cv_E	:	
 #	cv_F	:	
 #	cv_G	:	
@@ -31,9 +31,16 @@ execute unless block ~ ~1 ~1 #cashgrab:nonsolid run tag @s add t_hit_wall
 execute unless block ~-1 ~1 ~ #cashgrab:nonsolid run tag @s add t_hit_wall
 execute unless block ~ ~1 ~-1 #cashgrab:nonsolid run tag @s add t_hit_wall
 
-# If hit wall, damage, apply slow, and clean up
-execute if entity @s[tag=t_hit_wall] run function cashgrab:classes/titan/power_strike_timer_hurt_owner
+# Find owner and tag them with t_eid_matches
+execute store result storage cashgrab:find_eid_args eid int 1 run scoreboard players get @s eid_owner
+function cashgrab:util/find_eid_self with storage cashgrab:find_eid_args
 
-# If owner is on the ground for 8+ server ticks, clean up
-execute if entity @e[tag=t_timer_owner,nbt={OnGround:1b}] run scoreboard players add @s cv_C 1
-execute if score @s cv_C matches 8.. run tag @s add t_cleanup
+# If hit wall, apply slow and clean up
+execute if entity @s[tag=t_hit_wall] run particle minecraft:cloud ~ ~0.5 ~ 0.75 0.75 0.75 0 30
+execute if entity @s[tag=t_hit_wall] run playsound minecraft:block.grass.break player @a ~ ~ ~ 1.0 0.5
+execute if entity @s[tag=t_hit_wall] run effect give @e[tag=t_eid_matches] minecraft:slowness 3 2
+tag @s[tag=t_hit_wall] add t_cleanup
+
+# If owner is on the ground for 2+ server ticks, clean up
+execute if entity @e[tag=t_eid_matches,nbt={OnGround:1b}] run scoreboard players add @s cv_B 1
+execute if score @s cv_B matches 2.. run tag @s add t_cleanup

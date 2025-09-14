@@ -31,7 +31,7 @@ tag @a[tag=t_eid_matches,limit=1] add t_dmg_from
 tag @s add t_dmg_by
 function cashgrab:util/npe_dmg {\
 d_dmg_amount:4.0,\
-s_dmg_type:"cashgrab:arcane_attack",\
+s_dmg_type:"minecraft:indirect_magic",\
 t_dmg_target:"t_collision_found",\
 t_dmg_by:"t_dmg_by",\
 t_dmg_from:"t_dmg_from",\

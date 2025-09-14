@@ -44,7 +44,7 @@ tag @e[tag=t_collision_candidate,distance=..4] add t_dmg_trgt
 # Apply damage
 function cashgrab:util/npe_dmg {\
 d_dmg_amount:7.5,\
-s_dmg_type:"cashgrab:ranged_explosion",\
+s_dmg_type:"minecraft:player_explosion",\
 t_dmg_target:"t_dmg_trgt",\
 t_dmg_by:"t_dmg_by",\
 t_dmg_from:"t_dmg_from",\

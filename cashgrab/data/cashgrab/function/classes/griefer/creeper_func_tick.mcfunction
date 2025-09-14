@@ -65,7 +65,7 @@ tellraw @a[tag=t_debug] [{"type":text,text:"classes/griefer/creeper_func_tick: a
 
 function cashgrab:util/npe_dmg {\
 d_dmg_amount:10.0,\
-s_dmg_type:"cashgrab:fire_explosion",\
+s_dmg_type:"minecraft:player_explosion",\
 t_dmg_target:"t_dmg_trgt",\
 t_dmg_by:"t_dmg_by",\
 t_dmg_from:"t_dmg_from",\
