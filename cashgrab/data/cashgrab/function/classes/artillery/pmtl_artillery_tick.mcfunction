@@ -22,7 +22,7 @@
 
 # Power Shot usage
 tag @a[tag=t_pm_owner,limit=1,scores={evl_bows=1..,cv_E=1..}] add t_artillery_inv_bow
-scoreboard players set @a[tag=t_pm_owner,limit=1,scores={evl_bows=1..,cv_E=1..}] cv_F 4000
+scoreboard players set @a[tag=t_pm_owner,limit=1,scores={evl_bows=1..,cv_E=1..}] cv_F 3000
 scoreboard players set @a[tag=t_pm_owner,limit=1,scores={evl_bows=1..,cv_E=1..}] cv_E 0
 
 # Power Shot cooldown tick

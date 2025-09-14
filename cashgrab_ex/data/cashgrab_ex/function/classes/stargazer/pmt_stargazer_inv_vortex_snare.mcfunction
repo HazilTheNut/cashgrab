@@ -20,7 +20,7 @@
 
 
 # Display if Mana is sufficient and lockout timer is ended
-item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=10..,cv_C=..0}] hotbar.2 with minecraft:gold_ingot[\
+item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=11..,cv_C=..0}] hotbar.2 with minecraft:gold_ingot[\
 minecraft:item_name=[{color:"green",italic:false,text:"[Use]"},{color:"white",text:" Vortex Snare"}],\
 minecraft:item_model="minecraft:spire_armor_trim_smithing_template",\
 minecraft:consumable={\
@@ -34,11 +34,11 @@ minecraft:lore=[\
 {color:"gray",italic:false,text:" that pulls in and traps"},\
 {color:"gray",italic:false,text:" one enemy."},\
 {color:"dark_gray",italic:false,text:"====="},\
-[{color:"gray",italic:false,text:"Costs "},{color:"aqua",italic:false,text:"10"},{color:"gray",italic:false,text:" Mana"}]\
+[{color:"gray",italic:false,text:"Costs "},{color:"aqua",italic:false,text:"11"},{color:"gray",italic:false,text:" Mana"}]\
 ]] 1
 
 # Display "Out of Mana" if insufficent and lockout timer is ended
-item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=..9,cv_C=..0}] hotbar.2 with minecraft:red_stained_glass_pane[\
+item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=..10,cv_C=..0}] hotbar.2 with minecraft:red_stained_glass_pane[\
 minecraft:item_name=[{color:"red",italic:false,text:"Out of Mana"}],\
 ] 1
 

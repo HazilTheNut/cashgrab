@@ -42,7 +42,7 @@ execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1..,evc_iron_ingots=1..
 execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=6..,evc_resin_bricks=1..}] run function cashgrab_ex:classes/stargazer/pmtl_stargazer_cast_rift_glyph
 
 # Vortex Snare
-execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=10..,evc_gold_ingots=1..}] run function cashgrab_ex:classes/stargazer/pmtl_stargazer_cast_vortex_snare
+execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=11..,evc_gold_ingots=1..}] run function cashgrab_ex:classes/stargazer/pmtl_stargazer_cast_vortex_snare
 
 # =========================
 # Spell lockout timer

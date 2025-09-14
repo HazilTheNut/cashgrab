@@ -22,8 +22,8 @@
 
 # Create missile
 function cashgrab:util/npe_create_missile {\
-f_speed_mpt:0.95f,\
-i_lifetime_ticks:60,\
+f_speed_mpt:1.00f,\
+i_lifetime_ticks:45,\
 i_origin_loc:1,\
 f_focal_dist_m:35,\
 i_gravity_vy_mmpt:0,\
@@ -39,8 +39,11 @@ func_npe_end:"cashgrab_ex:classes/stargazer/npe_vortex_snare_missile_end",\
 b_assign_as_peer:1,\
 }
 
+# sfx
+playsound minecraft:entity.guardian.hurt player @a ~ ~ ~ 1.0 2.0
+
 # Decrement Mana
-scoreboard players remove @a[tag=t_pm_owner,limit=1] cv_A 10
+scoreboard players remove @a[tag=t_pm_owner,limit=1] cv_A 11
 
 # Set lockout timer to 0.6 seconds
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 12

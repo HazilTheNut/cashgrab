@@ -30,6 +30,6 @@ minecraft:lore=[\
 
 execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 0 run return 0
 
-# Display current scrap count if >= 1
+# Display current mana count if >= 1
 execute store result storage cashgrab_ex:stargazer_args count int 1 run scoreboard players get @a[tag=t_pm_owner,limit=1] cv_A
 function cashgrab_ex:classes/stargazer/pmt_stargazer_inv_mana_count with storage cashgrab_ex:stargazer_args

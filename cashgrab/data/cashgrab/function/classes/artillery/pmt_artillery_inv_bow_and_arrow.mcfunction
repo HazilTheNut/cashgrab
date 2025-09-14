@@ -21,12 +21,14 @@
 # Infinibow
 execute unless items entity @a[tag=t_pm_owner,limit=1] hotbar.0 minecraft:bow run clear @a[tag=t_pm_owner,limit=1] minecraft:bow
 
-item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_E=..0}] hotbar.0 with minecraft:bow[\
+item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_E=..0}] hotbar.0 with minecraft:bow[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},\
 minecraft:custom_name={italic:false,color:"red",text:"Infinibow"},\
 minecraft:enchantment_glint_override=false,\
 minecraft:enchantments={infinity:1}]
 
-item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_E=1..}] hotbar.0 with minecraft:bow[\
+item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_E=1..}] hotbar.0 with minecraft:bow[minecraft:unbreakable={},\
+minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},\
 minecraft:custom_name={italic:false,color:"red",text:"Infinibow"},\
 minecraft:enchantment_glint_override=true,\
 minecraft:enchantments={infinity:1,power:1,punch:3}]
@@ -41,7 +43,7 @@ minecraft:lore=[\
 {color:"gray",italic:false,text:" with bonus damage, "},\
 {color:"gray",italic:false,text:" knockback, and slowness."},\
 {color:"dark_gray",italic:false,text:"====="},\
-[{color:"yellow",italic:false,text:"4"},{color:"gray",italic:false,text:" sec cooldown"}]\
+[{color:"yellow",italic:false,text:"3"},{color:"gray",italic:false,text:" sec cooldown"}]\
 ]\
 ]
 
@@ -56,6 +58,6 @@ minecraft:lore=[\
 {color:"gray",italic:false,text:" with bonus damage, "},\
 {color:"gray",italic:false,text:" knockback, and slowness."},\
 {color:"dark_gray",italic:false,text:"====="},\
-[{color:"yellow",italic:false,text:"4"},{color:"gray",italic:false,text:" sec cooldown"}]\
+[{color:"yellow",italic:false,text:"3"},{color:"gray",italic:false,text:" sec cooldown"}]\
 ]\
 ]

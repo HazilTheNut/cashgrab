@@ -31,5 +31,5 @@ execute if score @s cv_E matches 5 run playsound minecraft:entity.breeze.inhale 
 execute if score @s cv_E matches 5 run scoreboard players set @s cv_E 0
 
 # Slow down missile
-execute store result entity @s data.f_speed_mpt float 0.000865 run data get entity @s data.f_speed_mpt 1000
+execute store result entity @s data.f_speed_mpt float 0.000850 run data get entity @s data.f_speed_mpt 1000
 tag @s add t_missile_calc_base_vel
