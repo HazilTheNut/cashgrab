@@ -17,8 +17,8 @@ minecraft:lore=[\
 {italic:false,color:"dark_gray",text:""},\
 {italic:false,color:"yellow",text:"To continue, head to the next area."},\
 {italic:false,color:"dark_gray",text:""},\
-[{italic:false,color:"gray",text:"You may need to "},{color:"gold",text:"set your Chat Settings"}],\
-[{italic:false,color:"gold",text:" > Unfocused Height to 75px"},{color:"gray",text:" or "},{color:"gold",text:"pick up a transcript"}],\
-[{italic:false,color:"gray",text:" from a nearby sign for the best experience."}],\
+[{italic:false,color:"gray",text:"If these messages are being cut off, be sure to"}],\
+[{italic:false,color:"gold",text:" pick up a transcript"},{color:"gray",text:" from a nearby sign and"}],\
+[{italic:false,color:"gray",text:" read it in your inventory for the best experience."}],\
 ]\
 ] 1

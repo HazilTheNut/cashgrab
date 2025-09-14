@@ -15,9 +15,7 @@ tellraw @a[tag=t_pm_owner,limit=1] [\
 {color:"aqua",text:"Return"},\
 {color:"gray",text:" item on your hotbar."},\
 {color:"yellow",text:"\n\nTo continue, head to the next area."},\
-{color:"gray",text:"\n\nYou may need to "},\
-{color:"gold",text:"set your Chat Settings > Unfocused Height to 75px"},\
-{color:"gray",text:" or "},\
+{color:"gray",text:"\n\nIf these messages are being cut off, be sure to\n "},\
 {color:"gold",text:"pick up a transcript"},\
-{color:"gray",text:" from a nearby sign for the best experience."}\
+{color:"gray",text:" from a nearby sign and\n read it in your inventory for the best experience."}\
 ]
