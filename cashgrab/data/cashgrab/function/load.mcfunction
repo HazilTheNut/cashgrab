@@ -536,7 +536,7 @@ team join team_coin_goal GOAL
 # =============================
 # Class and Trinket info
 
-scoreboard players set NUM_CTS_CLASSES_PAGE_SIZE num 15
+scoreboard players set NUM_CTS_CLASSES_PAGE_SIZE num 12
 scoreboard players set NUM_CTS_TRINKETS_PAGE_SIZE num 6
 
 # Initialize cashgrab:game_info.classes roster list
