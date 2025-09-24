@@ -14,6 +14,6 @@ $tellraw @a[tag=t_debug] "Recovering class data for idx $(class_id)"
 $scoreboard players set @s __cts_selected_class_idx $(class_id)
 
 # Retrieve data from cashgrab:game_info
-$execute if score @s __cts_selected_class_idx < NUM_CTS_CLASSES_LIST_LEN num run data modify entity @s data.class_info set from storage cashgrab:game_info classes[$(class_id)]
+$execute if score @s __cts_selected_class_idx <= NUM_CTS_CLASS_ID_MAX num run data modify entity @s data.class_info set from storage cashgrab:game_info classes[$(class_id)]
 
 

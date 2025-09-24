@@ -597,12 +597,13 @@ evc_usage_score:"evc_eggs",\
 }
 
 # Calculate classes list quantites for later use
-scoreboard players set NUM_CTS_CLASSES_LIST_LEN num 0
-execute store result score NUM_CTS_CLASSES_LIST_LEN num run data get storage cashgrab:game_info classes
+scoreboard players set NUM_CTS_CLASS_ID_MAX num 0
+execute store result score NUM_CTS_CLASS_ID_MAX num run data get storage cashgrab:game_info classes
+execute store result storage cashgrab:cts_inv_args class_id_max int 1 run scoreboard players remove NUM_CTS_CLASS_ID_MAX num 1
 
 scoreboard players set NUM_CTS_CLASSES_PAGE_IDX_MAX num 0
-scoreboard players operation NUM_CTS_CLASSES_PAGE_IDX_MAX num = NUM_CTS_CLASSES_LIST_LEN num
-scoreboard players remove NUM_CTS_CLASSES_PAGE_IDX_MAX num 2
+scoreboard players operation NUM_CTS_CLASSES_PAGE_IDX_MAX num = NUM_CTS_CLASS_ID_MAX num
+scoreboard players remove NUM_CTS_CLASSES_PAGE_IDX_MAX num 1
 scoreboard players operation NUM_CTS_CLASSES_PAGE_IDX_MAX num /= NUM_CTS_CLASSES_PAGE_SIZE num
 
 # Store max page number in cashgrab:cts_inv_args
@@ -610,12 +611,13 @@ execute store result storage cashgrab:cts_inv_args classes_page_num_max int 1 ru
 scoreboard players remove NUM_CTS_CLASSES_PAGE_IDX_MAX num 1
 
 # Calculate trinkets list quantites for later use
-scoreboard players set NUM_CTS_TRINKETS_LIST_LEN num 0
-execute store result score NUM_CTS_TRINKETS_LIST_LEN num run data get storage cashgrab:game_info trinkets
+scoreboard players set NUM_CTS_TRINKET_ID_MAX num 0
+execute store result score NUM_CTS_TRINKET_ID_MAX num run data get storage cashgrab:game_info trinkets
+execute store result storage cashgrab:cts_inv_args trinket_id_max int 1 run scoreboard players remove NUM_CTS_TRINKET_ID_MAX num 1
 
 scoreboard players set NUM_CTS_TRINKETS_PAGE_IDX_MAX num 0
-scoreboard players operation NUM_CTS_TRINKETS_PAGE_IDX_MAX num = NUM_CTS_TRINKETS_LIST_LEN num
-scoreboard players remove NUM_CTS_TRINKETS_PAGE_IDX_MAX num 2
+scoreboard players operation NUM_CTS_TRINKETS_PAGE_IDX_MAX num = NUM_CTS_TRINKET_ID_MAX num
+scoreboard players remove NUM_CTS_TRINKETS_PAGE_IDX_MAX num 1
 scoreboard players operation NUM_CTS_TRINKETS_PAGE_IDX_MAX num /= NUM_CTS_TRINKETS_PAGE_SIZE num
 
 # Store max page number in cashgrab:cts_inv_args

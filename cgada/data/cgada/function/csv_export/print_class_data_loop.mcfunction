@@ -22,4 +22,4 @@ function cgada:csv_export/print_class_data_write with storage cgada:csv
 
 # Increment index and loop
 execute store result storage cgada:csv_args class_idx int 1 run scoreboard players add CGADA_CLASS_IDX num 1
-execute if score CGADA_CLASS_IDX num < NUM_CTS_CLASSES_LIST_LEN num run function cgada:csv_export/print_class_data_loop_recursion
+execute if score CGADA_CLASS_IDX num <= NUM_CTS_CLASS_ID_MAX num run function cgada:csv_export/print_class_data_loop_recursion

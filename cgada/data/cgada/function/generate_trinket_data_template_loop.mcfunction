@@ -13,4 +13,4 @@ $data modify storage cgada:data trinket_data_template[$(idx)].s_trinket_name set
 
 # Increment index then loop
 execute store result storage cgada:arg_idx idx int 1 run scoreboard players add CGADA_IDX num 1
-execute if score CGADA_IDX num < NUM_CTS_TRINKETS_LIST_LEN num run function cgada:generate_trinket_data_template_loop_recursion with storage cgada:arg_idx
+execute if score CGADA_IDX num <= NUM_CTS_TRINKET_ID_MAX num run function cgada:generate_trinket_data_template_loop_recursion with storage cgada:arg_idx

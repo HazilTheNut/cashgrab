@@ -9,9 +9,9 @@
 # Arguments: (none)
 
 # If player selections are out of bounds, reset cts selection
-execute if score @a[tag=t_pm_owner,limit=1] __cts_selected_class_idx >= NUM_CTS_CLASSES_LIST_LEN num run function cashgrab:base/pmt_reset_cts
+execute if score @a[tag=t_pm_owner,limit=1] __cts_selected_class_idx > NUM_CTS_CLASS_ID_MAX num run function cashgrab:base/pmt_reset_cts
 execute if score @a[tag=t_pm_owner,limit=1] __cts_selected_class_idx matches ..0 run function cashgrab:base/pmt_reset_cts
-execute if score @a[tag=t_pm_owner,limit=1] __cts_selected_trinket_idx >= NUM_CTS_TRINKETS_LIST_LEN num run function cashgrab:base/pmt_reset_cts
+execute if score @a[tag=t_pm_owner,limit=1] __cts_selected_trinket_idx > NUM_CTS_TRINKET_ID_MAX num run function cashgrab:base/pmt_reset_cts
 execute if score @a[tag=t_pm_owner,limit=1] __cts_selected_trinket_idx matches ..0 run function cashgrab:base/pmt_reset_cts
 
 # Initialize class and trinket
