@@ -16,16 +16,14 @@
 #	cv_C	:	Wall Climb sound effect timer
 #	cv_D	:	
 #	cv_E	:	Arrow count
-#	cv_F	:	Crossbow state (b'XY, where X is if in hotbar and Y is if arrow loaded)
+#	cv_F	:	Crossbow state (0 = unloaded, 1 = loaded)
 #	cv_G	:	
 #	cv_H	:	
 
 # Track state of crossbow
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_F 0
-#execute if items entity @a[tag=t_pm_owner,limit=1] weapon.offhand minecraft:crossbow run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_F 0
-execute if items entity @a[tag=t_pm_owner,limit=1] hotbar.* minecraft:crossbow run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_F 2
-execute if items entity @a[tag=t_pm_owner,limit=1] weapon.offhand minecraft:crossbow[minecraft:count=1,minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1}]] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_F 1
-execute if items entity @a[tag=t_pm_owner,limit=1] hotbar.* minecraft:crossbow[minecraft:count=1,minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1}]] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_F 3
+execute if items entity @a[tag=t_pm_owner,limit=1] weapon.* minecraft:crossbow[minecraft:count=1,minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1}]] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_F 1
+execute if items entity @a[tag=t_pm_owner,limit=1] hotbar.* minecraft:crossbow[minecraft:count=1,minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1}]] run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_F 1
 
 # Track arrow count
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_E 0

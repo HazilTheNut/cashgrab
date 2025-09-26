@@ -14,7 +14,7 @@
 #	cv_C	:	
 #	cv_D	:	
 #	cv_E	:	Arrow count
-#	cv_F	:	Crossbow state (b'XY, where X is if in hotbar and Y is if arrow loaded)
+#	cv_F	:	Crossbow state (0 = unloaded, 1 = loaded)
 #	cv_G	:	
 #	cv_H	:	
 
@@ -25,6 +25,3 @@ scoreboard players set @a[tag=t_pm_owner,limit=1] ability_charges 1
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 20
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_E 3
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_F 1
-
-# If trinket is in the offhand, move crossbow to hotbar
-scoreboard players set @a[tag=t_pm_owner,limit=1,scores={trinket_in_offhand=1..}] cv_F 3
