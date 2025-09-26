@@ -22,8 +22,8 @@
 
 # Sword position tracking
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_A 0
-scoreboard players set @a[tag=t_pm_owner,limit=1,nbt={SelectedItem:{id:"minecraft:iron_sword"}}] cv_A 1
-scoreboard players set @a[tag=t_pm_owner,limit=1,nbt={SelectedItem:{id:"minecraft:golden_sword"}}] cv_A 2
+execute if items entity @a[tag=t_pm_owner,limit=1] weapon.mainhand minecraft:iron_sword run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_A 1
+execute if items entity @a[tag=t_pm_owner,limit=1] weapon.mainhand minecraft:golden_sword run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_A 2
 
 # When ability exits cooldown, return sword to player
 execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_B=1..,ability_charges=1..}] run tag @a[tag=t_pm_owner,limit=1] add t_return_sword
