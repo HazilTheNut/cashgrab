@@ -15,6 +15,9 @@ scoreboard players set @a[tag=t_pm_owner] tv_B 0
 scoreboard players set @a[tag=t_pm_owner] tv_C 0
 scoreboard players set @a[tag=t_pm_owner] tv_D 0
 
+# Calculate inventory location
+function cashgrab:base/pmt_trinket_determine_offhand
+
 # Branch execution based on equipped trinket
 $function $(func_pmt_init)
 

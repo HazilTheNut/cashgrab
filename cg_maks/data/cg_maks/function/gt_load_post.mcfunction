@@ -5,7 +5,7 @@
 # Vampire
 
 data modify storage cashgrab:game_info classes append value {\
-format:1,\
+format:2,\
 s_class_name:"Vampire",\
 func_pmt_init:"cg_maks:classes/vampire/pmt_vampire_init",\
 func_pmt_inv:"cg_maks:classes/vampire/pmt_vampire_inv",\
@@ -16,12 +16,13 @@ func_pmtl_end:"cg_maks:classes/vampire/pmtl_vampire_end",\
 func_pmt_cts_icon:"cg_maks:classes/vampire/pmt_vampire_cts_inv_icon",\
 func_pmtl_cts_tick:"cg_maks:classes/vampire/pmtl_vampire_cts_tick",\
 func_pmt_score_kill:"cashgrab:util/noop",\
+trinket_default_offhand:1,\
 }
 
 # Dancer
 
 data modify storage cashgrab:game_info classes append value {\
-format:1,\
+format:2,\
 s_class_name:"Dancer",\
 func_pmt_init:"cg_maks:classes/dancer/pmt_dancer_init",\
 func_pmt_inv:"cg_maks:classes/dancer/pmt_dancer_inv",\
@@ -32,6 +33,7 @@ func_pmtl_end:"cg_maks:classes/dancer/pmtl_dancer_end",\
 func_pmt_cts_icon:"cg_maks:classes/dancer/pmt_dancer_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:util/noop",\
 func_pmt_score_kill:"cashgrab:util/noop",\
+trinket_default_offhand:1,\
 }
 
 # =======================

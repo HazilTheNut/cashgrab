@@ -66,6 +66,7 @@ scoreboard players add @a[tag=t_player_initialize,limit=1] __cts_classes_page_id
 scoreboard players add @a[tag=t_player_initialize,limit=1] __cts_selected_trinket_idx 0
 scoreboard players set @a[tag=t_player_initialize,limit=1,scores={__cts_selected_trinket_idx=0}] __cts_selected_trinket_idx 1
 scoreboard players add @a[tag=t_player_initialize,limit=1] __cts_trinkets_page_idx 0
+scoreboard players add @a[tag=t_player_initialize,limit=1] __trinket_cfg_pos 0
 
 # Clear events
 scoreboard players set @a[tag=t_player_initialize,limit=1] __iev_logout 0

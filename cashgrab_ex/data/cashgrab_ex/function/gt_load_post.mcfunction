@@ -3,7 +3,7 @@
 
 # Hexblade
 data modify storage cashgrab:game_info classes append value {\
-format:1,\
+format:2,\
 s_class_name:"Hexblade",\
 func_pmt_init:"cashgrab_ex:classes/hexblade/pmt_hexblade_init",\
 func_pmt_inv:"cashgrab_ex:classes/hexblade/pmt_hexblade_inv",\
@@ -14,11 +14,12 @@ func_pmtl_end:"cashgrab_ex:classes/hexblade/pmtl_hexblade_end",\
 func_pmt_cts_icon:"cashgrab_ex:classes/hexblade/pmt_hexblade_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:util/noop",\
 func_pmt_score_kill:"cashgrab:util/noop",\
+trinket_default_offhand:1,\
 }
 
 # Cloudbreaker
 data modify storage cashgrab:game_info classes append value {\
-format:1,\
+format:2,\
 s_class_name:"Cloudbreaker",\
 func_pmt_init:"cashgrab_ex:classes/cloudbreaker/pmt_cloudbreaker_init",\
 func_pmt_inv:"cashgrab_ex:classes/cloudbreaker/pmt_cloudbreaker_inv",\
@@ -29,13 +30,14 @@ func_pmtl_end:"cashgrab:util/noop",\
 func_pmt_cts_icon:"cashgrab_ex:classes/cloudbreaker/pmt_cloudbreaker_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab_ex:classes/cloudbreaker/pmtl_cloudbreaker_cts_tick",\
 func_pmt_score_kill:"cashgrab:util/noop",\
+trinket_default_offhand:1,\
 }
 
 scoreboard objectives add evc_torchflower_seeds minecraft.used:minecraft.torchflower_seeds
 
 # Battlesmith
 data modify storage cashgrab:game_info classes append value {\
-format:1,\
+format:2,\
 s_class_name:"Battlesmith",\
 func_pmt_init:"cashgrab_ex:classes/battlesmith/pmt_battlesmith_init",\
 func_pmt_inv:"cashgrab_ex:classes/battlesmith/pmt_battlesmith_inv",\
@@ -46,11 +48,12 @@ func_pmtl_end:"cashgrab:util/noop",\
 func_pmt_cts_icon:"cashgrab_ex:classes/battlesmith/pmt_battlesmith_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:util/noop",\
 func_pmt_score_kill:"cashgrab:util/noop",\
+trinket_default_offhand:1,\
 }
 
 # Stargazer
 data modify storage cashgrab:game_info classes append value {\
-format:1,\
+format:2,\
 s_class_name:"Stargazer",\
 func_pmt_init:"cashgrab_ex:classes/stargazer/pmt_stargazer_init",\
 func_pmt_inv:"cashgrab_ex:classes/stargazer/pmt_stargazer_inv",\
@@ -61,6 +64,7 @@ func_pmtl_end:"cashgrab:util/noop",\
 func_pmt_cts_icon:"cashgrab_ex:classes/stargazer/pmt_stargazer_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab_ex:classes/stargazer/pmtl_stargazer_cts_tick",\
 func_pmt_score_kill:"cashgrab:util/noop",\
+trinket_default_offhand:0,\
 }
 
 scoreboard objectives remove evc_vex_armor_trim_smithing_templates
@@ -73,7 +77,7 @@ scoreboard objectives add evc_gold_ingots minecraft.used:minecraft.gold_ingot
 
 # Evincer
 data modify storage cashgrab:game_info classes append value {\
-format:1,\
+format:2,\
 s_class_name:"Evincer",\
 func_pmt_init:"cashgrab_ex:classes/evincer/pmt_evincer_init",\
 func_pmt_inv:"cashgrab_ex:classes/evincer/pmt_evincer_inv",\
@@ -84,6 +88,7 @@ func_pmtl_end:"cashgrab:util/noop",\
 func_pmt_cts_icon:"cashgrab_ex:classes/evincer/pmt_evincer_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab_ex:classes/evincer/pmtl_evincer_cts_tick",\
 func_pmt_score_kill:"cashgrab:util/noop",\
+trinket_default_offhand:1,\
 }
 
 scoreboard objectives add evc_sticks minecraft.used:minecraft.stick

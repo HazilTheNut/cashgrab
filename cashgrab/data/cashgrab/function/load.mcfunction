@@ -98,6 +98,12 @@ scoreboard objectives add tv_D dummy
 #   to be drawn in hotbar.3
 scoreboard objectives add trinket_in_offhand dummy
 
+# Configured enumerated value for player configured preferred trinket position:
+#   0 = Default (Class-Defined)
+#   1 = Always Hotbar
+#   2 = Always Offhand
+scoreboard objectives add __trinket_cfg_pos dummy
+
 # --- Game objective-related
 
 # Multiple different teams are not supported on this version of cashgrab

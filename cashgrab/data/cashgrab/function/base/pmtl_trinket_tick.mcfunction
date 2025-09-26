@@ -30,9 +30,6 @@ tag @a[tag=t_pm_owner,limit=1,tag=t_trinket_revoke] remove t_trinket_revoke
 # Get trinket quantity in inventory and store into trinket_charges
 function cashgrab:base/pmt_trinket_count
 
-# Track whether trinket is in offhand
-execute if entity @a[tag=t_pm_owner,limit=1,tag=!t_trinket_force_hotbar,scores={trinket_charges=1..}] run function cashgrab:base/pmt_trinket_track_offhand
-
 #$execute if score @a[tag=t_pm_owner,limit=1] $(evc_usage_score) matches 1.. run tellraw @a[tag=t_pm_owner,limit=1,tag=t_debug] [{"type":"text","text":"base/pmtl_trinket_tick: evc_usage_score: $(evc_usage_score) value = "},{"type":"score","score":{"name":"@a[tag=t_pm_owner,limit=1]","objective":"$(evc_usage_score)"}}]
 #$execute if score @a[tag=t_pm_owner,limit=1] $(evc_usage_score) matches 1.. run tellraw @a[tag=t_pm_owner,limit=1,tag=t_debug] [{"type":"text","text":"base/pmtl_trinket_tick: trinket_charges = "},{"type":"score","score":{"name":"@a[tag=t_pm_owner,limit=1]","objective":"trinket_charges"}}]
 #$execute if score @a[tag=t_pm_owner,limit=1] $(evc_usage_score) matches 1.. run tellraw @a[tag=t_pm_owner,limit=1,tag=t_debug] [{"type":"text","text":"base/pmtl_trinket_tick: __trinket_charges_prev = "},{"type":"score","score":{"name":"@a[tag=t_pm_owner,limit=1]","objective":"__trinket_charges_prev"}}]

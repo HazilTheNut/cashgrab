@@ -10,10 +10,6 @@
 #
 # Arguments: (none)
 
-# Track whether trinket is in offhand
-scoreboard players set @a[tag=t_pm_owner,limit=1] trinket_in_offhand 0
-execute if items entity @a[tag=t_pm_owner,limit=1] weapon.offhand *[custom_data={is_trinket:1}] run scoreboard players set @a[tag=t_pm_owner,limit=1] trinket_in_offhand 1
-
 # Get trinket quantity in inventory
 function cashgrab:base/pmt_trinket_count
 
