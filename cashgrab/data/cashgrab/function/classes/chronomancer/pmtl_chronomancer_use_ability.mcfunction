@@ -11,7 +11,7 @@
 # Arguments: (none)
 
 # Class variable usage:
-#	cv_A	:	1 if crossbow is in offhand, and 0 otherwise
+#	cv_A	:	
 #	cv_B	:	Crossbow reload timer
 #	cv_C	:	1 if crossbow is loaded, and 0 otherwise
 #	cv_D	:	state value if player is in a Stasis Field

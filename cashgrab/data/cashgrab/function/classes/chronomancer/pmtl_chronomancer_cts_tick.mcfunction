@@ -11,7 +11,7 @@
 # Arguments: (none)
 
 # Class variable usage:
-#	cv_A	:	1 if crossbow is in offhand, and 0 otherwise
+#	cv_A	:	
 #	cv_B	:	Crossbow reload timer
 #	cv_C	:	1 if crossbow is loaded, and 0 otherwise
 #	cv_D	:	state value if player is in a Stasis Field
@@ -19,10 +19,6 @@
 #	cv_F	:	
 #	cv_G	:	
 #	cv_H	:	
-
-# Track position of the crossbow in inventory
-scoreboard players set @a[tag=t_pm_owner,limit=1] cv_A 0
-execute if items entity @a[tag=t_pm_owner,limit=1] weapon.offhand minecraft:crossbow run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_A 1
 
 # If player used crossbow, delete arrow
 execute if score @a[tag=t_pm_owner,limit=1] evl_crossbows matches 1.. run kill @e[type=minecraft:arrow,limit=1,sort=nearest,distance=..3]
