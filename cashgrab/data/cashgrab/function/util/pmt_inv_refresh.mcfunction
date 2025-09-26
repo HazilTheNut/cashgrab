@@ -57,6 +57,9 @@ execute if entity @a[tag=t_pm_owner,scores={activity_state=0..9}] run function c
 # During class-and-trinket selection, display inventory UI
 execute if entity @a[tag=t_pm_owner,scores={activity_state=10..19}] run function cashgrab:base/cts/pmt_cts_inv_main
 
+# Calculate inventory location
+execute if entity @a[tag=t_pm_owner,scores={activity_state=10..39}] run function cashgrab:base/pmt_trinket_determine_offhand
+
 # During either class-and-trinket selection or gameplay, load class inventory
 execute if entity @a[tag=t_pm_owner,scores={activity_state=10..29}] run function cashgrab:classes/pmt_class_inv with entity @s data.class_info
 

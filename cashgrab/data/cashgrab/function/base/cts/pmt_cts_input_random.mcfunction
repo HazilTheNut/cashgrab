@@ -1,10 +1,10 @@
-# base/cts/pmt_cts_input_noop.mcfunction
+# base/cts/pmt_cts_input_random.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
 #	+ the owner of the pm is tagged with t_pm_owner
 #
-# Summary: Class-and-trinket selection "no op" input collector function
+# Summary: Class-and-trinket random selection input collector function
 #
 # Arguments: (none)
 

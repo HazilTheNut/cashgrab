@@ -14,9 +14,6 @@ clear @a[tag=t_pm_owner,limit=1] *[custom_data={is_trinket:1}]
 # Do nothing if max trinket count is 0
 execute if score @a[tag=t_pm_owner,limit=1] trinket_charges_max matches ..0 run return 0
 
-# Calculate inventory location
-function cashgrab:base/pmt_trinket_determine_offhand
-
 # If player has a trinket charge, display trinket item
 execute store result storage cashgrab:trinket_args charges int 1 run scoreboard players get @a[tag=t_pm_owner,limit=1] trinket_charges
 execute if entity @a[tag=t_pm_owner,scores={trinket_charges=1..,trinket_in_offhand=0}] run data merge storage cashgrab:trinket_args {slot:"hotbar.3"}

@@ -15,8 +15,8 @@
 #tellraw @a[tag=t_pm_owner,tag=t_debug] "cts/pmt_cts_inv_draw"
 
 # Column 0 : miscellaneous options
-item replace entity @a[tag=t_pm_owner,limit=1] inventory.0 with minecraft:magenta_glazed_terracotta[minecraft:item_name=[{color:"gold",italic:false,text:"<Random>"}]] 1 
-function cashgrab:base/cts/pmt_cts_inv_icon_blank {slot:"inventory.9"}
+function cashgrab:base/cts/pmt_cts_inv_icon_random {slot:"inventory.0"}
+function cashgrab:base/cts/pmt_cts_inv_icon_trinket_pos {slot:"inventory.9"}
 function cashgrab:base/cts/pmt_cts_inv_icon_blank {slot:"inventory.18"}
 
 # Column 1 : classes page selection

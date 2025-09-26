@@ -17,7 +17,7 @@ tag @a[tag=t_pm_owner,limit=1] remove t_cts_input_found
 
 # Column 0 : miscellaneous options
 execute unless items entity @a[tag=t_pm_owner,limit=1] inventory.0 * run function cashgrab:base/cts/pmt_cts_input_random
-execute unless items entity @a[tag=t_pm_owner,limit=1] inventory.9 * run function cashgrab:base/cts/pmt_cts_input_noop
+execute unless items entity @a[tag=t_pm_owner,limit=1] inventory.9 * run function cashgrab:base/cts/pmt_cts_input_trinket_pos
 execute unless items entity @a[tag=t_pm_owner,limit=1] inventory.18 * run function cashgrab:base/cts/pmt_cts_input_noop
 
 # Column 1 : classes page selection
