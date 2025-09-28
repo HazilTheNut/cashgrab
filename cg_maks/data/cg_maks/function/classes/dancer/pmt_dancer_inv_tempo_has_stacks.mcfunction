@@ -11,7 +11,7 @@
 
 # Check if the pm's owner has each stack of Tempo, then give them the corresponding icon.
 execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 1 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.6 with minecraft:note_block[\
-minecraft:item_name=[{color:"light_purple",italic:false,text:"[Passive]"},{color:"white",text:" Tempo"}],\
+minecraft:item_name=[{color:"light_purple",italic:false,text:"(Passive)"},{color:"white",text:" Tempo"}],\
 minecraft:lore=[\
 [{text:"Hitting enemies with ",italic:false,color:"gray"}],\
 [{text:" consecutive melee hits ",italic:false,color:"gray"}],\
@@ -23,7 +23,7 @@ minecraft:lore=[\
 ]] 1
 
 execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 2 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.6 with minecraft:note_block[\
-minecraft:item_name=[{color:"light_purple",italic:false,text:"[Passive]"},{color:"white",text:" Tempo"}],\
+minecraft:item_name=[{color:"light_purple",italic:false,text:"(Passive)"},{color:"white",text:" Tempo"}],\
 minecraft:lore=[\
 [{text:"Hitting enemies with ",italic:false,color:"gray"}],\
 [{text:" consecutive melee hits ",italic:false,color:"gray"}],\
@@ -35,7 +35,7 @@ minecraft:lore=[\
 ]] 2
 
 execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 3 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.6 with minecraft:note_block[\
-minecraft:item_name=[{color:"light_purple",italic:false,text:"[Passive]"},{color:"white",text:" Tempo"}],\
+minecraft:item_name=[{color:"light_purple",italic:false,text:"(Passive)"},{color:"white",text:" Tempo"}],\
 minecraft:lore=[\
 [{text:"Hitting enemies with ",italic:false,color:"gray"}],\
 [{text:" consecutive melee hits ",italic:false,color:"gray"}],\

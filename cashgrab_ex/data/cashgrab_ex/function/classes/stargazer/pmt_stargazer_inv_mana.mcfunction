@@ -20,7 +20,7 @@
 
 # Display "0" count if at 0
 execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 0 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.6 with minecraft:blue_stained_glass_pane[\
-minecraft:item_name=[{color:"light_purple",italic:false,text:"[Passive]"},{color:"white",text:" Mana"}],\
+minecraft:item_name=[{color:"light_purple",italic:false,text:"(Passive)"},{color:"white",text:" Mana"}],\
 minecraft:lore=[\
 [{color:"gray",italic:false,text:"You generate "},{color:"aqua",italic:false,text:"1 "},{color:"yellow",italic:false,text:"Mana"}],\
 {color:"gray",italic:false,text:" every second."},\

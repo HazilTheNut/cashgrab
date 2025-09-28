@@ -11,7 +11,7 @@
 
 $item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:clay_ball[\
 minecraft:item_model="minecraft:wind_charge",\
-minecraft:item_name=[{color:"light_purple",italic:false,text:"[Toss]"},{color:"white",text:" Soul Siphon"}],\
+minecraft:item_name=[{color:"light_purple",italic:false,text:"(Toss)"},{color:"white",text:" Soul Siphon"}],\
 minecraft:lore=[\
 [{text:"Toss any item to use.",color:"dark_gray"}],\
 [{text:"Summons a homing swarm of bats",italic:false,color:"gray"}],\

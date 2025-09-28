@@ -21,7 +21,7 @@
 
 # Display if Mana is sufficient and lockout timer is ended
 item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=11..,cv_C=..0}] hotbar.2 with minecraft:gold_ingot[\
-minecraft:item_name=[{color:"green",italic:false,text:"[Use]"},{color:"white",text:" Vortex Snare"}],\
+minecraft:item_name=[{color:"aqua",italic:false,text:"[Use]"},{color:"white",text:" Vortex Snare"}],\
 minecraft:item_model="minecraft:spire_armor_trim_smithing_template",\
 minecraft:consumable={\
 consume_seconds:0f,\

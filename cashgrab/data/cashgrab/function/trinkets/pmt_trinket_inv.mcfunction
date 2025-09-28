@@ -11,4 +11,4 @@
 #	slot			: Slot to insert item
 #	func_pmt_inv	: Inventory loader function for trinket
 
-$function $(func_pmt_inv) {charges:$(charges),slot:"$(slot)"}
+$function $(func_pmt_inv) {charges:$(charges),slot:"$(slot)",charges_max:$(charges_max)}

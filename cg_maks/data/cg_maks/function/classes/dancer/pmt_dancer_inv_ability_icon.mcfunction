@@ -10,7 +10,7 @@
 #	charges		: Number of charges of ability
 
 $item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:orange_dye[\
-minecraft:item_name=[{color:"light_purple",italic:false,text:"[Toss]"},{color:"white",text:" Sforzando"}],\
+minecraft:item_name=[{color:"light_purple",italic:false,text:"(Toss)"},{color:"white",text:" Sforzando"}],\
 minecraft:lore=[\
 [{text:"Toss any item to use.",color:"dark_gray"}],\
 [{text:"Strikes your enemies with a",italic:false,color:"gray"}],\

@@ -19,7 +19,7 @@
 #	cv_H	:	
 
 $execute if score @a[tag=t_pm_owner,limit=1] cv_E matches 0 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:cyan_stained_glass[\
-minecraft:custom_name=[{color:"light_purple",italic:false,text:"[Toss]"},{color:"white",text:" Stasis Field"}],\
+minecraft:custom_name=[{color:"light_purple",italic:false,text:"(Toss)"},{color:"white",text:" Stasis Field"}],\
 minecraft:enchantment_glint_override=true,\
 minecraft:lore=[\
 {color:"dark_gray",italic:true,text:"Toss any item to use."},\
@@ -33,7 +33,7 @@ minecraft:lore=[\
 ]] $(charges)
 
 $execute if score @a[tag=t_pm_owner,limit=1] cv_E matches 1 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:barrier[\
-minecraft:custom_name=[{color:"light_purple",italic:false,text:"[Toss]"},{color:"white",text:" Cancel Stasis Field"}],\
+minecraft:custom_name=[{color:"light_purple",italic:false,text:"(Toss)"},{color:"white",text:" Cancel Stasis Field"}],\
 minecraft:enchantment_glint_override=true,\
 minecraft:lore=[\
 {color:"dark_gray",italic:true,text:"Toss any item to use."},\

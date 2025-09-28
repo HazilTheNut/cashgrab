@@ -18,7 +18,7 @@
 
 # If during intro, insert item to exit tutorial
 item replace entity @a[tag=t_pm_owner,limit=1,scores={__tutorial_seq_idx=1}] hotbar.6 with minecraft:barrier[\
-minecraft:item_name=[{color:"green",italic:false,text:"[Use]"},{color:"white",text:" Return"}],\
+minecraft:item_name=[{color:"aqua",italic:false,text:"[Use]"},{color:"white",text:" Return"}],\
 minecraft:consumable={\
 consume_seconds:0f,\
 animation:"brush",\
@@ -46,7 +46,7 @@ execute if score @a[tag=t_pm_owner,limit=1] __tutorial_trainee_progress matches 
 
 #   4   =   Has inventory, Toss ability, Crouch ability, Passive ability
 execute if score @a[tag=t_pm_owner,limit=1] __tutorial_trainee_progress matches 4.. run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.6 with minecraft:clay_ball[\
-minecraft:item_name=[{color:"light_purple",italic:false,text:"[Passive]"},{color:"white",text:" Cool Rock"}],\
+minecraft:item_name=[{color:"light_purple",italic:false,text:"(Passive)"},{color:"white",text:" Cool Rock"}],\
 minecraft:lore=[\
 {color:"gray",italic:false,text:"Perhaps the real abilities"},\
 {color:"gray",italic:false,text:" were the friends we made"},\

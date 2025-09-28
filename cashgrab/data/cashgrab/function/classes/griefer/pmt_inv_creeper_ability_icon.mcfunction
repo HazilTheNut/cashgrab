@@ -23,7 +23,7 @@ minecraft:custom_name={italic:false,color:"gray",text:"Ability on Cooldown"}\
 ]
 
 item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_D=1..}] hotbar.1 with minecraft:experience_bottle[\
-minecraft:custom_name=[{color:"green",italic:false,text:"[Use]"},{color:"white",text:" Creeper in a Bottle"}],\
+minecraft:custom_name=[{color:"aqua",italic:false,text:"[Use]"},{color:"white",text:" Creeper in a Bottle"}],\
 minecraft:custom_data={griefer_creeper:1},\
 minecraft:lore=[\
 {color:"gray",italic:false,text:"Releases an ignited creeper."},\

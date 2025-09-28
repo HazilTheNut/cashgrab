@@ -10,7 +10,7 @@
 #	charges		: Number of charges of ability
 
 $item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:firework_rocket[\
-minecraft:custom_name=[{color:"light_purple",italic:false,text:"[Toss]"},{color:"white",text:" Rocket Barrage"}],\
+minecraft:custom_name=[{color:"light_purple",italic:false,text:"(Toss)"},{color:"white",text:" Rocket Barrage"}],\
 minecraft:tooltip_display={hidden_components:["minecraft:fireworks"]},\
 minecraft:lore=[\
 {color:"dark_gray",italic:true,text:"Toss any item to use."},\

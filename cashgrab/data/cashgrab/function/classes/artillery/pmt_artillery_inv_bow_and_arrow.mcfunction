@@ -36,7 +36,7 @@ minecraft:enchantments={infinity:1,power:1,punch:3}]
 # Arrow
 
 item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_E=..0}] hotbar.6 with minecraft:arrow[\
-minecraft:custom_name=[{color:"light_purple",italic:false,text:"[Passive]"},{color:"white",text:" Power Shot"}],\
+minecraft:custom_name=[{color:"light_purple",italic:false,text:"(Passive)"},{color:"white",text:" Power Shot"}],\
 minecraft:custom_data={artillery_power_shot:1},\
 minecraft:lore=[\
 {color:"gray",italic:false,text:"Empowers your next shot"},\
@@ -48,7 +48,7 @@ minecraft:lore=[\
 ]
 
 item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_E=1..}] hotbar.6 with minecraft:tipped_arrow[\
-minecraft:custom_name=[{color:"light_purple",italic:false,text:"[Passive]"},{color:"white",text:" Power Shot"}],\
+minecraft:custom_name=[{color:"light_purple",italic:false,text:"(Passive)"},{color:"white",text:" Power Shot"}],\
 minecraft:custom_data={artillery_power_shot:1},\
 minecraft:tooltip_display={hidden_components:["minecraft:potion_contents"]},\
 minecraft:potion_contents={\

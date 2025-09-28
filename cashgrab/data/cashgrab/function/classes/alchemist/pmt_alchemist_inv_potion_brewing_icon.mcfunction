@@ -40,7 +40,7 @@
 
 #	0		= idle
 execute if score @a[tag=t_pm_owner,limit=1] cv_C matches ..0 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.5 with minecraft:cauldron[\
-minecraft:custom_name=[{color:"light_purple",italic:false,text:"[Crouch]"},{color:"white",text:" Brew Potions"}],\
+minecraft:custom_name=[{color:"light_purple",italic:false,text:"(Crouch)"},{color:"white",text:" Brew Potions"}],\
 minecraft:lore=[\
 {color:"dark_gray",italic:true,text:"Crouch holding any item to use."},\
 {color:"gray",italic:false,text:"Crafts items while crouching"},\

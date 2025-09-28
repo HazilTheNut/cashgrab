@@ -23,7 +23,7 @@ execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_E=1,cv_D=1..}] run functi
 execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_E=1,cv_D=1..}] run return 0
 
 item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_E=0}] hotbar.5 with minecraft:ink_sac[\
-minecraft:item_name=[{color:"light_purple",italic:false,text:"[Crouch]"},{color:"white",text:" Blight Step"}],\
+minecraft:item_name=[{color:"light_purple",italic:false,text:"(Crouch)"},{color:"white",text:" Blight Step"}],\
 minecraft:lore=[\
 {color:"dark_gray",italic:true,text:"Crouch holding any item to use."},\
 {color:"gray",italic:false,text:"After holding for 1 second,"},\
@@ -36,7 +36,7 @@ minecraft:lore=[\
 ]] 1
 
 item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_E=1}] hotbar.5 with minecraft:glow_ink_sac[\
-minecraft:item_name=[{color:"light_purple",italic:false,text:"[Crouch]"},{color:"white",text:" Blight Step"}],\
+minecraft:item_name=[{color:"light_purple",italic:false,text:"(Crouch)"},{color:"white",text:" Blight Step"}],\
 minecraft:lore=[\
 {color:"dark_gray",italic:true,text:"Crouch holding any item to use."},\
 {color:"gray",italic:false,text:"After holding for 1 second,"},\

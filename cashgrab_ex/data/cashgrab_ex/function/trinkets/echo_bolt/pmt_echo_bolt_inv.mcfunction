@@ -8,12 +8,13 @@
 #
 # Arguments:
 #	charges		: Number of charges remaining
+#	charges_max	: Maximum number of charges remaining
 #	slot		: Slot to insert item
 
 #$tellraw @a[tag=t_debug] "trinkets/vigor_flask/pmt_vigor_flask_inv: slot: $(slot) ; charges: $(charges)"
 
 $item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:echo_shard[\
-minecraft:item_name=[{color:"green",italic:false,text:"[Use]"},{color:"white",text:" Echo Bolt"}],\
+minecraft:item_name=[{color:"green",italic:false,text:"[Use $(charges)/$(charges_max)]"},{color:"white",text:" Echo Bolt"}],\
 minecraft:enchantment_glint_override=true,\
 minecraft:custom_data={is_trinket:1},\
 minecraft:consumable={\

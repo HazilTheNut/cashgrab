@@ -29,7 +29,7 @@ minecraft:tooltip_display={hidden_components:["minecraft:enchantments"]},\
 minecraft:attribute_modifiers=[\
 {type:"attack_damage",slot:"mainhand",id:"cashgrab:power_strike_atkdmg",amount:8,operation:"add_value"},\
 {type:"attack_speed",slot:"mainhand",id:"cashgrab:power_strike_atkspd",amount:-2.5,operation:"add_value"}],\
-minecraft:custom_name=[{color:"green",italic:false,text:"[Attack]"},{color:"white",text:" Power Strike"}],\
+minecraft:custom_name=[{color:"aqua",italic:false,text:"[Attack]"},{color:"white",text:" Power Strike"}],\
 minecraft:lore=[\
 {color:"gray",italic:false,text:"Strong knockback attack"},\
 {color:"gray",italic:false,text:" that slows them if you"},\

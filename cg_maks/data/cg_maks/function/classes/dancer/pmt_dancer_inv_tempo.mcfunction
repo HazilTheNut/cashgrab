@@ -16,7 +16,7 @@ execute unless score @a[tag=t_pm_owner,limit=1] cv_A matches 0 run return 0
 
 item replace entity @a[tag=t_pm_owner,limit=1] hotbar.6 with minecraft:clay_ball[\
 minecraft:item_model="minecraft:music_disc_11",\
-minecraft:item_name=[{color:"light_purple",italic:false,text:"[Passive]"},{color:"white",text:" Tempo"}],\
+minecraft:item_name=[{color:"light_purple",italic:false,text:"(Passive)"},{color:"white",text:" Tempo"}],\
 minecraft:lore=[\
 [{text:"Hitting enemies with ",italic:false,color:"gray"}],\
 [{text:" consecutive melee hits ",italic:false,color:"gray"}],\

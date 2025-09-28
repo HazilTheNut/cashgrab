@@ -20,7 +20,7 @@
 #	cv_H	:   Star Shower pitch offset
 
 $item replace entity @a[tag=t_pm_owner,limit=1] hotbar.6 with minecraft:blue_dye[\
-minecraft:item_name=[{color:"light_purple",italic:false,text:"[Passive]"},{color:"white",text:" Mana"}],\
+minecraft:item_name=[{color:"light_purple",italic:false,text:"(Passive)"},{color:"white",text:" Mana"}],\
 minecraft:lore=[\
 [{color:"gray",italic:false,text:"You generate "},{color:"aqua",italic:false,text:"1 "},{color:"yellow",italic:false,text:"Mana"}],\
 {color:"gray",italic:false,text:" every second."},\

@@ -31,7 +31,7 @@ execute store result score @a[tag=t_pm_owner,limit=1] temp_A run function cashgr
 
 # Upgrade not available
 item replace entity @a[tag=t_pm_owner,limit=1,scores={temp_A=0}] hotbar.5 with minecraft:netherite_scrap[\
-minecraft:item_name=[{color:"light_purple",italic:false,text:"[Crouch]"},{color:"white",text:" Upgrade Weapon"}],\
+minecraft:item_name=[{color:"light_purple",italic:false,text:"(Crouch)"},{color:"white",text:" Upgrade Weapon"}],\
 minecraft:lore=[\
 {color:"dark_gray",italic:true,text:"Crouch holding any item to use."},\
 {color:"gray",italic:false,text:"After holding for 1.5 secs,"},\
@@ -44,7 +44,7 @@ minecraft:lore=[\
 
 #   0   =   Idle
 item replace entity @a[tag=t_pm_owner,limit=1,scores={temp_A=1,cv_B=0..2}] hotbar.5 with minecraft:anvil[\
-minecraft:item_name=[{color:"light_purple",italic:false,text:"[Crouch]"},{color:"white",text:" Upgrade Weapon"}],\
+minecraft:item_name=[{color:"light_purple",italic:false,text:"(Crouch)"},{color:"white",text:" Upgrade Weapon"}],\
 minecraft:item_model="minecraft:netherite_upgrade_smithing_template",\
 minecraft:enchantment_glint_override=true,\
 minecraft:lore=[\
@@ -59,7 +59,7 @@ minecraft:lore=[\
 
 #   3   =   Step 1 icon
 item replace entity @a[tag=t_pm_owner,limit=1,scores={temp_A=1,cv_B=3..12}] hotbar.5 with minecraft:anvil[\
-minecraft:item_name=[{color:"light_purple",italic:false,text:"[Crouch]"},{color:"white",text:" Upgrade Weapon"}],\
+minecraft:item_name=[{color:"light_purple",italic:false,text:"(Crouch)"},{color:"white",text:" Upgrade Weapon"}],\
 minecraft:lore=[\
 {color:"dark_gray",italic:true,text:"Crouch holding any item to use."},\
 {color:"gray",italic:false,text:"After holding for 1.5 secs,"},\
@@ -72,7 +72,7 @@ minecraft:lore=[\
 
 #   13  =   Step 2 icon
 item replace entity @a[tag=t_pm_owner,limit=1,scores={temp_A=1,cv_B=13..22}] hotbar.5 with minecraft:anvil[\
-minecraft:item_name=[{color:"light_purple",italic:false,text:"[Crouch]"},{color:"white",text:" Upgrade Weapon"}],\
+minecraft:item_name=[{color:"light_purple",italic:false,text:"(Crouch)"},{color:"white",text:" Upgrade Weapon"}],\
 minecraft:lore=[\
 {color:"dark_gray",italic:true,text:"Crouch holding any item to use."},\
 {color:"gray",italic:false,text:"After holding for 1.5 secs,"},\
@@ -85,7 +85,7 @@ minecraft:lore=[\
 
 #   23  =   Step 3 icon
 item replace entity @a[tag=t_pm_owner,limit=1,scores={temp_A=1,cv_B=23..32}] hotbar.5 with minecraft:anvil[\
-minecraft:item_name=[{color:"light_purple",italic:false,text:"[Crouch]"},{color:"white",text:" Upgrade Weapon"}],\
+minecraft:item_name=[{color:"light_purple",italic:false,text:"(Crouch)"},{color:"white",text:" Upgrade Weapon"}],\
 minecraft:lore=[\
 {color:"dark_gray",italic:true,text:"Crouch holding any item to use."},\
 {color:"gray",italic:false,text:"After holding for 1.5 secs,"},\
@@ -99,7 +99,7 @@ minecraft:lore=[\
 #   33  =   Done
 #   34  =   Idle
 item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_B=33..}] hotbar.5 with minecraft:netherite_scrap[\
-minecraft:item_name=[{color:"light_purple",italic:false,text:"[Crouch]"},{color:"white",text:" Upgrade Weapon"}],\
+minecraft:item_name=[{color:"light_purple",italic:false,text:"(Crouch)"},{color:"white",text:" Upgrade Weapon"}],\
 minecraft:lore=[\
 {color:"dark_gray",italic:true,text:"Crouch holding any item to use."},\
 {color:"gray",italic:false,text:"After holding for 1.5 secs,"},\

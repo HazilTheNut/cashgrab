@@ -20,7 +20,7 @@
 #	cv_H	:
 
 $item replace entity @a[tag=t_pm_owner,limit=1] hotbar.6 with minecraft:raw_iron[\
-minecraft:item_name=[{color:"light_purple",italic:false,text:"[Passive]"},{color:"white",text:" Scrap"}],\
+minecraft:item_name=[{color:"light_purple",italic:false,text:"(Passive)"},{color:"white",text:" Scrap"}],\
 minecraft:lore=[\
 [{color:"gray",italic:false,text:"You generate "},{color:"yellow",italic:false,text:"Scrap"},{color:"gray",italic:false,text:" from:"}],\
 {color:"gold",italic:false,text:"+ Weapon hits"},\
