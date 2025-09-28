@@ -20,7 +20,7 @@
 #	cv_G	:	
 #	cv_H	:	
 
-$item replace entity @a[tag=t_pm_owner,limit=1] $(shield_slot) with minecraft:shield[\
+$item replace entity @a[tag=t_pm_owner,limit=1] weapon.offhand with minecraft:shield[\
 minecraft:damage=$(shield_damage),\
 minecraft:custom_name={italic:false,color:"red",text:"Bastion"},\
 minecraft:lore=[\

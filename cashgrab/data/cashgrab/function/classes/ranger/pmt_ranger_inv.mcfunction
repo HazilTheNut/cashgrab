@@ -57,27 +57,16 @@ minecraft:attribute_modifiers=[\
 {type:"attack_speed",slot:"mainhand",id:"cashgrab:machete_atkspd",amount:-2,operation:"add_value"}]]
 
 # Crossbow
-item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_F=0,trinket_in_offhand=0}] weapon.offhand with minecraft:crossbow[minecraft:unbreakable={},\
+item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_F=0}] weapon.offhand with minecraft:crossbow[minecraft:unbreakable={},\
 minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},\
 minecraft:custom_name={italic:false,color:"red",text:"Hunting Bow"},\
 minecraft:enchantment_glint_override=false,\
 minecraft:enchantments={quick_charge:1}]
-item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_F=1,trinket_in_offhand=0}] weapon.offhand with minecraft:crossbow[minecraft:unbreakable={},\
+item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_F=1}] weapon.offhand with minecraft:crossbow[minecraft:unbreakable={},\
 minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},\
 minecraft:custom_name={italic:false,color:"red",text:"Hunting Bow"},\
 minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1}],\
 minecraft:enchantment_glint_override=false,\
-minecraft:enchantments={quick_charge:1}]
-item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_F=0,trinket_in_offhand=1}] hotbar.1 with minecraft:crossbow[minecraft:unbreakable={},\
-minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},\
-minecraft:custom_name={italic:false,color:"red",text:"Hunting Bow"},\
-minecraft:enchantment_glint_override=false,\
-minecraft:enchantments={quick_charge:1}]
-item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_F=1,trinket_in_offhand=1}] hotbar.1 with minecraft:crossbow[minecraft:unbreakable={},\
-minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},\
-minecraft:custom_name={italic:false,color:"red",text:"Hunting Bow"},\
-minecraft:enchantment_glint_override=false,\
-minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1}],\
 minecraft:enchantments={quick_charge:1}]
 
 # Arrows

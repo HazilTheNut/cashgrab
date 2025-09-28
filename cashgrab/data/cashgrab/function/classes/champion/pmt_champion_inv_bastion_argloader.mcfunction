@@ -25,10 +25,6 @@ clear @a[tag=t_pm_owner,limit=1] minecraft:shield
 # If shield is fully depleted, do nothing
 execute if score @a[tag=t_pm_owner,limit=1] cv_E matches ..0 run return 0
 
-# Slot to insert into depends on trinket position
-execute if score @a[tag=t_pm_owner,limit=1] trinket_in_offhand matches 0 run data modify storage cashgrab:champion_args shield_slot set value "weapon.offhand"
-execute if score @a[tag=t_pm_owner,limit=1] trinket_in_offhand matches 1 run data modify storage cashgrab:champion_args shield_slot set value "hotbar.1"
-
 # Shield damage depends on cv_E
 execute if score @a[tag=t_pm_owner,limit=1] cv_E matches 5 run data modify storage cashgrab:champion_args shield_damage set value 0
 execute if score @a[tag=t_pm_owner,limit=1] cv_E matches 4 run data modify storage cashgrab:champion_args shield_damage set value 67
