@@ -18,8 +18,7 @@ execute if score @a[tag=t_pm_owner,limit=1] __tutorial_seq_idx matches 22 run fu
 execute if score @a[tag=t_pm_owner,limit=1] __tutorial_seq_idx matches 31 run function cashgrab:tutorial/sequence/stage_crouch/pmt_init
 execute if score @a[tag=t_pm_owner,limit=1] __tutorial_seq_idx matches 41 run function cashgrab:tutorial/sequence/stage_passive/pmt_init
 execute if score @a[tag=t_pm_owner,limit=1] __tutorial_seq_idx matches 51 run function cashgrab:tutorial/sequence/stage_trinket/pmt_init
-execute if score @a[tag=t_pm_owner,limit=1] __tutorial_seq_idx matches 52 run function cashgrab:tutorial/sequence/stage_trinket_offhand/pmt_init
-execute if score @a[tag=t_pm_owner,limit=1] __tutorial_seq_idx matches 53 run function cashgrab:tutorial/sequence/stage_trinket_end/pmt_init
+execute if score @a[tag=t_pm_owner,limit=1] __tutorial_seq_idx matches 52 run function cashgrab:tutorial/sequence/stage_trinket_end/pmt_init
 
 # Send chat message
 function cashgrab:tutorial/pmt_send_message

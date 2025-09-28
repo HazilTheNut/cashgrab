@@ -14,3 +14,7 @@ scoreboard players set @a[tag=t_pm_owner,limit=1,scores={trinket_cfg_pos=1}] __t
 
 # Allow t_trinket_force_hotbar to override
 scoreboard players set @a[tag=t_pm_owner,limit=1,tag=t_trinket_force_hotbar] __trinket_slot_id 3
+
+# Trinket is in hotbar.1 in tutorial
+scoreboard players set @a[tag=t_pm_owner,limit=1,scores={activity_state=31..39}] __trinket_slot_id 1
+

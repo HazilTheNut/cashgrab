@@ -20,8 +20,7 @@ execute if score @a[tag=t_pm_owner,limit=1] __tutorial_seq_idx matches 22 run fu
 execute if score @a[tag=t_pm_owner,limit=1] __tutorial_seq_idx matches 31 run function cashgrab:tutorial/sequence/stage_crouch/pmt_tick
 execute if score @a[tag=t_pm_owner,limit=1] __tutorial_seq_idx matches 41 run function cashgrab:tutorial/sequence/stage_passive/pmt_tick
 execute if score @a[tag=t_pm_owner,limit=1] __tutorial_seq_idx matches 51 run function cashgrab:tutorial/sequence/stage_trinket/pmt_tick
-execute if score @a[tag=t_pm_owner,limit=1] __tutorial_seq_idx matches 52 run function cashgrab:tutorial/sequence/stage_trinket_offhand/pmt_tick
-execute if score @a[tag=t_pm_owner,limit=1] __tutorial_seq_idx matches 53 run function cashgrab:tutorial/sequence/stage_trinket_end/pmt_tick
+execute if score @a[tag=t_pm_owner,limit=1] __tutorial_seq_idx matches 52 run function cashgrab:tutorial/sequence/stage_trinket_end/pmt_tick
 
 # Progress to next sequence index if set
 execute if score @a[tag=t_pm_owner,limit=1] __tutorial_seq_next_idx matches 1.. run scoreboard players operation @a[tag=t_pm_owner,limit=1] __tutorial_seq_idx = @a[tag=t_pm_owner,limit=1] __tutorial_seq_next_idx

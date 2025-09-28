@@ -93,8 +93,6 @@ scoreboard objectives add tv_B dummy
 scoreboard objectives add tv_C dummy
 scoreboard objectives add tv_D dummy
 
-scoreboard objectives remove trinket_in_offhand
-
 # Configured enumerated value for player configured preferred trinket position:
 #   0 = Class-Defined (Default)
 #   1 = Fixed Hotbar
