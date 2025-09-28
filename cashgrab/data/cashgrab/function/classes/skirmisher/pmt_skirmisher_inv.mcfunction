@@ -41,25 +41,25 @@ minecraft:dyed_color=15653548,minecraft:attribute_modifiers=[\
 ]]
 
 # =============================
+# Hotbar (trinket in offhand)
+execute if entity @a[tag=t_pm_owner,limit=1,scores={trinket_cfg_pos=0,cv_B=0}] run function cashgrab:classes/skirmisher/pmt_skirmisher_inv_swords {\
+b_cleaving_scimitar_enable:1,s_cleaving_scimitar_slot:"hotbar.0",b_dancing_rapier_enable:1,s_dancing_rapier_slot:"hotbar.1"}
+execute if entity @a[tag=t_pm_owner,limit=1,scores={trinket_cfg_pos=0,cv_B=1}] run function cashgrab:classes/skirmisher/pmt_skirmisher_inv_swords {\
+b_cleaving_scimitar_enable:1,s_cleaving_scimitar_slot:"hotbar.0",b_dancing_rapier_enable:0,s_dancing_rapier_slot:"hotbar.1"}
+execute if entity @a[tag=t_pm_owner,limit=1,scores={trinket_cfg_pos=0,cv_B=2}] run function cashgrab:classes/skirmisher/pmt_skirmisher_inv_swords {\
+b_cleaving_scimitar_enable:0,s_cleaving_scimitar_slot:"hotbar.0",b_dancing_rapier_enable:1,s_dancing_rapier_slot:"hotbar.1"}
+
+# =============================
 # Hotbar (trinket in hotbar, when you have both swords)
-execute if entity @a[tag=t_pm_owner,limit=1,scores={trinket_in_offhand=0,cv_B=0,cv_A=0..1}] run function cashgrab:classes/skirmisher/pmt_skirmisher_inv_swords {\
+execute if entity @a[tag=t_pm_owner,limit=1,scores={trinket_cfg_pos=1,cv_B=0,cv_A=0..1}] run function cashgrab:classes/skirmisher/pmt_skirmisher_inv_swords {\
 b_cleaving_scimitar_enable:1,s_cleaving_scimitar_slot:"hotbar.0",b_dancing_rapier_enable:1,s_dancing_rapier_slot:"weapon.offhand"}
-execute if entity @a[tag=t_pm_owner,limit=1,scores={trinket_in_offhand=0,cv_B=0,cv_A=2}] run function cashgrab:classes/skirmisher/pmt_skirmisher_inv_swords {\
+execute if entity @a[tag=t_pm_owner,limit=1,scores={trinket_cfg_pos=1,cv_B=0,cv_A=2}] run function cashgrab:classes/skirmisher/pmt_skirmisher_inv_swords {\
 b_cleaving_scimitar_enable:1,s_cleaving_scimitar_slot:"weapon.offhand",b_dancing_rapier_enable:1,s_dancing_rapier_slot:"hotbar.0"}
 
 # =============================
 # Hotbar (trinket in hotbar, when you have only one sword)
-execute if entity @a[tag=t_pm_owner,limit=1,scores={trinket_in_offhand=0,cv_B=1}] run function cashgrab:classes/skirmisher/pmt_skirmisher_inv_swords {\
+execute if entity @a[tag=t_pm_owner,limit=1,scores={trinket_cfg_pos=1,cv_B=1}] run function cashgrab:classes/skirmisher/pmt_skirmisher_inv_swords {\
 b_cleaving_scimitar_enable:1,s_cleaving_scimitar_slot:"hotbar.0",b_dancing_rapier_enable:0,s_dancing_rapier_slot:"hotbar.0"}
-execute if entity @a[tag=t_pm_owner,limit=1,scores={trinket_in_offhand=0,cv_B=2}] run function cashgrab:classes/skirmisher/pmt_skirmisher_inv_swords {\
+execute if entity @a[tag=t_pm_owner,limit=1,scores={trinket_cfg_pos=1,cv_B=2}] run function cashgrab:classes/skirmisher/pmt_skirmisher_inv_swords {\
 b_cleaving_scimitar_enable:0,s_cleaving_scimitar_slot:"hotbar.0",b_dancing_rapier_enable:1,s_dancing_rapier_slot:"hotbar.0"}
-
-# =============================
-# Hotbar (trinket in offhand)
-execute if entity @a[tag=t_pm_owner,limit=1,scores={trinket_in_offhand=1,cv_B=0}] run function cashgrab:classes/skirmisher/pmt_skirmisher_inv_swords {\
-b_cleaving_scimitar_enable:1,s_cleaving_scimitar_slot:"hotbar.0",b_dancing_rapier_enable:1,s_dancing_rapier_slot:"hotbar.1"}
-execute if entity @a[tag=t_pm_owner,limit=1,scores={trinket_in_offhand=1,cv_B=1}] run function cashgrab:classes/skirmisher/pmt_skirmisher_inv_swords {\
-b_cleaving_scimitar_enable:1,s_cleaving_scimitar_slot:"hotbar.0",b_dancing_rapier_enable:0,s_dancing_rapier_slot:"hotbar.1"}
-execute if entity @a[tag=t_pm_owner,limit=1,scores={trinket_in_offhand=1,cv_B=2}] run function cashgrab:classes/skirmisher/pmt_skirmisher_inv_swords {\
-b_cleaving_scimitar_enable:0,s_cleaving_scimitar_slot:"hotbar.0",b_dancing_rapier_enable:1,s_dancing_rapier_slot:"hotbar.1"}
 
