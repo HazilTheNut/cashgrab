@@ -93,16 +93,22 @@ scoreboard objectives add tv_B dummy
 scoreboard objectives add tv_C dummy
 scoreboard objectives add tv_D dummy
 
-# 1 if trinket is in offhand and 0 otherwise
-#   The t_trinket_force_hotbar tag forces trinket to
-#   to be drawn in hotbar.3
-scoreboard objectives add trinket_in_offhand dummy
+scoreboard objectives remove trinket_in_offhand
 
 # Configured enumerated value for player configured preferred trinket position:
-#   0 = Default (Class-Defined)
-#   1 = Always Hotbar
-#   2 = Always Offhand
-scoreboard objectives add __trinket_cfg_pos dummy
+#   0 = Class-Defined (Default)
+#   1 = Fixed Hotbar
+scoreboard objectives add trinket_cfg_pos dummy
+
+# Enumerated value for what slot to insert trinket into
+#   -1 = weapon.offhand
+#   0 = hotbar.0
+#   1 = hotbar.1
+#   2 = hotbar.2
+#   3 = hotbar.3
+# The t_trinket_force_hotbar tag forces trinket to
+#   to be drawn in hotbar.3
+scoreboard objectives add __trinket_slot_id dummy
 
 # --- Game objective-related
 

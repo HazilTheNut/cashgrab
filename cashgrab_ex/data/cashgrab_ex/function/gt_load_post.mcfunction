@@ -14,7 +14,7 @@ func_pmtl_end:"cashgrab_ex:classes/hexblade/pmtl_hexblade_end",\
 func_pmt_cts_icon:"cashgrab_ex:classes/hexblade/pmt_hexblade_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:util/noop",\
 func_pmt_score_kill:"cashgrab:util/noop",\
-trinket_default_offhand:1,\
+trinket_default_hotbar_slot:-1,\
 }
 
 # Cloudbreaker
@@ -30,7 +30,7 @@ func_pmtl_end:"cashgrab:util/noop",\
 func_pmt_cts_icon:"cashgrab_ex:classes/cloudbreaker/pmt_cloudbreaker_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab_ex:classes/cloudbreaker/pmtl_cloudbreaker_cts_tick",\
 func_pmt_score_kill:"cashgrab:util/noop",\
-trinket_default_offhand:1,\
+trinket_default_hotbar_slot:2,\
 }
 
 scoreboard objectives add evc_torchflower_seeds minecraft.used:minecraft.torchflower_seeds
@@ -48,7 +48,7 @@ func_pmtl_end:"cashgrab:util/noop",\
 func_pmt_cts_icon:"cashgrab_ex:classes/battlesmith/pmt_battlesmith_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:util/noop",\
 func_pmt_score_kill:"cashgrab:util/noop",\
-trinket_default_offhand:1,\
+trinket_default_hotbar_slot:-1,\
 }
 
 # Stargazer
@@ -64,7 +64,7 @@ func_pmtl_end:"cashgrab:util/noop",\
 func_pmt_cts_icon:"cashgrab_ex:classes/stargazer/pmt_stargazer_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab_ex:classes/stargazer/pmtl_stargazer_cts_tick",\
 func_pmt_score_kill:"cashgrab:util/noop",\
-trinket_default_offhand:0,\
+trinket_default_hotbar_slot:3,\
 }
 
 scoreboard objectives remove evc_vex_armor_trim_smithing_templates
@@ -88,7 +88,7 @@ func_pmtl_end:"cashgrab:util/noop",\
 func_pmt_cts_icon:"cashgrab_ex:classes/evincer/pmt_evincer_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab_ex:classes/evincer/pmtl_evincer_cts_tick",\
 func_pmt_score_kill:"cashgrab:util/noop",\
-trinket_default_offhand:1,\
+trinket_default_hotbar_slot:-1,\
 }
 
 scoreboard objectives add evc_sticks minecraft.used:minecraft.stick

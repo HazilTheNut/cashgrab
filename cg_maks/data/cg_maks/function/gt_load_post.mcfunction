@@ -16,7 +16,7 @@ func_pmtl_end:"cg_maks:classes/vampire/pmtl_vampire_end",\
 func_pmt_cts_icon:"cg_maks:classes/vampire/pmt_vampire_cts_inv_icon",\
 func_pmtl_cts_tick:"cg_maks:classes/vampire/pmtl_vampire_cts_tick",\
 func_pmt_score_kill:"cashgrab:util/noop",\
-trinket_default_offhand:1,\
+trinket_default_hotbar_slot:-1,\
 }
 
 # Dancer
@@ -33,7 +33,7 @@ func_pmtl_end:"cg_maks:classes/dancer/pmtl_dancer_end",\
 func_pmt_cts_icon:"cg_maks:classes/dancer/pmt_dancer_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:util/noop",\
 func_pmt_score_kill:"cashgrab:util/noop",\
-trinket_default_offhand:1,\
+trinket_default_hotbar_slot:-1,\
 }
 
 # =======================

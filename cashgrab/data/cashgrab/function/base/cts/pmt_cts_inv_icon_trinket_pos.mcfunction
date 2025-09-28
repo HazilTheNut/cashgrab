@@ -9,17 +9,12 @@
 # Arguments:
 #	slot	:	Inventory slot to insert into
 
-$item replace entity @a[tag=t_pm_owner,limit=1,scores={__trinket_cfg_pos=0}] $(slot) with minecraft:clay_ball[\
+$item replace entity @a[tag=t_pm_owner,limit=1,scores={trinket_cfg_pos=0}] $(slot) with minecraft:clay_ball[\
 minecraft:item_model="minecraft:gray_bundle",\
 minecraft:item_name=[{color:"gold",italic:false,text:"<Trinket Pos> "},{color:"gray",italic:false,text:"Class-Defined"}]\
 ] 1 
 
-$item replace entity @a[tag=t_pm_owner,limit=1,scores={__trinket_cfg_pos=1}] $(slot) with minecraft:clay_ball[\
+$item replace entity @a[tag=t_pm_owner,limit=1,scores={trinket_cfg_pos=1}] $(slot) with minecraft:clay_ball[\
 minecraft:item_model="minecraft:lime_bundle",\
-minecraft:item_name=[{color:"gold",italic:false,text:"<Trinket Pos> "},{color:"green",italic:false,text:"Always Hotbar"}]\
-] 1 
-
-$item replace entity @a[tag=t_pm_owner,limit=1,scores={__trinket_cfg_pos=2}] $(slot) with minecraft:clay_ball[\
-minecraft:item_model="minecraft:cyan_bundle",\
-minecraft:item_name=[{color:"gold",italic:false,text:"<Trinket Pos> "},{color:"aqua",italic:false,text:"Always Offhand"}]\
+minecraft:item_name=[{color:"gold",italic:false,text:"<Trinket Pos> "},{color:"green",italic:false,text:"Fixed Hotbar"}]\
 ] 1 

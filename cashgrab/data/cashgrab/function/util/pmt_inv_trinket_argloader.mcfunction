@@ -16,8 +16,11 @@ execute if score @a[tag=t_pm_owner,limit=1] trinket_charges_max matches ..0 run 
 
 # If player has a trinket charge, display trinket item
 execute store result storage cashgrab:trinket_args charges int 1 run scoreboard players get @a[tag=t_pm_owner,limit=1] trinket_charges
-execute if entity @a[tag=t_pm_owner,scores={trinket_charges=1..,trinket_in_offhand=0}] run data merge storage cashgrab:trinket_args {slot:"hotbar.3"}
-execute if entity @a[tag=t_pm_owner,scores={trinket_charges=1..,trinket_in_offhand=1}] run data merge storage cashgrab:trinket_args {slot:"weapon.offhand"}
+execute if entity @a[tag=t_pm_owner,scores={trinket_charges=1..,__trinket_slot_id=-1}] run data merge storage cashgrab:trinket_args {slot:"weapon.offhand"}
+execute if entity @a[tag=t_pm_owner,scores={trinket_charges=1..,__trinket_slot_id=0}] run data merge storage cashgrab:trinket_args {slot:"hotbar.0"}
+execute if entity @a[tag=t_pm_owner,scores={trinket_charges=1..,__trinket_slot_id=1}] run data merge storage cashgrab:trinket_args {slot:"hotbar.1"}
+execute if entity @a[tag=t_pm_owner,scores={trinket_charges=1..,__trinket_slot_id=2}] run data merge storage cashgrab:trinket_args {slot:"hotbar.2"}
+execute if entity @a[tag=t_pm_owner,scores={trinket_charges=1..,__trinket_slot_id=3}] run data merge storage cashgrab:trinket_args {slot:"hotbar.3"}
 execute if entity @a[tag=t_pm_owner,scores={trinket_charges=1..}] run data modify storage cashgrab:trinket_args func_pmt_inv set from entity @s data.trinket_info.func_pmt_inv
 execute if entity @a[tag=t_pm_owner,scores={trinket_charges=1..}] run function cashgrab:trinkets/pmt_trinket_inv with storage cashgrab:trinket_args
 execute if entity @a[tag=t_pm_owner,scores={trinket_charges=1..}] run return 0

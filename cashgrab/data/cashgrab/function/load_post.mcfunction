@@ -19,7 +19,7 @@ func_pmtl_end:"cashgrab:util/noop",\
 func_pmt_cts_icon:"cashgrab:classes/frostknight/pmt_frostknight_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:util/noop",\
 func_pmt_score_kill:"cashgrab:util/noop",\
-trinket_default_offhand:1,\
+trinket_default_hotbar_slot:-1,\
 }
 
 # Griefer
@@ -35,7 +35,7 @@ func_pmtl_end:"cashgrab:util/noop",\
 func_pmt_cts_icon:"cashgrab:classes/griefer/pmt_griefer_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:classes/griefer/pmtl_griefer_cts_tick",\
 func_pmt_score_kill:"cashgrab:util/noop",\
-trinket_default_offhand:1,\
+trinket_default_hotbar_slot:-1,\
 }
 
 # Skirmisher
@@ -51,7 +51,7 @@ func_pmtl_end:"cashgrab:util/noop",\
 func_pmt_cts_icon:"cashgrab:classes/skirmisher/pmt_skirmisher_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:util/noop",\
 func_pmt_score_kill:"cashgrab:util/noop",\
-trinket_default_offhand:0,\
+trinket_default_hotbar_slot:-1,\
 }
 
 # Spectre
@@ -67,7 +67,7 @@ func_pmtl_end:"cashgrab:util/noop",\
 func_pmt_cts_icon:"cashgrab:classes/spectre/pmt_spectre_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:classes/spectre/pmtl_spectre_cts_tick",\
 func_pmt_score_kill:"cashgrab:util/noop",\
-trinket_default_offhand:1,\
+trinket_default_hotbar_slot:-1,\
 }
 
 # Ranger
@@ -83,7 +83,7 @@ func_pmtl_end:"cashgrab:util/noop",\
 func_pmt_cts_icon:"cashgrab:classes/ranger/pmt_ranger_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:classes/ranger/pmtl_ranger_cts_tick",\
 func_pmt_score_kill:"cashgrab:util/noop",\
-trinket_default_offhand:0,\
+trinket_default_hotbar_slot:1,\
 }
 
 # Artillery
@@ -99,7 +99,7 @@ func_pmtl_end:"cashgrab:util/noop",\
 func_pmt_cts_icon:"cashgrab:classes/artillery/pmt_artillery_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:classes/artillery/pmtl_artillery_cts_tick",\
 func_pmt_score_kill:"cashgrab:util/noop",\
-trinket_default_offhand:0,\
+trinket_default_hotbar_slot:1,\
 }
 
 # Champion
@@ -115,7 +115,7 @@ func_pmtl_end:"cashgrab:util/noop",\
 func_pmt_cts_icon:"cashgrab:classes/champion/pmt_champion_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:util/noop",\
 func_pmt_score_kill:"cashgrab:util/noop",\
-trinket_default_offhand:0,\
+trinket_default_hotbar_slot:1,\
 }
 
 # Titan
@@ -131,7 +131,7 @@ func_pmtl_end:"cashgrab:util/noop",\
 func_pmt_cts_icon:"cashgrab:classes/titan/pmt_titan_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:util/noop",\
 func_pmt_score_kill:"cashgrab:util/noop",\
-trinket_default_offhand:1,\
+trinket_default_hotbar_slot:-1,\
 }
 
 # Alchemist
@@ -147,7 +147,7 @@ func_pmtl_end:"cashgrab:util/noop",\
 func_pmt_cts_icon:"cashgrab:classes/alchemist/pmt_alchemist_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:classes/alchemist/pmtl_alchemist_cts_tick",\
 func_pmt_score_kill:"cashgrab:util/noop",\
-trinket_default_offhand:0,\
+trinket_default_hotbar_slot:3,\
 }
 
 # Chronomancer
@@ -163,7 +163,7 @@ func_pmtl_end:"cashgrab:util/noop",\
 func_pmt_cts_icon:"cashgrab:classes/chronomancer/pmt_chronomancer_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:classes/chronomancer/pmtl_chronomancer_cts_tick",\
 func_pmt_score_kill:"cashgrab:util/noop",\
-trinket_default_offhand:0,\
+trinket_default_hotbar_slot:1,\
 }
 
 # Append trinket roster data
