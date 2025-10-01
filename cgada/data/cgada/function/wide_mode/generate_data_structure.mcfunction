@@ -1,8 +1,7 @@
 
 # Reset data structure
-data modify storage cgada:data class_data set value []
-data modify storage cgada:data trinket_data_template set value []
-data modify storage cgada:data i_games_played set value 0
+data modify storage cgada:wide_data class_data set value []
+data modify storage cgada:wide_data trinket_data_template set value []
 
 # Generate trinket data template
 scoreboard players set CGADA_IDX num 0

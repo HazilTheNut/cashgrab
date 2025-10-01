@@ -5,8 +5,8 @@
 #$tellraw @a "Accessing class $(class_idx) trinket $(trinket_idx)"
 
 # Append to strings
-$data modify storage cgada:csv i_temp_trinket_entries set from storage cgada:data class_data[$(class_idx)].trinket_data[$(trinket_idx)].i_entry_total
-$data modify storage cgada:csv i_temp_trinket_coins set from storage cgada:data class_data[$(class_idx)].trinket_data[$(trinket_idx)].i_coins_total
+$data modify storage cgada:csv i_temp_trinket_entries set from storage cgada:wide_data class_data[$(class_idx)].trinket_data[$(trinket_idx)].i_entry_total
+$data modify storage cgada:csv i_temp_trinket_coins set from storage cgada:wide_data class_data[$(class_idx)].trinket_data[$(trinket_idx)].i_coins_total
 function cgada:wide_mode/csv_export/print_trinket_data_write with storage cgada:csv
 
 # Increment index and loop

@@ -4,11 +4,11 @@
 #$tellraw @a "Accessing class $(class_idx)"
 
 # Generate class data string
-$data modify storage cgada:csv s_temp_class_name set from storage cgada:data class_data[$(class_idx)].s_class_name
-$data modify storage cgada:csv i_temp_class_entries set from storage cgada:data class_data[$(class_idx)].i_entry_total
-$data modify storage cgada:csv i_temp_class_coins set from storage cgada:data class_data[$(class_idx)].i_coins_total
-$data modify storage cgada:csv i_temp_class_kills set from storage cgada:data class_data[$(class_idx)].i_kills_total
-$data modify storage cgada:csv i_temp_class_deaths set from storage cgada:data class_data[$(class_idx)].i_deaths_total
+$data modify storage cgada:csv s_temp_class_name set from storage cgada:wide_data class_data[$(class_idx)].s_class_name
+$data modify storage cgada:csv i_temp_class_entries set from storage cgada:wide_data class_data[$(class_idx)].i_entry_total
+$data modify storage cgada:csv i_temp_class_coins set from storage cgada:wide_data class_data[$(class_idx)].i_coins_total
+$data modify storage cgada:csv i_temp_class_kills set from storage cgada:wide_data class_data[$(class_idx)].i_kills_total
+$data modify storage cgada:csv i_temp_class_deaths set from storage cgada:wide_data class_data[$(class_idx)].i_deaths_total
 
 # Generate trinket data entries and coins strings
 data modify storage cgada:csv s_data_trinket_entries set value ""
