@@ -13,7 +13,7 @@
 
 #$tellraw @a[tag=t_debug] "trinkets/vigor_flask/pmt_vigor_flask_inv: slot: $(slot) ; charges: $(charges)"
 
-$item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:lime_dye[\
+$item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:turtle_scute[\
 minecraft:item_name=[{color:"green",italic:false,text:"[Use $(charges)/$(charges_max)]"},{color:"white",text:" Nox Bomb"}],\
 minecraft:enchantment_glint_override=true,\
 minecraft:custom_data={is_trinket:1},\

@@ -67,7 +67,7 @@ minecraft:attribute_modifiers=[\
 item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1}] hotbar.0 with minecraft:stick[minecraft:unbreakable={},\
 minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},\
 minecraft:custom_name=[{italic:false,color:"green",text:"[Use]"},{italic:false,color:"red",text:" Ochre Laser"}],\
-minecraft:item_model="minecraft:golden_sword",\
+minecraft:item_model="minecraft:copper_sword",\
 minecraft:enchantment_glint_override=true,\
 minecraft:consumable={\
 consume_seconds:0f,\

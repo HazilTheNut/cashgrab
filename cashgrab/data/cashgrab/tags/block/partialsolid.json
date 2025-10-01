@@ -26,15 +26,15 @@
 			"required": false
 		},
 		{
-			"id": "minecraft:lantern",
+			"id": "#minecraft:lanterns",
 			"required": false
 		},
 		{
-			"id": "minecraft:soul_lantern",
+			"id": "#minecraft:chains",
 			"required": false
 		},
 		{
-			"id": "minecraft:chain",
+			"id": "#minecraft:bars",
 			"required": false
 		}
 	]

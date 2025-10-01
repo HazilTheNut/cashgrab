@@ -27,10 +27,16 @@ gamerule naturalRegeneration false
 gamerule spawnRadius 3
 gamerule projectilesCanBreakBlocks false
 gamerule announceAdvancements false
+gamerule allowEnteringNetherUsingPortals false
+gamerule commandBlocksEnabled true
+gamerule pvp true
+gamerule spawnMonsters false
+gamerule spawnerBlocksEnabled false
 
 difficulty normal
 
 setworldspawn 0 100 0
+forceload add -1 -1 1 1
 
 # =============================
 # General player info

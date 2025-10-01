@@ -10,6 +10,7 @@
 #	slot	: Inventory slot to insert into
 
 $item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:white_dye[\
+minecraft:item_model="minecraft:wind_charge",\
 minecraft:custom_name=[{color:"dark_aqua",italic:false,text:"<Class>"},{color:"white",text:" Cloudbreaker"}],\
 minecraft:custom_data={is_cts_icon:1},\
 minecraft:lore=[\

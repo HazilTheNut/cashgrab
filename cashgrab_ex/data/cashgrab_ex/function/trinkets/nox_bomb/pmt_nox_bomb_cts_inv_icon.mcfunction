@@ -9,7 +9,7 @@
 # Arguments:
 #	slot	: Inventory slot to insert into
 
-$item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:lime_dye[\
+$item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:turtle_scute[\
 minecraft:item_name=[{color:"dark_green",italic:false,text:"<Trinket>"},{color:"white",text:" Nox Bomb"}],\
 minecraft:enchantment_glint_override=true,\
 minecraft:custom_data={is_cts_icon:1},\
