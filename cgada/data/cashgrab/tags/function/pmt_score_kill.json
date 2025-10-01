@@ -1,6 +1,6 @@
 {
 	"replace": false,
 	"values": [
-		"cgada:pmt_score_kill"
+		"cgada:event_handling/pmt_score_kill"
 	]
 }

@@ -1,6 +1,6 @@
 {
 	"replace": false,
 	"values": [
-		"cgada:gt_tick_post"
+		"cgada:event_handling/gt_tick_post"
 	]
 }

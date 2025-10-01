@@ -1,6 +1,6 @@
 {
 	"replace": false,
 	"values": [
-		"cgada:pmt_tick_prior"
+		"cgada:event_handling/pmt_tick_prior"
 	]
 }

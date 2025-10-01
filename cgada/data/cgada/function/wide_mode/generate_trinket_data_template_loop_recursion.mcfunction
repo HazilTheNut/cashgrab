@@ -1,0 +1,2 @@
+
+function cgada:wide_mode/generate_trinket_data_template_loop with storage cgada:arg_idx

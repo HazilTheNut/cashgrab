@@ -19,4 +19,4 @@ $data modify storage cgada:data class_data[$(idx)].trinket_data set from storage
 
 # Increment index then loop
 execute store result storage cgada:arg_idx idx int 1 run scoreboard players add CGADA_IDX num 1
-execute if score CGADA_IDX num <= NUM_CTS_CLASS_ID_MAX num run function cgada:generate_class_data_loop_recursion with storage cgada:arg_idx
+execute if score CGADA_IDX num <= NUM_CTS_CLASS_ID_MAX num run function cgada:wide_mode/generate_class_data_loop_recursion with storage cgada:arg_idx
