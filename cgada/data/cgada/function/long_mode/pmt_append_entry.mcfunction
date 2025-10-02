@@ -1,7 +1,6 @@
 
 # Prepare initial data entry
 data modify storage cgada:long_data entry_init set value {\
-i_idx:0,\
 s_class_name:"",\
 s_trinket_name:"",\
 s_map_name:"",\
@@ -10,7 +9,6 @@ i_kills_total:0,\
 i_coins_total:0,\
 b_entry_complete:0\
 }
-execute store result storage cgada:long_data entry_init.i_idx int 1 run scoreboard players get NUM_CGADA_LM_NEXT_IDX num
 $data modify storage cgada:long_data entry_init.s_class_name set string storage cashgrab:game_info classes[$(class_idx)].s_class_name
 $data modify storage cgada:long_data entry_init.s_trinket_name set string storage cashgrab:game_info trinkets[$(trinket_idx)].s_trinket_name
 data modify storage cgada:long_data entry_init.s_map_name set string storage cgada:map_info map_name
