@@ -12,4 +12,4 @@ scoreboard players set @a[tag=t_pm_owner,limit=1] trinket_charges 3
 scoreboard players set @a[tag=t_pm_owner,limit=1] trinket_charges_max 3
 
 # Clear events
-scoreboard players set @a[tag=t_pm_owner,limit=1] evc_mangrove_leaves 0
+scoreboard players set @a[tag=t_pm_owner,limit=1] evc_redstone_torches 0
