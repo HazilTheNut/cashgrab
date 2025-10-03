@@ -21,7 +21,10 @@ execute if score CGAW_CFG_MAP_ID num matches 302 run data modify storage cgaw:ru
 execute if score CGAW_CFG_MAP_ID num matches 303 run data modify storage cgaw:runtime active_map set from storage cgaw:world_info map_data.graphite
 
 # Copy map name to namespace usable by cgada
-data modify storage cgada:map_info map_name set from storage cgaw:runtime map_name
+data modify storage cgada:map_info map_name set from storage cgaw:runtime active_map.map_name
+
+# Display map name
+tellraw @a [{"type":"text","color":"aqua","text":"Selected Map: "},{"type":"nbt","color":"green","underlined":false,source:"storage",storage:"cgaw:runtime",nbt:"active_map.map_name"}]
 
 # Set time of day
 function cgaw:gt_set_daytime with storage cgaw:runtime active_map
