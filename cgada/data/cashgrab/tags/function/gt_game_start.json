@@ -1,6 +1,6 @@
 {
 	"replace": false,
 	"values": [
-		"cgada:gt_game_start"
+		"cgada:event_handling/gt_game_start"
 	]
 }
