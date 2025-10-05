@@ -14,7 +14,7 @@ scoreboard objectives add cgaw_reset_coin_goal_input trigger
 
 # Match time config
 scoreboard players add CGAW_CFG_MATCH_TIME_TICKS num 0
-execute if score CGAW_CFG_MATCH_TIME_TICKS num matches 0 run scoreboard players set CGAW_CFG_MATCH_TIME_TICKS num 6000
+execute if score CGAW_CFG_MATCH_TIME_TICKS num matches 0 run scoreboard players set CGAW_CFG_MATCH_TIME_TICKS num 18000
 scoreboard objectives add cgaw_change_match_time_input trigger
 scoreboard objectives add cgaw_reset_match_time_input trigger
 
