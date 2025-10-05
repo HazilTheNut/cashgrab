@@ -8,7 +8,7 @@ $tellraw @a[tag=t_debug,tag=t_pm_owner,limit=1] "Teleporting you to $(loc) $(yaw
 $tp @a[tag=t_pm_owner,limit=1] $(loc) $(yaw) 0
 
 # Set spawnpoint
-$spawnpoint @a[tag=t_pm_owner,limit=1] $(loc) $(yaw)
+$spawnpoint @a[tag=t_pm_owner,limit=1] $(loc) $(yaw) 0
 
 # Remove tag from players at Lobby
 $execute positioned $(loc) run tag @a[tag=t_pm_owner,limit=1,distance=..3] remove dtm_send_to_tutorial
