@@ -11,8 +11,11 @@
 # Arguments: (none)
 
 # If player is too low health, do nothing
-execute if entity @a[tag=t_pm_owner,limit=1,scores={stat_hp=..6}] run tellraw @a[tag=t_pm_owner] {color:"red","type":text,text:"You don't have the appetite right now."}
-execute if entity @a[tag=t_pm_owner,limit=1,scores={stat_hp=..6}] run return run scoreboard players set @a[tag=t_pm_owner,limit=1] trinket_charges_modify 1
+execute if entity @a[tag=t_pm_owner,limit=1,scores={stat_hp=..6}] run return run function cashgrab_ex:trinkets/risk_it_biscuit/pmtl_risk_it_biscuit_refund
+
+# If effect already active, do nothing
+function cashgrab:util/npe_eid_find_peers
+execute if entity @e[scores={eid_compare=0},tag=t_risk_it_biscuit_effect_timer] run return run function cashgrab_ex:trinkets/risk_it_biscuit/pmtl_risk_it_biscuit_refund
 
 # Apply potion effects
 effect give @a[tag=t_pm_owner,limit=1] minecraft:instant_damage
