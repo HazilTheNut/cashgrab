@@ -14,6 +14,7 @@ execute if score CGAW_CFG_MAP_ID num matches 105 run setblock 28 -17 58 minecraf
 execute if score CGAW_CFG_MAP_ID num matches 201 run setblock 28 -18 63 minecraft:gold_block
 execute if score CGAW_CFG_MAP_ID num matches 202 run setblock 28 -18 64 minecraft:gold_block
 execute if score CGAW_CFG_MAP_ID num matches 203 run setblock 28 -18 65 minecraft:gold_block
+execute if score CGAW_CFG_MAP_ID num matches 204 run setblock 28 -17 63 minecraft:gold_block
 
 execute if score CGAW_CFG_MAP_ID num matches 301 run setblock 28 -18 69 minecraft:gold_block
 execute if score CGAW_CFG_MAP_ID num matches 302 run setblock 28 -18 70 minecraft:gold_block
@@ -81,6 +82,14 @@ setblock 27 -18 64 minecraft:bamboo_wall_sign[facing=west]{is_waxed:1b,front_tex
 setblock 27 -18 65 minecraft:bamboo_wall_sign[facing=west]{is_waxed:1b,front_text:{messages:[\
 "",\
 {type:"text",text:"[Bogpit]",click_event:{action:"run_command",command:"/trigger cgaw_selected_map_id_input set 203"}},\
+"",\
+""\
+]}} replace
+
+# Grimspire
+setblock 27 -17 63 minecraft:bamboo_wall_sign[facing=west]{is_waxed:1b,front_text:{messages:[\
+"",\
+{type:"text",text:"[Grimspire]",click_event:{action:"run_command",command:"/trigger cgaw_selected_map_id_input set 204"}},\
 "",\
 ""\
 ]}} replace

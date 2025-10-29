@@ -15,6 +15,7 @@ execute if score CGAW_CFG_MAP_ID num matches 105 run data modify storage cgaw:ru
 execute if score CGAW_CFG_MAP_ID num matches 201 run data modify storage cgaw:runtime active_map set from storage cgaw:world_info map_data.scald
 execute if score CGAW_CFG_MAP_ID num matches 202 run data modify storage cgaw:runtime active_map set from storage cgaw:world_info map_data.golden
 execute if score CGAW_CFG_MAP_ID num matches 203 run data modify storage cgaw:runtime active_map set from storage cgaw:world_info map_data.bogpit
+execute if score CGAW_CFG_MAP_ID num matches 204 run data modify storage cgaw:runtime active_map set from storage cgaw:world_info map_data.grimspire
 
 execute if score CGAW_CFG_MAP_ID num matches 301 run data modify storage cgaw:runtime active_map set from storage cgaw:world_info map_data.deepgrove
 execute if score CGAW_CFG_MAP_ID num matches 302 run data modify storage cgaw:runtime active_map set from storage cgaw:world_info map_data.skullway

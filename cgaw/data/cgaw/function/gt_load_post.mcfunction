@@ -171,6 +171,21 @@ rot_spawn_c:"180 0",\
 loc_spawn_d:"1067 117 -3991",\
 rot_spawn_d:"-132 0",\
 },\
+grimspire:{\
+size:2,\
+map_name:"Grimspire",\
+daytime:12750,\
+loc_cts:"1063 96 5998",\
+yaw_cts:"-90",\
+loc_spawn_a:"1145 103 5956",\
+rot_spawn_a:"-45 0",\
+loc_spawn_b:"1111 106 5997",\
+rot_spawn_b:"-152 -4",\
+loc_spawn_c:"1132 100 6000",\
+rot_spawn_c:"0 0",\
+loc_spawn_d:"1170 104 6037",\
+rot_spawn_d:"115 0",\
+},\
 deepgrove:{\
 size:3,\
 map_name:"Deepgrove",\
