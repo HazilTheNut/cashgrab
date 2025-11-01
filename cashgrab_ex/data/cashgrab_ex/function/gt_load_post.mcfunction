@@ -88,7 +88,7 @@ func_pmtl_end:"cashgrab:util/noop",\
 func_pmt_cts_icon:"cashgrab_ex:classes/evincer/pmt_evincer_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab_ex:classes/evincer/pmtl_evincer_cts_tick",\
 func_pmt_score_kill:"cashgrab:util/noop",\
-trinket_default_hotbar_slot:-1,\
+trinket_default_hotbar_slot:1,\
 }
 
 scoreboard objectives add evc_sticks minecraft.used:minecraft.stick
