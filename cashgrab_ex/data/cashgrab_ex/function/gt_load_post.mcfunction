@@ -30,7 +30,7 @@ func_pmtl_end:"cashgrab:util/noop",\
 func_pmt_cts_icon:"cashgrab_ex:classes/cloudbreaker/pmt_cloudbreaker_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab_ex:classes/cloudbreaker/pmtl_cloudbreaker_cts_tick",\
 func_pmt_score_kill:"cashgrab:util/noop",\
-trinket_default_hotbar_slot:2,\
+trinket_default_hotbar_slot:1,\
 }
 
 scoreboard objectives add evc_torchflower_seeds minecraft.used:minecraft.torchflower_seeds

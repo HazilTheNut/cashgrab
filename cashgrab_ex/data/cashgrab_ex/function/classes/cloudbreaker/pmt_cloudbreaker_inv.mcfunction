@@ -38,12 +38,4 @@ minecraft:attribute_modifiers=[\
 # Hotbar
 
 # Storm Bringer
-item replace entity @a[tag=t_pm_owner,limit=1] hotbar.0 with minecraft:diamond_axe[minecraft:unbreakable={},\
-minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},\
-minecraft:custom_name={italic:false,color:"red",text:"Storm Bringer"},\
-minecraft:attribute_modifiers=[\
-{type:"attack_damage",slot:"mainhand",id:"cashgrab:storm_bringer_atkdmg",amount:7,operation:"add_value"},\
-{type:"attack_speed",slot:"mainhand",id:"cashgrab:storm_bringer_atkspd",amount:-2.5,operation:"add_value"}]]
-
-# Thunder Seed
-function cashgrab_ex:classes/cloudbreaker/pmt_cloudbreaker_inv_thunder_seed_icon
+function cashgrab_ex:classes/cloudbreaker/pmt_cloudbreaker_inv_storm_bringer

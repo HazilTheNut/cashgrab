@@ -39,13 +39,13 @@ scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={cv_A=1..}] cv_A 1
 
 # Use Thunder Seed
 execute if score @a[tag=t_pm_owner,limit=1] evc_torchflower_seeds matches 1.. run function cashgrab:util/npe_create_missile {\
-f_speed_mpt:0.6f,\
+f_speed_mpt:0.615f,\
 i_lifetime_ticks:50,\
 i_origin_loc:1,\
 f_focal_dist_m:25,\
-i_gravity_vy_mmpt:200,\
-i_gravity_const_mmpt2:50,\
-t_missile_name:"t_thunder_seed_missile",\
+i_gravity_vy_mmpt:250,\
+i_gravity_const_mmpt2:55,\
+t_missile_name:"t_cloudbreaker_thunder_seed_missile",\
 f_tracking_scalar:0.0f,\
 col_terrain_allowed:"#cashgrab:partialsolid",\
 func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_none",\
@@ -57,7 +57,7 @@ b_assign_as_peer:1,\
 }
 scoreboard players set @a[tag=t_pm_owner,limit=1,scores={evc_torchflower_seeds=1..}] cv_E 0
 scoreboard players set @a[tag=t_pm_owner,limit=1,scores={evc_torchflower_seeds=1..}] cv_F 8000
-execute if score @a[tag=t_pm_owner,limit=1] evc_torchflower_seeds matches 1.. run function cashgrab_ex:classes/cloudbreaker/pmt_cloudbreaker_inv_thunder_seed_icon
+execute if score @a[tag=t_pm_owner,limit=1] evc_torchflower_seeds matches 1.. run function cashgrab_ex:classes/cloudbreaker/pmt_cloudbreaker_inv_storm_bringer
 
 scoreboard players add @a[tag=t_pm_owner,limit=1,scores={evc_torchflower_seeds=1..,cv_A=1..}] ability_cd_ms 1500
 
@@ -73,5 +73,5 @@ scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={cv_A=1..,cv_F=1..}] 
 # Award ability
 tag @a[tag=t_pm_owner,limit=1,scores={cv_E=0,cv_F=..0}] add t_award_thunder_seed
 scoreboard players set @a[tag=t_pm_owner,limit=1,tag=t_award_thunder_seed] cv_E 1
-execute if entity @a[tag=t_pm_owner,limit=1,tag=t_award_thunder_seed] run function cashgrab_ex:classes/cloudbreaker/pmt_cloudbreaker_inv_thunder_seed_icon
+execute if entity @a[tag=t_pm_owner,limit=1,tag=t_award_thunder_seed] run function cashgrab_ex:classes/cloudbreaker/pmt_cloudbreaker_inv_storm_bringer
 tag @a[tag=t_pm_owner,limit=1] remove t_award_thunder_seed
