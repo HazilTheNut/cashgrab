@@ -25,7 +25,8 @@ execute if score @s cv_E matches 5 run scoreboard players set @s cv_E 0
 execute unless score @s tmr_lifetime_ticks matches 79 run return 0
 
 # sfx / vfx
-particle minecraft:dust{color:[0.35,0.15,0.55],scale:1} ~ ~ ~ 1.90 1.25 1.90 0 50
+particle minecraft:dust{color:[0.35,0.15,0.55],scale:1} ~ ~ ~ 0.90 1.25 0.90 0 10 force
+particle minecraft:dust{color:[0.35,0.15,0.55],scale:1} ~ ~ ~ 2.00 1.25 2.00 0 40
 playsound minecraft:entity.enderman.teleport player @a ~ ~ ~ 1.0 0.75
 
 function cashgrab:util/npe_col_entity_filter_hostile

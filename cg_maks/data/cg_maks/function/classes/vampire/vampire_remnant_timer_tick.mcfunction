@@ -12,7 +12,7 @@
 execute if block ~ ~-1 ~ #cashgrab:nonsolid align y positioned ~ ~-1 ~ run tp @s ~ ~ ~
 
 # Base particle display
-particle minecraft:dust{color:[1f,0f,0f],scale:1.0} ~ ~0.5 ~ 0.1 0.1 0.1 0 2
+particle minecraft:dust{color:[1f,0f,0f],scale:1.0} ~ ~0.5 ~ 0.1 0.1 0.1 0 2 force
 
 # Find owner and display special particles for them.
 execute store result storage cashgrab:eid_args eid int 1 run scoreboard players get @s eid_owner

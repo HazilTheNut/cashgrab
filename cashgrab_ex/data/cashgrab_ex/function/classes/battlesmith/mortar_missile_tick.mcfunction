@@ -20,4 +20,4 @@
 #	cv_H	:
 
 particle minecraft:dust{color:[1.0f,0.6f,0.3f],scale:1.0f} ~ ~ ~ 0.05 0.05 0.05 0 1
-particle minecraft:flame ~ ~ ~ 0 0 0 0 1
+particle minecraft:flame ~ ~ ~ 0 0 0 0 1 force

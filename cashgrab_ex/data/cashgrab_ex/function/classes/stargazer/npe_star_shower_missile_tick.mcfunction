@@ -9,4 +9,4 @@
 #
 # Arguments: (none)
 
-particle minecraft:entity_effect{color:[1.0,1.0,0.8,1.0]} ~ ~ ~ 0.02 0.02 0.02 0 1
+particle minecraft:entity_effect{color:[1.0,1.0,0.8,1.0]} ~ ~ ~ 0.02 0.02 0.02 0 1 force

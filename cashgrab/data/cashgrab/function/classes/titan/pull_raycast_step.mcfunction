@@ -20,5 +20,5 @@
 #	cv_G	:	
 #	cv_H	:	
 
-particle minecraft:dragon_breath ~ ~ ~ 0 0 0 0 1
+particle minecraft:dragon_breath ~ ~ ~ 0 0 0 0 1 force
 

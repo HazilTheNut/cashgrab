@@ -26,6 +26,7 @@ scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 5
 
 effect give @a[tag=t_pm_owner,limit=1] minecraft:levitation 1 35 true
 
+particle minecraft:flame ~ ~0.33 ~ 0.5 0.1 0.5 0 10 force
 playsound minecraft:entity.firework_rocket.launch player @a ~ ~ ~ 3.0 1.0
 
 # Release player if they were grabbed

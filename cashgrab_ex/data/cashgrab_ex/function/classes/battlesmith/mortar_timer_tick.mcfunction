@@ -20,7 +20,7 @@
 #	cv_H	:
 
 particle minecraft:dust{color:[1.0f,0.6f,0.3f],scale:1.0f} ~ ~0.15 ~ 0.5 0.1 0.5 0 1
-particle minecraft:flame ~ ~0.15 ~ 0.5 0.1 0.5 0 1
+particle minecraft:flame ~ ~0.15 ~ 0.5 0.1 0.5 0 1 force
 
 execute if score @s stasis_state matches 1..2 run return 0
 

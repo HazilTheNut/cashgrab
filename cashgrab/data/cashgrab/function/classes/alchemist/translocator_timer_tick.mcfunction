@@ -20,7 +20,7 @@
 #	cv_G	:	
 #	cv_H	:	
 
-particle minecraft:enchanted_hit ~ ~0.8 ~ 0.25 0.5 0.25 0 1
+particle minecraft:enchanted_hit ~ ~0.8 ~ 0.25 0.5 0.25 0 1 force
 
 # Timer persists forever
 scoreboard players set @s tmr_lifetime_ticks 3

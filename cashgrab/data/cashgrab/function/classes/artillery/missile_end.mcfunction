@@ -27,7 +27,7 @@ execute if score @s temp_A = NUM_END_REASON_CLEANUP_PLAYER_DEATH num run return 
 execute if score @s temp_A = NUM_END_REASON_EXPIRE num run return 0
 
 particle minecraft:explosion ~ ~ ~ 1.5 1 1.5 0 15 force
-particle minecraft:lava ~ ~ ~ 2 0.2 2 0 10 force
+particle minecraft:lava ~ ~ ~ 2 0.2 2 0 10
 particle minecraft:flame ~ ~ ~ 2 0.2 2 0 10 force
 playsound minecraft:entity.generic.explode player @a ~ ~ ~ 3.0 0.9
 

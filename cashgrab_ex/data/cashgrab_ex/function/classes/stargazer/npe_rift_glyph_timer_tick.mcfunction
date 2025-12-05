@@ -13,5 +13,5 @@
 execute if block ~ ~-1 ~ #cashgrab:nonsolid align y positioned ~ ~-1 ~ run tp @s ~ ~ ~
 
 # vfx
-particle minecraft:dust{color:[1.0,0.9,0.8],scale:0.8} ~ ~0.1 ~ 0.35 0 0 0 1
-particle minecraft:dust{color:[1.0,0.9,0.8],scale:0.8} ~ ~0.1 ~ 0 0 0.35 0 1
+particle minecraft:dust{color:[1.0,0.9,0.8],scale:0.8} ~ ~0.1 ~ 0.35 0 0 0 1 force
+particle minecraft:dust{color:[1.0,0.9,0.8],scale:0.8} ~ ~0.1 ~ 0 0 0.35 0 1 force

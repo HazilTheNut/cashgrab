@@ -18,4 +18,4 @@
 #	cv_G	:	
 #	cv_H	:	
 
-execute unless entity @e[tag=t_timer_owner,tag=t_invisible] run particle minecraft:crit ~ ~1 ~ 0.5 0.25 0.5 0 5
+execute unless entity @e[tag=t_timer_owner,tag=t_invisible] run particle minecraft:crit ~ ~1 ~ 0.5 0.25 0.5 0 5 force

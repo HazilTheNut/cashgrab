@@ -19,6 +19,6 @@
 #	cv_G	:	
 #	cv_H	:	
 
-particle minecraft:dust{color:[1.0f,1.0f,0.6f],scale:1.0} ~ ~ ~ 0 0 0 0 1
+particle minecraft:dust{color:[1.0f,1.0f,0.6f],scale:1.0} ~ ~ ~ 0 0 0 0 1 force
 execute unless score @s stasis_state matches -1..0 run return 0
 particle minecraft:block{block_state:"minecraft:yellow_glazed_terracotta"} ~ ~ ~ 0 0 0 0 1

@@ -19,5 +19,5 @@
 #	cv_G	:	
 #	cv_H	:
 
-particle minecraft:dust{color:[0.8f,0.2f,0.6f],scale:1.0} ~ ~ ~ 0.1 0.1 0.1 0 1
+particle minecraft:dust{color:[0.8f,0.2f,0.6f],scale:1.0} ~ ~ ~ 0.1 0.1 0.1 0 1 force
 particle minecraft:mycelium ~ ~ ~ 0 0 0 0 2

@@ -14,7 +14,7 @@ $execute if score NUM_END_REASON_CLEANUP num matches $(end_reason) run return 0
 $execute if score NUM_END_REASON_CLEANUP_PLAYER_DEATH num matches $(end_reason) run return 0
 
 # vfx / sfx
-particle minecraft:dust{color:[1.0,1.0,0.7],scale:1.25} ~ ~0.1 ~ 2.25 0.45 2.25 0.5 40 force
+particle minecraft:dust{color:[1.0,1.0,0.7],scale:1.25} ~ ~0.1 ~ 2.25 0.45 2.25 0.5 40
 particle minecraft:electric_spark ~ ~ ~ 2 0.25 2 0 25
 playsound minecraft:block.glass.break player @a ~ ~ ~ 0.25 2.0
 

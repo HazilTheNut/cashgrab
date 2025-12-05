@@ -9,7 +9,7 @@
 # Arguments: (none)
 
 #Play particles above targets head.
-particle minecraft:dust{color:[1f,0f,0f],scale:1.0} ~ ~3 ~ 0.1 0.1 0.1 0 2
+particle minecraft:dust{color:[1f,0f,0f],scale:1.0} ~ ~3 ~ 0.1 0.1 0.1 0 2 force
 
 #Have a second color of particle for the player who applied the mark.
 execute store result storage cashgrab:eid_args eid int 1 run scoreboard players get @s cv_B

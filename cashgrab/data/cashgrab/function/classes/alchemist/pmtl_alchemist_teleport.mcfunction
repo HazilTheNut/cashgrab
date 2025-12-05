@@ -34,7 +34,7 @@ execute at @e[tag=t_alchemist_tp_target,limit=1] rotated as @a[tag=t_pm_owner,li
 
 # vfx / sfx
 execute at @e[tag=t_alchemist_tp_target,limit=1] run playsound minecraft:entity.player.teleport player @a ~ ~ ~ 1.0 1.0
-execute at @e[tag=t_alchemist_tp_target,limit=1] run particle minecraft:dust{color:[0.4,1.0,0.8],scale:4.0f} ~ ~1.2 ~ 0.35 0.6 0.35 0.2 30
+execute at @e[tag=t_alchemist_tp_target,limit=1] run particle minecraft:dust{color:[0.4,1.0,0.8],scale:4.0f} ~ ~1.2 ~ 0.35 0.6 0.35 0.2 30 force
 
 # Clean up tags
 tag @e[tag=t_alchemist_tp_target,limit=1] remove t_alchemist_tp_target

@@ -20,7 +20,8 @@
 
 # vfx / sfx
 playsound minecraft:block.fire.extinguish player @a ~ ~ ~ 1.0 2.0
-particle minecraft:cloud ~ ~0.15 ~ 2.2 0.1 2.2 0 90
+particle minecraft:cloud ~ ~0.15 ~ 2.2 0.1 2.2 0 30 force
+particle minecraft:cloud ~ ~0.15 ~ 2.2 0.1 2.2 0 60
 
 # Find owner and tag them with t_eid_matches
 execute store result storage cashgrab:find_eid_args eid int 1 run scoreboard players get @s eid_owner

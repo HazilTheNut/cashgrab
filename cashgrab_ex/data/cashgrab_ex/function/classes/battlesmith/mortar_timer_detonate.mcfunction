@@ -21,7 +21,7 @@
 
 # sfx / vfx
 particle minecraft:lava ~ ~1 ~ 0.55 0.5 0.55 0 10
-particle minecraft:flame ~ ~2 ~ 0.45 1 0.45 0.05 20
+particle minecraft:flame ~ ~2 ~ 0.45 1 0.45 0.05 20 force
 playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 1.0 1.5
 
 # Find owner and tag them with t_eid_matches

@@ -20,7 +20,7 @@
 #	cv_H	:   Star Shower pitch offset
 
 # vfx
-particle minecraft:dust{color:[0.42,0.18,0.66],scale:1} ~ ~ ~ 0.2 0.2 0.2 0 1
+particle minecraft:dust{color:[0.42,0.18,0.66],scale:1} ~ ~ ~ 0.2 0.2 0.2 0 1 force
 particle minecraft:dust{color:[0.80,1.00,0.925],scale:1} ~ ~ ~ 0.02 0.02 0.02 0 1 force
 particle minecraft:portal ~ ~ ~ 0.75 0.75 0.75 1 1
 

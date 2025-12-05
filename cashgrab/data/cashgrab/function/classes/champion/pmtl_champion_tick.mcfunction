@@ -27,7 +27,7 @@
 execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 0.. run scoreboard players remove @a[tag=t_pm_owner,limit=1] cv_A 1
 
 # Add more particles to speed effect
-execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 1.. run particle minecraft:effect ~ ~0.5 ~ 0.5 0.5 0.5 0 1
+execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 1.. run particle minecraft:effect ~ ~0.5 ~ 0.5 0.5 0.5 0 1 force
 
 # Apply absorption shield
 execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 0 run function cashgrab:classes/champion/pmtl_apply_absorption_aoe

@@ -19,5 +19,5 @@
 #	cv_G	:	
 #	cv_H	:	
 
-particle minecraft:dust_color_transition{from_color:[1.0f,0.5f,0.15f],to_color:[0.4f,0.4f,0.4f],scale:1.0f} ~ ~ ~ 0.035 0.035 0.035 0 2 force
+particle minecraft:dust_color_transition{from_color:[1.0f,0.5f,0.15f],to_color:[0.4f,0.4f,0.4f],scale:1.0f} ~ ~ ~ 0.035 0.035 0.035 0 2
 particle minecraft:wax_on ~ ~ ~ 0 0 0 0 1 force

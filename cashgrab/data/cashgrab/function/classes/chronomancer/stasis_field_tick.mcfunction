@@ -20,19 +20,19 @@
 #	cv_H	:	
 
 # Particles
-particle minecraft:enchanted_hit ~8 ~8 ~ 0 0 3.25 0 20 force
-particle minecraft:enchanted_hit ~-8 ~8 ~ 0 0 3.25 0 20 force
-particle minecraft:enchanted_hit ~ ~8 ~8 3.25 0 0 0 20 force
-particle minecraft:enchanted_hit ~ ~8 ~-8 3.25 0 0 0 20 force
-particle minecraft:enchanted_hit ~8 ~-8 ~ 0 0 3.25 0 20 force
-particle minecraft:enchanted_hit ~-8 ~-8 ~ 0 0 3.25 0 20 force
-particle minecraft:enchanted_hit ~ ~-8 ~8 3.25 0 0 0 20 force
-particle minecraft:enchanted_hit ~ ~-8 ~-8 3.25 0 0 0 20 force
-particle minecraft:enchanted_hit ~8 ~ ~8 0 3.25 0 0 20 force
-particle minecraft:enchanted_hit ~8 ~ ~-8 0 3.25 0 0 20 force
-particle minecraft:enchanted_hit ~-8 ~ ~-8 0 3.25 0 0 20 force
-particle minecraft:enchanted_hit ~-8 ~ ~8 0 3.25 0 0 20 force
-particle minecraft:enchant ~ ~ ~ 3.25 3.25 3.25 1 7 force
+particle minecraft:enchanted_hit ~8 ~8 ~ 0 0 3.25 0 15 force
+particle minecraft:enchanted_hit ~-8 ~8 ~ 0 0 3.25 0 15 force
+particle minecraft:enchanted_hit ~ ~8 ~8 3.25 0 0 0 15 force
+particle minecraft:enchanted_hit ~ ~8 ~-8 3.25 0 0 0 15 force
+particle minecraft:enchanted_hit ~8 ~-8 ~ 0 0 3.25 0 15 force
+particle minecraft:enchanted_hit ~-8 ~-8 ~ 0 0 3.25 0 15 force
+particle minecraft:enchanted_hit ~ ~-8 ~8 3.25 0 0 0 15 force
+particle minecraft:enchanted_hit ~ ~-8 ~-8 3.25 0 0 0 15 force
+particle minecraft:enchanted_hit ~8 ~ ~8 0 3.25 0 0 15 force
+particle minecraft:enchanted_hit ~8 ~ ~-8 0 3.25 0 0 15 force
+particle minecraft:enchanted_hit ~-8 ~ ~-8 0 3.25 0 0 15 force
+particle minecraft:enchanted_hit ~-8 ~ ~8 0 3.25 0 0 15 force
+particle minecraft:enchant ~ ~ ~ 3.25 3.25 3.25 1 7 normal
 
 #particle minecraft:enchanted_hit ~ ~ ~ 0 0 0 0 4 force
 

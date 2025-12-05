@@ -20,7 +20,8 @@
 #	cv_G	:	
 #	cv_H	:	
 
-particle minecraft:smoke ~ ~1 ~ 0.5 0.75 0.5 0 40
+particle minecraft:smoke ~ ~1 ~ 0.5 0.75 0.5 0 10 force
+particle minecraft:smoke ~ ~1 ~ 0.5 0.75 0.5 0 30
 
 execute positioned ~ ~1.625 ~ run function cashgrab:util/npe_raycast {\
 i_range_m:11,\

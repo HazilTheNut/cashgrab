@@ -20,7 +20,7 @@
 #	cv_H	:
 
 # Display particles at hex target (other than remnant)
-particle minecraft:dust{color:[0.8f,0.2f,0.6f],scale:1.0} ~ ~2.5 ~ 0.1 0.1 0.1 0 1
+particle minecraft:dust{color:[0.8f,0.2f,0.6f],scale:1.0} ~ ~2.5 ~ 0.1 0.1 0.1 0 1 force
 
 # If you hit a target twice with Hex, the glowing effect removal takes priority over applying it
 #   So on the first tick of lifetime, apply glowing effect again

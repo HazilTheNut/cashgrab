@@ -18,7 +18,7 @@
 #	cv_G	:	
 #	cv_H	:	
 
-particle minecraft:cloud ~ ~0.5 ~ 0.1 0.1 0.1 0 1
+particle minecraft:cloud ~ ~0.5 ~ 0.1 0.1 0.1 0 1 force
 
 # Wall detection
 execute unless block ~ ~ ~ #cashgrab:nonsolid run tag @s add t_hit_wall

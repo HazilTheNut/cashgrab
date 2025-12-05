@@ -9,7 +9,7 @@
 #
 # Arguments: (none)
 
-particle minecraft:note ~ ~ ~ 0 0 0 0.5 1
+particle minecraft:note ~ ~ ~ 0 0 0 0.5 1 force
 
 # Check if conditions necessary for a missile offset are present
 execute unless score @s mis_lifetime_ticks matches 1 run return 0
