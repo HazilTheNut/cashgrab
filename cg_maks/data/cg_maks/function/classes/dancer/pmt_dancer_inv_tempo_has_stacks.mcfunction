@@ -9,6 +9,16 @@
 #
 # Arguments: (none)
 
+# Class variable usage:
+#	cv_A	:	Tempo Stacks (0-3)
+#	cv_B	:	Tempo Hit Combo Window
+#	cv_C	:	Tempo Timer
+#	cv_D	:	Sound Effect timer (base)
+#	cv_E	:	Sforzando missile sequence timer
+#	cv_F	:	Sound Effect timer (refresh buff)
+#	cv_G	:	Refresh Buff Timer Cooldown / Sforzando missile pitch deflection (mdeg)
+#	cv_H	:   Sforzando missile yaw deflection (mdeg)
+
 # Check if the pm's owner has each stack of Tempo, then give them the corresponding icon.
 execute if score @a[tag=t_pm_owner,limit=1] cv_A matches 1 run item replace entity @a[tag=t_pm_owner,limit=1] hotbar.6 with minecraft:note_block[\
 minecraft:item_name=[{color:"light_purple",italic:false,text:"(Passive)"},{color:"white",text:" Tempo"}],\

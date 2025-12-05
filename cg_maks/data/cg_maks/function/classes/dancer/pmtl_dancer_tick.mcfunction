@@ -17,9 +17,8 @@
 #	cv_D	:	Sound Effect timer (base)
 #	cv_E	:	Sforzando missile sequence timer
 #	cv_F	:	Sound Effect timer (refresh buff)
-#	cv_G	:	Refresh Buff Timer Cooldown
-#	cv_H	:   
-
+#	cv_G	:	Refresh Buff Timer Cooldown / Sforzando missile pitch deflection (mdeg)
+#	cv_H	:   Sforzando missile yaw deflection (mdeg)
 # =========================================
 # SFORZANDO
 # =========================================
@@ -31,10 +30,6 @@ execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=0..3,cv_E=6}] run tag @
 execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1..3,cv_E=5}] run tag @a[tag=t_pm_owner,limit=1] add t_dancer_sforz_missile
 execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=2..3,cv_E=3}] run tag @a[tag=t_pm_owner,limit=1] add t_dancer_sforz_missile
 execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=3,cv_E=1}] run tag @a[tag=t_pm_owner,limit=1] add t_dancer_sforz_missile
-
-# Roll random values for use in missile creation
-execute if entity @a[tag=t_pm_owner,limit=1,tag=t_dancer_sforz_missile] store result storage cg_maks:offset_args pitch int 1 run random value -30..30
-execute if entity @a[tag=t_pm_owner,limit=1,tag=t_dancer_sforz_missile] store result storage cg_maks:offset_args yaw int 1 run random value -15..15
 
 # Create missiles
 execute if entity @a[tag=t_pm_owner,limit=1,tag=t_dancer_sforz_missile] at @a[tag=t_pm_owner,limit=1,tag=t_dancer_sforz_missile] run function cg_maks:classes/dancer/pmtl_dancer_create_missile with storage cg_maks:offset_args

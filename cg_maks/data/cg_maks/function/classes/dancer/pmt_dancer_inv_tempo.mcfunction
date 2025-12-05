@@ -8,6 +8,16 @@
 #
 # Arguments: (none)
 
+# Class variable usage:
+#	cv_A	:	Tempo Stacks (0-3)
+#	cv_B	:	Tempo Hit Combo Window
+#	cv_C	:	Tempo Timer
+#	cv_D	:	Sound Effect timer (base)
+#	cv_E	:	Sforzando missile sequence timer
+#	cv_F	:	Sound Effect timer (refresh buff)
+#	cv_G	:	Refresh Buff Timer Cooldown / Sforzando missile pitch deflection (mdeg)
+#	cv_H	:   Sforzando missile yaw deflection (mdeg)
+
 # Check if player currently has tempo stacks, and delegate to child function if true.
 execute unless score @a[tag=t_pm_owner,limit=1] cv_A matches 0 run function cg_maks:classes/dancer/pmt_dancer_inv_tempo_has_stacks
 execute unless score @a[tag=t_pm_owner,limit=1] cv_A matches 0 run return 0
