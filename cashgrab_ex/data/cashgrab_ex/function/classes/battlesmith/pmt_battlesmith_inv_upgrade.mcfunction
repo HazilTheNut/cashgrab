@@ -37,8 +37,8 @@ minecraft:lore=[\
 {color:"gray",italic:false,text:"After holding for 1.5 secs,"},\
 [{color:"gray",italic:false,text:" spends "},{color:"yellow",italic:false,text:"Scrap"},{color:"gray",italic:false,text:" to upgrade"}],\
 {color:"gray",italic:false,text:" your weapon:"},\
-[{color:"green",italic:false,text:"Tier II: "},{color:"yellow",italic:false,text:"5 Scrap"}],\
-[{color:"green",italic:false,text:"Tier III: "},{color:"yellow",italic:false,text:"12 Scrap"}],\
+[{color:"green",italic:false,text:"Tier II: "},{color:"yellow",italic:false,text:"7 Scrap"}],\
+[{color:"green",italic:false,text:"Tier III: "},{color:"yellow",italic:false,text:"13 Scrap"}],\
 [{color:"green",italic:false,text:"Tier IV: "},{color:"yellow",italic:false,text:"20 Scrap"}],\
 ]] 1
 
@@ -52,8 +52,8 @@ minecraft:lore=[\
 {color:"gray",italic:false,text:"After holding for 1.5 secs,"},\
 [{color:"gray",italic:false,text:" spends "},{color:"yellow",italic:false,text:"Scrap"},{color:"gray",italic:false,text:" to upgrade"}],\
 {color:"gray",italic:false,text:" your weapon:"},\
-[{color:"green",italic:false,text:"Tier II: "},{color:"yellow",italic:false,text:"5 Scrap"}],\
-[{color:"green",italic:false,text:"Tier III: "},{color:"yellow",italic:false,text:"12 Scrap"}],\
+[{color:"green",italic:false,text:"Tier II: "},{color:"yellow",italic:false,text:"7 Scrap"}],\
+[{color:"green",italic:false,text:"Tier III: "},{color:"yellow",italic:false,text:"13 Scrap"}],\
 [{color:"green",italic:false,text:"Tier IV: "},{color:"yellow",italic:false,text:"20 Scrap"}],\
 ]] 1
 
@@ -65,8 +65,8 @@ minecraft:lore=[\
 {color:"gray",italic:false,text:"After holding for 1.5 secs,"},\
 [{color:"gray",italic:false,text:" spends "},{color:"yellow",italic:false,text:"Scrap"},{color:"gray",italic:false,text:" to upgrade"}],\
 {color:"gray",italic:false,text:" your weapon:"},\
-[{color:"green",italic:false,text:"Tier II: "},{color:"yellow",italic:false,text:"5 Scrap"}],\
-[{color:"green",italic:false,text:"Tier III: "},{color:"yellow",italic:false,text:"12 Scrap"}],\
+[{color:"green",italic:false,text:"Tier II: "},{color:"yellow",italic:false,text:"7 Scrap"}],\
+[{color:"green",italic:false,text:"Tier III: "},{color:"yellow",italic:false,text:"13 Scrap"}],\
 [{color:"green",italic:false,text:"Tier IV: "},{color:"yellow",italic:false,text:"20 Scrap"}],\
 ]] 1
 
@@ -78,8 +78,8 @@ minecraft:lore=[\
 {color:"gray",italic:false,text:"After holding for 1.5 secs,"},\
 [{color:"gray",italic:false,text:" spends "},{color:"yellow",italic:false,text:"Scrap"},{color:"gray",italic:false,text:" to upgrade"}],\
 {color:"gray",italic:false,text:" your weapon:"},\
-[{color:"green",italic:false,text:"Tier II: "},{color:"yellow",italic:false,text:"5 Scrap"}],\
-[{color:"green",italic:false,text:"Tier III: "},{color:"yellow",italic:false,text:"12 Scrap"}],\
+[{color:"green",italic:false,text:"Tier II: "},{color:"yellow",italic:false,text:"7 Scrap"}],\
+[{color:"green",italic:false,text:"Tier III: "},{color:"yellow",italic:false,text:"13 Scrap"}],\
 [{color:"green",italic:false,text:"Tier IV: "},{color:"yellow",italic:false,text:"20 Scrap"}],\
 ]] 2
 
@@ -91,8 +91,8 @@ minecraft:lore=[\
 {color:"gray",italic:false,text:"After holding for 1.5 secs,"},\
 [{color:"gray",italic:false,text:" spends "},{color:"yellow",italic:false,text:"Scrap"},{color:"gray",italic:false,text:" to upgrade"}],\
 {color:"gray",italic:false,text:" your weapon:"},\
-[{color:"green",italic:false,text:"Tier II: "},{color:"yellow",italic:false,text:"5 Scrap"}],\
-[{color:"green",italic:false,text:"Tier III: "},{color:"yellow",italic:false,text:"12 Scrap"}],\
+[{color:"green",italic:false,text:"Tier II: "},{color:"yellow",italic:false,text:"7 Scrap"}],\
+[{color:"green",italic:false,text:"Tier III: "},{color:"yellow",italic:false,text:"13 Scrap"}],\
 [{color:"green",italic:false,text:"Tier IV: "},{color:"yellow",italic:false,text:"20 Scrap"}],\
 ]] 3
 
@@ -105,7 +105,7 @@ minecraft:lore=[\
 {color:"gray",italic:false,text:"After holding for 1.5 secs,"},\
 [{color:"gray",italic:false,text:" spends "},{color:"yellow",italic:false,text:"Scrap"},{color:"gray",italic:false,text:" to upgrade"}],\
 {color:"gray",italic:false,text:" your weapon:"},\
-[{color:"green",italic:false,text:"Tier II: "},{color:"yellow",italic:false,text:"5 Scrap"}],\
-[{color:"green",italic:false,text:"Tier III: "},{color:"yellow",italic:false,text:"12 Scrap"}],\
+[{color:"green",italic:false,text:"Tier II: "},{color:"yellow",italic:false,text:"7 Scrap"}],\
+[{color:"green",italic:false,text:"Tier III: "},{color:"yellow",italic:false,text:"13 Scrap"}],\
 [{color:"green",italic:false,text:"Tier IV: "},{color:"yellow",italic:false,text:"20 Scrap"}],\
 ]] 1

@@ -74,11 +74,11 @@ execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,temp_A=1,cv_B=
 
 # At end of sequence, spend Scrap and upgrade weapon
 
-# Tier II costs 5 scrap
-# Tier III costs 12 scrap
+# Tier II costs 7 scrap
+# Tier III costs 13 scrap
 # Tier IV costs 20 scrap
-scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,temp_A=1,cv_B=33,cv_E=0,cv_A=5..}] cv_A 5
-scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,temp_A=1,cv_B=33,cv_E=1,cv_A=12..}] cv_A 12
+scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,temp_A=1,cv_B=33,cv_E=0,cv_A=7..}] cv_A 7
+scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,temp_A=1,cv_B=33,cv_E=1,cv_A=13..}] cv_A 13
 scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,temp_A=1,cv_B=33,cv_E=2,cv_A=20..}] cv_A 20
 scoreboard players add @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,temp_A=1,cv_B=33,cv_E=..2}] cv_E 1
 execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_sneaking=1,temp_A=1,cv_B=33}] run function cashgrab_ex:classes/battlesmith/pmt_battlesmith_inv_sword

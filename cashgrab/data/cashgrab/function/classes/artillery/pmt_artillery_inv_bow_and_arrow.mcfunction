@@ -31,7 +31,7 @@ item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_E=1..}] hotbar.0 with m
 minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},\
 minecraft:custom_name={italic:false,color:"red",text:"Infinibow"},\
 minecraft:enchantment_glint_override=true,\
-minecraft:enchantments={infinity:1,power:1,punch:3}]
+minecraft:enchantments={infinity:1,power:1,punch:4}]
 
 # Arrow
 

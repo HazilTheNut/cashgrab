@@ -19,10 +19,10 @@
 #	cv_H	:
 
 # Tier II costs 5 scrap
-execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_E=0,cv_A=5..}] run return 1
+execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_E=0,cv_A=7..}] run return 1
 
 # Tier III costs 12 scrap
-execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_E=1,cv_A=12..}] run return 1
+execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_E=1,cv_A=13..}] run return 1
 
 # Tier IV costs 20 scrap
 execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_E=2,cv_A=20..}] run return 1

@@ -46,7 +46,7 @@ execute if entity @e[tag=t_hexblade_apply_hex,type=!minecraft:player] as @n[tag=
 # Apply damage
 tag @s add t_dmg_by
 function cashgrab:util/npe_dmg {\
-d_dmg_amount:3.0,\
+d_dmg_amount:2.0,\
 s_dmg_type:"minecraft:indirect_magic",\
 t_dmg_target:"t_hexblade_apply_hex",\
 t_dmg_by:"t_dmg_by",\

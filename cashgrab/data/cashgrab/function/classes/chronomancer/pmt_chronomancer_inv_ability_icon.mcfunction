@@ -26,6 +26,8 @@ minecraft:lore=[\
 [{color:"gray",italic:false,text:"Projects a "},{color:"yellow",italic:false,text:"Stasis Field "},{color:"gray",italic:false,text:"around you "}],\
 {color:"gray",italic:false,text:" that freezes all projectiles,"},\
 {color:"gray",italic:false,text:" constructs, and traps within it."},\
+{color:"gray",italic:false,text:"On creation, it briefly slows all"},\
+{color:"gray",italic:false,text:" enemies within it."},\
 {color:"gray",italic:false,text:"This ability can be reactivated"},\
 {color:"gray",italic:false,text:" to end the effect early."},\
 {color:"dark_gray",italic:false,text:"====="},\

@@ -21,8 +21,8 @@
 # Invisibility effect for visuals (still wears armor by default)
 effect give @a[tag=t_pm_owner,limit=1] minecraft:invisibility infinite 0 true
 
-scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 9000
+scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 11000
 scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_charges_max 2
 scoreboard players set @a[tag=t_pm_owner,limit=1] ability_charges 2
 
-scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 60
+scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 55

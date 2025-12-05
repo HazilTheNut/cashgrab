@@ -36,7 +36,7 @@ minecraft:tooltip_display={hidden_components:["minecraft:unbreakable","minecraft
 minecraft:dyed_color=10840833,\
 minecraft:attribute_modifiers=[\
 {type:"movement_speed",slot:"feet",id:"cashgrab:speed_bonus",amount:0.2,operation:"add_multiplied_base"},\
-{type:"armor",slot:"feet",id:"cashgrab:boots_armor",amount:5,operation:"add_value"}\
+{type:"armor",slot:"feet",id:"cashgrab:boots_armor",amount:7,operation:"add_value"}\
 ]]
 
 # =============================

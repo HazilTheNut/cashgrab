@@ -13,11 +13,11 @@
 
 # Apply weakness and display action text.
 title @a[tag=t_vampire_marked_target,limit=1] actionbar {text:"MARKED!","bold":true,color:"yellow"}
-effect give @a[tag=t_vampire_marked_target,limit=1] minecraft:weakness 10 0
+effect give @a[tag=t_vampire_marked_target,limit=1] minecraft:weakness 7 0
 
 # Apply timer
 execute at @a[tag=t_vampire_marked_target,limit=1] rotated as @a[tag=t_vampire_marked_target,limit=1] run function cashgrab:util/npe_create_timer {\
-i_lifetime_ticks:200,\
+i_lifetime_ticks:140,\
 b_anchor_at_pos:0,\
 t_timer_name:"t_vampire_mark_timer_init",\
 func_npe_start:"cg_maks:classes/vampire/vampire_mark_timer_start",\

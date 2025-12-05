@@ -35,8 +35,10 @@ func_pmtl_end:"cashgrab:util/noop",\
 func_pmt_cts_icon:"cashgrab:classes/griefer/pmt_griefer_cts_inv_icon",\
 func_pmtl_cts_tick:"cashgrab:classes/griefer/pmtl_griefer_cts_tick",\
 func_pmt_score_kill:"cashgrab:util/noop",\
-trinket_default_hotbar_slot:-1,\
+trinket_default_hotbar_slot:1,\
 }
+
+scoreboard objectives add evc_blaze_rods minecraft.used:minecraft.blaze_rod
 
 # Skirmisher
 data modify storage cashgrab:game_info classes append value {\

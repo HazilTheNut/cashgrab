@@ -46,7 +46,7 @@ execute if score @a[tag=t_pm_owner,limit=1] cv_A matches -1 run function cashgra
 scoreboard players operation @a[tag=t_pm_owner,limit=1,scores={cv_C=0..}] cv_C -= @a[tag=t_pm_owner,limit=1] ability_cd_tickrate
 
 # Refill Shadow Walk when cooldown ends
-execute unless score @a[tag=t_pm_owner,limit=1,scores={cv_B=..60}] cv_C matches ..0 run return 0
-scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 60
+execute unless score @a[tag=t_pm_owner,limit=1,scores={cv_B=..55}] cv_C matches ..0 run return 0
+scoreboard players set @a[tag=t_pm_owner,limit=1] cv_B 55
 execute store result storage cashgrab:spectre_args data.count int 1 run scoreboard players get @a[tag=t_pm_owner,limit=1] cv_B
 function cashgrab:classes/spectre/pmt_spectre_inv_shadow_walk with storage cashgrab:spectre_args data

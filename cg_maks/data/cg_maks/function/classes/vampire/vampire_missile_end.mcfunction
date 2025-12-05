@@ -19,8 +19,8 @@ execute store result storage cashgrab:eid_args eid int 1 run scoreboard players 
 function cashgrab:util/find_eid_self with storage cashgrab:eid_args
 tag @e[tag=t_eid_matches,limit=1] add t_missile_owner
 
-# If missile hit, reduce cooldown by 3 seconds and damage target.
-scoreboard players remove @a[tag=t_missile_owner,limit=1,scores={ability_cd_ms=3001..}] ability_cd_ms 3000
+# If missile hit, reduce cooldown by 4 seconds and damage target.
+scoreboard players remove @a[tag=t_missile_owner,limit=1,scores={ability_cd_ms=4001..}] ability_cd_ms 4000
 tag @s add t_dmg_by
 function cashgrab:util/npe_dmg {\
 d_dmg_amount:2.0,\

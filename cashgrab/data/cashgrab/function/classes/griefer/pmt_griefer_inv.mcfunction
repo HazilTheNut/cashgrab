@@ -11,8 +11,8 @@
 # Class variable usage:
 #	cv_A	:	Crash Landing state (0 = inactive, 1 = active)
 #	cv_B	:	Crash Landing levitation timer
-#	cv_C	:	Creeper in a Bottle cooldown (in ms)
-#	cv_D	:	Creeper in a Bottle charge
+#	cv_C	:	Creeper Conduit cooldown (in ms)
+#	cv_D	:	Creeper Conduit charge
 #	cv_E	:	
 #	cv_F	:	
 #	cv_G	:	
@@ -46,14 +46,5 @@ minecraft:attribute_modifiers=[\
 # =============================
 # Hotbar
 
-# Flame Staff
-item replace entity @a[tag=t_pm_owner,limit=1] hotbar.0 with minecraft:blaze_rod[minecraft:unbreakable={},\
-minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},\
-minecraft:custom_name={italic:false,color:"red",text:"Flame Staff"},\
-minecraft:attribute_modifiers=[\
-{type:"attack_damage",slot:"mainhand",id:"cashgrab:flame_staff_atkdmg",amount:4,operation:"add_value"},\
-{type:"attack_speed",slot:"mainhand",id:"cashgrab:flame_staff_atkspd",amount:-1.5,operation:"add_value"}],\
-minecraft:enchantments={fire_aspect:1}]
-
-# Creeper in a Bottle
-function cashgrab:classes/griefer/pmt_inv_creeper_ability_icon
+# Creeper Conduit
+function cashgrab:classes/griefer/pmt_inv_creeper_conduit

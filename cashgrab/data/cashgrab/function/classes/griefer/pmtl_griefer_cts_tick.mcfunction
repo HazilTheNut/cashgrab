@@ -13,8 +13,8 @@
 # Class variable usage:
 #	cv_A	:	Crash Landing state (0 = inactive, 1 = active)
 #	cv_B	:	Crash Landing levitation timer
-#	cv_C	:	Creeper in a Bottle cooldown (in ms)
-#	cv_D	:	Creeper in a Bottle charge
+#	cv_C	:	Creeper Conduit cooldown (in ms)
+#	cv_D	:	Creeper Conduit charge
 #	cv_E	:	
 #	cv_F	:	
 #	cv_G	:	

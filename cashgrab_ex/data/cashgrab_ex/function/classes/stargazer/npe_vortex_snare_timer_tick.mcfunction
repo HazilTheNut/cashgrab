@@ -5,13 +5,15 @@
 #	at: the timer
 #	facing: the timer's facing direction
 #
-# Summary: Rift Glyph timer tick function
+# Summary: Vortex Snare timer tick function
 #
 # Arguments: (none)
 
 # vfx
-execute if score @s tmr_lifetime_ticks matches 80.. run particle minecraft:dust{color:[0.35,0.15,0.55],scale:1} ~ ~ ~ 0.02 0.02 0.02 0 1
-execute if score @s tmr_lifetime_ticks matches ..79 run particle minecraft:dust{color:[0.35,0.15,0.55],scale:1} ~ ~ ~ 0.3 0.5 0.3 0 1
+execute if score @s tmr_lifetime_ticks matches 80.. run particle minecraft:dust{color:[0.80,1.00,0.925],scale:1} ~ ~ ~ 0.02 0.02 0.02 0 1 force
+execute if score @s tmr_lifetime_ticks matches 80.. run particle minecraft:dust{color:[0.42,0.18,0.66],scale:1} ~ ~ ~ 0.2 0.2 0.2 0 1 force
+execute if score @s tmr_lifetime_ticks matches 97..105 run function cashgrab_ex:classes/stargazer/npe_vortex_snare_bounding_box_particles
+execute if score @s tmr_lifetime_ticks matches ..79 run particle minecraft:dust{color:[0.42,0.18,0.66],scale:1} ~ ~ ~ 0.3 0.5 0.3 0 1
 particle minecraft:portal ~ ~ ~ 0.75 0.75 0.75 1 1
 
 # sfx

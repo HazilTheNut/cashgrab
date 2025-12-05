@@ -13,8 +13,8 @@
 # Class variable usage:
 #	cv_A	:	Crash Landing state (0 = inactive, 1 = active)
 #	cv_B	:	Crash Landing levitation timer
-#	cv_C	:	Creeper in a Bottle cooldown (in ms)
-#	cv_D	:	Creeper in a Bottle charge
+#	cv_C	:	Creeper Conduit cooldown (in ms)
+#	cv_D	:	Creeper Conduit charge
 #	cv_E	:	
 #	cv_F	:	
 #	cv_G	:	
@@ -44,10 +44,10 @@ execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=1}] run particle minecr
 # Crash Landing Landing
 execute if entity @a[tag=t_pm_owner,limit=1,scores={ps_falling=-1,cv_A=1..,cv_B=..0}] run function cashgrab:classes/griefer/pmtl_crash_landing_explode
 
-# --- Creeper in a Bottle
+# --- Creeper Conduit
 
-# Creeper in a Bottle
-execute if score @a[tag=t_pm_owner,limit=1] evc_xpbottles matches 1.. positioned ~ ~1.625 ~ run function cashgrab:util/npe_raycast {\
+# Creeper Conduit
+execute if score @a[tag=t_pm_owner,limit=1] evc_blaze_rods matches 1.. positioned ~ ~1.625 ~ run function cashgrab:util/npe_raycast {\
 i_range_m:3,\
 i_origin_loc:0,\
 col_terrain_allowed:"#cashgrab:nonsolid",\
@@ -56,18 +56,18 @@ func_npe_entity_filter:"cashgrab:util/npe_col_entity_filter_none",\
 func_npe_step:"cashgrab:util/noop",\
 func_npe_end:"cashgrab:classes/griefer/pmtl_summon_creeper",\
 }
-execute if score @a[tag=t_pm_owner,limit=1] evc_xpbottles matches 1.. run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 9000
-execute if score @a[tag=t_pm_owner,limit=1] evc_xpbottles matches 1.. run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_D 0
-execute if score @a[tag=t_pm_owner,limit=1] evc_xpbottles matches 1.. run function cashgrab:classes/griefer/pmt_inv_creeper_ability_icon
+execute if score @a[tag=t_pm_owner,limit=1] evc_blaze_rods matches 1.. run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 9000
+execute if score @a[tag=t_pm_owner,limit=1] evc_blaze_rods matches 1.. run scoreboard players set @a[tag=t_pm_owner,limit=1] cv_D 0
+execute if score @a[tag=t_pm_owner,limit=1] evc_blaze_rods matches 1.. run function cashgrab:classes/griefer/pmt_inv_creeper_conduit
 
 # Consume event
-scoreboard players set @a[tag=t_pm_owner,limit=1] evc_xpbottles 0
+scoreboard players set @a[tag=t_pm_owner,limit=1] evc_blaze_rods 0
 
-# Creeper in a Bottle cooldown
+# Creeper Conduit cooldown
 scoreboard players operation @a[tag=t_pm_owner,limit=1,scores={cv_C=1..}] cv_C -= @a[tag=t_pm_owner,limit=1] ability_cd_tickrate
 tag @a[tag=t_pm_owner,limit=1,scores={cv_C=..0,cv_D=0}] add t_award_creeper_bottle
 scoreboard players set @a[tag=t_pm_owner,limit=1,tag=t_award_creeper_bottle] cv_D 1
-execute if entity @a[tag=t_pm_owner,limit=1,tag=t_award_creeper_bottle] run function cashgrab:classes/griefer/pmt_inv_creeper_ability_icon
+execute if entity @a[tag=t_pm_owner,limit=1,tag=t_award_creeper_bottle] run function cashgrab:classes/griefer/pmt_inv_creeper_conduit
 tag @a[tag=t_pm_owner,limit=1] remove t_award_creeper_bottle
 
 # Run func_tick for creepers generated

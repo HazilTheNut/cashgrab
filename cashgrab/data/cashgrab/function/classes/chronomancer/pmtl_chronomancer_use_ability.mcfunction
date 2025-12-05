@@ -42,6 +42,10 @@ tag @e[tag=t_stasis_field_init,limit=1,sort=nearest] add t_stasis_immune
 tag @e[tag=t_stasis_field_init,limit=1,sort=nearest] add t_stasis_field
 tag @e[tag=t_stasis_field_init,limit=1,sort=nearest] remove t_stasis_field_init
 
+# Apply slow to enemies initially in the area
+function cashgrab:util/npe_col_entity_filter_hostile
+execute align xyz positioned ~-8 ~-8 ~-8 run effect give @e[tag=t_collision_candidate,dx=16,dy=16,dz=16] minecraft:slowness 2 0
+
 # Switch ability to Cancel Stasis Field
 scoreboard players set @a[tag=t_pm_owner,limit=1] ability_cfg_cd_ms 1000
 
