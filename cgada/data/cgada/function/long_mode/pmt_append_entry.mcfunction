@@ -7,12 +7,16 @@ s_map_name:"",\
 i_game_num:0,\
 i_kills_total:0,\
 i_coins_total:0,\
-b_entry_complete:0\
+b_entry_complete:0,\
+i_gameplay_lifetime_ticks:0\
 }
 $data modify storage cgada:long_data entry_init.s_class_name set string storage cashgrab:game_info classes[$(class_idx)].s_class_name
 $data modify storage cgada:long_data entry_init.s_trinket_name set string storage cashgrab:game_info trinkets[$(trinket_idx)].s_trinket_name
 data modify storage cgada:long_data entry_init.s_map_name set string storage cgada:map_info map_name
 data modify storage cgada:long_data entry_init.i_game_num set from storage cgada:generic_data i_games_played
+
+# Reset gameplay lifetime to match length of time in gameplay
+scoreboard players set @a[tag=t_pm_owner,limit=1] __cgada_gameplay_lifetime_ticks 0
 
 # Append to data structure
 data modify storage cgada:long_data entries append from storage cgada:long_data entry_init

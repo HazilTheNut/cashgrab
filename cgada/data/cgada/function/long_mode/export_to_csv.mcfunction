@@ -8,6 +8,7 @@ data modify storage cgada:long_csv temp_i_game_num set value 0
 data modify storage cgada:long_csv temp_i_kills_total set value 0
 data modify storage cgada:long_csv temp_i_coins_total set value 0
 data modify storage cgada:long_csv temp_b_entry_complete set value 0
+data modify storage cgada:long_csv temp_i_gameplay_lifetime_ticks set value 0
 
 scoreboard players set NUM_CGADA_LM_CSV_IDX_CUR num 0
 scoreboard players set NUM_CGADA_LM_CSV_IDX_END num 0

@@ -8,6 +8,7 @@ $data modify storage cgada:long_csv temp_i_game_num set from storage cgada:long_
 $data modify storage cgada:long_csv temp_i_kills_total set from storage cgada:long_data entries[$(entry_idx)].i_kills_total
 $data modify storage cgada:long_csv temp_i_coins_total set from storage cgada:long_data entries[$(entry_idx)].i_coins_total
 $data modify storage cgada:long_csv temp_b_entry_complete set from storage cgada:long_data entries[$(entry_idx)].b_entry_complete
+$data modify storage cgada:long_csv temp_i_gameplay_lifetime_ticks set from storage cgada:long_data entries[$(entry_idx)].i_gameplay_lifetime_ticks
 
 # Write
 function cgada:long_mode/csv_export/print_data_write with storage cgada:long_csv

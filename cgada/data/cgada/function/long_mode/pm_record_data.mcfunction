@@ -6,6 +6,9 @@ tag @a[tag=t_eid_matches,limit=1] add t_pm_owner
 
 execute unless entity @a[tag=t_pm_owner] run return 0
 
+# Increment gameplay lifetime while in gameplay
+scoreboard players add @a[tag=t_pm_owner,limit=1,scores={activity_state=20..29}] __cgada_gameplay_lifetime_ticks 1
+
 # If player collects coins while in gameplay, increment class coins total
 execute if score @a[tag=t_pm_owner,limit=1,scores={activity_state=20..29}] evl_coin_pickup matches 1.. run function cgada:long_mode/pmt_increment_data_argloader {func_increment:"cgada:long_mode/pmt_increment_coins_total"}
 

@@ -15,3 +15,6 @@ scoreboard players add NUM_CGADA_LM_NEXT_IDX num 0
 
 # Index number into long mode entry array
 scoreboard objectives add __cgada_lm_pm_entry_idx dummy
+
+# Gameplay lifetime
+scoreboard objectives add __cgada_gameplay_lifetime_ticks dummy
