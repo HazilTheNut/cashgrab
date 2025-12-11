@@ -20,7 +20,8 @@ function cashgrab:util/find_eid_self with storage cashgrab:find_eid_args
 
 # sfx / vfx
 particle minecraft:lava ~ ~ ~ 2.5 0.5 2.5 0 50
-particle minecraft:flame ~ ~ ~ 2.5 0.5 2.5 0 50
+particle minecraft:flame ~ ~ ~ 2.5 0.5 2.5 0 25 normal
+particle minecraft:flame ~ ~ ~ 2.5 0.5 2.5 0 25 force
 playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 0.5 2.0
 playsound minecraft:entity.blaze.shoot player @a[tag=t_eid_matches,limit=1] ~ ~ ~ 0.5 2.0 0.5
 

@@ -32,7 +32,7 @@ execute if score @s tv_A matches ..0 run return 0
 #		1	= create explosion
 #		14	= trap trigger sfx and vfx
 
-execute if score @s tmr_lifetime_ticks matches 2..13 run particle minecraft:flame ~ ~ ~ 0.25 0.25 0.25 0 1
+execute if score @s tmr_lifetime_ticks matches 2..13 run particle minecraft:flame ~ ~ ~ 0.25 0.25 0.25 0 1 force
 
 # Only create the above flame particles when the trap is tripped while in stasis
 execute if score @s stasis_state matches 1..2 run return 0
@@ -42,7 +42,7 @@ execute if score @s tmr_lifetime_ticks matches 1 run function cashgrab_ex:trinke
 
 # =================================
 #	61-80	= trap is arming
-execute if score @s tmr_lifetime_ticks matches 61..80 run particle minecraft:dust{color:[0.8f,0.2f,0.4f],scale:1.0} ~ ~ ~ 0 0 0 0 1
+execute if score @s tmr_lifetime_ticks matches 61..80 run particle minecraft:dust{color:[0.8f,0.2f,0.4f],scale:1.0} ~ ~ ~ 0 0 0 0 1 force
 execute if score @s tmr_lifetime_ticks matches 61 run playsound minecraft:entity.tnt.primed player @a ~ ~ ~ 0.5 2.0
 execute if score @s tmr_lifetime_ticks matches 61 run function cashgrab:util/npe_col_entity_filter_hostile
 execute if score @s tmr_lifetime_ticks matches 61 if entity @e[distance=..4,tag=t_collision_candidate,tag=!t_invisible] run scoreboard players set @s tmr_lifetime_ticks 80
@@ -54,7 +54,7 @@ execute if score @s tmr_lifetime_ticks matches 61 if entity @e[distance=..4,tag=
 
 execute if score @s tmr_lifetime_ticks matches 31 run function cashgrab:util/npe_col_entity_filter_allies
 execute if score @s tmr_lifetime_ticks matches 31 run particle minecraft:dust{color:[0.8f,0.2f,0.4f],scale:1.0} ~ ~-0.1 ~ 0.55 0.10 0.55 0 15 force @a[tag=!t_collision_candidate]
-execute if score @s tmr_lifetime_ticks matches 31 run particle minecraft:smoke ~ ~-0.1 ~ 0.55 0.10 0.55 0 15 normal @a[tag=t_collision_candidate]
+execute if score @s tmr_lifetime_ticks matches 31 run particle minecraft:smoke ~ ~-0.1 ~ 0.55 0.10 0.55 0 15 force @a[tag=t_collision_candidate]
 execute if score @s tmr_lifetime_ticks matches 31 run scoreboard players set @s tmr_lifetime_ticks 60
 
 # Detect nearby enemies

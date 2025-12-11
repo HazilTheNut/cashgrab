@@ -9,5 +9,5 @@
 #
 # Arguments: (none)
 
-particle minecraft:dust{color:[0.1,0.4,0.6],scale:0.75} ~ ~ ~ 0 0 0 0 1
+particle minecraft:dust{color:[0.1,0.4,0.6],scale:0.75} ~ ~ ~ 0 0 0 0 1 force
 particle minecraft:electric_spark ~ ~ ~ 0.1 0.1 0.1 0 1

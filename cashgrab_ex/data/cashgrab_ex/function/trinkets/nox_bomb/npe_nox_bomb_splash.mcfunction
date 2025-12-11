@@ -11,7 +11,7 @@
 
 # vfx / sfx
 particle minecraft:dust{color:[0.45f,0.9f,0.15f],scale:1.0} ~ ~ ~ 2.40 0.05 2.40 0 65
-particle minecraft:entity_effect{color:[0.35f,0.6f,0.15f,0.75f]} ~ ~ ~ 2.40 0.05 2.40 0 65
+particle minecraft:entity_effect{color:[0.35f,0.6f,0.15f,0.75f]} ~ ~ ~ 2.40 0.05 2.40 0 65 force
 playsound minecraft:entity.generic.extinguish_fire player @a ~ ~ ~ 1.0 1.5
 
 # Apply poison

@@ -13,7 +13,7 @@ $tellraw @a[tag=t_debug] "trinkets/lava_cake/lava_cake_timer_end end_reason $(en
 $execute unless score NUM_END_REASON_EXPIRE num matches $(end_reason) run return 0
 
 #Particle effect
-particle minecraft:explosion ~ ~0.25 ~ 2.5 0.25 2.5 0 7
+particle minecraft:explosion ~ ~0.25 ~ 2.5 0.25 2.5 0 7 force
 particle minecraft:lava ~ ~0.25 ~ 5 0.25 5 5 75
 playsound minecraft:entity.generic.explode player @a ~ ~ ~ 1 1
 

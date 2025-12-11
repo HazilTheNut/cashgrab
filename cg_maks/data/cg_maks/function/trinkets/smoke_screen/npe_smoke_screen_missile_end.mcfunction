@@ -15,7 +15,8 @@ $execute if score NUM_END_REASON_CLEANUP num matches $(end_reason) run return 0
 $execute if score NUM_END_REASON_CLEANUP_PLAYER_DEATH num matches $(end_reason) run return 0
 
 # Effects
-particle minecraft:squid_ink ~ ~ ~ 0.5 0.5 0.5 1 100
+particle minecraft:squid_ink ~ ~ ~ 0.5 0.5 0.5 1 50 force
+particle minecraft:squid_ink ~ ~ ~ 0.5 0.5 0.5 1 50
 particle minecraft:dust{color:[0.0f,0.0f,0.0f],scale:1.0} ~ ~ ~ 3 3 3 0 50
 playsound minecraft:entity.glow_squid.squirt player @a ~ ~ ~ 1 1
 

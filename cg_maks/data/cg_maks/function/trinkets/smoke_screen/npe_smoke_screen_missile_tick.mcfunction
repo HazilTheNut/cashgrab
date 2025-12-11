@@ -9,4 +9,4 @@
 #
 # Arguments: (none)
 
-particle minecraft:dust{color:[0.0f,0.0f,0.0f],scale:1.0} ~ ~ ~ 0.1 0.1 0.1 0 1
+particle minecraft:dust{color:[0.0f,0.0f,0.0f],scale:1.0} ~ ~ ~ 0.1 0.1 0.1 0 1 force

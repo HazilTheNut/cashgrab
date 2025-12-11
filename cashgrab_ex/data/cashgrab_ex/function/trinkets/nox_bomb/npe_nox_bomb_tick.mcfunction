@@ -11,7 +11,7 @@
 
 # vfx
 particle minecraft:dust{color:[0.45f,0.9f,0.15f],scale:1.0} ~ ~ ~ 0 0 0 0 1
-particle minecraft:entity_effect{color:[0.35f,0.6f,0.15f,0.75f]} ~ ~ ~ 0 0 0 0 1
+particle minecraft:entity_effect{color:[0.35f,0.6f,0.15f,0.75f]} ~ ~ ~ 0 0 0 0 1 force
 
 execute if score @s stasis_state matches 1..2 run return 0
 

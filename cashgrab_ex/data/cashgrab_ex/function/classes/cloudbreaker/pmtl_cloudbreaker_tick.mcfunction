@@ -57,7 +57,7 @@ b_assign_as_peer:1,\
 }
 scoreboard players set @a[tag=t_pm_owner,limit=1,scores={evc_torchflower_seeds=1..}] cv_E 0
 scoreboard players set @a[tag=t_pm_owner,limit=1,scores={evc_torchflower_seeds=1..}] cv_F 8000
-execute if score @a[tag=t_pm_owner,limit=1] evc_torchflower_seeds matches 1.. run function cashgrab_ex:classes/cloudbreaker/pmt_cloudbreaker_inv_storm_bringer
+execute if score @a[tag=t_pm_owner,limit=1] evc_torchflower_seeds matches 1.. run function cashgrab_ex:classes/cloudbreaker/pmt_cloudbreaker_inv_thunder_seed_icon
 
 scoreboard players add @a[tag=t_pm_owner,limit=1,scores={evc_torchflower_seeds=1..,cv_A=1..}] ability_cd_ms 1500
 
@@ -73,5 +73,5 @@ scoreboard players remove @a[tag=t_pm_owner,limit=1,scores={cv_A=1..,cv_F=1..}] 
 # Award ability
 tag @a[tag=t_pm_owner,limit=1,scores={cv_E=0,cv_F=..0}] add t_award_thunder_seed
 scoreboard players set @a[tag=t_pm_owner,limit=1,tag=t_award_thunder_seed] cv_E 1
-execute if entity @a[tag=t_pm_owner,limit=1,tag=t_award_thunder_seed] run function cashgrab_ex:classes/cloudbreaker/pmt_cloudbreaker_inv_storm_bringer
+execute if entity @a[tag=t_pm_owner,limit=1,tag=t_award_thunder_seed] run function cashgrab_ex:classes/cloudbreaker/pmt_cloudbreaker_inv_thunder_seed_icon
 tag @a[tag=t_pm_owner,limit=1] remove t_award_thunder_seed
