@@ -10,33 +10,9 @@ function cashgrab:runtime_config
 # Removes t_debug tag from all players when not in developer mode
 execute if score DEVELOPER_MODE num matches 0 run tag @a remove t_debug
 
-# gamerules
-gamerule mobGriefing false
-gamerule doMobLoot false
-gamerule doFireTick false
-gamerule doMobSpawning false
-gamerule keepInventory true
-gamerule commandBlockOutput false
-gamerule doVinesSpread false
-gamerule doTraderSpawning false
-gamerule doWeatherCycle false
-gamerule doDaylightCycle false
-gamerule fallDamage false
-gamerule freezeDamage false
-gamerule naturalRegeneration false
-gamerule spawnRadius 3
-gamerule projectilesCanBreakBlocks false
-gamerule announceAdvancements false
-gamerule allowEnteringNetherUsingPortals false
-gamerule commandBlocksEnabled true
-gamerule pvp true
-gamerule spawnMonsters false
-gamerule spawnerBlocksEnabled false
+# World config
 
 difficulty normal
-
-setworldspawn 0 100 0
-forceload add -1 -1 1 1
 
 # =============================
 # General player info

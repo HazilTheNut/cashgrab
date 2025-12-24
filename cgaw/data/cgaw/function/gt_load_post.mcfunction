@@ -1,6 +1,54 @@
 
 # Create scoreboard objectives / globals
 
+# --- Game rules
+
+gamerule minecraft:advance_time false
+gamerule minecraft:advance_weather false
+gamerule minecraft:allow_entering_nether_using_portals false
+gamerule minecraft:block_drops false
+gamerule minecraft:command_block_output false
+gamerule minecraft:command_blocks_work true
+gamerule minecraft:drowning_damage true
+gamerule minecraft:ender_pearls_vanish_on_death true
+gamerule minecraft:entity_drops false
+gamerule minecraft:fall_damage false
+gamerule minecraft:fire_damage true
+gamerule minecraft:fire_spread_radius_around_player 0
+gamerule minecraft:freeze_damage true
+gamerule minecraft:global_sound_events true
+gamerule minecraft:immediate_respawn false
+gamerule minecraft:keep_inventory true
+gamerule minecraft:locator_bar true
+gamerule minecraft:log_admin_commands true
+gamerule minecraft:max_command_forks 65536
+gamerule minecraft:max_command_sequence_length 65536
+gamerule minecraft:mob_drops false
+gamerule minecraft:mob_griefing false
+gamerule minecraft:natural_health_regeneration false
+gamerule minecraft:player_movement_check true
+gamerule minecraft:projectiles_can_break_blocks false
+gamerule minecraft:pvp true
+gamerule minecraft:raids false
+gamerule minecraft:random_tick_speed 0
+gamerule minecraft:reduced_debug_info true
+gamerule minecraft:send_command_feedback true
+gamerule minecraft:show_advancement_messages false
+gamerule minecraft:show_death_messages true
+gamerule minecraft:spawner_blocks_work false
+gamerule minecraft:spawn_mobs false
+gamerule minecraft:spawn_monsters false
+gamerule minecraft:spawn_patrols false
+gamerule minecraft:spawn_phantoms false
+gamerule minecraft:spawn_wandering_traders false
+gamerule minecraft:spawn_wardens false
+gamerule minecraft:spectators_generate_chunks false
+gamerule minecraft:spread_vines false
+gamerule minecraft:tnt_explodes false
+
+setworldspawn 0 100 0
+forceload add -1 -1 1 1
+
 # --- Lobby / game config
 
 # Selected map
