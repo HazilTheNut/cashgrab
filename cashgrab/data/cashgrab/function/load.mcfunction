@@ -3,7 +3,7 @@
 # Arguments: (none)
 
 # Version number (= major * 1000000 + minor * 1000 + patch)
-scoreboard players set CASHGRAB_VERSION_NUMBER num 0014000
+scoreboard players set CASHGRAB_VERSION_NUMBER num 0014001
 
 function cashgrab:runtime_config
 
@@ -19,7 +19,6 @@ difficulty normal
 
 # Count of number of pms that operated on the player. This value should always be 1.
 scoreboard objectives add __pm_count dummy
-scoreboard objectives remove pm_count
 
 # Enumerated value of player's current state:
 #	0	=	Transition to In Pregame Lobby
@@ -49,7 +48,6 @@ scoreboard objectives add ability_cd_tickrate dummy
 
 # Current cooldown time remaining, in secs, derived from ability_cd_ms
 scoreboard objectives add __ability_cd_display_secs dummy
-scoreboard objectives remove ability_cd_display_secs
 
 # Class-configured ability max charge count
 scoreboard objectives add ability_cfg_charges_max dummy
@@ -315,11 +313,9 @@ scoreboard objectives add mis_base_vel_z_mmpt dummy
 
 # Vertical velocity gained per tick, in mm/tick^2
 scoreboard objectives add __mis_gravity_const_mmpt2 dummy
-scoreboard objectives remove mis_gravity_const_mmpt2
 
 # Vertical velocity from gravity, in mm/tick
 scoreboard objectives add __mis_gravity_vel_y_mmpt dummy
-scoreboard objectives remove mis_gravity_vel_y_mmpt
 
 # Pitch and yaw adjustments modified by missile's func_npe_tick, in millidegrees
 scoreboard objectives add mis_func_tick_dyaw_mdeg dummy
@@ -327,9 +323,7 @@ scoreboard objectives add mis_func_tick_dpitch_mdeg dummy
 
 # Pitch and yaw of direction heading towards potential tracking target, in millidegrees
 scoreboard objectives add __mis_tracking_dyaw_mdeg dummy
-scoreboard objectives remove mis_tracking_dyaw_mdeg
 scoreboard objectives add __mis_tracking_dpitch_mdeg dummy
-scoreboard objectives remove mis_tracking_dpitch_mdeg
 
 # Tracking angle cutoff values calculated when you apply t_tracking_init to a missile
 scoreboard objectives add __mis_tracking_giveup_min_mdeg dummy
@@ -347,11 +341,8 @@ scoreboard objectives add mis_tracking_target_eid dummy
 
 # Summation of all physics effects on a missile
 scoreboard objectives add __mis_sum_vel_x_mmpt dummy
-scoreboard objectives remove mis_sum_vel_x_mmpt
 scoreboard objectives add __mis_sum_vel_y_mmpt dummy
-scoreboard objectives remove mis_sum_vel_y_mmpt
 scoreboard objectives add __mis_sum_vel_z_mmpt dummy
-scoreboard objectives remove mis_sum_vel_z_mmpt
 
 # = if either __col_terrain or __col_entity == 1
 scoreboard objectives add __mis_has_collided dummy
@@ -362,17 +353,13 @@ scoreboard objectives add __mis_has_collided dummy
 # Missile / raycast has collided with terrain and entities, respectively
 scoreboard objectives add __col_terrain_count dummy
 scoreboard objectives add __col_terrain dummy
-scoreboard objectives remove col_terrain
 scoreboard objectives add __col_entity dummy
-scoreboard objectives remove col_entity
 
 # =============================
 # Values used for raycasting
 scoreboard objectives add rc_steps_remaining dummy
 scoreboard objectives add __rc_align_camera dummy
-scoreboard objectives remove rc_align_camera
 scoreboard objectives add __rc_fit_player dummy
-scoreboard objectives remove rc_fit_player
 
 # =============================
 # Values used for timers
@@ -427,24 +414,16 @@ scoreboard objectives add grab_state dummy
 scoreboard objectives add stasis_state dummy
 
 scoreboard objectives add __stasis_reset_pos_timer dummy
-scoreboard objectives remove stasis_reset_pos_timer
 
 scoreboard objectives add __stasis_stored_x_pos_mm dummy
-scoreboard objectives remove stasis_stored_x_pos_mm
 scoreboard objectives add __stasis_stored_y_pos_mm dummy
-scoreboard objectives remove stasis_stored_y_pos_mm
 scoreboard objectives add __stasis_stored_z_pos_mm dummy
-scoreboard objectives remove stasis_stored_z_pos_mm
 
 scoreboard objectives add __stasis_stored_x_vel_mmpt dummy
-scoreboard objectives remove stasis_stored_x_vel_mmpt
 scoreboard objectives add __stasis_stored_y_vel_mmpt dummy
-scoreboard objectives remove stasis_stored_y_vel_mmpt
 scoreboard objectives add __stasis_stored_z_vel_mmpt dummy
-scoreboard objectives remove stasis_stored_z_vel_mmpt
 
 scoreboard objectives add __stasis_stored_arrow_crit dummy
-scoreboard objectives remove stasis_stored_arrow_crit
 
 # =============================
 # Values used for class-and-trinket selection (CTS)
