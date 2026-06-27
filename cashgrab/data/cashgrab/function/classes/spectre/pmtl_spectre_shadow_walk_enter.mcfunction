@@ -29,6 +29,6 @@ tag @a[tag=t_pm_owner,limit=1] add t_trinket_force_hotbar
 function cashgrab:util/pmt_inv_refresh
 particle minecraft:smoke ~ ~1 ~ 0.5 0.75 0.5 0 10 force
 particle minecraft:smoke ~ ~1 ~ 0.5 0.75 0.5 0 30
-effect give @a[tag=t_pm_owner,limit=1] minecraft:speed 3 13 true
+effect give @a[tag=t_pm_owner,limit=1] minecraft:speed 3 15 true
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_C 10000
 scoreboard players set @a[tag=t_pm_owner,limit=1] cv_A 1

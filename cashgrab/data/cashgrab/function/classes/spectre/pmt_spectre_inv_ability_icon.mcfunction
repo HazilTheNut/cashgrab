@@ -13,7 +13,8 @@ $item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:slime_ba
 minecraft:custom_name=[{color:"light_purple",italic:false,text:"(Toss)"},{color:"white",text:" Blink"}],\
 minecraft:lore=[\
 {color:"dark_gray",italic:true,text:"Toss any item to use."},\
-{color:"gray",italic:false,text:"Teleports forwards."},\
+{color:"gray",italic:false,text:"Teleports forwards. Kills grant"},\
+{color:"gray",italic:false,text:" a charge of this ability."},\
 {color:"dark_gray",italic:false,text:"====="},\
-[{color:"yellow",italic:false,text:"11"},{color:"gray",italic:false,text:" sec cooldown for "},{color:"yellow",italic:false,text:"2"},{color:"gray",italic:false,text:" charges"}]],\
+[{color:"yellow",italic:false,text:"30"},{color:"gray",italic:false,text:" sec cooldown for "},{color:"yellow",italic:false,text:"3"},{color:"gray",italic:false,text:" charges"}]],\
 ] $(charges)
