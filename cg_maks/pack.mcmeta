@@ -1,8 +1,8 @@
 {
 	"pack": {
-		"pack_format": 101,
+		"pack_format": 108,
 		"min_format": 101,
-		"max_format": 101,
+		"max_format": 108,
 		"description": "Cash Grab content plugin authored by Maks"
 	}
 }
