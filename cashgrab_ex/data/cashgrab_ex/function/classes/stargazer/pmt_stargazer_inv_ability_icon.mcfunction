@@ -19,9 +19,14 @@
 #	cv_G	:	Star Shower yaw offset
 #	cv_H	:   Star Shower pitch offset
 
+# Display "Out of Mana" if insufficent and during gameplay
+$item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=..24,activity_state=20..29}] hotbar.4 with minecraft:red_stained_glass_pane[\
+minecraft:item_name=[{color:"red",italic:false,text:"Out of Mana"}],\
+] $(charges)
+execute if entity @a[tag=t_pm_owner,limit=1,scores={cv_A=..24,activity_state=20..29}] run return 0
 
 # Display if Mana is sufficient
-$item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=25..}] hotbar.4 with minecraft:nether_star[\
+$item replace entity @a[tag=t_pm_owner,limit=1] hotbar.4 with minecraft:nether_star[\
 minecraft:item_name=[{color:"light_purple",italic:false,text:"(Toss)"},{color:"white",text:" Star Shower"}],\
 minecraft:lore=[\
 {color:"dark_gray",italic:true,text:"Toss any item to use."},\
@@ -31,7 +36,3 @@ minecraft:lore=[\
 [{color:"gray",italic:false,text:"Costs "},{color:"aqua",italic:false,text:"25"},{color:"gray",italic:false,text:" Mana"}]\
 ]] $(charges)
 
-# Display "Out of Mana" if insufficent
-$item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_A=..24}] hotbar.4 with minecraft:red_stained_glass_pane[\
-minecraft:item_name=[{color:"red",italic:false,text:"Out of Mana"}],\
-] $(charges)
