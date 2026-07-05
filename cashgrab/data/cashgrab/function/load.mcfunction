@@ -3,7 +3,7 @@
 # Arguments: (none)
 
 # Version number (= major * 1000000 + minor * 1000 + patch)
-scoreboard players set CASHGRAB_VERSION_NUMBER num 0014002
+scoreboard players set CASHGRAB_VERSION_NUMBER num 0015000
 
 function cashgrab:runtime_config
 
