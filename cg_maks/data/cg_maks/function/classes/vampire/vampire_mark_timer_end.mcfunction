@@ -22,9 +22,8 @@ execute store result storage cashgrab:eid_args eid int 1 run scoreboard players 
 function cashgrab:util/find_eid_self with storage cashgrab:eid_args
 tag @a[tag=t_eid_matches,scores={activity_state=21..29},limit=1] add t_vampire_mark_owner
 
-# Create remnant
-tellraw @a[tag=t_debug] "attempting to create remnant..."
-execute if entity @a[tag=t_vampire_mark_owner] run function cg_maks:classes/vampire/npe_vampire_create_remnant_at_marked_target
+# Heal the vampire owner
+effect give @a[tag=t_vampire_mark_owner,limit=1] instant_health 1 0
 
 # Clean up tags
 tag @a remove t_vampire_marked_target
