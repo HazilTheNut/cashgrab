@@ -1,4 +1,4 @@
-# classes/artillery/pmt_artillery_cts_inv_icon.mcfunction
+# classes/archer/pmt_archer_cts_inv_icon.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
@@ -10,7 +10,7 @@
 #	slot	: Inventory slot to insert into
 
 $item replace entity @a[tag=t_pm_owner,limit=1] $(slot) with minecraft:firework_rocket[\
-minecraft:custom_name=[{color:"dark_aqua",italic:false,text:"<Class>"},{color:"white",text:" Artillery"}],\
+minecraft:custom_name=[{color:"dark_aqua",italic:false,text:"<Class>"},{color:"white",text:" Archer"}],\
 minecraft:tooltip_display={hidden_components:["minecraft:fireworks"]},\
 minecraft:custom_data={is_cts_icon:1},\
 minecraft:lore=[\

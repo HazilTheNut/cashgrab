@@ -1,11 +1,11 @@
-# classes/artillery/missile_end.mcfunction
+# classes/archer/missile_end.mcfunction
 #
 # Context:
 #	as: a missile
 #	at: the missile
 #	facing: the missile's facing direction
 #
-# Summary: Artillery's missile end function
+# Summary: Archer's missile end function
 #
 # Arguments:
 #	end_reason	: The reason for why the end function was called

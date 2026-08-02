@@ -1,4 +1,4 @@
-# classes/artillery/pmtl_artillery_cts_tick.mcfunction
+# classes/archer/pmtl_archer_cts_tick.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
@@ -6,7 +6,7 @@
 #	at: the owner's position
 #	rotated: as the owner
 #
-# Summary: Class-and-Trinket tick function for Artillery class
+# Summary: Class-and-Trinket tick function for Archer class
 #
 # Arguments: (none)
 
@@ -22,4 +22,4 @@
 
 # If player used crossbow, delete arrow
 execute if score @a[tag=t_pm_owner,limit=1] evl_bows matches 1.. run kill @e[type=minecraft:arrow,limit=1,sort=nearest,distance=..3]
-execute if score @a[tag=t_pm_owner,limit=1] evl_bows matches 1.. run function cashgrab:classes/artillery/pmt_artillery_inv_bow_and_arrow
+execute if score @a[tag=t_pm_owner,limit=1] evl_bows matches 1.. run function cashgrab:classes/archer/pmt_archer_inv_bow_and_arrow

@@ -1,4 +1,4 @@
-# classes/artillery/pe_ability_icon.mcfunction
+# classes/archer/pe_ability_icon.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker

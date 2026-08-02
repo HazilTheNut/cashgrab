@@ -1,10 +1,10 @@
-# classes/artillery/pmt_artillery_inv.mcfunction
+# classes/archer/pmt_archer_inv.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
 #	+ the owner of the pm is tagged with t_pm_owner
 #
-# Summary: Populates inventory for the Artillery class for the command executor
+# Summary: Populates inventory for the Archer class for the command executor
 #
 # Arguments: (none)
 
@@ -38,4 +38,4 @@ minecraft:attribute_modifiers=[\
 # =============================
 # Hotbar
 
-function cashgrab:classes/artillery/pmt_artillery_inv_bow_and_arrow
+function cashgrab:classes/archer/pmt_archer_inv_bow_and_arrow

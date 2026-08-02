@@ -1,4 +1,4 @@
-# classes/artillery/pmtl_artillery_use_ability.mcfunction
+# classes/archer/pmtl_archer_use_ability.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker

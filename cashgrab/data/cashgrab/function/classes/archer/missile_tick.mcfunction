@@ -1,11 +1,11 @@
-# classes/artillery/missile_tick.mcfunction
+# classes/archer/missile_tick.mcfunction
 #
 # Context:
 #	as: a missile
 #	at: the missile
 #	facing: the missile's facing direction
 #
-# Summary: Artillery's missile tick function
+# Summary: Archer's missile tick function
 #
 # Arguments: (none)
 

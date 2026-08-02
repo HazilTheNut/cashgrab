@@ -1,10 +1,10 @@
-# classes/artillery/pmt_artillery_init.mcfunction
+# classes/archer/pmt_archer_init.mcfunction
 #
 # Context:
 #	as: a Player Monitor (pm) marker
 #	+ the owner of the pm is tagged with t_pm_owner
 #
-# Summary: Equips the Artillery class onto the command executor
+# Summary: Equips the Archer class onto the command executor
 #
 # Arguments: (none)
 

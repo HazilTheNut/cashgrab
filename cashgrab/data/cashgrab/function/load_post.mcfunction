@@ -88,18 +88,18 @@ func_pmt_score_kill:"cashgrab:util/noop",\
 trinket_default_hotbar_slot:1,\
 }
 
-# Artillery
+# Archer
 data modify storage cashgrab:game_info classes append value {\
 format:2,\
-s_class_name:"Artillery",\
-func_pmt_init:"cashgrab:classes/artillery/pmt_artillery_init",\
-func_pmt_inv:"cashgrab:classes/artillery/pmt_artillery_inv",\
-func_pmt_inv_ability_icon:"cashgrab:classes/artillery/pmt_artillery_inv_ability_icon",\
-func_pmtl_tick:"cashgrab:classes/artillery/pmtl_artillery_tick",\
-func_pmtl_use_ability:"cashgrab:classes/artillery/pmtl_artillery_use_ability",\
+s_class_name:"Archer",\
+func_pmt_init:"cashgrab:classes/archer/pmt_archer_init",\
+func_pmt_inv:"cashgrab:classes/archer/pmt_archer_inv",\
+func_pmt_inv_ability_icon:"cashgrab:classes/archer/pmt_archer_inv_ability_icon",\
+func_pmtl_tick:"cashgrab:classes/archer/pmtl_archer_tick",\
+func_pmtl_use_ability:"cashgrab:classes/archer/pmtl_archer_use_ability",\
 func_pmtl_end:"cashgrab:util/noop",\
-func_pmt_cts_icon:"cashgrab:classes/artillery/pmt_artillery_cts_inv_icon",\
-func_pmtl_cts_tick:"cashgrab:classes/artillery/pmtl_artillery_cts_tick",\
+func_pmt_cts_icon:"cashgrab:classes/archer/pmt_archer_cts_inv_icon",\
+func_pmtl_cts_tick:"cashgrab:classes/archer/pmtl_archer_cts_tick",\
 func_pmt_score_kill:"cashgrab:util/noop",\
 trinket_default_hotbar_slot:1,\
 }
