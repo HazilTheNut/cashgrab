@@ -8,5 +8,5 @@
 #
 # Arguments: (none)
 
-particle minecraft:block{block_state:"minecraft:birch_planks"} ^ ^ ^-0.2 0.1 0.1 0.1 1 5
+particle minecraft:block{block_state:{id:"minecraft:birch_planks"}} ^ ^ ^-0.2 0.1 0.1 0.1 1 5
 kill @s

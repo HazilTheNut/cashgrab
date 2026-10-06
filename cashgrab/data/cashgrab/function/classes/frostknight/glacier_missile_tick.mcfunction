@@ -19,5 +19,5 @@
 #	cv_G	:	
 #	cv_H	:	
 
-particle minecraft:block{block_state:"minecraft:packed_ice"} ~ ~ ~ 0 0 0 0 1
+particle minecraft:block{block_state:{id:"minecraft:packed_ice"}} ~ ~ ~ 0 0 0 0 1
 particle minecraft:dust{color:[0.7f,0.7f,1.0f],scale:1.0} ~ ~ ~ 0 0 0 0 1 force

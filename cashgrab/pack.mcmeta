@@ -1,8 +1,8 @@
 {
 	"pack": {
-		"pack_format": 108,
-		"min_format": 101,
-		"max_format": 108,
+		"pack_format": 121,
+		"min_format": 121,
+		"max_format": 121,
 		"description": "Cash Grab Core Framework"
 	}
 }

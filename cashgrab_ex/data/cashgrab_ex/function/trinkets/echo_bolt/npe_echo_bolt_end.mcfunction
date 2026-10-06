@@ -14,7 +14,7 @@ $execute if score NUM_END_REASON_CLEANUP num matches $(end_reason) run return 0
 $execute if score NUM_END_REASON_CLEANUP_PLAYER_DEATH num matches $(end_reason) run return 0
 
 # vfx / sfx
-particle minecraft:block{block_state:"minecraft:cyan_glazed_terracotta"} ~ ~ ~ 0.3 0.3 0.3 0 15
+particle minecraft:block{block_state:{id:"minecraft:cyan_glazed_terracotta"}} ~ ~ ~ 0.3 0.3 0.3 0 15
 playsound minecraft:block.ancient_debris.break player @a ~ ~ ~ 1.0 2.0
 
 $execute unless score NUM_END_REASON_ENTITY_COLLISION num matches $(end_reason) run return 0

@@ -15,7 +15,7 @@ Motion:[$(vx)d,0.75d,$(vz)d],\
 Tags:["t_pickup","t_coin_particles"],\
 PickupDelay:40s}
 
-particle minecraft:block{block_state:{Name:"minecraft:gold_block"}} ~ ~ ~ 0.05 0.05 0.05 1 3
+particle minecraft:block{block_state:{id:"minecraft:gold_block"}} ~ ~ ~ 0.05 0.05 0.05 1 3
 particle minecraft:dust{color:[0.9f,0.9f,0.65f],scale:1.0} ~ ~ ~ 0.5 0.5 0.5 0 10
 
 #execute if entity @s[tag=!t_stasis] run playsound minecraft:entity.experience_orb.pickup block @a ~ ~ ~ 0.7 1.25

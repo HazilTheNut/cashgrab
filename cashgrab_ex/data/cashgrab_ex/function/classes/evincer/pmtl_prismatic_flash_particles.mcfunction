@@ -20,6 +20,6 @@
 #	cv_G	:	
 #	cv_H	:   
 
-execute if entity @a[tag=t_pm_owner,scores={cv_A=1}] run particle minecraft:block{block_state:"minecraft:resin_block"} ~ ~ ~ 0.5 0.75 0.5 0.1 40
-execute if entity @a[tag=t_pm_owner,scores={cv_A=2}] run particle minecraft:block{block_state:"minecraft:pearlescent_froglight"} ~ ~ ~ 0.5 0.75 0.5 0.1 40
-execute if entity @a[tag=t_pm_owner,scores={cv_A=3}] run particle minecraft:block{block_state:"minecraft:prismarine"} ~ ~ ~ 0.5 0.75 0.5 0.1 40
+execute if entity @a[tag=t_pm_owner,scores={cv_A=1}] run particle minecraft:block{block_state:{id:"minecraft:resin_block"}} ~ ~ ~ 0.5 0.75 0.5 0.1 40
+execute if entity @a[tag=t_pm_owner,scores={cv_A=2}] run particle minecraft:block{block_state:{id:"minecraft:pearlescent_froglight"}} ~ ~ ~ 0.5 0.75 0.5 0.1 40
+execute if entity @a[tag=t_pm_owner,scores={cv_A=3}] run particle minecraft:block{block_state:{id:"minecraft:prismarine"}} ~ ~ ~ 0.5 0.75 0.5 0.1 40

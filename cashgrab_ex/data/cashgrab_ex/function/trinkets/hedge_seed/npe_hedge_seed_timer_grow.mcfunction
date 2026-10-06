@@ -13,7 +13,7 @@
 $execute unless block ~ ~$(height) ~ minecraft:air run return run scoreboard players set @s tv_D 0
 
 # sfx / vfx
-$particle minecraft:block{block_state:"minecraft:mangrove_leaves"} ~ ~$(height) ~ 0.6 0.6 0.6 0 20 force
+$particle minecraft:block{block_state:{id:"minecraft:mangrove_leaves"}} ~ ~$(height) ~ 0.6 0.6 0.6 0 20 force
 playsound minecraft:block.grass.step player @a ~ ~ ~ 1.0 1.75
 
 # Place block
