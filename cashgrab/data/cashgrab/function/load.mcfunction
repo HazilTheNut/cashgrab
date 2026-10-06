@@ -2,8 +2,10 @@
 #
 # Arguments: (none)
 
+scoreboard objectives add num dummy
+
 # Version number (= major * 1000000 + minor * 1000 + patch)
-scoreboard players set CASHGRAB_VERSION_NUMBER num 0015001
+scoreboard players set CASHGRAB_VERSION_NUMBER num 0015002
 
 function cashgrab:runtime_config
 
@@ -203,8 +205,6 @@ scoreboard objectives add stat_alive_ticks minecraft.custom:minecraft.time_since
 
 # =============================
 # Number constants used for scoreboard math
-
-scoreboard objectives add num dummy
 
 # === Math constants
 
