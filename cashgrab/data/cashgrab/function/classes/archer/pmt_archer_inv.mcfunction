@@ -39,3 +39,12 @@ minecraft:attribute_modifiers=[\
 # Hotbar
 
 function cashgrab:classes/archer/pmt_archer_inv_bow_and_arrow
+
+item replace entity @a[tag=t_pm_owner,limit=1] hotbar.6 with minecraft:emerald[\
+minecraft:custom_name=[{color:"light_purple",italic:false,text:"(Passive)"},{color:"white",text:" Snipend"}],\
+minecraft:custom_data={archer_snipend:1},\
+minecraft:lore=[\
+{color:"gray",italic:false,text:"Kills award you"},\
+{color:"gray",italic:false,text:" 5 extra coins."},\
+]\
+]

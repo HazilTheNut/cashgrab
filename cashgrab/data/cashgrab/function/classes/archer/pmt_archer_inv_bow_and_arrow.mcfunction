@@ -25,17 +25,17 @@ item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_E=..0}] hotbar.0 with m
 minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},\
 minecraft:custom_name={italic:false,color:"red",text:"Infinibow"},\
 minecraft:enchantment_glint_override=false,\
-minecraft:enchantments={infinity:1}]
+minecraft:enchantments={infinity:1,knockback:2}]
 
 item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_E=1..}] hotbar.0 with minecraft:bow[minecraft:unbreakable={},\
 minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},\
 minecraft:custom_name={italic:false,color:"red",text:"Infinibow"},\
 minecraft:enchantment_glint_override=true,\
-minecraft:enchantments={infinity:1,power:1,punch:4}]
+minecraft:enchantments={infinity:1,power:1,punch:4,knockback:2}]
 
 # Arrow
 
-item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_E=..0}] hotbar.6 with minecraft:arrow[\
+item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_E=..0}] hotbar.2 with minecraft:arrow[\
 minecraft:custom_name=[{color:"light_purple",italic:false,text:"(Passive)"},{color:"white",text:" Power Shot"}],\
 minecraft:custom_data={archer_power_shot:1},\
 minecraft:lore=[\
@@ -47,7 +47,7 @@ minecraft:lore=[\
 ]\
 ]
 
-item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_E=1..}] hotbar.6 with minecraft:tipped_arrow[\
+item replace entity @a[tag=t_pm_owner,limit=1,scores={cv_E=1..}] hotbar.2 with minecraft:tipped_arrow[\
 minecraft:custom_name=[{color:"light_purple",italic:false,text:"(Passive)"},{color:"white",text:" Power Shot"}],\
 minecraft:custom_data={archer_power_shot:1},\
 minecraft:tooltip_display={hidden_components:["minecraft:potion_contents"]},\
