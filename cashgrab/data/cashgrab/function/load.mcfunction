@@ -4,8 +4,8 @@
 
 scoreboard objectives add num dummy
 
-# Version number (= major * 1000000 + minor * 1000 + patch)
-scoreboard players set CASHGRAB_VERSION_NUMBER num 0015002
+# Version number 1.0.0-pre1 (= major * 1000000 + minor * 1000 + patch)
+scoreboard players set CASHGRAB_VERSION_NUMBER num 1000000
 
 function cashgrab:runtime_config
 
