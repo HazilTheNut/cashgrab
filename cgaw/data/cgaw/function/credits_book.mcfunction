@@ -53,7 +53,7 @@ pages:[\
 [\
 [{"text":" CREDITS\n","color":"dark_gray","bold":true}],\
 [{"text":"================\n","color":"gray","bold":true}],\
-[{"text":"...and a big thank you to all of our playtesters!\n\n","color":"gray","bold":false,"underlined":true}],\
+[{"text":"...and a big thank you to our playtesters!\n\n","color":"gray","bold":false,"underlined":true}],\
 [{"text":" Geldarion, Mylosea, Taylor, Bonka, AlphaC3ph, Fly, Beandon, Molly, Eleanorie, Xenomas, barneliussy","color":"dark_gray","bold":false,"underlined":false}],\
 ],\
 ]\
