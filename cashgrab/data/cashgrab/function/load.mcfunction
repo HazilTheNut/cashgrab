@@ -427,6 +427,10 @@ scoreboard objectives add __stasis_stored_z_vel_mmpt dummy
 scoreboard objectives add __stasis_stored_arrow_crit dummy
 
 # =============================
+# Values used for projectile cap
+scoreboard objectives add __projectile_idx dummy
+
+# =============================
 # Values used for class-and-trinket selection (CTS)
 
 # Player selected class and trinket index number in cashgrab:game_info arrays

@@ -21,3 +21,7 @@ scoreboard players set DEVELOPER_MODE num 0
 #	This is intended to push players near the goal number to fight
 #	other players to finish the game.
 scoreboard players set ENABLE_COIN_SPILLING num 1
+
+# Maximum number of projectiles that can exist at once. Oldest projectiles are killed
+#   to make room for new ones. Protects against lagging out the server.
+scoreboard players set NUM_MAX_PROJECTILES num 250

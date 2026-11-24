@@ -10,11 +10,14 @@
 # TODO: figure out how to use @s target selectors to check if I am dead and return if so
 
 # All dropped item entities are destroyed except for those that are tagged as "t_pickup"
-kill @s[type=minecraft:item,tag=!t_pickup]
+execute if entity @s[type=minecraft:item,tag=!t_pickup] run return run kill @s
 
 execute if entity @s[type=minecraft:marker,tag=t_missile] at @s rotated as @s run function cashgrab:base/missile_main with entity @s data
 execute if entity @s[type=minecraft:marker,tag=t_timer] at @s rotated as @s run function cashgrab:base/timer_main with entity @s data
 execute if entity @s[type=minecraft:marker,tag=t_coinshower] at @s run function cashgrab:base/npe_coinshower
+
+# For projectiles, apply a hard cap on the number of them
+execute if entity @s[type=#cashgrab:projectile] at @s run function cashgrab:base/projectile_main
 
 kill @s[type=minecraft:egg]
 kill @s[type=minecraft:experience_bottle]
